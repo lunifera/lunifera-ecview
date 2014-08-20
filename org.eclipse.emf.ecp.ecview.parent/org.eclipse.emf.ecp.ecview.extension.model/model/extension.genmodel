@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.emf.ecp.ecview.extension.model/src"
+    modelPluginID="org.eclipse.emf.ecp.ecview.extension.model" modelName="Extension"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    containmentProxies="true" complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//binding ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//core ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//datatypes ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//validation ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//visibility"
+    importOrganizing="true">
+  <foreignModel>extdatatypes.ecore</foreignModel>
+  <foreignModel>extension.ecore</foreignModel>
+  <genPackages prefix="ExtDatatypes" basePackage="org.eclipse.emf.ecp.ecview.extension.model"
+      disposableProviderFactory="true" ecorePackage="extdatatypes.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extdatatypes.ecore#//YDateTimeFormat">
+      <genEnumLiterals ecoreEnumLiteral="extdatatypes.ecore#//YDateTimeFormat/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="extdatatypes.ecore#//YDateTimeFormat/TIME"/>
+      <genEnumLiterals ecoreEnumLiteral="extdatatypes.ecore#//YDateTimeFormat/DATE_TIME"/>
+    </genEnums>
+    <genClasses ecoreClass="extdatatypes.ecore#//YTextDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YTextAreaDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YNumericDatatype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extdatatypes.ecore#//YNumericDatatype/grouping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extdatatypes.ecore#//YNumericDatatype/markNegative"/>
+    </genClasses>
+    <genClasses ecoreClass="extdatatypes.ecore#//YDecimalDatatype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extdatatypes.ecore#//YDecimalDatatype/precision"/>
+    </genClasses>
+    <genClasses ecoreClass="extdatatypes.ecore#//YTableDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YCheckBoxDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YComboBoxDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YListDataType"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YOptionsGroupDataType"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YBrowserDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YDateTimeDatatype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extdatatypes.ecore#//YDateTimeDatatype/format"/>
+    </genClasses>
+    <genClasses ecoreClass="extdatatypes.ecore#//YTreeDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YProgressBarDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YTabSheetDatatype"/>
+    <genClasses ecoreClass="extdatatypes.ecore#//YMasterDetailDatatype"/>
+  </genPackages>
+  <genPackages prefix="ExtensionModel" basePackage="org.eclipse.emf.ecp.ecview.extension.model"
+      disposableProviderFactory="true" ecorePackage="extension.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extension.ecore#//YAlignment">
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/BOTTOM_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/BOTTOM_CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/BOTTOM_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/BOTTOM_FILL"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/MIDDLE_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/MIDDLE_CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/MIDDLE_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/MIDDLE_FILL"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/TOP_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/TOP_CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/TOP_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/TOP_FILL"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/FILL_FILL"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/FILL_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/FILL_CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/FILL_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YAlignment/UNDEFINED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="extension.ecore#//YSelectionType">
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YSelectionType/SINGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="extension.ecore#//YSelectionType/MULTI"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="extension.ecore#//YButtonClickListener"/>
+    <genClasses image="false" ecoreClass="extension.ecore#//YInput"/>
+    <genClasses ecoreClass="extension.ecore#//YTextField">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTextField/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTextField/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTextField/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YGridLayout">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YGridLayout/cellStyles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YGridLayout/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YGridLayout/fillHorizontal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YGridLayout/fillVertical"/>
+      <genOperations ecoreOperation="extension.ecore#//YGridLayout/addGridLayoutCellStyle">
+        <genParameters ecoreParameter="extension.ecore#//YGridLayout/addGridLayoutCellStyle/element"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YGridLayoutCellStyle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YGridLayoutCellStyle/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YGridLayoutCellStyle/alignment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YGridLayoutCellStyle/spanInfo"/>
+      <genOperations ecoreOperation="extension.ecore#//YGridLayoutCellStyle/addSpanInfo">
+        <genParameters ecoreParameter="extension.ecore#//YGridLayoutCellStyle/addSpanInfo/col1"/>
+        <genParameters ecoreParameter="extension.ecore#//YGridLayoutCellStyle/addSpanInfo/row1"/>
+        <genParameters ecoreParameter="extension.ecore#//YGridLayoutCellStyle/addSpanInfo/col2"/>
+        <genParameters ecoreParameter="extension.ecore#//YGridLayoutCellStyle/addSpanInfo/row2"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YHorizontalLayout">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YHorizontalLayout/cellStyles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YHorizontalLayout/fillHorizontal"/>
+      <genOperations ecoreOperation="extension.ecore#//YHorizontalLayout/getCellStyle">
+        <genParameters ecoreParameter="extension.ecore#//YHorizontalLayout/getCellStyle/element"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YHorizontalLayoutCellStyle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YHorizontalLayoutCellStyle/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YHorizontalLayoutCellStyle/alignment"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YVerticalLayout">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YVerticalLayout/cellStyles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YVerticalLayout/fillVertical"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YVerticalLayoutCellStyle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YVerticalLayoutCellStyle/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YVerticalLayoutCellStyle/alignment"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YSpanInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YSpanInfo/columnFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YSpanInfo/rowFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YSpanInfo/columnTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YSpanInfo/rowTo"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YTable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTable/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTable/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTable/selectionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTable/selection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTable/multiSelection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTable/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTable/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTable/emfNsURI"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YTree">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTree/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTree/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTree/selectionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTree/selection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTree/multiSelection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTree/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTree/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTree/emfNsURI"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YOptionsGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YOptionsGroup/datadescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YOptionsGroup/datatype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YOptionsGroup/selectionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YOptionsGroup/selection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YOptionsGroup/multiSelection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YOptionsGroup/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YOptionsGroup/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YOptionsGroup/emfNsURI"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YList">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YList/datadescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YList/datatype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YList/selectionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YList/selection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YList/multiSelection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YList/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YList/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YList/emfNsURI"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YLabel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YLabel/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YLabel/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YTextArea">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTextArea/datadescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTextArea/datatype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YTextArea/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YCheckBox">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YCheckBox/datadescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YCheckBox/datatype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YCheckBox/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YBrowser">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YBrowser/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YBrowser/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YBrowser/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YDateTime">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YDateTime/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YDateTime/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YDateTime/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YDecimalField">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YDecimalField/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YDecimalField/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YDecimalField/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YNumericField">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YNumericField/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YNumericField/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YNumericField/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YComboBox">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YComboBox/datadescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YComboBox/datatype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YComboBox/selection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YComboBox/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YComboBox/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YComboBox/emfNsURI"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YButton">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YButton/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YButton/clickListeners"/>
+      <genOperations ecoreOperation="extension.ecore#//YButton/addClickListener">
+        <genParameters ecoreParameter="extension.ecore#//YButton/addClickListener/listener"/>
+      </genOperations>
+      <genOperations ecoreOperation="extension.ecore#//YButton/removeClickListener">
+        <genParameters ecoreParameter="extension.ecore#//YButton/removeClickListener/listener"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YToggleButton">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YToggleButton/datadescription"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YProgressBar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YProgressBar/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YProgressBar/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YProgressBar/value"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YTabSheet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YTabSheet/tabs"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YTab">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference extension.ecore#//YTab/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YTab/embeddable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YTab/datadescription"/>
+      <genOperations ecoreOperation="extension.ecore#//YTab/getView"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YMasterDetail">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YMasterDetail/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YMasterDetail/datadescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YMasterDetail/selection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YMasterDetail/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YMasterDetail/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YMasterDetail/emfNsURI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YMasterDetail/masterElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YMasterDetail/detailElement"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YFormLayout">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference extension.ecore#//YFormLayout/cellStyles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YFormLayout/fillVertical"/>
+    </genClasses>
+    <genClasses ecoreClass="extension.ecore#//YFormLayoutCellStyle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference extension.ecore#//YFormLayoutCellStyle/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//YFormLayoutCellStyle/alignment"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

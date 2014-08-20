@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://eclipse.org/emf/ecp/ecview/databinding/emf/test"
+    nsPrefix="model">
+  <eClassifiers xsi:type="ecore:EClass" name="TPerson">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//TAddress"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TAddress">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//TCountry"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TCountry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isoCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cities" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TList">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tObject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="binding" nsURI="http://eclipse.org/emf/ecp/ecview/core/binding"
+    nsPrefix="binding">
+  <eClassifiers xsi:type="ecore:EClass" name="YBindingSet" eSuperTypes="core.ecore#//YElement">
+    <eOperations name="addBinding" eType="#//YValueBinding">
+      <eParameters name="targetValue" lowerBound="1" eType="#//YValueBindingEndpoint"/>
+      <eParameters name="modelValue" lowerBound="1" eType="#//YValueBindingEndpoint"/>
+    </eOperations>
+    <eOperations name="addBinding" eType="#//YListBinding">
+      <eParameters name="targetValue" lowerBound="1" eType="#//YListBindingEndpoint"/>
+      <eParameters name="modelValue" lowerBound="1" eType="#//YListBindingEndpoint"/>
+    </eOperations>
+    <eOperations name="addBinding" eType="#//YValueBinding">
+      <eParameters name="targetValue" lowerBound="1" eType="#//YValueBindingEndpoint"/>
+      <eParameters name="modelValue" lowerBound="1" eType="#//YValueBindingEndpoint"/>
+      <eParameters name="targetToModelStrategy" lowerBound="1" eType="#//YBindingUpdateStrategy"/>
+      <eParameters name="modelToTargetStrategy" lowerBound="1" eType="#//YBindingUpdateStrategy"/>
+    </eOperations>
+    <eOperations name="addBinding" eType="#//YListBinding">
+      <eParameters name="targetValue" lowerBound="1" eType="#//YListBindingEndpoint"/>
+      <eParameters name="modelValue" lowerBound="1" eType="#//YListBindingEndpoint"/>
+      <eParameters name="targetToModelStrategy" lowerBound="1" eType="#//YBindingUpdateStrategy"/>
+      <eParameters name="modelToTargetStrategy" lowerBound="1" eType="#//YBindingUpdateStrategy"/>
+    </eOperations>
+    <eOperations name="getView" eType="ecore:EClass core.ecore#//YView"/>
+    <eOperations name="addBinding">
+      <eParameters name="binding" lowerBound="1" eType="#//YBinding"/>
+    </eOperations>
+    <eOperations name="removeBinding">
+      <eParameters name="binding" lowerBound="1" eType="#//YBinding"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindings" upperBound="-1"
+        eType="#//YBinding" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBindingEndpoint" abstract="true" eSuperTypes="core.ecore#//YElement">
+    <eOperations name="getBinding" eType="#//YBinding"/>
+    <eOperations name="isBindsElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="element" lowerBound="1" eType="ecore:EClass core.ecore#//YElement"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YValueBindingEndpoint" abstract="true"
+      eSuperTypes="#//YBindingEndpoint">
+    <eOperations name="createDetailValueEndpoint" eType="#//YDetailValueBindingEndpoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanValueBindingEndpoint" eSuperTypes="#//YValueBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YDetailValueBindingEndpoint" eSuperTypes="#//YValueBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="masterObservable" lowerBound="1"
+        eType="#//YValueBindingEndpoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YListBindingEndpoint" abstract="true"
+      eSuperTypes="#//YBindingEndpoint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YBinding" abstract="true" eSuperTypes="core.ecore#//YElement">
+    <eOperations name="getBindingSet" eType="#//YBindingSet"/>
+    <eOperations name="isBindsElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="element" lowerBound="1" eType="ecore:EClass core.ecore#//YElement"/>
+    </eOperations>
+    <eOperations name="getTargetEndpoint" eType="#//YBindingEndpoint"/>
+    <eOperations name="getModelEndpoint" eType="#//YBindingEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelToTargetStrategy"
+        eType="#//YBindingUpdateStrategy" defaultValueLiteral="UPDATE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetToModelStrategy"
+        eType="#//YBindingUpdateStrategy" defaultValueLiteral="UPDATE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YValueBinding" eSuperTypes="#//YBinding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetEndpoint" lowerBound="1"
+        eType="#//YValueBindingEndpoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelEndpoint" lowerBound="1"
+        eType="#//YValueBindingEndpoint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YListBinding" eSuperTypes="#//YBinding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetEndpoint" lowerBound="1"
+        eType="#//YListBindingEndpoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelEndpoint" lowerBound="1"
+        eType="#//YListBindingEndpoint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YBindingUpdateStrategy">
+    <eLiterals name="UPDATE" literal="UPDATE"/>
+    <eLiterals name="ON_REQUEST" value="1" literal="ON_REQUEST"/>
+    <eLiterals name="NEVER" value="2" literal="NEVER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEnumListBindingEndpoint" eSuperTypes="#//YListBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enum" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YECViewModelValueBindingEndpoint" eSuperTypes="#//YValueBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YECViewModelListBindingEndpoint" eSuperTypes="#//YListBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
