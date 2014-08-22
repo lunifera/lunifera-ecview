@@ -31,4 +31,6 @@ public interface YOptionsGroupValidator {
 	boolean validateEmfNsURI(String value);
 
 	boolean validateTypeQualifiedName(String value);
+
+	boolean validateItemImageProperty(String value);
 }
