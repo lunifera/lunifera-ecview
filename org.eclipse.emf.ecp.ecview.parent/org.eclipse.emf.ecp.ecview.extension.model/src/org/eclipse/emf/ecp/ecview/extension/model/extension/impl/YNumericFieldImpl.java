@@ -27,6 +27,8 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField;
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericFieldImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericFieldImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericFieldImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericFieldImpl#isGrouping <em>Grouping</em>}</li>
+ *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericFieldImpl#isMarkNegative <em>Mark Negative</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,6 +81,46 @@ public class YNumericFieldImpl extends YInputImpl implements YNumericField {
 	 * @ordered
 	 */
 	protected long value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isGrouping() <em>Grouping</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGrouping()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GROUPING_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isGrouping() <em>Grouping</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGrouping()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean grouping = GROUPING_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isMarkNegative() <em>Mark Negative</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMarkNegative()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean MARK_NEGATIVE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isMarkNegative() <em>Mark Negative</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMarkNegative()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean markNegative = MARK_NEGATIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -246,6 +288,48 @@ public class YNumericFieldImpl extends YInputImpl implements YNumericField {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isGrouping() {
+		return grouping;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGrouping(boolean newGrouping) {
+		boolean oldGrouping = grouping;
+		grouping = newGrouping;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YNUMERIC_FIELD__GROUPING, oldGrouping, grouping));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isMarkNegative() {
+		return markNegative;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMarkNegative(boolean newMarkNegative) {
+		boolean oldMarkNegative = markNegative;
+		markNegative = newMarkNegative;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YNUMERIC_FIELD__MARK_NEGATIVE, oldMarkNegative, markNegative));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -316,6 +400,10 @@ public class YNumericFieldImpl extends YInputImpl implements YNumericField {
 				return basicGetDatadescription();
 			case ExtensionModelPackage.YNUMERIC_FIELD__VALUE:
 				return getValue();
+			case ExtensionModelPackage.YNUMERIC_FIELD__GROUPING:
+				return isGrouping();
+			case ExtensionModelPackage.YNUMERIC_FIELD__MARK_NEGATIVE:
+				return isMarkNegative();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -337,6 +425,12 @@ public class YNumericFieldImpl extends YInputImpl implements YNumericField {
 				return;
 			case ExtensionModelPackage.YNUMERIC_FIELD__VALUE:
 				setValue((Long)newValue);
+				return;
+			case ExtensionModelPackage.YNUMERIC_FIELD__GROUPING:
+				setGrouping((Boolean)newValue);
+				return;
+			case ExtensionModelPackage.YNUMERIC_FIELD__MARK_NEGATIVE:
+				setMarkNegative((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -385,6 +479,12 @@ public class YNumericFieldImpl extends YInputImpl implements YNumericField {
 			case ExtensionModelPackage.YNUMERIC_FIELD__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YNUMERIC_FIELD__GROUPING:
+				setGrouping(GROUPING_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YNUMERIC_FIELD__MARK_NEGATIVE:
+				setMarkNegative(MARK_NEGATIVE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -404,6 +504,10 @@ public class YNumericFieldImpl extends YInputImpl implements YNumericField {
 				return datadescription != null;
 			case ExtensionModelPackage.YNUMERIC_FIELD__VALUE:
 				return value != VALUE_EDEFAULT;
+			case ExtensionModelPackage.YNUMERIC_FIELD__GROUPING:
+				return grouping != GROUPING_EDEFAULT;
+			case ExtensionModelPackage.YNUMERIC_FIELD__MARK_NEGATIVE:
+				return markNegative != MARK_NEGATIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -459,6 +563,10 @@ public class YNumericFieldImpl extends YInputImpl implements YNumericField {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", grouping: ");
+		result.append(grouping);
+		result.append(", markNegative: ");
+		result.append(markNegative);
 		result.append(')');
 		return result.toString();
 	}
