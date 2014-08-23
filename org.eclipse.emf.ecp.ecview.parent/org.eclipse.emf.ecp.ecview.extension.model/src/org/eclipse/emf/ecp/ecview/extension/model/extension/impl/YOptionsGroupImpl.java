@@ -43,6 +43,7 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YSelectionType;
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
+ *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getItemCaptionProperty <em>Item Caption Property</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getItemImageProperty <em>Item Image Property</em>}</li>
  * </ul>
  * </p>
@@ -205,6 +206,26 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * @ordered
 	 */
 	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemCaptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ITEM_CAPTION_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemCaptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String itemCaptionProperty = ITEM_CAPTION_PROPERTY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
@@ -614,6 +635,27 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getItemCaptionProperty() {
+		return itemCaptionProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setItemCaptionProperty(String newItemCaptionProperty) {
+		String oldItemCaptionProperty = itemCaptionProperty;
+		itemCaptionProperty = newItemCaptionProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY, oldItemCaptionProperty, itemCaptionProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getItemImageProperty() {
 		return itemImageProperty;
 	}
@@ -776,6 +818,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return getEmfNsURI();
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return getTypeQualifiedName();
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
+				return getItemCaptionProperty();
 			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
 				return getItemImageProperty();
 		}
@@ -828,6 +872,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName((String)newValue);
 				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
+				setItemCaptionProperty((String)newValue);
+				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
 				setItemImageProperty((String)newValue);
 				return;
@@ -878,6 +925,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
+				setItemCaptionProperty(ITEM_CAPTION_PROPERTY_EDEFAULT);
+				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
 				setItemImageProperty(ITEM_IMAGE_PROPERTY_EDEFAULT);
 				return;
@@ -916,6 +966,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
+				return ITEM_CAPTION_PROPERTY_EDEFAULT == null ? itemCaptionProperty != null : !ITEM_CAPTION_PROPERTY_EDEFAULT.equals(itemCaptionProperty);
 			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
 				return ITEM_IMAGE_PROPERTY_EDEFAULT == null ? itemImageProperty != null : !ITEM_IMAGE_PROPERTY_EDEFAULT.equals(itemImageProperty);
 		}
@@ -1009,6 +1061,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		result.append(emfNsURI);
 		result.append(", typeQualifiedName: ");
 		result.append(typeQualifiedName);
+		result.append(", itemCaptionProperty: ");
+		result.append(itemCaptionProperty);
 		result.append(", itemImageProperty: ");
 		result.append(itemImageProperty);
 		result.append(')');

@@ -133,6 +133,7 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
+    Attribute itemCaptionProperty : EString
     Attribute itemImageProperty : EString
 
   Class YList -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable

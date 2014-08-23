@@ -1856,13 +1856,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Item Caption Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+
+	/**
 	 * The feature id for the '<em><b>Item Image Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+	int YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>YOptions Group</em>' class.
@@ -1871,7 +1880,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 13;
+	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -7459,6 +7468,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYOptionsGroup_TypeQualifiedName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YOptionsGroup#getItemCaptionProperty <em>Item Caption Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Item Caption Property</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YOptionsGroup#getItemCaptionProperty()
+	 * @see #getYOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYOptionsGroup_ItemCaptionProperty();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YOptionsGroup#getItemImageProperty <em>Item Image Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8923,6 +8943,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = eINSTANCE.getYOptionsGroup_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Item Caption Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY = eINSTANCE.getYOptionsGroup_ItemCaptionProperty();
 
 		/**
 		 * The meta object literal for the '<em><b>Item Image Property</b></em>' attribute feature.

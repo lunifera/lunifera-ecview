@@ -32,5 +32,7 @@ public interface YOptionsGroupValidator {
 
 	boolean validateTypeQualifiedName(String value);
 
+	boolean validateItemCaptionProperty(String value);
+
 	boolean validateItemImageProperty(String value);
 }
