@@ -43,6 +43,7 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YSelectionType;
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
+ *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YOptionsGroupImpl#getItemImageProperty <em>Item Image Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -204,6 +205,26 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * @ordered
 	 */
 	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemImageProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ITEM_IMAGE_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemImageProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String itemImageProperty = ITEM_IMAGE_PROPERTY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -589,6 +610,27 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getItemImageProperty() {
+		return itemImageProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setItemImageProperty(String newItemImageProperty) {
+		String oldItemImageProperty = itemImageProperty;
+		itemImageProperty = newItemImageProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY, oldItemImageProperty, itemImageProperty));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -734,6 +776,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return getEmfNsURI();
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return getTypeQualifiedName();
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
+				return getItemImageProperty();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -784,6 +828,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName((String)newValue);
 				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
+				setItemImageProperty((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -831,6 +878,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
+				setItemImageProperty(ITEM_IMAGE_PROPERTY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -866,6 +916,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
+			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
+				return ITEM_IMAGE_PROPERTY_EDEFAULT == null ? itemImageProperty != null : !ITEM_IMAGE_PROPERTY_EDEFAULT.equals(itemImageProperty);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -957,6 +1009,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		result.append(emfNsURI);
 		result.append(", typeQualifiedName: ");
 		result.append(typeQualifiedName);
+		result.append(", itemImageProperty: ");
+		result.append(itemImageProperty);
 		result.append(')');
 		return result.toString();
 	}

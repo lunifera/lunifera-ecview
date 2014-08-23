@@ -20,4 +20,8 @@ public interface YNumericFieldValidator {
 	boolean validateDatatype(YNumericDatatype value);
 	boolean validateDatadescription(YDatadescription value);
 	boolean validateValue(long value);
+
+	boolean validateGrouping(boolean value);
+
+	boolean validateMarkNegative(boolean value);
 }

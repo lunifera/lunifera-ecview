@@ -1856,13 +1856,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Item Image Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+
+	/**
 	 * The number of structural features of the '<em>YOptions Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 12;
+	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -7450,6 +7459,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYOptionsGroup_TypeQualifiedName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YOptionsGroup#getItemImageProperty <em>Item Image Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Item Image Property</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YOptionsGroup#getItemImageProperty()
+	 * @see #getYOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYOptionsGroup_ItemImageProperty();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.listener.YButtonClickListener <em>YButton Click Listener</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8903,6 +8923,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = eINSTANCE.getYOptionsGroup_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Item Image Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY = eINSTANCE.getYOptionsGroup_ItemImageProperty();
 
 		/**
 		 * The meta object literal for the '<em>YButton Click Listener</em>' data type.

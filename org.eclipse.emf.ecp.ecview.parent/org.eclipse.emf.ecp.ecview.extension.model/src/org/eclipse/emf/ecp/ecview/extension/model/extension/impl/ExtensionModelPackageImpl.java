@@ -1734,6 +1734,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYOptionsGroup_ItemImageProperty() {
+		return (EAttribute)yOptionsGroupEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1888,6 +1897,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__TYPE);
 		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__EMF_NS_URI);
 		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__TYPE_QUALIFIED_NAME);
+		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY);
 
 		yListEClass = createEClass(YLIST);
 		createEReference(yListEClass, YLIST__DATADESCRIPTION);
@@ -2222,6 +2232,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYOptionsGroup_Type(), g1, "type", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYOptionsGroup_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYOptionsGroup_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYOptionsGroup_ItemImageProperty(), ecorePackage.getEString(), "itemImageProperty", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yListEClass, YList.class, "YList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYList_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
