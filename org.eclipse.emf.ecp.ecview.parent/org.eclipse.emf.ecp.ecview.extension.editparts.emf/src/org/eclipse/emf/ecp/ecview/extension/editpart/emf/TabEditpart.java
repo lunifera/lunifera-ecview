@@ -100,12 +100,6 @@ public class TabEditpart extends ElementEditpart<YTab> implements ITabEditpart {
 	protected void internalDispose() {
 		try {
 			// if directly attached to a view, then remove it
-			IViewEditpart view = getView();
-			if (view != null) {
-				view.setContent(null);
-			}
-
-			// remove from the parent
 			ITabSheetEditpart parent = getParent();
 			if (parent != null) {
 				parent.removeTab(this);
@@ -120,6 +114,54 @@ public class TabEditpart extends ElementEditpart<YTab> implements ITabEditpart {
 
 		} finally {
 			super.internalDispose();
+		}
+	}
+	
+	@Override
+	public void requestRender() {
+		if (getParent() != null) {
+			getParent().renderTab(this);
+		} else {
+			unrender();
+		}
+	}
+
+	@Override
+	public Object render(Object parentWidget) {
+		return getPresentation().createWidget(parentWidget);
+	}
+
+	@Override
+	public void requestUnrender() {
+		if (getParent() != null) {
+			getParent().unrenderTab(this);
+		} else {
+			unrender();
+		}
+	}
+
+	@Override
+	public void unrender() {
+		getPresentation().unrender();
+	}
+
+	@Override
+	public boolean isRendered() {
+		return internalGetPresentation() != null
+				&& internalGetPresentation().isRendered();
+	}
+
+	@Override
+	public Object getWidget() {
+		return getPresentation().getWidget();
+	}
+
+	@Override
+	public void requestDispose() {
+		if (getParent() != null) {
+			getParent().disposeTab(this);
+		} else {
+			dispose();
 		}
 	}
 

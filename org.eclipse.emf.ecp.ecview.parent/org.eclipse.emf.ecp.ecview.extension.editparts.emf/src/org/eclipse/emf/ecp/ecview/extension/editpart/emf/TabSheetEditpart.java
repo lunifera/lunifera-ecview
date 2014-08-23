@@ -132,9 +132,9 @@ public class TabSheetEditpart extends EmbeddableEditpart<YTabSheet> implements
 				ITabSheetPresentation<?> presenter = getPresentation();
 				int index = notification.getPosition();
 				if (index < 0 || index >= getTabs().size() - 1) {
-					presenter.add(editPart.getPresentation());
+					presenter.add(editPart);
 				} else {
-					presenter.insert(editPart.getPresentation(), index);
+					presenter.insert(editPart, index);
 				}
 			}
 			break;
@@ -158,8 +158,7 @@ public class TabSheetEditpart extends EmbeddableEditpart<YTabSheet> implements
 			//
 			if (isPresentationPresent()) {
 				ITabSheetPresentation<?> presenter = getPresentation();
-				presenter.move(editPart.getPresentation(),
-						notification.getPosition());
+				presenter.move(editPart, notification.getPosition());
 			}
 			break;
 		default:
@@ -193,7 +192,7 @@ public class TabSheetEditpart extends EmbeddableEditpart<YTabSheet> implements
 			//
 			if (isPresentationPresent()) {
 				ITabSheetPresentation<?> presenter = getPresentation();
-				presenter.remove(editPart.getPresentation());
+				presenter.remove(editPart);
 			}
 			break;
 		default:
@@ -272,8 +271,30 @@ public class TabSheetEditpart extends EmbeddableEditpart<YTabSheet> implements
 		}
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public ITabSheetPresentation<?> getPresentation() {
+		return super.getPresentation();
+	}
+
 	@Override
 	public List<IValidatorEditpart> getDatatypeValidators() {
 		return Collections.emptyList();
+	}
+
+	@Override
+	public void renderTab(ITabEditpart editpart) {
+		getPresentation().add(editpart);
+	}
+
+	@Override
+	public void disposeTab(ITabEditpart editpart) {
+		getPresentation().remove(editpart);
+		editpart.dispose();
+	}
+
+	@Override
+	public void unrenderTab(ITabEditpart editpart) {
+		getPresentation().remove(editpart);
 	}
 }

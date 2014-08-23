@@ -21,6 +21,8 @@ import org.eclipse.emf.ecp.ecview.extension.model.datatypes.impl.ExtDatatypesPac
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelFactory;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YAlignment;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchOption;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YBrowser;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YButton;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YCheckBox;
@@ -41,8 +43,10 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YLabel;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YList;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YMasterDetail;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YOptionsGroup;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YProgressBar;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YSearchWildcards;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YSelectionType;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YSpanInfo;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTab;
@@ -50,6 +54,7 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YTabSheet;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTable;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTextArea;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTextField;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YToggleButton;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTree;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YVerticalLayout;
@@ -240,6 +245,27 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	private EClass yFormLayoutCellStyleEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yTextSearchFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yBooleanSearchFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yNumericSearchFieldEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -269,6 +295,20 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EEnum ySelectionTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum yBooleanSearchOptionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum ySearchWildcardsEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1431,6 +1471,105 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYTextSearchField() {
+		return yTextSearchFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYTextSearchField_Datadescription() {
+		return (EReference)yTextSearchFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYTextSearchField_Value() {
+		return (EAttribute)yTextSearchFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYTextSearchField_Wildcard() {
+		return (EAttribute)yTextSearchFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYBooleanSearchField() {
+		return yBooleanSearchFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYBooleanSearchField_Datadescription() {
+		return (EReference)yBooleanSearchFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBooleanSearchField_Value() {
+		return (EAttribute)yBooleanSearchFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYNumericSearchField() {
+		return yNumericSearchFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYNumericSearchField_Datadescription() {
+		return (EReference)yNumericSearchFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYNumericSearchField_Value() {
+		return (EAttribute)yNumericSearchFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYNumericSearchField_Wildcard() {
+		return (EAttribute)yNumericSearchFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1628,6 +1767,24 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getYBooleanSearchOption() {
+		return yBooleanSearchOptionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getYSearchWildcards() {
+		return ySearchWildcardsEEnum;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1654,11 +1811,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		// Create classes and their features
 		yInputEClass = createEClass(YINPUT);
-
-		yTextFieldEClass = createEClass(YTEXT_FIELD);
-		createEReference(yTextFieldEClass, YTEXT_FIELD__DATATYPE);
-		createEReference(yTextFieldEClass, YTEXT_FIELD__DATADESCRIPTION);
-		createEAttribute(yTextFieldEClass, YTEXT_FIELD__VALUE);
 
 		yGridLayoutEClass = createEClass(YGRID_LAYOUT);
 		createEReference(yGridLayoutEClass, YGRID_LAYOUT__CELL_STYLES);
@@ -1756,6 +1908,11 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEReference(yImageEClass, YIMAGE__DATADESCRIPTION);
 		createEAttribute(yImageEClass, YIMAGE__VALUE);
 
+		yTextFieldEClass = createEClass(YTEXT_FIELD);
+		createEReference(yTextFieldEClass, YTEXT_FIELD__DATATYPE);
+		createEReference(yTextFieldEClass, YTEXT_FIELD__DATADESCRIPTION);
+		createEAttribute(yTextFieldEClass, YTEXT_FIELD__VALUE);
+
 		yTextAreaEClass = createEClass(YTEXT_AREA);
 		createEReference(yTextAreaEClass, YTEXT_AREA__DATADESCRIPTION);
 		createEReference(yTextAreaEClass, YTEXT_AREA__DATATYPE);
@@ -1836,10 +1993,26 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEReference(yFormLayoutCellStyleEClass, YFORM_LAYOUT_CELL_STYLE__TARGET);
 		createEAttribute(yFormLayoutCellStyleEClass, YFORM_LAYOUT_CELL_STYLE__ALIGNMENT);
 
+		yTextSearchFieldEClass = createEClass(YTEXT_SEARCH_FIELD);
+		createEReference(yTextSearchFieldEClass, YTEXT_SEARCH_FIELD__DATADESCRIPTION);
+		createEAttribute(yTextSearchFieldEClass, YTEXT_SEARCH_FIELD__VALUE);
+		createEAttribute(yTextSearchFieldEClass, YTEXT_SEARCH_FIELD__WILDCARD);
+
+		yBooleanSearchFieldEClass = createEClass(YBOOLEAN_SEARCH_FIELD);
+		createEReference(yBooleanSearchFieldEClass, YBOOLEAN_SEARCH_FIELD__DATADESCRIPTION);
+		createEAttribute(yBooleanSearchFieldEClass, YBOOLEAN_SEARCH_FIELD__VALUE);
+
+		yNumericSearchFieldEClass = createEClass(YNUMERIC_SEARCH_FIELD);
+		createEReference(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__DATADESCRIPTION);
+		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__VALUE);
+		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__WILDCARD);
+
 		// Create enums
 		yAlignmentEEnum = createEEnum(YALIGNMENT);
 		yFlatAlignmentEEnum = createEEnum(YFLAT_ALIGNMENT);
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
+		yBooleanSearchOptionEEnum = createEEnum(YBOOLEAN_SEARCH_OPTION);
+		ySearchWildcardsEEnum = createEEnum(YSEARCH_WILDCARDS);
 
 		// Create data types
 		yButtonClickListenerEDataType = createEDataType(YBUTTON_CLICK_LISTENER);
@@ -1878,8 +2051,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		// Add supertypes to classes
 		yInputEClass.getESuperTypes().add(theCoreModelPackage.getYField());
-		yTextFieldEClass.getESuperTypes().add(this.getYInput());
-		yTextFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yGridLayoutEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		yGridLayoutEClass.getESuperTypes().add(theCoreModelPackage.getYSpacingable());
 		yGridLayoutEClass.getESuperTypes().add(theCoreModelPackage.getYMarginable());
@@ -1910,6 +2081,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yLabelEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yImageEClass.getESuperTypes().add(theCoreModelPackage.getYField());
 		yImageEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
+		yTextFieldEClass.getESuperTypes().add(this.getYInput());
+		yTextFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yTextAreaEClass.getESuperTypes().add(this.getYInput());
 		yTextAreaEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yCheckBoxEClass.getESuperTypes().add(this.getYInput());
@@ -1942,14 +2115,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yFormLayoutEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		yFormLayoutEClass.getESuperTypes().add(theCoreModelPackage.getYSpacingable());
 		yFormLayoutEClass.getESuperTypes().add(theCoreModelPackage.getYMarginable());
+		yTextSearchFieldEClass.getESuperTypes().add(this.getYInput());
+		yTextSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
+		yBooleanSearchFieldEClass.getESuperTypes().add(this.getYInput());
+		yBooleanSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
+		yNumericSearchFieldEClass.getESuperTypes().add(this.getYInput());
+		yNumericSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yInputEClass, YInput.class, "YInput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(yTextFieldEClass, YTextField.class, "YTextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getYTextField_Datatype(), theExtDatatypesPackage.getYTextDatatype(), null, "datatype", null, 0, 1, YTextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getYTextField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYTextField_Value(), ecorePackage.getEString(), "value", null, 0, 1, YTextField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yGridLayoutEClass, YGridLayout.class, "YGridLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYGridLayout_CellStyles(), this.getYGridLayoutCellStyle(), null, "cellStyles", null, 0, -1, YGridLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2071,6 +2245,11 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEReference(getYImage_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYImage_Value(), ecorePackage.getEString(), "value", null, 0, 1, YImage.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(yTextFieldEClass, YTextField.class, "YTextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYTextField_Datatype(), theExtDatatypesPackage.getYTextDatatype(), null, "datatype", null, 0, 1, YTextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYTextField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYTextField_Value(), ecorePackage.getEString(), "value", null, 0, 1, YTextField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(yTextAreaEClass, YTextArea.class, "YTextArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYTextArea_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYTextArea_Datatype(), theExtDatatypesPackage.getYTextAreaDatatype(), null, "datatype", null, 0, 1, YTextArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2165,6 +2344,20 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEReference(getYFormLayoutCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, YFormLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYFormLayoutCellStyle_Alignment(), this.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YFormLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(yTextSearchFieldEClass, YTextSearchField.class, "YTextSearchField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYTextSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYTextSearchField_Value(), ecorePackage.getEString(), "value", null, 0, 1, YTextSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYTextSearchField_Wildcard(), this.getYSearchWildcards(), "wildcard", null, 0, 1, YTextSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yBooleanSearchFieldEClass, YBooleanSearchField.class, "YBooleanSearchField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYBooleanSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YBooleanSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBooleanSearchField_Value(), this.getYBooleanSearchOption(), "value", null, 0, 1, YBooleanSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yNumericSearchFieldEClass, YNumericSearchField.class, "YNumericSearchField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYNumericSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YNumericSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYNumericSearchField_Value(), ecorePackage.getEString(), "value", null, 0, 1, YNumericSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYNumericSearchField_Wildcard(), this.getYSearchWildcards(), "wildcard", null, 0, 1, YNumericSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(yAlignmentEEnum, YAlignment.class, "YAlignment");
 		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_LEFT);
@@ -2193,6 +2386,20 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");
 		addEEnumLiteral(ySelectionTypeEEnum, YSelectionType.SINGLE);
 		addEEnumLiteral(ySelectionTypeEEnum, YSelectionType.MULTI);
+
+		initEEnum(yBooleanSearchOptionEEnum, YBooleanSearchOption.class, "YBooleanSearchOption");
+		addEEnumLiteral(yBooleanSearchOptionEEnum, YBooleanSearchOption.TRUE);
+		addEEnumLiteral(yBooleanSearchOptionEEnum, YBooleanSearchOption.FALSE);
+		addEEnumLiteral(yBooleanSearchOptionEEnum, YBooleanSearchOption.IGNORE);
+
+		initEEnum(ySearchWildcardsEEnum, YSearchWildcards.class, "YSearchWildcards");
+		addEEnumLiteral(ySearchWildcardsEEnum, YSearchWildcards.GT);
+		addEEnumLiteral(ySearchWildcardsEEnum, YSearchWildcards.GE);
+		addEEnumLiteral(ySearchWildcardsEEnum, YSearchWildcards.LT);
+		addEEnumLiteral(ySearchWildcardsEEnum, YSearchWildcards.LE);
+		addEEnumLiteral(ySearchWildcardsEEnum, YSearchWildcards.EQ);
+		addEEnumLiteral(ySearchWildcardsEEnum, YSearchWildcards.NE);
+		addEEnumLiteral(ySearchWildcardsEEnum, YSearchWildcards.ANY);
 
 		// Initialize data types
 		initEDataType(yButtonClickListenerEDataType, YButtonClickListener.class, "YButtonClickListener", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

@@ -3,12 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extension" nsURI="http://eclipse.org/emf/ecp/ecview/extension/view"
     nsPrefix="extension">
   <eClassifiers xsi:type="ecore:EClass" name="YInput" abstract="true" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YField"/>
-  <eClassifiers xsi:type="ecore:EClass" name="YTextField" eSuperTypes="#//YInput ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YValueBindable">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YTextDatatype"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        transient="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YGridLayout" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YLayout ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YSpacingable ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YMarginable">
     <eOperations name="addGridLayoutCellStyle" eType="#//YGridLayoutCellStyle">
       <eParameters name="element" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YEmbeddable"/>
@@ -248,6 +242,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         transient="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YTextField" eSuperTypes="#//YInput ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YValueBindable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YTextDatatype"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        transient="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YTextArea" eSuperTypes="#//YInput ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YValueBindable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YTextAreaDatatype"/>
@@ -379,5 +379,38 @@
         <details key="documentation" value="The alignment of the ui element relative to its grid cell."/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YTextSearchField" eSuperTypes="#//YInput ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YValueBindable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wildcard" eType="#//YSearchWildcards"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBooleanSearchField" eSuperTypes="#//YInput ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YValueBindable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//YBooleanSearchOption"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YNumericSearchField" eSuperTypes="#//YInput ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YValueBindable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wildcard" eType="#//YSearchWildcards"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YBooleanSearchOption">
+    <eLiterals name="TRUE" literal="TRUE"/>
+    <eLiterals name="FALSE" value="1" literal="FALSE"/>
+    <eLiterals name="IGNORE" value="2" literal="IGNORE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YSearchWildcards">
+    <eLiterals name="GT" literal="GT"/>
+    <eLiterals name="GE" value="1" literal="GE"/>
+    <eLiterals name="LT" value="2" literal="LT"/>
+    <eLiterals name="LE" value="3" literal="LE"/>
+    <eLiterals name="EQ" value="4" literal="EQ"/>
+    <eLiterals name="NE" value="5" literal="NE"/>
+    <eLiterals name="ANY" value="6" literal="ANY"/>
   </eClassifiers>
 </ecore:EPackage>

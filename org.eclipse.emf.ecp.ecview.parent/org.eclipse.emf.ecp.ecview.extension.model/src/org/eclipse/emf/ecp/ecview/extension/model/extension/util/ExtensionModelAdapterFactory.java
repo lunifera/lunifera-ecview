@@ -117,10 +117,6 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYInputAdapter();
 			}
 			@Override
-			public Adapter caseYTextField(YTextField object) {
-				return createYTextFieldAdapter();
-			}
-			@Override
 			public Adapter caseYGridLayout(YGridLayout object) {
 				return createYGridLayoutAdapter();
 			}
@@ -175,6 +171,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYImage(YImage object) {
 				return createYImageAdapter();
+			}
+			@Override
+			public Adapter caseYTextField(YTextField object) {
+				return createYTextFieldAdapter();
 			}
 			@Override
 			public Adapter caseYTextArea(YTextArea object) {
@@ -237,6 +237,18 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYFormLayoutCellStyleAdapter();
 			}
 			@Override
+			public Adapter caseYTextSearchField(YTextSearchField object) {
+				return createYTextSearchFieldAdapter();
+			}
+			@Override
+			public Adapter caseYBooleanSearchField(YBooleanSearchField object) {
+				return createYBooleanSearchFieldAdapter();
+			}
+			@Override
+			public Adapter caseYNumericSearchField(YNumericSearchField object) {
+				return createYNumericSearchFieldAdapter();
+			}
+			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
 			}
@@ -269,14 +281,6 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYFieldAdapter();
 			}
 			@Override
-			public Adapter caseYBindable(YBindable object) {
-				return createYBindableAdapter();
-			}
-			@Override
-			public Adapter caseYValueBindable(YValueBindable object) {
-				return createYValueBindableAdapter();
-			}
-			@Override
 			public Adapter caseYLayout(YLayout object) {
 				return createYLayoutAdapter();
 			}
@@ -289,6 +293,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYMarginableAdapter();
 			}
 			@Override
+			public Adapter caseYBindable(YBindable object) {
+				return createYBindableAdapter();
+			}
+			@Override
 			public Adapter caseYCollectionBindable(YCollectionBindable object) {
 				return createYCollectionBindableAdapter();
 			}
@@ -299,6 +307,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYMultiSelectionBindable(YMultiSelectionBindable object) {
 				return createYMultiSelectionBindableAdapter();
+			}
+			@Override
+			public Adapter caseYValueBindable(YValueBindable object) {
+				return createYValueBindableAdapter();
 			}
 			@Override
 			public Adapter caseYAction(YAction object) {
@@ -731,6 +743,48 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYFormLayoutCellStyleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField <em>YText Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField
+	 * @generated
+	 */
+	public Adapter createYTextSearchFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField <em>YBoolean Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField
+	 * @generated
+	 */
+	public Adapter createYBooleanSearchFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField <em>YNumeric Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField
+	 * @generated
+	 */
+	public Adapter createYNumericSearchFieldAdapter() {
 		return null;
 	}
 

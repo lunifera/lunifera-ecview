@@ -87,7 +87,6 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ExtensionModelPackage.YTEXT_FIELD: return createYTextField();
 			case ExtensionModelPackage.YGRID_LAYOUT: return createYGridLayout();
 			case ExtensionModelPackage.YGRID_LAYOUT_CELL_STYLE: return createYGridLayoutCellStyle();
 			case ExtensionModelPackage.YHORIZONTAL_LAYOUT: return createYHorizontalLayout();
@@ -102,6 +101,7 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YLIST: return createYList();
 			case ExtensionModelPackage.YLABEL: return createYLabel();
 			case ExtensionModelPackage.YIMAGE: return createYImage();
+			case ExtensionModelPackage.YTEXT_FIELD: return createYTextField();
 			case ExtensionModelPackage.YTEXT_AREA: return createYTextArea();
 			case ExtensionModelPackage.YCHECK_BOX: return createYCheckBox();
 			case ExtensionModelPackage.YBROWSER: return createYBrowser();
@@ -117,6 +117,9 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YMASTER_DETAIL: return createYMasterDetail();
 			case ExtensionModelPackage.YFORM_LAYOUT: return createYFormLayout();
 			case ExtensionModelPackage.YFORM_LAYOUT_CELL_STYLE: return createYFormLayoutCellStyle();
+			case ExtensionModelPackage.YTEXT_SEARCH_FIELD: return createYTextSearchField();
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD: return createYBooleanSearchField();
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD: return createYNumericSearchField();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -136,6 +139,10 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 				return createYFlatAlignmentFromString(eDataType, initialValue);
 			case ExtensionModelPackage.YSELECTION_TYPE:
 				return createYSelectionTypeFromString(eDataType, initialValue);
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_OPTION:
+				return createYBooleanSearchOptionFromString(eDataType, initialValue);
+			case ExtensionModelPackage.YSEARCH_WILDCARDS:
+				return createYSearchWildcardsFromString(eDataType, initialValue);
 			case ExtensionModelPackage.YBUTTON_CLICK_LISTENER:
 				return createYButtonClickListenerFromString(eDataType, initialValue);
 			default:
@@ -157,6 +164,10 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 				return convertYFlatAlignmentToString(eDataType, instanceValue);
 			case ExtensionModelPackage.YSELECTION_TYPE:
 				return convertYSelectionTypeToString(eDataType, instanceValue);
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_OPTION:
+				return convertYBooleanSearchOptionToString(eDataType, instanceValue);
+			case ExtensionModelPackage.YSEARCH_WILDCARDS:
+				return convertYSearchWildcardsToString(eDataType, instanceValue);
 			case ExtensionModelPackage.YBUTTON_CLICK_LISTENER:
 				return convertYButtonClickListenerToString(eDataType, instanceValue);
 			default:
@@ -449,6 +460,36 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public YTextSearchField createYTextSearchField() {
+		YTextSearchFieldImpl yTextSearchField = new YTextSearchFieldImpl();
+		return yTextSearchField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YBooleanSearchField createYBooleanSearchField() {
+		YBooleanSearchFieldImpl yBooleanSearchField = new YBooleanSearchFieldImpl();
+		return yBooleanSearchField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YNumericSearchField createYNumericSearchField() {
+		YNumericSearchFieldImpl yNumericSearchField = new YNumericSearchFieldImpl();
+		return yNumericSearchField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YTree createYTree() {
 		YTreeImpl yTree = new YTreeImpl();
 		return yTree;
@@ -521,6 +562,46 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	 * @generated
 	 */
 	public String convertYSelectionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YBooleanSearchOption createYBooleanSearchOptionFromString(EDataType eDataType, String initialValue) {
+		YBooleanSearchOption result = YBooleanSearchOption.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYBooleanSearchOptionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YSearchWildcards createYSearchWildcardsFromString(EDataType eDataType, String initialValue) {
+		YSearchWildcards result = YSearchWildcards.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYSearchWildcardsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

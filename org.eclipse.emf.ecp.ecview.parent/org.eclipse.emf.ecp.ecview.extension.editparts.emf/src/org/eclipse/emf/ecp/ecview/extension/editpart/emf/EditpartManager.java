@@ -44,6 +44,7 @@ import org.eclipse.emf.ecp.ecview.extension.model.datatypes.YTextAreaDatatype;
 import org.eclipse.emf.ecp.ecview.extension.model.datatypes.YTextDatatype;
 import org.eclipse.emf.ecp.ecview.extension.model.datatypes.YTreeDatatype;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YBrowser;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YButton;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YCheckBox;
@@ -58,6 +59,7 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YLabel;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YList;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YMasterDetail;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YOptionsGroup;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YProgressBar;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTab;
@@ -65,8 +67,10 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YTabSheet;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTable;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTextArea;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTextField;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YTree;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YVerticalLayout;
+import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IBooleanSearchFieldEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IBrowserEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IButtonEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ICheckboxEditpart;
@@ -80,6 +84,7 @@ import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ILabelEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IListEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IMasterDetailEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.INumericFieldEditpart;
+import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.INumericSearchFieldEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IOptionsGroupEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IProgressBarEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITabEditpart;
@@ -87,6 +92,7 @@ import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITabSheetEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITableEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITextAreaEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITextFieldEditpart;
+import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITextSearchFieldEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITreeEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.IVerticalLayoutEditpart;
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.datatypes.IBrowserDatatypeEditpart;
@@ -223,6 +229,15 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(MasterDetailEditpart.class);
 		} else if (editPartClazz.isAssignableFrom(IImageEditpart.class)) {
 			result = createNewInstance(ImageEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(ITextSearchFieldEditpart.class)) {
+			result = createNewInstance(TextSearchFieldEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(INumericSearchFieldEditpart.class)) {
+			result = createNewInstance(NumericSearchFieldEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IBooleanSearchFieldEditpart.class)) {
+			result = createNewInstance(BooleanSearchFieldEditpart.class);
 		}
 
 		if (result != null) {
@@ -321,6 +336,12 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(MasterDetailEditpart.class);
 		} else if (yElement instanceof YImage) {
 			result = createNewInstance(ImageEditpart.class);
+		} else if (yElement instanceof YTextSearchField) {
+			result = createNewInstance(TextSearchFieldEditpart.class);
+		} else if (yElement instanceof YNumericSearchField) {
+			result = createNewInstance(NumericSearchFieldEditpart.class);
+		} else if (yElement instanceof YBooleanSearchField) {
+			result = createNewInstance(BooleanSearchFieldEditpart.class);
 		}
 
 		if (result != null) {

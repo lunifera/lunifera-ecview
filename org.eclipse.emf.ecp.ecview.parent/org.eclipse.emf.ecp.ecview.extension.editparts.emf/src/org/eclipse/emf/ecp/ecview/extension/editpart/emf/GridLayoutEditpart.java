@@ -11,10 +11,7 @@
 package org.eclipse.emf.ecp.ecview.extension.editpart.emf;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecp.ecview.common.editpart.IEmbeddableEditpart;
 import org.eclipse.emf.ecp.ecview.common.editpart.emf.LayoutEditpart;
-import org.eclipse.emf.ecp.ecview.common.model.core.CoreModelPackage;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
 import org.eclipse.emf.ecp.ecview.common.presentation.ILayoutPresentation;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelFactory;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage;

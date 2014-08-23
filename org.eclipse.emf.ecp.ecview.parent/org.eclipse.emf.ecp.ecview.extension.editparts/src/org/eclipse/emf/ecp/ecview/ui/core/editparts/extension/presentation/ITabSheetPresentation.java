@@ -13,6 +13,7 @@ package org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.presentation;
 import java.util.List;
 
 import org.eclipse.emf.ecp.ecview.common.presentation.IWidgetPresentation;
+import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ITabEditpart;
 
 /**
  * TabSheetPresentations are an abstraction above a tabSheet an are responsible
@@ -29,8 +30,8 @@ public interface ITabSheetPresentation<C> extends IWidgetPresentation<C> {
 	 * 
 	 * @return tabren
 	 */
-	List<ITabPresentation<?>> getTabs();
-
+	List<ITabEditpart> getTabs();
+ 
 	/**
 	 * Returns true, if the given tab is contained.
 	 * 
@@ -39,8 +40,8 @@ public interface ITabSheetPresentation<C> extends IWidgetPresentation<C> {
 	 * @return true if the tab is contained. False
 	 *         otherwise.
 	 */
-	boolean contains(ITabPresentation<?> tab);
-
+	boolean contains(ITabEditpart tab);
+	
 	/**
 	 * Adds a tab to the this tabSheet. Note, that the tab can
 	 * be of any kind and it not parameterized.
@@ -48,7 +49,7 @@ public interface ITabSheetPresentation<C> extends IWidgetPresentation<C> {
 	 * @param tab
 	 *            The tab to be added
 	 */
-	void add(ITabPresentation<?> tab);
+	void add(ITabEditpart tab);
 
 	/**
 	 * Removes a tab from this tabSheet.
@@ -56,7 +57,7 @@ public interface ITabSheetPresentation<C> extends IWidgetPresentation<C> {
 	 * @param tab
 	 *            The tab to be removed
 	 */
-	void remove(ITabPresentation<?> tab);
+	void remove(ITabEditpart tab);
 
 	/**
 	 * Inserts the given tab at the index.
@@ -66,7 +67,7 @@ public interface ITabSheetPresentation<C> extends IWidgetPresentation<C> {
 	 * @param index
 	 *            The index where the tab should be inserted
 	 */
-	void insert(ITabPresentation<?> tab, int index);
+	void insert(ITabEditpart tab, int index);
 
 	/**
 	 * Moves the tab from its current index to the given one.
@@ -76,7 +77,7 @@ public interface ITabSheetPresentation<C> extends IWidgetPresentation<C> {
 	 * @param index
 	 *            The index where the tab should be moved to
 	 */
-	void move(ITabPresentation<?> tab, int index);
+	void move(ITabEditpart tab, int index);
 
 	/**
 	 * Will render the tab tabs.<br>

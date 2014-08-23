@@ -220,187 +220,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYTextField()
 	 * @generated
 	 */
-	int YTEXT_FIELD = 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__ID = YINPUT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__NAME = YINPUT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__CSS_CLASS = YINPUT__CSS_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__CSS_ID = YINPUT__CSS_ID;
-
-	/**
-	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__VISIBLE = YINPUT__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__VISIBILITY_PROCESSOR = YINPUT__VISIBILITY_PROCESSOR;
-
-	/**
-	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
-
-	/**
-	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
-
-	/**
-	 * The feature id for the '<em><b>Editable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__EDITABLE = YINPUT__EDITABLE;
-
-	/**
-	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__ENABLED = YINPUT__ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__VALIDATORS = YINPUT__VALIDATORS;
-
-	/**
-	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
-
-	/**
-	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Datatype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__DATATYPE = YINPUT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD__VALUE = YINPUT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>YText Field</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YTEXT_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
+	int YTEXT_FIELD = 15;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YGridLayoutImpl <em>YGrid Layout</em>}' class.
@@ -410,7 +230,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYGridLayout()
 	 * @generated
 	 */
-	int YGRID_LAYOUT = 2;
+	int YGRID_LAYOUT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -573,7 +393,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYGridLayoutCellStyle()
 	 * @generated
 	 */
-	int YGRID_LAYOUT_CELL_STYLE = 3;
+	int YGRID_LAYOUT_CELL_STYLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -619,7 +439,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYHorizontalLayout()
 	 * @generated
 	 */
-	int YHORIZONTAL_LAYOUT = 4;
+	int YHORIZONTAL_LAYOUT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -764,7 +584,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYHorizontalLayoutCellStyle()
 	 * @generated
 	 */
-	int YHORIZONTAL_LAYOUT_CELL_STYLE = 5;
+	int YHORIZONTAL_LAYOUT_CELL_STYLE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -801,7 +621,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYVerticalLayout()
 	 * @generated
 	 */
-	int YVERTICAL_LAYOUT = 6;
+	int YVERTICAL_LAYOUT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -946,7 +766,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYVerticalLayoutCellStyle()
 	 * @generated
 	 */
-	int YVERTICAL_LAYOUT_CELL_STYLE = 7;
+	int YVERTICAL_LAYOUT_CELL_STYLE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -983,7 +803,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYSpanInfo()
 	 * @generated
 	 */
-	int YSPAN_INFO = 8;
+	int YSPAN_INFO = 7;
 
 	/**
 	 * The feature id for the '<em><b>Column From</b></em>' attribute.
@@ -1038,7 +858,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYTable()
 	 * @generated
 	 */
-	int YTABLE = 9;
+	int YTABLE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1318,7 +1138,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYColumn()
 	 * @generated
 	 */
-	int YCOLUMN = 10;
+	int YCOLUMN = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1418,7 +1238,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYLabel()
 	 * @generated
 	 */
-	int YLABEL = 14;
+	int YLABEL = 13;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YTextAreaImpl <em>YText Area</em>}' class.
@@ -1498,7 +1318,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYList()
 	 * @generated
 	 */
-	int YLIST = 13;
+	int YLIST = 12;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YButtonImpl <em>YButton</em>}' class.
@@ -1528,7 +1348,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYTree()
 	 * @generated
 	 */
-	int YTREE = 11;
+	int YTREE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1790,7 +1610,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYOptionsGroup()
 	 * @generated
 	 */
-	int YOPTIONS_GROUP = 12;
+	int YOPTIONS_GROUP = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2475,7 +2295,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYImage()
 	 * @generated
 	 */
-	int YIMAGE = 15;
+	int YIMAGE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2647,6 +2467,186 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YIMAGE_FEATURE_COUNT = CoreModelPackage.YFIELD_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__VISIBILITY_PROCESSOR = YINPUT__VISIBILITY_PROCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Datatype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__DATATYPE = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__VALUE = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>YText Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5067,6 +5067,567 @@ public interface ExtensionModelPackage extends EPackage {
 	int YFORM_LAYOUT_CELL_STYLE_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YTextSearchFieldImpl <em>YText Search Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YTextSearchFieldImpl
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYTextSearchField()
+	 * @generated
+	 */
+	int YTEXT_SEARCH_FIELD = 31;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__VISIBILITY_PROCESSOR = YINPUT__VISIBILITY_PROCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__VALUE = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__WILDCARD = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>YText Search Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YBooleanSearchFieldImpl <em>YBoolean Search Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YBooleanSearchFieldImpl
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchField()
+	 * @generated
+	 */
+	int YBOOLEAN_SEARCH_FIELD = 32;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__VISIBILITY_PROCESSOR = YINPUT__VISIBILITY_PROCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__VALUE = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>YBoolean Search Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericSearchFieldImpl <em>YNumeric Search Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericSearchFieldImpl
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYNumericSearchField()
+	 * @generated
+	 */
+	int YNUMERIC_SEARCH_FIELD = 33;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__VISIBILITY_PROCESSOR = YINPUT__VISIBILITY_PROCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__VALUE = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__WILDCARD = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>YNumeric Search Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5074,7 +5635,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 34;
+	int YBUTTON_CLICK_LISTENER = 39;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YAlignment <em>YAlignment</em>}' enum.
@@ -5084,7 +5645,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYAlignment()
 	 * @generated
 	 */
-	int YALIGNMENT = 31;
+	int YALIGNMENT = 34;
 
 
 	/**
@@ -5095,7 +5656,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYFlatAlignment()
 	 * @generated
 	 */
-	int YFLAT_ALIGNMENT = 32;
+	int YFLAT_ALIGNMENT = 35;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -5105,7 +5666,28 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 33;
+	int YSELECTION_TYPE = 36;
+
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchOption <em>YBoolean Search Option</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchOption
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
+	 * @generated
+	 */
+	int YBOOLEAN_SEARCH_OPTION = 37;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YSearchWildcards
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
+	 * @generated
+	 */
+	int YSEARCH_WILDCARDS = 38;
 
 
 	/**
@@ -6532,6 +7114,124 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYFormLayoutCellStyle_Alignment();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField <em>YText Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YText Search Field</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField
+	 * @generated
+	 */
+	EClass getYTextSearchField();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField#getDatadescription()
+	 * @see #getYTextSearchField()
+	 * @generated
+	 */
+	EReference getYTextSearchField_Datadescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField#getValue()
+	 * @see #getYTextSearchField()
+	 * @generated
+	 */
+	EAttribute getYTextSearchField_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField#getWildcard <em>Wildcard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wildcard</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YTextSearchField#getWildcard()
+	 * @see #getYTextSearchField()
+	 * @generated
+	 */
+	EAttribute getYTextSearchField_Wildcard();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField <em>YBoolean Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YBoolean Search Field</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField
+	 * @generated
+	 */
+	EClass getYBooleanSearchField();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField#getDatadescription()
+	 * @see #getYBooleanSearchField()
+	 * @generated
+	 */
+	EReference getYBooleanSearchField_Datadescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchField#getValue()
+	 * @see #getYBooleanSearchField()
+	 * @generated
+	 */
+	EAttribute getYBooleanSearchField_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField <em>YNumeric Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YNumeric Search Field</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField
+	 * @generated
+	 */
+	EClass getYNumericSearchField();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField#getDatadescription()
+	 * @see #getYNumericSearchField()
+	 * @generated
+	 */
+	EReference getYNumericSearchField_Datadescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField#getValue()
+	 * @see #getYNumericSearchField()
+	 * @generated
+	 */
+	EAttribute getYNumericSearchField_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField#getWildcard <em>Wildcard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wildcard</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericSearchField#getWildcard()
+	 * @see #getYNumericSearchField()
+	 * @generated
+	 */
+	EAttribute getYNumericSearchField_Wildcard();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6789,6 +7489,26 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getYSelectionType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchOption <em>YBoolean Search Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YBoolean Search Option</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchOption
+	 * @generated
+	 */
+	EEnum getYBooleanSearchOption();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YSearch Wildcards</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YSearchWildcards
+	 * @generated
+	 */
+	EEnum getYSearchWildcards();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -7927,6 +8647,100 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YFORM_LAYOUT_CELL_STYLE__ALIGNMENT = eINSTANCE.getYFormLayoutCellStyle_Alignment();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YTextSearchFieldImpl <em>YText Search Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YTextSearchFieldImpl
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYTextSearchField()
+		 * @generated
+		 */
+		EClass YTEXT_SEARCH_FIELD = eINSTANCE.getYTextSearchField();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YTEXT_SEARCH_FIELD__DATADESCRIPTION = eINSTANCE.getYTextSearchField_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YTEXT_SEARCH_FIELD__VALUE = eINSTANCE.getYTextSearchField_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YTEXT_SEARCH_FIELD__WILDCARD = eINSTANCE.getYTextSearchField_Wildcard();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YBooleanSearchFieldImpl <em>YBoolean Search Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YBooleanSearchFieldImpl
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchField()
+		 * @generated
+		 */
+		EClass YBOOLEAN_SEARCH_FIELD = eINSTANCE.getYBooleanSearchField();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YBOOLEAN_SEARCH_FIELD__DATADESCRIPTION = eINSTANCE.getYBooleanSearchField_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBOOLEAN_SEARCH_FIELD__VALUE = eINSTANCE.getYBooleanSearchField_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericSearchFieldImpl <em>YNumeric Search Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericSearchFieldImpl
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYNumericSearchField()
+		 * @generated
+		 */
+		EClass YNUMERIC_SEARCH_FIELD = eINSTANCE.getYNumericSearchField();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YNUMERIC_SEARCH_FIELD__DATADESCRIPTION = eINSTANCE.getYNumericSearchField_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YNUMERIC_SEARCH_FIELD__VALUE = eINSTANCE.getYNumericSearchField_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YNUMERIC_SEARCH_FIELD__WILDCARD = eINSTANCE.getYNumericSearchField_Wildcard();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8129,6 +8943,26 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum YSELECTION_TYPE = eINSTANCE.getYSelectionType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchOption <em>YBoolean Search Option</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YBooleanSearchOption
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
+		 * @generated
+		 */
+		EEnum YBOOLEAN_SEARCH_OPTION = eINSTANCE.getYBooleanSearchOption();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YSearchWildcards
+		 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
+		 * @generated
+		 */
+		EEnum YSEARCH_WILDCARDS = eINSTANCE.getYSearchWildcards();
 
 	}
 

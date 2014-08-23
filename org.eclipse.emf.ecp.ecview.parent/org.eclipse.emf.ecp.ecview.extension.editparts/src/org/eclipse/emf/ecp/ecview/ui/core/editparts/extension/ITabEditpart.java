@@ -58,4 +58,56 @@ public interface ITabEditpart extends IElementEditpart {
 	 */
 	<A extends ITabPresentation<?>> A getPresentation();
 
+	/**
+	 * Requests rendering of the current editpart. This method will forward the
+	 * request to the parent if available and the parent will handle the steps
+	 * required to render the editpart properly.
+	 */
+	void requestRender();
+
+	/**
+	 * This method is called by the parent presentation to render the contents
+	 * of the editpart.
+	 * 
+	 * @param parentWidget
+	 *            - The parent widget the new widget will be placed on.
+	 * @return newWidget - without adding it to the parentWidget.
+	 */
+	Object render(Object parentWidget);
+
+	/**
+	 * Requests unrendering of the current editpart. This method will forward
+	 * the request to the parent if available and the parent will handle the
+	 * steps required to unrender the editpart properly.
+	 */
+	void requestUnrender();
+
+	/**
+	 * This method is called by the parent editpart and tells the current
+	 * editpart, that it should unrender its presentation now.
+	 */
+	void unrender();
+
+	/**
+	 * Returns true, if the editparts presentation is rendered.
+	 * 
+	 * @return
+	 */
+	boolean isRendered();
+
+	/**
+	 * Returns the rendered widget by the editparts presentation. Will return
+	 * <code>null</code> if the presentation was not rendered yet.
+	 * 
+	 * @return
+	 */
+	Object getWidget();
+
+	/**
+	 * Requests disposal of the current editpart. This method will forward the
+	 * request to the parent if available and the parent will handle the steps
+	 * required to dispose the editpart properly.
+	 */
+	void requestDispose();
+	
 }

@@ -54,11 +54,6 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
 
   Class YInput -> YField
 
-  Class YTextField -> YInput, YValueBindable
-    Reference datatype : YTextDatatype
-    Reference datadescription : YDatadescription
-    Attribute value : EString
-
   Class YGridLayout -> YLayout, YSpacingable, YMarginable
     Reference cellStyles : YGridLayoutCellStyle<<0..*>>
     Attribute columns : EInt
@@ -158,6 +153,11 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
     Reference datadescription : YDatadescription
     Attribute value : EString
 
+  Class YTextField -> YInput, YValueBindable
+    Reference datatype : YTextDatatype
+    Reference datadescription : YDatadescription
+    Attribute value : EString
+
   Class YTextArea -> YInput, YValueBindable
     Reference datadescription : YDatadescription
     Reference datatype : YTextAreaDatatype
@@ -241,6 +241,20 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
     Reference target : YEmbeddable<<1..1>>
     Attribute alignment : YAlignment
 
+  Class YTextSearchField -> YInput, YValueBindable
+    Reference datadescription : YDatadescription
+    Attribute value : EString
+    Attribute wildcard : YSearchWildcards
+
+  Class YBooleanSearchField -> YInput, YValueBindable
+    Reference datadescription : YDatadescription
+    Attribute value : YBooleanSearchOption
+
+  Class YNumericSearchField -> YInput, YValueBindable
+    Reference datadescription : YDatadescription
+    Attribute value : EString
+    Attribute wildcard : YSearchWildcards
+
   Enum YAlignment
     Literal BOTTOM_LEFT = 0
     Literal BOTTOM_CENTER = 1
@@ -268,5 +282,19 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
   Enum YSelectionType
     Literal SINGLE = 0
     Literal MULTI = 1
+
+  Enum YBooleanSearchOption
+    Literal TRUE = 0
+    Literal FALSE = 1
+    Literal IGNORE = 2
+
+  Enum YSearchWildcards
+    Literal GT = 0
+    Literal GE = 1
+    Literal LT = 2
+    Literal LE = 3
+    Literal EQ = 4
+    Literal NE = 5
+    Literal ANY = 6
 
   DataType YButtonClickListener <org.eclipse.emf.ecp.ecview.extension.model.extension.listener.YButtonClickListener>

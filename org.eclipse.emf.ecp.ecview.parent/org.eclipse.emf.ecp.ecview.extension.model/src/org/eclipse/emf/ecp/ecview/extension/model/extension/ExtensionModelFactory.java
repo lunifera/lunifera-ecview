@@ -274,6 +274,33 @@ public interface ExtensionModelFactory extends EFactory {
 	YFormLayoutCellStyle createYFormLayoutCellStyle();
 
 	/**
+	 * Returns a new object of class '<em>YText Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YText Search Field</em>'.
+	 * @generated
+	 */
+	YTextSearchField createYTextSearchField();
+
+	/**
+	 * Returns a new object of class '<em>YBoolean Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YBoolean Search Field</em>'.
+	 * @generated
+	 */
+	YBooleanSearchField createYBooleanSearchField();
+
+	/**
+	 * Returns a new object of class '<em>YNumeric Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YNumeric Search Field</em>'.
+	 * @generated
+	 */
+	YNumericSearchField createYNumericSearchField();
+
+	/**
 	 * Returns a new object of class '<em>YTree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

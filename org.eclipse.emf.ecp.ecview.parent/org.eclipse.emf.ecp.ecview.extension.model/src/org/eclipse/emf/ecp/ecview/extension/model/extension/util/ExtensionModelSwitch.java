@@ -126,23 +126,6 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExtensionModelPackage.YTEXT_FIELD: {
-				YTextField yTextField = (YTextField)theEObject;
-				T result = caseYTextField(yTextField);
-				if (result == null) result = caseYInput(yTextField);
-				if (result == null) result = caseYValueBindable(yTextField);
-				if (result == null) result = caseYField(yTextField);
-				if (result == null) result = caseYBindable(yTextField);
-				if (result == null) result = caseYEmbeddable(yTextField);
-				if (result == null) result = caseYEditable(yTextField);
-				if (result == null) result = caseYEnable(yTextField);
-				if (result == null) result = caseYElement(yTextField);
-				if (result == null) result = caseYCssAble(yTextField);
-				if (result == null) result = caseYVisibleable(yTextField);
-				if (result == null) result = caseYVisibilityProcessable(yTextField);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ExtensionModelPackage.YGRID_LAYOUT: {
 				YGridLayout yGridLayout = (YGridLayout)theEObject;
 				T result = caseYGridLayout(yGridLayout);
@@ -321,6 +304,23 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYCssAble(yImage);
 				if (result == null) result = caseYVisibleable(yImage);
 				if (result == null) result = caseYVisibilityProcessable(yImage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YTEXT_FIELD: {
+				YTextField yTextField = (YTextField)theEObject;
+				T result = caseYTextField(yTextField);
+				if (result == null) result = caseYInput(yTextField);
+				if (result == null) result = caseYValueBindable(yTextField);
+				if (result == null) result = caseYField(yTextField);
+				if (result == null) result = caseYBindable(yTextField);
+				if (result == null) result = caseYEmbeddable(yTextField);
+				if (result == null) result = caseYEditable(yTextField);
+				if (result == null) result = caseYEnable(yTextField);
+				if (result == null) result = caseYElement(yTextField);
+				if (result == null) result = caseYCssAble(yTextField);
+				if (result == null) result = caseYVisibleable(yTextField);
+				if (result == null) result = caseYVisibilityProcessable(yTextField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -544,6 +544,57 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 			case ExtensionModelPackage.YFORM_LAYOUT_CELL_STYLE: {
 				YFormLayoutCellStyle yFormLayoutCellStyle = (YFormLayoutCellStyle)theEObject;
 				T result = caseYFormLayoutCellStyle(yFormLayoutCellStyle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YTEXT_SEARCH_FIELD: {
+				YTextSearchField yTextSearchField = (YTextSearchField)theEObject;
+				T result = caseYTextSearchField(yTextSearchField);
+				if (result == null) result = caseYInput(yTextSearchField);
+				if (result == null) result = caseYValueBindable(yTextSearchField);
+				if (result == null) result = caseYField(yTextSearchField);
+				if (result == null) result = caseYBindable(yTextSearchField);
+				if (result == null) result = caseYEmbeddable(yTextSearchField);
+				if (result == null) result = caseYEditable(yTextSearchField);
+				if (result == null) result = caseYEnable(yTextSearchField);
+				if (result == null) result = caseYElement(yTextSearchField);
+				if (result == null) result = caseYCssAble(yTextSearchField);
+				if (result == null) result = caseYVisibleable(yTextSearchField);
+				if (result == null) result = caseYVisibilityProcessable(yTextSearchField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD: {
+				YBooleanSearchField yBooleanSearchField = (YBooleanSearchField)theEObject;
+				T result = caseYBooleanSearchField(yBooleanSearchField);
+				if (result == null) result = caseYInput(yBooleanSearchField);
+				if (result == null) result = caseYValueBindable(yBooleanSearchField);
+				if (result == null) result = caseYField(yBooleanSearchField);
+				if (result == null) result = caseYBindable(yBooleanSearchField);
+				if (result == null) result = caseYEmbeddable(yBooleanSearchField);
+				if (result == null) result = caseYEditable(yBooleanSearchField);
+				if (result == null) result = caseYEnable(yBooleanSearchField);
+				if (result == null) result = caseYElement(yBooleanSearchField);
+				if (result == null) result = caseYCssAble(yBooleanSearchField);
+				if (result == null) result = caseYVisibleable(yBooleanSearchField);
+				if (result == null) result = caseYVisibilityProcessable(yBooleanSearchField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD: {
+				YNumericSearchField yNumericSearchField = (YNumericSearchField)theEObject;
+				T result = caseYNumericSearchField(yNumericSearchField);
+				if (result == null) result = caseYInput(yNumericSearchField);
+				if (result == null) result = caseYValueBindable(yNumericSearchField);
+				if (result == null) result = caseYField(yNumericSearchField);
+				if (result == null) result = caseYBindable(yNumericSearchField);
+				if (result == null) result = caseYEmbeddable(yNumericSearchField);
+				if (result == null) result = caseYEditable(yNumericSearchField);
+				if (result == null) result = caseYEnable(yNumericSearchField);
+				if (result == null) result = caseYElement(yNumericSearchField);
+				if (result == null) result = caseYCssAble(yNumericSearchField);
+				if (result == null) result = caseYVisibleable(yNumericSearchField);
+				if (result == null) result = caseYVisibilityProcessable(yNumericSearchField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -983,6 +1034,51 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYFormLayoutCellStyle(YFormLayoutCellStyle object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YText Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YText Search Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYTextSearchField(YTextSearchField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YBoolean Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YBoolean Search Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYBooleanSearchField(YBooleanSearchField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YNumeric Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YNumeric Search Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYNumericSearchField(YNumericSearchField object) {
 		return null;
 	}
 

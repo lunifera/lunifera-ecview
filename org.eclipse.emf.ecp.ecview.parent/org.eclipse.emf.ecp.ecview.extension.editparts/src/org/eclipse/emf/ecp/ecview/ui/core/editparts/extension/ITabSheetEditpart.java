@@ -27,8 +27,7 @@ public interface ITabSheetEditpart extends IEmbeddableEditpart {
 	List<ITabEditpart> getTabs();
 
 	/**
-	 * Adds a tab to the tabsheet. Adding the same tab twice has no
-	 * effect.
+	 * Adds a tab to the tabsheet. Adding the same tab twice has no effect.
 	 * 
 	 * @param tab
 	 *            The editpart to be added.
@@ -43,4 +42,24 @@ public interface ITabSheetEditpart extends IEmbeddableEditpart {
 	 */
 	void removeTab(ITabEditpart tab);
 
+	/**
+	 * Renders the given tab.
+	 * 
+	 * @param tab
+	 */
+	void renderTab(ITabEditpart tab);
+
+	/**
+	 * Disposes the given tab.
+	 * 
+	 * @param tab
+	 */
+	void disposeTab(ITabEditpart tab);
+
+	/**
+	 * Unrenders the given tab.
+	 * 
+	 * @param tab
+	 */
+	void unrenderTab(ITabEditpart tab);
 }
