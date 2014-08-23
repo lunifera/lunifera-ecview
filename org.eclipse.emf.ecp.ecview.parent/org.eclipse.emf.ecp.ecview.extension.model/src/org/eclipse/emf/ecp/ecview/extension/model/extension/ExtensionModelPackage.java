@@ -3549,40 +3549,13 @@ public interface ExtensionModelPackage extends EPackage {
 	int YDECIMAL_FIELD__VALUE = YINPUT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Grouping</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_FIELD__GROUPING = YINPUT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Mark Negative</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_FIELD__MARK_NEGATIVE = YINPUT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Precision</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_FIELD__PRECISION = YINPUT_FEATURE_COUNT + 6;
-
-	/**
 	 * The number of structural features of the '<em>YDecimal Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YDECIMAL_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 7;
+	int YDECIMAL_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3756,31 +3729,13 @@ public interface ExtensionModelPackage extends EPackage {
 	int YNUMERIC_FIELD__VALUE = YINPUT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Grouping</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YNUMERIC_FIELD__GROUPING = YINPUT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Mark Negative</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YNUMERIC_FIELD__MARK_NEGATIVE = YINPUT_FEATURE_COUNT + 5;
-
-	/**
 	 * The number of structural features of the '<em>YNumeric Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YNUMERIC_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 6;
+	int YNUMERIC_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5992,39 +5947,6 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYDecimalField_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YDecimalField#isGrouping <em>Grouping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Grouping</em>'.
-	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YDecimalField#isGrouping()
-	 * @see #getYDecimalField()
-	 * @generated
-	 */
-	EAttribute getYDecimalField_Grouping();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YDecimalField#isMarkNegative <em>Mark Negative</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mark Negative</em>'.
-	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YDecimalField#isMarkNegative()
-	 * @see #getYDecimalField()
-	 * @generated
-	 */
-	EAttribute getYDecimalField_MarkNegative();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YDecimalField#getPrecision <em>Precision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Precision</em>'.
-	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YDecimalField#getPrecision()
-	 * @see #getYDecimalField()
-	 * @generated
-	 */
-	EAttribute getYDecimalField_Precision();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField <em>YNumeric Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6066,28 +5988,6 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYNumericField_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isGrouping <em>Grouping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Grouping</em>'.
-	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isGrouping()
-	 * @see #getYNumericField()
-	 * @generated
-	 */
-	EAttribute getYNumericField_Grouping();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isMarkNegative <em>Mark Negative</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mark Negative</em>'.
-	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isMarkNegative()
-	 * @see #getYNumericField()
-	 * @generated
-	 */
-	EAttribute getYNumericField_MarkNegative();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YComboBox <em>YCombo Box</em>}'.
@@ -7585,30 +7485,6 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YDECIMAL_FIELD__VALUE = eINSTANCE.getYDecimalField_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Grouping</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YDECIMAL_FIELD__GROUPING = eINSTANCE.getYDecimalField_Grouping();
-
-		/**
-		 * The meta object literal for the '<em><b>Mark Negative</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YDECIMAL_FIELD__MARK_NEGATIVE = eINSTANCE.getYDecimalField_MarkNegative();
-
-		/**
-		 * The meta object literal for the '<em><b>Precision</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YDECIMAL_FIELD__PRECISION = eINSTANCE.getYDecimalField_Precision();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YNumericFieldImpl <em>YNumeric Field</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7641,22 +7517,6 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YNUMERIC_FIELD__VALUE = eINSTANCE.getYNumericField_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Grouping</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YNUMERIC_FIELD__GROUPING = eINSTANCE.getYNumericField_Grouping();
-
-		/**
-		 * The meta object literal for the '<em><b>Mark Negative</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YNUMERIC_FIELD__MARK_NEGATIVE = eINSTANCE.getYNumericField_MarkNegative();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YComboBoxImpl <em>YCombo Box</em>}' class.

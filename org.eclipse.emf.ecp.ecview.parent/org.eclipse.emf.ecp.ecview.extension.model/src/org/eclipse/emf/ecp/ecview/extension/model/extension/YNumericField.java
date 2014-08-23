@@ -26,8 +26,6 @@ import org.eclipse.emf.ecp.ecview.extension.model.datatypes.YNumericDatatype;
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#getValue <em>Value</em>}</li>
- *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isGrouping <em>Grouping</em>}</li>
- *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isMarkNegative <em>Mark Negative</em>}</li>
  * </ul>
  * </p>
  *
@@ -113,59 +111,5 @@ public interface YNumericField extends YInput, YValueBindable {
 	 * @generated
 	 */
 	void setValue(long value);
-
-	/**
-	 * Returns the value of the '<em><b>Grouping</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Grouping</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Grouping</em>' attribute.
-	 * @see #setGrouping(boolean)
-	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage#getYNumericField_Grouping()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isGrouping();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isGrouping <em>Grouping</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Grouping</em>' attribute.
-	 * @see #isGrouping()
-	 * @generated
-	 */
-	void setGrouping(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Mark Negative</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Mark Negative</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mark Negative</em>' attribute.
-	 * @see #setMarkNegative(boolean)
-	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage#getYNumericField_MarkNegative()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isMarkNegative();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YNumericField#isMarkNegative <em>Mark Negative</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mark Negative</em>' attribute.
-	 * @see #isMarkNegative()
-	 * @generated
-	 */
-	void setMarkNegative(boolean value);
 
 } // YUiNumericField

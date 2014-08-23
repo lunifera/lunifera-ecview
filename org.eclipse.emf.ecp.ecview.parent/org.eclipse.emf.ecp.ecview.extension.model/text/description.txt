@@ -183,16 +183,11 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
     Reference datatype : YDecimalDatatype
     Reference datadescription : YDatadescription
     Attribute value : EDouble
-    Attribute grouping : EBoolean
-    Attribute markNegative : EBoolean
-    Attribute precision : EInt
 
   Class YNumericField -> YInput, YValueBindable
     Reference datatype : YNumericDatatype
     Reference datadescription : YDatadescription
     Attribute value : ELong
-    Attribute grouping : EBoolean
-    Attribute markNegative : EBoolean
 
   Class YComboBox -> YInput, YCollectionBindable, YSelectionBindable
     Reference datadescription : YDatadescription

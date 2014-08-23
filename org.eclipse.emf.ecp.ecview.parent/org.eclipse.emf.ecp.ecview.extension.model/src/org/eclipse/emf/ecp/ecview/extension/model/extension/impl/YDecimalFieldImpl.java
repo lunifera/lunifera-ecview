@@ -27,9 +27,6 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YDecimalField;
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YDecimalFieldImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YDecimalFieldImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YDecimalFieldImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YDecimalFieldImpl#isGrouping <em>Grouping</em>}</li>
- *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YDecimalFieldImpl#isMarkNegative <em>Mark Negative</em>}</li>
- *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YDecimalFieldImpl#getPrecision <em>Precision</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,61 +76,6 @@ public class YDecimalFieldImpl extends YInputImpl implements YDecimalField {
 	 * @ordered
 	 */
 	protected double value = VALUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isGrouping() <em>Grouping</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isGrouping()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean GROUPING_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isGrouping() <em>Grouping</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isGrouping()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean grouping = GROUPING_EDEFAULT;
-	/**
-	 * The default value of the '{@link #isMarkNegative() <em>Mark Negative</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isMarkNegative()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean MARK_NEGATIVE_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isMarkNegative() <em>Mark Negative</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isMarkNegative()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean markNegative = MARK_NEGATIVE_EDEFAULT;
-	/**
-	 * The default value of the '{@link #getPrecision() <em>Precision</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrecision()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int PRECISION_EDEFAULT = 2;
-	/**
-	 * The cached value of the '{@link #getPrecision() <em>Precision</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrecision()
-	 * @generated
-	 * @ordered
-	 */
-	protected int precision = PRECISION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -302,69 +244,6 @@ public class YDecimalFieldImpl extends YInputImpl implements YDecimalField {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isGrouping() {
-		return grouping;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGrouping(boolean newGrouping) {
-		boolean oldGrouping = grouping;
-		grouping = newGrouping;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YDECIMAL_FIELD__GROUPING, oldGrouping, grouping));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isMarkNegative() {
-		return markNegative;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMarkNegative(boolean newMarkNegative) {
-		boolean oldMarkNegative = markNegative;
-		markNegative = newMarkNegative;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YDECIMAL_FIELD__MARK_NEGATIVE, oldMarkNegative, markNegative));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPrecision() {
-		return precision;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrecision(int newPrecision) {
-		int oldPrecision = precision;
-		precision = newPrecision;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YDECIMAL_FIELD__PRECISION, oldPrecision, precision));
-	}
-
-	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -435,12 +314,6 @@ public class YDecimalFieldImpl extends YInputImpl implements YDecimalField {
 				return basicGetDatadescription();
 			case ExtensionModelPackage.YDECIMAL_FIELD__VALUE:
 				return getValue();
-			case ExtensionModelPackage.YDECIMAL_FIELD__GROUPING:
-				return isGrouping();
-			case ExtensionModelPackage.YDECIMAL_FIELD__MARK_NEGATIVE:
-				return isMarkNegative();
-			case ExtensionModelPackage.YDECIMAL_FIELD__PRECISION:
-				return getPrecision();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -463,15 +336,6 @@ public class YDecimalFieldImpl extends YInputImpl implements YDecimalField {
 				return;
 			case ExtensionModelPackage.YDECIMAL_FIELD__VALUE:
 				setValue((Double)newValue);
-				return;
-			case ExtensionModelPackage.YDECIMAL_FIELD__GROUPING:
-				setGrouping((Boolean)newValue);
-				return;
-			case ExtensionModelPackage.YDECIMAL_FIELD__MARK_NEGATIVE:
-				setMarkNegative((Boolean)newValue);
-				return;
-			case ExtensionModelPackage.YDECIMAL_FIELD__PRECISION:
-				setPrecision((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -496,15 +360,6 @@ public class YDecimalFieldImpl extends YInputImpl implements YDecimalField {
 			case ExtensionModelPackage.YDECIMAL_FIELD__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YDECIMAL_FIELD__GROUPING:
-				setGrouping(GROUPING_EDEFAULT);
-				return;
-			case ExtensionModelPackage.YDECIMAL_FIELD__MARK_NEGATIVE:
-				setMarkNegative(MARK_NEGATIVE_EDEFAULT);
-				return;
-			case ExtensionModelPackage.YDECIMAL_FIELD__PRECISION:
-				setPrecision(PRECISION_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -524,12 +379,6 @@ public class YDecimalFieldImpl extends YInputImpl implements YDecimalField {
 				return datadescription != null;
 			case ExtensionModelPackage.YDECIMAL_FIELD__VALUE:
 				return value != VALUE_EDEFAULT;
-			case ExtensionModelPackage.YDECIMAL_FIELD__GROUPING:
-				return grouping != GROUPING_EDEFAULT;
-			case ExtensionModelPackage.YDECIMAL_FIELD__MARK_NEGATIVE:
-				return markNegative != MARK_NEGATIVE_EDEFAULT;
-			case ExtensionModelPackage.YDECIMAL_FIELD__PRECISION:
-				return precision != PRECISION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -587,12 +436,6 @@ public class YDecimalFieldImpl extends YInputImpl implements YDecimalField {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
-		result.append(", grouping: ");
-		result.append(grouping);
-		result.append(", markNegative: ");
-		result.append(markNegative);
-		result.append(", precision: ");
-		result.append(precision);
 		result.append(')');
 		return result.toString();
 	}

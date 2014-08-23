@@ -983,33 +983,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYDecimalField_Grouping() {
-		return (EAttribute)yDecimalFieldEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYDecimalField_MarkNegative() {
-		return (EAttribute)yDecimalFieldEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYDecimalField_Precision() {
-		return (EAttribute)yDecimalFieldEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1039,24 +1012,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getYNumericField_Value() {
 		return (EAttribute)yNumericFieldEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYNumericField_Grouping() {
-		return (EAttribute)yNumericFieldEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYNumericField_MarkNegative() {
-		return (EAttribute)yNumericFieldEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1835,16 +1790,11 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEReference(yDecimalFieldEClass, YDECIMAL_FIELD__DATATYPE);
 		createEReference(yDecimalFieldEClass, YDECIMAL_FIELD__DATADESCRIPTION);
 		createEAttribute(yDecimalFieldEClass, YDECIMAL_FIELD__VALUE);
-		createEAttribute(yDecimalFieldEClass, YDECIMAL_FIELD__GROUPING);
-		createEAttribute(yDecimalFieldEClass, YDECIMAL_FIELD__MARK_NEGATIVE);
-		createEAttribute(yDecimalFieldEClass, YDECIMAL_FIELD__PRECISION);
 
 		yNumericFieldEClass = createEClass(YNUMERIC_FIELD);
 		createEReference(yNumericFieldEClass, YNUMERIC_FIELD__DATATYPE);
 		createEReference(yNumericFieldEClass, YNUMERIC_FIELD__DATADESCRIPTION);
 		createEAttribute(yNumericFieldEClass, YNUMERIC_FIELD__VALUE);
-		createEAttribute(yNumericFieldEClass, YNUMERIC_FIELD__GROUPING);
-		createEAttribute(yNumericFieldEClass, YNUMERIC_FIELD__MARK_NEGATIVE);
 
 		yComboBoxEClass = createEClass(YCOMBO_BOX);
 		createEReference(yComboBoxEClass, YCOMBO_BOX__DATADESCRIPTION);
@@ -2156,16 +2106,11 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEReference(getYDecimalField_Datatype(), theExtDatatypesPackage.getYDecimalDatatype(), null, "datatype", null, 0, 1, YDecimalField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYDecimalField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YDecimalField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYDecimalField_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, YDecimalField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYDecimalField_Grouping(), ecorePackage.getEBoolean(), "grouping", "false", 0, 1, YDecimalField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYDecimalField_MarkNegative(), ecorePackage.getEBoolean(), "markNegative", "false", 0, 1, YDecimalField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYDecimalField_Precision(), ecorePackage.getEInt(), "precision", "2", 0, 1, YDecimalField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yNumericFieldEClass, YNumericField.class, "YNumericField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYNumericField_Datatype(), theExtDatatypesPackage.getYNumericDatatype(), null, "datatype", null, 0, 1, YNumericField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYNumericField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YNumericField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYNumericField_Value(), ecorePackage.getELong(), "value", null, 0, 1, YNumericField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYNumericField_Grouping(), ecorePackage.getEBoolean(), "grouping", "false", 0, 1, YNumericField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYNumericField_MarkNegative(), ecorePackage.getEBoolean(), "markNegative", "false", 0, 1, YNumericField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yComboBoxEClass, YComboBox.class, "YComboBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYComboBox_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
