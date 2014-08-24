@@ -17,15 +17,15 @@ import org.eclipse.emf.ecp.ecview.common.validation.IStatus;
 import org.eclipse.emf.ecp.ecview.common.validation.IStatus.Severity;
 import org.eclipse.emf.ecp.ecview.common.validation.IValidator;
 import org.eclipse.emf.ecp.ecview.common.validation.Status;
-import org.eclipse.emf.ecp.ecview.common.validation.StringValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ClassDelegateValidator extends StringValidator {
+public class ClassDelegateValidator implements IValidator {
 
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ClassDelegateValidator.class);
 
+	protected final String message;
 	private ITypeProviderService service;
 	private IValidator delegate;
 
@@ -36,15 +36,21 @@ public class ClassDelegateValidator extends StringValidator {
 
 	public ClassDelegateValidator(YClassDelegateValidationConfig yValidator,
 			ITypeProviderService service, String message) {
-		super(message);
+		this.message = message;
 		this.service = service;
 		updateParameter(yValidator);
 	}
 
 	@Override
-	public IStatus doValidate(String value) {
-		if(delegate == null){
-			return Status.createStatus("", ClassDelegateValidator.class, Severity.ERROR, "Error occured: Delegate class was null.");
+	public Class<?> getType() {
+		return delegate.getType();
+	}
+
+	@Override
+	public IStatus validateValue(Object value) {
+		if (delegate == null) {
+			return Status.createStatus("", ClassDelegateValidator.class,
+					Severity.ERROR, "Error occured: Delegate class was null.");
 		}
 		return delegate.validateValue(value);
 	}
