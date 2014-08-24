@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Examples UI-Kit SWT
 Bundle-SymbolicName: org.eclipse.emf.ecp.ecview.example.swt;singleton:=true
-Bundle-Version: 0.7.0
+Bundle-Version: 0.7.3.qualifier
 Bundle-Activator: org.eclipse.emf.ecp.ecview.ui.example.swt.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.e4.ui.css.swt;bundle-version="0.10.1",

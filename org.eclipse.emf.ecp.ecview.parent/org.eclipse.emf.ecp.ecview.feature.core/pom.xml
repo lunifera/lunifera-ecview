@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.eclipse.emf.ecp.ecview</groupId>
     <artifactId>org.eclipse.emf.ecp.ecview</artifactId>
-    <version>0.7.0</version>
+    <version>0.7.3-SNAPSHOT</version>
   </parent>
   <artifactId>org.eclipse.emf.ecp.ecview.feature.core</artifactId>
   <name>Feature for core bundles</name>

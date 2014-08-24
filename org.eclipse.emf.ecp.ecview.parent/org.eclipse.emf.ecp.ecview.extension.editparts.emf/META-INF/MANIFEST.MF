@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMF based editparts for extension model
 Bundle-SymbolicName: org.eclipse.emf.ecp.ecview.extension.editparts.emf
-Bundle-Version: 0.7.0
+Bundle-Version: 0.7.3.qualifier
 Bundle-Activator: org.eclipse.emf.ecp.ecview.extension.editpart.emf.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;bundle-version="2.8.0",
@@ -16,5 +16,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.osgi.service.component;version="1.2.0",
  org.slf4j;version="1.6.4"
 Service-Component: OSGI-INF/editPartManager.xml
-Export-Package: org.eclipse.emf.ecp.ecview.extension.editpart.emf;version="0.7.0";x-internal:=true,
- org.eclipse.emf.ecp.ecview.extension.editpart.emf.datatypes;version="0.7.0";x-internal:=true
+Export-Package: org.eclipse.emf.ecp.ecview.extension.editpart.emf;vers
+ ion="0.7.3";x-internal:=true,org.eclipse.emf.ecp.ecview.extension.edi
+ tpart.emf.datatypes;version="0.7.3";x-internal:=true
