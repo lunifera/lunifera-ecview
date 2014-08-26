@@ -38,6 +38,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dialogs" upperBound="-1"
         eType="#//YDialog" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceType" eType="#//YDeviceType"
+        defaultValueLiteral="IDE"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YViewSet" eSuperTypes="#//YElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
@@ -234,5 +236,9 @@
     <eOperations name="createTriggerDialogEndpoint" eType="ecore:EClass binding.ecore#//YECViewModelValueBindingEndpoint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dialog" eType="#//YDialog"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YDeviceType">
+    <eLiterals name="IDE" literal="IDE"/>
+    <eLiterals name="MOBILE" value="1" literal="MOBILE"/>
   </eClassifiers>
 </ecore:EPackage>

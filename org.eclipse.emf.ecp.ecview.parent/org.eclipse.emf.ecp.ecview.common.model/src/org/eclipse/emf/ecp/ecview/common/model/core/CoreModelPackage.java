@@ -595,13 +595,22 @@ public interface CoreModelPackage extends EPackage {
 	int YVIEW__DIALOGS = YELEMENT_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Device Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__DEVICE_TYPE = YELEMENT_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>YView</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 11;
+	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -2086,6 +2095,16 @@ public interface CoreModelPackage extends EPackage {
 	int YUNIT = 37;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YDeviceType
+	 * @see org.eclipse.emf.ecp.ecview.common.model.core.impl.CoreModelPackageImpl#getYDeviceType()
+	 * @generated
+	 */
+	int YDEVICE_TYPE = 38;
+
+	/**
 	 * The meta object id for the '<em>YURI</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2093,7 +2112,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.common.model.core.impl.CoreModelPackageImpl#getYURI()
 	 * @generated
 	 */
-	int YURI = 38;
+	int YURI = 39;
 
 
 	/**
@@ -2104,7 +2123,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.eclipse.emf.ecp.ecview.common.model.core.impl.CoreModelPackageImpl#getYValueChangeListener()
 	 * @generated
 	 */
-	int YVALUE_CHANGE_LISTENER = 39;
+	int YVALUE_CHANGE_LISTENER = 40;
 
 
 	/**
@@ -2278,6 +2297,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getYView_Dialogs();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.common.model.core.YView#getDeviceType <em>Device Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Device Type</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YView#getDeviceType()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EAttribute getYView_DeviceType();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YViewSet <em>YView Set</em>}'.
@@ -3214,6 +3244,16 @@ public interface CoreModelPackage extends EPackage {
 	EEnum getYUnit();
 
 	/**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.ecp.ecview.common.model.core.YDeviceType <em>YDevice Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YDevice Type</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YDeviceType
+	 * @generated
+	 */
+	EEnum getYDeviceType();
+
+	/**
 	 * Returns the meta object for data type '{@link java.net.URI <em>YURI</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3392,6 +3432,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference YVIEW__DIALOGS = eINSTANCE.getYView_Dialogs();
+
+		/**
+		 * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVIEW__DEVICE_TYPE = eINSTANCE.getYView_DeviceType();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -4164,6 +4212,16 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum YUNIT = eINSTANCE.getYUnit();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.ecp.ecview.common.model.core.YDeviceType
+		 * @see org.eclipse.emf.ecp.ecview.common.model.core.impl.CoreModelPackageImpl#getYDeviceType()
+		 * @generated
+		 */
+		EEnum YDEVICE_TYPE = eINSTANCE.getYDeviceType();
 
 		/**
 		 * The meta object literal for the '<em>YURI</em>' data type.

@@ -29,6 +29,7 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YCommand;
 import org.eclipse.emf.ecp.ecview.common.model.core.YCommandSet;
 import org.eclipse.emf.ecp.ecview.common.model.core.YContextValueBindingEndpoint;
 import org.eclipse.emf.ecp.ecview.common.model.core.YCssAble;
+import org.eclipse.emf.ecp.ecview.common.model.core.YDeviceType;
 import org.eclipse.emf.ecp.ecview.common.model.core.YDialog;
 import org.eclipse.emf.ecp.ecview.common.model.core.YDtWrapper;
 import org.eclipse.emf.ecp.ecview.common.model.core.YEditable;
@@ -341,6 +342,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum yDeviceTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType yuriEDataType = null;
 
 	/**
@@ -567,6 +575,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EReference getYView_Dialogs() {
 		return (EReference)yViewEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYView_DeviceType() {
+		return (EAttribute)yViewEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1366,6 +1383,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getYDeviceType() {
+		return yDeviceTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getYURI() {
 		return yuriEDataType;
 	}
@@ -1426,6 +1452,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEReference(yViewEClass, YVIEW__BEAN_SLOTS);
 		createEReference(yViewEClass, YVIEW__COMMAND_SET);
 		createEReference(yViewEClass, YVIEW__DIALOGS);
+		createEAttribute(yViewEClass, YVIEW__DEVICE_TYPE);
 
 		yViewSetEClass = createEClass(YVIEW_SET);
 		createEReference(yViewSetEClass, YVIEW_SET__VIEWS);
@@ -1549,6 +1576,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 
 		// Create enums
 		yUnitEEnum = createEEnum(YUNIT);
+		yDeviceTypeEEnum = createEEnum(YDEVICE_TYPE);
 
 		// Create data types
 		yuriEDataType = createEDataType(YURI);
@@ -1659,6 +1687,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEReference(getYView_BeanSlots(), this.getYBeanSlot(), null, "beanSlots", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_CommandSet(), this.getYCommandSet(), null, "commandSet", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_Dialogs(), this.getYDialog(), null, "dialogs", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYView_DeviceType(), this.getYDeviceType(), "deviceType", "IDE", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yViewEClass, theBindingPackage.getYBindingSet(), "getOrCreateBindingSet", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1823,6 +1852,10 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEEnum(yUnitEEnum, YUnit.class, "YUnit");
 		addEEnumLiteral(yUnitEEnum, YUnit.PIXEL);
 		addEEnumLiteral(yUnitEEnum, YUnit.EM);
+
+		initEEnum(yDeviceTypeEEnum, YDeviceType.class, "YDeviceType");
+		addEEnumLiteral(yDeviceTypeEEnum, YDeviceType.IDE);
+		addEEnumLiteral(yDeviceTypeEEnum, YDeviceType.MOBILE);
 
 		// Initialize data types
 		initEDataType(yuriEDataType, URI.class, "YURI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
