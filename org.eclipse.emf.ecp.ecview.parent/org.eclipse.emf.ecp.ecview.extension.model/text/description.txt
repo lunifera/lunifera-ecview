@@ -204,8 +204,10 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
   Class YButton -> YAction, YVisibleable, YEditable, YEnable
     Reference datadescription : YDatadescription
     Attribute clickListeners : YButtonClickListener<<0..*>>
+    Attribute lastClickTime : ELong
     Operation addClickListener(YButtonClickListener) : void
     Operation removeClickListener(YButtonClickListener) : void
+    Operation createClickEndpoint() : YECViewModelValueBindingEndpoint
 
   Class YToggleButton -> YAction, YActivateable
     Reference datadescription : YDatadescription

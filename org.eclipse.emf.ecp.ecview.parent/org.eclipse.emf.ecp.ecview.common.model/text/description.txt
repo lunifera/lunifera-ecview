@@ -107,6 +107,7 @@ Package core <http://eclipse.org/emf/ecp/ecview/core/view>
     Reference beanSlots : YBeanSlot<<0..*>>
     Reference commandSet : YCommandSet
     Reference dialogs : YDialog<<0..*>>
+    Attribute deviceType : YDeviceType
     Operation getOrCreateBindingSet() : YBindingSet
 
   Class YViewSet -> YElement
@@ -245,6 +246,10 @@ Package core <http://eclipse.org/emf/ecp/ecview/core/view>
   Enum YUnit
     Literal Pixel = 0
     Literal Em = 1
+
+  Enum YDeviceType
+    Literal IDE = 0
+    Literal MOBILE = 1
 
   DataType YURI <java.net.URI>
 

@@ -311,9 +311,11 @@
     <eOperations name="removeClickListener">
       <eParameters name="listener" eType="#//YButtonClickListener"/>
     </eOperations>
+    <eOperations name="createClickEndpoint" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/binding.ecore#//YECViewModelValueBindingEndpoint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="clickListeners" upperBound="-1"
         eType="#//YButtonClickListener" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastClickTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="YButtonClickListener" instanceClassName="org.eclipse.emf.ecp.ecview.extension.model.extension.listener.YButtonClickListener"/>
   <eClassifiers xsi:type="ecore:EClass" name="YToggleButton" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YAction ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YActivateable">
