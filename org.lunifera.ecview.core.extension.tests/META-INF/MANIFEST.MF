@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Extension Tests
+Bundle-SymbolicName: org.lunifera.ecview.core.extension.tests
+Bundle-Version: 0.0.1.qualifier
+Require-Bundle: org.junit;bundle-version="4.10.0",
+ org.lunifera.ecview.core.extension.editparts;bundle-version="0.0.1",
+ org.lunifera.ecview.core.extension.editparts.emf;bundle-version="0.0.1",
+ org.lunifera.ecview.core.extension.model;bundle-version="0.0.1",
+ org.lunifera.ecview.core.util.emf;bundle-version="0.0.1",
+ org.lunifera.ecview.core.common.editparts.emf,
+ org.lunifera.ecview.core.common,
+ org.lunifera.ecview.core.common.model;bundle-version="0.7.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.slf4j;version="1.7.2"

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="core" nsURI="http://eclipse.org/emf/ecp/ecview/core/view" nsPrefix="core">
+  <eClassifiers xsi:type="ecore:EClass" name="YElement" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YLayout" eSuperTypes="#//YEmbeddable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//YEmbeddable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YField" eSuperTypes="#//YEmbeddable #//YEditable #//YEnable">
+    <eOperations name="addValueChangeListener" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="listener" eType="#//YValueChangeListener"/>
+    </eOperations>
+    <eOperations name="removeValueChangeListener" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="listener" eType="#//YValueChangeListener"/>
+    </eOperations>
+    <eOperations name="removeAllValueChangListeners"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validators" upperBound="-1"
+        eType="ecore:EClass validation.ecore#//YValidator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalValidators" upperBound="-1"
+        eType="ecore:EClass validation.ecore#//YValidator" transient="true" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YView" eSuperTypes="#//YElement #//YCssAble #//YMarginable #//YVisibilityProcessable">
+    <eOperations name="getOrCreateBindingSet" eType="ecore:EClass binding.ecore#//YBindingSet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" eType="#//YViewSet"
+        eOpposite="#//YViewSet/views"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" eType="#//YEmbeddable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingSet" eType="ecore:EClass binding.ecore#//YBindingSet"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beanSlots" upperBound="-1"
+        eType="#//YBeanSlot" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commandSet" eType="#//YCommandSet"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dialogs" upperBound="-1"
+        eType="#//YDialog" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YViewSet" eSuperTypes="#//YElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
+        eType="#//YView" eOpposite="#//YView/root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beanSlots" upperBound="-1"
+        eType="#//YBeanSlot" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanSlot" eSuperTypes="#//YBindable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueTypeQualifiedName"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEmbeddable" abstract="true" eSuperTypes="#//YElement #//YCssAble #//YVisibleable #//YVisibilityProcessable">
+    <eOperations name="getParent" eType="#//YLayout"/>
+    <eOperations name="getView" eType="#//YView"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orphanDatatypes" upperBound="-1"
+        eType="ecore:EClass datatypes.ecore#//YDatatype" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orphanDatadescriptions"
+        upperBound="-1" eType="ecore:EClass datatypes.ecore#//YDatadescription" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YDialog" eSuperTypes="#//YElement #//YValueBindable #//YCssAble">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" eType="#//YEmbeddable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resizeable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="draggable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="closable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass datatypes.ecore#//YDatadescription"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YCssAble" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cssClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cssID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YMarginable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="margin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YSpacingable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spacing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YUnit">
+    <eLiterals name="Pixel" literal="PIXEL"/>
+    <eLiterals name="Em" value="1" literal="EM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YHeightable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="100"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="heightUnit" eType="#//YUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YWidthable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="100"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="widthUnit" eType="#//YUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="YURI" instanceClassName="java.net.URI"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YActivateable" abstract="true" interface="true"
+      eSuperTypes="#//YBindable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialActivated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        transient="true" defaultValueLiteral="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YVisibleable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialVisible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        transient="true" defaultValueLiteral="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEditable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialEditable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="editable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        transient="true" defaultValueLiteral="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEnable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialEnabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        transient="true" defaultValueLiteral="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YAction" eSuperTypes="#//YEmbeddable #//YEnable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YBindable" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YValueBindable" abstract="true" interface="true"
+      eSuperTypes="#//YBindable">
+    <eOperations name="createValueEndpoint" eType="#//YEmbeddableValueEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueBindingEndpoint" eType="#//YEmbeddableValueEndpoint"
+        eOpposite="#//YEmbeddableValueEndpoint/element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YSelectionBindable" abstract="true"
+      interface="true" eSuperTypes="#//YBindable">
+    <eOperations name="createSelectionEndpoint" eType="#//YEmbeddableSelectionEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionBindingEndpoint"
+        eType="#//YEmbeddableSelectionEndpoint" eOpposite="#//YEmbeddableSelectionEndpoint/element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YMultiSelectionBindable" abstract="true"
+      interface="true" eSuperTypes="#//YBindable">
+    <eOperations name="createMultiSelectionEndpoint" eType="#//YEmbeddableMultiSelectionEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="multiSelectionBindingEndpoint"
+        eType="#//YEmbeddableMultiSelectionEndpoint" eOpposite="#//YEmbeddableMultiSelectionEndpoint/element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YCollectionBindable" abstract="true"
+      interface="true" eSuperTypes="#//YBindable">
+    <eOperations name="createCollectionEndpoint" eType="#//YEmbeddableCollectionEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collectionBindingEndpoint"
+        eType="#//YEmbeddableCollectionEndpoint" eOpposite="#//YEmbeddableCollectionEndpoint/element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YContextValueBindingEndpoint" eSuperTypes="binding.ecore#//YValueBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="urlString" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanSlotValueBindingEndpoint" eSuperTypes="binding.ecore#//YValueBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributePath" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beanSlot" lowerBound="1"
+        eType="#//YBeanSlot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanSlotListBindingEndpoint" eSuperTypes="binding.ecore#//YListBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributePath" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beanSlot" lowerBound="1"
+        eType="#//YBeanSlot"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collectionType">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collectionTypeQualifiedName"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEmbeddableBindingEndpoint" abstract="true"
+      interface="true">
+    <eOperations name="getElement" eType="#//YBindable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEmbeddableValueEndpoint" eSuperTypes="binding.ecore#//YValueBindingEndpoint #//YEmbeddableBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="#//YValueBindable" eOpposite="#//YValueBindable/valueBindingEndpoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEmbeddableSelectionEndpoint" eSuperTypes="binding.ecore#//YValueBindingEndpoint #//YEmbeddableBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="#//YSelectionBindable" eOpposite="#//YSelectionBindable/selectionBindingEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEmbeddableMultiSelectionEndpoint" eSuperTypes="binding.ecore#//YListBindingEndpoint #//YEmbeddableBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="#//YMultiSelectionBindable" eOpposite="#//YMultiSelectionBindable/multiSelectionBindingEndpoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEmbeddableCollectionEndpoint" eSuperTypes="binding.ecore#//YListBindingEndpoint #//YEmbeddableBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="#//YCollectionBindable" eOpposite="#//YCollectionBindable/collectionBindingEndpoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YActivatedEndpoint" eSuperTypes="binding.ecore#//YValueBindingEndpoint #//YEmbeddableBindingEndpoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="#//YActivateable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="YValueChangeListener" instanceClassName="org.lunifera.ecview.core.common.model.core.listeners.YValueChangeListener"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YDtWrapper" eSuperTypes="datatypes.ecore#//YDatatype"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YVisibilityProcessable" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visibilityProcessor" eType="ecore:EClass visibility.ecore#//YVisibilityProcessor"
+        containment="true" eOpposite="visibility.ecore#//YVisibilityProcessor/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YCommand" abstract="true" interface="true"
+      eSuperTypes="#//YElement">
+    <eOperations name="getView" eType="#//YView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YCommandSet" eSuperTypes="#//YElement">
+    <eOperations name="getView" eType="#//YView"/>
+    <eOperations name="addCommand">
+      <eParameters name="command" lowerBound="1" eType="#//YCommand"/>
+    </eOperations>
+    <eOperations name="removeCommand">
+      <eParameters name="command" lowerBound="1" eType="#//YCommand"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
+        eType="#//YCommand" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YOpenDialogCommand" eSuperTypes="#//YCommand">
+    <eOperations name="getView" eType="#//YView"/>
+    <eOperations name="createTriggerDialogEndpoint" eType="ecore:EClass binding.ecore#//YECViewModelValueBindingEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dialog" eType="#//YDialog"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+</ecore:EPackage>
