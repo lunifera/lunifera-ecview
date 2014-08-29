@@ -7,15 +7,13 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.lunifera.ecview.core.extension.model.datatypes;v
- ersion="0.7.3",org.lunifera.ecview.core.extension.model.datatypes.i
- mpl;version="0.7.3";x-internal:=true,org.lunifera.ecview.core.exten
- sion.model.datatypes.util;version="0.7.3",org.lunifera.ecview.core.
- extension.model.extension;version="0.7.3",org.lunifera.ecview.core.
- extension.model.extension.impl;version="0.7.3";x-internal:=true,org.e
- clipse.emf.ecp.ecview.extension.model.extension.listener;version="0.7
- .3",org.lunifera.ecview.core.extension.model.extension.util;version
- ="0.7.3"
+Export-Package: org.lunifera.ecview.core.extension.model.datatypes;version="0.7.3",
+ org.lunifera.ecview.core.extension.model.datatypes.impl;version="0.7.3";x-internal:=true,
+ org.lunifera.ecview.core.extension.model.datatypes.util;version="0.7.3",
+ org.lunifera.ecview.core.extension.model.extension;version="0.7.3",
+ org.lunifera.ecview.core.extension.model.extension.impl;version="0.7.3";x-internal:=true,
+ org.lunifera.ecview.core.extension.model.extension.listener;version="0.7.3",
+ org.lunifera.ecview.core.extension.model.extension.util;version="0.7.3"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.lunifera.ecview.core.common.model;bundle-version="[0.7.0,0.8.0)";visibility:=reexport,
