@@ -109,6 +109,10 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			internalAddBeanSlot(yBeanSlot);
 		}
 
+		// register the context as a bean slot
+		context.createBeanSlot("ecviewContext", IViewContext.class);
+		context.setBean("ecviewContext", getContext());
+
 		// render the view presentation
 		renderPresentation(options);
 
@@ -724,7 +728,8 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	}
 
 	@Override
-	public void openDialog(IDialogEditpart dialogEditpart, IBindableEndpointEditpart inputData) {
+	public void openDialog(IDialogEditpart dialogEditpart,
+			IBindableEndpointEditpart inputData) {
 		if (dialogEditpart == null) {
 			return;
 		}
