@@ -77,5 +77,13 @@ public interface YFormLayout extends YLayout, YSpacingable, YMarginable {
 	 * @return
 	 */
 	YFormLayoutCellStyle getCellStyle(YEmbeddable element);
+	
+
+	/**
+	 * Creates a cell style for the given element.
+	 * 
+	 * @param element
+	 */
+	YFormLayoutCellStyle addCellStyle(YEmbeddable element);
 
 } // YFormLayout

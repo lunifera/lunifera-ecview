@@ -745,8 +745,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_Icon() {
-		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(0);
+	public EReference getYColumn_Datadescription() {
+		return (EReference)yColumnEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -754,7 +754,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_Visible() {
+	public EAttribute getYColumn_Icon() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -763,7 +763,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_Orderable() {
+	public EAttribute getYColumn_Visible() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -772,7 +772,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_Collapsed() {
+	public EAttribute getYColumn_Orderable() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -781,7 +781,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_Collapsible() {
+	public EAttribute getYColumn_Collapsed() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -790,7 +790,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_Alignment() {
+	public EAttribute getYColumn_Collapsible() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -799,8 +799,26 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_ExpandRatio() {
+	public EAttribute getYColumn_Alignment() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYColumn_ExpandRatio() {
+		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYColumn_OrphanDatadescriptions() {
+		return (EReference)yColumnEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1886,6 +1904,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yTableEClass, YTABLE__ITEM_IMAGE_PROPERTY);
 
 		yColumnEClass = createEClass(YCOLUMN);
+		createEReference(yColumnEClass, YCOLUMN__DATADESCRIPTION);
 		createEAttribute(yColumnEClass, YCOLUMN__ICON);
 		createEAttribute(yColumnEClass, YCOLUMN__VISIBLE);
 		createEAttribute(yColumnEClass, YCOLUMN__ORDERABLE);
@@ -1893,6 +1912,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yColumnEClass, YCOLUMN__COLLAPSIBLE);
 		createEAttribute(yColumnEClass, YCOLUMN__ALIGNMENT);
 		createEAttribute(yColumnEClass, YCOLUMN__EXPAND_RATIO);
+		createEReference(yColumnEClass, YCOLUMN__ORPHAN_DATADESCRIPTIONS);
 
 		yTreeEClass = createEClass(YTREE);
 		createEReference(yTreeEClass, YTREE__DATATYPE);
@@ -2218,6 +2238,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYTable_ItemImageProperty(), ecorePackage.getEString(), "itemImageProperty", null, 0, 1, YTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yColumnEClass, YColumn.class, "YColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYColumn_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Visible(), ecorePackage.getEBoolean(), "visible", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Orderable(), ecorePackage.getEBoolean(), "orderable", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2225,6 +2246,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYColumn_Collapsible(), ecorePackage.getEBoolean(), "collapsible", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Alignment(), this.getYFlatAlignment(), "alignment", "LEFT", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_ExpandRatio(), ecorePackage.getEFloat(), "expandRatio", "-1.0f", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYColumn_OrphanDatadescriptions(), theDatatypesPackage.getYDatadescription(), null, "orphanDatadescriptions", null, 0, -1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yTreeEClass, YTree.class, "YTree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYTree_Datatype(), theExtDatatypesPackage.getYTreeDatatype(), null, "datatype", null, 0, 1, YTree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

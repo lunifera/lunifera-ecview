@@ -17,6 +17,7 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YMarginable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YSpacingable;
 import org.eclipse.emf.ecp.ecview.common.model.core.impl.YLayoutImpl;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelFactory;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YVerticalLayout;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YVerticalLayoutCellStyle;
@@ -354,6 +355,22 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 		result.append(fillVertical);
 		result.append(')');
 		return result.toString();
+	}
+
+	/**
+	 * Creates an instance of {@link YVerticalLayoutCellStyle} and adds it to
+	 * the layout.
+	 * 
+	 * @param element
+	 *            set as target
+	 * @return
+	 */
+	public YVerticalLayoutCellStyle addCellStyle(YEmbeddable element) {
+		YVerticalLayoutCellStyle yStyle = ExtensionModelFactory.eINSTANCE
+				.createYVerticalLayoutCellStyle();
+		yStyle.setTarget(element);
+		getCellStyles().add(yStyle);
+		return yStyle;
 	}
 
 } // YUiVerticalLayoutImpl

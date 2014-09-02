@@ -3,7 +3,6 @@
 package org.eclipse.emf.ecp.ecview.extension.model.extension.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -17,6 +16,7 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YMarginable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YSpacingable;
 import org.eclipse.emf.ecp.ecview.common.model.core.impl.YLayoutImpl;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelFactory;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YFormLayout;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YFormLayoutCellStyle;
@@ -354,6 +354,23 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 		result.append(fillVertical);
 		result.append(')');
 		return result.toString();
+	}
+	
+	
+	/**
+	 * Creates an instance of {@link YFormLayoutCellStyle} and adds it to the
+	 * layout.
+	 * 
+	 * @param element
+	 *            set as target
+	 * @return
+	 */
+	public YFormLayoutCellStyle addCellStyle(YEmbeddable element) {
+		YFormLayoutCellStyle yStyle = ExtensionModelFactory.eINSTANCE
+				.createYFormLayoutCellStyle();
+		yStyle.setTarget(element);
+		getCellStyles().add(yStyle);
+		return yStyle;
 	}
 
 } // YFormLayoutImpl

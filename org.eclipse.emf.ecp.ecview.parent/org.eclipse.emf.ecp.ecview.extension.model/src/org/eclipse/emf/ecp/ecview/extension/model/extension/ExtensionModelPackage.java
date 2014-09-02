@@ -1159,13 +1159,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YCOLUMN__NAME = CoreModelPackage.YELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOLUMN__DATADESCRIPTION = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__ICON = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
+	int YCOLUMN__ICON = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1174,7 +1183,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__VISIBLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
+	int YCOLUMN__VISIBLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Orderable</b></em>' attribute.
@@ -1183,7 +1192,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__ORDERABLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
+	int YCOLUMN__ORDERABLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
@@ -1192,7 +1201,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__COLLAPSED = CoreModelPackage.YELEMENT_FEATURE_COUNT + 3;
+	int YCOLUMN__COLLAPSED = CoreModelPackage.YELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Collapsible</b></em>' attribute.
@@ -1201,7 +1210,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__COLLAPSIBLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 4;
+	int YCOLUMN__COLLAPSIBLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1210,7 +1219,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__ALIGNMENT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
+	int YCOLUMN__ALIGNMENT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Expand Ratio</b></em>' attribute.
@@ -1219,7 +1228,16 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__EXPAND_RATIO = CoreModelPackage.YELEMENT_FEATURE_COUNT + 6;
+	int YCOLUMN__EXPAND_RATIO = CoreModelPackage.YELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOLUMN__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>YColumn</em>' class.
@@ -1228,7 +1246,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 7;
+	int YCOLUMN_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YLabelImpl <em>YLabel</em>}' class.
@@ -6181,6 +6199,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EClass getYColumn();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getDatadescription()
+	 * @see #getYColumn()
+	 * @generated
+	 */
+	EReference getYColumn_Datadescription();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getIcon <em>Icon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6256,6 +6285,17 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYColumn_ExpandRatio();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Orphan Datadescriptions</em>'.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getOrphanDatadescriptions()
+	 * @see #getYColumn()
+	 * @generated
+	 */
+	EReference getYColumn_OrphanDatadescriptions();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YLabel <em>YLabel</em>}'.
@@ -7957,6 +7997,14 @@ public interface ExtensionModelPackage extends EPackage {
 		EClass YCOLUMN = eINSTANCE.getYColumn();
 
 		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YCOLUMN__DATADESCRIPTION = eINSTANCE.getYColumn_Datadescription();
+
+		/**
 		 * The meta object literal for the '<em><b>Icon</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8011,6 +8059,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YCOLUMN__EXPAND_RATIO = eINSTANCE.getYColumn_ExpandRatio();
+
+		/**
+		 * The meta object literal for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YCOLUMN__ORPHAN_DATADESCRIPTIONS = eINSTANCE.getYColumn_OrphanDatadescriptions();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.impl.YLabelImpl <em>YLabel</em>}' class.

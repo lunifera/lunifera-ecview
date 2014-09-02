@@ -104,6 +104,7 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
     Attribute itemImageProperty : EString
 
   Class YColumn -> YElement
+    Reference datadescription : YDatadescription
     Attribute icon : EString
     Attribute visible : EBoolean
     Attribute orderable : EBoolean
@@ -111,6 +112,7 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
     Attribute collapsible : EBoolean
     Attribute alignment : YFlatAlignment
     Attribute expandRatio : EFloat
+    Reference orphanDatadescriptions : YDatadescription<<0..*>>
 
   Class YTree -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
     Reference datatype : YTreeDatatype

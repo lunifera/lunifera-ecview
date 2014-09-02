@@ -83,5 +83,12 @@ public interface YVerticalLayout extends YLayout, YSpacingable, YMarginable {
 	 * @return
 	 */
 	YVerticalLayoutCellStyle getCellStyle(YEmbeddable element);
+	
+	/**
+	 * Creates a cell style for the given element.
+	 * 
+	 * @param element
+	 */
+	YVerticalLayoutCellStyle addCellStyle(YEmbeddable element);
 
 } // YUiVerticalLayout

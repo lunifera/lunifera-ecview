@@ -4,6 +4,8 @@
  */
 package org.eclipse.emf.ecp.ecview.extension.model.extension.validation;
 
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YFlatAlignment;
 
 
@@ -16,6 +18,8 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.YFlatAlignment;
 public interface YColumnValidator {
 	boolean validate();
 
+	boolean validateDatadescription(YDatadescription value);
+
 	boolean validateIcon(String value);
 	boolean validateVisible(boolean value);
 	boolean validateOrderable(boolean value);
@@ -27,4 +31,6 @@ public interface YColumnValidator {
 	boolean validateAlignment(YFlatAlignment value);
 
 	boolean validateExpandRatio(float value);
+
+	boolean validateOrphanDatadescriptions(EList<YDatadescription> value);
 }

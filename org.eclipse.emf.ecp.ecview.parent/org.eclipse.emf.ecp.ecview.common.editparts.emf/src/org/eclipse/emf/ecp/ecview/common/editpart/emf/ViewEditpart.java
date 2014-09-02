@@ -112,6 +112,10 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		// register the context as a bean slot
 		context.createBeanSlot("ecviewContext", IViewContext.class);
 		context.setBean("ecviewContext", getContext());
+//
+//		// register the model as a bean slot
+//		context.createBeanSlot("ecviewModel", YView.class);
+//		context.setBean("ecviewModel", getModel());
 
 		// render the view presentation
 		renderPresentation(options);

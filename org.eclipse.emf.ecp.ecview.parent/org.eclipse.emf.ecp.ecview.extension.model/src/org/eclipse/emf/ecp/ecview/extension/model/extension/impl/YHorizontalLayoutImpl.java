@@ -16,6 +16,7 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YMarginable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YSpacingable;
 import org.eclipse.emf.ecp.ecview.common.model.core.impl.YLayoutImpl;
+import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelFactory;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YHorizontalLayout;
 import org.eclipse.emf.ecp.ecview.extension.model.extension.YHorizontalLayoutCellStyle;
@@ -358,6 +359,22 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 		result.append(fillHorizontal);
 		result.append(')');
 		return result.toString();
+	}
+	
+	/**
+	 * Creates an instance of {@link YHorizontalLayoutCellStyle} and adds it to the
+	 * layout.
+	 * 
+	 * @param element
+	 *            set as target
+	 * @return
+	 */
+	public YHorizontalLayoutCellStyle addCellStyle(YEmbeddable element) {
+		YHorizontalLayoutCellStyle yStyle = ExtensionModelFactory.eINSTANCE
+				.createYHorizontalLayoutCellStyle();
+		yStyle.setTarget(element);
+		getCellStyles().add(yStyle);
+		return yStyle;
 	}
 
 } // YUiHorizontalLayoutImpl

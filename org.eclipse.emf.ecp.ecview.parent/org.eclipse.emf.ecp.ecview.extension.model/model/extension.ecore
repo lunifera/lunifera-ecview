@@ -158,6 +158,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemImageProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YColumn" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
@@ -171,6 +172,9 @@
         defaultValueLiteral="LEFT"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expandRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="-1.0f"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orphanDatadescriptions"
+        upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YTree" eSuperTypes="#//YInput ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YCollectionBindable ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YSelectionBindable ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YMultiSelectionBindable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YTreeDatatype"/>

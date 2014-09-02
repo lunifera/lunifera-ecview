@@ -2,7 +2,9 @@
  */
 package org.eclipse.emf.ecp.ecview.extension.model.extension;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
+import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,6 +14,7 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#isOrderable <em>Orderable</em>}</li>
@@ -19,6 +22,7 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#isCollapsible <em>Collapsible</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getAlignment <em>Alignment</em>}</li>
  *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getExpandRatio <em>Expand Ratio</em>}</li>
+ *   <li>{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,6 +31,32 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
  * @generated
  */
 public interface YColumn extends YElement {
+	/**
+	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Datadescription</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Datadescription</em>' reference.
+	 * @see #setDatadescription(YDatadescription)
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage#getYColumn_Datadescription()
+	 * @model
+	 * @generated
+	 */
+	YDatadescription getDatadescription();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.emf.ecp.ecview.extension.model.extension.YColumn#getDatadescription <em>Datadescription</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Datadescription</em>' reference.
+	 * @see #getDatadescription()
+	 * @generated
+	 */
+	void setDatadescription(YDatadescription value);
+
 	/**
 	 * Returns the value of the '<em><b>Icon</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -217,5 +247,35 @@ public interface YColumn extends YElement {
 	 * @generated
 	 */
 	void setExpandRatio(float value);
+	
+	/**
+	 * Returns the value of the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Orphan Datadescriptions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Orphan Datadescriptions</em>' containment reference list.
+	 * @see org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage#getYColumn_OrphanDatadescriptions()
+	 * @model containment="true" resolveProxies="true"
+	 * @generated
+	 */
+	EList<YDatadescription> getOrphanDatadescriptions();
+
+	/**
+	 * Sets the label by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabel(String label);
+
+	/**
+	 * Sets the label i18nKey by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabelI18nKey(String i18nKey);
 
 } // YColumn

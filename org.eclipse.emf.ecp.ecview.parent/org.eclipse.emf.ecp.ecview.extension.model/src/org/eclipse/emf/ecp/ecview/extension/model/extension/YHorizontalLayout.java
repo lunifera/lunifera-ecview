@@ -84,5 +84,12 @@ public interface YHorizontalLayout extends YLayout, YSpacingable, YMarginable {
 	 * @generated
 	 */
 	YHorizontalLayoutCellStyle getCellStyle(YEmbeddable element);
+	
+	/**
+	 * Creates a cell style for the given element.
+	 * 
+	 * @param element
+	 */
+	YHorizontalLayoutCellStyle addCellStyle(YEmbeddable element);
 
 } // YUiHorizontalLayout
