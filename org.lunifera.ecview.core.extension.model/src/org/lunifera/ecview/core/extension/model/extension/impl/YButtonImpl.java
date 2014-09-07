@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -31,6 +32,7 @@ import org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickL
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#isEditable <em>Editable</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#getClickListeners <em>Click Listeners</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#getLastClickTime <em>Last Click Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,8 +41,8 @@ import org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickL
 public class YButtonImpl extends YActionImpl implements YButton {
 	/**
 	 * The default value of the '{@link #isInitialEditable() <em>Initial Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #isInitialEditable()
 	 * @generated
 	 * @ordered
@@ -49,8 +51,8 @@ public class YButtonImpl extends YActionImpl implements YButton {
 
 	/**
 	 * The cached value of the '{@link #isInitialEditable() <em>Initial Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #isInitialEditable()
 	 * @generated
 	 * @ordered
@@ -59,8 +61,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 
 	/**
 	 * The default value of the '{@link #isEditable() <em>Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isEditable()
 	 * @generated
 	 * @ordered
@@ -69,8 +70,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 
 	/**
 	 * The cached value of the '{@link #isEditable() <em>Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isEditable()
 	 * @generated
 	 * @ordered
@@ -98,6 +98,26 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	protected EList<YButtonClickListener> clickListeners;
 
 	/**
+	 * The default value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @see #getLastClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long LAST_CLICK_TIME_EDEFAULT = 0L;
+
+	/**
+	 * The cached value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @see #getLastClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected long lastClickTime = LAST_CLICK_TIME_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -115,8 +135,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isInitialEditable() {
@@ -124,8 +143,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setInitialEditable(boolean newInitialEditable) {
@@ -136,8 +154,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isEditable() {
@@ -145,8 +162,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setEditable(boolean newEditable) {
@@ -203,6 +219,25 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	}
 
 	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public long getLastClickTime() {
+		return lastClickTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastClickTime(long newLastClickTime) {
+		long oldLastClickTime = lastClickTime;
+		lastClickTime = newLastClickTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBUTTON__LAST_CLICK_TIME, oldLastClickTime, lastClickTime));
+	}
+
+	/**
 	 * Adds a listener that is notified if the button was clicked.
 	 * 
 	 * @generated NOT
@@ -238,6 +273,8 @@ public class YButtonImpl extends YActionImpl implements YButton {
 				return basicGetDatadescription();
 			case ExtensionModelPackage.YBUTTON__CLICK_LISTENERS:
 				return getClickListeners();
+			case ExtensionModelPackage.YBUTTON__LAST_CLICK_TIME:
+				return getLastClickTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -263,6 +300,9 @@ public class YButtonImpl extends YActionImpl implements YButton {
 				getClickListeners().clear();
 				getClickListeners().addAll((Collection<? extends YButtonClickListener>)newValue);
 				return;
+			case ExtensionModelPackage.YBUTTON__LAST_CLICK_TIME:
+				setLastClickTime((Long)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -286,6 +326,9 @@ public class YButtonImpl extends YActionImpl implements YButton {
 			case ExtensionModelPackage.YBUTTON__CLICK_LISTENERS:
 				getClickListeners().clear();
 				return;
+			case ExtensionModelPackage.YBUTTON__LAST_CLICK_TIME:
+				setLastClickTime(LAST_CLICK_TIME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -305,13 +348,14 @@ public class YButtonImpl extends YActionImpl implements YButton {
 				return datadescription != null;
 			case ExtensionModelPackage.YBUTTON__CLICK_LISTENERS:
 				return clickListeners != null && !clickListeners.isEmpty();
+			case ExtensionModelPackage.YBUTTON__LAST_CLICK_TIME:
+				return lastClickTime != LAST_CLICK_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -327,8 +371,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -358,6 +401,8 @@ public class YButtonImpl extends YActionImpl implements YButton {
 		result.append(editable);
 		result.append(", clickListeners: ");
 		result.append(clickListeners);
+		result.append(", lastClickTime: ");
+		result.append(lastClickTime);
 		result.append(')');
 		return result.toString();
 	}
@@ -407,6 +452,15 @@ public class YButtonImpl extends YActionImpl implements YButton {
 		endpoint.setElement(this);
 		endpoint.getFeatures()
 				.add((EStructuralFeature) CoreModelPackage.Literals.YENABLE__ENABLED);
+		return endpoint;
+	}
+
+	public YECViewModelValueBindingEndpoint createClickEndpoint() {
+		YECViewModelValueBindingEndpoint endpoint = BindingFactory.eINSTANCE
+				.createYECViewModelValueBindingEndpoint();
+		endpoint.setElement(this);
+		endpoint.getFeatures()
+				.add((EStructuralFeature) ExtensionModelPackage.Literals.YBUTTON__LAST_CLICK_TIME);
 		return endpoint;
 	}
 

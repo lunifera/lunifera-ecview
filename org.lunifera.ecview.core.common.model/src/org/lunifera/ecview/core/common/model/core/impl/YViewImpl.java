@@ -27,6 +27,7 @@ import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBeanSlot;
 import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
+import org.lunifera.ecview.core.common.model.core.YDeviceType;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
@@ -55,6 +56,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getBeanSlots <em>Bean Slots</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCommandSet <em>Command Set</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getDialogs <em>Dialogs</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getDeviceType <em>Device Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -237,6 +239,26 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected EList<YDialog> dialogs;
+
+	/**
+	 * The default value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeviceType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final YDeviceType DEVICE_TYPE_EDEFAULT = YDeviceType.IDE;
+
+	/**
+	 * The cached value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeviceType()
+	 * @generated
+	 * @ordered
+	 */
+	protected YDeviceType deviceType = DEVICE_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -575,6 +597,27 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDeviceType getDeviceType() {
+		return deviceType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDeviceType(YDeviceType newDeviceType) {
+		YDeviceType oldDeviceType = deviceType;
+		deviceType = newDeviceType == null ? DEVICE_TYPE_EDEFAULT : newDeviceType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YVIEW__DEVICE_TYPE, oldDeviceType, deviceType));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -852,6 +895,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return basicGetCommandSet();
 			case CoreModelPackage.YVIEW__DIALOGS:
 				return getDialogs();
+			case CoreModelPackage.YVIEW__DEVICE_TYPE:
+				return getDeviceType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -905,6 +950,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				getDialogs().clear();
 				getDialogs().addAll((Collection<? extends YDialog>)newValue);
 				return;
+			case CoreModelPackage.YVIEW__DEVICE_TYPE:
+				setDeviceType((YDeviceType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -955,6 +1003,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__DIALOGS:
 				getDialogs().clear();
 				return;
+			case CoreModelPackage.YVIEW__DEVICE_TYPE:
+				setDeviceType(DEVICE_TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -992,6 +1043,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return commandSet != null;
 			case CoreModelPackage.YVIEW__DIALOGS:
 				return dialogs != null && !dialogs.isEmpty();
+			case CoreModelPackage.YVIEW__DEVICE_TYPE:
+				return deviceType != DEVICE_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1073,6 +1126,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 		result.append(margin);
 		result.append(", viewName: ");
 		result.append(viewName);
+		result.append(", deviceType: ");
+		result.append(deviceType);
 		result.append(')');
 		return result.toString();
 	}

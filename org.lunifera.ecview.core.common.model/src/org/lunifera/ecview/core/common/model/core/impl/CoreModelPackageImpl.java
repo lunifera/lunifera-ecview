@@ -29,6 +29,7 @@ import org.lunifera.ecview.core.common.model.core.YCommand;
 import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YContextValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
+import org.lunifera.ecview.core.common.model.core.YDeviceType;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YDtWrapper;
 import org.lunifera.ecview.core.common.model.core.YEditable;
@@ -334,6 +335,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum yDeviceTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum yUnitEEnum = null;
 
 	/**
@@ -567,6 +575,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EReference getYView_Dialogs() {
 		return (EReference)yViewEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYView_DeviceType() {
+		return (EAttribute)yViewEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1357,6 +1374,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getYDeviceType() {
+		return yDeviceTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYUnit() {
 		return yUnitEEnum;
 	}
@@ -1426,6 +1452,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEReference(yViewEClass, YVIEW__BEAN_SLOTS);
 		createEReference(yViewEClass, YVIEW__COMMAND_SET);
 		createEReference(yViewEClass, YVIEW__DIALOGS);
+		createEAttribute(yViewEClass, YVIEW__DEVICE_TYPE);
 
 		yViewSetEClass = createEClass(YVIEW_SET);
 		createEReference(yViewSetEClass, YVIEW_SET__VIEWS);
@@ -1548,6 +1575,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yOpenDialogCommandEClass, YOPEN_DIALOG_COMMAND__TRIGGER);
 
 		// Create enums
+		yDeviceTypeEEnum = createEEnum(YDEVICE_TYPE);
 		yUnitEEnum = createEEnum(YUNIT);
 
 		// Create data types
@@ -1659,6 +1687,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEReference(getYView_BeanSlots(), this.getYBeanSlot(), null, "beanSlots", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_CommandSet(), this.getYCommandSet(), null, "commandSet", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_Dialogs(), this.getYDialog(), null, "dialogs", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYView_DeviceType(), this.getYDeviceType(), "deviceType", "IDE", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yViewEClass, theBindingPackage.getYBindingSet(), "getOrCreateBindingSet", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1820,6 +1849,10 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		addEOperation(yOpenDialogCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createTriggerDialogEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
+		initEEnum(yDeviceTypeEEnum, YDeviceType.class, "YDeviceType");
+		addEEnumLiteral(yDeviceTypeEEnum, YDeviceType.IDE);
+		addEEnumLiteral(yDeviceTypeEEnum, YDeviceType.MOBILE);
+
 		initEEnum(yUnitEEnum, YUnit.class, "YUnit");
 		addEEnumLiteral(yUnitEEnum, YUnit.PIXEL);
 		addEEnumLiteral(yUnitEEnum, YUnit.EM);

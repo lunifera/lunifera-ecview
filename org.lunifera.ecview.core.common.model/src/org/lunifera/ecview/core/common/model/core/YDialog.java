@@ -11,28 +11,16 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getContent
- * <em>Content</em>}</li>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isModal <em>
- * Modal</em>}</li>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isResizeable
- * <em>Resizeable</em>}</li>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isDraggable
- * <em>Draggable</em>}</li>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isClosable
- * <em>Closable</em>}</li>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getValue <em>
- * Value</em>}</li>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getType <em>
- * Type</em>}</li>
- * <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getEmfNsURI
- * <em>Emf Ns URI</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.YDialog#getTypeQualifiedName
- * <em>Type Qualified Name</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.YDialog#getDatadescription
- * <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getContent <em>Content</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isModal <em>Modal</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isResizeable <em>Resizeable</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isDraggable <em>Draggable</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#isClosable <em>Closable</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getValue <em>Value</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getType <em>Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getEmfNsURI <em>Emf Ns URI</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YDialog#getDatadescription <em>Datadescription</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,7 +38,6 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Content</em>' containment reference.
 	 * @see #setContent(YEmbeddable)
 	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYDialog_Content()
@@ -60,13 +47,10 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	YEmbeddable getContent();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#getContent
-	 * <em>Content</em>}' containment reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#getContent <em>Content</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Content</em>' containment reference.
+	 * @param value the new value of the '<em>Content</em>' containment reference.
 	 * @see #getContent()
 	 * @generated
 	 */
@@ -90,12 +74,9 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	boolean isModal();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#isModal
-	 * <em>Modal</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Modal</em>' attribute.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#isModal <em>Modal</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Modal</em>' attribute.
 	 * @see #isModal()
 	 * @generated
 	 */
@@ -119,13 +100,10 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	boolean isResizeable();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#isResizeable
-	 * <em>Resizeable</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#isResizeable <em>Resizeable</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Resizeable</em>' attribute.
+	 * @param value the new value of the '<em>Resizeable</em>' attribute.
 	 * @see #isResizeable()
 	 * @generated
 	 */
@@ -209,12 +187,9 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	Object getValue();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#getValue
-	 * <em>Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Value</em>' attribute.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#getValue <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' attribute.
 	 * @see #getValue()
 	 * @generated
 	 */
@@ -238,12 +213,9 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	Class<?> getType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#getType
-	 * <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Type</em>' attribute.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see #getType()
 	 * @generated
 	 */
@@ -267,13 +239,10 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	String getEmfNsURI();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#getEmfNsURI
-	 * <em>Emf Ns URI</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#getEmfNsURI <em>Emf Ns URI</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Emf Ns URI</em>' attribute.
+	 * @param value the new value of the '<em>Emf Ns URI</em>' attribute.
 	 * @see #getEmfNsURI()
 	 * @generated
 	 */
@@ -287,7 +256,6 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Type Qualified Name</em>' attribute.
 	 * @see #setTypeQualifiedName(String)
 	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYDialog_TypeQualifiedName()
@@ -297,29 +265,24 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	String getTypeQualifiedName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#getTypeQualifiedName
-	 * <em>Type Qualified Name</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#getTypeQualifiedName <em>Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Type Qualified Name</em>' attribute.
+	 * @param value the new value of the '<em>Type Qualified Name</em>' attribute.
 	 * @see #getTypeQualifiedName()
 	 * @generated
 	 */
 	void setTypeQualifiedName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Datadescription</b></em>' containment
-	 * reference. <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Datadescription</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Datadescription</em>' containment reference
 	 * isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
-	 * @return the value of the '<em>Datadescription</em>' containment
-	 *         reference.
+	 * @return the value of the '<em>Datadescription</em>' containment reference.
 	 * @see #setDatadescription(YDatadescription)
 	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYDialog_Datadescription()
 	 * @model containment="true" resolveProxies="true"
@@ -328,14 +291,10 @@ public interface YDialog extends YElement, YValueBindable, YCssAble {
 	YDatadescription getDatadescription();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.common.model.core.YDialog#getDatadescription
-	 * <em>Datadescription</em>}' containment reference. <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YDialog#getDatadescription <em>Datadescription</em>}' containment reference.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Datadescription</em>' containment
-	 *            reference.
+	 * @param value the new value of the '<em>Datadescription</em>' containment reference.
 	 * @see #getDatadescription()
 	 * @generated
 	 */

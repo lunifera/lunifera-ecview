@@ -763,25 +763,25 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getYColumn_Datadescription() {
+		return (EReference)yColumnEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYColumn_OrphanDatadescriptions() {
+		return (EReference)yColumnEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getYColumn_Orderable() {
-		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYColumn_Collapsed() {
-		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYColumn_Collapsible() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -790,7 +790,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_Alignment() {
+	public EAttribute getYColumn_Collapsed() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -799,8 +799,26 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYColumn_ExpandRatio() {
+	public EAttribute getYColumn_Collapsible() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYColumn_Alignment() {
+		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYColumn_ExpandRatio() {
+		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1242,6 +1260,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getYButton_ClickListeners() {
 		return (EAttribute)yButtonEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYButton_LastClickTime() {
+		return (EAttribute)yButtonEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1879,6 +1906,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yColumnEClass = createEClass(YCOLUMN);
 		createEAttribute(yColumnEClass, YCOLUMN__ICON);
 		createEAttribute(yColumnEClass, YCOLUMN__VISIBLE);
+		createEReference(yColumnEClass, YCOLUMN__DATADESCRIPTION);
+		createEReference(yColumnEClass, YCOLUMN__ORPHAN_DATADESCRIPTIONS);
 		createEAttribute(yColumnEClass, YCOLUMN__ORDERABLE);
 		createEAttribute(yColumnEClass, YCOLUMN__COLLAPSED);
 		createEAttribute(yColumnEClass, YCOLUMN__COLLAPSIBLE);
@@ -1977,6 +2006,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yButtonEClass = createEClass(YBUTTON);
 		createEReference(yButtonEClass, YBUTTON__DATADESCRIPTION);
 		createEAttribute(yButtonEClass, YBUTTON__CLICK_LISTENERS);
+		createEAttribute(yButtonEClass, YBUTTON__LAST_CLICK_TIME);
 
 		yToggleButtonEClass = createEClass(YTOGGLE_BUTTON);
 		createEReference(yToggleButtonEClass, YTOGGLE_BUTTON__DATADESCRIPTION);
@@ -2064,6 +2094,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		CoreModelPackage theCoreModelPackage = (CoreModelPackage)EPackage.Registry.INSTANCE.getEPackage(CoreModelPackage.eNS_URI);
 		ExtDatatypesPackage theExtDatatypesPackage = (ExtDatatypesPackage)EPackage.Registry.INSTANCE.getEPackage(ExtDatatypesPackage.eNS_URI);
 		DatatypesPackage theDatatypesPackage = (DatatypesPackage)EPackage.Registry.INSTANCE.getEPackage(DatatypesPackage.eNS_URI);
+		BindingPackage theBindingPackage = (BindingPackage)EPackage.Registry.INSTANCE.getEPackage(BindingPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2209,6 +2240,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEClass(yColumnEClass, YColumn.class, "YColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYColumn_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Visible(), ecorePackage.getEBoolean(), "visible", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYColumn_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYColumn_OrphanDatadescriptions(), theDatatypesPackage.getYDatadescription(), null, "orphanDatadescriptions", null, 0, -1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Orderable(), ecorePackage.getEBoolean(), "orderable", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Collapsed(), ecorePackage.getEBoolean(), "collapsed", "false", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Collapsible(), ecorePackage.getEBoolean(), "collapsible", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2319,12 +2352,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEClass(yButtonEClass, YButton.class, "YButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYButton_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYButton_ClickListeners(), this.getYButtonClickListener(), "clickListeners", null, 0, -1, YButton.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYButton_LastClickTime(), ecorePackage.getELong(), "lastClickTime", null, 0, 1, YButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(yButtonEClass, null, "addClickListener", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getYButtonClickListener(), "listener", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(yButtonEClass, null, "removeClickListener", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getYButtonClickListener(), "listener", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(yButtonEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createClickEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(yToggleButtonEClass, YToggleButton.class, "YToggleButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYToggleButton_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YToggleButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

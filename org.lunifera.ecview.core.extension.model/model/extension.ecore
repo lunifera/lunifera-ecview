@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extension" nsURI="http://eclipse.org/emf/ecp/ecview/extension/view"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extension" nsURI="http://lunifera.org/ecview/v1/extension/view"
     nsPrefix="extension">
   <eClassifiers xsi:type="ecore:EClass" name="YInput" abstract="true" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YField"/>
   <eClassifiers xsi:type="ecore:EClass" name="YGridLayout" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSpacingable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMarginable">
@@ -161,6 +161,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orphanDatadescriptions"
+        upperBound="-1" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="orderable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="collapsed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -311,9 +315,11 @@
     <eOperations name="removeClickListener">
       <eParameters name="listener" eType="#//YButtonClickListener"/>
     </eOperations>
+    <eOperations name="createClickEndpoint" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/binding.ecore#//YECViewModelValueBindingEndpoint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="clickListeners" upperBound="-1"
         eType="#//YButtonClickListener" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastClickTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="YButtonClickListener" instanceClassName="org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickListener"/>
   <eClassifiers xsi:type="ecore:EClass" name="YToggleButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YActivateable">

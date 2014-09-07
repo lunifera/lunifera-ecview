@@ -4,6 +4,8 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.validation;
 
+import org.eclipse.emf.common.util.EList;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.YFlatAlignment;
 
 
@@ -18,6 +20,10 @@ public interface YColumnValidator {
 
 	boolean validateIcon(String value);
 	boolean validateVisible(boolean value);
+	boolean validateDatadescription(YDatadescription value);
+
+	boolean validateOrphanDatadescriptions(EList<YDatadescription> value);
+
 	boolean validateOrderable(boolean value);
 
 	boolean validateCollapsed(boolean value);

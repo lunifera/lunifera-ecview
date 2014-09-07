@@ -6,10 +6,10 @@ code generator can be extended.
 This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator=false.
 
 Contains packages:
-  datatypes <http://eclipse.org/emf/ecp/ecview/extension/datatypes>
-  extension <http://eclipse.org/emf/ecp/ecview/extension/view>
+  datatypes <http://lunifera.org/ecview/v1/extension/datatypes>
+  extension <http://lunifera.org/ecview/v1/extension/view>
 
-Package datatypes <http://eclipse.org/emf/ecp/ecview/extension/datatypes>
+Package datatypes <http://lunifera.org/ecview/v1/extension/datatypes>
 
   Class YTextDatatype -> YDatatype, YMaxLengthValidationConfig, YMinLengthValidationConfig, YRegexpValidationConfig
 
@@ -50,7 +50,7 @@ Package datatypes <http://eclipse.org/emf/ecp/ecview/extension/datatypes>
     Literal TIME = 1
     Literal DATE_TIME = 2
 
-Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
+Package extension <http://lunifera.org/ecview/v1/extension/view>
 
   Class YInput -> YField
 
@@ -106,6 +106,8 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
   Class YColumn -> YElement
     Attribute icon : EString
     Attribute visible : EBoolean
+    Reference datadescription : YDatadescription
+    Reference orphanDatadescriptions : YDatadescription<<0..*>>
     Attribute orderable : EBoolean
     Attribute collapsed : EBoolean
     Attribute collapsible : EBoolean
@@ -204,8 +206,10 @@ Package extension <http://eclipse.org/emf/ecp/ecview/extension/view>
   Class YButton -> YAction, YVisibleable, YEditable, YEnable
     Reference datadescription : YDatadescription
     Attribute clickListeners : YButtonClickListener<<0..*>>
+    Attribute lastClickTime : ELong
     Operation addClickListener(YButtonClickListener) : void
     Operation removeClickListener(YButtonClickListener) : void
+    Operation createClickEndpoint() : YECViewModelValueBindingEndpoint
 
   Class YToggleButton -> YAction, YActivateable
     Reference datadescription : YDatadescription

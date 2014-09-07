@@ -105,6 +105,8 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case CoreModelPackage.YDEVICE_TYPE:
+				return createYDeviceTypeFromString(eDataType, initialValue);
 			case CoreModelPackage.YUNIT:
 				return createYUnitFromString(eDataType, initialValue);
 			case CoreModelPackage.YURI:
@@ -124,6 +126,8 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case CoreModelPackage.YDEVICE_TYPE:
+				return convertYDeviceTypeToString(eDataType, instanceValue);
 			case CoreModelPackage.YUNIT:
 				return convertYUnitToString(eDataType, instanceValue);
 			case CoreModelPackage.YURI:
@@ -313,6 +317,26 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	public YOpenDialogCommand createYOpenDialogCommand() {
 		YOpenDialogCommandImpl yOpenDialogCommand = new YOpenDialogCommandImpl();
 		return yOpenDialogCommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDeviceType createYDeviceTypeFromString(EDataType eDataType, String initialValue) {
+		YDeviceType result = YDeviceType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYDeviceTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

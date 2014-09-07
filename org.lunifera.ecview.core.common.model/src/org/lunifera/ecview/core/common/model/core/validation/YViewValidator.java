@@ -10,6 +10,7 @@ import org.lunifera.ecview.core.common.model.binding.YBindingSet;
 
 import org.lunifera.ecview.core.common.model.core.YBeanSlot;
 import org.lunifera.ecview.core.common.model.core.YCommandSet;
+import org.lunifera.ecview.core.common.model.core.YDeviceType;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
@@ -34,6 +35,8 @@ public interface YViewValidator {
 	boolean validateCommandSet(YCommandSet value);
 
 	boolean validateDialogs(EList<YDialog> value);
+
+	boolean validateDeviceType(YDeviceType value);
 
 	boolean validateCommandSet(EList<YCommandSet> value);
 

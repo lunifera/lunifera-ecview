@@ -38,7 +38,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://eclipse.org/emf/ecp/ecview/extension/datatypes";
+	String eNS_URI = "http://lunifera.org/ecview/v1/extension/datatypes";
 
 	/**
 	 * The package namespace name.

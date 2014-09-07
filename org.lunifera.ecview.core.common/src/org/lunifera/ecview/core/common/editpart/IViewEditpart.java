@@ -35,6 +35,11 @@ public interface IViewEditpart extends IElementEditpart, IEmbeddableParent {
 	String PROP_CONTENT = "content";
 
 	/**
+	 * An internal bean slot that provides the view editpart as a bean.
+	 */
+	String BEANSLOT__ECVIEW_CONTEXT = "ecviewContext";
+
+	/**
 	 * Returns the view context. It offers access to more view related
 	 * information.
 	 * 
@@ -170,10 +175,12 @@ public interface IViewEditpart extends IElementEditpart, IEmbeddableParent {
 	 * Opens the dialog.
 	 * 
 	 * @param dialogEditpart
-	 * @param inputData this object contains information about the input data of the
+	 * @param inputData
+	 *            this object contains information about the input data of the
 	 *            target navigation page.
 	 */
-	void openDialog(IDialogEditpart dialogEditpart, IBindableEndpointEditpart inputData);
+	void openDialog(IDialogEditpart dialogEditpart,
+			IBindableEndpointEditpart inputData);
 
 	/**
 	 * Closes the dialog.

@@ -27,6 +27,7 @@ import org.lunifera.ecview.core.common.model.binding.YBindingSet;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getBeanSlots <em>Bean Slots</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getCommandSet <em>Command Set</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getDialogs <em>Dialogs</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getDeviceType <em>Device Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -178,6 +179,36 @@ public interface YView extends YElement, YCssAble, YMarginable,
 	 * @generated
 	 */
 	EList<YDialog> getDialogs();
+
+	/**
+	 * Returns the value of the '<em><b>Device Type</b></em>' attribute.
+	 * The default value is <code>"IDE"</code>.
+	 * The literals are from the enumeration {@link org.lunifera.ecview.core.common.model.core.YDeviceType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Device Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Device Type</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.core.YDeviceType
+	 * @see #setDeviceType(YDeviceType)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_DeviceType()
+	 * @model default="IDE"
+	 * @generated
+	 */
+	YDeviceType getDeviceType();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YView#getDeviceType <em>Device Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Device Type</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.core.YDeviceType
+	 * @see #getDeviceType()
+	 * @generated
+	 */
+	void setDeviceType(YDeviceType value);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.extension.model.extension;
 
 import org.eclipse.emf.common.util.EList;
+import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YEditable;
@@ -21,6 +22,7 @@ import org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickL
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YButton#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YButton#getClickListeners <em>Click Listeners</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YButton#getLastClickTime <em>Last Click Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,6 +74,32 @@ public interface YButton extends YAction, YVisibleable, YEditable, YEnable {
 	EList<YButtonClickListener> getClickListeners();
 
 	/**
+	 * Returns the value of the '<em><b>Last Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Last Click Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Click Time</em>' attribute.
+	 * @see #setLastClickTime(long)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYButton_LastClickTime()
+	 * @model
+	 * @generated
+	 */
+	long getLastClickTime();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YButton#getLastClickTime <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Click Time</em>' attribute.
+	 * @see #getLastClickTime()
+	 * @generated
+	 */
+	void setLastClickTime(long value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model listenerDataType="org.lunifera.ecview.core.extension.model.extension.YButtonClickListener"
@@ -87,6 +115,14 @@ public interface YButton extends YAction, YVisibleable, YEditable, YEnable {
 	 */
 	void removeClickListener(YButtonClickListener listener);
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	YECViewModelValueBindingEndpoint createClickEndpoint();
+
 	/**
 	 * Creates a binding endpoint to observe the editable property.
 	 * @return

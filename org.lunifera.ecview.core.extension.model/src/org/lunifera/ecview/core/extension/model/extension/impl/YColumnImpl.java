@@ -2,21 +2,26 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+import org.lunifera.ecview.core.common.model.datatypes.DatatypesFactory;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YColumn;
 import org.lunifera.ecview.core.extension.model.extension.YFlatAlignment;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>YColumn</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>YColumn</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
@@ -24,6 +29,8 @@ import org.lunifera.ecview.core.extension.model.extension.YFlatAlignment;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#isVisible <em>Visible</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#isOrderable <em>Orderable</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#isCollapsed <em>Collapsed</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#isCollapsible <em>Collapsible</em>}</li>
@@ -34,11 +41,12 @@ import org.lunifera.ecview.core.extension.model.extension.YFlatAlignment;
  *
  * @generated
  */
-public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn {
+public class YColumnImpl extends MinimalEObjectImpl.Container implements
+		YColumn {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -46,9 +54,9 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -57,8 +65,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -67,8 +74,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -77,8 +83,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The default value of the '{@link #getIcon() <em>Icon</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getIcon()
 	 * @generated
 	 * @ordered
@@ -87,8 +92,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #getIcon() <em>Icon</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getIcon()
 	 * @generated
 	 * @ordered
@@ -97,8 +101,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isVisible()
 	 * @generated
 	 * @ordered
@@ -107,8 +110,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #isVisible() <em>Visible</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isVisible()
 	 * @generated
 	 * @ordered
@@ -116,9 +118,29 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	protected boolean visible = VISIBLE_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @see #getDatadescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected YDatadescription datadescription;
+
+	/**
+	 * The cached value of the '{@link #getOrphanDatadescriptions()
+	 * <em>Orphan Datadescriptions</em>}' containment reference list. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getOrphanDatadescriptions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<YDatadescription> orphanDatadescriptions;
+
+	/**
 	 * The default value of the '{@link #isOrderable() <em>Orderable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isOrderable()
 	 * @generated
 	 * @ordered
@@ -127,8 +149,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #isOrderable() <em>Orderable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isOrderable()
 	 * @generated
 	 * @ordered
@@ -137,8 +158,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The default value of the '{@link #isCollapsed() <em>Collapsed</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isCollapsed()
 	 * @generated
 	 * @ordered
@@ -147,8 +167,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #isCollapsed() <em>Collapsed</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isCollapsed()
 	 * @generated
 	 * @ordered
@@ -157,8 +176,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The default value of the '{@link #isCollapsible() <em>Collapsible</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isCollapsible()
 	 * @generated
 	 * @ordered
@@ -167,8 +185,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #isCollapsible() <em>Collapsible</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isCollapsible()
 	 * @generated
 	 * @ordered
@@ -177,8 +194,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The default value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getAlignment()
 	 * @generated
 	 * @ordered
@@ -187,8 +203,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getAlignment()
 	 * @generated
 	 * @ordered
@@ -197,8 +212,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The default value of the '{@link #getExpandRatio() <em>Expand Ratio</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getExpandRatio()
 	 * @generated
 	 * @ordered
@@ -207,8 +221,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 
 	/**
 	 * The cached value of the '{@link #getExpandRatio() <em>Expand Ratio</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getExpandRatio()
 	 * @generated
 	 * @ordered
@@ -216,8 +229,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	protected float expandRatio = EXPAND_RATIO_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected YColumnImpl() {
@@ -225,8 +237,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -235,8 +246,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getId() {
@@ -244,8 +254,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setId(String newId) {
@@ -256,8 +265,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getName() {
@@ -265,8 +273,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -277,8 +284,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getIcon() {
@@ -286,8 +292,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setIcon(String newIcon) {
@@ -298,8 +303,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isVisible() {
@@ -307,8 +311,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setVisible(boolean newVisible) {
@@ -319,8 +322,53 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDatadescription getDatadescription() {
+		if (datadescription != null && datadescription.eIsProxy()) {
+			InternalEObject oldDatadescription = (InternalEObject)datadescription;
+			datadescription = (YDatadescription)eResolveProxy(oldDatadescription);
+			if (datadescription != oldDatadescription) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YCOLUMN__DATADESCRIPTION, oldDatadescription, datadescription));
+			}
+		}
+		return datadescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDatadescription basicGetDatadescription() {
+		return datadescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDatadescription(YDatadescription newDatadescription) {
+		YDatadescription oldDatadescription = datadescription;
+		datadescription = newDatadescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOLUMN__DATADESCRIPTION, oldDatadescription, datadescription));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<YDatadescription> getOrphanDatadescriptions() {
+		if (orphanDatadescriptions == null) {
+			orphanDatadescriptions = new EObjectContainmentEList.Resolving<YDatadescription>(YDatadescription.class, this, ExtensionModelPackage.YCOLUMN__ORPHAN_DATADESCRIPTIONS);
+		}
+		return orphanDatadescriptions;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isOrderable() {
@@ -328,8 +376,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setOrderable(boolean newOrderable) {
@@ -340,8 +387,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isCollapsed() {
@@ -349,8 +395,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCollapsed(boolean newCollapsed) {
@@ -361,8 +406,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isCollapsible() {
@@ -370,8 +414,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCollapsible(boolean newCollapsible) {
@@ -382,8 +425,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YFlatAlignment getAlignment() {
@@ -391,8 +433,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setAlignment(YFlatAlignment newAlignment) {
@@ -403,8 +444,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public float getExpandRatio() {
@@ -412,8 +452,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setExpandRatio(float newExpandRatio) {
@@ -424,8 +463,21 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ExtensionModelPackage.YCOLUMN__ORPHAN_DATADESCRIPTIONS:
+				return ((InternalEList<?>)getOrphanDatadescriptions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -439,6 +491,11 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 				return getIcon();
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:
 				return isVisible();
+			case ExtensionModelPackage.YCOLUMN__DATADESCRIPTION:
+				if (resolve) return getDatadescription();
+				return basicGetDatadescription();
+			case ExtensionModelPackage.YCOLUMN__ORPHAN_DATADESCRIPTIONS:
+				return getOrphanDatadescriptions();
 			case ExtensionModelPackage.YCOLUMN__ORDERABLE:
 				return isOrderable();
 			case ExtensionModelPackage.YCOLUMN__COLLAPSED:
@@ -454,10 +511,10 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -472,6 +529,13 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 				return;
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:
 				setVisible((Boolean)newValue);
+				return;
+			case ExtensionModelPackage.YCOLUMN__DATADESCRIPTION:
+				setDatadescription((YDatadescription)newValue);
+				return;
+			case ExtensionModelPackage.YCOLUMN__ORPHAN_DATADESCRIPTIONS:
+				getOrphanDatadescriptions().clear();
+				getOrphanDatadescriptions().addAll((Collection<? extends YDatadescription>)newValue);
 				return;
 			case ExtensionModelPackage.YCOLUMN__ORDERABLE:
 				setOrderable((Boolean)newValue);
@@ -493,8 +557,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -511,6 +574,12 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 				return;
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YCOLUMN__DATADESCRIPTION:
+				setDatadescription((YDatadescription)null);
+				return;
+			case ExtensionModelPackage.YCOLUMN__ORPHAN_DATADESCRIPTIONS:
+				getOrphanDatadescriptions().clear();
 				return;
 			case ExtensionModelPackage.YCOLUMN__ORDERABLE:
 				setOrderable(ORDERABLE_EDEFAULT);
@@ -532,8 +601,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -547,6 +615,10 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 				return ICON_EDEFAULT == null ? icon != null : !ICON_EDEFAULT.equals(icon);
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
+			case ExtensionModelPackage.YCOLUMN__DATADESCRIPTION:
+				return datadescription != null;
+			case ExtensionModelPackage.YCOLUMN__ORPHAN_DATADESCRIPTIONS:
+				return orphanDatadescriptions != null && !orphanDatadescriptions.isEmpty();
 			case ExtensionModelPackage.YCOLUMN__ORDERABLE:
 				return orderable != ORDERABLE_EDEFAULT;
 			case ExtensionModelPackage.YCOLUMN__COLLAPSED:
@@ -562,8 +634,7 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -593,4 +664,52 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements YColumn
 		return result.toString();
 	}
 
-} //YColumnImpl
+	/**
+	 * Sets the label by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabel(String label) {
+		YDatadescription ds = getDatadescription();
+		if (ds == null) {
+			setDatadescription(createDatadescription(label));
+		} else {
+			ds.setLabel(label);
+		}
+	}
+
+	/**
+	 * Sets the label i18nKey by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabelI18nKey(String i18nKey) {
+		YDatadescription ds = getDatadescription();
+		if (ds == null) {
+			setDatadescription(createDatadescriptionForI18n(i18nKey));
+		} else {
+			ds.setLabelI18nKey(i18nKey);
+		}
+	}
+
+	protected YDatadescription createDatadescription(String label) {
+		YDatadescription dsc = DatatypesFactory.eINSTANCE
+				.createYDatadescription();
+		dsc.setLabel(label);
+
+		getOrphanDatadescriptions().add(dsc);
+
+		return dsc;
+	}
+
+	protected YDatadescription createDatadescriptionForI18n(String i18nKey) {
+		YDatadescription dsc = DatatypesFactory.eINSTANCE
+				.createYDatadescription();
+		dsc.setLabelI18nKey(i18nKey);
+
+		getOrphanDatadescriptions().add(dsc);
+
+		return dsc;
+	}
+
+} // YColumnImpl

@@ -40,7 +40,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://eclipse.org/emf/ecp/ecview/extension/view";
+	String eNS_URI = "http://lunifera.org/ecview/v1/extension/view";
 
 	/**
 	 * The package namespace name.
@@ -1177,13 +1177,31 @@ public interface ExtensionModelPackage extends EPackage {
 	int YCOLUMN__VISIBLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOLUMN__DATADESCRIPTION = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOLUMN__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Orderable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__ORDERABLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
+	int YCOLUMN__ORDERABLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Collapsed</b></em>' attribute.
@@ -1192,7 +1210,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__COLLAPSED = CoreModelPackage.YELEMENT_FEATURE_COUNT + 3;
+	int YCOLUMN__COLLAPSED = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Collapsible</b></em>' attribute.
@@ -1201,7 +1219,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__COLLAPSIBLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 4;
+	int YCOLUMN__COLLAPSIBLE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -1210,7 +1228,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__ALIGNMENT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
+	int YCOLUMN__ALIGNMENT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Expand Ratio</b></em>' attribute.
@@ -1219,7 +1237,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN__EXPAND_RATIO = CoreModelPackage.YELEMENT_FEATURE_COUNT + 6;
+	int YCOLUMN__EXPAND_RATIO = CoreModelPackage.YELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>YColumn</em>' class.
@@ -1228,7 +1246,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 7;
+	int YCOLUMN_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YLabelImpl <em>YLabel</em>}' class.
@@ -4125,13 +4143,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBUTTON__CLICK_LISTENERS = CoreModelPackage.YACTION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Last Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBUTTON__LAST_CLICK_TIME = CoreModelPackage.YACTION_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>YButton</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 4;
+	int YBUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6194,6 +6221,28 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYColumn_Visible();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YColumn#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YColumn#getDatadescription()
+	 * @see #getYColumn()
+	 * @generated
+	 */
+	EReference getYColumn_Datadescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.ecview.core.extension.model.extension.YColumn#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Orphan Datadescriptions</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YColumn#getOrphanDatadescriptions()
+	 * @see #getYColumn()
+	 * @generated
+	 */
+	EReference getYColumn_OrphanDatadescriptions();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YColumn#isOrderable <em>Orderable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6829,6 +6878,17 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYButton_ClickListeners();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YButton#getLastClickTime <em>Last Click Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Click Time</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YButton#getLastClickTime()
+	 * @see #getYButton()
+	 * @generated
+	 */
+	EAttribute getYButton_LastClickTime();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YToggleButton <em>YToggle Button</em>}'.
@@ -7953,6 +8013,22 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YCOLUMN__VISIBLE = eINSTANCE.getYColumn_Visible();
 
 		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YCOLUMN__DATADESCRIPTION = eINSTANCE.getYColumn_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YCOLUMN__ORPHAN_DATADESCRIPTIONS = eINSTANCE.getYColumn_OrphanDatadescriptions();
+
+		/**
 		 * The meta object literal for the '<em><b>Orderable</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8447,6 +8523,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBUTTON__CLICK_LISTENERS = eINSTANCE.getYButton_ClickListeners();
+
+		/**
+		 * The meta object literal for the '<em><b>Last Click Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBUTTON__LAST_CLICK_TIME = eINSTANCE.getYButton_LastClickTime();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YToggleButtonImpl <em>YToggle Button</em>}' class.
