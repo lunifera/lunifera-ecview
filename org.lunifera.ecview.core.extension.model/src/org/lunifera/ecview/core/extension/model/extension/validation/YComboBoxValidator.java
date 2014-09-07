@@ -25,14 +25,7 @@ public interface YComboBoxValidator {
 	boolean validateCollection(EList<Object> value);
 	boolean validateType(Class<?> value);
 	boolean validateEmfNsURI(String value);
-
 	boolean validateTypeQualifiedName(String value);
-
 	boolean validateItemCaptionProperty(String value);
-
 	boolean validateItemImageProperty(String value);
-
-	boolean validateRowCaptionProperty(String value);
-
-	boolean validateRowImageProperty(String value);
 }

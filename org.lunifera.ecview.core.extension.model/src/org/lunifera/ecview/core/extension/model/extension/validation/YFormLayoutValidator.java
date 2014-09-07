@@ -19,4 +19,6 @@ public interface YFormLayoutValidator {
 
 	boolean validateCellStyles(EList<YFormLayoutCellStyle> value);
 	boolean validateFillVertical(boolean value);
+
+	boolean validateFillHorizontal(boolean value);
 }

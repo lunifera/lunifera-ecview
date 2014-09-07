@@ -1,6 +1,6 @@
 /**
  */
-package org.lunifera.ecview.core.extension.model.extension;
+package org.lunifera.ecview.core.common.model.core;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>YFlat Alignment</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYFlatAlignment()
+ * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYFlatAlignment()
  * @model
  * @generated
  */

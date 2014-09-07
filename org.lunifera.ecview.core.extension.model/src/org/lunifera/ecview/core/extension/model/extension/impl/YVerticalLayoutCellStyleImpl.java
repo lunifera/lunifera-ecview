@@ -7,9 +7,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.lunifera.ecview.core.common.model.core.YAlignment;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
-import org.lunifera.ecview.core.extension.model.extension.YAlignment;
 import org.lunifera.ecview.core.extension.model.extension.YVerticalLayoutCellStyle;
 
 

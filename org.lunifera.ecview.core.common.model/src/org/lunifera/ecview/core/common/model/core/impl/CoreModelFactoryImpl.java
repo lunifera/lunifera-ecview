@@ -107,6 +107,10 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 		switch (eDataType.getClassifierID()) {
 			case CoreModelPackage.YDEVICE_TYPE:
 				return createYDeviceTypeFromString(eDataType, initialValue);
+			case CoreModelPackage.YALIGNMENT:
+				return createYAlignmentFromString(eDataType, initialValue);
+			case CoreModelPackage.YFLAT_ALIGNMENT:
+				return createYFlatAlignmentFromString(eDataType, initialValue);
 			case CoreModelPackage.YUNIT:
 				return createYUnitFromString(eDataType, initialValue);
 			case CoreModelPackage.YURI:
@@ -128,6 +132,10 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 		switch (eDataType.getClassifierID()) {
 			case CoreModelPackage.YDEVICE_TYPE:
 				return convertYDeviceTypeToString(eDataType, instanceValue);
+			case CoreModelPackage.YALIGNMENT:
+				return convertYAlignmentToString(eDataType, instanceValue);
+			case CoreModelPackage.YFLAT_ALIGNMENT:
+				return convertYFlatAlignmentToString(eDataType, instanceValue);
 			case CoreModelPackage.YUNIT:
 				return convertYUnitToString(eDataType, instanceValue);
 			case CoreModelPackage.YURI:
@@ -336,6 +344,46 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	 * @generated
 	 */
 	public String convertYDeviceTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YAlignment createYAlignmentFromString(EDataType eDataType, String initialValue) {
+		YAlignment result = YAlignment.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYAlignmentToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YFlatAlignment createYFlatAlignmentFromString(EDataType eDataType, String initialValue) {
+		YFlatAlignment result = YFlatAlignment.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYFlatAlignmentToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

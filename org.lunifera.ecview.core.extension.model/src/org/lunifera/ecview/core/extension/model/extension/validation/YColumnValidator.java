@@ -5,9 +5,10 @@
 package org.lunifera.ecview.core.extension.model.extension.validation;
 
 import org.eclipse.emf.common.util.EList;
-import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
-import org.lunifera.ecview.core.extension.model.extension.YFlatAlignment;
 
+import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
+
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
  * A sample validator interface for {@link org.lunifera.ecview.core.extension.model.extension.YColumn}.
@@ -21,16 +22,10 @@ public interface YColumnValidator {
 	boolean validateIcon(String value);
 	boolean validateVisible(boolean value);
 	boolean validateDatadescription(YDatadescription value);
-
 	boolean validateOrphanDatadescriptions(EList<YDatadescription> value);
-
 	boolean validateOrderable(boolean value);
-
 	boolean validateCollapsed(boolean value);
-
 	boolean validateCollapsible(boolean value);
-
 	boolean validateAlignment(YFlatAlignment value);
-
 	boolean validateExpandRatio(float value);
 }

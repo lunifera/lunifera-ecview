@@ -249,6 +249,14 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYNumericSearchFieldAdapter();
 			}
 			@Override
+			public Adapter caseYPanel(YPanel object) {
+				return createYPanelAdapter();
+			}
+			@Override
+			public Adapter caseYSplitPanel(YSplitPanel object) {
+				return createYSplitPanelAdapter();
+			}
+			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
 			}
@@ -785,6 +793,34 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYNumericSearchFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YPanel <em>YPanel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YPanel
+	 * @generated
+	 */
+	public Adapter createYPanelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YSplitPanel <em>YSplit Panel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSplitPanel
+	 * @generated
+	 */
+	public Adapter createYSplitPanelAdapter() {
 		return null;
 	}
 

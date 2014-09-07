@@ -3,7 +3,6 @@
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -13,11 +12,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
 import org.lunifera.ecview.core.common.model.datatypes.DatatypesFactory;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YColumn;
-import org.lunifera.ecview.core.extension.model.extension.YFlatAlignment;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -433,7 +432,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setAlignment(YFlatAlignment newAlignment) {

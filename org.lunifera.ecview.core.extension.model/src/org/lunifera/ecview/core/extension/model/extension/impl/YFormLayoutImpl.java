@@ -31,6 +31,7 @@ import org.lunifera.ecview.core.extension.model.extension.YFormLayoutCellStyle;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutImpl#isMargin <em>Margin</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutImpl#getCellStyles <em>Cell Styles</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutImpl#isFillVertical <em>Fill Vertical</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutImpl#isFillHorizontal <em>Fill Horizontal</em>}</li>
  * </ul>
  * </p>
  *
@@ -100,6 +101,26 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 	 * @ordered
 	 */
 	protected boolean fillVertical = FILL_VERTICAL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isFillHorizontal() <em>Fill Horizontal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFillHorizontal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean FILL_HORIZONTAL_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isFillHorizontal() <em>Fill Horizontal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFillHorizontal()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean fillHorizontal = FILL_HORIZONTAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -196,6 +217,27 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isFillHorizontal() {
+		return fillHorizontal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFillHorizontal(boolean newFillHorizontal) {
+		boolean oldFillHorizontal = fillHorizontal;
+		fillHorizontal = newFillHorizontal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YFORM_LAYOUT__FILL_HORIZONTAL, oldFillHorizontal, fillHorizontal));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -224,6 +266,8 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 				return getCellStyles();
 			case ExtensionModelPackage.YFORM_LAYOUT__FILL_VERTICAL:
 				return isFillVertical();
+			case ExtensionModelPackage.YFORM_LAYOUT__FILL_HORIZONTAL:
+				return isFillHorizontal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,6 +293,9 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 			case ExtensionModelPackage.YFORM_LAYOUT__FILL_VERTICAL:
 				setFillVertical((Boolean)newValue);
 				return;
+			case ExtensionModelPackage.YFORM_LAYOUT__FILL_HORIZONTAL:
+				setFillHorizontal((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -272,6 +319,9 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 			case ExtensionModelPackage.YFORM_LAYOUT__FILL_VERTICAL:
 				setFillVertical(FILL_VERTICAL_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YFORM_LAYOUT__FILL_HORIZONTAL:
+				setFillHorizontal(FILL_HORIZONTAL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -291,6 +341,8 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 				return cellStyles != null && !cellStyles.isEmpty();
 			case ExtensionModelPackage.YFORM_LAYOUT__FILL_VERTICAL:
 				return fillVertical != FILL_VERTICAL_EDEFAULT;
+			case ExtensionModelPackage.YFORM_LAYOUT__FILL_HORIZONTAL:
+				return fillHorizontal != FILL_HORIZONTAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -352,6 +404,8 @@ public class YFormLayoutImpl extends YLayoutImpl implements YFormLayout {
 		result.append(margin);
 		result.append(", fillVertical: ");
 		result.append(fillVertical);
+		result.append(", fillHorizontal: ");
+		result.append(fillHorizontal);
 		result.append(')');
 		return result.toString();
 	}

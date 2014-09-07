@@ -598,6 +598,30 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExtensionModelPackage.YPANEL: {
+				YPanel yPanel = (YPanel)theEObject;
+				T result = caseYPanel(yPanel);
+				if (result == null) result = caseYLayout(yPanel);
+				if (result == null) result = caseYEmbeddable(yPanel);
+				if (result == null) result = caseYElement(yPanel);
+				if (result == null) result = caseYCssAble(yPanel);
+				if (result == null) result = caseYVisibleable(yPanel);
+				if (result == null) result = caseYVisibilityProcessable(yPanel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YSPLIT_PANEL: {
+				YSplitPanel ySplitPanel = (YSplitPanel)theEObject;
+				T result = caseYSplitPanel(ySplitPanel);
+				if (result == null) result = caseYLayout(ySplitPanel);
+				if (result == null) result = caseYEmbeddable(ySplitPanel);
+				if (result == null) result = caseYElement(ySplitPanel);
+				if (result == null) result = caseYCssAble(ySplitPanel);
+				if (result == null) result = caseYVisibleable(ySplitPanel);
+				if (result == null) result = caseYVisibilityProcessable(ySplitPanel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -1079,6 +1103,36 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYNumericSearchField(YNumericSearchField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YPanel</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YPanel</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYPanel(YPanel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YSplit Panel</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YSplit Panel</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYSplitPanel(YSplitPanel object) {
 		return null;
 	}
 

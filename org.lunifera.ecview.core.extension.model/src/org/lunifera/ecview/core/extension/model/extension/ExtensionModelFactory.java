@@ -301,6 +301,24 @@ public interface ExtensionModelFactory extends EFactory {
 	YNumericSearchField createYNumericSearchField();
 
 	/**
+	 * Returns a new object of class '<em>YPanel</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YPanel</em>'.
+	 * @generated
+	 */
+	YPanel createYPanel();
+
+	/**
+	 * Returns a new object of class '<em>YSplit Panel</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YSplit Panel</em>'.
+	 * @generated
+	 */
+	YSplitPanel createYSplitPanel();
+
+	/**
 	 * Returns a new object of class '<em>YTree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

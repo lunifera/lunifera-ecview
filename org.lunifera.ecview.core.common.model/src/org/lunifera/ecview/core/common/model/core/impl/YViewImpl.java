@@ -24,6 +24,7 @@ import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YBindingSet;
 import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.YAlignment;
 import org.lunifera.ecview.core.common.model.core.YBeanSlot;
 import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
@@ -57,6 +58,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCommandSet <em>Command Set</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getDialogs <em>Dialogs</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getDeviceType <em>Device Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getContentAlignment <em>Content Alignment</em>}</li>
  * </ul>
  * </p>
  *
@@ -259,6 +261,26 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected YDeviceType deviceType = DEVICE_TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getContentAlignment() <em>Content Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContentAlignment()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final YAlignment CONTENT_ALIGNMENT_EDEFAULT = YAlignment.FILL_FILL;
+
+	/**
+	 * The cached value of the '{@link #getContentAlignment() <em>Content Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContentAlignment()
+	 * @generated
+	 * @ordered
+	 */
+	protected YAlignment contentAlignment = CONTENT_ALIGNMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -618,6 +640,27 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YAlignment getContentAlignment() {
+		return contentAlignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContentAlignment(YAlignment newContentAlignment) {
+		YAlignment oldContentAlignment = contentAlignment;
+		contentAlignment = newContentAlignment == null ? CONTENT_ALIGNMENT_EDEFAULT : newContentAlignment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YVIEW__CONTENT_ALIGNMENT, oldContentAlignment, contentAlignment));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -897,6 +940,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getDialogs();
 			case CoreModelPackage.YVIEW__DEVICE_TYPE:
 				return getDeviceType();
+			case CoreModelPackage.YVIEW__CONTENT_ALIGNMENT:
+				return getContentAlignment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -953,6 +998,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__DEVICE_TYPE:
 				setDeviceType((YDeviceType)newValue);
 				return;
+			case CoreModelPackage.YVIEW__CONTENT_ALIGNMENT:
+				setContentAlignment((YAlignment)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1006,6 +1054,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__DEVICE_TYPE:
 				setDeviceType(DEVICE_TYPE_EDEFAULT);
 				return;
+			case CoreModelPackage.YVIEW__CONTENT_ALIGNMENT:
+				setContentAlignment(CONTENT_ALIGNMENT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1045,6 +1096,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return dialogs != null && !dialogs.isEmpty();
 			case CoreModelPackage.YVIEW__DEVICE_TYPE:
 				return deviceType != DEVICE_TYPE_EDEFAULT;
+			case CoreModelPackage.YVIEW__CONTENT_ALIGNMENT:
+				return contentAlignment != CONTENT_ALIGNMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1128,6 +1181,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 		result.append(viewName);
 		result.append(", deviceType: ");
 		result.append(deviceType);
+		result.append(", contentAlignment: ");
+		result.append(contentAlignment);
 		result.append(')');
 		return result.toString();
 	}

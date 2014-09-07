@@ -9,38 +9,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.lunifera.ecview.core.extension.model.extension.*;
-import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
-import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
-import org.lunifera.ecview.core.extension.model.extension.YAlignment;
-import org.lunifera.ecview.core.extension.model.extension.YBrowser;
-import org.lunifera.ecview.core.extension.model.extension.YButton;
-import org.lunifera.ecview.core.extension.model.extension.YCheckBox;
-import org.lunifera.ecview.core.extension.model.extension.YComboBox;
-import org.lunifera.ecview.core.extension.model.extension.YDateTime;
-import org.lunifera.ecview.core.extension.model.extension.YDecimalField;
-import org.lunifera.ecview.core.extension.model.extension.YFormLayout;
-import org.lunifera.ecview.core.extension.model.extension.YFormLayoutCellStyle;
-import org.lunifera.ecview.core.extension.model.extension.YGridLayout;
-import org.lunifera.ecview.core.extension.model.extension.YGridLayoutCellStyle;
-import org.lunifera.ecview.core.extension.model.extension.YHorizontalLayout;
-import org.lunifera.ecview.core.extension.model.extension.YHorizontalLayoutCellStyle;
-import org.lunifera.ecview.core.extension.model.extension.YLabel;
-import org.lunifera.ecview.core.extension.model.extension.YList;
-import org.lunifera.ecview.core.extension.model.extension.YMasterDetail;
-import org.lunifera.ecview.core.extension.model.extension.YNumericField;
-import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
-import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
-import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
-import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
-import org.lunifera.ecview.core.extension.model.extension.YTab;
-import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
-import org.lunifera.ecview.core.extension.model.extension.YTable;
-import org.lunifera.ecview.core.extension.model.extension.YTextArea;
-import org.lunifera.ecview.core.extension.model.extension.YTextField;
-import org.lunifera.ecview.core.extension.model.extension.YToggleButton;
-import org.lunifera.ecview.core.extension.model.extension.YTree;
-import org.lunifera.ecview.core.extension.model.extension.YVerticalLayout;
-import org.lunifera.ecview.core.extension.model.extension.YVerticalLayoutCellStyle;
 import org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickListener;
 
 /**
@@ -120,6 +88,8 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YTEXT_SEARCH_FIELD: return createYTextSearchField();
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD: return createYBooleanSearchField();
 			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD: return createYNumericSearchField();
+			case ExtensionModelPackage.YPANEL: return createYPanel();
+			case ExtensionModelPackage.YSPLIT_PANEL: return createYSplitPanel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -133,10 +103,6 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case ExtensionModelPackage.YALIGNMENT:
-				return createYAlignmentFromString(eDataType, initialValue);
-			case ExtensionModelPackage.YFLAT_ALIGNMENT:
-				return createYFlatAlignmentFromString(eDataType, initialValue);
 			case ExtensionModelPackage.YSELECTION_TYPE:
 				return createYSelectionTypeFromString(eDataType, initialValue);
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_OPTION:
@@ -158,10 +124,6 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case ExtensionModelPackage.YALIGNMENT:
-				return convertYAlignmentToString(eDataType, instanceValue);
-			case ExtensionModelPackage.YFLAT_ALIGNMENT:
-				return convertYFlatAlignmentToString(eDataType, instanceValue);
 			case ExtensionModelPackage.YSELECTION_TYPE:
 				return convertYSelectionTypeToString(eDataType, instanceValue);
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_OPTION:
@@ -490,6 +452,26 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public YPanel createYPanel() {
+		YPanelImpl yPanel = new YPanelImpl();
+		return yPanel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YSplitPanel createYSplitPanel() {
+		YSplitPanelImpl ySplitPanel = new YSplitPanelImpl();
+		return ySplitPanel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YTree createYTree() {
 		YTreeImpl yTree = new YTreeImpl();
 		return yTree;
@@ -503,46 +485,6 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YOptionsGroup createYOptionsGroup() {
 		YOptionsGroupImpl yOptionsGroup = new YOptionsGroupImpl();
 		return yOptionsGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YAlignment createYAlignmentFromString(EDataType eDataType, String initialValue) {
-		YAlignment result = YAlignment.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertYAlignmentToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YFlatAlignment createYFlatAlignmentFromString(EDataType eDataType, String initialValue) {
-		YFlatAlignment result = YFlatAlignment.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertYFlatAlignmentToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -20,10 +20,4 @@ public interface YDecimalFieldValidator {
 	boolean validateDatatype(YDecimalDatatype value);
 	boolean validateDatadescription(YDatadescription value);
 	boolean validateValue(double value);
-
-	boolean validateGrouping(boolean value);
-
-	boolean validateMarkNegative(boolean value);
-
-	boolean validatePrecision(int value);
 }

@@ -21,6 +21,5 @@ public interface YButtonValidator {
 
 	boolean validateDatadescription(YDatadescription value);
 	boolean validateClickListeners(EList<YButtonClickListener> value);
-
 	boolean validateLastClickTime(long value);
 }

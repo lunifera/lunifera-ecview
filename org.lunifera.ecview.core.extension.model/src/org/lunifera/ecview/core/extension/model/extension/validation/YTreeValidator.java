@@ -29,6 +29,5 @@ public interface YTreeValidator {
 	boolean validateCollection(EList<Object> value);
 	boolean validateType(Class<?> value);
 	boolean validateEmfNsURI(String value);
-
 	boolean validateTypeQualifiedName(String value);
 }

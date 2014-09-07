@@ -3,7 +3,6 @@
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -17,6 +16,7 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YSpacingable;
 import org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl;
+import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YVerticalLayout;
 import org.lunifera.ecview.core.extension.model.extension.YVerticalLayoutCellStyle;
@@ -354,6 +354,14 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 		result.append(fillVertical);
 		result.append(')');
 		return result.toString();
+	}
+	
+	@Override
+	public YVerticalLayoutCellStyle addCellStyle(YEmbeddable element) {
+		YVerticalLayoutCellStyle yStyle = ExtensionModelFactory.eINSTANCE.createYVerticalLayoutCellStyle();
+		yStyle.setTarget(element);
+		getCellStyles().add(yStyle);
+		return yStyle;
 	}
 
 } // YUiVerticalLayoutImpl

@@ -37,8 +37,10 @@ import org.lunifera.ecview.core.extension.model.extension.YList;
 import org.lunifera.ecview.core.extension.model.extension.YMasterDetail;
 import org.lunifera.ecview.core.extension.model.extension.YNumericField;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
+import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
 import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
+import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.extension.model.extension.YTab;
 import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
@@ -268,6 +270,22 @@ public class SimpleExtensionModelFactory extends SimpleCoreModelFactory {
 	public YButton createButton() {
 		return factory.createYButton();
 	}
+	
+	/**
+	 * @return
+	 * @see org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesFactory#createYSplitPanel()
+	 */
+	public YSplitPanel createSplitPanel() {
+		return factory.createYSplitPanel();
+	}
+	
+	/**
+	 * @return
+	 * @see org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesFactory#createYPanel()
+	 */
+	public YPanel createPanel() {
+		return factory.createYPanel();
+	}
 
 	/**
 	 * @return
@@ -348,7 +366,7 @@ public class SimpleExtensionModelFactory extends SimpleCoreModelFactory {
 	public YListDataType createListDataType() {
 		return dtFactory.createYListDataType();
 	}
-
+	
 	/**
 	 * Creates an instance of {@link YHorizontalLayoutCellStyle}.
 	 * 

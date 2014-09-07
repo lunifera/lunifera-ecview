@@ -604,13 +604,22 @@ public interface CoreModelPackage extends EPackage {
 	int YVIEW__DEVICE_TYPE = YELEMENT_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Content Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__CONTENT_ALIGNMENT = YELEMENT_FEATURE_COUNT + 12;
+
+	/**
 	 * The number of structural features of the '<em>YView</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 12;
+	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -2095,6 +2104,26 @@ public interface CoreModelPackage extends EPackage {
 	int YDEVICE_TYPE = 37;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.YAlignment
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAlignment()
+	 * @generated
+	 */
+	int YALIGNMENT = 38;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.YFlatAlignment
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFlatAlignment()
+	 * @generated
+	 */
+	int YFLAT_ALIGNMENT = 39;
+
+	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2102,7 +2131,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYUnit()
 	 * @generated
 	 */
-	int YUNIT = 38;
+	int YUNIT = 40;
 
 	/**
 	 * The meta object id for the '<em>YURI</em>' data type.
@@ -2112,7 +2141,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYURI()
 	 * @generated
 	 */
-	int YURI = 39;
+	int YURI = 41;
 
 
 	/**
@@ -2123,7 +2152,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYValueChangeListener()
 	 * @generated
 	 */
-	int YVALUE_CHANGE_LISTENER = 40;
+	int YVALUE_CHANGE_LISTENER = 42;
 
 
 	/**
@@ -2308,6 +2337,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYView_DeviceType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YView#getContentAlignment <em>Content Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Content Alignment</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YView#getContentAlignment()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EAttribute getYView_ContentAlignment();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YViewSet <em>YView Set</em>}'.
@@ -3244,6 +3284,26 @@ public interface CoreModelPackage extends EPackage {
 	EEnum getYDeviceType();
 
 	/**
+	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YAlignment</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YAlignment
+	 * @generated
+	 */
+	EEnum getYAlignment();
+
+	/**
+	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YFlat Alignment</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YFlatAlignment
+	 * @generated
+	 */
+	EEnum getYFlatAlignment();
+
+	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3440,6 +3500,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YVIEW__DEVICE_TYPE = eINSTANCE.getYView_DeviceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Content Alignment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVIEW__CONTENT_ALIGNMENT = eINSTANCE.getYView_ContentAlignment();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -4212,6 +4280,26 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum YDEVICE_TYPE = eINSTANCE.getYDeviceType();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.YAlignment
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAlignment()
+		 * @generated
+		 */
+		EEnum YALIGNMENT = eINSTANCE.getYAlignment();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.YFlatAlignment
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFlatAlignment()
+		 * @generated
+		 */
+		EEnum YFLAT_ALIGNMENT = eINSTANCE.getYFlatAlignment();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}' enum.

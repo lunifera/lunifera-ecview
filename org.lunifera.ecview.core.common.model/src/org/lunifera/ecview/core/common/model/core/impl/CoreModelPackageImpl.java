@@ -20,6 +20,7 @@ import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YActivateable;
 import org.lunifera.ecview.core.common.model.core.YActivatedEndpoint;
+import org.lunifera.ecview.core.common.model.core.YAlignment;
 import org.lunifera.ecview.core.common.model.core.YBeanSlot;
 import org.lunifera.ecview.core.common.model.core.YBeanSlotListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YBeanSlotValueBindingEndpoint;
@@ -42,6 +43,7 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddableSelectionEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
+import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
 import org.lunifera.ecview.core.common.model.core.YHeightable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
@@ -342,6 +344,20 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum yAlignmentEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum yFlatAlignmentEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum yUnitEEnum = null;
 
 	/**
@@ -584,6 +600,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EAttribute getYView_DeviceType() {
 		return (EAttribute)yViewEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYView_ContentAlignment() {
+		return (EAttribute)yViewEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1383,6 +1408,24 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getYAlignment() {
+		return yAlignmentEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getYFlatAlignment() {
+		return yFlatAlignmentEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYUnit() {
 		return yUnitEEnum;
 	}
@@ -1453,6 +1496,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEReference(yViewEClass, YVIEW__COMMAND_SET);
 		createEReference(yViewEClass, YVIEW__DIALOGS);
 		createEAttribute(yViewEClass, YVIEW__DEVICE_TYPE);
+		createEAttribute(yViewEClass, YVIEW__CONTENT_ALIGNMENT);
 
 		yViewSetEClass = createEClass(YVIEW_SET);
 		createEReference(yViewSetEClass, YVIEW_SET__VIEWS);
@@ -1576,6 +1620,8 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 
 		// Create enums
 		yDeviceTypeEEnum = createEEnum(YDEVICE_TYPE);
+		yAlignmentEEnum = createEEnum(YALIGNMENT);
+		yFlatAlignmentEEnum = createEEnum(YFLAT_ALIGNMENT);
 		yUnitEEnum = createEEnum(YUNIT);
 
 		// Create data types
@@ -1688,6 +1734,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEReference(getYView_CommandSet(), this.getYCommandSet(), null, "commandSet", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_Dialogs(), this.getYDialog(), null, "dialogs", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_DeviceType(), this.getYDeviceType(), "deviceType", "IDE", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYView_ContentAlignment(), this.getYAlignment(), "contentAlignment", "FILL_FILL", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yViewEClass, theBindingPackage.getYBindingSet(), "getOrCreateBindingSet", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1852,6 +1899,30 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEEnum(yDeviceTypeEEnum, YDeviceType.class, "YDeviceType");
 		addEEnumLiteral(yDeviceTypeEEnum, YDeviceType.IDE);
 		addEEnumLiteral(yDeviceTypeEEnum, YDeviceType.MOBILE);
+
+		initEEnum(yAlignmentEEnum, YAlignment.class, "YAlignment");
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_LEFT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_CENTER);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_RIGHT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_FILL);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_LEFT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_CENTER);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_RIGHT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_FILL);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_LEFT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_CENTER);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_RIGHT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_FILL);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_FILL);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_LEFT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_CENTER);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_RIGHT);
+		addEEnumLiteral(yAlignmentEEnum, YAlignment.UNDEFINED);
+
+		initEEnum(yFlatAlignmentEEnum, YFlatAlignment.class, "YFlatAlignment");
+		addEEnumLiteral(yFlatAlignmentEEnum, YFlatAlignment.LEFT);
+		addEEnumLiteral(yFlatAlignmentEEnum, YFlatAlignment.CENTER);
+		addEEnumLiteral(yFlatAlignmentEEnum, YFlatAlignment.RIGHT);
 
 		initEEnum(yUnitEEnum, YUnit.class, "YUnit");
 		addEEnumLiteral(yUnitEEnum, YUnit.PIXEL);

@@ -40,6 +40,8 @@
         eType="#//YDialog" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceType" eType="#//YDeviceType"
         defaultValueLiteral="IDE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentAlignment" eType="#//YAlignment"
+        defaultValueLiteral="FILL_FILL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YDeviceType">
     <eLiterals name="IDE" literal="IDE"/>
@@ -50,6 +52,30 @@
         eType="#//YView" eOpposite="#//YView/root"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="beanSlots" upperBound="-1"
         eType="#//YBeanSlot" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YAlignment">
+    <eLiterals name="BOTTOM_LEFT"/>
+    <eLiterals name="BOTTOM_CENTER" value="1" literal="BOTTOM_CENTER"/>
+    <eLiterals name="BOTTOM_RIGHT" value="2" literal="BOTTOM_RIGHT"/>
+    <eLiterals name="BOTTOM_FILL" value="3" literal="BOTTOM_FILL"/>
+    <eLiterals name="MIDDLE_LEFT" value="4" literal="MIDDLE_LEFT"/>
+    <eLiterals name="MIDDLE_CENTER" value="5" literal="MIDDLE_CENTER"/>
+    <eLiterals name="MIDDLE_RIGHT" value="6" literal="MIDDLE_RIGHT"/>
+    <eLiterals name="MIDDLE_FILL" value="7" literal="MIDDLE_FILL"/>
+    <eLiterals name="TOP_LEFT" value="8"/>
+    <eLiterals name="TOP_CENTER" value="9" literal="TOP_CENTER"/>
+    <eLiterals name="TOP_RIGHT" value="10" literal="TOP_RIGHT"/>
+    <eLiterals name="TOP_FILL" value="11" literal="TOP_FILL"/>
+    <eLiterals name="FILL_FILL" value="12" literal="FILL_FILL"/>
+    <eLiterals name="FILL_LEFT" value="13" literal="FILL_LEFT"/>
+    <eLiterals name="FILL_CENTER" value="14" literal="FILL_CENTER"/>
+    <eLiterals name="FILL_RIGHT" value="15" literal="FILL_RIGHT"/>
+    <eLiterals name="UNDEFINED" value="16" literal="UNDEFINED"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YFlatAlignment">
+    <eLiterals name="LEFT" literal="LEFT"/>
+    <eLiterals name="CENTER" value="1" literal="CENTER"/>
+    <eLiterals name="RIGHT" value="2" literal="RIGHT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YBeanSlot" eSuperTypes="#//YBindable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

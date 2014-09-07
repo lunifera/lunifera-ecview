@@ -28,6 +28,7 @@ import org.lunifera.ecview.core.common.model.binding.YBindingSet;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getCommandSet <em>Command Set</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getDialogs <em>Dialogs</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getDeviceType <em>Device Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getContentAlignment <em>Content Alignment</em>}</li>
  * </ul>
  * </p>
  *
@@ -209,6 +210,36 @@ public interface YView extends YElement, YCssAble, YMarginable,
 	 * @generated
 	 */
 	void setDeviceType(YDeviceType value);
+
+	/**
+	 * Returns the value of the '<em><b>Content Alignment</b></em>' attribute.
+	 * The default value is <code>"FILL_FILL"</code>.
+	 * The literals are from the enumeration {@link org.lunifera.ecview.core.common.model.core.YAlignment}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Content Alignment</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Content Alignment</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.core.YAlignment
+	 * @see #setContentAlignment(YAlignment)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_ContentAlignment()
+	 * @model default="FILL_FILL"
+	 * @generated
+	 */
+	YAlignment getContentAlignment();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YView#getContentAlignment <em>Content Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Content Alignment</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.core.YAlignment
+	 * @see #getContentAlignment()
+	 * @generated
+	 */
+	void setContentAlignment(YAlignment value);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

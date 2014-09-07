@@ -8,10 +8,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.lunifera.ecview.core.common.model.core.YAlignment;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
-import org.lunifera.ecview.core.extension.model.extension.YAlignment;
 import org.lunifera.ecview.core.extension.model.extension.YGridLayoutCellStyle;
 import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
 
@@ -128,7 +128,8 @@ public class YGridLayoutCellStyleImpl extends MinimalEObjectImpl.Container imple
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setAlignment(YAlignment newAlignment) {

@@ -4,9 +4,9 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.validation;
 
+import org.lunifera.ecview.core.common.model.core.YAlignment;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 
-import org.lunifera.ecview.core.extension.model.extension.YAlignment;
 import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
 
 /**

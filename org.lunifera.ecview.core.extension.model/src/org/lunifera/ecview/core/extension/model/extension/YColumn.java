@@ -4,6 +4,7 @@ package org.lunifera.ecview.core.extension.model.extension;
 
 import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.core.YElement;
+import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
@@ -219,7 +220,7 @@ public interface YColumn extends YElement {
 	/**
 	 * Returns the value of the '<em><b>Alignment</b></em>' attribute.
 	 * The default value is <code>"LEFT"</code>.
-	 * The literals are from the enumeration {@link org.lunifera.ecview.core.extension.model.extension.YFlatAlignment}.
+	 * The literals are from the enumeration {@link org.lunifera.ecview.core.common.model.core.YFlatAlignment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Alignment</em>' attribute isn't clear, there
@@ -227,7 +228,7 @@ public interface YColumn extends YElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Alignment</em>' attribute.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YFlatAlignment
+	 * @see org.lunifera.ecview.core.common.model.core.YFlatAlignment
 	 * @see #setAlignment(YFlatAlignment)
 	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYColumn_Alignment()
 	 * @model default="LEFT"

@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.extension.model.extension;
 
 import org.eclipse.emf.ecore.EObject;
+import org.lunifera.ecview.core.common.model.core.YAlignment;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 
 /**
@@ -52,14 +53,14 @@ public interface YFormLayoutCellStyle extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Alignment</b></em>' attribute.
 	 * The default value is <code>"UNDEFINED"</code>.
-	 * The literals are from the enumeration {@link org.lunifera.ecview.core.extension.model.extension.YAlignment}.
+	 * The literals are from the enumeration {@link org.lunifera.ecview.core.common.model.core.YAlignment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The alignment of the ui element relative to its grid cell.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Alignment</em>' attribute.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YAlignment
+	 * @see org.lunifera.ecview.core.common.model.core.YAlignment
 	 * @see #setAlignment(YAlignment)
 	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYFormLayoutCellStyle_Alignment()
 	 * @model default="UNDEFINED"
@@ -72,7 +73,7 @@ public interface YFormLayoutCellStyle extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Alignment</em>' attribute.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YAlignment
+	 * @see org.lunifera.ecview.core.common.model.core.YAlignment
 	 * @see #getAlignment()
 	 * @generated
 	 */

@@ -61,7 +61,9 @@ import org.lunifera.ecview.core.extension.model.extension.YMasterDetail;
 import org.lunifera.ecview.core.extension.model.extension.YNumericField;
 import org.lunifera.ecview.core.extension.model.extension.YNumericSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
+import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
+import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.extension.model.extension.YTab;
 import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
@@ -86,7 +88,9 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IMasterDetailEditpar
 import org.lunifera.ecview.core.ui.core.editparts.extension.INumericFieldEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.INumericSearchFieldEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IOptionsGroupEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IPanelEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IProgressBarEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.ISplitPanelEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ITabEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ITabSheetEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ITableEditpart;
@@ -238,6 +242,10 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(IBooleanSearchFieldEditpart.class)) {
 			result = createNewInstance(BooleanSearchFieldEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(ISplitPanelEditpart.class)) {
+			result = createNewInstance(SplitPanelEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(IPanelEditpart.class)) {
+			result = createNewInstance(PanelEditpart.class);
 		}
 
 		if (result != null) {
@@ -342,6 +350,10 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(NumericSearchFieldEditpart.class);
 		} else if (yElement instanceof YBooleanSearchField) {
 			result = createNewInstance(BooleanSearchFieldEditpart.class);
+		} else if (yElement instanceof YSplitPanel) {
+			result = createNewInstance(SplitPanelEditpart.class);
+		} else if (yElement instanceof YPanel) {
+			result = createNewInstance(PanelEditpart.class);
 		}
 
 		if (result != null) {

@@ -1,14 +1,6 @@
 /**
- * Copyright (c) 2012 Lunifera GmbH (Austria) and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- *    Florian Pirchner - initial API and implementation
  */
-package org.lunifera.ecview.core.extension.model.extension;
+package org.lunifera.ecview.core.common.model.core;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -18,10 +10,10 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>YUi Alignment</b></em>',
+ * A representation of the literals of the enumeration '<em><b>YAlignment</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYAlignment()
+ * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYAlignment()
  * @model
  * @generated
  */
@@ -618,4 +610,4 @@ public enum YAlignment implements Enumerator {
 		return literal;
 	}
 	
-} //YUiAlignment
+} //YAlignment

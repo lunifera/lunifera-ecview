@@ -20,7 +20,6 @@ import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesPackage;
 import org.lunifera.ecview.core.extension.model.datatypes.impl.ExtDatatypesPackageImpl;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
-import org.lunifera.ecview.core.extension.model.extension.YAlignment;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchOption;
 import org.lunifera.ecview.core.extension.model.extension.YBrowser;
@@ -30,7 +29,6 @@ import org.lunifera.ecview.core.extension.model.extension.YColumn;
 import org.lunifera.ecview.core.extension.model.extension.YComboBox;
 import org.lunifera.ecview.core.extension.model.extension.YDateTime;
 import org.lunifera.ecview.core.extension.model.extension.YDecimalField;
-import org.lunifera.ecview.core.extension.model.extension.YFlatAlignment;
 import org.lunifera.ecview.core.extension.model.extension.YFormLayout;
 import org.lunifera.ecview.core.extension.model.extension.YFormLayoutCellStyle;
 import org.lunifera.ecview.core.extension.model.extension.YGridLayout;
@@ -45,10 +43,12 @@ import org.lunifera.ecview.core.extension.model.extension.YMasterDetail;
 import org.lunifera.ecview.core.extension.model.extension.YNumericField;
 import org.lunifera.ecview.core.extension.model.extension.YNumericSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
+import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
 import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
+import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.extension.model.extension.YTab;
 import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
@@ -266,6 +266,20 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	private EClass yNumericSearchFieldEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yPanelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ySplitPanelEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -276,19 +290,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass yOptionsGroupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum yAlignmentEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum yFlatAlignmentEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1474,6 +1475,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYFormLayout_FillHorizontal() {
+		return (EAttribute)yFormLayoutEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1594,6 +1604,96 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getYNumericSearchField_Wildcard() {
 		return (EAttribute)yNumericSearchFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYPanel() {
+		return yPanelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYPanel_Datadescription() {
+		return (EReference)yPanelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYPanel_FirstContent() {
+		return (EReference)yPanelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYPanel_SecondContent() {
+		return (EReference)yPanelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYSplitPanel() {
+		return ySplitPanelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYSplitPanel_Datadescription() {
+		return (EReference)ySplitPanelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYSplitPanel_CellStyles() {
+		return (EReference)ySplitPanelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSplitPanel_FillHorizontal() {
+		return (EAttribute)ySplitPanelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSplitPanel_SplitPosition() {
+		return (EAttribute)ySplitPanelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSplitPanel_Vertical() {
+		return (EAttribute)ySplitPanelEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1784,23 +1884,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EDataType getYButtonClickListener() {
 		return yButtonClickListenerEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getYAlignment() {
-		return yAlignmentEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getYFlatAlignment() {
-		return yFlatAlignmentEEnum;
 	}
 
 	/**
@@ -2038,6 +2121,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yFormLayoutEClass = createEClass(YFORM_LAYOUT);
 		createEReference(yFormLayoutEClass, YFORM_LAYOUT__CELL_STYLES);
 		createEAttribute(yFormLayoutEClass, YFORM_LAYOUT__FILL_VERTICAL);
+		createEAttribute(yFormLayoutEClass, YFORM_LAYOUT__FILL_HORIZONTAL);
 
 		yFormLayoutCellStyleEClass = createEClass(YFORM_LAYOUT_CELL_STYLE);
 		createEReference(yFormLayoutCellStyleEClass, YFORM_LAYOUT_CELL_STYLE__TARGET);
@@ -2057,9 +2141,19 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__VALUE);
 		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__WILDCARD);
 
+		yPanelEClass = createEClass(YPANEL);
+		createEReference(yPanelEClass, YPANEL__DATADESCRIPTION);
+		createEReference(yPanelEClass, YPANEL__FIRST_CONTENT);
+		createEReference(yPanelEClass, YPANEL__SECOND_CONTENT);
+
+		ySplitPanelEClass = createEClass(YSPLIT_PANEL);
+		createEReference(ySplitPanelEClass, YSPLIT_PANEL__DATADESCRIPTION);
+		createEReference(ySplitPanelEClass, YSPLIT_PANEL__CELL_STYLES);
+		createEAttribute(ySplitPanelEClass, YSPLIT_PANEL__FILL_HORIZONTAL);
+		createEAttribute(ySplitPanelEClass, YSPLIT_PANEL__SPLIT_POSITION);
+		createEAttribute(ySplitPanelEClass, YSPLIT_PANEL__VERTICAL);
+
 		// Create enums
-		yAlignmentEEnum = createEEnum(YALIGNMENT);
-		yFlatAlignmentEEnum = createEEnum(YFLAT_ALIGNMENT);
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
 		yBooleanSearchOptionEEnum = createEEnum(YBOOLEAN_SEARCH_OPTION);
 		ySearchWildcardsEEnum = createEEnum(YSEARCH_WILDCARDS);
@@ -2172,6 +2266,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yBooleanSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yNumericSearchFieldEClass.getESuperTypes().add(this.getYInput());
 		yNumericSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
+		yPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
+		ySplitPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yInputEClass, YInput.class, "YInput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2187,7 +2283,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		initEClass(yGridLayoutCellStyleEClass, YGridLayoutCellStyle.class, "YGridLayoutCellStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYGridLayoutCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, YGridLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYGridLayoutCellStyle_Alignment(), this.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YGridLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYGridLayoutCellStyle_Alignment(), theCoreModelPackage.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YGridLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYGridLayoutCellStyle_SpanInfo(), this.getYSpanInfo(), null, "spanInfo", null, 0, 1, YGridLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(yGridLayoutCellStyleEClass, this.getYSpanInfo(), "addSpanInfo", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2205,7 +2301,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		initEClass(yHorizontalLayoutCellStyleEClass, YHorizontalLayoutCellStyle.class, "YHorizontalLayoutCellStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYHorizontalLayoutCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, YHorizontalLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYHorizontalLayoutCellStyle_Alignment(), this.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YHorizontalLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYHorizontalLayoutCellStyle_Alignment(), theCoreModelPackage.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YHorizontalLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yVerticalLayoutEClass, YVerticalLayout.class, "YVerticalLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYVerticalLayout_CellStyles(), this.getYVerticalLayoutCellStyle(), null, "cellStyles", null, 0, -1, YVerticalLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2213,7 +2309,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		initEClass(yVerticalLayoutCellStyleEClass, YVerticalLayoutCellStyle.class, "YVerticalLayoutCellStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYVerticalLayoutCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, YVerticalLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYVerticalLayoutCellStyle_Alignment(), this.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YVerticalLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYVerticalLayoutCellStyle_Alignment(), theCoreModelPackage.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YVerticalLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ySpanInfoEClass, YSpanInfo.class, "YSpanInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYSpanInfo_ColumnFrom(), ecorePackage.getEInt(), "columnFrom", null, 0, 1, YSpanInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2245,7 +2341,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYColumn_Orderable(), ecorePackage.getEBoolean(), "orderable", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Collapsed(), ecorePackage.getEBoolean(), "collapsed", "false", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Collapsible(), ecorePackage.getEBoolean(), "collapsible", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYColumn_Alignment(), this.getYFlatAlignment(), "alignment", "LEFT", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYColumn_Alignment(), theCoreModelPackage.getYFlatAlignment(), "alignment", "LEFT", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_ExpandRatio(), ecorePackage.getEFloat(), "expandRatio", "-1.0f", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yTreeEClass, YTree.class, "YTree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2397,10 +2493,11 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEClass(yFormLayoutEClass, YFormLayout.class, "YFormLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYFormLayout_CellStyles(), this.getYFormLayoutCellStyle(), null, "cellStyles", null, 0, -1, YFormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYFormLayout_FillVertical(), ecorePackage.getEBoolean(), "fillVertical", "true", 0, 1, YFormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYFormLayout_FillHorizontal(), ecorePackage.getEBoolean(), "fillHorizontal", "true", 0, 1, YFormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yFormLayoutCellStyleEClass, YFormLayoutCellStyle.class, "YFormLayoutCellStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYFormLayoutCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, YFormLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYFormLayoutCellStyle_Alignment(), this.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YFormLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYFormLayoutCellStyle_Alignment(), theCoreModelPackage.getYAlignment(), "alignment", "UNDEFINED", 0, 1, YFormLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yTextSearchFieldEClass, YTextSearchField.class, "YTextSearchField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYTextSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2416,31 +2513,25 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYNumericSearchField_Value(), ecorePackage.getEString(), "value", null, 0, 1, YNumericSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYNumericSearchField_Wildcard(), this.getYSearchWildcards(), "wildcard", null, 0, 1, YNumericSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(yPanelEClass, YPanel.class, "YPanel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYPanel_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYPanel_FirstContent(), theCoreModelPackage.getYEmbeddable(), null, "firstContent", null, 0, 1, YPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYPanel_SecondContent(), theCoreModelPackage.getYEmbeddable(), null, "secondContent", null, 0, 1, YPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = addEOperation(yPanelEClass, this.getYHorizontalLayoutCellStyle(), "getCellStyle", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theCoreModelPackage.getYEmbeddable(), "element", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(ySplitPanelEClass, YSplitPanel.class, "YSplitPanel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYSplitPanel_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YSplitPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYSplitPanel_CellStyles(), this.getYHorizontalLayoutCellStyle(), null, "cellStyles", null, 0, -1, YSplitPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSplitPanel_FillHorizontal(), ecorePackage.getEBoolean(), "fillHorizontal", "true", 0, 1, YSplitPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSplitPanel_SplitPosition(), ecorePackage.getEInt(), "splitPosition", "50", 0, 1, YSplitPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSplitPanel_Vertical(), ecorePackage.getEBoolean(), "vertical", "true", 0, 1, YSplitPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = addEOperation(ySplitPanelEClass, this.getYHorizontalLayoutCellStyle(), "getCellStyle", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theCoreModelPackage.getYEmbeddable(), "element", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		// Initialize enums and add enum literals
-		initEEnum(yAlignmentEEnum, YAlignment.class, "YAlignment");
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_LEFT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_CENTER);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_RIGHT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.BOTTOM_FILL);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_LEFT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_CENTER);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_RIGHT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.MIDDLE_FILL);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_LEFT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_CENTER);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_RIGHT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.TOP_FILL);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_FILL);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_LEFT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_CENTER);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.FILL_RIGHT);
-		addEEnumLiteral(yAlignmentEEnum, YAlignment.UNDEFINED);
-
-		initEEnum(yFlatAlignmentEEnum, YFlatAlignment.class, "YFlatAlignment");
-		addEEnumLiteral(yFlatAlignmentEEnum, YFlatAlignment.LEFT);
-		addEEnumLiteral(yFlatAlignmentEEnum, YFlatAlignment.CENTER);
-		addEEnumLiteral(yFlatAlignmentEEnum, YFlatAlignment.RIGHT);
-
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");
 		addEEnumLiteral(ySelectionTypeEEnum, YSelectionType.SINGLE);
 		addEEnumLiteral(ySelectionTypeEEnum, YSelectionType.MULTI);

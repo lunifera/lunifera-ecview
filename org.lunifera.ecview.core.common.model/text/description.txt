@@ -108,6 +108,7 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Reference commandSet : YCommandSet
     Reference dialogs : YDialog<<0..*>>
     Attribute deviceType : YDeviceType
+    Attribute contentAlignment : YAlignment
     Operation getOrCreateBindingSet() : YBindingSet
 
   Class YViewSet -> YElement
@@ -246,6 +247,30 @@ Package core <http://lunifera.org/ecview/v1/core/view>
   Enum YDeviceType
     Literal IDE = 0
     Literal MOBILE = 1
+
+  Enum YAlignment
+    Literal BOTTOM_LEFT = 0
+    Literal BOTTOM_CENTER = 1
+    Literal BOTTOM_RIGHT = 2
+    Literal BOTTOM_FILL = 3
+    Literal MIDDLE_LEFT = 4
+    Literal MIDDLE_CENTER = 5
+    Literal MIDDLE_RIGHT = 6
+    Literal MIDDLE_FILL = 7
+    Literal TOP_LEFT = 8
+    Literal TOP_CENTER = 9
+    Literal TOP_RIGHT = 10
+    Literal TOP_FILL = 11
+    Literal FILL_FILL = 12
+    Literal FILL_LEFT = 13
+    Literal FILL_CENTER = 14
+    Literal FILL_RIGHT = 15
+    Literal UNDEFINED = 16
+
+  Enum YFlatAlignment
+    Literal LEFT = 0
+    Literal CENTER = 1
+    Literal RIGHT = 2
 
   Enum YUnit
     Literal Pixel = 0

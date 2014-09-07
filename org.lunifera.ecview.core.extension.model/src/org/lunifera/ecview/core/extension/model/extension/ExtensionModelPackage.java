@@ -5066,13 +5066,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YFORM_LAYOUT__FILL_VERTICAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Fill Horizontal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFORM_LAYOUT__FILL_HORIZONTAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>YForm Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YFORM_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+	int YFORM_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutCellStyleImpl <em>YForm Layout Cell Style</em>}' class.
@@ -5673,6 +5682,296 @@ public interface ExtensionModelPackage extends EPackage {
 	int YNUMERIC_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl <em>YPanel</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYPanel()
+	 * @generated
+	 */
+	int YPANEL = 34;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__ID = CoreModelPackage.YLAYOUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__CSS_CLASS = CoreModelPackage.YLAYOUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__CSS_ID = CoreModelPackage.YLAYOUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__INITIAL_VISIBLE = CoreModelPackage.YLAYOUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__VISIBILITY_PROCESSOR = CoreModelPackage.YLAYOUT__VISIBILITY_PROCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__ORPHAN_DATATYPES = CoreModelPackage.YLAYOUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__ELEMENTS = CoreModelPackage.YLAYOUT__ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__DATADESCRIPTION = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>First Content</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__FIRST_CONTENT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Second Content</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__SECOND_CONTENT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>YPanel</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YSplitPanelImpl <em>YSplit Panel</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YSplitPanelImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSplitPanel()
+	 * @generated
+	 */
+	int YSPLIT_PANEL = 35;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__ID = CoreModelPackage.YLAYOUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__CSS_CLASS = CoreModelPackage.YLAYOUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__CSS_ID = CoreModelPackage.YLAYOUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__INITIAL_VISIBLE = CoreModelPackage.YLAYOUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__VISIBILITY_PROCESSOR = CoreModelPackage.YLAYOUT__VISIBILITY_PROCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__ORPHAN_DATATYPES = CoreModelPackage.YLAYOUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__ELEMENTS = CoreModelPackage.YLAYOUT__ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__DATADESCRIPTION = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Cell Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__CELL_STYLES = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Fill Horizontal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__FILL_HORIZONTAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Split Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__SPLIT_POSITION = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Vertical</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__VERTICAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>YSplit Panel</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5681,27 +5980,6 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	int YBUTTON_CLICK_LISTENER = 39;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YAlignment <em>YAlignment</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.extension.model.extension.YAlignment
-	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYAlignment()
-	 * @generated
-	 */
-	int YALIGNMENT = 34;
-
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YFlatAlignment <em>YFlat Alignment</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.extension.model.extension.YFlatAlignment
-	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYFlatAlignment()
-	 * @generated
-	 */
-	int YFLAT_ALIGNMENT = 35;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -7160,6 +7438,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYFormLayout_FillVertical();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YFormLayout#isFillHorizontal <em>Fill Horizontal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fill Horizontal</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YFormLayout#isFillHorizontal()
+	 * @see #getYFormLayout()
+	 * @generated
+	 */
+	EAttribute getYFormLayout_FillHorizontal();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YFormLayoutCellStyle <em>YForm Layout Cell Style</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7308,6 +7597,114 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYNumericSearchField_Wildcard();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YPanel <em>YPanel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YPanel</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YPanel
+	 * @generated
+	 */
+	EClass getYPanel();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YPanel#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YPanel#getDatadescription()
+	 * @see #getYPanel()
+	 * @generated
+	 */
+	EReference getYPanel_Datadescription();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YPanel#getFirstContent <em>First Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>First Content</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YPanel#getFirstContent()
+	 * @see #getYPanel()
+	 * @generated
+	 */
+	EReference getYPanel_FirstContent();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YPanel#getSecondContent <em>Second Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Second Content</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YPanel#getSecondContent()
+	 * @see #getYPanel()
+	 * @generated
+	 */
+	EReference getYPanel_SecondContent();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YSplitPanel <em>YSplit Panel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YSplit Panel</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSplitPanel
+	 * @generated
+	 */
+	EClass getYSplitPanel();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YSplitPanel#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSplitPanel#getDatadescription()
+	 * @see #getYSplitPanel()
+	 * @generated
+	 */
+	EReference getYSplitPanel_Datadescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.ecview.core.extension.model.extension.YSplitPanel#getCellStyles <em>Cell Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cell Styles</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSplitPanel#getCellStyles()
+	 * @see #getYSplitPanel()
+	 * @generated
+	 */
+	EReference getYSplitPanel_CellStyles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSplitPanel#isFillHorizontal <em>Fill Horizontal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fill Horizontal</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSplitPanel#isFillHorizontal()
+	 * @see #getYSplitPanel()
+	 * @generated
+	 */
+	EAttribute getYSplitPanel_FillHorizontal();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSplitPanel#getSplitPosition <em>Split Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Split Position</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSplitPanel#getSplitPosition()
+	 * @see #getYSplitPanel()
+	 * @generated
+	 */
+	EAttribute getYSplitPanel_SplitPosition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSplitPanel#isVertical <em>Vertical</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Vertical</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSplitPanel#isVertical()
+	 * @see #getYSplitPanel()
+	 * @generated
+	 */
+	EAttribute getYSplitPanel_Vertical();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
@@ -7559,26 +7956,6 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getYButtonClickListener();
-
-	/**
-	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.extension.model.extension.YAlignment <em>YAlignment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>YAlignment</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YAlignment
-	 * @generated
-	 */
-	EEnum getYAlignment();
-
-	/**
-	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.extension.model.extension.YFlatAlignment <em>YFlat Alignment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>YFlat Alignment</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YFlatAlignment
-	 * @generated
-	 */
-	EEnum getYFlatAlignment();
 
 	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}'.
@@ -8745,6 +9122,14 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YFORM_LAYOUT__FILL_VERTICAL = eINSTANCE.getYFormLayout_FillVertical();
 
 		/**
+		 * The meta object literal for the '<em><b>Fill Horizontal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YFORM_LAYOUT__FILL_HORIZONTAL = eINSTANCE.getYFormLayout_FillHorizontal();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutCellStyleImpl <em>YForm Layout Cell Style</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8863,6 +9248,90 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YNUMERIC_SEARCH_FIELD__WILDCARD = eINSTANCE.getYNumericSearchField_Wildcard();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl <em>YPanel</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYPanel()
+		 * @generated
+		 */
+		EClass YPANEL = eINSTANCE.getYPanel();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YPANEL__DATADESCRIPTION = eINSTANCE.getYPanel_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>First Content</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YPANEL__FIRST_CONTENT = eINSTANCE.getYPanel_FirstContent();
+
+		/**
+		 * The meta object literal for the '<em><b>Second Content</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YPANEL__SECOND_CONTENT = eINSTANCE.getYPanel_SecondContent();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YSplitPanelImpl <em>YSplit Panel</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YSplitPanelImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSplitPanel()
+		 * @generated
+		 */
+		EClass YSPLIT_PANEL = eINSTANCE.getYSplitPanel();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YSPLIT_PANEL__DATADESCRIPTION = eINSTANCE.getYSplitPanel_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Cell Styles</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YSPLIT_PANEL__CELL_STYLES = eINSTANCE.getYSplitPanel_CellStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Fill Horizontal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSPLIT_PANEL__FILL_HORIZONTAL = eINSTANCE.getYSplitPanel_FillHorizontal();
+
+		/**
+		 * The meta object literal for the '<em><b>Split Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSPLIT_PANEL__SPLIT_POSITION = eINSTANCE.getYSplitPanel_SplitPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Vertical</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSPLIT_PANEL__VERTICAL = eINSTANCE.getYSplitPanel_Vertical();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.
@@ -9053,26 +9522,6 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType YBUTTON_CLICK_LISTENER = eINSTANCE.getYButtonClickListener();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.YAlignment <em>YAlignment</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.extension.model.extension.YAlignment
-		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYAlignment()
-		 * @generated
-		 */
-		EEnum YALIGNMENT = eINSTANCE.getYAlignment();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.YFlatAlignment <em>YFlat Alignment</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.extension.model.extension.YFlatAlignment
-		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYFlatAlignment()
-		 * @generated
-		 */
-		EEnum YFLAT_ALIGNMENT = eINSTANCE.getYFlatAlignment();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.

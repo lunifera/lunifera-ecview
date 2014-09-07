@@ -36,7 +36,7 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//YAlignment"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="ecore:EEnum ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAlignment"
         defaultValueLiteral="UNDEFINED">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The alignment of the ui element relative to its grid cell."/>
@@ -61,7 +61,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="YHorizontalLayoutCellStyle">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//YAlignment"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="ecore:EEnum ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAlignment"
         defaultValueLiteral="UNDEFINED">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The alignment of the ui element relative to its grid cell."/>
@@ -81,36 +81,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="YVerticalLayoutCellStyle">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//YAlignment"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="ecore:EEnum ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAlignment"
         defaultValueLiteral="UNDEFINED">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The alignment of the ui element relative to its grid cell."/>
       </eAnnotations>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="YAlignment">
-    <eLiterals name="BOTTOM_LEFT"/>
-    <eLiterals name="BOTTOM_CENTER" value="1" literal="BOTTOM_CENTER"/>
-    <eLiterals name="BOTTOM_RIGHT" value="2" literal="BOTTOM_RIGHT"/>
-    <eLiterals name="BOTTOM_FILL" value="3" literal="BOTTOM_FILL"/>
-    <eLiterals name="MIDDLE_LEFT" value="4" literal="MIDDLE_LEFT"/>
-    <eLiterals name="MIDDLE_CENTER" value="5" literal="MIDDLE_CENTER"/>
-    <eLiterals name="MIDDLE_RIGHT" value="6" literal="MIDDLE_RIGHT"/>
-    <eLiterals name="MIDDLE_FILL" value="7" literal="MIDDLE_FILL"/>
-    <eLiterals name="TOP_LEFT" value="8"/>
-    <eLiterals name="TOP_CENTER" value="9" literal="TOP_CENTER"/>
-    <eLiterals name="TOP_RIGHT" value="10" literal="TOP_RIGHT"/>
-    <eLiterals name="TOP_FILL" value="11" literal="TOP_FILL"/>
-    <eLiterals name="FILL_FILL" value="12" literal="FILL_FILL"/>
-    <eLiterals name="FILL_LEFT" value="13" literal="FILL_LEFT"/>
-    <eLiterals name="FILL_CENTER" value="14" literal="FILL_CENTER"/>
-    <eLiterals name="FILL_RIGHT" value="15" literal="FILL_RIGHT"/>
-    <eLiterals name="UNDEFINED" value="16" literal="UNDEFINED"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="YFlatAlignment">
-    <eLiterals name="LEFT" literal="LEFT"/>
-    <eLiterals name="CENTER" value="1" literal="CENTER"/>
-    <eLiterals name="RIGHT" value="2" literal="RIGHT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YSpanInfo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
@@ -171,7 +147,7 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="collapsible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//YFlatAlignment"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="ecore:EEnum ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YFlatAlignment"
         defaultValueLiteral="LEFT"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expandRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="-1.0f"/>
@@ -377,11 +353,17 @@
         <details key="documentation" value="If false, then the width of all elements contained in the grid layout will be decreased to their preferred height or their miminum height. If no alignment is defined for a child, this setting will become its default.&#xA;Eg if child has not a alignment, the vertical alignment will become FILL if fillVertical is true. Otherwise the ui-kit default will be used as the vertical alignment."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillHorizontal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If false, then the width of all elements contained in the grid layout will be decreased to their preferred width or their miminum width. If no alignment is defined for a child, this setting will become its default.&#xA;Eg if child has not a alignment, the horizontal alignment will become FILL if fillHorizontal is true. Otherwise the ui-kit default will be used as the horizontal alignment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YFormLayoutCellStyle">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//YAlignment"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="ecore:EEnum ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAlignment"
         defaultValueLiteral="UNDEFINED">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The alignment of the ui element relative to its grid cell."/>
@@ -420,5 +402,31 @@
     <eLiterals name="EQ" value="4" literal="EQ"/>
     <eLiterals name="NE" value="5" literal="NE"/>
     <eLiterals name="ANY" value="6" literal="ANY"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YPanel" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout">
+    <eOperations name="getCellStyle" eType="#//YHorizontalLayoutCellStyle">
+      <eParameters name="element" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="firstContent" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="secondContent" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YSplitPanel" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout">
+    <eOperations name="getCellStyle" eType="#//YHorizontalLayoutCellStyle">
+      <eParameters name="element" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cellStyles" upperBound="-1"
+        eType="#//YHorizontalLayoutCellStyle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillHorizontal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If false, then the width of all elements contained in the grid layout will be decreased to their preferred width or their miminum width. If no alignment is defined for a child, this setting will become its default.&#xA;Eg if child has not a alignment, the horizontal alignment will become FILL if fillHorizontal is true. Otherwise the ui-kit default will be used as the horizontal alignment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="splitPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="50"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vertical" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
 </ecore:EPackage>
