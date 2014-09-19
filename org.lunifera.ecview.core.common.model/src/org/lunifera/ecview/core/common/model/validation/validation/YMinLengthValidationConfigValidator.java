@@ -15,4 +15,6 @@ public interface YMinLengthValidationConfigValidator {
 	boolean validate();
 
 	boolean validateMinLength(int value);
+
+	boolean validateErrorCode(String value);
 }

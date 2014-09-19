@@ -103,13 +103,31 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YTEXT_DATATYPE__VALIDATORS = DatatypesPackage.YDATATYPE__VALIDATORS;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_DATATYPE__ERROR_CODE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_DATATYPE__MAX_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
+	int YTEXT_DATATYPE__MAX_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Min Length</b></em>' attribute.
@@ -118,7 +136,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_DATATYPE__MIN_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+	int YTEXT_DATATYPE__MIN_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Reg Expression</b></em>' attribute.
@@ -127,7 +145,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_DATATYPE__REG_EXPRESSION = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 2;
+	int YTEXT_DATATYPE__REG_EXPRESSION = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>YText Datatype</em>' class.
@@ -136,7 +154,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 3;
+	int YTEXT_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextAreaDatatypeImpl <em>YText Area Datatype</em>}' class.
@@ -185,13 +203,31 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YTEXT_AREA_DATATYPE__VALIDATORS = DatatypesPackage.YDATATYPE__VALIDATORS;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_AREA_DATATYPE__ERROR_CODE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_AREA_DATATYPE__DEFAULT_ERROR_MESSAGE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Min Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_AREA_DATATYPE__MIN_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
+	int YTEXT_AREA_DATATYPE__MIN_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
@@ -200,7 +236,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_AREA_DATATYPE__MAX_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+	int YTEXT_AREA_DATATYPE__MAX_LENGTH = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Reg Expression</b></em>' attribute.
@@ -209,7 +245,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_AREA_DATATYPE__REG_EXPRESSION = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 2;
+	int YTEXT_AREA_DATATYPE__REG_EXPRESSION = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>YText Area Datatype</em>' class.
@@ -218,7 +254,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_AREA_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 3;
+	int YTEXT_AREA_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl <em>YNumeric Datatype</em>}' class.
@@ -267,13 +303,31 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YNUMERIC_DATATYPE__VALIDATORS = DatatypesPackage.YDATATYPE__VALIDATORS;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_DATATYPE__ERROR_CODE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Reg Expression</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YNUMERIC_DATATYPE__REG_EXPRESSION = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
+	int YNUMERIC_DATATYPE__REG_EXPRESSION = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Grouping</b></em>' attribute.
@@ -282,7 +336,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YNUMERIC_DATATYPE__GROUPING = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+	int YNUMERIC_DATATYPE__GROUPING = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Mark Negative</b></em>' attribute.
@@ -291,7 +345,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YNUMERIC_DATATYPE__MARK_NEGATIVE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 2;
+	int YNUMERIC_DATATYPE__MARK_NEGATIVE = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>YNumeric Datatype</em>' class.
@@ -300,7 +354,7 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YNUMERIC_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 3;
+	int YNUMERIC_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YDecimalDatatypeImpl <em>YDecimal Datatype</em>}' class.
@@ -347,6 +401,24 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDECIMAL_DATATYPE__VALIDATORS = YNUMERIC_DATATYPE__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDECIMAL_DATATYPE__ERROR_CODE = YNUMERIC_DATATYPE__ERROR_CODE;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDECIMAL_DATATYPE__DEFAULT_ERROR_MESSAGE = YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Reg Expression</b></em>' attribute.
@@ -780,13 +852,22 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YDATE_TIME_DATATYPE__FORMAT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Resolution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDATE_TIME_DATATYPE__RESOLUTION = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>YDate Time Datatype</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YDATE_TIME_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 1;
+	int YDATE_TIME_DATATYPE_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTreeDatatypeImpl <em>YTree Datatype</em>}' class.
@@ -1020,6 +1101,17 @@ public interface ExtDatatypesPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution <em>YDate Time Resolution</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution
+	 * @see org.lunifera.ecview.core.extension.model.datatypes.impl.ExtDatatypesPackageImpl#getYDateTimeResolution()
+	 * @generated
+	 */
+	int YDATE_TIME_RESOLUTION = 16;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype <em>YText Datatype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1174,6 +1266,17 @@ public interface ExtDatatypesPackage extends EPackage {
 	EAttribute getYDateTimeDatatype_Format();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.datatypes.YDateTimeDatatype#getResolution <em>Resolution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Resolution</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.datatypes.YDateTimeDatatype#getResolution()
+	 * @see #getYDateTimeDatatype()
+	 * @generated
+	 */
+	EAttribute getYDateTimeDatatype_Resolution();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.datatypes.YTreeDatatype <em>YTree Datatype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1222,6 +1325,16 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getYDateTimeFormat();
+
+	/**
+	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution <em>YDate Time Resolution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YDate Time Resolution</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution
+	 * @generated
+	 */
+	EEnum getYDateTimeResolution();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1388,6 +1501,14 @@ public interface ExtDatatypesPackage extends EPackage {
 		EAttribute YDATE_TIME_DATATYPE__FORMAT = eINSTANCE.getYDateTimeDatatype_Format();
 
 		/**
+		 * The meta object literal for the '<em><b>Resolution</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YDATE_TIME_DATATYPE__RESOLUTION = eINSTANCE.getYDateTimeDatatype_Resolution();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTreeDatatypeImpl <em>YTree Datatype</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1436,6 +1557,16 @@ public interface ExtDatatypesPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum YDATE_TIME_FORMAT = eINSTANCE.getYDateTimeFormat();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution <em>YDate Time Resolution</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution
+		 * @see org.lunifera.ecview.core.extension.model.datatypes.impl.ExtDatatypesPackageImpl#getYDateTimeResolution()
+		 * @generated
+		 */
+		EEnum YDATE_TIME_RESOLUTION = eINSTANCE.getYDateTimeResolution();
 
 	}
 

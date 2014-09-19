@@ -35,6 +35,8 @@ import org.lunifera.ecview.core.extension.model.datatypes.YNumericDatatype;
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#getValidators <em>Validators</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#getErrorCode <em>Error Code</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#getDefaultErrorMessage <em>Default Error Message</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#getRegExpression <em>Reg Expression</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#isGrouping <em>Grouping</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YNumericDatatypeImpl#isMarkNegative <em>Mark Negative</em>}</li>
@@ -113,6 +115,46 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected EList<YValidator> validators;
+
+	/**
+	 * The default value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ERROR_CODE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String errorCode = ERROR_CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultErrorMessage() <em>Default Error Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultErrorMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ERROR_MESSAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDefaultErrorMessage() <em>Default Error Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultErrorMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultErrorMessage = DEFAULT_ERROR_MESSAGE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRegExpression() <em>Reg Expression</em>}' attribute.
@@ -273,6 +315,48 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setErrorCode(String newErrorCode) {
+		String oldErrorCode = errorCode;
+		errorCode = newErrorCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtDatatypesPackage.YNUMERIC_DATATYPE__ERROR_CODE, oldErrorCode, errorCode));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefaultErrorMessage() {
+		return defaultErrorMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefaultErrorMessage(String newDefaultErrorMessage) {
+		String oldDefaultErrorMessage = defaultErrorMessage;
+		defaultErrorMessage = newDefaultErrorMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtDatatypesPackage.YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE, oldDefaultErrorMessage, defaultErrorMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getRegExpression() {
 		return regExpression;
 	}
@@ -347,6 +431,10 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 				return getDescription();
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__VALIDATORS:
 				return getValidators();
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__ERROR_CODE:
+				return getErrorCode();
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				return getDefaultErrorMessage();
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__REG_EXPRESSION:
 				return getRegExpression();
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__GROUPING:
@@ -378,6 +466,12 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__VALIDATORS:
 				getValidators().clear();
 				getValidators().addAll((Collection<? extends YValidator>)newValue);
+				return;
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__ERROR_CODE:
+				setErrorCode((String)newValue);
+				return;
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				setDefaultErrorMessage((String)newValue);
 				return;
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__REG_EXPRESSION:
 				setRegExpression((String)newValue);
@@ -412,6 +506,12 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__VALIDATORS:
 				getValidators().clear();
 				return;
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__ERROR_CODE:
+				setErrorCode(ERROR_CODE_EDEFAULT);
+				return;
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				setDefaultErrorMessage(DEFAULT_ERROR_MESSAGE_EDEFAULT);
+				return;
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__REG_EXPRESSION:
 				setRegExpression(REG_EXPRESSION_EDEFAULT);
 				return;
@@ -441,6 +541,10 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__VALIDATORS:
 				return validators != null && !validators.isEmpty();
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__ERROR_CODE:
+				return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT.equals(errorCode);
+			case ExtDatatypesPackage.YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				return DEFAULT_ERROR_MESSAGE_EDEFAULT == null ? defaultErrorMessage != null : !DEFAULT_ERROR_MESSAGE_EDEFAULT.equals(defaultErrorMessage);
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__REG_EXPRESSION:
 				return REG_EXPRESSION_EDEFAULT == null ? regExpression != null : !REG_EXPRESSION_EDEFAULT.equals(regExpression);
 			case ExtDatatypesPackage.YNUMERIC_DATATYPE__GROUPING:
@@ -460,6 +564,8 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == YValidationConfig.class) {
 			switch (derivedFeatureID) {
+				case ExtDatatypesPackage.YNUMERIC_DATATYPE__ERROR_CODE: return ValidationPackage.YVALIDATION_CONFIG__ERROR_CODE;
+				case ExtDatatypesPackage.YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE: return ValidationPackage.YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE;
 				default: return -1;
 			}
 		}
@@ -481,6 +587,8 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == YValidationConfig.class) {
 			switch (baseFeatureID) {
+				case ValidationPackage.YVALIDATION_CONFIG__ERROR_CODE: return ExtDatatypesPackage.YNUMERIC_DATATYPE__ERROR_CODE;
+				case ValidationPackage.YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE: return ExtDatatypesPackage.YNUMERIC_DATATYPE__DEFAULT_ERROR_MESSAGE;
 				default: return -1;
 			}
 		}
@@ -509,6 +617,10 @@ public class YNumericDatatypeImpl extends MinimalEObjectImpl.Container implement
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", errorCode: ");
+		result.append(errorCode);
+		result.append(", defaultErrorMessage: ");
+		result.append(defaultErrorMessage);
 		result.append(", regExpression: ");
 		result.append(regExpression);
 		result.append(", grouping: ");

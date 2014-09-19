@@ -10,20 +10,67 @@
  */
 package org.lunifera.ecview.core.common.validation;
 
+import java.util.Locale;
+
+import org.lunifera.ecview.core.common.context.II18nService;
+import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
+
 /**
  * A validator that returns true by default, if the given value is not a String.
  */
-public abstract class StringValidator implements IValidator {
+public abstract class StringValidator extends AbstractDisposable implements
+		IValidator {
 
-	protected final String message;
+	protected final String errorCode;
+	protected Locale locale;
+	protected II18nService i18nService;
 
-	public StringValidator() {
-		this.message = null;
+	public StringValidator(String errorCode) {
+		this.errorCode = errorCode;
 	}
 
-	public StringValidator(String message) {
-		this.message = message;
+	/**
+	 * Returns the raw message containing replacement patterns.
+	 */
+	protected String getMessage() {
+		String result = null;
+		if (i18nService != null) {
+			if (isStringValid(errorCode)) {
+				result = i18nService.getValue(errorCode, locale);
+			}
+			if (!isStringValid(result)) {
+				result = getDefaultMessage();
+			}
+			if (!isStringValid(result)) {
+				result = i18nService.getValue(getDefaultErrorCode(), locale);
+			}
+			if (!isStringValid(result)) {
+				result = "Error message missing for " + getDefaultErrorCode();
+			}
+		} else {
+			result = getDefaultMessage();
+		}
+
+		return result;
 	}
+
+	protected boolean isStringValid(String result) {
+		return result != null && !result.equals("");
+	}
+
+	/**
+	 * Returns the default error code.
+	 * 
+	 * @return
+	 */
+	protected abstract String getDefaultErrorCode();
+
+	/**
+	 * Returns the default message.
+	 * 
+	 * @return
+	 */
+	protected abstract String getDefaultMessage();
 
 	@Override
 	public Class<?> getType() {
@@ -46,5 +93,20 @@ public abstract class StringValidator implements IValidator {
 	 * @return IStatus - the validation status.
 	 */
 	protected abstract IStatus doValidate(String value);
+
+	@Override
+	public void setLocale(Locale locale) {
+		this.locale = locale;
+	}
+
+	@Override
+	public void setI18nService(II18nService i18nService) {
+		this.i18nService = i18nService;
+	}
+
+	@Override
+	protected void internalDispose() {
+
+	}
 
 }

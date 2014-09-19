@@ -140,13 +140,31 @@ public interface ValidationPackage extends EPackage {
 	int YMIN_LENGTH_VALIDATOR__TYPE = YVALIDATOR__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMIN_LENGTH_VALIDATOR__ERROR_CODE = YVALIDATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMIN_LENGTH_VALIDATOR__DEFAULT_ERROR_MESSAGE = YVALIDATOR_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Min Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YMIN_LENGTH_VALIDATOR__MIN_LENGTH = YVALIDATOR_FEATURE_COUNT + 0;
+	int YMIN_LENGTH_VALIDATOR__MIN_LENGTH = YVALIDATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>YMin Length Validator</em>' class.
@@ -155,7 +173,7 @@ public interface ValidationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YMIN_LENGTH_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 1;
+	int YMIN_LENGTH_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.validation.impl.YMaxLengthValidatorImpl <em>YMax Length Validator</em>}' class.
@@ -195,13 +213,31 @@ public interface ValidationPackage extends EPackage {
 	int YMAX_LENGTH_VALIDATOR__TYPE = YVALIDATOR__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMAX_LENGTH_VALIDATOR__ERROR_CODE = YVALIDATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMAX_LENGTH_VALIDATOR__DEFAULT_ERROR_MESSAGE = YVALIDATOR_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YMAX_LENGTH_VALIDATOR__MAX_LENGTH = YVALIDATOR_FEATURE_COUNT + 0;
+	int YMAX_LENGTH_VALIDATOR__MAX_LENGTH = YVALIDATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>YMax Length Validator</em>' class.
@@ -210,7 +246,7 @@ public interface ValidationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YMAX_LENGTH_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 1;
+	int YMAX_LENGTH_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.validation.impl.YRegexpValidatorImpl <em>YRegexp Validator</em>}' class.
@@ -250,13 +286,31 @@ public interface ValidationPackage extends EPackage {
 	int YREGEXP_VALIDATOR__TYPE = YVALIDATOR__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREGEXP_VALIDATOR__ERROR_CODE = YVALIDATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREGEXP_VALIDATOR__DEFAULT_ERROR_MESSAGE = YVALIDATOR_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Reg Expression</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YREGEXP_VALIDATOR__REG_EXPRESSION = YVALIDATOR_FEATURE_COUNT + 0;
+	int YREGEXP_VALIDATOR__REG_EXPRESSION = YVALIDATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>YRegexp Validator</em>' class.
@@ -265,7 +319,7 @@ public interface ValidationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YREGEXP_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 1;
+	int YREGEXP_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.validation.impl.YClassDelegateValidatorImpl <em>YClass Delegate Validator</em>}' class.
@@ -305,13 +359,31 @@ public interface ValidationPackage extends EPackage {
 	int YCLASS_DELEGATE_VALIDATOR__TYPE = YVALIDATOR__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCLASS_DELEGATE_VALIDATOR__ERROR_CODE = YVALIDATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE = YVALIDATOR_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YCLASS_DELEGATE_VALIDATOR__CLASS_NAME = YVALIDATOR_FEATURE_COUNT + 0;
+	int YCLASS_DELEGATE_VALIDATOR__CLASS_NAME = YVALIDATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>YClass Delegate Validator</em>' class.
@@ -320,7 +392,7 @@ public interface ValidationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCLASS_DELEGATE_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 1;
+	int YCLASS_DELEGATE_VALIDATOR_FEATURE_COUNT = YVALIDATOR_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.validation.YValidationConfig <em>YValidation Config</em>}' class.
@@ -333,13 +405,31 @@ public interface ValidationPackage extends EPackage {
 	int YVALIDATION_CONFIG = 5;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVALIDATION_CONFIG__ERROR_CODE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE = 1;
+
+	/**
 	 * The number of structural features of the '<em>YValidation Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVALIDATION_CONFIG_FEATURE_COUNT = 0;
+	int YVALIDATION_CONFIG_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.validation.YMinLengthValidationConfig <em>YMin Length Validation Config</em>}' class.
@@ -350,6 +440,24 @@ public interface ValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int YMIN_LENGTH_VALIDATION_CONFIG = 6;
+
+	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMIN_LENGTH_VALIDATION_CONFIG__ERROR_CODE = YVALIDATION_CONFIG__ERROR_CODE;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMIN_LENGTH_VALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE = YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Min Length</b></em>' attribute.
@@ -380,6 +488,24 @@ public interface ValidationPackage extends EPackage {
 	int YMAX_LENGTH_VALIDATION_CONFIG = 7;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMAX_LENGTH_VALIDATION_CONFIG__ERROR_CODE = YVALIDATION_CONFIG__ERROR_CODE;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMAX_LENGTH_VALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE = YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -408,6 +534,24 @@ public interface ValidationPackage extends EPackage {
 	int YREGEXP_VALIDATION_CONFIG = 8;
 
 	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREGEXP_VALIDATION_CONFIG__ERROR_CODE = YVALIDATION_CONFIG__ERROR_CODE;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREGEXP_VALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE = YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Reg Expression</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -434,6 +578,24 @@ public interface ValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int YCLASS_DELEGATE_VALIDATION_CONFIG = 9;
+
+	/**
+	 * The feature id for the '<em><b>Error Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCLASS_DELEGATE_VALIDATION_CONFIG__ERROR_CODE = YVALIDATION_CONFIG__ERROR_CODE;
+
+	/**
+	 * The feature id for the '<em><b>Default Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCLASS_DELEGATE_VALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE = YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Class Name</b></em>' attribute.
@@ -523,6 +685,28 @@ public interface ValidationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getYValidationConfig();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.validation.YValidationConfig#getErrorCode <em>Error Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Error Code</em>'.
+	 * @see org.lunifera.ecview.core.common.model.validation.YValidationConfig#getErrorCode()
+	 * @see #getYValidationConfig()
+	 * @generated
+	 */
+	EAttribute getYValidationConfig_ErrorCode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.validation.YValidationConfig#getDefaultErrorMessage <em>Default Error Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Error Message</em>'.
+	 * @see org.lunifera.ecview.core.common.model.validation.YValidationConfig#getDefaultErrorMessage()
+	 * @see #getYValidationConfig()
+	 * @generated
+	 */
+	EAttribute getYValidationConfig_DefaultErrorMessage();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.validation.YMinLengthValidationConfig <em>YMin Length Validation Config</em>}'.
@@ -698,6 +882,22 @@ public interface ValidationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass YVALIDATION_CONFIG = eINSTANCE.getYValidationConfig();
+
+		/**
+		 * The meta object literal for the '<em><b>Error Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVALIDATION_CONFIG__ERROR_CODE = eINSTANCE.getYValidationConfig_ErrorCode();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Error Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE = eINSTANCE.getYValidationConfig_DefaultErrorMessage();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.validation.YMinLengthValidationConfig <em>YMin Length Validation Config</em>}' class.

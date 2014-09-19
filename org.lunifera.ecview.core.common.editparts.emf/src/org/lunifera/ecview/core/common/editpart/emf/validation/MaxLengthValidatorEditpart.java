@@ -10,6 +10,8 @@
  */
 package org.lunifera.ecview.core.common.editpart.emf.validation;
 
+import org.lunifera.ecview.core.common.context.II18nService;
+import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.editpart.emf.validation.validator.MaxLengthValidator;
 import org.lunifera.ecview.core.common.editpart.validation.IMaxLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
@@ -37,7 +39,12 @@ public class MaxLengthValidatorEditpart extends
 
 	@Override
 	protected IValidator createValidator() {
-		return new MaxLengthValidator(getModel());
+		MaxLengthValidator validator = new MaxLengthValidator(getModel());
+		IViewContext context = getViewContext(getModel());
+		validator.setI18nService((II18nService) context
+				.getService(II18nService.class.getName()));
+		validator.setLocale(context.getLocale());
+		return validator;
 	}
 
 	@Override

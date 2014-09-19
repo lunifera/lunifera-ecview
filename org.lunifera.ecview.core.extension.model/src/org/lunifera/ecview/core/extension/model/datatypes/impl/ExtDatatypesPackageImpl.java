@@ -19,6 +19,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YCheckBoxDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YComboBoxDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeFormat;
+import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution;
 import org.lunifera.ecview.core.extension.model.datatypes.YDecimalDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
 import org.lunifera.ecview.core.extension.model.datatypes.YMasterDetailDatatype;
@@ -135,6 +136,13 @@ public class ExtDatatypesPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EEnum yDateTimeFormatEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum yDateTimeResolutionEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -332,6 +340,15 @@ public class ExtDatatypesPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYDateTimeDatatype_Resolution() {
+		return (EAttribute)yDateTimeDatatypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -369,6 +386,15 @@ public class ExtDatatypesPackageImpl extends EPackageImpl implements
 	 */
 	public EEnum getYDateTimeFormat() {
 		return yDateTimeFormatEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getYDateTimeResolution() {
+		return yDateTimeResolutionEEnum;
 	}
 
 	/**
@@ -422,6 +448,7 @@ public class ExtDatatypesPackageImpl extends EPackageImpl implements
 
 		yDateTimeDatatypeEClass = createEClass(YDATE_TIME_DATATYPE);
 		createEAttribute(yDateTimeDatatypeEClass, YDATE_TIME_DATATYPE__FORMAT);
+		createEAttribute(yDateTimeDatatypeEClass, YDATE_TIME_DATATYPE__RESOLUTION);
 
 		yTreeDatatypeEClass = createEClass(YTREE_DATATYPE);
 
@@ -433,6 +460,7 @@ public class ExtDatatypesPackageImpl extends EPackageImpl implements
 
 		// Create enums
 		yDateTimeFormatEEnum = createEEnum(YDATE_TIME_FORMAT);
+		yDateTimeResolutionEEnum = createEEnum(YDATE_TIME_RESOLUTION);
 	}
 
 	/**
@@ -516,6 +544,7 @@ public class ExtDatatypesPackageImpl extends EPackageImpl implements
 
 		initEClass(yDateTimeDatatypeEClass, YDateTimeDatatype.class, "YDateTimeDatatype", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYDateTimeDatatype_Format(), this.getYDateTimeFormat(), "format", "DATE", 0, 1, YDateTimeDatatype.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYDateTimeDatatype_Resolution(), this.getYDateTimeResolution(), "resolution", "UNDEFINED", 0, 1, YDateTimeDatatype.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yTreeDatatypeEClass, YTreeDatatype.class, "YTreeDatatype", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -530,6 +559,15 @@ public class ExtDatatypesPackageImpl extends EPackageImpl implements
 		addEEnumLiteral(yDateTimeFormatEEnum, YDateTimeFormat.DATE);
 		addEEnumLiteral(yDateTimeFormatEEnum, YDateTimeFormat.TIME);
 		addEEnumLiteral(yDateTimeFormatEEnum, YDateTimeFormat.DATE_TIME);
+
+		initEEnum(yDateTimeResolutionEEnum, YDateTimeResolution.class, "YDateTimeResolution");
+		addEEnumLiteral(yDateTimeResolutionEEnum, YDateTimeResolution.SECOND);
+		addEEnumLiteral(yDateTimeResolutionEEnum, YDateTimeResolution.MINUTE);
+		addEEnumLiteral(yDateTimeResolutionEEnum, YDateTimeResolution.HOUR);
+		addEEnumLiteral(yDateTimeResolutionEEnum, YDateTimeResolution.DAY);
+		addEEnumLiteral(yDateTimeResolutionEEnum, YDateTimeResolution.MONTH);
+		addEEnumLiteral(yDateTimeResolutionEEnum, YDateTimeResolution.YEAR);
+		addEEnumLiteral(yDateTimeResolutionEEnum, YDateTimeResolution.UNDEFINED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -14,4 +14,8 @@ package org.lunifera.ecview.core.common.model.validation.validation;
 public interface YValidationConfigValidator {
 	boolean validate();
 
+	boolean validateErrorCode(String value);
+
+	boolean validateDefaultErrorMessage(String value);
+
 }

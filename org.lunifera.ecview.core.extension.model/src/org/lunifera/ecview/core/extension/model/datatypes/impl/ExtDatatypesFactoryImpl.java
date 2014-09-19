@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.lunifera.ecview.core.extension.model.datatypes.*;
 import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesFactory;
 import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesPackage;
 import org.lunifera.ecview.core.extension.model.datatypes.YBrowserDatatype;
@@ -101,6 +102,8 @@ public class ExtDatatypesFactoryImpl extends EFactoryImpl implements ExtDatatype
 		switch (eDataType.getClassifierID()) {
 			case ExtDatatypesPackage.YDATE_TIME_FORMAT:
 				return createYDateTimeFormatFromString(eDataType, initialValue);
+			case ExtDatatypesPackage.YDATE_TIME_RESOLUTION:
+				return createYDateTimeResolutionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -116,6 +119,8 @@ public class ExtDatatypesFactoryImpl extends EFactoryImpl implements ExtDatatype
 		switch (eDataType.getClassifierID()) {
 			case ExtDatatypesPackage.YDATE_TIME_FORMAT:
 				return convertYDateTimeFormatToString(eDataType, instanceValue);
+			case ExtDatatypesPackage.YDATE_TIME_RESOLUTION:
+				return convertYDateTimeResolutionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -288,6 +293,26 @@ public class ExtDatatypesFactoryImpl extends EFactoryImpl implements ExtDatatype
 	 * @generated
 	 */
 	public String convertYDateTimeFormatToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDateTimeResolution createYDateTimeResolutionFromString(EDataType eDataType, String initialValue) {
+		YDateTimeResolution result = YDateTimeResolution.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYDateTimeResolutionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -248,6 +248,24 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYValidationConfig_ErrorCode() {
+		return (EAttribute)yValidationConfigEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYValidationConfig_DefaultErrorMessage() {
+		return (EAttribute)yValidationConfigEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYMinLengthValidationConfig() {
 		return yMinLengthValidationConfigEClass;
 	}
@@ -355,6 +373,8 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 		yClassDelegateValidatorEClass = createEClass(YCLASS_DELEGATE_VALIDATOR);
 
 		yValidationConfigEClass = createEClass(YVALIDATION_CONFIG);
+		createEAttribute(yValidationConfigEClass, YVALIDATION_CONFIG__ERROR_CODE);
+		createEAttribute(yValidationConfigEClass, YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE);
 
 		yMinLengthValidationConfigEClass = createEClass(YMIN_LENGTH_VALIDATION_CONFIG);
 		createEAttribute(yMinLengthValidationConfigEClass, YMIN_LENGTH_VALIDATION_CONFIG__MIN_LENGTH);
@@ -431,6 +451,8 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 		initEClass(yClassDelegateValidatorEClass, YClassDelegateValidator.class, "YClassDelegateValidator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(yValidationConfigEClass, YValidationConfig.class, "YValidationConfig", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYValidationConfig_ErrorCode(), ecorePackage.getEString(), "errorCode", null, 0, 1, YValidationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYValidationConfig_DefaultErrorMessage(), ecorePackage.getEString(), "defaultErrorMessage", null, 0, 1, YValidationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yMinLengthValidationConfigEClass, YMinLengthValidationConfig.class, "YMinLengthValidationConfig", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYMinLengthValidationConfig_MinLength(), ecorePackage.getEInt(), "minLength", null, 1, 1, YMinLengthValidationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

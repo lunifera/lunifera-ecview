@@ -36,6 +36,7 @@ Package datatypes <http://lunifera.org/ecview/v1/extension/datatypes>
 
   Class YDateTimeDatatype -> YDatatype
     Attribute format : YDateTimeFormat
+    Attribute resolution : YDateTimeResolution
 
   Class YTreeDatatype -> YDatatype
 
@@ -49,6 +50,15 @@ Package datatypes <http://lunifera.org/ecview/v1/extension/datatypes>
     Literal DATE = 0
     Literal TIME = 1
     Literal DATE_TIME = 2
+
+  Enum YDateTimeResolution
+    Literal SECOND = 0
+    Literal MINUTE = 1
+    Literal HOUR = 2
+    Literal DAY = 3
+    Literal MONTH = 4
+    Literal YEAR = 5
+    Literal UNDEFINED = 6
 
 Package extension <http://lunifera.org/ecview/v1/extension/view>
 

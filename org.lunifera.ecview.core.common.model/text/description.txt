@@ -294,6 +294,8 @@ Package validation <http://lunifera.org/ecview/v1/core/validation>
   Class YClassDelegateValidator -> YValidator, YClassDelegateValidationConfig
 
   Class YValidationConfig
+    Attribute errorCode : EString
+    Attribute defaultErrorMessage : EString
 
   Class YMinLengthValidationConfig -> YValidationConfig
     Attribute minLength : EInt<<1..1>>

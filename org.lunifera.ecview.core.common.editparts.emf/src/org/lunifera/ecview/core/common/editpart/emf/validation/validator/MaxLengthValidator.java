@@ -12,29 +12,31 @@ package org.lunifera.ecview.core.common.editpart.emf.validation.validator;
 
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidationConfig;
 import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.IValidationCodes;
 import org.lunifera.ecview.core.common.validation.Status;
 import org.lunifera.ecview.core.common.validation.StringValidator;
 
 public class MaxLengthValidator extends StringValidator {
 
+	public static final String DEFAULT_ERROR_CODE = "org.lunifera.ecview.core.common.editpart.emf.validation.validator.MaxLengthValidator";
+	private static final String DEF_MESSAGE = "Maximum length is ${maxLength}. Length of \"${value}\" is ${currentLength}!";
+	private String defaultMessage = DEF_MESSAGE;
+	
 	private int maxLength;
 
 	public MaxLengthValidator(YMaxLengthValidationConfig yValidator) {
-		this(yValidator, null);
-	}
+		super(yValidator.getErrorCode());
+		if (isStringValid(yValidator.getDefaultErrorMessage())) {
+			defaultMessage = yValidator.getDefaultErrorMessage();
+		}
 
-	public MaxLengthValidator(YMaxLengthValidationConfig yValidator,
-			String message) {
-		super(message);
 		updateParameter(yValidator);
 	}
 
 	@Override
 	public IStatus doValidate(String value) {
 		if (value.trim().length() > maxLength) {
-			return Status.createStatus(IValidationCodes.STRING_MAX_LENGTH,
-					getClass(), IStatus.Severity.ERROR, createMessage(value));
+			return Status.createStatus(errorCode, getClass(),
+					IStatus.Severity.ERROR, createMessage(value));
 		}
 		return IStatus.OK;
 	}
@@ -46,15 +48,40 @@ public class MaxLengthValidator extends StringValidator {
 	 * @return
 	 */
 	protected String createMessage(String value) {
-		return this.message != null ? message : String.format(
-				"Maximum length is %d. Length of %s is %d", maxLength, value,
-				value.trim().length());
+		String message = getMessage();
+		if (!isStringValid(message)) {
+			return "Error message missing!";
+		}
+		message = message.replaceAll("\\$\\{minLength\\}",
+				Integer.toString(maxLength));
+		message = message.replaceAll("\\$\\{currentLength\\}",
+				Integer.toString(value.trim().length()));
+		message = message.replaceAll("\\$\\{value\\}", value);
+		return message;
+	}
+
+	/**
+	 * Creates the default message in english.
+	 * 
+	 * @return
+	 */
+	protected String getDefaultMessage() {
+		return defaultMessage;
 	}
 
 	@Override
 	public void updateParameter(Object model) {
 		YMaxLengthValidationConfig yValidator = (YMaxLengthValidationConfig) model;
 		this.maxLength = yValidator.getMaxLength();
+	}
+
+	@Override
+	protected String getDefaultErrorCode() {
+		return DEFAULT_ERROR_CODE;
 	};
 
+	@Override
+	protected void internalDispose() {
+
+	}
 }

@@ -15,4 +15,6 @@ public interface YRegexpValidationConfigValidator {
 	boolean validate();
 
 	boolean validateRegExpression(String value);
+
+	boolean validateErrorCode(String value);
 }

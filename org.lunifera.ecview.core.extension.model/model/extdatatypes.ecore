@@ -23,11 +23,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="YDateTimeDatatype" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatatype">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="#//YDateTimeFormat"
         defaultValueLiteral="DATE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resolution" eType="#//YDateTimeResolution"
+        defaultValueLiteral="UNDEFINED"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YDateTimeFormat">
     <eLiterals name="DATE"/>
     <eLiterals name="TIME" value="1" literal="TIME"/>
     <eLiterals name="DATE_TIME" value="2" literal="DATE_TIME"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YDateTimeResolution">
+    <eLiterals name="SECOND" literal="SECOND"/>
+    <eLiterals name="MINUTE" value="1" literal="MINUTE"/>
+    <eLiterals name="HOUR" value="2" literal="HOUR"/>
+    <eLiterals name="DAY" value="3" literal="DAY"/>
+    <eLiterals name="MONTH" value="4" literal="MONTH"/>
+    <eLiterals name="YEAR" value="5" literal="YEAR"/>
+    <eLiterals name="UNDEFINED" value="6" literal="UNDEFINED"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YTreeDatatype" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatatype"/>
   <eClassifiers xsi:type="ecore:EClass" name="YProgressBarDatatype" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatatype"/>

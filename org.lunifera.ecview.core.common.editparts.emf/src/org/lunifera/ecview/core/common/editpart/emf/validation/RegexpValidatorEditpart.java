@@ -10,6 +10,8 @@
  */
 package org.lunifera.ecview.core.common.editpart.emf.validation;
 
+import org.lunifera.ecview.core.common.context.II18nService;
+import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.editpart.emf.validation.validator.RegexValidator;
 import org.lunifera.ecview.core.common.editpart.validation.IRegexpValidatorEditpart;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
@@ -40,7 +42,12 @@ public class RegexpValidatorEditpart extends
 
 	@Override
 	protected IValidator createValidator() {
-		return new RegexValidator(getModel());
+		RegexValidator validator = new RegexValidator(getModel());
+		IViewContext context = getViewContext(getModel());
+		validator.setI18nService((II18nService) context
+				.getService(II18nService.class.getName()));
+		validator.setLocale(context.getLocale());
+		return validator;
 	}
 
 	@Override

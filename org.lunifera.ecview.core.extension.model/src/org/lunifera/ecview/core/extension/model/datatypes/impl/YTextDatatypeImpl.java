@@ -37,6 +37,8 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getValidators <em>Validators</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getErrorCode <em>Error Code</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getDefaultErrorMessage <em>Default Error Message</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getMaxLength <em>Max Length</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getMinLength <em>Min Length</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getRegExpression <em>Reg Expression</em>}</li>
@@ -115,6 +117,46 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 	 * @ordered
 	 */
 	protected EList<YValidator> validators;
+
+	/**
+	 * The default value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ERROR_CODE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String errorCode = ERROR_CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultErrorMessage() <em>Default Error Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultErrorMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ERROR_MESSAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDefaultErrorMessage() <em>Default Error Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultErrorMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultErrorMessage = DEFAULT_ERROR_MESSAGE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMaxLength() <em>Max Length</em>}' attribute.
@@ -275,6 +317,48 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setErrorCode(String newErrorCode) {
+		String oldErrorCode = errorCode;
+		errorCode = newErrorCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtDatatypesPackage.YTEXT_DATATYPE__ERROR_CODE, oldErrorCode, errorCode));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefaultErrorMessage() {
+		return defaultErrorMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefaultErrorMessage(String newDefaultErrorMessage) {
+		String oldDefaultErrorMessage = defaultErrorMessage;
+		defaultErrorMessage = newDefaultErrorMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtDatatypesPackage.YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE, oldDefaultErrorMessage, defaultErrorMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getMinLength() {
 		return minLength;
 	}
@@ -349,6 +433,10 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 				return getDescription();
 			case ExtDatatypesPackage.YTEXT_DATATYPE__VALIDATORS:
 				return getValidators();
+			case ExtDatatypesPackage.YTEXT_DATATYPE__ERROR_CODE:
+				return getErrorCode();
+			case ExtDatatypesPackage.YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				return getDefaultErrorMessage();
 			case ExtDatatypesPackage.YTEXT_DATATYPE__MAX_LENGTH:
 				return getMaxLength();
 			case ExtDatatypesPackage.YTEXT_DATATYPE__MIN_LENGTH:
@@ -380,6 +468,12 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 			case ExtDatatypesPackage.YTEXT_DATATYPE__VALIDATORS:
 				getValidators().clear();
 				getValidators().addAll((Collection<? extends YValidator>)newValue);
+				return;
+			case ExtDatatypesPackage.YTEXT_DATATYPE__ERROR_CODE:
+				setErrorCode((String)newValue);
+				return;
+			case ExtDatatypesPackage.YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				setDefaultErrorMessage((String)newValue);
 				return;
 			case ExtDatatypesPackage.YTEXT_DATATYPE__MAX_LENGTH:
 				setMaxLength((Integer)newValue);
@@ -414,6 +508,12 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 			case ExtDatatypesPackage.YTEXT_DATATYPE__VALIDATORS:
 				getValidators().clear();
 				return;
+			case ExtDatatypesPackage.YTEXT_DATATYPE__ERROR_CODE:
+				setErrorCode(ERROR_CODE_EDEFAULT);
+				return;
+			case ExtDatatypesPackage.YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				setDefaultErrorMessage(DEFAULT_ERROR_MESSAGE_EDEFAULT);
+				return;
 			case ExtDatatypesPackage.YTEXT_DATATYPE__MAX_LENGTH:
 				setMaxLength(MAX_LENGTH_EDEFAULT);
 				return;
@@ -443,6 +543,10 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ExtDatatypesPackage.YTEXT_DATATYPE__VALIDATORS:
 				return validators != null && !validators.isEmpty();
+			case ExtDatatypesPackage.YTEXT_DATATYPE__ERROR_CODE:
+				return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT.equals(errorCode);
+			case ExtDatatypesPackage.YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE:
+				return DEFAULT_ERROR_MESSAGE_EDEFAULT == null ? defaultErrorMessage != null : !DEFAULT_ERROR_MESSAGE_EDEFAULT.equals(defaultErrorMessage);
 			case ExtDatatypesPackage.YTEXT_DATATYPE__MAX_LENGTH:
 				return maxLength != MAX_LENGTH_EDEFAULT;
 			case ExtDatatypesPackage.YTEXT_DATATYPE__MIN_LENGTH:
@@ -462,6 +566,8 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == YValidationConfig.class) {
 			switch (derivedFeatureID) {
+				case ExtDatatypesPackage.YTEXT_DATATYPE__ERROR_CODE: return ValidationPackage.YVALIDATION_CONFIG__ERROR_CODE;
+				case ExtDatatypesPackage.YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE: return ValidationPackage.YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE;
 				default: return -1;
 			}
 		}
@@ -495,6 +601,8 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == YValidationConfig.class) {
 			switch (baseFeatureID) {
+				case ValidationPackage.YVALIDATION_CONFIG__ERROR_CODE: return ExtDatatypesPackage.YTEXT_DATATYPE__ERROR_CODE;
+				case ValidationPackage.YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE: return ExtDatatypesPackage.YTEXT_DATATYPE__DEFAULT_ERROR_MESSAGE;
 				default: return -1;
 			}
 		}
@@ -535,6 +643,10 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", errorCode: ");
+		result.append(errorCode);
+		result.append(", defaultErrorMessage: ");
+		result.append(defaultErrorMessage);
 		result.append(", maxLength: ");
 		result.append(maxLength);
 		result.append(", minLength: ");

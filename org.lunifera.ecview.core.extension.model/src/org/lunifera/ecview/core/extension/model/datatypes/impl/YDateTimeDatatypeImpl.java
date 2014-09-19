@@ -13,6 +13,7 @@ import org.lunifera.ecview.core.common.model.validation.YValidator;
 import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesPackage;
 import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeFormat;
+import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +27,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeFormat;
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YDateTimeDatatypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YDateTimeDatatypeImpl#getValidators <em>Validators</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YDateTimeDatatypeImpl#getFormat <em>Format</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YDateTimeDatatypeImpl#getResolution <em>Resolution</em>}</li>
  * </ul>
  * </p>
  *
@@ -121,6 +123,26 @@ public class YDateTimeDatatypeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected YDateTimeFormat format = FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getResolution() <em>Resolution</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResolution()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final YDateTimeResolution RESOLUTION_EDEFAULT = YDateTimeResolution.UNDEFINED;
+
+	/**
+	 * The cached value of the '{@link #getResolution() <em>Resolution</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResolution()
+	 * @generated
+	 * @ordered
+	 */
+	protected YDateTimeResolution resolution = RESOLUTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,6 +264,27 @@ public class YDateTimeDatatypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public YDateTimeResolution getResolution() {
+		return resolution;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResolution(YDateTimeResolution newResolution) {
+		YDateTimeResolution oldResolution = resolution;
+		resolution = newResolution == null ? RESOLUTION_EDEFAULT : newResolution;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtDatatypesPackage.YDATE_TIME_DATATYPE__RESOLUTION, oldResolution, resolution));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -255,6 +298,8 @@ public class YDateTimeDatatypeImpl extends MinimalEObjectImpl.Container implemen
 				return getValidators();
 			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__FORMAT:
 				return getFormat();
+			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__RESOLUTION:
+				return getResolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -284,6 +329,9 @@ public class YDateTimeDatatypeImpl extends MinimalEObjectImpl.Container implemen
 			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__FORMAT:
 				setFormat((YDateTimeFormat)newValue);
 				return;
+			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__RESOLUTION:
+				setResolution((YDateTimeResolution)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -311,6 +359,9 @@ public class YDateTimeDatatypeImpl extends MinimalEObjectImpl.Container implemen
 			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__FORMAT:
 				setFormat(FORMAT_EDEFAULT);
 				return;
+			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__RESOLUTION:
+				setResolution(RESOLUTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -333,6 +384,8 @@ public class YDateTimeDatatypeImpl extends MinimalEObjectImpl.Container implemen
 				return validators != null && !validators.isEmpty();
 			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__FORMAT:
 				return format != FORMAT_EDEFAULT;
+			case ExtDatatypesPackage.YDATE_TIME_DATATYPE__RESOLUTION:
+				return resolution != RESOLUTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -355,6 +408,8 @@ public class YDateTimeDatatypeImpl extends MinimalEObjectImpl.Container implemen
 		result.append(description);
 		result.append(", format: ");
 		result.append(format);
+		result.append(", resolution: ");
+		result.append(resolution);
 		result.append(')');
 		return result.toString();
 	}

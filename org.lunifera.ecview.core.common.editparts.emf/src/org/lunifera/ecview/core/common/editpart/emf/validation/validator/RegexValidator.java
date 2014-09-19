@@ -15,7 +15,6 @@ import java.util.regex.Pattern;
 
 import org.lunifera.ecview.core.common.model.validation.YRegexpValidationConfig;
 import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.IValidationCodes;
 import org.lunifera.ecview.core.common.validation.Status;
 import org.lunifera.ecview.core.common.validation.StringValidator;
 
@@ -24,16 +23,19 @@ import org.lunifera.ecview.core.common.validation.StringValidator;
  */
 public class RegexValidator extends StringValidator {
 
+	public static final String DEFAULT_ERROR_CODE = "org.lunifera.ecview.core.common.editpart.emf.validation.validator.RegexValidator";
+	private static final String DEF_MESSAGE = "Value ${value} does not match the required pattern ${regex}!";
+	private String defaultMessage = DEF_MESSAGE;
+
 	private Pattern pattern;
 	private Matcher matcher = null;
 	private String regexp;
 
 	public RegexValidator(YRegexpValidationConfig yValidator) {
-		this(yValidator, null);
-	}
-
-	public RegexValidator(YRegexpValidationConfig yValidator, String message) {
-		super(message);
+		super(yValidator.getErrorCode());
+		if (isStringValid(yValidator.getDefaultErrorMessage())) {
+			defaultMessage = yValidator.getDefaultErrorMessage();
+		}
 		updateParameter(yValidator);
 	}
 
@@ -60,15 +62,35 @@ public class RegexValidator extends StringValidator {
 		}
 
 		if (!getMatcher(value).matches()) {
-			return Status.createStatus(IValidationCodes.STRING_REGEXP,
-					getClass(), IStatus.Severity.ERROR, getMessage(value));
+			return Status.createStatus(errorCode, getClass(),
+					IStatus.Severity.ERROR, createMessage(value));
 		}
 		return IStatus.OK;
 	}
 
-	protected String getMessage(String value) {
-		return this.message != null ? this.message : String.format(
-				"The value %s does not match the pattern %s", value, regexp);
+	/**
+	 * Creates the message.
+	 * 
+	 * @param value
+	 * @return
+	 */
+	protected String createMessage(String value) {
+		String message = getMessage();
+		if (!isStringValid(message)) {
+			return "Error message missing!";
+		}
+		message = message.replaceAll("\\$\\{value\\}", value);
+		message = message.replaceAll("\\$\\{regex\\}", regexp);
+		return message;
+	}
+
+	/**
+	 * Creates the default message in english.
+	 * 
+	 * @return
+	 */
+	protected String getDefaultMessage() {
+		return defaultMessage;
 	}
 
 	@Override
@@ -77,6 +99,16 @@ public class RegexValidator extends StringValidator {
 		this.regexp = yValidator.getRegExpression();
 		this.pattern = Pattern.compile(regexp != null ? regexp : "");
 		this.matcher = null;
+	}
+
+	@Override
+	protected String getDefaultErrorCode() {
+		return DEFAULT_ERROR_CODE;
+	};
+
+	@Override
+	protected void internalDispose() {
+
 	};
 
 }

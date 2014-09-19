@@ -11,6 +11,7 @@
 package org.lunifera.ecview.core.common.editpart.emf.validation;
 
 import org.eclipse.emf.ecore.EObject;
+import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
@@ -43,50 +44,7 @@ public class ClassDelegateValidatorEditpart extends
 	@Override
 	protected IValidator createValidator() {
 		IViewContext context = getViewContext(getModel());
-		ITypeProviderService service = context.getService(ITypeProviderService.class.getName()); 
-		return new ClassDelegateValidator(getModel(), service);
-	}
-
-	/**
-	 * Returns the view context for the given embeddable.
-	 * 
-	 * @param yEmbeddable
-	 * @return
-	 */
-	public static IViewContext getViewContext(EObject context) {
-		if(context == null){
-			return null;
-		}
-		
-		if(context instanceof YEmbeddable){
-			IViewEditpart viewEditpart = getViewEditpart((YEmbeddable) context);
-			return viewEditpart != null ? viewEditpart.getContext() : null;
-		}else{
-			EObject parent = context.eContainer();
-			return getViewContext(parent);
-		}
-	}
-
-	/**
-	 * Returns the view context for the given embeddable.
-	 * 
-	 * @param yEmbeddable
-	 * @return
-	 */
-	public static IViewContext getViewContext(YEmbeddable yEmbeddable) {
-		IViewEditpart viewEditpart = getViewEditpart(yEmbeddable);
-		return viewEditpart != null ? viewEditpart.getContext() : null;
-	}
-
-	/**
-	 * Returns the view editpart for the given embeddable.
-	 * 
-	 * @param yEmbeddable
-	 * @return
-	 */
-	public static IViewEditpart getViewEditpart(YEmbeddable yEmbeddable) {
-		IEmbeddableEditpart editpart = getEditpart(yEmbeddable);
-		return editpart != null ? editpart.getView() : null;
+		return new ClassDelegateValidator(getModel(), context);
 	}
 
 	@Override

@@ -10,6 +10,8 @@
  */
 package org.lunifera.ecview.core.common.editpart.emf.validation;
 
+import org.lunifera.ecview.core.common.context.II18nService;
+import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.editpart.emf.validation.validator.MinLengthValidator;
 import org.lunifera.ecview.core.common.editpart.validation.IMinLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
@@ -39,7 +41,12 @@ public class MinLengthValidatorEditpart extends
 	protected IValidator createValidator() {
 		checkDisposed();
 
-		return new MinLengthValidator(getModel());
+		MinLengthValidator validator = new MinLengthValidator(getModel());
+		IViewContext context = getViewContext(getModel());
+		validator.setI18nService((II18nService) context
+				.getService(II18nService.class.getName()));
+		validator.setLocale(context.getLocale());
+		return validator;
 	}
 
 	@Override

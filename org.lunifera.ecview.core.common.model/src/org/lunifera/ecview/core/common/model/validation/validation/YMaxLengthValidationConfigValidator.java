@@ -15,4 +15,6 @@ public interface YMaxLengthValidationConfigValidator {
 	boolean validate();
 
 	boolean validateMaxLength(int value);
+
+	boolean validateErrorCode(String value);
 }

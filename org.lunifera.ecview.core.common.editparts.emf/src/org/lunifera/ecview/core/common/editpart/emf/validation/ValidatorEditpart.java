@@ -15,9 +15,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.lunifera.ecview.core.common.context.IViewContext;
+import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
+import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.ElementEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 import org.lunifera.ecview.core.common.validation.IValidator;
 import org.slf4j.Logger;
@@ -47,10 +52,55 @@ public abstract class ValidatorEditpart<M extends YValidator> extends
 			this.changeFeatures.addAll(Arrays.asList(changeFeatures));
 		}
 	}
+	
+	/**
+	 * Returns the view context for the given embeddable.
+	 * 
+	 * @param yEmbeddable
+	 * @return
+	 */
+	public static IViewContext getViewContext(YEmbeddable yEmbeddable) {
+		IViewEditpart viewEditpart = getViewEditpart(yEmbeddable);
+		return viewEditpart != null ? viewEditpart.getContext() : null;
+	}
+
+	/**
+	 * Returns the view editpart for the given embeddable.
+	 * 
+	 * @param yEmbeddable
+	 * @return
+	 */
+	public static IViewEditpart getViewEditpart(YEmbeddable yEmbeddable) {
+		IEmbeddableEditpart editpart = getEditpart(yEmbeddable);
+		return editpart != null ? editpart.getView() : null;
+	}
+	
+	/**
+	 * Returns the view context for the given embeddable.
+	 * 
+	 * @param yEmbeddable
+	 * @return
+	 */
+	public static IViewContext getViewContext(EObject context) {
+		if(context == null){
+			return null;
+		}
+		
+		if(context instanceof YEmbeddable){
+			IViewEditpart viewEditpart = getViewEditpart((YEmbeddable) context);
+			return viewEditpart != null ? viewEditpart.getContext() : null;
+		}else{
+			EObject parent = context.eContainer();
+			return getViewContext(parent);
+		}
+	}
 
 	@Override
 	protected void internalDispose() {
 		try {
+			if (validator != null) {
+				validator.dispose();
+			}
 			validator = null;
 			changeFeatures = null;
 		} finally {

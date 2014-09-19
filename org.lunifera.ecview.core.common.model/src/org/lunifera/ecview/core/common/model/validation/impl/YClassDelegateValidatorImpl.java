@@ -20,6 +20,8 @@ import org.lunifera.ecview.core.common.model.validation.YValidationConfig;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.lunifera.ecview.core.common.model.validation.impl.YClassDelegateValidatorImpl#getErrorCode <em>Error Code</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.validation.impl.YClassDelegateValidatorImpl#getDefaultErrorMessage <em>Default Error Message</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.validation.impl.YClassDelegateValidatorImpl#getClassName <em>Class Name</em>}</li>
  * </ul>
  * </p>
@@ -27,6 +29,46 @@ import org.lunifera.ecview.core.common.model.validation.YValidationConfig;
  * @generated
  */
 public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClassDelegateValidator {
+	/**
+	 * The default value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ERROR_CODE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String errorCode = ERROR_CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultErrorMessage() <em>Default Error Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultErrorMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_ERROR_MESSAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDefaultErrorMessage() <em>Default Error Message</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultErrorMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultErrorMessage = DEFAULT_ERROR_MESSAGE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,6 +113,48 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setErrorCode(String newErrorCode) {
+		String oldErrorCode = errorCode;
+		errorCode = newErrorCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValidationPackage.YCLASS_DELEGATE_VALIDATOR__ERROR_CODE, oldErrorCode, errorCode));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefaultErrorMessage() {
+		return defaultErrorMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefaultErrorMessage(String newDefaultErrorMessage) {
+		String oldDefaultErrorMessage = defaultErrorMessage;
+		defaultErrorMessage = newDefaultErrorMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValidationPackage.YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE, oldDefaultErrorMessage, defaultErrorMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getClassName() {
 		return className;
 	}
@@ -95,6 +179,10 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__ERROR_CODE:
+				return getErrorCode();
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE:
+				return getDefaultErrorMessage();
 			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__CLASS_NAME:
 				return getClassName();
 		}
@@ -109,6 +197,12 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__ERROR_CODE:
+				setErrorCode((String)newValue);
+				return;
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE:
+				setDefaultErrorMessage((String)newValue);
+				return;
 			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__CLASS_NAME:
 				setClassName((String)newValue);
 				return;
@@ -124,6 +218,12 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__ERROR_CODE:
+				setErrorCode(ERROR_CODE_EDEFAULT);
+				return;
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE:
+				setDefaultErrorMessage(DEFAULT_ERROR_MESSAGE_EDEFAULT);
+				return;
 			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__CLASS_NAME:
 				setClassName(CLASS_NAME_EDEFAULT);
 				return;
@@ -139,6 +239,10 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__ERROR_CODE:
+				return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT.equals(errorCode);
+			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE:
+				return DEFAULT_ERROR_MESSAGE_EDEFAULT == null ? defaultErrorMessage != null : !DEFAULT_ERROR_MESSAGE_EDEFAULT.equals(defaultErrorMessage);
 			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__CLASS_NAME:
 				return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
 		}
@@ -154,6 +258,8 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == YValidationConfig.class) {
 			switch (derivedFeatureID) {
+				case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__ERROR_CODE: return ValidationPackage.YVALIDATION_CONFIG__ERROR_CODE;
+				case ValidationPackage.YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE: return ValidationPackage.YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE;
 				default: return -1;
 			}
 		}
@@ -175,6 +281,8 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == YValidationConfig.class) {
 			switch (baseFeatureID) {
+				case ValidationPackage.YVALIDATION_CONFIG__ERROR_CODE: return ValidationPackage.YCLASS_DELEGATE_VALIDATOR__ERROR_CODE;
+				case ValidationPackage.YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE: return ValidationPackage.YCLASS_DELEGATE_VALIDATOR__DEFAULT_ERROR_MESSAGE;
 				default: return -1;
 			}
 		}
@@ -197,7 +305,11 @@ public class YClassDelegateValidatorImpl extends YValidatorImpl implements YClas
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (className: ");
+		result.append(" (errorCode: ");
+		result.append(errorCode);
+		result.append(", defaultErrorMessage: ");
+		result.append(defaultErrorMessage);
+		result.append(", className: ");
 		result.append(className);
 		result.append(')');
 		return result.toString();

@@ -5,6 +5,7 @@
 package org.lunifera.ecview.core.extension.model.datatypes.validation;
 
 import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeFormat;
+import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution;
 
 /**
  * A sample validator interface for {@link org.lunifera.ecview.core.extension.model.datatypes.YDateTimeDatatype}.
@@ -16,4 +17,6 @@ public interface YDateTimeDatatypeValidator {
 	boolean validate();
 
 	boolean validateFormat(YDateTimeFormat value);
+
+	boolean validateResolution(YDateTimeResolution value);
 }

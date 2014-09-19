@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -15,7 +16,10 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
 import org.lunifera.ecview.core.common.model.core.impl.custom.ChangeAdapter;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
+import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesFactory;
 import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeDatatype;
+import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeFormat;
+import org.lunifera.ecview.core.extension.model.datatypes.YDateTimeResolution;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YDateTime;
 
@@ -34,11 +38,12 @@ import org.lunifera.ecview.core.extension.model.extension.YDateTime;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	/**
 	 * The cached value of the '{@link #getValueBindingEndpoint() <em>Value Binding Endpoint</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getValueBindingEndpoint()
 	 * @generated
 	 * @ordered
@@ -100,8 +105,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableValueEndpoint getValueBindingEndpoint() {
@@ -117,8 +121,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableValueEndpoint basicGetValueBindingEndpoint() {
@@ -126,11 +129,12 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValueBindingEndpoint(YEmbeddableValueEndpoint newValueBindingEndpoint, NotificationChain msgs) {
+	public NotificationChain basicSetValueBindingEndpoint(
+			YEmbeddableValueEndpoint newValueBindingEndpoint,
+			NotificationChain msgs) {
 		YEmbeddableValueEndpoint oldValueBindingEndpoint = valueBindingEndpoint;
 		valueBindingEndpoint = newValueBindingEndpoint;
 		if (eNotificationRequired()) {
@@ -141,11 +145,11 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValueBindingEndpoint(YEmbeddableValueEndpoint newValueBindingEndpoint) {
+	public void setValueBindingEndpoint(
+			YEmbeddableValueEndpoint newValueBindingEndpoint) {
 		if (newValueBindingEndpoint != valueBindingEndpoint) {
 			NotificationChain msgs = null;
 			if (valueBindingEndpoint != null)
@@ -238,8 +242,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setValue(Date newValue) {
@@ -273,12 +276,12 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ExtensionModelPackage.YDATE_TIME__VALUE_BINDING_ENDPOINT:
 				if (valueBindingEndpoint != null)
@@ -289,12 +292,12 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ExtensionModelPackage.YDATE_TIME__VALUE_BINDING_ENDPOINT:
 				return basicSetValueBindingEndpoint(null, msgs);
@@ -404,8 +407,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -425,8 +427,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -459,7 +460,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 		result.append(')');
 		return result.toString();
 	}
-	
+
 	/**
 	 * Sets the label by creating a new datadescription.
 	 * 
@@ -486,6 +487,26 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 		} else {
 			ds.setLabelI18nKey(i18nKey);
 		}
+	}
+
+	@Override
+	public void setDateFormat(YDateTimeFormat format) {
+		YDateTimeDatatype dt = getDatatype();
+		if (dt == null) {
+			dt = ExtDatatypesFactory.eINSTANCE.createYDateTimeDatatype();
+			setDatatype(dt);
+		}
+		dt.setFormat(format);
+	}
+
+	@Override
+	public void setResolution(YDateTimeResolution resolution) {
+		YDateTimeDatatype dt = getDatatype();
+		if (dt == null) {
+			dt = ExtDatatypesFactory.eINSTANCE.createYDateTimeDatatype();
+			setDatatype(dt);
+		}
+		dt.setResolution(resolution);
 	}
 
 } // YDateTimeImpl

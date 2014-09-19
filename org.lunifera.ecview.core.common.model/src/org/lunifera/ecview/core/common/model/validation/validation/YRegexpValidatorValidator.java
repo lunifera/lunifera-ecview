@@ -14,4 +14,6 @@ package org.lunifera.ecview.core.common.model.validation.validation;
 public interface YRegexpValidatorValidator {
 	boolean validate();
 
+	boolean validateErrorCode(String value);
+
 }

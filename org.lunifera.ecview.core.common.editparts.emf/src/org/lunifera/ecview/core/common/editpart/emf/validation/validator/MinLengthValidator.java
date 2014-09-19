@@ -12,29 +12,31 @@ package org.lunifera.ecview.core.common.editpart.emf.validation.validator;
 
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidationConfig;
 import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.IValidationCodes;
 import org.lunifera.ecview.core.common.validation.Status;
 import org.lunifera.ecview.core.common.validation.StringValidator;
 
 public class MinLengthValidator extends StringValidator {
 
+	public static final String DEFAULT_ERROR_CODE = "org.lunifera.ecview.core.common.editpart.emf.validation.validator.MinLengthValidator";
+	private static final String DEF_MESSAGE = "Minimum length is ${minLength}. Length of \"${value}\" is ${currentLength}!";
+
+	private String defaultMessage = DEF_MESSAGE;
 	private int minLength;
 
 	public MinLengthValidator(YMinLengthValidationConfig yValidator) {
-		this(yValidator, null);
-	}
+		super(yValidator.getErrorCode());
+		if (isStringValid(yValidator.getDefaultErrorMessage())) {
+			defaultMessage = yValidator.getDefaultErrorMessage();
+		}
 
-	public MinLengthValidator(YMinLengthValidationConfig yValidator,
-			String message) {
-		super(message);
 		updateParameter(yValidator);
 	}
 
 	@Override
 	public IStatus doValidate(String value) {
 		if (value.trim().length() < minLength) {
-			return Status.createStatus(IValidationCodes.STRING_MIN_LENGTH,
-					getClass(), IStatus.Severity.ERROR, createMessage(value));
+			return Status.createStatus(errorCode, getClass(),
+					IStatus.Severity.ERROR, createMessage(value));
 		}
 
 		return IStatus.OK;
@@ -47,15 +49,41 @@ public class MinLengthValidator extends StringValidator {
 	 * @return
 	 */
 	protected String createMessage(String value) {
-		return this.message != null ? message : String.format(
-				"Minimum length is %d. Length of %s is %d", minLength, value,
-				value.trim().length());
-	};
+		String message = getMessage();
+		if (!isStringValid(message)) {
+			return "Error message missing!";
+		}
+		message = message.replaceAll("\\$\\{minLength\\}",
+				Integer.toString(minLength));
+		message = message.replaceAll("\\$\\{currentLength\\}",
+				Integer.toString(value.trim().length()));
+		message = message.replaceAll("\\$\\{value\\}", value);
+		return message;
+	}
+
+	/**
+	 * Creates the default message in english.
+	 * 
+	 * @return
+	 */
+	protected String getDefaultMessage() {
+		return defaultMessage;
+	}
 
 	@Override
 	public void updateParameter(Object model) {
 		YMinLengthValidationConfig yValidator = (YMinLengthValidationConfig) model;
 		this.minLength = yValidator.getMinLength();
+	}
+
+	@Override
+	protected String getDefaultErrorCode() {
+		return DEFAULT_ERROR_CODE;
+	};
+
+	@Override
+	protected void internalDispose() {
+
 	};
 
 }
