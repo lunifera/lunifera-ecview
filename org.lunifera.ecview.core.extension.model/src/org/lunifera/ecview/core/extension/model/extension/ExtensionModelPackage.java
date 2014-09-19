@@ -359,31 +359,13 @@ public interface ExtensionModelPackage extends EPackage {
 	int YGRID_LAYOUT__COLUMNS = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Fill Horizontal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YGRID_LAYOUT__FILL_HORIZONTAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Fill Vertical</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YGRID_LAYOUT__FILL_VERTICAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
-
-	/**
 	 * The number of structural features of the '<em>YGrid Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YGRID_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 6;
+	int YGRID_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutCellStyleImpl <em>YGrid Layout Cell Style</em>}' class.
@@ -559,22 +541,13 @@ public interface ExtensionModelPackage extends EPackage {
 	int YHORIZONTAL_LAYOUT__CELL_STYLES = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Fill Horizontal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YHORIZONTAL_LAYOUT__FILL_HORIZONTAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>YHorizontal Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YHORIZONTAL_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+	int YHORIZONTAL_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YHorizontalLayoutCellStyleImpl <em>YHorizontal Layout Cell Style</em>}' class.
@@ -741,22 +714,13 @@ public interface ExtensionModelPackage extends EPackage {
 	int YVERTICAL_LAYOUT__CELL_STYLES = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Fill Vertical</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVERTICAL_LAYOUT__FILL_VERTICAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>YVertical Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVERTICAL_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+	int YVERTICAL_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YVerticalLayoutCellStyleImpl <em>YVertical Layout Cell Style</em>}' class.
@@ -5057,31 +5021,13 @@ public interface ExtensionModelPackage extends EPackage {
 	int YFORM_LAYOUT__CELL_STYLES = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Fill Vertical</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YFORM_LAYOUT__FILL_VERTICAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Fill Horizontal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YFORM_LAYOUT__FILL_HORIZONTAL = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
-
-	/**
 	 * The number of structural features of the '<em>YForm Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YFORM_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
+	int YFORM_LAYOUT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutCellStyleImpl <em>YForm Layout Cell Style</em>}' class.
@@ -6089,28 +6035,6 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYGridLayout_Columns();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YGridLayout#isFillHorizontal <em>Fill Horizontal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fill Horizontal</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YGridLayout#isFillHorizontal()
-	 * @see #getYGridLayout()
-	 * @generated
-	 */
-	EAttribute getYGridLayout_FillHorizontal();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YGridLayout#isFillVertical <em>Fill Vertical</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fill Vertical</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YGridLayout#isFillVertical()
-	 * @see #getYGridLayout()
-	 * @generated
-	 */
-	EAttribute getYGridLayout_FillVertical();
-
-	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YGridLayoutCellStyle <em>YGrid Layout Cell Style</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6175,17 +6099,6 @@ public interface ExtensionModelPackage extends EPackage {
 	EReference getYHorizontalLayout_CellStyles();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YHorizontalLayout#isFillHorizontal <em>Fill Horizontal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fill Horizontal</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YHorizontalLayout#isFillHorizontal()
-	 * @see #getYHorizontalLayout()
-	 * @generated
-	 */
-	EAttribute getYHorizontalLayout_FillHorizontal();
-
-	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YHorizontalLayoutCellStyle <em>YHorizontal Layout Cell Style</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6237,17 +6150,6 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getYVerticalLayout_CellStyles();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YVerticalLayout#isFillVertical <em>Fill Vertical</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fill Vertical</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YVerticalLayout#isFillVertical()
-	 * @see #getYVerticalLayout()
-	 * @generated
-	 */
-	EAttribute getYVerticalLayout_FillVertical();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YVerticalLayoutCellStyle <em>YVertical Layout Cell Style</em>}'.
@@ -7427,28 +7329,6 @@ public interface ExtensionModelPackage extends EPackage {
 	EReference getYFormLayout_CellStyles();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YFormLayout#isFillVertical <em>Fill Vertical</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fill Vertical</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YFormLayout#isFillVertical()
-	 * @see #getYFormLayout()
-	 * @generated
-	 */
-	EAttribute getYFormLayout_FillVertical();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YFormLayout#isFillHorizontal <em>Fill Horizontal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fill Horizontal</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YFormLayout#isFillHorizontal()
-	 * @see #getYFormLayout()
-	 * @generated
-	 */
-	EAttribute getYFormLayout_FillHorizontal();
-
-	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YFormLayoutCellStyle <em>YForm Layout Cell Style</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8070,22 +7950,6 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YGRID_LAYOUT__COLUMNS = eINSTANCE.getYGridLayout_Columns();
 
 		/**
-		 * The meta object literal for the '<em><b>Fill Horizontal</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YGRID_LAYOUT__FILL_HORIZONTAL = eINSTANCE.getYGridLayout_FillHorizontal();
-
-		/**
-		 * The meta object literal for the '<em><b>Fill Vertical</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YGRID_LAYOUT__FILL_VERTICAL = eINSTANCE.getYGridLayout_FillVertical();
-
-		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutCellStyleImpl <em>YGrid Layout Cell Style</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8138,14 +8002,6 @@ public interface ExtensionModelPackage extends EPackage {
 		EReference YHORIZONTAL_LAYOUT__CELL_STYLES = eINSTANCE.getYHorizontalLayout_CellStyles();
 
 		/**
-		 * The meta object literal for the '<em><b>Fill Horizontal</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YHORIZONTAL_LAYOUT__FILL_HORIZONTAL = eINSTANCE.getYHorizontalLayout_FillHorizontal();
-
-		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YHorizontalLayoutCellStyleImpl <em>YHorizontal Layout Cell Style</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8188,14 +8044,6 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference YVERTICAL_LAYOUT__CELL_STYLES = eINSTANCE.getYVerticalLayout_CellStyles();
-
-		/**
-		 * The meta object literal for the '<em><b>Fill Vertical</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YVERTICAL_LAYOUT__FILL_VERTICAL = eINSTANCE.getYVerticalLayout_FillVertical();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YVerticalLayoutCellStyleImpl <em>YVertical Layout Cell Style</em>}' class.
@@ -9112,22 +8960,6 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference YFORM_LAYOUT__CELL_STYLES = eINSTANCE.getYFormLayout_CellStyles();
-
-		/**
-		 * The meta object literal for the '<em><b>Fill Vertical</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YFORM_LAYOUT__FILL_VERTICAL = eINSTANCE.getYFormLayout_FillVertical();
-
-		/**
-		 * The meta object literal for the '<em><b>Fill Horizontal</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YFORM_LAYOUT__FILL_HORIZONTAL = eINSTANCE.getYFormLayout_FillHorizontal();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YFormLayoutCellStyleImpl <em>YForm Layout Cell Style</em>}' class.

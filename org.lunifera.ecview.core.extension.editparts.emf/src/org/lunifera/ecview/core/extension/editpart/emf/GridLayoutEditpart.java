@@ -22,14 +22,15 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IGridLayoutEditpart;
  * The implementation of the IUigridLayoutEditpart.
  */
 @SuppressWarnings("restriction")
-public class GridLayoutEditpart extends LayoutEditpart<YGridLayout> implements IGridLayoutEditpart {
+public class GridLayoutEditpart extends LayoutEditpart<YGridLayout> implements
+		IGridLayoutEditpart {
 
 	@Override
 	protected YGridLayout createModel() {
-		return (YGridLayout) ExtensionModelFactory.eINSTANCE.createYGridLayout();
+		return (YGridLayout) ExtensionModelFactory.eINSTANCE
+				.createYGridLayout();
 	}
 
-	
 	@Override
 	protected void handleModelMove(int featureId, Notification notification) {
 		checkDisposed();
@@ -37,8 +38,6 @@ public class GridLayoutEditpart extends LayoutEditpart<YGridLayout> implements I
 		switch (featureId) {
 		case ExtensionModelPackage.YGRID_LAYOUT__COLUMNS:
 		case ExtensionModelPackage.YGRID_LAYOUT__MARGIN:
-		case ExtensionModelPackage.YGRID_LAYOUT__FILL_HORIZONTAL:
-		case ExtensionModelPackage.YGRID_LAYOUT__FILL_VERTICAL:
 		case ExtensionModelPackage.YGRID_LAYOUT__SPACING:
 			// handle the presentation
 			//
@@ -52,5 +51,4 @@ public class GridLayoutEditpart extends LayoutEditpart<YGridLayout> implements I
 		}
 	}
 
-	
 }

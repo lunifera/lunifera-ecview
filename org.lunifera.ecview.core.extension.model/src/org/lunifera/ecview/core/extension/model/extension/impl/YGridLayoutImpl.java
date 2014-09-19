@@ -31,8 +31,6 @@ import org.lunifera.ecview.core.extension.model.extension.YGridLayoutCellStyle;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl#isMargin <em>Margin</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl#getCellStyles <em>Cell Styles</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl#getColumns <em>Columns</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl#isFillHorizontal <em>Fill Horizontal</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl#isFillVertical <em>Fill Vertical</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,45 +99,6 @@ public class YGridLayoutImpl extends YLayoutImpl implements YGridLayout {
 	 * @ordered
 	 */
 	protected int columns = COLUMNS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isFillHorizontal() <em>Fill Horizontal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isFillHorizontal()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean FILL_HORIZONTAL_EDEFAULT = true;
-
-	/**
-	 * The cached value of the '{@link #isFillHorizontal() <em>Fill Horizontal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isFillHorizontal()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean fillHorizontal = FILL_HORIZONTAL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isFillVertical() <em>Fill Vertical</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isFillVertical()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean FILL_VERTICAL_EDEFAULT = true;
-
-	/**
-	 * The cached value of the '{@link #isFillVertical() <em>Fill Vertical</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isFillVertical()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean fillVertical = FILL_VERTICAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -230,44 +189,6 @@ public class YGridLayoutImpl extends YLayoutImpl implements YGridLayout {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isFillHorizontal() {
-		return fillHorizontal;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFillHorizontal(boolean newFillHorizontal) {
-		boolean oldFillHorizontal = fillHorizontal;
-		fillHorizontal = newFillHorizontal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YGRID_LAYOUT__FILL_HORIZONTAL, oldFillHorizontal, fillHorizontal));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isFillVertical() {
-		return fillVertical;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFillVertical(boolean newFillVertical) {
-		boolean oldFillVertical = fillVertical;
-		fillVertical = newFillVertical;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YGRID_LAYOUT__FILL_VERTICAL, oldFillVertical, fillVertical));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
@@ -293,10 +214,6 @@ public class YGridLayoutImpl extends YLayoutImpl implements YGridLayout {
 				return getCellStyles();
 			case ExtensionModelPackage.YGRID_LAYOUT__COLUMNS:
 				return getColumns();
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_HORIZONTAL:
-				return isFillHorizontal();
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_VERTICAL:
-				return isFillVertical();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -322,12 +239,6 @@ public class YGridLayoutImpl extends YLayoutImpl implements YGridLayout {
 			case ExtensionModelPackage.YGRID_LAYOUT__COLUMNS:
 				setColumns((Integer)newValue);
 				return;
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_HORIZONTAL:
-				setFillHorizontal((Boolean)newValue);
-				return;
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_VERTICAL:
-				setFillVertical((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -351,12 +262,6 @@ public class YGridLayoutImpl extends YLayoutImpl implements YGridLayout {
 			case ExtensionModelPackage.YGRID_LAYOUT__COLUMNS:
 				setColumns(COLUMNS_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_HORIZONTAL:
-				setFillHorizontal(FILL_HORIZONTAL_EDEFAULT);
-				return;
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_VERTICAL:
-				setFillVertical(FILL_VERTICAL_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -376,10 +281,6 @@ public class YGridLayoutImpl extends YLayoutImpl implements YGridLayout {
 				return cellStyles != null && !cellStyles.isEmpty();
 			case ExtensionModelPackage.YGRID_LAYOUT__COLUMNS:
 				return columns != COLUMNS_EDEFAULT;
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_HORIZONTAL:
-				return fillHorizontal != FILL_HORIZONTAL_EDEFAULT;
-			case ExtensionModelPackage.YGRID_LAYOUT__FILL_VERTICAL:
-				return fillVertical != FILL_VERTICAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -441,10 +342,6 @@ public class YGridLayoutImpl extends YLayoutImpl implements YGridLayout {
 		result.append(margin);
 		result.append(", columns: ");
 		result.append(columns);
-		result.append(", fillHorizontal: ");
-		result.append(fillHorizontal);
-		result.append(", fillVertical: ");
-		result.append(fillVertical);
 		result.append(')');
 		return result.toString();
 	}

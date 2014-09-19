@@ -67,8 +67,6 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
   Class YGridLayout -> YLayout, YSpacingable, YMarginable
     Reference cellStyles : YGridLayoutCellStyle<<0..*>>
     Attribute columns : EInt
-    Attribute fillHorizontal : EBoolean
-    Attribute fillVertical : EBoolean
     Operation addGridLayoutCellStyle(YEmbeddable) : YGridLayoutCellStyle
 
   Class YGridLayoutCellStyle
@@ -79,7 +77,6 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
 
   Class YHorizontalLayout -> YLayout, YSpacingable, YMarginable
     Reference cellStyles : YHorizontalLayoutCellStyle<<0..*>>
-    Attribute fillHorizontal : EBoolean
     Operation getCellStyle(YEmbeddable) : YHorizontalLayoutCellStyle
 
   Class YHorizontalLayoutCellStyle
@@ -88,7 +85,6 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
 
   Class YVerticalLayout -> YLayout, YSpacingable, YMarginable
     Reference cellStyles : YVerticalLayoutCellStyle<<0..*>>
-    Attribute fillVertical : EBoolean
 
   Class YVerticalLayoutCellStyle
     Reference target : YEmbeddable<<1..1>>
@@ -251,8 +247,6 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
 
   Class YFormLayout -> YLayout, YSpacingable, YMarginable
     Reference cellStyles : YFormLayoutCellStyle<<0..*>>
-    Attribute fillVertical : EBoolean
-    Attribute fillHorizontal : EBoolean
 
   Class YFormLayoutCellStyle
     Reference target : YEmbeddable<<1..1>>

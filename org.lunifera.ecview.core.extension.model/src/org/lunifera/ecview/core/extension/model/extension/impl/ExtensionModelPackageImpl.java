@@ -452,22 +452,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYGridLayout_FillHorizontal() {
-		return (EAttribute)yGridLayoutEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYGridLayout_FillVertical() {
-		return (EAttribute)yGridLayoutEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getYGridLayoutCellStyle() {
 		return yGridLayoutCellStyleEClass;
 	}
@@ -516,14 +500,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYHorizontalLayout_FillHorizontal() {
-		return (EAttribute)yHorizontalLayoutEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getYHorizontalLayoutCellStyle() {
 		return yHorizontalLayoutCellStyleEClass;
 	}
@@ -558,14 +534,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EReference getYVerticalLayout_CellStyles() {
 		return (EReference)yVerticalLayoutEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYVerticalLayout_FillVertical() {
-		return (EAttribute)yVerticalLayoutEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1470,23 +1438,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYFormLayout_FillVertical() {
-		return (EAttribute)yFormLayoutEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getYFormLayout_FillHorizontal() {
-		return (EAttribute)yFormLayoutEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getYFormLayoutCellStyle() {
 		return yFormLayoutCellStyleEClass;
 	}
@@ -1943,8 +1894,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yGridLayoutEClass = createEClass(YGRID_LAYOUT);
 		createEReference(yGridLayoutEClass, YGRID_LAYOUT__CELL_STYLES);
 		createEAttribute(yGridLayoutEClass, YGRID_LAYOUT__COLUMNS);
-		createEAttribute(yGridLayoutEClass, YGRID_LAYOUT__FILL_HORIZONTAL);
-		createEAttribute(yGridLayoutEClass, YGRID_LAYOUT__FILL_VERTICAL);
 
 		yGridLayoutCellStyleEClass = createEClass(YGRID_LAYOUT_CELL_STYLE);
 		createEReference(yGridLayoutCellStyleEClass, YGRID_LAYOUT_CELL_STYLE__TARGET);
@@ -1953,7 +1902,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		yHorizontalLayoutEClass = createEClass(YHORIZONTAL_LAYOUT);
 		createEReference(yHorizontalLayoutEClass, YHORIZONTAL_LAYOUT__CELL_STYLES);
-		createEAttribute(yHorizontalLayoutEClass, YHORIZONTAL_LAYOUT__FILL_HORIZONTAL);
 
 		yHorizontalLayoutCellStyleEClass = createEClass(YHORIZONTAL_LAYOUT_CELL_STYLE);
 		createEReference(yHorizontalLayoutCellStyleEClass, YHORIZONTAL_LAYOUT_CELL_STYLE__TARGET);
@@ -1961,7 +1909,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		yVerticalLayoutEClass = createEClass(YVERTICAL_LAYOUT);
 		createEReference(yVerticalLayoutEClass, YVERTICAL_LAYOUT__CELL_STYLES);
-		createEAttribute(yVerticalLayoutEClass, YVERTICAL_LAYOUT__FILL_VERTICAL);
 
 		yVerticalLayoutCellStyleEClass = createEClass(YVERTICAL_LAYOUT_CELL_STYLE);
 		createEReference(yVerticalLayoutCellStyleEClass, YVERTICAL_LAYOUT_CELL_STYLE__TARGET);
@@ -2120,8 +2067,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		yFormLayoutEClass = createEClass(YFORM_LAYOUT);
 		createEReference(yFormLayoutEClass, YFORM_LAYOUT__CELL_STYLES);
-		createEAttribute(yFormLayoutEClass, YFORM_LAYOUT__FILL_VERTICAL);
-		createEAttribute(yFormLayoutEClass, YFORM_LAYOUT__FILL_HORIZONTAL);
 
 		yFormLayoutCellStyleEClass = createEClass(YFORM_LAYOUT_CELL_STYLE);
 		createEReference(yFormLayoutCellStyleEClass, YFORM_LAYOUT_CELL_STYLE__TARGET);
@@ -2275,8 +2220,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEClass(yGridLayoutEClass, YGridLayout.class, "YGridLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYGridLayout_CellStyles(), this.getYGridLayoutCellStyle(), null, "cellStyles", null, 0, -1, YGridLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYGridLayout_Columns(), ecorePackage.getEInt(), "columns", null, 0, 1, YGridLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYGridLayout_FillHorizontal(), ecorePackage.getEBoolean(), "fillHorizontal", "true", 0, 1, YGridLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYGridLayout_FillVertical(), ecorePackage.getEBoolean(), "fillVertical", "true", 0, 1, YGridLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(yGridLayoutEClass, this.getYGridLayoutCellStyle(), "addGridLayoutCellStyle", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCoreModelPackage.getYEmbeddable(), "element", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2294,7 +2237,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		initEClass(yHorizontalLayoutEClass, YHorizontalLayout.class, "YHorizontalLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYHorizontalLayout_CellStyles(), this.getYHorizontalLayoutCellStyle(), null, "cellStyles", null, 0, -1, YHorizontalLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYHorizontalLayout_FillHorizontal(), ecorePackage.getEBoolean(), "fillHorizontal", "true", 0, 1, YHorizontalLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(yHorizontalLayoutEClass, this.getYHorizontalLayoutCellStyle(), "getCellStyle", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCoreModelPackage.getYEmbeddable(), "element", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2305,7 +2247,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		initEClass(yVerticalLayoutEClass, YVerticalLayout.class, "YVerticalLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYVerticalLayout_CellStyles(), this.getYVerticalLayoutCellStyle(), null, "cellStyles", null, 0, -1, YVerticalLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYVerticalLayout_FillVertical(), ecorePackage.getEBoolean(), "fillVertical", "true", 0, 1, YVerticalLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yVerticalLayoutCellStyleEClass, YVerticalLayoutCellStyle.class, "YVerticalLayoutCellStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYVerticalLayoutCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, YVerticalLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2492,8 +2433,6 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		initEClass(yFormLayoutEClass, YFormLayout.class, "YFormLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYFormLayout_CellStyles(), this.getYFormLayoutCellStyle(), null, "cellStyles", null, 0, -1, YFormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYFormLayout_FillVertical(), ecorePackage.getEBoolean(), "fillVertical", "true", 0, 1, YFormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYFormLayout_FillHorizontal(), ecorePackage.getEBoolean(), "fillHorizontal", "true", 0, 1, YFormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yFormLayoutCellStyleEClass, YFormLayoutCellStyle.class, "YFormLayoutCellStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYFormLayoutCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, YFormLayoutCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

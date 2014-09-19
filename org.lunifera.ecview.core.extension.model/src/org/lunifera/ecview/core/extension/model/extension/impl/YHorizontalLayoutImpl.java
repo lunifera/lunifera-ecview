@@ -33,7 +33,6 @@ import org.lunifera.ecview.core.extension.model.extension.YHorizontalLayoutCellS
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YHorizontalLayoutImpl#isSpacing <em>Spacing</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YHorizontalLayoutImpl#isMargin <em>Margin</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YHorizontalLayoutImpl#getCellStyles <em>Cell Styles</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YHorizontalLayoutImpl#isFillHorizontal <em>Fill Horizontal</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,26 +84,6 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 	 * @ordered
 	 */
 	protected EList<YHorizontalLayoutCellStyle> cellStyles;
-
-	/**
-	 * The default value of the '{@link #isFillHorizontal() <em>Fill Horizontal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isFillHorizontal()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean FILL_HORIZONTAL_EDEFAULT = true;
-
-	/**
-	 * The cached value of the '{@link #isFillHorizontal() <em>Fill Horizontal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isFillHorizontal()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean fillHorizontal = FILL_HORIZONTAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -172,26 +151,6 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 		return cellStyles;
 	}
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isFillHorizontal() {
-		return fillHorizontal;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFillHorizontal(boolean newFillHorizontal) {
-		boolean oldFillHorizontal = fillHorizontal;
-		fillHorizontal = newFillHorizontal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YHORIZONTAL_LAYOUT__FILL_HORIZONTAL, oldFillHorizontal, fillHorizontal));
-	}
-
-
 	public YHorizontalLayoutCellStyle getCellStyle(YEmbeddable element) {
 		for (YHorizontalLayoutCellStyle style : getCellStyles()) {
 			if (element == style.getTarget()) {
@@ -228,8 +187,6 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 				return isMargin();
 			case ExtensionModelPackage.YHORIZONTAL_LAYOUT__CELL_STYLES:
 				return getCellStyles();
-			case ExtensionModelPackage.YHORIZONTAL_LAYOUT__FILL_HORIZONTAL:
-				return isFillHorizontal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -252,9 +209,6 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 				getCellStyles().clear();
 				getCellStyles().addAll((Collection<? extends YHorizontalLayoutCellStyle>)newValue);
 				return;
-			case ExtensionModelPackage.YHORIZONTAL_LAYOUT__FILL_HORIZONTAL:
-				setFillHorizontal((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -275,9 +229,6 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 			case ExtensionModelPackage.YHORIZONTAL_LAYOUT__CELL_STYLES:
 				getCellStyles().clear();
 				return;
-			case ExtensionModelPackage.YHORIZONTAL_LAYOUT__FILL_HORIZONTAL:
-				setFillHorizontal(FILL_HORIZONTAL_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -295,8 +246,6 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 				return margin != MARGIN_EDEFAULT;
 			case ExtensionModelPackage.YHORIZONTAL_LAYOUT__CELL_STYLES:
 				return cellStyles != null && !cellStyles.isEmpty();
-			case ExtensionModelPackage.YHORIZONTAL_LAYOUT__FILL_HORIZONTAL:
-				return fillHorizontal != FILL_HORIZONTAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -356,8 +305,6 @@ public class YHorizontalLayoutImpl extends YLayoutImpl implements
 		result.append(spacing);
 		result.append(", margin: ");
 		result.append(margin);
-		result.append(", fillHorizontal: ");
-		result.append(fillHorizontal);
 		result.append(')');
 		return result.toString();
 	}

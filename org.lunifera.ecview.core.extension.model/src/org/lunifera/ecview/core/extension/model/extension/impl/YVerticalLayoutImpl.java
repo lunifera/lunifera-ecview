@@ -30,7 +30,6 @@ import org.lunifera.ecview.core.extension.model.extension.YVerticalLayoutCellSty
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YVerticalLayoutImpl#isSpacing <em>Spacing</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YVerticalLayoutImpl#isMargin <em>Margin</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YVerticalLayoutImpl#getCellStyles <em>Cell Styles</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YVerticalLayoutImpl#isFillVertical <em>Fill Vertical</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,25 +80,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 	 * @ordered
 	 */
 	protected EList<YVerticalLayoutCellStyle> cellStyles;
-
-	/**
-	 * The default value of the '{@link #isFillVertical() <em>Fill Vertical</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isFillVertical()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean FILL_VERTICAL_EDEFAULT = true;
-
-	/**
-	 * The cached value of the '{@link #isFillVertical() <em>Fill Vertical</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isFillVertical()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean fillVertical = FILL_VERTICAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -180,25 +160,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isFillVertical() {
-		return fillVertical;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFillVertical(boolean newFillVertical) {
-		boolean oldFillVertical = fillVertical;
-		fillVertical = newFillVertical;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YVERTICAL_LAYOUT__FILL_VERTICAL, oldFillVertical, fillVertical));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
@@ -222,8 +183,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 				return isMargin();
 			case ExtensionModelPackage.YVERTICAL_LAYOUT__CELL_STYLES:
 				return getCellStyles();
-			case ExtensionModelPackage.YVERTICAL_LAYOUT__FILL_VERTICAL:
-				return isFillVertical();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,9 +205,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 				getCellStyles().clear();
 				getCellStyles().addAll((Collection<? extends YVerticalLayoutCellStyle>)newValue);
 				return;
-			case ExtensionModelPackage.YVERTICAL_LAYOUT__FILL_VERTICAL:
-				setFillVertical((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -269,9 +225,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 			case ExtensionModelPackage.YVERTICAL_LAYOUT__CELL_STYLES:
 				getCellStyles().clear();
 				return;
-			case ExtensionModelPackage.YVERTICAL_LAYOUT__FILL_VERTICAL:
-				setFillVertical(FILL_VERTICAL_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -289,8 +242,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 				return margin != MARGIN_EDEFAULT;
 			case ExtensionModelPackage.YVERTICAL_LAYOUT__CELL_STYLES:
 				return cellStyles != null && !cellStyles.isEmpty();
-			case ExtensionModelPackage.YVERTICAL_LAYOUT__FILL_VERTICAL:
-				return fillVertical != FILL_VERTICAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -350,8 +301,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 		result.append(spacing);
 		result.append(", margin: ");
 		result.append(margin);
-		result.append(", fillVertical: ");
-		result.append(fillVertical);
 		result.append(')');
 		return result.toString();
 	}
