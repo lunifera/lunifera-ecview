@@ -42,6 +42,9 @@ public abstract class AbstractDisposable implements IDisposable {
 
 			// first call the dispose listener and the set disposed=true
 			notifyDisposeListeners();
+			
+			disposeListeners.clear();
+			disposeListeners = null;
 		} finally {
 			disposed = true;
 		}
