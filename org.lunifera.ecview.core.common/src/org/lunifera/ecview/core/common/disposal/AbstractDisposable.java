@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Base implementation for {@link IDisposable}. Subclasses should override {@link #internalDispose()} to dispose their
- * content.
+ * Base implementation for {@link IDisposable}. Subclasses should override
+ * {@link #internalDispose()} to dispose their content.
  */
 public abstract class AbstractDisposable implements IDisposable {
 
@@ -42,9 +42,11 @@ public abstract class AbstractDisposable implements IDisposable {
 
 			// first call the dispose listener and the set disposed=true
 			notifyDisposeListeners();
-			
-			disposeListeners.clear();
-			disposeListeners = null;
+
+			if (disposeListeners != null) {
+				disposeListeners.clear();
+				disposeListeners = null;
+			}
 		} finally {
 			disposed = true;
 		}
@@ -56,7 +58,8 @@ public abstract class AbstractDisposable implements IDisposable {
 	protected abstract void internalDispose();
 
 	/**
-	 * Checks whether the element is disposed. Throws a DisposeException is the element is disposed.
+	 * Checks whether the element is disposed. Throws a DisposeException is the
+	 * element is disposed.
 	 * 
 	 * @throws DisposeException
 	 */
@@ -101,7 +104,7 @@ public abstract class AbstractDisposable implements IDisposable {
 		}
 
 		for (IDisposable.Listener listener : disposeListeners
-			.toArray(new IDisposable.Listener[disposeListeners.size()])) {
+				.toArray(new IDisposable.Listener[disposeListeners.size()])) {
 			listener.notifyDisposed(this);
 		}
 	}
