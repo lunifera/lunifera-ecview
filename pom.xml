@@ -98,10 +98,10 @@
 				</plugins>
 			</build>
 			<modules>
-<!-- 				<module>org.lunifera.ecview.core.common.model.tests</module> -->
-<!-- 				<module>org.lunifera.ecview.core.extension.tests</module> -->
-<!-- 				<module>org.lunifera.ecview.core.databinding.tests</module> -->
-<!-- 				<module>org.lunifera.ecview.core.common.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.common.model.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.extension.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.databinding.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
 				<module>org.lunifera.ecview.core.target.kepler</module>
 				<module>org.lunifera.ecview.core.common</module>
 				<module>org.lunifera.ecview.core.common.model</module>
@@ -109,8 +109,17 @@
 				<module>org.lunifera.ecview.core.extension.editparts</module>
 				<module>org.lunifera.ecview.core.ui.e4.css.core</module>
 				<module>org.lunifera.ecview.core.ui.presentation.common</module>
-<!-- 				<module>org.lunifera.ecview.core.ui.presentation.swt</module> -->
-<!-- 				<module>org.lunifera.ecview.core.ui.presentation.swt.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.ui.presentation.swt</module> -->
+				<!-- <module>org.lunifera.ecview.core.ui.presentation.swt.tests</module> -->
+				
+				<!-- exclusive for P2 -->
+				<module>org.lunifera.ecview.core.p2</module>
+				<module>org.lunifera.ecview.core.target.kepler</module>
+
+				<!-- P2 features -->
+				<module>org.lunifera.ecview.core.feature.core</module>
+				<!-- <module>org.lunifera.ecview.core.feature.ui.presentation.swt</module> -->
+				<!-- end P2 features -->
 			</modules>
 		</profile>
 		<profile>
@@ -150,7 +159,7 @@
 
 				<!-- P2 features -->
 				<module>org.lunifera.ecview.core.feature.core</module>
-<!-- 				<module>org.lunifera.ecview.core.feature.ui.presentation.swt</module> -->
+				<!-- <module>org.lunifera.ecview.core.feature.ui.presentation.swt</module> -->
 				<!-- end P2 features -->
 
 				<!-- P2 bundles -->
@@ -167,11 +176,11 @@
 
 
 				<module>org.lunifera.ecview.core.ui.e4.css.core</module>
-<!-- 				<module>org.lunifera.ecview.core.ui.e4.css.swt</module> -->
+				<!-- <module>org.lunifera.ecview.core.ui.e4.css.swt</module> -->
 
 				<module>org.lunifera.ecview.core.ui.presentation.common</module>
-<!-- 				<module>org.lunifera.ecview.core.ui.presentation.swt</module> -->
-	<!-- <module>org.lunifera.ecview.core.example.swt</module> -->
+				<!-- <module>org.lunifera.ecview.core.ui.presentation.swt</module> -->
+				<!-- <module>org.lunifera.ecview.core.example.swt</module> -->
 
 				<!-- <module>org.lunifera.ecview.core.common.model.tests</module> -->
 				<!-- <module>org.lunifera.ecview.core.extension.tests</module> -->
