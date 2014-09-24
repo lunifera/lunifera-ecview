@@ -16,20 +16,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WidgetAssocationsService implements IWidgetAssocationsService {
+public abstract class AbstractWidgetAssocationsService<UI, MODEL> implements
+		IWidgetAssocationsService<UI, MODEL> {
 
-	private Map<Object, Object> associations = Collections
-			.synchronizedMap(new HashMap<Object, Object>());
+	protected Map<UI, MODEL> associations = Collections
+			.synchronizedMap(new HashMap<UI, MODEL>());
 
 	@Override
-	public Object getModelElement(Object uiWidget) {
+	public MODEL getModelElement(UI uiWidget) {
 		return associations.get(uiWidget);
 	}
 
 	@Override
-	public Object getWidget(Object modelElement) {
+	public UI getWidget(MODEL modelElement) {
 		synchronized (associations) {
-			for (Map.Entry<Object, Object> entry : associations.entrySet()) {
+			for (Map.Entry<UI, MODEL> entry : associations.entrySet()) {
 				if (entry.getValue() == modelElement) {
 					return entry.getKey();
 				}
@@ -39,12 +40,12 @@ public class WidgetAssocationsService implements IWidgetAssocationsService {
 	}
 
 	@Override
-	public void associate(Object uiWidget, Object modelElement) {
+	public void associate(UI uiWidget, MODEL modelElement) {
 		associations.put(uiWidget, modelElement);
 	}
 
 	@Override
-	public void remove(Object uiWidget) {
+	public void remove(UI uiWidget) {
 		associations.remove(uiWidget);
 	}
 
@@ -54,8 +55,8 @@ public class WidgetAssocationsService implements IWidgetAssocationsService {
 	}
 
 	@Override
-	public List<Object> getModelElements() {
-		return new ArrayList<Object>(associations.values());
+	public List<MODEL> getModelElements() {
+		return new ArrayList<MODEL>(associations.values());
 	}
 
 }

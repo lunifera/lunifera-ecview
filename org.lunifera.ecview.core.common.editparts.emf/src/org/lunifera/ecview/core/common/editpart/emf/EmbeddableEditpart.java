@@ -22,16 +22,13 @@ import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeBridge;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeChangeEvent;
 import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
-import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessorEditpart;
-import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityPropertiesEditpart;
-import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 import org.lunifera.ecview.core.common.presentation.DelegatingPresenterFactory;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
+import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,7 +45,6 @@ public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
 	private IWidgetPresentation<?> presentation;
 
 	private EStructuralFeature datatypeFeature;
-	private IVisibilityProcessorEditpart visibilityProcessor;
 
 	/**
 	 * The default constructor.
@@ -124,10 +120,10 @@ public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
 	}
 
 	@Override
-	public void apply(IVisibilityPropertiesEditpart properties) {
+	public void apply(IVisibilityHandler handler) {
 		IWidgetPresentation<?> presentation = getPresentation();
 		if (presentation != null) {
-			presentation.apply(properties);
+			presentation.apply(handler);
 		}
 	}
 
@@ -176,60 +172,6 @@ public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
 	}
 
 	@Override
-	public void setVisisibiltyProcessor(
-			IVisibilityProcessorEditpart visibilityProcessor) {
-		try {
-			checkDisposed();
-
-			// add the element by using the model
-			//
-			M yEmbeddable = getModel();
-			YVisibilityProcessor yVisibilityProcessor = (YVisibilityProcessor) visibilityProcessor
-					.getModel();
-			yEmbeddable.setVisibilityProcessor(yVisibilityProcessor);
-
-			// BEGIN SUPRESS CATCH EXCEPTION
-		} catch (RuntimeException e) {
-			// END SUPRESS CATCH EXCEPTION
-			LOGGER.error("{}", e);
-			throw e;
-		}
-	}
-
-	@Override
-	public IVisibilityProcessorEditpart getVisibilityProcessor() {
-		checkDisposed();
-
-		if (visibilityProcessor == null) {
-			loadVisibilityProcessor();
-		}
-		return visibilityProcessor;
-	}
-
-	/**
-	 * Loads the content of the view.
-	 */
-	protected void loadVisibilityProcessor() {
-		if (visibilityProcessor == null) {
-			YVisibilityProcessor yVisibilityProcessor = getModel()
-					.getVisibilityProcessor();
-			internalSetVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yVisibilityProcessor));
-		}
-	}
-
-	/**
-	 * May be invoked by a model change and the content of the edit part should
-	 * be set.
-	 * 
-	 * @param modelValue
-	 *            The content to be set
-	 */
-	protected void internalSetVisibilityProcessor(
-			IVisibilityProcessorEditpart visibilityProcessor) {
-		this.visibilityProcessor = visibilityProcessor;
-	}
-
-	@Override
 	protected void handleModelSet(int featureId, Notification notification) {
 		checkDisposed();
 
@@ -246,17 +188,7 @@ public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
 				registerAtDatatype();
 			}
 		} else {
-			switch (featureId) {
-			case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR:
-				YVisibilityProcessor yVisibilityProcessor = (YVisibilityProcessor) notification
-						.getNewValue();
-				IVisibilityProcessorEditpart editPart = (IVisibilityProcessorEditpart) getEditpart(yVisibilityProcessor);
-				internalSetVisibilityProcessor(editPart);
-				break;
-			default:
-				super.handleModelSet(featureId, notification);
-				break;
-			}
+			super.handleModelSet(featureId, notification);
 		}
 	}
 

@@ -8,13 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.lunifera.ecview.core.common.model.visibility.VisibilityFactory;
-import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
-import org.lunifera.ecview.core.common.model.visibility.YColorType;
-import org.lunifera.ecview.core.common.model.visibility.YDecimalValueRuleOption;
-import org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint;
+import org.lunifera.ecview.core.common.model.visibility.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,9 +54,8 @@ public class VisibilityFactoryImpl extends EFactoryImpl implements VisibilityFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case VisibilityPackage.YRULED_VISIBILITY_PROCESSOR: return createYRuledVisibilityProcessor();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR: return createYVisibilityProcessor();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES: return createYVisibilityProperties();
-			case VisibilityPackage.YVISIBILITY_RULE_BINDING_ENDPOINT: return createYVisibilityRuleBindingEndpoint();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -76,10 +69,8 @@ public class VisibilityFactoryImpl extends EFactoryImpl implements VisibilityFac
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case VisibilityPackage.YCOLOR_TYPE:
-				return createYColorTypeFromString(eDataType, initialValue);
-			case VisibilityPackage.YDECIMAL_VALUE_RULE_OPTION:
-				return createYDecimalValueRuleOptionFromString(eDataType, initialValue);
+			case VisibilityPackage.YCOLOR:
+				return createYColorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -93,10 +84,8 @@ public class VisibilityFactoryImpl extends EFactoryImpl implements VisibilityFac
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case VisibilityPackage.YCOLOR_TYPE:
-				return convertYColorTypeToString(eDataType, instanceValue);
-			case VisibilityPackage.YDECIMAL_VALUE_RULE_OPTION:
-				return convertYDecimalValueRuleOptionToString(eDataType, instanceValue);
+			case VisibilityPackage.YCOLOR:
+				return convertYColorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -107,9 +96,9 @@ public class VisibilityFactoryImpl extends EFactoryImpl implements VisibilityFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YRuledVisibilityProcessor createYRuledVisibilityProcessor() {
-		YRuledVisibilityProcessorImpl yRuledVisibilityProcessor = new YRuledVisibilityProcessorImpl();
-		return yRuledVisibilityProcessor;
+	public YVisibilityProcessor createYVisibilityProcessor() {
+		YVisibilityProcessorImpl yVisibilityProcessor = new YVisibilityProcessorImpl();
+		return yVisibilityProcessor;
 	}
 
 	/**
@@ -127,18 +116,8 @@ public class VisibilityFactoryImpl extends EFactoryImpl implements VisibilityFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YVisibilityRuleBindingEndpoint createYVisibilityRuleBindingEndpoint() {
-		YVisibilityRuleBindingEndpointImpl yVisibilityRuleBindingEndpoint = new YVisibilityRuleBindingEndpointImpl();
-		return yVisibilityRuleBindingEndpoint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YColorType createYColorTypeFromString(EDataType eDataType, String initialValue) {
-		YColorType result = YColorType.get(initialValue);
+	public YColor createYColorFromString(EDataType eDataType, String initialValue) {
+		YColor result = YColor.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -148,27 +127,7 @@ public class VisibilityFactoryImpl extends EFactoryImpl implements VisibilityFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertYColorTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YDecimalValueRuleOption createYDecimalValueRuleOptionFromString(EDataType eDataType, String initialValue) {
-		YDecimalValueRuleOption result = YDecimalValueRuleOption.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertYDecimalValueRuleOptionToString(EDataType eDataType, Object instanceValue) {
+	public String convertYColorToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

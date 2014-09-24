@@ -15,6 +15,7 @@ import java.util.concurrent.Future;
 
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
+import org.lunifera.ecview.core.common.visibility.IVisibilityManager;
 
 /**
  * Context containing information about the current {@link IViewEditpart}
@@ -48,6 +49,13 @@ public interface IViewContext extends IContext {
 	 * @return viewEditpart
 	 */
 	IViewEditpart getViewEditpart();
+
+	/**
+	 * Returns the visibility manager.
+	 * 
+	 * @return
+	 */
+	IVisibilityManager getVisibilityManager();
 
 	/**
 	 * Returns the view set context of the parent edit part or <code>null</code>

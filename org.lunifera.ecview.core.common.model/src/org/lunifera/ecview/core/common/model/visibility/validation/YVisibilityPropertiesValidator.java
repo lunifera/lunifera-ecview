@@ -25,4 +25,6 @@ public interface YVisibilityPropertiesValidator {
 	boolean validateUnderline(boolean value);
 	boolean validateBackgroundColor(YColor value);
 	boolean validateForegroundColor(YColor value);
+	boolean validateBackgroundColorCode(String value);
+	boolean validateForegroundColorCode(String value);
 }

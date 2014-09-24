@@ -5,6 +5,7 @@ package org.lunifera.ecview.core.common.model.binding.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.lunifera.ecview.core.common.model.binding.*;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
@@ -175,6 +176,15 @@ public class BindingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BindingPackage.YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT: {
+				YVisibilityProcessorValueBindingEndpoint yVisibilityProcessorValueBindingEndpoint = (YVisibilityProcessorValueBindingEndpoint)theEObject;
+				T result = caseYVisibilityProcessorValueBindingEndpoint(yVisibilityProcessorValueBindingEndpoint);
+				if (result == null) result = caseYValueBindingEndpoint(yVisibilityProcessorValueBindingEndpoint);
+				if (result == null) result = caseYBindingEndpoint(yVisibilityProcessorValueBindingEndpoint);
+				if (result == null) result = caseYElement(yVisibilityProcessorValueBindingEndpoint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -341,6 +351,21 @@ public class BindingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYECViewModelListBindingEndpoint(YECViewModelListBindingEndpoint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YVisibility Processor Value Binding Endpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YVisibility Processor Value Binding Endpoint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYVisibilityProcessorValueBindingEndpoint(YVisibilityProcessorValueBindingEndpoint object) {
 		return null;
 	}
 

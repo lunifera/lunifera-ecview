@@ -20,8 +20,9 @@ import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
 import org.lunifera.ecview.core.common.services.IWidgetAssocationsService;
-import org.lunifera.ecview.core.common.services.WidgetAssocationsService;
 import org.lunifera.ecview.core.common.tooling.IWidgetMouseClickService;
+import org.lunifera.ecview.core.common.visibility.IVisibilityManager;
+import org.lunifera.ecview.core.common.visibility.impl.VisibilityManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,6 +34,7 @@ public class ViewContext extends DisposableContext implements IViewContext {
 	private static final Logger logger = LoggerFactory
 			.getLogger(ViewContext.class);
 
+	private VisibilityManager visibilityManager;
 	private final IViewEditpart viewEditpart;
 	private Object rootLayout;
 	private String presentationURI;
@@ -87,7 +89,8 @@ public class ViewContext extends DisposableContext implements IViewContext {
 			registerService(selector, service);
 			return (S) service;
 		} else if (selector.equals(IWidgetAssocationsService.ID)) {
-			WidgetAssocationsService service = new WidgetAssocationsService();
+			IWidgetAssocationsService<?, ?> service = getViewEditpart()
+					.createService(IWidgetAssocationsService.class);
 			registerService(selector, service);
 			return (S) service;
 		} else {
@@ -124,6 +127,14 @@ public class ViewContext extends DisposableContext implements IViewContext {
 		checkDisposed();
 
 		return viewEditpart;
+	}
+
+	@Override
+	public IVisibilityManager getVisibilityManager() {
+		if (visibilityManager == null) {
+			visibilityManager = new VisibilityManager(this);
+		}
+		return visibilityManager;
 	}
 
 	/**
@@ -192,7 +203,7 @@ public class ViewContext extends DisposableContext implements IViewContext {
 
 			// render the UI
 			editPart.render(parameter);
-		} catch(Exception ex){
+		} catch (Exception ex) {
 			logger.error("{}", ex);
 		} finally {
 			rendered = true;

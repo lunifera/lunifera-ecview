@@ -25,6 +25,7 @@ import org.lunifera.ecview.core.common.model.binding.YListBinding;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl;
 import org.lunifera.ecview.core.common.model.datatypes.DatatypesPackage;
@@ -117,6 +118,13 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 	 * @generated
 	 */
 	private EClass yecViewModelListBindingEndpointEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yVisibilityProcessorValueBindingEndpointEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -509,6 +517,33 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getYVisibilityProcessorValueBindingEndpoint() {
+		return yVisibilityProcessorValueBindingEndpointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYVisibilityProcessorValueBindingEndpoint_ProcessorInstance() {
+		return (EAttribute)yVisibilityProcessorValueBindingEndpointEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYVisibilityProcessorValueBindingEndpoint_Property() {
+		return (EAttribute)yVisibilityProcessorValueBindingEndpointEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYBindingUpdateStrategy() {
 		return yBindingUpdateStrategyEEnum;
 	}
@@ -636,6 +671,10 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 		createEAttribute(yecViewModelListBindingEndpointEClass, YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT__TYPE_QUALIFIED_NAME);
 		createEAttribute(yecViewModelListBindingEndpointEClass, YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT__EMF_NS_URI);
 
+		yVisibilityProcessorValueBindingEndpointEClass = createEClass(YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT);
+		createEAttribute(yVisibilityProcessorValueBindingEndpointEClass, YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__PROCESSOR_INSTANCE);
+		createEAttribute(yVisibilityProcessorValueBindingEndpointEClass, YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__PROPERTY);
+
 		// Create enums
 		yBindingUpdateStrategyEEnum = createEEnum(YBINDING_UPDATE_STRATEGY);
 	}
@@ -683,6 +722,7 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 		yEnumListBindingEndpointEClass.getESuperTypes().add(this.getYListBindingEndpoint());
 		yecViewModelValueBindingEndpointEClass.getESuperTypes().add(this.getYValueBindingEndpoint());
 		yecViewModelListBindingEndpointEClass.getESuperTypes().add(this.getYListBindingEndpoint());
+		yVisibilityProcessorValueBindingEndpointEClass.getESuperTypes().add(this.getYValueBindingEndpoint());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yBindingSetEClass, YBindingSet.class, "YBindingSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -790,6 +830,10 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 		initEAttribute(getYECViewModelListBindingEndpoint_Type(), g1, "type", null, 0, 1, YECViewModelListBindingEndpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYECViewModelListBindingEndpoint_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YECViewModelListBindingEndpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYECViewModelListBindingEndpoint_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YECViewModelListBindingEndpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yVisibilityProcessorValueBindingEndpointEClass, YVisibilityProcessorValueBindingEndpoint.class, "YVisibilityProcessorValueBindingEndpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYVisibilityProcessorValueBindingEndpoint_ProcessorInstance(), ecorePackage.getEJavaObject(), "processorInstance", null, 0, 1, YVisibilityProcessorValueBindingEndpoint.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYVisibilityProcessorValueBindingEndpoint_Property(), ecorePackage.getEString(), "property", null, 0, 1, YVisibilityProcessorValueBindingEndpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(yBindingUpdateStrategyEEnum, YBindingUpdateStrategy.class, "YBindingUpdateStrategy");

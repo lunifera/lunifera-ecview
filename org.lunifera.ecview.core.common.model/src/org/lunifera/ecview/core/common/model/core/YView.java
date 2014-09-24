@@ -12,6 +12,7 @@ package org.lunifera.ecview.core.common.model.core;
 
 import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.binding.YBindingSet;
+import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -29,6 +30,7 @@ import org.lunifera.ecview.core.common.model.binding.YBindingSet;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getDialogs <em>Dialogs</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getDeviceType <em>Device Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getContentAlignment <em>Content Alignment</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getVisibilityProcessors <em>Visibility Processors</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,8 +38,7 @@ import org.lunifera.ecview.core.common.model.binding.YBindingSet;
  * @model
  * @generated
  */
-public interface YView extends YElement, YCssAble, YMarginable,
-		YVisibilityProcessable {
+public interface YView extends YElement, YCssAble, YMarginable {
 	/**
 	 * Returns the value of the '<em><b>View Name</b></em>' attribute. <!--
 	 * begin-user-doc -->
@@ -240,6 +241,22 @@ public interface YView extends YElement, YCssAble, YMarginable,
 	 * @generated
 	 */
 	void setContentAlignment(YAlignment value);
+
+	/**
+	 * Returns the value of the '<em><b>Visibility Processors</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Visibility Processors</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Visibility Processors</em>' containment reference list.
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_VisibilityProcessors()
+	 * @model containment="true" resolveProxies="true"
+	 * @generated
+	 */
+	EList<YVisibilityProcessor> getVisibilityProcessors();
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

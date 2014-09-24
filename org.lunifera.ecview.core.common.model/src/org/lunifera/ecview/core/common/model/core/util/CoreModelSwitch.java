@@ -17,40 +17,6 @@ import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.*;
-import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
-import org.lunifera.ecview.core.common.model.core.YAction;
-import org.lunifera.ecview.core.common.model.core.YActivateable;
-import org.lunifera.ecview.core.common.model.core.YActivatedEndpoint;
-import org.lunifera.ecview.core.common.model.core.YBeanSlot;
-import org.lunifera.ecview.core.common.model.core.YBeanSlotListBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YBeanSlotValueBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YBindable;
-import org.lunifera.ecview.core.common.model.core.YCollectionBindable;
-import org.lunifera.ecview.core.common.model.core.YContextValueBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YCssAble;
-import org.lunifera.ecview.core.common.model.core.YDtWrapper;
-import org.lunifera.ecview.core.common.model.core.YEditable;
-import org.lunifera.ecview.core.common.model.core.YElement;
-import org.lunifera.ecview.core.common.model.core.YEmbeddable;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableCollectionEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableMultiSelectionEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableSelectionEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEnable;
-import org.lunifera.ecview.core.common.model.core.YField;
-import org.lunifera.ecview.core.common.model.core.YHeightable;
-import org.lunifera.ecview.core.common.model.core.YLayout;
-import org.lunifera.ecview.core.common.model.core.YMarginable;
-import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
-import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
-import org.lunifera.ecview.core.common.model.core.YSpacingable;
-import org.lunifera.ecview.core.common.model.core.YValueBindable;
-import org.lunifera.ecview.core.common.model.core.YView;
-import org.lunifera.ecview.core.common.model.core.YViewSet;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
-import org.lunifera.ecview.core.common.model.core.YVisibleable;
-import org.lunifera.ecview.core.common.model.core.YWidthable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
 import org.lunifera.ecview.core.common.model.datatypes.YDtBase;
 
@@ -124,7 +90,6 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(yLayout);
 				if (result == null) result = caseYCssAble(yLayout);
 				if (result == null) result = caseYVisibleable(yLayout);
-				if (result == null) result = caseYVisibilityProcessable(yLayout);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -137,7 +102,6 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(yField);
 				if (result == null) result = caseYCssAble(yField);
 				if (result == null) result = caseYVisibleable(yField);
-				if (result == null) result = caseYVisibilityProcessable(yField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -147,7 +111,6 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(yView);
 				if (result == null) result = caseYCssAble(yView);
 				if (result == null) result = caseYMarginable(yView);
-				if (result == null) result = caseYVisibilityProcessable(yView);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -171,7 +134,6 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(yEmbeddable);
 				if (result == null) result = caseYCssAble(yEmbeddable);
 				if (result == null) result = caseYVisibleable(yEmbeddable);
-				if (result == null) result = caseYVisibilityProcessable(yEmbeddable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -248,7 +210,6 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(yAction);
 				if (result == null) result = caseYCssAble(yAction);
 				if (result == null) result = caseYVisibleable(yAction);
-				if (result == null) result = caseYVisibilityProcessable(yAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -375,12 +336,6 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYDatatype(yDtWrapper);
 				if (result == null) result = caseYDtBase(yDtWrapper);
 				if (result == null) result = caseYElement(yDtWrapper);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CoreModelPackage.YVISIBILITY_PROCESSABLE: {
-				YVisibilityProcessable yVisibilityProcessable = (YVisibilityProcessable)theEObject;
-				T result = caseYVisibilityProcessable(yVisibilityProcessable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -902,21 +857,6 @@ public class CoreModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYDtWrapper(YDtWrapper object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YVisibility Processable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YVisibility Processable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYVisibilityProcessable(YVisibilityProcessable object) {
 		return null;
 	}
 

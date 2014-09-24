@@ -2,8 +2,9 @@
  */
 package org.lunifera.ecview.core.common.model.visibility;
 
+import org.eclipse.emf.common.util.EList;
+import org.lunifera.ecview.core.common.model.binding.YBinding;
 import org.lunifera.ecview.core.common.model.core.YElement;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,68 +14,100 @@ import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getOnMatch <em>On Match</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDataUsed <em>Data Used</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getTriggersOn <em>Triggers On</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegate <em>Delegate</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegateQualifiedName <em>Delegate Qualified Name</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProcessor()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface YVisibilityProcessor extends YElement {
 	/**
-	 * Returns the value of the '<em><b>On Match</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Data Used</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.binding.YBinding}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>On Match</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Data Used</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>On Match</em>' containment reference.
-	 * @see #setOnMatch(YVisibilityProperties)
-	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProcessor_OnMatch()
-	 * @model containment="true" resolveProxies="true" required="true"
+	 * @return the value of the '<em>Data Used</em>' containment reference list.
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProcessor_DataUsed()
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
-	YVisibilityProperties getOnMatch();
+	EList<YBinding> getDataUsed();
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getOnMatch <em>On Match</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>On Match</em>' containment reference.
-	 * @see #getOnMatch()
-	 * @generated
-	 */
-	void setOnMatch(YVisibilityProperties value);
-
-	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable#getVisibilityProcessor <em>Visibility Processor</em>}'.
+	 * Returns the value of the '<em><b>Triggers On</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.binding.YBinding}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Triggers On</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent</em>' container reference.
-	 * @see #setParent(YVisibilityProcessable)
-	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProcessor_Parent()
-	 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable#getVisibilityProcessor
-	 * @model opposite="visibilityProcessor" required="true" transient="false"
+	 * @return the value of the '<em>Triggers On</em>' containment reference list.
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProcessor_TriggersOn()
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
-	YVisibilityProcessable getParent();
+	EList<YBinding> getTriggersOn();
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getParent <em>Parent</em>}' container reference.
+	 * Returns the value of the '<em><b>Delegate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Delegate</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' container reference.
-	 * @see #getParent()
+	 * @return the value of the '<em>Delegate</em>' attribute.
+	 * @see #setDelegate(Class)
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProcessor_Delegate()
+	 * @model
 	 * @generated
 	 */
-	void setParent(YVisibilityProcessable value);
+	Class<?> getDelegate();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegate <em>Delegate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delegate</em>' attribute.
+	 * @see #getDelegate()
+	 * @generated
+	 */
+	void setDelegate(Class<?> value);
+
+	/**
+	 * Returns the value of the '<em><b>Delegate Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Delegate Qualified Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delegate Qualified Name</em>' attribute.
+	 * @see #setDelegateQualifiedName(String)
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProcessor_DelegateQualifiedName()
+	 * @model
+	 * @generated
+	 */
+	String getDelegateQualifiedName();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegateQualifiedName <em>Delegate Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delegate Qualified Name</em>' attribute.
+	 * @see #getDelegateQualifiedName()
+	 * @generated
+	 */
+	void setDelegateQualifiedName(String value);
 
 } // YVisibilityProcessor

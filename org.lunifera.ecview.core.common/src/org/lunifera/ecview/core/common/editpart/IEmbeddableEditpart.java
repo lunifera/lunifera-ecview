@@ -64,21 +64,6 @@ public interface IEmbeddableEditpart extends IElementEditpart,
 	<A extends IWidgetPresentation<?>> A getPresentation();
 
 	/**
-	 * Sets the visibility processor.
-	 * 
-	 * @param visibilityProcessor
-	 */
-	void setVisisibiltyProcessor(
-			IVisibilityProcessorEditpart visibilityProcessor);
-
-	/**
-	 * Returns the visibility processor.
-	 * 
-	 * @return
-	 */
-	IVisibilityProcessorEditpart getVisibilityProcessor();
-
-	/**
 	 * Requests rendering of the current editpart. This method will forward the
 	 * request to the parent if available and the parent will handle the steps
 	 * required to render the editpart properly.

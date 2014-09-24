@@ -22,6 +22,8 @@ import org.lunifera.ecview.core.common.model.core.YElement;
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#isUnderline <em>Underline</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColor <em>Background Color</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColor <em>Foreground Color</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColorCode <em>Background Color Code</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColorCode <em>Foreground Color Code</em>}</li>
  * </ul>
  * </p>
  *
@@ -239,55 +241,113 @@ public interface YVisibilityProperties extends YElement {
 	void setUnderline(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Background Color</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.lunifera.ecview.core.common.model.visibility.YColor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Background Color</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Background Color</em>' containment reference.
+	 * @return the value of the '<em>Background Color</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YColor
 	 * @see #setBackgroundColor(YColor)
 	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProperties_BackgroundColor()
-	 * @model containment="true" resolveProxies="true"
+	 * @model
 	 * @generated
 	 */
 	YColor getBackgroundColor();
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColor <em>Background Color</em>}' containment reference.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColor <em>Background Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Background Color</em>' containment reference.
+	 * @param value the new value of the '<em>Background Color</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YColor
 	 * @see #getBackgroundColor()
 	 * @generated
 	 */
 	void setBackgroundColor(YColor value);
 
 	/**
-	 * Returns the value of the '<em><b>Foreground Color</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Foreground Color</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.lunifera.ecview.core.common.model.visibility.YColor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Foreground Color</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Foreground Color</em>' containment reference.
+	 * @return the value of the '<em>Foreground Color</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YColor
 	 * @see #setForegroundColor(YColor)
 	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProperties_ForegroundColor()
-	 * @model containment="true" resolveProxies="true"
+	 * @model
 	 * @generated
 	 */
 	YColor getForegroundColor();
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColor <em>Foreground Color</em>}' containment reference.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColor <em>Foreground Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Foreground Color</em>' containment reference.
+	 * @param value the new value of the '<em>Foreground Color</em>' attribute.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YColor
 	 * @see #getForegroundColor()
 	 * @generated
 	 */
 	void setForegroundColor(YColor value);
+
+	/**
+	 * Returns the value of the '<em><b>Background Color Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Background Color Code</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Background Color Code</em>' attribute.
+	 * @see #setBackgroundColorCode(String)
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProperties_BackgroundColorCode()
+	 * @model
+	 * @generated
+	 */
+	String getBackgroundColorCode();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColorCode <em>Background Color Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Background Color Code</em>' attribute.
+	 * @see #getBackgroundColorCode()
+	 * @generated
+	 */
+	void setBackgroundColorCode(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Foreground Color Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Foreground Color Code</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Foreground Color Code</em>' attribute.
+	 * @see #setForegroundColorCode(String)
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProperties_ForegroundColorCode()
+	 * @model
+	 * @generated
+	 */
+	String getForegroundColorCode();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColorCode <em>Foreground Color Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Foreground Color Code</em>' attribute.
+	 * @see #getForegroundColorCode()
+	 * @generated
+	 */
+	void setForegroundColorCode(String value);
 
 } // YVisibilityProperties

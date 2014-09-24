@@ -10,8 +10,6 @@
  */
 package org.lunifera.ecview.core.common.services;
 
-import org.lunifera.ecview.core.common.binding.IECViewBindingManager;
-
 /**
  * The service registry. <br>
  * Not intended to be subclassed.

@@ -3,7 +3,6 @@
 package org.lunifera.ecview.core.common.model.core.impl;
 
 import java.net.URI;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -55,7 +54,6 @@ import org.lunifera.ecview.core.common.model.core.YUnit;
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
 import org.lunifera.ecview.core.common.model.core.YVisibleable;
 import org.lunifera.ecview.core.common.model.core.YWidthable;
 import org.lunifera.ecview.core.common.model.core.listeners.YValueChangeListener;
@@ -303,13 +301,6 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * @generated
 	 */
 	private EClass yDtWrapperEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass yVisibilityProcessableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -609,6 +600,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EAttribute getYView_ContentAlignment() {
 		return (EAttribute)yViewEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYView_VisibilityProcessors() {
+		return (EReference)yViewEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -1327,24 +1327,6 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getYVisibilityProcessable() {
-		return yVisibilityProcessableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getYVisibilityProcessable_VisibilityProcessor() {
-		return (EReference)yVisibilityProcessableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getYCommand() {
 		return yCommandEClass;
 	}
@@ -1497,6 +1479,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEReference(yViewEClass, YVIEW__DIALOGS);
 		createEAttribute(yViewEClass, YVIEW__DEVICE_TYPE);
 		createEAttribute(yViewEClass, YVIEW__CONTENT_ALIGNMENT);
+		createEReference(yViewEClass, YVIEW__VISIBILITY_PROCESSORS);
 
 		yViewSetEClass = createEClass(YVIEW_SET);
 		createEReference(yViewSetEClass, YVIEW_SET__VIEWS);
@@ -1606,9 +1589,6 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 
 		yDtWrapperEClass = createEClass(YDT_WRAPPER);
 
-		yVisibilityProcessableEClass = createEClass(YVISIBILITY_PROCESSABLE);
-		createEReference(yVisibilityProcessableEClass, YVISIBILITY_PROCESSABLE__VISIBILITY_PROCESSOR);
-
 		yCommandEClass = createEClass(YCOMMAND);
 
 		yCommandSetEClass = createEClass(YCOMMAND_SET);
@@ -1655,8 +1635,8 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		// Obtain other dependent packages
 		ValidationPackage theValidationPackage = (ValidationPackage)EPackage.Registry.INSTANCE.getEPackage(ValidationPackage.eNS_URI);
 		BindingPackage theBindingPackage = (BindingPackage)EPackage.Registry.INSTANCE.getEPackage(BindingPackage.eNS_URI);
-		DatatypesPackage theDatatypesPackage = (DatatypesPackage)EPackage.Registry.INSTANCE.getEPackage(DatatypesPackage.eNS_URI);
 		VisibilityPackage theVisibilityPackage = (VisibilityPackage)EPackage.Registry.INSTANCE.getEPackage(VisibilityPackage.eNS_URI);
+		DatatypesPackage theDatatypesPackage = (DatatypesPackage)EPackage.Registry.INSTANCE.getEPackage(DatatypesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1670,13 +1650,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yViewEClass.getESuperTypes().add(this.getYElement());
 		yViewEClass.getESuperTypes().add(this.getYCssAble());
 		yViewEClass.getESuperTypes().add(this.getYMarginable());
-		yViewEClass.getESuperTypes().add(this.getYVisibilityProcessable());
 		yViewSetEClass.getESuperTypes().add(this.getYElement());
 		yBeanSlotEClass.getESuperTypes().add(this.getYBindable());
 		yEmbeddableEClass.getESuperTypes().add(this.getYElement());
 		yEmbeddableEClass.getESuperTypes().add(this.getYCssAble());
 		yEmbeddableEClass.getESuperTypes().add(this.getYVisibleable());
-		yEmbeddableEClass.getESuperTypes().add(this.getYVisibilityProcessable());
 		yDialogEClass.getESuperTypes().add(this.getYElement());
 		yDialogEClass.getESuperTypes().add(this.getYValueBindable());
 		yDialogEClass.getESuperTypes().add(this.getYCssAble());
@@ -1735,6 +1713,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEReference(getYView_Dialogs(), this.getYDialog(), null, "dialogs", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_DeviceType(), this.getYDeviceType(), "deviceType", "IDE", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_ContentAlignment(), this.getYAlignment(), "contentAlignment", "FILL_FILL", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYView_VisibilityProcessors(), theVisibilityPackage.getYVisibilityProcessor(), null, "visibilityProcessors", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yViewEClass, theBindingPackage.getYBindingSet(), "getOrCreateBindingSet", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1868,9 +1847,6 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEReference(getYActivatedEndpoint_Element(), this.getYActivateable(), null, "element", null, 1, 1, YActivatedEndpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yDtWrapperEClass, YDtWrapper.class, "YDtWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(yVisibilityProcessableEClass, YVisibilityProcessable.class, "YVisibilityProcessable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getYVisibilityProcessable_VisibilityProcessor(), theVisibilityPackage.getYVisibilityProcessor(), theVisibilityPackage.getYVisibilityProcessor_Parent(), "visibilityProcessor", null, 0, 1, YVisibilityProcessable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yCommandEClass, YCommand.class, "YCommand", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

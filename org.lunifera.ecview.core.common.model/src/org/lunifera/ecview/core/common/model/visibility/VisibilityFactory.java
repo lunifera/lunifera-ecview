@@ -22,13 +22,13 @@ public interface VisibilityFactory extends EFactory {
 	VisibilityFactory eINSTANCE = org.lunifera.ecview.core.common.model.visibility.impl.VisibilityFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>YRuled Visibility Processor</em>'.
+	 * Returns a new object of class '<em>YVisibility Processor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>YRuled Visibility Processor</em>'.
+	 * @return a new object of class '<em>YVisibility Processor</em>'.
 	 * @generated
 	 */
-	YRuledVisibilityProcessor createYRuledVisibilityProcessor();
+	YVisibilityProcessor createYVisibilityProcessor();
 
 	/**
 	 * Returns a new object of class '<em>YVisibility Properties</em>'.
@@ -38,15 +38,6 @@ public interface VisibilityFactory extends EFactory {
 	 * @generated
 	 */
 	YVisibilityProperties createYVisibilityProperties();
-
-	/**
-	 * Returns a new object of class '<em>YVisibility Rule Binding Endpoint</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>YVisibility Rule Binding Endpoint</em>'.
-	 * @generated
-	 */
-	YVisibilityRuleBindingEndpoint createYVisibilityRuleBindingEndpoint();
 
 	/**
 	 * Returns the package supported by this factory.

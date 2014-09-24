@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.lunifera.ecview.core.common.model.binding.*;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
@@ -72,6 +73,7 @@ public class BindingFactoryImpl extends EFactoryImpl implements BindingFactory {
 			case BindingPackage.YENUM_LIST_BINDING_ENDPOINT: return createYEnumListBindingEndpoint();
 			case BindingPackage.YEC_VIEW_MODEL_VALUE_BINDING_ENDPOINT: return createYECViewModelValueBindingEndpoint();
 			case BindingPackage.YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT: return createYECViewModelListBindingEndpoint();
+			case BindingPackage.YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT: return createYVisibilityProcessorValueBindingEndpoint();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -175,6 +177,16 @@ public class BindingFactoryImpl extends EFactoryImpl implements BindingFactory {
 	public YECViewModelListBindingEndpoint createYECViewModelListBindingEndpoint() {
 		YECViewModelListBindingEndpointImpl yecViewModelListBindingEndpoint = new YECViewModelListBindingEndpointImpl();
 		return yecViewModelListBindingEndpoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YVisibilityProcessorValueBindingEndpoint createYVisibilityProcessorValueBindingEndpoint() {
+		YVisibilityProcessorValueBindingEndpointImpl yVisibilityProcessorValueBindingEndpoint = new YVisibilityProcessorValueBindingEndpointImpl();
+		return yVisibilityProcessorValueBindingEndpoint;
 	}
 
 	/**

@@ -2,163 +2,410 @@
  */
 package org.lunifera.ecview.core.common.model.visibility;
 
-import org.eclipse.emf.ecore.EObject;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>YColor</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YColor#getRed <em>Red</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YColor#getGreen <em>Green</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YColor#getBlue <em>Blue</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YColor#getThemeId <em>Theme Id</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YColor#getType <em>Type</em>}</li>
- * </ul>
- * </p>
- *
  * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYColor()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface YColor extends EObject {
+public enum YColor implements Enumerator
+{
 	/**
-	 * Returns the value of the '<em><b>Red</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
+	 * The '<em><b>UNDEFINED</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNDEFINED_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNDEFINED(0, "UNDEFINED", "UNDEFINED"),
+	/**
+	 * The '<em><b>GREEN</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GREEN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	GREEN(1, "GREEN", "green"),
+	/**
+	 * The '<em><b>BLUE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #BLUE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	BLUE(2, "BLUE", "blue"),
+	/**
+	 * The '<em><b>YELLOW</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #YELLOW_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	YELLOW(3, "YELLOW", "yellow"),
+	/**
+	 * The '<em><b>RED</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RED_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	RED(4, "RED", "red"),
+	/**
+	 * The '<em><b>BLACK</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #BLACK_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	BLACK(5, "BLACK", "black"),
+	/**
+	 * The '<em><b>WHITE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #WHITE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	WHITE(6, "WHITE", "white"),
+	/**
+	 * The '<em><b>GRAY</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GRAY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	GRAY(7, "GRAY", "gray"),
+	/**
+	 * The '<em><b>LIGHT GRAY</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LIGHT_GRAY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	LIGHT_GRAY(8, "LIGHT_GRAY", "light-gray"), /**
+	 * The '<em><b>DARK GRAY</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DARK_GRAY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DARK_GRAY(9, "DARK_GRAY", "dark-gray");
+	/**
+	 * The '<em><b>UNDEFINED</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Red</em>' attribute isn't clear,
+	 * If the meaning of '<em><b>UNDEFINED</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Red</em>' attribute.
-	 * @see #setRed(int)
-	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYColor_Red()
-	 * @model default="0"
-	 * @generated
-	 */
-	int getRed();
-
-	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getRed <em>Red</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Red</em>' attribute.
-	 * @see #getRed()
-	 * @generated
-	 */
-	void setRed(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Green</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Green</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Green</em>' attribute.
-	 * @see #setGreen(int)
-	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYColor_Green()
-	 * @model default="0"
-	 * @generated
-	 */
-	int getGreen();
-
-	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getGreen <em>Green</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Green</em>' attribute.
-	 * @see #getGreen()
-	 * @generated
-	 */
-	void setGreen(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Blue</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Blue</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Blue</em>' attribute.
-	 * @see #setBlue(int)
-	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYColor_Blue()
-	 * @model default="0"
-	 * @generated
-	 */
-	int getBlue();
-
-	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getBlue <em>Blue</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Blue</em>' attribute.
-	 * @see #getBlue()
-	 * @generated
-	 */
-	void setBlue(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Theme Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Theme Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Theme Id</em>' attribute.
-	 * @see #setThemeId(String)
-	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYColor_ThemeId()
+	 * @see #UNDEFINED
 	 * @model
 	 * @generated
+	 * @ordered
 	 */
-	String getThemeId();
+	public static final int UNDEFINED_VALUE = 0;
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getThemeId <em>Theme Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Theme Id</em>' attribute.
-	 * @see #getThemeId()
-	 * @generated
-	 */
-	void setThemeId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.lunifera.ecview.core.common.model.visibility.YColorType}.
+	 * The '<em><b>GREEN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * If the meaning of '<em><b>GREEN</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColorType
-	 * @see #setType(YColorType)
-	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYColor_Type()
-	 * @model required="true"
+	 * @see #GREEN
+	 * @model literal="green"
 	 * @generated
+	 * @ordered
 	 */
-	YColorType getType();
+	public static final int GREEN_VALUE = 1;
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getType <em>Type</em>}' attribute.
+	 * The '<em><b>BLUE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>BLUE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #BLUE
+	 * @model literal="blue"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int BLUE_VALUE = 2;
+
+	/**
+	 * The '<em><b>YELLOW</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>YELLOW</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #YELLOW
+	 * @model literal="yellow"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int YELLOW_VALUE = 3;
+
+	/**
+	 * The '<em><b>RED</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>RED</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #RED
+	 * @model literal="red"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RED_VALUE = 4;
+
+	/**
+	 * The '<em><b>BLACK</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>BLACK</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #BLACK
+	 * @model literal="black"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int BLACK_VALUE = 5;
+
+	/**
+	 * The '<em><b>WHITE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>WHITE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #WHITE
+	 * @model literal="white"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int WHITE_VALUE = 6;
+
+	/**
+	 * The '<em><b>GRAY</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>GRAY</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #GRAY
+	 * @model literal="gray"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int GRAY_VALUE = 7;
+
+	/**
+	 * The '<em><b>LIGHT GRAY</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>LIGHT GRAY</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #LIGHT_GRAY
+	 * @model literal="light-gray"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LIGHT_GRAY_VALUE = 8;
+
+	/**
+	 * The '<em><b>DARK GRAY</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DARK GRAY</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DARK_GRAY
+	 * @model literal="dark-gray"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DARK_GRAY_VALUE = 9;
+
+	/**
+	 * An array of all the '<em><b>YColor</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColorType
-	 * @see #getType()
 	 * @generated
 	 */
-	void setType(YColorType value);
+	private static final YColor[] VALUES_ARRAY =
+		new YColor[] {
+			UNDEFINED,
+			GREEN,
+			BLUE,
+			YELLOW,
+			RED,
+			BLACK,
+			WHITE,
+			GRAY,
+			LIGHT_GRAY,
+			DARK_GRAY,
+		};
 
-} // YColor
+	/**
+	 * A public read-only list of all the '<em><b>YColor</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<YColor> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
+	/**
+	 * Returns the '<em><b>YColor</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static YColor get(String literal) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			YColor result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>YColor</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static YColor getByName(String name) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			YColor result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>YColor</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static YColor get(int value) {
+		switch (value) {
+			case UNDEFINED_VALUE: return UNDEFINED;
+			case GREEN_VALUE: return GREEN;
+			case BLUE_VALUE: return BLUE;
+			case YELLOW_VALUE: return YELLOW;
+			case RED_VALUE: return RED;
+			case BLACK_VALUE: return BLACK;
+			case WHITE_VALUE: return WHITE;
+			case GRAY_VALUE: return GRAY;
+			case LIGHT_GRAY_VALUE: return LIGHT_GRAY;
+			case DARK_GRAY_VALUE: return DARK_GRAY;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final int value;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String name;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String literal;
+
+	/**
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private YColor(int value, String name, String literal) {
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+	  return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+	  return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLiteral() {
+	  return literal;
+	}
+
+	/**
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return literal;
+	}
+}

@@ -12,26 +12,42 @@ package org.lunifera.ecview.core.common.services;
 
 import java.util.List;
 
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+
 /**
  * Is used to associate widgets with their model elements.
  */
-public interface IWidgetAssocationsService extends IUiKitBasedService {
+public interface IWidgetAssocationsService<UI, MODEL> extends IUiKitBasedService {
 
 	public static final String ID = IWidgetAssocationsService.class.getName();
 
 	/**
 	 * Returns the model element for the given ui widget.
 	 * 
+	 * @param model
+	 */
+	MODEL getModelElement(UI uiWidget);
+
+	/**
+	 * Returns the model element for the given id.
+	 * 
 	 * @param uiWidget
 	 */
-	Object getModelElement(Object uiWidget);
-	
+	MODEL getModelElement(String id);
+
+	/**
+	 * Returns the editpart for the given id.
+	 * 
+	 * @param editpart
+	 */
+	IElementEditpart getEditpart(String id);
+
 	/**
 	 * Returns the widget for the given model element.
 	 * 
 	 * @param modelElement
 	 */
-	Object getWidget(Object modelElement);
+	UI getWidget(MODEL modelElement);
 
 	/**
 	 * Associates the uiWidget with the given model element. One model element
@@ -40,19 +56,19 @@ public interface IWidgetAssocationsService extends IUiKitBasedService {
 	 * @param uiWidget
 	 * @param modelElement
 	 */
-	void associate(Object uiWidget, Object modelElement);
+	void associate(UI uiWidget, MODEL modelElement);
 
 	/**
 	 * Removes the association for the given uiWidget.
 	 * 
 	 * @param uiWidget
 	 */
-	void remove(Object uiWidget);
+	void remove(UI uiWidget);
 
 	/**
 	 * Returns all model elements.
 	 */
-	List<Object> getModelElements();
+	List<MODEL> getModelElements();
 
 	/**
 	 * Clears all associations.

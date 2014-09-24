@@ -10,6 +10,8 @@
  */
 package org.lunifera.ecview.core.common.editpart.emf;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -32,6 +34,7 @@ import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindingEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindingSetEditpart;
+import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessorEditpart;
 import org.lunifera.ecview.core.common.model.binding.YBindingSet;
 import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
@@ -42,6 +45,7 @@ import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
+import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 import org.lunifera.ecview.core.common.notification.ILifecycleEvent;
 import org.lunifera.ecview.core.common.notification.ILifecycleHandler;
 import org.lunifera.ecview.core.common.notification.ILifecycleService;
@@ -69,6 +73,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	private IBindingSetEditpart bindingSet;
 	private ICommandSetEditpart commandSet;
 	private Set<IDialogEditpart> openDialogs;
+	private List<IVisibilityProcessorEditpart> vProcessorEditparts;
 
 	/**
 	 * Default constructor.
@@ -126,8 +131,11 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		// render the bindings
 		renderBindings(options);
 
-		// render the bindings
+		// render the commands
 		renderCommands(options);
+
+		// render the visibility processor
+		renderVisibilityProcessor(options);
 
 		if (configuration != null) {
 			configuration.afterBind(getContext());
@@ -244,6 +252,21 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		}
 		// call to activate not required. Pending commands are activated
 		// automatically
+	}
+
+	/**
+	 * Renders the visibility processor of that view.
+	 * 
+	 * @param options
+	 * @throws ContextException
+	 */
+	protected void renderVisibilityProcessor(Map<String, Object> options)
+			throws ContextException {
+		checkDisposed();
+
+		for (IVisibilityProcessorEditpart editpart : getVisibilityProcessors()) {
+			editpart.activate();
+		}
 	}
 
 	@Override
@@ -578,6 +601,11 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			YBeanSlot yBeanSlot = (YBeanSlot) notification.getNewValue();
 			internalAddBeanSlot(yBeanSlot);
 			break;
+		case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
+			YVisibilityProcessor yElement = (YVisibilityProcessor) notification
+					.getNewValue();
+			internalAddVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
+			break;
 		default:
 			break;
 		}
@@ -590,6 +618,11 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		switch (featureId) {
 		case CoreModelPackage.YVIEW__BEAN_SLOTS:
 			throw new IllegalStateException("Viewslots must not be removed!");
+		case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
+			YVisibilityProcessor yElement = (YVisibilityProcessor) notification
+					.getNewValue();
+			internalRemoveVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
+			break;
 		default:
 			break;
 		}
@@ -603,6 +636,100 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	protected void internalAddBeanSlot(YBeanSlot yBeanSlot) {
 		checkDisposed();
 		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType());
+	}
+
+	public List<IVisibilityProcessorEditpart> getVisibilityProcessors() {
+		if (vProcessorEditparts == null) {
+			internalLoadVisibilityProcessors();
+		}
+		return Collections.unmodifiableList(vProcessorEditparts);
+	}
+
+	public void addVisibilityProcessor(IVisibilityProcessorEditpart element) {
+		try {
+			checkDisposed();
+
+			// add the element by using the model
+			//
+			M yVProcessor = getModel();
+			YVisibilityProcessor yVisibilityProcessor = (YVisibilityProcessor) element
+					.getModel();
+			yVProcessor.getVisibilityProcessors().add(yVisibilityProcessor);
+			// BEGIN SUPRESS CATCH EXCEPTION
+		} catch (RuntimeException e) {
+			// END SUPRESS CATCH EXCEPTION
+			LOGGER.error("{}", e);
+			throw e;
+		}
+	}
+
+	public void removeVisibilityProcessor(IVisibilityProcessorEditpart element) {
+		try {
+			checkDisposed();
+
+			// remove the element by using the model
+			//
+			M yVProcessor = getModel();
+			YVisibilityProcessor yVisibilityProcessor = (YVisibilityProcessor) element
+					.getModel();
+			yVProcessor.getVisibilityProcessors().remove(yVisibilityProcessor);
+			// BEGIN SUPRESS CATCH EXCEPTION
+		} catch (RuntimeException e) {
+			// END SUPRESS CATCH EXCEPTION
+			LOGGER.error("{}", e);
+			throw e;
+		}
+	}
+
+	/**
+	 * Is called to change the internal state and add the given editpart to the
+	 * list of processors.
+	 * 
+	 * @param editpart
+	 *            The editpart to be added
+	 */
+	protected void internalAddVisibilityProcessor(
+			IVisibilityProcessorEditpart editpart) {
+		checkDisposed();
+
+		if (vProcessorEditparts == null) {
+			internalLoadVisibilityProcessors();
+		}
+		if (!vProcessorEditparts.contains(editpart)) {
+			vProcessorEditparts.add(editpart);
+		}
+	}
+
+	/**
+	 * Is called to change the internal state and remove the given editpart from
+	 * the list of processors.
+	 * 
+	 * @param editpart
+	 *            The editpart to be removed
+	 */
+	protected void internalRemoveVisibilityProcessor(
+			IVisibilityProcessorEditpart editpart) {
+		checkDisposed();
+
+		if (vProcessorEditparts != null && editpart != null) {
+			vProcessorEditparts.remove(editpart);
+		}
+	}
+
+	/**
+	 * Is called to load and initialize all elements.
+	 */
+	protected void internalLoadVisibilityProcessors() {
+		checkDisposed();
+
+		if (vProcessorEditparts == null) {
+			vProcessorEditparts = new ArrayList<IVisibilityProcessorEditpart>();
+			for (YVisibilityProcessor yVisibilityProcessor : getModel()
+					.getVisibilityProcessors()) {
+				IVisibilityProcessorEditpart editPart = getEditpart(yVisibilityProcessor);
+				internalAddVisibilityProcessor(editPart);
+			}
+		}
 	}
 
 	/**
@@ -658,6 +785,13 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 				bindingSet.dispose();
 				bindingSet = null;
 			}
+
+			// dispose all visibility processor
+			for (IVisibilityProcessorEditpart editpart : getVisibilityProcessors()) {
+				editpart.dispose();
+			}
+			vProcessorEditparts = null;
+
 		} finally {
 			super.internalDispose();
 		}

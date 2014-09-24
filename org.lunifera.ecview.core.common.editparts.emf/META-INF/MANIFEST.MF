@@ -18,11 +18,12 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.eclipse.emf.databinding,
  org.slf4j;version="1.6.4"
-Export-Package: org.lunifera.ecview.core.common.editpart.emf.common;version="0.7.3";x-internal:=true,
- org.lunifera.ecview.core.common.editpart.emf;version="0.7.3";x-internal:=true,
+Export-Package: org.lunifera.ecview.core.common.editpart.emf;version="0.7.3";x-internal:=true,
  org.lunifera.ecview.core.common.editpart.emf.binding;version="0.7.3";x-internal:=true,
+ org.lunifera.ecview.core.common.editpart.emf.common;version="0.7.3";x-internal:=true,
  org.lunifera.ecview.core.common.editpart.emf.datatypes;version="0.7.3";x-internal:=true,
  org.lunifera.ecview.core.common.editpart.emf.internal;version="0.7.3";x-internal:=true,
  org.lunifera.ecview.core.common.editpart.emf.validation;version="0.7.3";x-internal:=true,
- org.lunifera.ecview.core.common.editpart.emf.validation.validator;version="0.7.3";x-internal:=true
+ org.lunifera.ecview.core.common.editpart.emf.validation.validator;version="0.7.3";x-internal:=true,
+ org.lunifera.ecview.core.common.editpart.emf.visibility
 Service-Component: OSGI-INF/editPartManager.xml

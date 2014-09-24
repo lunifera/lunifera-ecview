@@ -18,40 +18,6 @@ import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.*;
-import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
-import org.lunifera.ecview.core.common.model.core.YAction;
-import org.lunifera.ecview.core.common.model.core.YActivateable;
-import org.lunifera.ecview.core.common.model.core.YActivatedEndpoint;
-import org.lunifera.ecview.core.common.model.core.YBeanSlot;
-import org.lunifera.ecview.core.common.model.core.YBeanSlotListBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YBeanSlotValueBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YBindable;
-import org.lunifera.ecview.core.common.model.core.YCollectionBindable;
-import org.lunifera.ecview.core.common.model.core.YContextValueBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YCssAble;
-import org.lunifera.ecview.core.common.model.core.YDtWrapper;
-import org.lunifera.ecview.core.common.model.core.YEditable;
-import org.lunifera.ecview.core.common.model.core.YElement;
-import org.lunifera.ecview.core.common.model.core.YEmbeddable;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableBindingEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableCollectionEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableMultiSelectionEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableSelectionEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
-import org.lunifera.ecview.core.common.model.core.YEnable;
-import org.lunifera.ecview.core.common.model.core.YField;
-import org.lunifera.ecview.core.common.model.core.YHeightable;
-import org.lunifera.ecview.core.common.model.core.YLayout;
-import org.lunifera.ecview.core.common.model.core.YMarginable;
-import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
-import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
-import org.lunifera.ecview.core.common.model.core.YSpacingable;
-import org.lunifera.ecview.core.common.model.core.YValueBindable;
-import org.lunifera.ecview.core.common.model.core.YView;
-import org.lunifera.ecview.core.common.model.core.YViewSet;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
-import org.lunifera.ecview.core.common.model.core.YVisibleable;
-import org.lunifera.ecview.core.common.model.core.YWidthable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
 import org.lunifera.ecview.core.common.model.datatypes.YDtBase;
 
@@ -242,10 +208,6 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYDtWrapper(YDtWrapper object) {
 				return createYDtWrapperAdapter();
-			}
-			@Override
-			public Adapter caseYVisibilityProcessable(YVisibilityProcessable object) {
-				return createYVisibilityProcessableAdapter();
 			}
 			@Override
 			public Adapter caseYCommand(YCommand object) {
@@ -758,20 +720,6 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYDtWrapperAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable <em>YVisibility Processable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable
-	 * @generated
-	 */
-	public Adapter createYVisibilityProcessableAdapter() {
 		return null;
 	}
 

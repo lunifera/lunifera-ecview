@@ -6,19 +6,10 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
-import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
-import org.lunifera.ecview.core.common.model.visibility.YBooleanValueRule;
-import org.lunifera.ecview.core.common.model.visibility.YColor;
-import org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule;
-import org.lunifera.ecview.core.common.model.visibility.YRegexpRule;
-import org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityRule;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,48 +72,12 @@ public class VisibilityAdapterFactory extends AdapterFactoryImpl {
 				return createYVisibilityProcessorAdapter();
 			}
 			@Override
-			public Adapter caseYRuledVisibilityProcessor(YRuledVisibilityProcessor object) {
-				return createYRuledVisibilityProcessorAdapter();
-			}
-			@Override
-			public Adapter caseYVisibilityRule(YVisibilityRule object) {
-				return createYVisibilityRuleAdapter();
-			}
-			@Override
 			public Adapter caseYVisibilityProperties(YVisibilityProperties object) {
 				return createYVisibilityPropertiesAdapter();
 			}
 			@Override
-			public Adapter caseYColor(YColor object) {
-				return createYColorAdapter();
-			}
-			@Override
-			public Adapter caseYVisibilityRuleBindingEndpoint(YVisibilityRuleBindingEndpoint object) {
-				return createYVisibilityRuleBindingEndpointAdapter();
-			}
-			@Override
-			public Adapter caseYBooleanValueRule(YBooleanValueRule object) {
-				return createYBooleanValueRuleAdapter();
-			}
-			@Override
-			public Adapter caseYRegexpRule(YRegexpRule object) {
-				return createYRegexpRuleAdapter();
-			}
-			@Override
-			public Adapter caseYDecimalValueRule(YDecimalValueRule object) {
-				return createYDecimalValueRuleAdapter();
-			}
-			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
-			}
-			@Override
-			public Adapter caseYBindingEndpoint(YBindingEndpoint object) {
-				return createYBindingEndpointAdapter();
-			}
-			@Override
-			public Adapter caseYValueBindingEndpoint(YValueBindingEndpoint object) {
-				return createYValueBindingEndpointAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -159,34 +114,6 @@ public class VisibilityAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor <em>YRuled Visibility Processor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor
-	 * @generated
-	 */
-	public Adapter createYRuledVisibilityProcessorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRule <em>YVisibility Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRule
-	 * @generated
-	 */
-	public Adapter createYVisibilityRuleAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties <em>YVisibility Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -201,76 +128,6 @@ public class VisibilityAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColor
-	 * @generated
-	 */
-	public Adapter createYColorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint <em>YVisibility Rule Binding Endpoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint
-	 * @generated
-	 */
-	public Adapter createYVisibilityRuleBindingEndpointAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YBooleanValueRule <em>YBoolean Value Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YBooleanValueRule
-	 * @generated
-	 */
-	public Adapter createYBooleanValueRuleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YRegexpRule <em>YRegexp Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YRegexpRule
-	 * @generated
-	 */
-	public Adapter createYRegexpRuleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule <em>YDecimal Value Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule
-	 * @generated
-	 */
-	public Adapter createYDecimalValueRuleAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YElement <em>YElement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -281,34 +138,6 @@ public class VisibilityAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.binding.YBindingEndpoint <em>YBinding Endpoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.binding.YBindingEndpoint
-	 * @generated
-	 */
-	public Adapter createYBindingEndpointAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint <em>YValue Binding Endpoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint
-	 * @generated
-	 */
-	public Adapter createYValueBindingEndpointAdapter() {
 		return null;
 	}
 

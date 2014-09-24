@@ -8,18 +8,28 @@
  * Contributors:
  *    Florian Pirchner - initial API and implementation
  */
-package org.lunifera.ecview.core.common.editpart.visibility;
+package org.lunifera.ecview.core.common.visibility;
 
-import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+@SuppressWarnings("all")
+public enum Color {
 
-/**
- * An editpart responsible to handle visibility options of widgets.
- */
-public interface IVisibilityProcessorEditpart extends IElementEditpart {
+	UNDEFINED,
 
-	/**
-	 * Activates the visibility processor.
-	 */
-	void activate();
+	RED,
+
+	GREEN,
+
+	BLUE,
 	
+	YELLOW,
+
+	WHITE,
+
+	BLACK,
+
+	GRAY,
+
+	LIGHT_GRAY,
+
+	DARK_GRAY;
 }

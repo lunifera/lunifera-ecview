@@ -4,9 +4,8 @@
  */
 package org.lunifera.ecview.core.common.model.visibility.validation;
 
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
-
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
+import org.eclipse.emf.common.util.EList;
+import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
 
 /**
  * A sample validator interface for {@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor}.
@@ -17,6 +16,8 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
 public interface YVisibilityProcessorValidator {
 	boolean validate();
 
-	boolean validateOnMatch(YVisibilityProperties value);
-	boolean validateParent(YVisibilityProcessable value);
+	boolean validateDataUsed(EList<YBindingEndpoint> value);
+	boolean validateTriggersOn(EList<YBindingEndpoint> value);
+	boolean validateDelegate(Class<?> value);
+	boolean validateDelegateQualifiedName(String value);
 }

@@ -8,13 +8,20 @@
  * Contributors:
  *    Florian Pirchner - initial API and implementation
  */
-package org.lunifera.ecview.core.common.editpart.visibility;
+package org.lunifera.ecview.core.common.visibility;
 
-import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEditpart;
+public interface IVisibilityProcessor {
 
-/**
- * An editpart resonsible to provide observable values for rules.
- */
-public interface IVisibilityRuleBindingEndpointEditpart extends IBindableValueEndpointEditpart {
+	/**
+	 * Is called to initialize the visibility processor.
+	 * 
+	 * @param manager
+	 */
+	void init(final IVisibilityManager manager);
+
+	/**
+	 * Fires the visibility processor.
+	 */
+	void fire();
 
 }

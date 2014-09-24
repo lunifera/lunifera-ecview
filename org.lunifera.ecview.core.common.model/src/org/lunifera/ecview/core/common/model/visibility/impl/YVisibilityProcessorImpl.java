@@ -2,18 +2,19 @@
  */
 package org.lunifera.ecview.core.common.model.visibility.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+import org.lunifera.ecview.core.common.model.binding.YBinding;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,14 +25,16 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getOnMatch <em>On Match</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getDataUsed <em>Data Used</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getTriggersOn <em>Triggers On</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getDelegate <em>Delegate</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getDelegateQualifiedName <em>Delegate Qualified Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container implements YVisibilityProcessor {
+public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container implements YVisibilityProcessor {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,14 +76,54 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getOnMatch() <em>On Match</em>}' containment reference.
+	 * The cached value of the '{@link #getDataUsed() <em>Data Used</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOnMatch()
+	 * @see #getDataUsed()
 	 * @generated
 	 * @ordered
 	 */
-	protected YVisibilityProperties onMatch;
+	protected EList<YBinding> dataUsed;
+
+	/**
+	 * The cached value of the '{@link #getTriggersOn() <em>Triggers On</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTriggersOn()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<YBinding> triggersOn;
+
+	/**
+	 * The cached value of the '{@link #getDelegate() <em>Delegate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDelegate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Class<?> delegate;
+
+	/**
+	 * The default value of the '{@link #getDelegateQualifiedName() <em>Delegate Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDelegateQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DELEGATE_QUALIFIED_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDelegateQualifiedName() <em>Delegate Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDelegateQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String delegateQualifiedName = DELEGATE_QUALIFIED_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,22 +191,11 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YVisibilityProperties getOnMatch() {
-		if (onMatch != null && onMatch.eIsProxy()) {
-			InternalEObject oldOnMatch = (InternalEObject)onMatch;
-			onMatch = (YVisibilityProperties)eResolveProxy(oldOnMatch);
-			if (onMatch != oldOnMatch) {
-				InternalEObject newOnMatch = (InternalEObject)onMatch;
-				NotificationChain msgs = oldOnMatch.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH, null, null);
-				if (newOnMatch.eInternalContainer() == null) {
-					msgs = newOnMatch.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH, null, msgs);
-				}
-				if (msgs != null) msgs.dispatch();
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH, oldOnMatch, onMatch));
-			}
+	public EList<YBinding> getDataUsed() {
+		if (dataUsed == null) {
+			dataUsed = new EObjectContainmentEList.Resolving<YBinding>(YBinding.class, this, VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED);
 		}
-		return onMatch;
+		return dataUsed;
 	}
 
 	/**
@@ -171,23 +203,11 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YVisibilityProperties basicGetOnMatch() {
-		return onMatch;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOnMatch(YVisibilityProperties newOnMatch, NotificationChain msgs) {
-		YVisibilityProperties oldOnMatch = onMatch;
-		onMatch = newOnMatch;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH, oldOnMatch, newOnMatch);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<YBinding> getTriggersOn() {
+		if (triggersOn == null) {
+			triggersOn = new EObjectContainmentEList.Resolving<YBinding>(YBinding.class, this, VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON);
 		}
-		return msgs;
+		return triggersOn;
 	}
 
 	/**
@@ -195,18 +215,8 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOnMatch(YVisibilityProperties newOnMatch) {
-		if (newOnMatch != onMatch) {
-			NotificationChain msgs = null;
-			if (onMatch != null)
-				msgs = ((InternalEObject)onMatch).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH, null, msgs);
-			if (newOnMatch != null)
-				msgs = ((InternalEObject)newOnMatch).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH, null, msgs);
-			msgs = basicSetOnMatch(newOnMatch, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH, newOnMatch, newOnMatch));
+	public Class<?> getDelegate() {
+		return delegate;
 	}
 
 	/**
@@ -214,9 +224,11 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YVisibilityProcessable getParent() {
-		if (eContainerFeatureID() != VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT) return null;
-		return (YVisibilityProcessable)eContainer();
+	public void setDelegate(Class<?> newDelegate) {
+		Class<?> oldDelegate = delegate;
+		delegate = newDelegate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE, oldDelegate, delegate));
 	}
 
 	/**
@@ -224,9 +236,8 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YVisibilityProcessable basicGetParent() {
-		if (eContainerFeatureID() != VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT) return null;
-		return (YVisibilityProcessable)eInternalContainer();
+	public String getDelegateQualifiedName() {
+		return delegateQualifiedName;
 	}
 
 	/**
@@ -234,46 +245,11 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParent(YVisibilityProcessable newParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newParent, VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParent(YVisibilityProcessable newParent) {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT && newParent != null)) {
-			if (EcoreUtil.isAncestor(this, newParent))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, CoreModelPackage.YVISIBILITY_PROCESSABLE__VISIBILITY_PROCESSOR, YVisibilityProcessable.class, msgs);
-			msgs = basicSetParent(newParent, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT, newParent, newParent));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParent((YVisibilityProcessable)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+	public void setDelegateQualifiedName(String newDelegateQualifiedName) {
+		String oldDelegateQualifiedName = delegateQualifiedName;
+		delegateQualifiedName = newDelegateQualifiedName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE_QUALIFIED_NAME, oldDelegateQualifiedName, delegateQualifiedName));
 	}
 
 	/**
@@ -284,26 +260,12 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH:
-				return basicSetOnMatch(null, msgs);
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT:
-				return basicSetParent(null, msgs);
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
+				return ((InternalEList<?>)getDataUsed()).basicRemove(otherEnd, msgs);
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
+				return ((InternalEList<?>)getTriggersOn()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT:
-				return eInternalContainer().eInverseRemove(this, CoreModelPackage.YVISIBILITY_PROCESSABLE__VISIBILITY_PROCESSOR, YVisibilityProcessable.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -318,12 +280,14 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 				return getId();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				return getName();
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH:
-				if (resolve) return getOnMatch();
-				return basicGetOnMatch();
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT:
-				if (resolve) return getParent();
-				return basicGetParent();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
+				return getDataUsed();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
+				return getTriggersOn();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE:
+				return getDelegate();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE_QUALIFIED_NAME:
+				return getDelegateQualifiedName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -333,6 +297,7 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -342,11 +307,19 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				setName((String)newValue);
 				return;
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH:
-				setOnMatch((YVisibilityProperties)newValue);
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
+				getDataUsed().clear();
+				getDataUsed().addAll((Collection<? extends YBinding>)newValue);
 				return;
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT:
-				setParent((YVisibilityProcessable)newValue);
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
+				getTriggersOn().clear();
+				getTriggersOn().addAll((Collection<? extends YBinding>)newValue);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE:
+				setDelegate((Class<?>)newValue);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE_QUALIFIED_NAME:
+				setDelegateQualifiedName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -366,11 +339,17 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH:
-				setOnMatch((YVisibilityProperties)null);
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
+				getDataUsed().clear();
 				return;
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT:
-				setParent((YVisibilityProcessable)null);
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
+				getTriggersOn().clear();
+				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE:
+				setDelegate((Class<?>)null);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE_QUALIFIED_NAME:
+				setDelegateQualifiedName(DELEGATE_QUALIFIED_NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -388,10 +367,14 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__ON_MATCH:
-				return onMatch != null;
-			case VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT:
-				return basicGetParent() != null;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
+				return dataUsed != null && !dataUsed.isEmpty();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
+				return triggersOn != null && !triggersOn.isEmpty();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE:
+				return delegate != null;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__DELEGATE_QUALIFIED_NAME:
+				return DELEGATE_QUALIFIED_NAME_EDEFAULT == null ? delegateQualifiedName != null : !DELEGATE_QUALIFIED_NAME_EDEFAULT.equals(delegateQualifiedName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -410,6 +393,10 @@ public abstract class YVisibilityProcessorImpl extends MinimalEObjectImpl.Contai
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", delegate: ");
+		result.append(delegate);
+		result.append(", delegateQualifiedName: ");
+		result.append(delegateQualifiedName);
 		result.append(')');
 		return result.toString();
 	}

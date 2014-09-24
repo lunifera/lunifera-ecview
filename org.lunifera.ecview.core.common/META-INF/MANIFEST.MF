@@ -32,4 +32,5 @@ Export-Package: org.lunifera.ecview.core.common;version="0.7.3",
  org.lunifera.ecview.core.common.tooling,
  org.lunifera.ecview.core.common.types;version="0.7.3",
  org.lunifera.ecview.core.common.uri;version="0.7.3",
- org.lunifera.ecview.core.common.validation;version="0.7.3"
+ org.lunifera.ecview.core.common.validation;version="0.7.3",
+ org.lunifera.ecview.core.common.visibility

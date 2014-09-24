@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.lunifera.ecview.core.common.model.binding.*;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
@@ -124,6 +125,10 @@ public class BindingAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYECViewModelListBindingEndpoint(YECViewModelListBindingEndpoint object) {
 				return createYECViewModelListBindingEndpointAdapter();
+			}
+			@Override
+			public Adapter caseYVisibilityProcessorValueBindingEndpoint(YVisibilityProcessorValueBindingEndpoint object) {
+				return createYVisibilityProcessorValueBindingEndpointAdapter();
 			}
 			@Override
 			public Adapter caseYElement(YElement object) {
@@ -300,6 +305,20 @@ public class BindingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYECViewModelListBindingEndpointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint <em>YVisibility Processor Value Binding Endpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint
+	 * @generated
+	 */
+	public Adapter createYVisibilityProcessorValueBindingEndpointAdapter() {
 		return null;
 	}
 

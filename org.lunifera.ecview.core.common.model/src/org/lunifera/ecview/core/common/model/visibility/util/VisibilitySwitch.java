@@ -5,19 +5,10 @@ package org.lunifera.ecview.core.common.model.visibility.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
-import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
-import org.lunifera.ecview.core.common.model.visibility.YBooleanValueRule;
-import org.lunifera.ecview.core.common.model.visibility.YColor;
-import org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule;
-import org.lunifera.ecview.core.common.model.visibility.YRegexpRule;
-import org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityRule;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,64 +74,10 @@ public class VisibilitySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VisibilityPackage.YRULED_VISIBILITY_PROCESSOR: {
-				YRuledVisibilityProcessor yRuledVisibilityProcessor = (YRuledVisibilityProcessor)theEObject;
-				T result = caseYRuledVisibilityProcessor(yRuledVisibilityProcessor);
-				if (result == null) result = caseYVisibilityProcessor(yRuledVisibilityProcessor);
-				if (result == null) result = caseYElement(yRuledVisibilityProcessor);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VisibilityPackage.YVISIBILITY_RULE: {
-				YVisibilityRule yVisibilityRule = (YVisibilityRule)theEObject;
-				T result = caseYVisibilityRule(yVisibilityRule);
-				if (result == null) result = caseYElement(yVisibilityRule);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case VisibilityPackage.YVISIBILITY_PROPERTIES: {
 				YVisibilityProperties yVisibilityProperties = (YVisibilityProperties)theEObject;
 				T result = caseYVisibilityProperties(yVisibilityProperties);
 				if (result == null) result = caseYElement(yVisibilityProperties);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VisibilityPackage.YCOLOR: {
-				YColor yColor = (YColor)theEObject;
-				T result = caseYColor(yColor);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VisibilityPackage.YVISIBILITY_RULE_BINDING_ENDPOINT: {
-				YVisibilityRuleBindingEndpoint yVisibilityRuleBindingEndpoint = (YVisibilityRuleBindingEndpoint)theEObject;
-				T result = caseYVisibilityRuleBindingEndpoint(yVisibilityRuleBindingEndpoint);
-				if (result == null) result = caseYValueBindingEndpoint(yVisibilityRuleBindingEndpoint);
-				if (result == null) result = caseYBindingEndpoint(yVisibilityRuleBindingEndpoint);
-				if (result == null) result = caseYElement(yVisibilityRuleBindingEndpoint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VisibilityPackage.YBOOLEAN_VALUE_RULE: {
-				YBooleanValueRule yBooleanValueRule = (YBooleanValueRule)theEObject;
-				T result = caseYBooleanValueRule(yBooleanValueRule);
-				if (result == null) result = caseYVisibilityRule(yBooleanValueRule);
-				if (result == null) result = caseYElement(yBooleanValueRule);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VisibilityPackage.YREGEXP_RULE: {
-				YRegexpRule yRegexpRule = (YRegexpRule)theEObject;
-				T result = caseYRegexpRule(yRegexpRule);
-				if (result == null) result = caseYVisibilityRule(yRegexpRule);
-				if (result == null) result = caseYElement(yRegexpRule);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VisibilityPackage.YDECIMAL_VALUE_RULE: {
-				YDecimalValueRule yDecimalValueRule = (YDecimalValueRule)theEObject;
-				T result = caseYDecimalValueRule(yDecimalValueRule);
-				if (result == null) result = caseYVisibilityRule(yDecimalValueRule);
-				if (result == null) result = caseYElement(yDecimalValueRule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,36 +101,6 @@ public class VisibilitySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YRuled Visibility Processor</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YRuled Visibility Processor</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYRuledVisibilityProcessor(YRuledVisibilityProcessor object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YVisibility Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YVisibility Rule</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYVisibilityRule(YVisibilityRule object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>YVisibility Properties</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -209,81 +116,6 @@ public class VisibilitySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YColor</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YColor</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYColor(YColor object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YVisibility Rule Binding Endpoint</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YVisibility Rule Binding Endpoint</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYVisibilityRuleBindingEndpoint(YVisibilityRuleBindingEndpoint object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YBoolean Value Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YBoolean Value Rule</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYBooleanValueRule(YBooleanValueRule object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YRegexp Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YRegexp Rule</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYRegexpRule(YRegexpRule object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YDecimal Value Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YDecimal Value Rule</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYDecimalValueRule(YDecimalValueRule object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>YElement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -295,36 +127,6 @@ public class VisibilitySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYElement(YElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YBinding Endpoint</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YBinding Endpoint</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYBindingEndpoint(YBindingEndpoint object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YValue Binding Endpoint</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YValue Binding Endpoint</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYValueBindingEndpoint(YValueBindingEndpoint object) {
 		return null;
 	}
 

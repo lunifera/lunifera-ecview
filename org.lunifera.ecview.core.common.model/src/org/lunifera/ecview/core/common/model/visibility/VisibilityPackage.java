@@ -7,7 +7,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 
 /**
@@ -87,22 +86,40 @@ public interface VisibilityPackage extends EPackage {
 	int YVISIBILITY_PROCESSOR__NAME = CoreModelPackage.YELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>On Match</b></em>' containment reference.
+	 * The feature id for the '<em><b>Data Used</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVISIBILITY_PROCESSOR__ON_MATCH = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
+	int YVISIBILITY_PROCESSOR__DATA_USED = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * The feature id for the '<em><b>Triggers On</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVISIBILITY_PROCESSOR__PARENT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
+	int YVISIBILITY_PROCESSOR__TRIGGERS_ON = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Delegate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR__DELEGATE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Delegate Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR__DELEGATE_QUALIFIED_NAME = CoreModelPackage.YELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>YVisibility Processor</em>' class.
@@ -111,126 +128,7 @@ public interface VisibilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVISIBILITY_PROCESSOR_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YRuledVisibilityProcessorImpl <em>YRuled Visibility Processor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.YRuledVisibilityProcessorImpl
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYRuledVisibilityProcessor()
-	 * @generated
-	 */
-	int YRULED_VISIBILITY_PROCESSOR = 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YRULED_VISIBILITY_PROCESSOR__ID = YVISIBILITY_PROCESSOR__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YRULED_VISIBILITY_PROCESSOR__NAME = YVISIBILITY_PROCESSOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>On Match</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YRULED_VISIBILITY_PROCESSOR__ON_MATCH = YVISIBILITY_PROCESSOR__ON_MATCH;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YRULED_VISIBILITY_PROCESSOR__PARENT = YVISIBILITY_PROCESSOR__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Rule</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YRULED_VISIBILITY_PROCESSOR__RULE = YVISIBILITY_PROCESSOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>YRuled Visibility Processor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YRULED_VISIBILITY_PROCESSOR_FEATURE_COUNT = YVISIBILITY_PROCESSOR_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleImpl <em>YVisibility Rule</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleImpl
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYVisibilityRule()
-	 * @generated
-	 */
-	int YVISIBILITY_RULE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE__ID = CoreModelPackage.YELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE__NAME = CoreModelPackage.YELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Binding Endpoints</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE__BINDING_ENDPOINTS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Match Means False</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE__MATCH_MEANS_FALSE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>YVisibility Rule</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
+	int YVISIBILITY_PROCESSOR_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl <em>YVisibility Properties</em>}' class.
@@ -240,7 +138,7 @@ public interface VisibilityPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYVisibilityProperties()
 	 * @generated
 	 */
-	int YVISIBILITY_PROPERTIES = 3;
+	int YVISIBILITY_PROPERTIES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -333,7 +231,7 @@ public interface VisibilityPackage extends EPackage {
 	int YVISIBILITY_PROPERTIES__UNDERLINE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Background Color</b></em>' containment reference.
+	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -342,7 +240,7 @@ public interface VisibilityPackage extends EPackage {
 	int YVISIBILITY_PROPERTIES__BACKGROUND_COLOR = CoreModelPackage.YELEMENT_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Foreground Color</b></em>' containment reference.
+	 * The feature id for the '<em><b>Foreground Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -351,346 +249,41 @@ public interface VisibilityPackage extends EPackage {
 	int YVISIBILITY_PROPERTIES__FOREGROUND_COLOR = CoreModelPackage.YELEMENT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Background Color Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Foreground Color Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>YVisibility Properties</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVISIBILITY_PROPERTIES_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 10;
+	int YVISIBILITY_PROPERTIES_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 12;
 
 	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YColorImpl <em>YColor</em>}' class.
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.YColorImpl
+	 * @see org.lunifera.ecview.core.common.model.visibility.YColor
 	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYColor()
 	 * @generated
 	 */
-	int YCOLOR = 4;
-
-	/**
-	 * The feature id for the '<em><b>Red</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YCOLOR__RED = 0;
-
-	/**
-	 * The feature id for the '<em><b>Green</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YCOLOR__GREEN = 1;
-
-	/**
-	 * The feature id for the '<em><b>Blue</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YCOLOR__BLUE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Theme Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YCOLOR__THEME_ID = 3;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YCOLOR__TYPE = 4;
-
-	/**
-	 * The number of structural features of the '<em>YColor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YCOLOR_FEATURE_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleBindingEndpointImpl <em>YVisibility Rule Binding Endpoint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleBindingEndpointImpl
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYVisibilityRuleBindingEndpoint()
-	 * @generated
-	 */
-	int YVISIBILITY_RULE_BINDING_ENDPOINT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE_BINDING_ENDPOINT__ID = BindingPackage.YVALUE_BINDING_ENDPOINT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE_BINDING_ENDPOINT__NAME = BindingPackage.YVALUE_BINDING_ENDPOINT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Rule</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE_BINDING_ENDPOINT__RULE = BindingPackage.YVALUE_BINDING_ENDPOINT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE_BINDING_ENDPOINT__ATTRIBUTE = BindingPackage.YVALUE_BINDING_ENDPOINT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>YVisibility Rule Binding Endpoint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_RULE_BINDING_ENDPOINT_FEATURE_COUNT = BindingPackage.YVALUE_BINDING_ENDPOINT_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YBooleanValueRuleImpl <em>YBoolean Value Rule</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.YBooleanValueRuleImpl
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYBooleanValueRule()
-	 * @generated
-	 */
-	int YBOOLEAN_VALUE_RULE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YBOOLEAN_VALUE_RULE__ID = YVISIBILITY_RULE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YBOOLEAN_VALUE_RULE__NAME = YVISIBILITY_RULE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Binding Endpoints</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YBOOLEAN_VALUE_RULE__BINDING_ENDPOINTS = YVISIBILITY_RULE__BINDING_ENDPOINTS;
-
-	/**
-	 * The feature id for the '<em><b>Match Means False</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YBOOLEAN_VALUE_RULE__MATCH_MEANS_FALSE = YVISIBILITY_RULE__MATCH_MEANS_FALSE;
-
-	/**
-	 * The number of structural features of the '<em>YBoolean Value Rule</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YBOOLEAN_VALUE_RULE_FEATURE_COUNT = YVISIBILITY_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YRegexpRuleImpl <em>YRegexp Rule</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.YRegexpRuleImpl
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYRegexpRule()
-	 * @generated
-	 */
-	int YREGEXP_RULE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YREGEXP_RULE__ID = YVISIBILITY_RULE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YREGEXP_RULE__NAME = YVISIBILITY_RULE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Binding Endpoints</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YREGEXP_RULE__BINDING_ENDPOINTS = YVISIBILITY_RULE__BINDING_ENDPOINTS;
-
-	/**
-	 * The feature id for the '<em><b>Match Means False</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YREGEXP_RULE__MATCH_MEANS_FALSE = YVISIBILITY_RULE__MATCH_MEANS_FALSE;
-
-	/**
-	 * The feature id for the '<em><b>Reg Expression</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YREGEXP_RULE__REG_EXPRESSION = YVISIBILITY_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>YRegexp Rule</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YREGEXP_RULE_FEATURE_COUNT = YVISIBILITY_RULE_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YDecimalValueRuleImpl <em>YDecimal Value Rule</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.YDecimalValueRuleImpl
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYDecimalValueRule()
-	 * @generated
-	 */
-	int YDECIMAL_VALUE_RULE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_VALUE_RULE__ID = YVISIBILITY_RULE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_VALUE_RULE__NAME = YVISIBILITY_RULE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Binding Endpoints</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_VALUE_RULE__BINDING_ENDPOINTS = YVISIBILITY_RULE__BINDING_ENDPOINTS;
-
-	/**
-	 * The feature id for the '<em><b>Match Means False</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_VALUE_RULE__MATCH_MEANS_FALSE = YVISIBILITY_RULE__MATCH_MEANS_FALSE;
-
-	/**
-	 * The feature id for the '<em><b>Option</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_VALUE_RULE__OPTION = YVISIBILITY_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Reference Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_VALUE_RULE__REFERENCE_VALUE = YVISIBILITY_RULE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>YDecimal Value Rule</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YDECIMAL_VALUE_RULE_FEATURE_COUNT = YVISIBILITY_RULE_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.YColorType <em>YColor Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColorType
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYColorType()
-	 * @generated
-	 */
-	int YCOLOR_TYPE = 9;
-
-
-	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.YDecimalValueRuleOption <em>YDecimal Value Rule Option</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.visibility.YDecimalValueRuleOption
-	 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYDecimalValueRuleOption()
-	 * @generated
-	 */
-	int YDECIMAL_VALUE_RULE_OPTION = 10;
-
+	int YCOLOR = 2;
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor <em>YVisibility Processor</em>}'.
@@ -703,79 +296,48 @@ public interface VisibilityPackage extends EPackage {
 	EClass getYVisibilityProcessor();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getOnMatch <em>On Match</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDataUsed <em>Data Used</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>On Match</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getOnMatch()
+	 * @return the meta object for the containment reference list '<em>Data Used</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDataUsed()
 	 * @see #getYVisibilityProcessor()
 	 * @generated
 	 */
-	EReference getYVisibilityProcessor_OnMatch();
+	EReference getYVisibilityProcessor_DataUsed();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getTriggersOn <em>Triggers On</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getParent()
+	 * @return the meta object for the containment reference list '<em>Triggers On</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getTriggersOn()
 	 * @see #getYVisibilityProcessor()
 	 * @generated
 	 */
-	EReference getYVisibilityProcessor_Parent();
+	EReference getYVisibilityProcessor_TriggersOn();
 
 	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor <em>YRuled Visibility Processor</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegate <em>Delegate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YRuled Visibility Processor</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor
+	 * @return the meta object for the attribute '<em>Delegate</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegate()
+	 * @see #getYVisibilityProcessor()
 	 * @generated
 	 */
-	EClass getYRuledVisibilityProcessor();
+	EAttribute getYVisibilityProcessor_Delegate();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor#getRule <em>Rule</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegateQualifiedName <em>Delegate Qualified Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Rule</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YRuledVisibilityProcessor#getRule()
-	 * @see #getYRuledVisibilityProcessor()
+	 * @return the meta object for the attribute '<em>Delegate Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor#getDelegateQualifiedName()
+	 * @see #getYVisibilityProcessor()
 	 * @generated
 	 */
-	EReference getYRuledVisibilityProcessor_Rule();
-
-	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRule <em>YVisibility Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YVisibility Rule</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRule
-	 * @generated
-	 */
-	EClass getYVisibilityRule();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRule#getBindingEndpoints <em>Binding Endpoints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Binding Endpoints</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRule#getBindingEndpoints()
-	 * @see #getYVisibilityRule()
-	 * @generated
-	 */
-	EReference getYVisibilityRule_BindingEndpoints();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRule#isMatchMeansFalse <em>Match Means False</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Match Means False</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRule#isMatchMeansFalse()
-	 * @see #getYVisibilityRule()
-	 * @generated
-	 */
-	EAttribute getYVisibilityRule_MatchMeansFalse();
+	EAttribute getYVisibilityProcessor_DelegateQualifiedName();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties <em>YVisibility Properties</em>}'.
@@ -876,206 +438,58 @@ public interface VisibilityPackage extends EPackage {
 	EAttribute getYVisibilityProperties_Underline();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColor <em>Background Color</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColor <em>Background Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Background Color</em>'.
+	 * @return the meta object for the attribute '<em>Background Color</em>'.
 	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColor()
 	 * @see #getYVisibilityProperties()
 	 * @generated
 	 */
-	EReference getYVisibilityProperties_BackgroundColor();
+	EAttribute getYVisibilityProperties_BackgroundColor();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColor <em>Foreground Color</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColor <em>Foreground Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Foreground Color</em>'.
+	 * @return the meta object for the attribute '<em>Foreground Color</em>'.
 	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColor()
 	 * @see #getYVisibilityProperties()
 	 * @generated
 	 */
-	EReference getYVisibilityProperties_ForegroundColor();
+	EAttribute getYVisibilityProperties_ForegroundColor();
 
 	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColorCode <em>Background Color Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YColor</em>'.
+	 * @return the meta object for the attribute '<em>Background Color Code</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColorCode()
+	 * @see #getYVisibilityProperties()
+	 * @generated
+	 */
+	EAttribute getYVisibilityProperties_BackgroundColorCode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColorCode <em>Foreground Color Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Foreground Color Code</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColorCode()
+	 * @see #getYVisibilityProperties()
+	 * @generated
+	 */
+	EAttribute getYVisibilityProperties_ForegroundColorCode();
+
+	/**
+	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YColor</em>'.
 	 * @see org.lunifera.ecview.core.common.model.visibility.YColor
 	 * @generated
 	 */
-	EClass getYColor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getRed <em>Red</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Red</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColor#getRed()
-	 * @see #getYColor()
-	 * @generated
-	 */
-	EAttribute getYColor_Red();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getGreen <em>Green</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Green</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColor#getGreen()
-	 * @see #getYColor()
-	 * @generated
-	 */
-	EAttribute getYColor_Green();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getBlue <em>Blue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Blue</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColor#getBlue()
-	 * @see #getYColor()
-	 * @generated
-	 */
-	EAttribute getYColor_Blue();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getThemeId <em>Theme Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Theme Id</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColor#getThemeId()
-	 * @see #getYColor()
-	 * @generated
-	 */
-	EAttribute getYColor_ThemeId();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YColor#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColor#getType()
-	 * @see #getYColor()
-	 * @generated
-	 */
-	EAttribute getYColor_Type();
-
-	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint <em>YVisibility Rule Binding Endpoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YVisibility Rule Binding Endpoint</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint
-	 * @generated
-	 */
-	EClass getYVisibilityRuleBindingEndpoint();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint#getRule <em>Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rule</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint#getRule()
-	 * @see #getYVisibilityRuleBindingEndpoint()
-	 * @generated
-	 */
-	EReference getYVisibilityRuleBindingEndpoint_Rule();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint#getAttribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Attribute</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityRuleBindingEndpoint#getAttribute()
-	 * @see #getYVisibilityRuleBindingEndpoint()
-	 * @generated
-	 */
-	EAttribute getYVisibilityRuleBindingEndpoint_Attribute();
-
-	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YBooleanValueRule <em>YBoolean Value Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YBoolean Value Rule</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YBooleanValueRule
-	 * @generated
-	 */
-	EClass getYBooleanValueRule();
-
-	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YRegexpRule <em>YRegexp Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YRegexp Rule</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YRegexpRule
-	 * @generated
-	 */
-	EClass getYRegexpRule();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YRegexpRule#getRegExpression <em>Reg Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reg Expression</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YRegexpRule#getRegExpression()
-	 * @see #getYRegexpRule()
-	 * @generated
-	 */
-	EAttribute getYRegexpRule_RegExpression();
-
-	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule <em>YDecimal Value Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YDecimal Value Rule</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule
-	 * @generated
-	 */
-	EClass getYDecimalValueRule();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule#getOption <em>Option</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Option</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule#getOption()
-	 * @see #getYDecimalValueRule()
-	 * @generated
-	 */
-	EAttribute getYDecimalValueRule_Option();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule#getReferenceValue <em>Reference Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reference Value</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YDecimalValueRule#getReferenceValue()
-	 * @see #getYDecimalValueRule()
-	 * @generated
-	 */
-	EAttribute getYDecimalValueRule_ReferenceValue();
-
-	/**
-	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.visibility.YColorType <em>YColor Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>YColor Type</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YColorType
-	 * @generated
-	 */
-	EEnum getYColorType();
-
-	/**
-	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.visibility.YDecimalValueRuleOption <em>YDecimal Value Rule Option</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>YDecimal Value Rule Option</em>'.
-	 * @see org.lunifera.ecview.core.common.model.visibility.YDecimalValueRuleOption
-	 * @generated
-	 */
-	EEnum getYDecimalValueRuleOption();
+	EEnum getYColor();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1110,64 +524,36 @@ public interface VisibilityPackage extends EPackage {
 		EClass YVISIBILITY_PROCESSOR = eINSTANCE.getYVisibilityProcessor();
 
 		/**
-		 * The meta object literal for the '<em><b>On Match</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Data Used</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference YVISIBILITY_PROCESSOR__ON_MATCH = eINSTANCE.getYVisibilityProcessor_OnMatch();
+		EReference YVISIBILITY_PROCESSOR__DATA_USED = eINSTANCE.getYVisibilityProcessor_DataUsed();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Triggers On</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference YVISIBILITY_PROCESSOR__PARENT = eINSTANCE.getYVisibilityProcessor_Parent();
+		EReference YVISIBILITY_PROCESSOR__TRIGGERS_ON = eINSTANCE.getYVisibilityProcessor_TriggersOn();
 
 		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YRuledVisibilityProcessorImpl <em>YRuled Visibility Processor</em>}' class.
+		 * The meta object literal for the '<em><b>Delegate</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.YRuledVisibilityProcessorImpl
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYRuledVisibilityProcessor()
 		 * @generated
 		 */
-		EClass YRULED_VISIBILITY_PROCESSOR = eINSTANCE.getYRuledVisibilityProcessor();
+		EAttribute YVISIBILITY_PROCESSOR__DELEGATE = eINSTANCE.getYVisibilityProcessor_Delegate();
 
 		/**
-		 * The meta object literal for the '<em><b>Rule</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Delegate Qualified Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference YRULED_VISIBILITY_PROCESSOR__RULE = eINSTANCE.getYRuledVisibilityProcessor_Rule();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleImpl <em>YVisibility Rule</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleImpl
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYVisibilityRule()
-		 * @generated
-		 */
-		EClass YVISIBILITY_RULE = eINSTANCE.getYVisibilityRule();
-
-		/**
-		 * The meta object literal for the '<em><b>Binding Endpoints</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference YVISIBILITY_RULE__BINDING_ENDPOINTS = eINSTANCE.getYVisibilityRule_BindingEndpoints();
-
-		/**
-		 * The meta object literal for the '<em><b>Match Means False</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YVISIBILITY_RULE__MATCH_MEANS_FALSE = eINSTANCE.getYVisibilityRule_MatchMeansFalse();
+		EAttribute YVISIBILITY_PROCESSOR__DELEGATE_QUALIFIED_NAME = eINSTANCE.getYVisibilityProcessor_DelegateQualifiedName();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl <em>YVisibility Properties</em>}' class.
@@ -1244,170 +630,46 @@ public interface VisibilityPackage extends EPackage {
 		EAttribute YVISIBILITY_PROPERTIES__UNDERLINE = eINSTANCE.getYVisibilityProperties_Underline();
 
 		/**
-		 * The meta object literal for the '<em><b>Background Color</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Background Color</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference YVISIBILITY_PROPERTIES__BACKGROUND_COLOR = eINSTANCE.getYVisibilityProperties_BackgroundColor();
+		EAttribute YVISIBILITY_PROPERTIES__BACKGROUND_COLOR = eINSTANCE.getYVisibilityProperties_BackgroundColor();
 
 		/**
-		 * The meta object literal for the '<em><b>Foreground Color</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Foreground Color</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference YVISIBILITY_PROPERTIES__FOREGROUND_COLOR = eINSTANCE.getYVisibilityProperties_ForegroundColor();
+		EAttribute YVISIBILITY_PROPERTIES__FOREGROUND_COLOR = eINSTANCE.getYVisibilityProperties_ForegroundColor();
 
 		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YColorImpl <em>YColor</em>}' class.
+		 * The meta object literal for the '<em><b>Background Color Code</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.YColorImpl
+		 * @generated
+		 */
+		EAttribute YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE = eINSTANCE.getYVisibilityProperties_BackgroundColorCode();
+
+		/**
+		 * The meta object literal for the '<em><b>Foreground Color Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE = eINSTANCE.getYVisibilityProperties_ForegroundColorCode();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.visibility.YColor
 		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYColor()
 		 * @generated
 		 */
-		EClass YCOLOR = eINSTANCE.getYColor();
-
-		/**
-		 * The meta object literal for the '<em><b>Red</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YCOLOR__RED = eINSTANCE.getYColor_Red();
-
-		/**
-		 * The meta object literal for the '<em><b>Green</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YCOLOR__GREEN = eINSTANCE.getYColor_Green();
-
-		/**
-		 * The meta object literal for the '<em><b>Blue</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YCOLOR__BLUE = eINSTANCE.getYColor_Blue();
-
-		/**
-		 * The meta object literal for the '<em><b>Theme Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YCOLOR__THEME_ID = eINSTANCE.getYColor_ThemeId();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YCOLOR__TYPE = eINSTANCE.getYColor_Type();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleBindingEndpointImpl <em>YVisibility Rule Binding Endpoint</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityRuleBindingEndpointImpl
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYVisibilityRuleBindingEndpoint()
-		 * @generated
-		 */
-		EClass YVISIBILITY_RULE_BINDING_ENDPOINT = eINSTANCE.getYVisibilityRuleBindingEndpoint();
-
-		/**
-		 * The meta object literal for the '<em><b>Rule</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference YVISIBILITY_RULE_BINDING_ENDPOINT__RULE = eINSTANCE.getYVisibilityRuleBindingEndpoint_Rule();
-
-		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YVISIBILITY_RULE_BINDING_ENDPOINT__ATTRIBUTE = eINSTANCE.getYVisibilityRuleBindingEndpoint_Attribute();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YBooleanValueRuleImpl <em>YBoolean Value Rule</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.YBooleanValueRuleImpl
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYBooleanValueRule()
-		 * @generated
-		 */
-		EClass YBOOLEAN_VALUE_RULE = eINSTANCE.getYBooleanValueRule();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YRegexpRuleImpl <em>YRegexp Rule</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.YRegexpRuleImpl
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYRegexpRule()
-		 * @generated
-		 */
-		EClass YREGEXP_RULE = eINSTANCE.getYRegexpRule();
-
-		/**
-		 * The meta object literal for the '<em><b>Reg Expression</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YREGEXP_RULE__REG_EXPRESSION = eINSTANCE.getYRegexpRule_RegExpression();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.impl.YDecimalValueRuleImpl <em>YDecimal Value Rule</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.YDecimalValueRuleImpl
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYDecimalValueRule()
-		 * @generated
-		 */
-		EClass YDECIMAL_VALUE_RULE = eINSTANCE.getYDecimalValueRule();
-
-		/**
-		 * The meta object literal for the '<em><b>Option</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YDECIMAL_VALUE_RULE__OPTION = eINSTANCE.getYDecimalValueRule_Option();
-
-		/**
-		 * The meta object literal for the '<em><b>Reference Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute YDECIMAL_VALUE_RULE__REFERENCE_VALUE = eINSTANCE.getYDecimalValueRule_ReferenceValue();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.YColorType <em>YColor Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.YColorType
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYColorType()
-		 * @generated
-		 */
-		EEnum YCOLOR_TYPE = eINSTANCE.getYColorType();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.YDecimalValueRuleOption <em>YDecimal Value Rule Option</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.visibility.YDecimalValueRuleOption
-		 * @see org.lunifera.ecview.core.common.model.visibility.impl.VisibilityPackageImpl#getYDecimalValueRuleOption()
-		 * @generated
-		 */
-		EEnum YDECIMAL_VALUE_RULE_OPTION = eINSTANCE.getYDecimalValueRuleOption();
+		EEnum YCOLOR = eINSTANCE.getYColor();
 
 	}
 

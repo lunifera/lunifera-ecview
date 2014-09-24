@@ -35,24 +35,24 @@ import org.lunifera.ecview.core.common.editpart.binding.IBindingSetEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IEnumListBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IListBindingEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IValueBindingEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IVisibilityProcessorValueBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.binding.BeanValueBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.binding.BindingSetEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.binding.EnumListBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.binding.ListBindingEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.binding.ValueBindingEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.binding.VisibilityProcessorValueBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.common.AbstractEditpartManager;
 import org.lunifera.ecview.core.common.editpart.emf.validation.ClassDelegateValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.MaxLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.MinLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.RegexpValidatorEditpart;
-import org.lunifera.ecview.core.common.editpart.emf.visibility.RuledVisibilityProcessorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.visibility.VisibilityProcessorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.visibility.VisibilityPropertiesEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IClassDelegateValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IMaxLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IMinLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IRegexpValidatorEditpart;
-import org.lunifera.ecview.core.common.editpart.visibility.IRuledVisibilityProcessorEditpart;
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessorEditpart;
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityPropertiesEditpart;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
@@ -64,6 +64,7 @@ import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEnd
 import org.lunifera.ecview.core.common.model.binding.YEnumListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YListBinding;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
+import org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YBeanSlotListBindingEndpoint;
@@ -86,6 +87,8 @@ import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidator;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidator;
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidator;
 import org.lunifera.ecview.core.common.model.validation.YRegexpValidator;
+import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
+import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 
 /**
  * An implementation of IEditPartManager for eObjects with
@@ -100,11 +103,13 @@ public class EditpartManager extends AbstractEditpartManager {
 					.getNsURI();
 			return uriString.equals(CoreModelPackage.eNS_URI)
 					|| uriString.equals(BindingPackage.eNS_URI)
-					|| uriString.equals(ValidationPackage.eNS_URI);
+					|| uriString.equals(ValidationPackage.eNS_URI)
+					|| uriString.equals(VisibilityPackage.eNS_URI);
 		} else if (element instanceof String) {
 			return element.equals(CoreModelPackage.eNS_URI)
 					|| element.equals(BindingPackage.eNS_URI)
-					|| element.equals(ValidationPackage.eNS_URI);
+					|| element.equals(ValidationPackage.eNS_URI)
+					|| element.equals(VisibilityPackage.eNS_URI);
 		}
 		return false;
 	}
@@ -179,8 +184,8 @@ public class EditpartManager extends AbstractEditpartManager {
 				.isAssignableFrom(IClassDelegateValidatorEditpart.class)) {
 			result = createNewInstance(ClassDelegateValidatorEditpart.class);
 		} else if (editPartClazz
-				.isAssignableFrom(IRuledVisibilityProcessorEditpart.class)) {
-			result = createNewInstance(RuledVisibilityProcessorEditpart.class);
+				.isAssignableFrom(IVisibilityProcessorEditpart.class)) {
+			result = createNewInstance(VisibilityProcessorEditpart.class);
 		} else if (editPartClazz
 				.isAssignableFrom(IVisibilityProcessorEditpart.class)) {
 			result = createNewInstance(VisibilityProcessorEditpart.class);
@@ -194,6 +199,12 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(IOpenDialogCommandEditpart.class)) {
 			result = createNewInstance(OpenDialogCommandEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IVisibilityProcessorValueBindingEndpointEditpart.class)) {
+			result = createNewInstance(VisibilityProcessorValueBindingEndpointEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IVisibilityProcessorEditpart.class)) {
+			result = createNewInstance(VisibilityProcessorEditpart.class);
 		}
 
 		if (result != null) {
@@ -272,6 +283,10 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(DialogEditpart.class);
 		} else if (yElement instanceof YOpenDialogCommand) {
 			result = createNewInstance(OpenDialogCommandEditpart.class);
+		} else if (yElement instanceof YVisibilityProcessorValueBindingEndpoint) {
+			result = createNewInstance(VisibilityProcessorValueBindingEndpointEditpart.class);
+		} else if (yElement instanceof YVisibilityProcessor) {
+			result = createNewInstance(VisibilityProcessorEditpart.class);
 		}
 
 		if (result != null) {

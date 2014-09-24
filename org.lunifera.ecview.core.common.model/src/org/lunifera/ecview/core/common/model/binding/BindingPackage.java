@@ -773,6 +773,61 @@ public interface BindingPackage extends EPackage {
 	int YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT_FEATURE_COUNT = YLIST_BINDING_ENDPOINT_FEATURE_COUNT + 6;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.binding.impl.YVisibilityProcessorValueBindingEndpointImpl <em>YVisibility Processor Value Binding Endpoint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.binding.impl.YVisibilityProcessorValueBindingEndpointImpl
+	 * @see org.lunifera.ecview.core.common.model.binding.impl.BindingPackageImpl#getYVisibilityProcessorValueBindingEndpoint()
+	 * @generated
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT = 12;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__ID = YVALUE_BINDING_ENDPOINT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__NAME = YVALUE_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Processor Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__PROCESSOR_INSTANCE = YVALUE_BINDING_ENDPOINT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__PROPERTY = YVALUE_BINDING_ENDPOINT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>YVisibility Processor Value Binding Endpoint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT_FEATURE_COUNT = YVALUE_BINDING_ENDPOINT_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.binding.YBindingUpdateStrategy <em>YBinding Update Strategy</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -780,7 +835,7 @@ public interface BindingPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.binding.impl.BindingPackageImpl#getYBindingUpdateStrategy()
 	 * @generated
 	 */
-	int YBINDING_UPDATE_STRATEGY = 12;
+	int YBINDING_UPDATE_STRATEGY = 13;
 
 
 	/**
@@ -1134,6 +1189,38 @@ public interface BindingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYECViewModelListBindingEndpoint_EmfNsURI();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint <em>YVisibility Processor Value Binding Endpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YVisibility Processor Value Binding Endpoint</em>'.
+	 * @see org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint
+	 * @generated
+	 */
+	EClass getYVisibilityProcessorValueBindingEndpoint();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint#getProcessorInstance <em>Processor Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Processor Instance</em>'.
+	 * @see org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint#getProcessorInstance()
+	 * @see #getYVisibilityProcessorValueBindingEndpoint()
+	 * @generated
+	 */
+	EAttribute getYVisibilityProcessorValueBindingEndpoint_ProcessorInstance();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint#getProperty <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Property</em>'.
+	 * @see org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint#getProperty()
+	 * @see #getYVisibilityProcessorValueBindingEndpoint()
+	 * @generated
+	 */
+	EAttribute getYVisibilityProcessorValueBindingEndpoint_Property();
 
 	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.binding.YBindingUpdateStrategy <em>YBinding Update Strategy</em>}'.
@@ -1506,6 +1593,32 @@ public interface BindingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT__EMF_NS_URI = eINSTANCE.getYECViewModelListBindingEndpoint_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.binding.impl.YVisibilityProcessorValueBindingEndpointImpl <em>YVisibility Processor Value Binding Endpoint</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.binding.impl.YVisibilityProcessorValueBindingEndpointImpl
+		 * @see org.lunifera.ecview.core.common.model.binding.impl.BindingPackageImpl#getYVisibilityProcessorValueBindingEndpoint()
+		 * @generated
+		 */
+		EClass YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT = eINSTANCE.getYVisibilityProcessorValueBindingEndpoint();
+
+		/**
+		 * The meta object literal for the '<em><b>Processor Instance</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__PROCESSOR_INSTANCE = eINSTANCE.getYVisibilityProcessorValueBindingEndpoint_ProcessorInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__PROPERTY = eINSTANCE.getYVisibilityProcessorValueBindingEndpoint_Property();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.binding.YBindingUpdateStrategy <em>YBinding Update Strategy</em>}' enum.

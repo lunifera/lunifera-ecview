@@ -194,8 +194,14 @@ public class ValueBindingEditpart extends ElementEditpart<YValueBinding>
 		}
 
 		try {
-			IECViewBindingManager bindingManager = getBindindSet()
-					.getBindingManager();
+
+			IECViewBindingManager bindingManager = null;
+			if (getBindindSet() != null) {
+				bindingManager = getBindindSet().getBindingManager();
+			} else {
+				bindingManager = getViewContext(getModel()).getService(
+						IECViewBindingManager.class.getName());
+			}
 			if (bindingManager != null) {
 				IObservableValue target = getTargetEndpoint().getObservable();
 				IObservableValue model = getModelEndpoint().getObservable();
@@ -234,7 +240,6 @@ public class ValueBindingEditpart extends ElementEditpart<YValueBinding>
 				// binding.updateModelToTarget();
 				// }
 				// });
-
 			} else {
 				LOGGER.error("BindingManager is null!. No bindings processed!");
 			}
@@ -273,7 +278,7 @@ public class ValueBindingEditpart extends ElementEditpart<YValueBinding>
 	 */
 	protected IBindingSetEditpart getBindindSet() {
 		if (getModel().getBindingSet() == null) {
-			throw new RuntimeException("bindingSet must not be null!");
+			return null;
 		}
 		return DelegatingEditPartManager.getInstance().findEditpart(
 				getModel().getBindingSet());

@@ -8,18 +8,16 @@
  * Contributors:
  *    Florian Pirchner - initial API and implementation
  */
-package org.lunifera.ecview.core.common.editpart.visibility;
+package org.lunifera.ecview.core.common.visibility;
 
-import org.lunifera.ecview.core.common.editpart.IElementEditpart;
-
-/**
- * An editpart responsible to handle visibility options of widgets.
- */
-public interface IVisibilityProcessorEditpart extends IElementEditpart {
+public interface IVisibilityManager {
 
 	/**
-	 * Activates the visibility processor.
+	 * Returns the visibility handler for the given id.
+	 * 
+	 * @param id
+	 * @return
 	 */
-	void activate();
-	
+	IVisibilityHandler getById(String id);
+
 }

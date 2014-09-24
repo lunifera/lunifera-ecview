@@ -78,6 +78,10 @@ Package binding <http://lunifera.org/ecview/v1/core/binding>
     Attribute typeQualifiedName : EString
     Attribute emfNsURI : EString
 
+  Class YVisibilityProcessorValueBindingEndpoint -> YValueBindingEndpoint
+    Attribute processorInstance : EJavaObject
+    Attribute property : EString
+
   Enum YBindingUpdateStrategy
     Literal UPDATE = 0
     Literal ON_REQUEST = 1
@@ -99,7 +103,7 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Operation removeValueChangeListener(YValueChangeListener) : EBoolean
     Operation removeAllValueChangListeners() : void
 
-  Class YView -> YElement, YCssAble, YMarginable, YVisibilityProcessable
+  Class YView -> YElement, YCssAble, YMarginable
     Reference root : YViewSet
     Attribute viewName : EString
     Reference content : YEmbeddable
@@ -109,6 +113,7 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Reference dialogs : YDialog<<0..*>>
     Attribute deviceType : YDeviceType
     Attribute contentAlignment : YAlignment
+    Reference visibilityProcessors : YVisibilityProcessor<<0..*>>
     Operation getOrCreateBindingSet() : YBindingSet
 
   Class YViewSet -> YElement
@@ -120,7 +125,7 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Attribute valueType : EJavaClass
     Attribute valueTypeQualifiedName : EString
 
-  Class YEmbeddable -> YElement, YCssAble, YVisibleable, YVisibilityProcessable
+  Class YEmbeddable -> YElement, YCssAble, YVisibleable
     Reference orphanDatatypes : YDatatype<<0..*>>
     Reference orphanDatadescriptions : YDatadescription<<0..*>>
     Operation getParent() : YLayout
@@ -226,9 +231,6 @@ Package core <http://lunifera.org/ecview/v1/core/view>
 
   Class YDtWrapper -> YDatatype
 
-  Class YVisibilityProcessable
-    Reference visibilityProcessor : YVisibilityProcessor
-
   Class YCommand -> YElement
     Operation getView() : YView
 
@@ -324,16 +326,10 @@ Package datatypes <http://lunifera.org/ecview/v1/core/datatypes>
 Package visibility <http://lunifera.org/ecview/v1/core/visibility>
 
   Class YVisibilityProcessor -> YElement
-    Reference onMatch : YVisibilityProperties<<1..1>>
-    Reference parent : YVisibilityProcessable<<1..1>>
-
-  Class YRuledVisibilityProcessor -> YVisibilityProcessor
-    Reference rule : YVisibilityRule
-
-  Class YVisibilityRule -> YElement
-    Reference bindingEndpoints : YVisibilityRuleBindingEndpoint<<0..*>>
-    Attribute matchMeansFalse : EBoolean
-    Operation createRuleEndpoint(EString) : YVisibilityRuleBindingEndpoint
+    Reference dataUsed : YBinding<<0..*>>
+    Reference triggersOn : YBinding<<0..*>>
+    Attribute delegate : EJavaClass
+    Attribute delegateQualifiedName : EString
 
   Class YVisibilityProperties -> YElement
     Attribute visible : EBoolean
@@ -344,40 +340,19 @@ Package visibility <http://lunifera.org/ecview/v1/core/visibility>
     Attribute italic : EBoolean
     Attribute strikethrough : EBoolean
     Attribute underline : EBoolean
-    Reference backgroundColor : YColor
-    Reference foregroundColor : YColor
+    Attribute backgroundColor : YColor
+    Attribute foregroundColor : YColor
+    Attribute backgroundColorCode : EString
+    Attribute foregroundColorCode : EString
 
-  Class YColor
-    Attribute red : EInt
-    Attribute green : EInt
-    Attribute blue : EInt
-    Attribute themeId : EString
-    Attribute type : YColorType<<1..1>>
-
-  Class YVisibilityRuleBindingEndpoint -> YValueBindingEndpoint
-    Reference rule : YVisibilityRule<<1..1>>
-    Attribute attribute : EString
-
-  Class YBooleanValueRule -> YVisibilityRule
-    Operation createRuleEndpoint() : YVisibilityRuleBindingEndpoint
-
-  Class YRegexpRule -> YVisibilityRule
-    Attribute regExpression : EString
-    Operation createRuleEndpoint() : YVisibilityRuleBindingEndpoint
-
-  Class YDecimalValueRule -> YVisibilityRule
-    Attribute option : YDecimalValueRuleOption
-    Attribute referenceValue : EDouble
-    Operation createRuleEndpoint() : YVisibilityRuleBindingEndpoint
-
-  Enum YColorType
-    Literal THEME = 0
-    Literal RGB = 1
-
-  Enum YDecimalValueRuleOption
-    Literal EQUAL = 0
-    Literal LOWER = 1
-    Literal LOWER_EQUAL = 2
-    Literal GREATER = 3
-    Literal GREATER_EQUAL = 4
-    Literal NOT_EQUAL = 5
+  Enum YColor
+    Literal UNDEFINED = 0
+    Literal GREEN = 1
+    Literal BLUE = 2
+    Literal YELLOW = 3
+    Literal RED = 4
+    Literal BLACK = 5
+    Literal WHITE = 6
+    Literal GRAY = 7
+    Literal LIGHT_GRAY = 8
+    Literal DARK_GRAY = 9

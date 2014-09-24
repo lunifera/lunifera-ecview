@@ -169,22 +169,13 @@ public interface CoreModelPackage extends EPackage {
 	int YEMBEDDABLE__VISIBLE = YELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YEMBEDDABLE__VISIBILITY_PROCESSOR = YELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEMBEDDABLE__ORPHAN_DATATYPES = YELEMENT_FEATURE_COUNT + 5;
+	int YEMBEDDABLE__ORPHAN_DATATYPES = YELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
@@ -193,7 +184,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS = YELEMENT_FEATURE_COUNT + 6;
+	int YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS = YELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>YEmbeddable</em>' class.
@@ -202,7 +193,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEMBEDDABLE_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 7;
+	int YEMBEDDABLE_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl <em>YLayout</em>}' class.
@@ -267,15 +258,6 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YLAYOUT__VISIBLE = YEMBEDDABLE__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YLAYOUT__VISIBILITY_PROCESSOR = YEMBEDDABLE__VISIBILITY_PROCESSOR;
 
 	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
@@ -376,15 +358,6 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YFIELD__VISIBLE = YEMBEDDABLE__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YFIELD__VISIBILITY_PROCESSOR = YEMBEDDABLE__VISIBILITY_PROCESSOR;
 
 	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
@@ -523,22 +496,13 @@ public interface CoreModelPackage extends EPackage {
 	int YVIEW__MARGIN = YELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVIEW__VISIBILITY_PROCESSOR = YELEMENT_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Root</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__ROOT = YELEMENT_FEATURE_COUNT + 4;
+	int YVIEW__ROOT = YELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>View Name</b></em>' attribute.
@@ -547,7 +511,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__VIEW_NAME = YELEMENT_FEATURE_COUNT + 5;
+	int YVIEW__VIEW_NAME = YELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' containment reference.
@@ -556,7 +520,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__CONTENT = YELEMENT_FEATURE_COUNT + 6;
+	int YVIEW__CONTENT = YELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Binding Set</b></em>' containment reference.
@@ -565,7 +529,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__BINDING_SET = YELEMENT_FEATURE_COUNT + 7;
+	int YVIEW__BINDING_SET = YELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Bean Slots</b></em>' containment reference list.
@@ -574,7 +538,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__BEAN_SLOTS = YELEMENT_FEATURE_COUNT + 8;
+	int YVIEW__BEAN_SLOTS = YELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Command Set</b></em>' containment reference.
@@ -583,7 +547,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__COMMAND_SET = YELEMENT_FEATURE_COUNT + 9;
+	int YVIEW__COMMAND_SET = YELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Dialogs</b></em>' containment reference list.
@@ -592,7 +556,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__DIALOGS = YELEMENT_FEATURE_COUNT + 10;
+	int YVIEW__DIALOGS = YELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -601,7 +565,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__DEVICE_TYPE = YELEMENT_FEATURE_COUNT + 11;
+	int YVIEW__DEVICE_TYPE = YELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Content Alignment</b></em>' attribute.
@@ -610,7 +574,16 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW__CONTENT_ALIGNMENT = YELEMENT_FEATURE_COUNT + 12;
+	int YVIEW__CONTENT_ALIGNMENT = YELEMENT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Visibility Processors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__VISIBILITY_PROCESSORS = YELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>YView</em>' class.
@@ -1275,15 +1248,6 @@ public interface CoreModelPackage extends EPackage {
 	int YACTION__VISIBLE = YEMBEDDABLE__VISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YACTION__VISIBILITY_PROCESSOR = YEMBEDDABLE__VISIBILITY_PROCESSOR;
-
-	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1928,34 +1892,6 @@ public interface CoreModelPackage extends EPackage {
 	int YDT_WRAPPER_FEATURE_COUNT = DatatypesPackage.YDATATYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable <em>YVisibility Processable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable
-	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYVisibilityProcessable()
-	 * @generated
-	 */
-	int YVISIBILITY_PROCESSABLE = 33;
-
-	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_PROCESSABLE__VISIBILITY_PROCESSOR = 0;
-
-	/**
-	 * The number of structural features of the '<em>YVisibility Processable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int YVISIBILITY_PROCESSABLE_FEATURE_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YCommand <em>YCommand</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1963,7 +1899,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYCommand()
 	 * @generated
 	 */
-	int YCOMMAND = 34;
+	int YCOMMAND = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2000,7 +1936,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYCommandSet()
 	 * @generated
 	 */
-	int YCOMMAND_SET = 35;
+	int YCOMMAND_SET = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2046,7 +1982,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYOpenDialogCommand()
 	 * @generated
 	 */
-	int YOPEN_DIALOG_COMMAND = 36;
+	int YOPEN_DIALOG_COMMAND = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2101,7 +2037,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDeviceType()
 	 * @generated
 	 */
-	int YDEVICE_TYPE = 37;
+	int YDEVICE_TYPE = 36;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}' enum.
@@ -2111,7 +2047,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAlignment()
 	 * @generated
 	 */
-	int YALIGNMENT = 38;
+	int YALIGNMENT = 37;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}' enum.
@@ -2121,7 +2057,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFlatAlignment()
 	 * @generated
 	 */
-	int YFLAT_ALIGNMENT = 39;
+	int YFLAT_ALIGNMENT = 38;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}' enum.
@@ -2131,7 +2067,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYUnit()
 	 * @generated
 	 */
-	int YUNIT = 40;
+	int YUNIT = 39;
 
 	/**
 	 * The meta object id for the '<em>YURI</em>' data type.
@@ -2141,7 +2077,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYURI()
 	 * @generated
 	 */
-	int YURI = 41;
+	int YURI = 40;
 
 
 	/**
@@ -2152,7 +2088,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYValueChangeListener()
 	 * @generated
 	 */
-	int YVALUE_CHANGE_LISTENER = 42;
+	int YVALUE_CHANGE_LISTENER = 41;
 
 
 	/**
@@ -2348,6 +2284,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYView_ContentAlignment();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.ecview.core.common.model.core.YView#getVisibilityProcessors <em>Visibility Processors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Visibility Processors</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YView#getVisibilityProcessors()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EReference getYView_VisibilityProcessors();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YViewSet <em>YView Set</em>}'.
@@ -3190,27 +3137,6 @@ public interface CoreModelPackage extends EPackage {
 	EClass getYDtWrapper();
 
 	/**
-	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable <em>YVisibility Processable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>YVisibility Processable</em>'.
-	 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable
-	 * @generated
-	 */
-	EClass getYVisibilityProcessable();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable#getVisibilityProcessor <em>Visibility Processor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Visibility Processor</em>'.
-	 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable#getVisibilityProcessor()
-	 * @see #getYVisibilityProcessable()
-	 * @generated
-	 */
-	EReference getYVisibilityProcessable_VisibilityProcessor();
-
-	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YCommand <em>YCommand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3508,6 +3434,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YVIEW__CONTENT_ALIGNMENT = eINSTANCE.getYView_ContentAlignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Visibility Processors</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YVIEW__VISIBILITY_PROCESSORS = eINSTANCE.getYView_VisibilityProcessors();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -4198,24 +4132,6 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass YDT_WRAPPER = eINSTANCE.getYDtWrapper();
-
-		/**
-		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable <em>YVisibility Processable</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable
-		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYVisibilityProcessable()
-		 * @generated
-		 */
-		EClass YVISIBILITY_PROCESSABLE = eINSTANCE.getYVisibilityProcessable();
-
-		/**
-		 * The meta object literal for the '<em><b>Visibility Processor</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference YVISIBILITY_PROCESSABLE__VISIBILITY_PROCESSOR = eINSTANCE.getYVisibilityProcessable_VisibilityProcessor();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YCommand <em>YCommand</em>}' class.

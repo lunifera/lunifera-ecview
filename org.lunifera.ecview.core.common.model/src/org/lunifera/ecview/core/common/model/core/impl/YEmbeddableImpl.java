@@ -31,13 +31,10 @@ import org.lunifera.ecview.core.common.model.core.YCssAble;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YView;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
 import org.lunifera.ecview.core.common.model.core.YVisibleable;
 import org.lunifera.ecview.core.common.model.datatypes.DatatypesFactory;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
-import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
-import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -51,7 +48,6 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#isInitialVisible <em>Initial Visible</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getVisibilityProcessor <em>Visibility Processor</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getOrphanDatatypes <em>Orphan Datatypes</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}</li>
  * </ul>
@@ -163,17 +159,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected boolean visible = VISIBLE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getVisibilityProcessor()
-	 * <em>Visibility Processor</em>}' containment reference. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getVisibilityProcessor()
-	 * @generated
-	 * @ordered
-	 */
-	protected YVisibilityProcessor visibilityProcessor;
 
 	/**
 	 * The cached value of the '{@link #getOrphanDatatypes()
@@ -351,70 +336,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YVisibilityProcessor getVisibilityProcessor() {
-		if (visibilityProcessor != null && visibilityProcessor.eIsProxy()) {
-			InternalEObject oldVisibilityProcessor = (InternalEObject)visibilityProcessor;
-			visibilityProcessor = (YVisibilityProcessor)eResolveProxy(oldVisibilityProcessor);
-			if (visibilityProcessor != oldVisibilityProcessor) {
-				InternalEObject newVisibilityProcessor = (InternalEObject)visibilityProcessor;
-				NotificationChain msgs =  oldVisibilityProcessor.eInverseRemove(this, VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT, YVisibilityProcessor.class, null);
-				if (newVisibilityProcessor.eInternalContainer() == null) {
-					msgs =  newVisibilityProcessor.eInverseAdd(this, VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT, YVisibilityProcessor.class, msgs);
-				}
-				if (msgs != null) msgs.dispatch();
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR, oldVisibilityProcessor, visibilityProcessor));
-			}
-		}
-		return visibilityProcessor;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YVisibilityProcessor basicGetVisibilityProcessor() {
-		return visibilityProcessor;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetVisibilityProcessor(
-			YVisibilityProcessor newVisibilityProcessor, NotificationChain msgs) {
-		YVisibilityProcessor oldVisibilityProcessor = visibilityProcessor;
-		visibilityProcessor = newVisibilityProcessor;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR, oldVisibilityProcessor, newVisibilityProcessor);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVisibilityProcessor(
-			YVisibilityProcessor newVisibilityProcessor) {
-		if (newVisibilityProcessor != visibilityProcessor) {
-			NotificationChain msgs = null;
-			if (visibilityProcessor != null)
-				msgs = ((InternalEObject)visibilityProcessor).eInverseRemove(this, VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT, YVisibilityProcessor.class, msgs);
-			if (newVisibilityProcessor != null)
-				msgs = ((InternalEObject)newVisibilityProcessor).eInverseAdd(this, VisibilityPackage.YVISIBILITY_PROCESSOR__PARENT, YVisibilityProcessor.class, msgs);
-			msgs = basicSetVisibilityProcessor(newVisibilityProcessor, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR, newVisibilityProcessor, newVisibilityProcessor));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<YDatatype> getOrphanDatatypes() {
 		if (orphanDatatypes == null) {
 			orphanDatatypes = new EObjectContainmentEList.Resolving<YDatatype>(YDatatype.class, this, CoreModelPackage.YEMBEDDABLE__ORPHAN_DATATYPES);
@@ -474,27 +395,9 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR:
-				if (visibilityProcessor != null)
-					msgs = ((InternalEObject)visibilityProcessor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR, null, msgs);
-				return basicSetVisibilityProcessor((YVisibilityProcessor)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR:
-				return basicSetVisibilityProcessor(null, msgs);
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATATYPES:
 				return ((InternalEList<?>)getOrphanDatatypes()).basicRemove(otherEnd, msgs);
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS:
@@ -522,9 +425,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return isInitialVisible();
 			case CoreModelPackage.YEMBEDDABLE__VISIBLE:
 				return isVisible();
-			case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR:
-				if (resolve) return getVisibilityProcessor();
-				return basicGetVisibilityProcessor();
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATATYPES:
 				return getOrphanDatatypes();
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS:
@@ -558,9 +458,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return;
 			case CoreModelPackage.YEMBEDDABLE__VISIBLE:
 				setVisible((Boolean)newValue);
-				return;
-			case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR:
-				setVisibilityProcessor((YVisibilityProcessor)newValue);
 				return;
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATATYPES:
 				getOrphanDatatypes().clear();
@@ -599,9 +496,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 			case CoreModelPackage.YEMBEDDABLE__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR:
-				setVisibilityProcessor((YVisibilityProcessor)null);
-				return;
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATATYPES:
 				getOrphanDatatypes().clear();
 				return;
@@ -631,8 +525,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return initialVisible != INITIAL_VISIBLE_EDEFAULT;
 			case CoreModelPackage.YEMBEDDABLE__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR:
-				return visibilityProcessor != null;
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATATYPES:
 				return orphanDatatypes != null && !orphanDatatypes.isEmpty();
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS:
@@ -661,12 +553,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				default: return -1;
 			}
 		}
-		if (baseClass == YVisibilityProcessable.class) {
-			switch (derivedFeatureID) {
-				case CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR: return CoreModelPackage.YVISIBILITY_PROCESSABLE__VISIBILITY_PROCESSOR;
-				default: return -1;
-			}
-		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -687,12 +573,6 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 			switch (baseFeatureID) {
 				case CoreModelPackage.YVISIBLEABLE__INITIAL_VISIBLE: return CoreModelPackage.YEMBEDDABLE__INITIAL_VISIBLE;
 				case CoreModelPackage.YVISIBLEABLE__VISIBLE: return CoreModelPackage.YEMBEDDABLE__VISIBLE;
-				default: return -1;
-			}
-		}
-		if (baseClass == YVisibilityProcessable.class) {
-			switch (baseFeatureID) {
-				case CoreModelPackage.YVISIBILITY_PROCESSABLE__VISIBILITY_PROCESSOR: return CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR;
 				default: return -1;
 			}
 		}

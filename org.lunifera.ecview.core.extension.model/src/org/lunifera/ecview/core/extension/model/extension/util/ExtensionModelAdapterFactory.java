@@ -22,39 +22,8 @@ import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
 import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.core.YSpacingable;
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
 import org.lunifera.ecview.core.common.model.core.YVisibleable;
 import org.lunifera.ecview.core.extension.model.extension.*;
-import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
-import org.lunifera.ecview.core.extension.model.extension.YBrowser;
-import org.lunifera.ecview.core.extension.model.extension.YButton;
-import org.lunifera.ecview.core.extension.model.extension.YCheckBox;
-import org.lunifera.ecview.core.extension.model.extension.YComboBox;
-import org.lunifera.ecview.core.extension.model.extension.YDateTime;
-import org.lunifera.ecview.core.extension.model.extension.YDecimalField;
-import org.lunifera.ecview.core.extension.model.extension.YFormLayout;
-import org.lunifera.ecview.core.extension.model.extension.YFormLayoutCellStyle;
-import org.lunifera.ecview.core.extension.model.extension.YGridLayout;
-import org.lunifera.ecview.core.extension.model.extension.YGridLayoutCellStyle;
-import org.lunifera.ecview.core.extension.model.extension.YHorizontalLayout;
-import org.lunifera.ecview.core.extension.model.extension.YHorizontalLayoutCellStyle;
-import org.lunifera.ecview.core.extension.model.extension.YInput;
-import org.lunifera.ecview.core.extension.model.extension.YLabel;
-import org.lunifera.ecview.core.extension.model.extension.YList;
-import org.lunifera.ecview.core.extension.model.extension.YMasterDetail;
-import org.lunifera.ecview.core.extension.model.extension.YNumericField;
-import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
-import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
-import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
-import org.lunifera.ecview.core.extension.model.extension.YTab;
-import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
-import org.lunifera.ecview.core.extension.model.extension.YTable;
-import org.lunifera.ecview.core.extension.model.extension.YTextArea;
-import org.lunifera.ecview.core.extension.model.extension.YTextField;
-import org.lunifera.ecview.core.extension.model.extension.YToggleButton;
-import org.lunifera.ecview.core.extension.model.extension.YTree;
-import org.lunifera.ecview.core.extension.model.extension.YVerticalLayout;
-import org.lunifera.ecview.core.extension.model.extension.YVerticalLayoutCellStyle;
 
 /**
  * <!-- begin-user-doc -->
@@ -267,10 +236,6 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYVisibleable(YVisibleable object) {
 				return createYVisibleableAdapter();
-			}
-			@Override
-			public Adapter caseYVisibilityProcessable(YVisibilityProcessable object) {
-				return createYVisibilityProcessableAdapter();
 			}
 			@Override
 			public Adapter caseYEmbeddable(YEmbeddable object) {
@@ -891,20 +856,6 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYVisibleableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable <em>YVisibility Processable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable
-	 * @generated
-	 */
-	public Adapter createYVisibilityProcessableAdapter() {
 		return null;
 	}
 

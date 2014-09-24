@@ -3,9 +3,7 @@
 package org.lunifera.ecview.core.common.model.visibility.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
@@ -31,6 +29,8 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#isUnderline <em>Underline</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getBackgroundColor <em>Background Color</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getForegroundColor <em>Foreground Color</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getBackgroundColorCode <em>Background Color Code</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getForegroundColorCode <em>Foreground Color Code</em>}</li>
  * </ul>
  * </p>
  *
@@ -238,24 +238,84 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	protected boolean underline = UNDERLINE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBackgroundColor() <em>Background Color</em>}' containment reference.
+	 * The default value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBackgroundColor()
 	 * @generated
 	 * @ordered
 	 */
-	protected YColor backgroundColor;
+	protected static final YColor BACKGROUND_COLOR_EDEFAULT = YColor.UNDEFINED;
 
 	/**
-	 * The cached value of the '{@link #getForegroundColor() <em>Foreground Color</em>}' containment reference.
+	 * The cached value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBackgroundColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected YColor backgroundColor = BACKGROUND_COLOR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getForegroundColor() <em>Foreground Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForegroundColor()
 	 * @generated
 	 * @ordered
 	 */
-	protected YColor foregroundColor;
+	protected static final YColor FOREGROUND_COLOR_EDEFAULT = YColor.UNDEFINED;
+
+	/**
+	 * The cached value of the '{@link #getForegroundColor() <em>Foreground Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getForegroundColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected YColor foregroundColor = FOREGROUND_COLOR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBackgroundColorCode() <em>Background Color Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBackgroundColorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BACKGROUND_COLOR_CODE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getBackgroundColorCode() <em>Background Color Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBackgroundColorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String backgroundColorCode = BACKGROUND_COLOR_CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getForegroundColorCode() <em>Foreground Color Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getForegroundColorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FOREGROUND_COLOR_CODE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getForegroundColorCode() <em>Foreground Color Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getForegroundColorCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String foregroundColorCode = FOREGROUND_COLOR_CODE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -492,45 +552,7 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	public YColor getBackgroundColor() {
-		if (backgroundColor != null && backgroundColor.eIsProxy()) {
-			InternalEObject oldBackgroundColor = (InternalEObject)backgroundColor;
-			backgroundColor = (YColor)eResolveProxy(oldBackgroundColor);
-			if (backgroundColor != oldBackgroundColor) {
-				InternalEObject newBackgroundColor = (InternalEObject)backgroundColor;
-				NotificationChain msgs = oldBackgroundColor.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, null, null);
-				if (newBackgroundColor.eInternalContainer() == null) {
-					msgs = newBackgroundColor.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, null, msgs);
-				}
-				if (msgs != null) msgs.dispatch();
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, oldBackgroundColor, backgroundColor));
-			}
-		}
 		return backgroundColor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YColor basicGetBackgroundColor() {
-		return backgroundColor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetBackgroundColor(YColor newBackgroundColor, NotificationChain msgs) {
-		YColor oldBackgroundColor = backgroundColor;
-		backgroundColor = newBackgroundColor;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, oldBackgroundColor, newBackgroundColor);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
 	}
 
 	/**
@@ -539,17 +561,10 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	public void setBackgroundColor(YColor newBackgroundColor) {
-		if (newBackgroundColor != backgroundColor) {
-			NotificationChain msgs = null;
-			if (backgroundColor != null)
-				msgs = ((InternalEObject)backgroundColor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, null, msgs);
-			if (newBackgroundColor != null)
-				msgs = ((InternalEObject)newBackgroundColor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, null, msgs);
-			msgs = basicSetBackgroundColor(newBackgroundColor, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, newBackgroundColor, newBackgroundColor));
+		YColor oldBackgroundColor = backgroundColor;
+		backgroundColor = newBackgroundColor == null ? BACKGROUND_COLOR_EDEFAULT : newBackgroundColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR, oldBackgroundColor, backgroundColor));
 	}
 
 	/**
@@ -558,45 +573,7 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	public YColor getForegroundColor() {
-		if (foregroundColor != null && foregroundColor.eIsProxy()) {
-			InternalEObject oldForegroundColor = (InternalEObject)foregroundColor;
-			foregroundColor = (YColor)eResolveProxy(oldForegroundColor);
-			if (foregroundColor != oldForegroundColor) {
-				InternalEObject newForegroundColor = (InternalEObject)foregroundColor;
-				NotificationChain msgs = oldForegroundColor.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, null, null);
-				if (newForegroundColor.eInternalContainer() == null) {
-					msgs = newForegroundColor.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, null, msgs);
-				}
-				if (msgs != null) msgs.dispatch();
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, oldForegroundColor, foregroundColor));
-			}
-		}
 		return foregroundColor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YColor basicGetForegroundColor() {
-		return foregroundColor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetForegroundColor(YColor newForegroundColor, NotificationChain msgs) {
-		YColor oldForegroundColor = foregroundColor;
-		foregroundColor = newForegroundColor;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, oldForegroundColor, newForegroundColor);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
 	}
 
 	/**
@@ -605,17 +582,10 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	public void setForegroundColor(YColor newForegroundColor) {
-		if (newForegroundColor != foregroundColor) {
-			NotificationChain msgs = null;
-			if (foregroundColor != null)
-				msgs = ((InternalEObject)foregroundColor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, null, msgs);
-			if (newForegroundColor != null)
-				msgs = ((InternalEObject)newForegroundColor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, null, msgs);
-			msgs = basicSetForegroundColor(newForegroundColor, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, newForegroundColor, newForegroundColor));
+		YColor oldForegroundColor = foregroundColor;
+		foregroundColor = newForegroundColor == null ? FOREGROUND_COLOR_EDEFAULT : newForegroundColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR, oldForegroundColor, foregroundColor));
 	}
 
 	/**
@@ -623,15 +593,41 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR:
-				return basicSetBackgroundColor(null, msgs);
-			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR:
-				return basicSetForegroundColor(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public String getBackgroundColorCode() {
+		return backgroundColorCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBackgroundColorCode(String newBackgroundColorCode) {
+		String oldBackgroundColorCode = backgroundColorCode;
+		backgroundColorCode = newBackgroundColorCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE, oldBackgroundColorCode, backgroundColorCode));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getForegroundColorCode() {
+		return foregroundColorCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setForegroundColorCode(String newForegroundColorCode) {
+		String oldForegroundColorCode = foregroundColorCode;
+		foregroundColorCode = newForegroundColorCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE, oldForegroundColorCode, foregroundColorCode));
 	}
 
 	/**
@@ -663,11 +659,13 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__UNDERLINE:
 				return isUnderline();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR:
-				if (resolve) return getBackgroundColor();
-				return basicGetBackgroundColor();
+				return getBackgroundColor();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR:
-				if (resolve) return getForegroundColor();
-				return basicGetForegroundColor();
+				return getForegroundColor();
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE:
+				return getBackgroundColorCode();
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
+				return getForegroundColorCode();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -716,6 +714,12 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR:
 				setForegroundColor((YColor)newValue);
 				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE:
+				setBackgroundColorCode((String)newValue);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
+				setForegroundColorCode((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -759,10 +763,16 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 				setUnderline(UNDERLINE_EDEFAULT);
 				return;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR:
-				setBackgroundColor((YColor)null);
+				setBackgroundColor(BACKGROUND_COLOR_EDEFAULT);
 				return;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR:
-				setForegroundColor((YColor)null);
+				setForegroundColor(FOREGROUND_COLOR_EDEFAULT);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE:
+				setBackgroundColorCode(BACKGROUND_COLOR_CODE_EDEFAULT);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
+				setForegroundColorCode(FOREGROUND_COLOR_CODE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -797,9 +807,13 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__UNDERLINE:
 				return underline != UNDERLINE_EDEFAULT;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR:
-				return backgroundColor != null;
+				return backgroundColor != BACKGROUND_COLOR_EDEFAULT;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR:
-				return foregroundColor != null;
+				return foregroundColor != FOREGROUND_COLOR_EDEFAULT;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE:
+				return BACKGROUND_COLOR_CODE_EDEFAULT == null ? backgroundColorCode != null : !BACKGROUND_COLOR_CODE_EDEFAULT.equals(backgroundColorCode);
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
+				return FOREGROUND_COLOR_CODE_EDEFAULT == null ? foregroundColorCode != null : !FOREGROUND_COLOR_CODE_EDEFAULT.equals(foregroundColorCode);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -834,6 +848,14 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 		result.append(strikethrough);
 		result.append(", underline: ");
 		result.append(underline);
+		result.append(", backgroundColor: ");
+		result.append(backgroundColor);
+		result.append(", foregroundColor: ");
+		result.append(foregroundColor);
+		result.append(", backgroundColorCode: ");
+		result.append(backgroundColorCode);
+		result.append(", foregroundColorCode: ");
+		result.append(foregroundColorCode);
 		result.append(')');
 		return result.toString();
 	}

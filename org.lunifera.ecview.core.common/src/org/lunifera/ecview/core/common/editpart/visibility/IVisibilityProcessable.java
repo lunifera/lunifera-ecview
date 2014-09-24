@@ -10,6 +10,8 @@
  */
 package org.lunifera.ecview.core.common.editpart.visibility;
 
+import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
+
 /**
  * An element that can handle visibility properties.
  */
@@ -21,7 +23,7 @@ public interface IVisibilityProcessable {
 	 * 
 	 * @param properties
 	 */
-	void apply(IVisibilityPropertiesEditpart properties);
+	void apply(IVisibilityHandler handler);
 
 	/**
 	 * Is called to reset the currently set visibility properties.
