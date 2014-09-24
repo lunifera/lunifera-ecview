@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='2'>
+  <artifact classifier='osgi.bundle' id='org.lunifera.ecview.core.ui.e4.css.core' version='0.7.3.201408241624'>
+    <properties size='5'>
+      <property name='artifact.size' value='5687'/>
+      <property name='download.size' value='5687'/>
+      <property name='maven-groupId' value='org.lunifera.ecview.core'/>
+      <property name='maven-artifactId' value='org.lunifera.ecview.core.ui.e4.css.core'/>
+      <property name='maven-version' value='0.7.3-SNAPSHOT'/>
+    </properties>
+  </artifact>
+  <artifact classifier='osgi.bundle' id='org.lunifera.ecview.core.ui.e4.css.core.source' version='0.7.3.201408241624'>
+    <properties size='6'>
+      <property name='artifact.size' value='5051'/>
+      <property name='download.size' value='5051'/>
+      <property name='maven-groupId' value='org.lunifera.ecview.core'/>
+      <property name='maven-artifactId' value='org.lunifera.ecview.core.ui.e4.css.core'/>
+      <property name='maven-version' value='0.7.3-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources'/>
+    </properties>
+  </artifact>
+</artifacts>
