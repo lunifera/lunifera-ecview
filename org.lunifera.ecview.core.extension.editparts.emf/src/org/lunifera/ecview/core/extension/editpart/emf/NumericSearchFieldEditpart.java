@@ -11,6 +11,7 @@
 package org.lunifera.ecview.core.extension.editpart.emf;
 
 import org.lunifera.ecview.core.common.editpart.emf.FieldEditpart;
+import org.lunifera.ecview.core.common.filter.IFilterProvidingPresentation;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.YNumericSearchField;
 import org.lunifera.ecview.core.ui.core.editparts.extension.INumericSearchFieldEditpart;
@@ -31,5 +32,11 @@ public class NumericSearchFieldEditpart extends
 	protected YNumericSearchField createModel() {
 		return (YNumericSearchField) ExtensionModelFactory.eINSTANCE
 				.createYNumericSearchField();
+	}
+	
+	@Override
+	public Object getFilter() {
+		IFilterProvidingPresentation presentation = (IFilterProvidingPresentation) getPresentation();
+		return presentation.getFilter();
 	}
 }

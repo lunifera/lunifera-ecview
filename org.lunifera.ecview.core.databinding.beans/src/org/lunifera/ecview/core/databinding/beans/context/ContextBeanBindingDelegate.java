@@ -101,7 +101,8 @@ public class ContextBeanBindingDelegate extends ContextBindingDelegate {
 		// observable
 		if (beanFragment == null || beanFragment.equals("")
 				|| beanFragment.equals(ISlot.PROP_VALUE)) {
-			return BeansObservables.observeValue(realm, slot, ISlot.PROP_VALUE);
+			return BeanProperties.value(slot.getClass(), ISlot.PROP_VALUE,
+					slot.getValueType()).observe(realm, slot);
 		} else {
 			// normalize bean fragment
 			beanFragment = AccessibleScope

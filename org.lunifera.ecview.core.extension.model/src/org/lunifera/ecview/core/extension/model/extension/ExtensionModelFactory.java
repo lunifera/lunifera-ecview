@@ -319,6 +319,15 @@ public interface ExtensionModelFactory extends EFactory {
 	YSplitPanel createYSplitPanel();
 
 	/**
+	 * Returns a new object of class '<em>YSearch Panel</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YSearch Panel</em>'.
+	 * @generated
+	 */
+	YSearchPanel createYSearchPanel();
+
+	/**
 	 * Returns a new object of class '<em>YTree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

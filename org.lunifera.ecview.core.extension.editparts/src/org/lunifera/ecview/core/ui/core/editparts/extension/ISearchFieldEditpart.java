@@ -10,9 +10,19 @@
  */
 package org.lunifera.ecview.core.ui.core.editparts.extension;
 
+import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
+
 /**
- * An edit part for boolean search fields.
+ * An edit part for search fields.
  */
-public interface IBooleanSearchFieldEditpart extends ISearchFieldEditpart {
+public interface ISearchFieldEditpart extends IFieldEditpart {
+
+	/**
+	 * Returns the filter for the field value. The returned filter depends on
+	 * the used UI-Kit.
+	 * 
+	 * @return
+	 */
+	Object getFilter();
 
 }

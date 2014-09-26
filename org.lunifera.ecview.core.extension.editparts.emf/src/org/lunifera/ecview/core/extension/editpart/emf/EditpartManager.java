@@ -63,6 +63,7 @@ import org.lunifera.ecview.core.extension.model.extension.YNumericSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
+import org.lunifera.ecview.core.extension.model.extension.YSearchPanel;
 import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.extension.model.extension.YTab;
 import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
@@ -90,6 +91,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.INumericSearchFieldE
 import org.lunifera.ecview.core.ui.core.editparts.extension.IOptionsGroupEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IPanelEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IProgressBarEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.ISearchPanelEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ISplitPanelEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ITabEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ITabSheetEditpart;
@@ -246,6 +248,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(SplitPanelEditpart.class);
 		} else if (editPartClazz.isAssignableFrom(IPanelEditpart.class)) {
 			result = createNewInstance(PanelEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(ISearchPanelEditpart.class)) {
+			result = createNewInstance(SearchPanelEditpart.class);
 		}
 
 		if (result != null) {
@@ -354,6 +358,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(SplitPanelEditpart.class);
 		} else if (yElement instanceof YPanel) {
 			result = createNewInstance(PanelEditpart.class);
+		} else if (yElement instanceof YSearchPanel) {
+			result = createNewInstance(SearchPanelEditpart.class);
 		}
 
 		if (result != null) {

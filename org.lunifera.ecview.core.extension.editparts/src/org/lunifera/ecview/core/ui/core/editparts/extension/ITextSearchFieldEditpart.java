@@ -10,11 +10,9 @@
  */
 package org.lunifera.ecview.core.ui.core.editparts.extension;
 
-import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
-
 /**
  * An edit part for text search fields.
  */
-public interface ITextSearchFieldEditpart extends IFieldEditpart {
+public interface ITextSearchFieldEditpart extends ISearchFieldEditpart {
 
 }

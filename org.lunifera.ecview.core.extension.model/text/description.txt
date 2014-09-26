@@ -280,6 +280,13 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute vertical : EBoolean
     Operation getCellStyle(YEmbeddable) : YHorizontalLayoutCellStyle
 
+  Class YSearchPanel -> YLayout, YSpacingable, YMarginable
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+    Attribute applyFilter : EJavaObject
+    Attribute filter : EJavaObject
+
   Enum YSelectionType
     Literal SINGLE = 0
     Literal MULTI = 1

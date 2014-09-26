@@ -10,9 +10,12 @@
  */
 package org.lunifera.ecview.core.ui.core.editparts.extension;
 
+import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
+
 /**
- * An edit part for boolean search fields.
+ * The abstraction for an vertical layout. The grid layout extends layout and it is an elementContainer that can contain
+ * other embeddables.
  */
-public interface IBooleanSearchFieldEditpart extends ISearchFieldEditpart {
+public interface ISearchPanelEditpart extends ILayoutEditpart {
 
 }

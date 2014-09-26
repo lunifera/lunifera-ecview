@@ -5657,6 +5657,169 @@ public interface ExtensionModelPackage extends EPackage {
 	int YSPLIT_PANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YSearchPanelImpl <em>YSearch Panel</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YSearchPanelImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchPanel()
+	 * @generated
+	 */
+	int YSEARCH_PANEL = 36;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__ID = CoreModelPackage.YLAYOUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__CSS_CLASS = CoreModelPackage.YLAYOUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__CSS_ID = CoreModelPackage.YLAYOUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__INITIAL_VISIBLE = CoreModelPackage.YLAYOUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__ORPHAN_DATATYPES = CoreModelPackage.YLAYOUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__ELEMENTS = CoreModelPackage.YLAYOUT__ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Spacing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__SPACING = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__MARGIN = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__TYPE = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__EMF_NS_URI = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__TYPE_QUALIFIED_NAME = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Apply Filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__APPLY_FILTER = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__FILTER = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>YSearch Panel</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 7;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5664,7 +5827,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 39;
+	int YBUTTON_CLICK_LISTENER = 40;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -5674,7 +5837,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 36;
+	int YSELECTION_TYPE = 37;
 
 
 	/**
@@ -5685,7 +5848,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 37;
+	int YBOOLEAN_SEARCH_OPTION = 38;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -5695,7 +5858,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 38;
+	int YSEARCH_WILDCARDS = 39;
 
 
 	/**
@@ -7326,6 +7489,71 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYSplitPanel_Vertical();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YSearchPanel <em>YSearch Panel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YSearch Panel</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSearchPanel
+	 * @generated
+	 */
+	EClass getYSearchPanel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getType()
+	 * @see #getYSearchPanel()
+	 * @generated
+	 */
+	EAttribute getYSearchPanel_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getEmfNsURI()
+	 * @see #getYSearchPanel()
+	 * @generated
+	 */
+	EAttribute getYSearchPanel_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getTypeQualifiedName()
+	 * @see #getYSearchPanel()
+	 * @generated
+	 */
+	EAttribute getYSearchPanel_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getApplyFilter <em>Apply Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Apply Filter</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getApplyFilter()
+	 * @see #getYSearchPanel()
+	 * @generated
+	 */
+	EAttribute getYSearchPanel_ApplyFilter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getFilter <em>Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filter</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSearchPanel#getFilter()
+	 * @see #getYSearchPanel()
+	 * @generated
+	 */
+	EAttribute getYSearchPanel_Filter();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8903,6 +9131,56 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YSPLIT_PANEL__VERTICAL = eINSTANCE.getYSplitPanel_Vertical();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YSearchPanelImpl <em>YSearch Panel</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YSearchPanelImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchPanel()
+		 * @generated
+		 */
+		EClass YSEARCH_PANEL = eINSTANCE.getYSearchPanel();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEARCH_PANEL__TYPE = eINSTANCE.getYSearchPanel_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEARCH_PANEL__EMF_NS_URI = eINSTANCE.getYSearchPanel_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEARCH_PANEL__TYPE_QUALIFIED_NAME = eINSTANCE.getYSearchPanel_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Apply Filter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEARCH_PANEL__APPLY_FILTER = eINSTANCE.getYSearchPanel_ApplyFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Filter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEARCH_PANEL__FILTER = eINSTANCE.getYSearchPanel_Filter();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.

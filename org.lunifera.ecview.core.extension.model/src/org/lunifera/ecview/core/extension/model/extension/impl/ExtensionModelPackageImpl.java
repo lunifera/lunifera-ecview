@@ -45,6 +45,7 @@ import org.lunifera.ecview.core.extension.model.extension.YNumericSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
+import org.lunifera.ecview.core.extension.model.extension.YSearchPanel;
 import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
@@ -278,6 +279,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass ySplitPanelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ySearchPanelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1648,6 +1656,60 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYSearchPanel() {
+		return ySearchPanelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSearchPanel_Type() {
+		return (EAttribute)ySearchPanelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSearchPanel_EmfNsURI() {
+		return (EAttribute)ySearchPanelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSearchPanel_TypeQualifiedName() {
+		return (EAttribute)ySearchPanelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSearchPanel_ApplyFilter() {
+		return (EAttribute)ySearchPanelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSearchPanel_Filter() {
+		return (EAttribute)ySearchPanelEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2098,6 +2160,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(ySplitPanelEClass, YSPLIT_PANEL__SPLIT_POSITION);
 		createEAttribute(ySplitPanelEClass, YSPLIT_PANEL__VERTICAL);
 
+		ySearchPanelEClass = createEClass(YSEARCH_PANEL);
+		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__TYPE);
+		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__EMF_NS_URI);
+		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__TYPE_QUALIFIED_NAME);
+		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__APPLY_FILTER);
+		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__FILTER);
+
 		// Create enums
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
 		yBooleanSearchOptionEEnum = createEEnum(YBOOLEAN_SEARCH_OPTION);
@@ -2213,6 +2282,9 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yNumericSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		ySplitPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
+		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
+		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYSpacingable());
+		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYMarginable());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yInputEClass, YInput.class, "YInput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2469,6 +2541,16 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		op = addEOperation(ySplitPanelEClass, this.getYHorizontalLayoutCellStyle(), "getCellStyle", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCoreModelPackage.getYEmbeddable(), "element", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(ySearchPanelEClass, YSearchPanel.class, "YSearchPanel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYSearchPanel_Type(), g1, "type", null, 0, 1, YSearchPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSearchPanel_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YSearchPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSearchPanel_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YSearchPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSearchPanel_ApplyFilter(), ecorePackage.getEJavaObject(), "applyFilter", null, 0, 1, YSearchPanel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSearchPanel_Filter(), ecorePackage.getEJavaObject(), "filter", null, 0, 1, YSearchPanel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");

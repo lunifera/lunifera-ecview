@@ -73,7 +73,6 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 
 		try {
 			for (ICommandEditpart command : getCommands()) {
-				command.activate();
 			}
 		} finally {
 			active = true;

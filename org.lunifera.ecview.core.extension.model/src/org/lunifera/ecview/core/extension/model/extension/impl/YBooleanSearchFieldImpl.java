@@ -4,19 +4,15 @@ package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBindable;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
-
+import org.lunifera.ecview.core.common.model.datatypes.DatatypesFactory;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
-
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchOption;
@@ -392,6 +388,48 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 		result.append(value);
 		result.append(')');
 		return result.toString();
+	}
+	
+	/**
+	 * Sets the label by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabel(String label) {
+		YDatadescription ds = getDatadescription();
+		if (ds == null) {
+			setDatadescription(createDatadescription(label));
+		} else {
+			ds.setLabel(label);
+		}
+	}
+
+	/**
+	 * Sets the label i18nKey by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabelI18nKey(String i18nKey) {
+		YDatadescription ds = getDatadescription();
+		if (ds == null) {
+			setDatadescription(createDatadescriptionForI18n(i18nKey));
+		} else {
+			ds.setLabelI18nKey(i18nKey);
+		}
+	}
+	
+	protected YDatadescription createDatadescription(String label) {
+		YDatadescription dsc = DatatypesFactory.eINSTANCE
+				.createYDatadescription();
+		dsc.setLabel(label);
+		return dsc;
+	}
+
+	protected YDatadescription createDatadescriptionForI18n(String i18nKey) {
+		YDatadescription dsc = DatatypesFactory.eINSTANCE
+				.createYDatadescription();
+		dsc.setLabelI18nKey(i18nKey);
+		return dsc;
 	}
 
 } //YBooleanSearchFieldImpl

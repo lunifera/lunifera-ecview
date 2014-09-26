@@ -11,6 +11,7 @@
 package org.lunifera.ecview.core.extension.editpart.emf;
 
 import org.lunifera.ecview.core.common.editpart.emf.FieldEditpart;
+import org.lunifera.ecview.core.common.filter.IFilterProvidingPresentation;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IBooleanSearchFieldEditpart;
@@ -31,5 +32,11 @@ public class BooleanSearchFieldEditpart extends
 	protected YBooleanSearchField createModel() {
 		return (YBooleanSearchField) ExtensionModelFactory.eINSTANCE
 				.createYBooleanSearchField();
+	}
+
+	@Override
+	public Object getFilter() {
+		IFilterProvidingPresentation presentation = (IFilterProvidingPresentation) getPresentation();
+		return presentation.getFilter();
 	}
 }

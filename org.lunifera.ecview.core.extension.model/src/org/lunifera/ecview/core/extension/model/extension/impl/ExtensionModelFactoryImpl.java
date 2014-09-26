@@ -90,6 +90,7 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD: return createYNumericSearchField();
 			case ExtensionModelPackage.YPANEL: return createYPanel();
 			case ExtensionModelPackage.YSPLIT_PANEL: return createYSplitPanel();
+			case ExtensionModelPackage.YSEARCH_PANEL: return createYSearchPanel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -465,6 +466,16 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YSplitPanel createYSplitPanel() {
 		YSplitPanelImpl ySplitPanel = new YSplitPanelImpl();
 		return ySplitPanel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YSearchPanel createYSearchPanel() {
+		YSearchPanelImpl ySearchPanel = new YSearchPanelImpl();
+		return ySearchPanel;
 	}
 
 	/**

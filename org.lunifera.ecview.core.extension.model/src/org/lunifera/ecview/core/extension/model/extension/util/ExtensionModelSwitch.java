@@ -562,6 +562,19 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExtensionModelPackage.YSEARCH_PANEL: {
+				YSearchPanel ySearchPanel = (YSearchPanel)theEObject;
+				T result = caseYSearchPanel(ySearchPanel);
+				if (result == null) result = caseYLayout(ySearchPanel);
+				if (result == null) result = caseYSpacingable(ySearchPanel);
+				if (result == null) result = caseYMarginable(ySearchPanel);
+				if (result == null) result = caseYEmbeddable(ySearchPanel);
+				if (result == null) result = caseYElement(ySearchPanel);
+				if (result == null) result = caseYCssAble(ySearchPanel);
+				if (result == null) result = caseYVisibleable(ySearchPanel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -1073,6 +1086,21 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYSplitPanel(YSplitPanel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YSearch Panel</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YSearch Panel</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYSearchPanel(YSearchPanel object) {
 		return null;
 	}
 
