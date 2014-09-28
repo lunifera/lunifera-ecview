@@ -35,6 +35,7 @@ import org.lunifera.ecview.core.extension.model.extension.YColumn;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#isCollapsible <em>Collapsible</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getAlignment <em>Alignment</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getExpandRatio <em>Expand Ratio</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getPropertyPath <em>Property Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -226,6 +227,26 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected float expandRatio = EXPAND_RATIO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPropertyPath() <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropertyPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROPERTY_PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPropertyPath() <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropertyPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String propertyPath = PROPERTY_PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -463,6 +484,27 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPropertyPath() {
+		return propertyPath;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPropertyPath(String newPropertyPath) {
+		String oldPropertyPath = propertyPath;
+		propertyPath = newPropertyPath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOLUMN__PROPERTY_PATH, oldPropertyPath, propertyPath));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -506,6 +548,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 				return getAlignment();
 			case ExtensionModelPackage.YCOLUMN__EXPAND_RATIO:
 				return getExpandRatio();
+			case ExtensionModelPackage.YCOLUMN__PROPERTY_PATH:
+				return getPropertyPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -552,6 +596,9 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 			case ExtensionModelPackage.YCOLUMN__EXPAND_RATIO:
 				setExpandRatio((Float)newValue);
 				return;
+			case ExtensionModelPackage.YCOLUMN__PROPERTY_PATH:
+				setPropertyPath((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -596,6 +643,9 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 			case ExtensionModelPackage.YCOLUMN__EXPAND_RATIO:
 				setExpandRatio(EXPAND_RATIO_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YCOLUMN__PROPERTY_PATH:
+				setPropertyPath(PROPERTY_PATH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -629,6 +679,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 				return alignment != ALIGNMENT_EDEFAULT;
 			case ExtensionModelPackage.YCOLUMN__EXPAND_RATIO:
 				return expandRatio != EXPAND_RATIO_EDEFAULT;
+			case ExtensionModelPackage.YCOLUMN__PROPERTY_PATH:
+				return PROPERTY_PATH_EDEFAULT == null ? propertyPath != null : !PROPERTY_PATH_EDEFAULT.equals(propertyPath);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -660,6 +712,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 		result.append(alignment);
 		result.append(", expandRatio: ");
 		result.append(expandRatio);
+		result.append(", propertyPath: ");
+		result.append(propertyPath);
 		result.append(')');
 		return result.toString();
 	}

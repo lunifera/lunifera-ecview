@@ -17,6 +17,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTextSearchField#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTextSearchField#getValue <em>Value</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTextSearchField#getWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTextSearchField#getPropertyPath <em>Property Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -105,5 +106,31 @@ public interface YTextSearchField extends YInput, YValueBindable {
 	 * @generated
 	 */
 	void setWildcard(YSearchWildcards value);
+
+	/**
+	 * Returns the value of the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Property Path</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Property Path</em>' attribute.
+	 * @see #setPropertyPath(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYTextSearchField_PropertyPath()
+	 * @model
+	 * @generated
+	 */
+	String getPropertyPath();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YTextSearchField#getPropertyPath <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Property Path</em>' attribute.
+	 * @see #getPropertyPath()
+	 * @generated
+	 */
+	void setPropertyPath(String value);
 
 } // YTextSearchField

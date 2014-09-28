@@ -218,6 +218,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYNumericSearchFieldAdapter();
 			}
 			@Override
+			public Adapter caseYReferenceSearchField(YReferenceSearchField object) {
+				return createYReferenceSearchFieldAdapter();
+			}
+			@Override
 			public Adapter caseYPanel(YPanel object) {
 				return createYPanelAdapter();
 			}
@@ -762,6 +766,20 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYNumericSearchFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField <em>YReference Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField
+	 * @generated
+	 */
+	public Adapter createYReferenceSearchFieldAdapter() {
 		return null;
 	}
 

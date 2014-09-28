@@ -1041,13 +1041,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTABLE__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTABLE__FILTER = YINPUT_FEATURE_COUNT + 14;
+
+	/**
 	 * The number of structural features of the '<em>YTable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 14;
+	int YTABLE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 15;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl <em>YColumn</em>}' class.
@@ -1159,13 +1168,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YCOLUMN__EXPAND_RATIO = CoreModelPackage.YELEMENT_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOLUMN__PROPERTY_PATH = CoreModelPackage.YELEMENT_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>YColumn</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YCOLUMN_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 9;
+	int YCOLUMN_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YLabelImpl <em>YLabel</em>}' class.
@@ -5023,13 +5041,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTEXT_SEARCH_FIELD__WILDCARD = YINPUT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__PROPERTY_PATH = YINPUT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>YText Search Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTEXT_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
+	int YTEXT_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YBooleanSearchFieldImpl <em>YBoolean Search Field</em>}' class.
@@ -5195,13 +5222,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBOOLEAN_SEARCH_FIELD__VALUE = YINPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH = YINPUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>YBoolean Search Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBOOLEAN_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 3;
+	int YBOOLEAN_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl <em>YNumeric Search Field</em>}' class.
@@ -5376,13 +5412,257 @@ public interface ExtensionModelPackage extends EPackage {
 	int YNUMERIC_SEARCH_FIELD__WILDCARD = YINPUT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__PROPERTY_PATH = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__TYPE = YINPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>YNumeric Search Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YNUMERIC_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
+	int YNUMERIC_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl <em>YReference Search Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYReferenceSearchField()
+	 * @generated
+	 */
+	int YREFERENCE_SEARCH_FIELD = 34;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__VALUE = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__WILDCARD = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__PROPERTY_PATH = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__TYPE = YINPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__EMF_NS_URI = YINPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>YReference Search Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl <em>YPanel</em>}' class.
@@ -5392,7 +5672,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYPanel()
 	 * @generated
 	 */
-	int YPANEL = 34;
+	int YPANEL = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5519,7 +5799,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSplitPanel()
 	 * @generated
 	 */
-	int YSPLIT_PANEL = 35;
+	int YSPLIT_PANEL = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5664,7 +5944,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchPanel()
 	 * @generated
 	 */
-	int YSEARCH_PANEL = 36;
+	int YSEARCH_PANEL = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5827,7 +6107,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 40;
+	int YBUTTON_CLICK_LISTENER = 41;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -5837,7 +6117,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 37;
+	int YSELECTION_TYPE = 38;
 
 
 	/**
@@ -5848,7 +6128,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 38;
+	int YBOOLEAN_SEARCH_OPTION = 39;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -5858,7 +6138,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 39;
+	int YSEARCH_WILDCARDS = 40;
 
 
 	/**
@@ -6271,6 +6551,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYTable_ItemImageProperty();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YTable#getFilter <em>Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filter</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YTable#getFilter()
+	 * @see #getYTable()
+	 * @generated
+	 */
+	EAttribute getYTable_Filter();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YColumn <em>YColumn</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6378,6 +6669,17 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYColumn_ExpandRatio();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YColumn#getPropertyPath <em>Property Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Property Path</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YColumn#getPropertyPath()
+	 * @see #getYColumn()
+	 * @generated
+	 */
+	EAttribute getYColumn_PropertyPath();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YLabel <em>YLabel</em>}'.
@@ -7306,6 +7608,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYTextSearchField_Wildcard();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YTextSearchField#getPropertyPath <em>Property Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Property Path</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YTextSearchField#getPropertyPath()
+	 * @see #getYTextSearchField()
+	 * @generated
+	 */
+	EAttribute getYTextSearchField_PropertyPath();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField <em>YBoolean Search Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7336,6 +7649,17 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYBooleanSearchField_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField#getPropertyPath <em>Property Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Property Path</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField#getPropertyPath()
+	 * @see #getYBooleanSearchField()
+	 * @generated
+	 */
+	EAttribute getYBooleanSearchField_PropertyPath();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YNumericSearchField <em>YNumeric Search Field</em>}'.
@@ -7379,6 +7703,126 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYNumericSearchField_Wildcard();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YNumericSearchField#getPropertyPath <em>Property Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Property Path</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YNumericSearchField#getPropertyPath()
+	 * @see #getYNumericSearchField()
+	 * @generated
+	 */
+	EAttribute getYNumericSearchField_PropertyPath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YNumericSearchField#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YNumericSearchField#getType()
+	 * @see #getYNumericSearchField()
+	 * @generated
+	 */
+	EAttribute getYNumericSearchField_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YNumericSearchField#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YNumericSearchField#getTypeQualifiedName()
+	 * @see #getYNumericSearchField()
+	 * @generated
+	 */
+	EAttribute getYNumericSearchField_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField <em>YReference Search Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YReference Search Field</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField
+	 * @generated
+	 */
+	EClass getYReferenceSearchField();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getDatadescription()
+	 * @see #getYReferenceSearchField()
+	 * @generated
+	 */
+	EReference getYReferenceSearchField_Datadescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getValue()
+	 * @see #getYReferenceSearchField()
+	 * @generated
+	 */
+	EAttribute getYReferenceSearchField_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getWildcard <em>Wildcard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wildcard</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getWildcard()
+	 * @see #getYReferenceSearchField()
+	 * @generated
+	 */
+	EAttribute getYReferenceSearchField_Wildcard();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getPropertyPath <em>Property Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Property Path</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getPropertyPath()
+	 * @see #getYReferenceSearchField()
+	 * @generated
+	 */
+	EAttribute getYReferenceSearchField_PropertyPath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getType()
+	 * @see #getYReferenceSearchField()
+	 * @generated
+	 */
+	EAttribute getYReferenceSearchField_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getEmfNsURI()
+	 * @see #getYReferenceSearchField()
+	 * @generated
+	 */
+	EAttribute getYReferenceSearchField_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField#getTypeQualifiedName()
+	 * @see #getYReferenceSearchField()
+	 * @generated
+	 */
+	EAttribute getYReferenceSearchField_TypeQualifiedName();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YPanel <em>YPanel</em>}'.
@@ -8179,6 +8623,14 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YTABLE__ITEM_IMAGE_PROPERTY = eINSTANCE.getYTable_ItemImageProperty();
 
 		/**
+		 * The meta object literal for the '<em><b>Filter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YTABLE__FILTER = eINSTANCE.getYTable_Filter();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl <em>YColumn</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8259,6 +8711,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YCOLUMN__EXPAND_RATIO = eINSTANCE.getYColumn_ExpandRatio();
+
+		/**
+		 * The meta object literal for the '<em><b>Property Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YCOLUMN__PROPERTY_PATH = eINSTANCE.getYColumn_PropertyPath();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YLabelImpl <em>YLabel</em>}' class.
@@ -8989,6 +9449,14 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YTEXT_SEARCH_FIELD__WILDCARD = eINSTANCE.getYTextSearchField_Wildcard();
 
 		/**
+		 * The meta object literal for the '<em><b>Property Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YTEXT_SEARCH_FIELD__PROPERTY_PATH = eINSTANCE.getYTextSearchField_PropertyPath();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YBooleanSearchFieldImpl <em>YBoolean Search Field</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9013,6 +9481,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBOOLEAN_SEARCH_FIELD__VALUE = eINSTANCE.getYBooleanSearchField_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Property Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH = eINSTANCE.getYBooleanSearchField_PropertyPath();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl <em>YNumeric Search Field</em>}' class.
@@ -9047,6 +9523,96 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YNUMERIC_SEARCH_FIELD__WILDCARD = eINSTANCE.getYNumericSearchField_Wildcard();
+
+		/**
+		 * The meta object literal for the '<em><b>Property Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YNUMERIC_SEARCH_FIELD__PROPERTY_PATH = eINSTANCE.getYNumericSearchField_PropertyPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YNUMERIC_SEARCH_FIELD__TYPE = eINSTANCE.getYNumericSearchField_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME = eINSTANCE.getYNumericSearchField_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl <em>YReference Search Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYReferenceSearchField()
+		 * @generated
+		 */
+		EClass YREFERENCE_SEARCH_FIELD = eINSTANCE.getYReferenceSearchField();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YREFERENCE_SEARCH_FIELD__DATADESCRIPTION = eINSTANCE.getYReferenceSearchField_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YREFERENCE_SEARCH_FIELD__VALUE = eINSTANCE.getYReferenceSearchField_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YREFERENCE_SEARCH_FIELD__WILDCARD = eINSTANCE.getYReferenceSearchField_Wildcard();
+
+		/**
+		 * The meta object literal for the '<em><b>Property Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YREFERENCE_SEARCH_FIELD__PROPERTY_PATH = eINSTANCE.getYReferenceSearchField_PropertyPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YREFERENCE_SEARCH_FIELD__TYPE = eINSTANCE.getYReferenceSearchField_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YREFERENCE_SEARCH_FIELD__EMF_NS_URI = eINSTANCE.getYReferenceSearchField_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME = eINSTANCE.getYReferenceSearchField_TypeQualifiedName();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl <em>YPanel</em>}' class.

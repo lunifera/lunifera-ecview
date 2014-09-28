@@ -27,6 +27,7 @@ import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchOption;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBooleanSearchFieldImpl#getValueBindingEndpoint <em>Value Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBooleanSearchFieldImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBooleanSearchFieldImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBooleanSearchFieldImpl#getPropertyPath <em>Property Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,6 +73,26 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 	 * @ordered
 	 */
 	protected YBooleanSearchOption value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPropertyPath() <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropertyPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROPERTY_PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPropertyPath() <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropertyPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String propertyPath = PROPERTY_PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,6 +237,27 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPropertyPath() {
+		return propertyPath;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPropertyPath(String newPropertyPath) {
+		String oldPropertyPath = propertyPath;
+		propertyPath = newPropertyPath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH, oldPropertyPath, propertyPath));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableValueEndpoint createValueEndpoint() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -268,6 +310,8 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 				return basicGetDatadescription();
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__VALUE:
 				return getValue();
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH:
+				return getPropertyPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -288,6 +332,9 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 				return;
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__VALUE:
 				setValue((YBooleanSearchOption)newValue);
+				return;
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH:
+				setPropertyPath((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -310,6 +357,9 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH:
+				setPropertyPath(PROPERTY_PATH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -328,6 +378,8 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 				return datadescription != null;
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__VALUE:
 				return value != VALUE_EDEFAULT;
+			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH:
+				return PROPERTY_PATH_EDEFAULT == null ? propertyPath != null : !PROPERTY_PATH_EDEFAULT.equals(propertyPath);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -386,6 +438,8 @@ public class YBooleanSearchFieldImpl extends YInputImpl implements YBooleanSearc
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", propertyPath: ");
+		result.append(propertyPath);
 		result.append(')');
 		return result.toString();
 	}

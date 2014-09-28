@@ -28,6 +28,9 @@ import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl#getWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl#getPropertyPath <em>Property Path</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericSearchFieldImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,6 +96,56 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 	 * @ordered
 	 */
 	protected YSearchWildcards wildcard = WILDCARD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPropertyPath() <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropertyPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROPERTY_PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPropertyPath() <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropertyPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String propertyPath = PROPERTY_PATH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected Class type;
+
+	/**
+	 * The default value of the '{@link #getTypeQualifiedName() <em>Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_QUALIFIED_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTypeQualifiedName() <em>Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,6 +311,69 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPropertyPath() {
+		return propertyPath;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPropertyPath(String newPropertyPath) {
+		String oldPropertyPath = propertyPath;
+		propertyPath = newPropertyPath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__PROPERTY_PATH, oldPropertyPath, propertyPath));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Class getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(Class newType) {
+		Class oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTypeQualifiedName() {
+		return typeQualifiedName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypeQualifiedName(String newTypeQualifiedName) {
+		String oldTypeQualifiedName = typeQualifiedName;
+		typeQualifiedName = newTypeQualifiedName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME, oldTypeQualifiedName, typeQualifiedName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableValueEndpoint createValueEndpoint() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -312,6 +428,12 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 				return getValue();
 			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__WILDCARD:
 				return getWildcard();
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__PROPERTY_PATH:
+				return getPropertyPath();
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE:
+				return getType();
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				return getTypeQualifiedName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -335,6 +457,15 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 				return;
 			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__WILDCARD:
 				setWildcard((YSearchWildcards)newValue);
+				return;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__PROPERTY_PATH:
+				setPropertyPath((String)newValue);
+				return;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE:
+				setType((Class)newValue);
+				return;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				setTypeQualifiedName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -360,6 +491,15 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__WILDCARD:
 				setWildcard(WILDCARD_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__PROPERTY_PATH:
+				setPropertyPath(PROPERTY_PATH_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE:
+				setType((Class)null);
+				return;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -380,6 +520,12 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__WILDCARD:
 				return wildcard != WILDCARD_EDEFAULT;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__PROPERTY_PATH:
+				return PROPERTY_PATH_EDEFAULT == null ? propertyPath != null : !PROPERTY_PATH_EDEFAULT.equals(propertyPath);
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE:
+				return type != null;
+			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -440,6 +586,12 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 		result.append(value);
 		result.append(", wildcard: ");
 		result.append(wildcard);
+		result.append(", propertyPath: ");
+		result.append(propertyPath);
+		result.append(", type: ");
+		result.append(type);
+		result.append(", typeQualifiedName: ");
+		result.append(typeQualifiedName);
 		result.append(')');
 		return result.toString();
 	}

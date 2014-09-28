@@ -540,6 +540,22 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD: {
+				YReferenceSearchField yReferenceSearchField = (YReferenceSearchField)theEObject;
+				T result = caseYReferenceSearchField(yReferenceSearchField);
+				if (result == null) result = caseYInput(yReferenceSearchField);
+				if (result == null) result = caseYValueBindable(yReferenceSearchField);
+				if (result == null) result = caseYField(yReferenceSearchField);
+				if (result == null) result = caseYBindable(yReferenceSearchField);
+				if (result == null) result = caseYEmbeddable(yReferenceSearchField);
+				if (result == null) result = caseYEditable(yReferenceSearchField);
+				if (result == null) result = caseYEnable(yReferenceSearchField);
+				if (result == null) result = caseYElement(yReferenceSearchField);
+				if (result == null) result = caseYCssAble(yReferenceSearchField);
+				if (result == null) result = caseYVisibleable(yReferenceSearchField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ExtensionModelPackage.YPANEL: {
 				YPanel yPanel = (YPanel)theEObject;
 				T result = caseYPanel(yPanel);
@@ -1056,6 +1072,21 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYNumericSearchField(YNumericSearchField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YReference Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YReference Search Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYReferenceSearchField(YReferenceSearchField object) {
 		return null;
 	}
 

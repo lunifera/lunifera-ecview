@@ -45,6 +45,7 @@ import org.lunifera.ecview.core.extension.model.extension.YNumericSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
+import org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YSearchPanel;
 import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
@@ -265,6 +266,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass yNumericSearchFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yReferenceSearchFieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -713,6 +721,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYTable_Filter() {
+		return (EAttribute)yTableEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYColumn() {
 		return yColumnEClass;
 	}
@@ -796,6 +813,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getYColumn_ExpandRatio() {
 		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYColumn_PropertyPath() {
+		return (EAttribute)yColumnEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -1507,6 +1533,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYTextSearchField_PropertyPath() {
+		return (EAttribute)yTextSearchFieldEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYBooleanSearchField() {
 		return yBooleanSearchFieldEClass;
 	}
@@ -1527,6 +1562,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getYBooleanSearchField_Value() {
 		return (EAttribute)yBooleanSearchFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBooleanSearchField_PropertyPath() {
+		return (EAttribute)yBooleanSearchFieldEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1563,6 +1607,105 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getYNumericSearchField_Wildcard() {
 		return (EAttribute)yNumericSearchFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYNumericSearchField_PropertyPath() {
+		return (EAttribute)yNumericSearchFieldEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYNumericSearchField_Type() {
+		return (EAttribute)yNumericSearchFieldEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYNumericSearchField_TypeQualifiedName() {
+		return (EAttribute)yNumericSearchFieldEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYReferenceSearchField() {
+		return yReferenceSearchFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYReferenceSearchField_Datadescription() {
+		return (EReference)yReferenceSearchFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYReferenceSearchField_Value() {
+		return (EAttribute)yReferenceSearchFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYReferenceSearchField_Wildcard() {
+		return (EAttribute)yReferenceSearchFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYReferenceSearchField_PropertyPath() {
+		return (EAttribute)yReferenceSearchFieldEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYReferenceSearchField_Type() {
+		return (EAttribute)yReferenceSearchFieldEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYReferenceSearchField_EmfNsURI() {
+		return (EAttribute)yReferenceSearchFieldEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYReferenceSearchField_TypeQualifiedName() {
+		return (EAttribute)yReferenceSearchFieldEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1994,6 +2137,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yTableEClass, YTABLE__TYPE_QUALIFIED_NAME);
 		createEReference(yTableEClass, YTABLE__COLUMNS);
 		createEAttribute(yTableEClass, YTABLE__ITEM_IMAGE_PROPERTY);
+		createEAttribute(yTableEClass, YTABLE__FILTER);
 
 		yColumnEClass = createEClass(YCOLUMN);
 		createEAttribute(yColumnEClass, YCOLUMN__ICON);
@@ -2005,6 +2149,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yColumnEClass, YCOLUMN__COLLAPSIBLE);
 		createEAttribute(yColumnEClass, YCOLUMN__ALIGNMENT);
 		createEAttribute(yColumnEClass, YCOLUMN__EXPAND_RATIO);
+		createEAttribute(yColumnEClass, YCOLUMN__PROPERTY_PATH);
 
 		yTreeEClass = createEClass(YTREE);
 		createEReference(yTreeEClass, YTREE__DATATYPE);
@@ -2138,15 +2283,29 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEReference(yTextSearchFieldEClass, YTEXT_SEARCH_FIELD__DATADESCRIPTION);
 		createEAttribute(yTextSearchFieldEClass, YTEXT_SEARCH_FIELD__VALUE);
 		createEAttribute(yTextSearchFieldEClass, YTEXT_SEARCH_FIELD__WILDCARD);
+		createEAttribute(yTextSearchFieldEClass, YTEXT_SEARCH_FIELD__PROPERTY_PATH);
 
 		yBooleanSearchFieldEClass = createEClass(YBOOLEAN_SEARCH_FIELD);
 		createEReference(yBooleanSearchFieldEClass, YBOOLEAN_SEARCH_FIELD__DATADESCRIPTION);
 		createEAttribute(yBooleanSearchFieldEClass, YBOOLEAN_SEARCH_FIELD__VALUE);
+		createEAttribute(yBooleanSearchFieldEClass, YBOOLEAN_SEARCH_FIELD__PROPERTY_PATH);
 
 		yNumericSearchFieldEClass = createEClass(YNUMERIC_SEARCH_FIELD);
 		createEReference(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__DATADESCRIPTION);
 		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__VALUE);
 		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__WILDCARD);
+		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__PROPERTY_PATH);
+		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__TYPE);
+		createEAttribute(yNumericSearchFieldEClass, YNUMERIC_SEARCH_FIELD__TYPE_QUALIFIED_NAME);
+
+		yReferenceSearchFieldEClass = createEClass(YREFERENCE_SEARCH_FIELD);
+		createEReference(yReferenceSearchFieldEClass, YREFERENCE_SEARCH_FIELD__DATADESCRIPTION);
+		createEAttribute(yReferenceSearchFieldEClass, YREFERENCE_SEARCH_FIELD__VALUE);
+		createEAttribute(yReferenceSearchFieldEClass, YREFERENCE_SEARCH_FIELD__WILDCARD);
+		createEAttribute(yReferenceSearchFieldEClass, YREFERENCE_SEARCH_FIELD__PROPERTY_PATH);
+		createEAttribute(yReferenceSearchFieldEClass, YREFERENCE_SEARCH_FIELD__TYPE);
+		createEAttribute(yReferenceSearchFieldEClass, YREFERENCE_SEARCH_FIELD__EMF_NS_URI);
+		createEAttribute(yReferenceSearchFieldEClass, YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME);
 
 		yPanelEClass = createEClass(YPANEL);
 		createEReference(yPanelEClass, YPANEL__DATADESCRIPTION);
@@ -2280,6 +2439,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yBooleanSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yNumericSearchFieldEClass.getESuperTypes().add(this.getYInput());
 		yNumericSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
+		yReferenceSearchFieldEClass.getESuperTypes().add(this.getYInput());
+		yReferenceSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		ySplitPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
@@ -2345,6 +2506,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYTable_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYTable_Columns(), this.getYColumn(), null, "columns", null, 0, -1, YTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYTable_ItemImageProperty(), ecorePackage.getEString(), "itemImageProperty", null, 0, 1, YTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYTable_Filter(), ecorePackage.getEJavaObject(), "filter", null, 0, 1, YTable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yColumnEClass, YColumn.class, "YColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYColumn_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2356,6 +2518,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYColumn_Collapsible(), ecorePackage.getEBoolean(), "collapsible", "true", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_Alignment(), theCoreModelPackage.getYFlatAlignment(), "alignment", "LEFT", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYColumn_ExpandRatio(), ecorePackage.getEFloat(), "expandRatio", "-1.0f", 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYColumn_PropertyPath(), ecorePackage.getEString(), "propertyPath", null, 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yTreeEClass, YTree.class, "YTree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYTree_Datatype(), theExtDatatypesPackage.getYTreeDatatype(), null, "datatype", null, 0, 1, YTree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2514,15 +2677,32 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEReference(getYTextSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYTextSearchField_Value(), ecorePackage.getEString(), "value", null, 0, 1, YTextSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYTextSearchField_Wildcard(), this.getYSearchWildcards(), "wildcard", null, 0, 1, YTextSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYTextSearchField_PropertyPath(), ecorePackage.getEString(), "propertyPath", null, 0, 1, YTextSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yBooleanSearchFieldEClass, YBooleanSearchField.class, "YBooleanSearchField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYBooleanSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YBooleanSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBooleanSearchField_Value(), this.getYBooleanSearchOption(), "value", null, 0, 1, YBooleanSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBooleanSearchField_PropertyPath(), ecorePackage.getEString(), "propertyPath", null, 0, 1, YBooleanSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yNumericSearchFieldEClass, YNumericSearchField.class, "YNumericSearchField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYNumericSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YNumericSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYNumericSearchField_Value(), ecorePackage.getEString(), "value", null, 0, 1, YNumericSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYNumericSearchField_Wildcard(), this.getYSearchWildcards(), "wildcard", null, 0, 1, YNumericSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYNumericSearchField_PropertyPath(), ecorePackage.getEString(), "propertyPath", null, 0, 1, YNumericSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYNumericSearchField_Type(), ecorePackage.getEJavaClass(), "type", null, 0, 1, YNumericSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYNumericSearchField_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YNumericSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yReferenceSearchFieldEClass, YReferenceSearchField.class, "YReferenceSearchField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYReferenceSearchField_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YReferenceSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYReferenceSearchField_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, YReferenceSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYReferenceSearchField_Wildcard(), this.getYSearchWildcards(), "wildcard", null, 0, 1, YReferenceSearchField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYReferenceSearchField_PropertyPath(), ecorePackage.getEString(), "propertyPath", null, 0, 1, YReferenceSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYReferenceSearchField_Type(), g1, "type", null, 0, 1, YReferenceSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYReferenceSearchField_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YReferenceSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYReferenceSearchField_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YReferenceSearchField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yPanelEClass, YPanel.class, "YPanel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYPanel_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

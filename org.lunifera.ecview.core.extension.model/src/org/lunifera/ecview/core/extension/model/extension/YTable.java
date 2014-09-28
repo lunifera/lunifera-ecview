@@ -37,6 +37,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTableDatatype;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getColumns <em>Columns</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getItemImageProperty <em>Item Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getFilter <em>Filter</em>}</li>
  * </ul>
  * </p>
  *
@@ -303,5 +304,31 @@ public interface YTable extends YInput, YCollectionBindable, YSelectionBindable,
 	 * @generated
 	 */
 	void setItemImageProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Filter</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Filter</em>' attribute.
+	 * @see #setFilter(Object)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYTable_Filter()
+	 * @model transient="true"
+	 * @generated
+	 */
+	Object getFilter();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YTable#getFilter <em>Filter</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Filter</em>' attribute.
+	 * @see #getFilter()
+	 * @generated
+	 */
+	void setFilter(Object value);
 
 } // YUiTable

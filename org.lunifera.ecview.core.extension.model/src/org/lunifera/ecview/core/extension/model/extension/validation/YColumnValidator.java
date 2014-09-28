@@ -28,4 +28,6 @@ public interface YColumnValidator {
 	boolean validateCollapsible(boolean value);
 	boolean validateAlignment(YFlatAlignment value);
 	boolean validateExpandRatio(float value);
+
+	boolean validatePropertyPath(String value);
 }

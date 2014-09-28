@@ -4,37 +4,44 @@ package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBindable;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
-import org.lunifera.ecview.core.common.model.datatypes.DatatypesFactory;
+
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
+
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;
-import org.lunifera.ecview.core.extension.model.extension.YTextSearchField;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>YText Search Field</b></em>'.
+ * An implementation of the model object '<em><b>YReference Search Field</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTextSearchFieldImpl#getValueBindingEndpoint <em>Value Binding Endpoint</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTextSearchFieldImpl#getDatadescription <em>Datadescription</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTextSearchFieldImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTextSearchFieldImpl#getWildcard <em>Wildcard</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTextSearchFieldImpl#getPropertyPath <em>Property Path</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getValueBindingEndpoint <em>Value Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getPropertyPath <em>Property Path</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YReferenceSearchFieldImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField {
+public class YReferenceSearchFieldImpl extends YInputImpl implements YReferenceSearchField {
 	/**
 	 * The cached value of the '{@link #getValueBindingEndpoint() <em>Value Binding Endpoint</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -63,7 +70,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final Object VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -73,7 +80,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
+	protected Object value = VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWildcard() <em>Wildcard</em>}' attribute.
@@ -116,11 +123,61 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	protected String propertyPath = PROPERTY_PATH_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected Class<?> type;
+
+	/**
+	 * The default value of the '{@link #getEmfNsURI() <em>Emf Ns URI</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmfNsURI()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMF_NS_URI_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEmfNsURI() <em>Emf Ns URI</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmfNsURI()
+	 * @generated
+	 * @ordered
+	 */
+	protected String emfNsURI = EMF_NS_URI_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTypeQualifiedName() <em>Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_QUALIFIED_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTypeQualifiedName() <em>Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected YTextSearchFieldImpl() {
+	protected YReferenceSearchFieldImpl() {
 		super();
 	}
 
@@ -131,7 +188,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ExtensionModelPackage.Literals.YTEXT_SEARCH_FIELD;
+		return ExtensionModelPackage.Literals.YREFERENCE_SEARCH_FIELD;
 	}
 
 	/**
@@ -145,7 +202,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 			valueBindingEndpoint = (YEmbeddableValueEndpoint)eResolveProxy(oldValueBindingEndpoint);
 			if (valueBindingEndpoint != oldValueBindingEndpoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT, oldValueBindingEndpoint, valueBindingEndpoint));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT, oldValueBindingEndpoint, valueBindingEndpoint));
 			}
 		}
 		return valueBindingEndpoint;
@@ -169,7 +226,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 		YEmbeddableValueEndpoint oldValueBindingEndpoint = valueBindingEndpoint;
 		valueBindingEndpoint = newValueBindingEndpoint;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT, oldValueBindingEndpoint, newValueBindingEndpoint);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT, oldValueBindingEndpoint, newValueBindingEndpoint);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -191,7 +248,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT, newValueBindingEndpoint, newValueBindingEndpoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT, newValueBindingEndpoint, newValueBindingEndpoint));
 	}
 
 	/**
@@ -205,7 +262,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 			datadescription = (YDatadescription)eResolveProxy(oldDatadescription);
 			if (datadescription != oldDatadescription) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YTEXT_SEARCH_FIELD__DATADESCRIPTION, oldDatadescription, datadescription));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__DATADESCRIPTION, oldDatadescription, datadescription));
 			}
 		}
 		return datadescription;
@@ -229,7 +286,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 		YDatadescription oldDatadescription = datadescription;
 		datadescription = newDatadescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTEXT_SEARCH_FIELD__DATADESCRIPTION, oldDatadescription, datadescription));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__DATADESCRIPTION, oldDatadescription, datadescription));
 	}
 
 	/**
@@ -237,7 +294,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
+	public Object getValue() {
 		return value;
 	}
 
@@ -246,11 +303,11 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
+	public void setValue(Object newValue) {
+		Object oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE, oldValue, value));
 	}
 
 	/**
@@ -271,7 +328,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 		YSearchWildcards oldWildcard = wildcard;
 		wildcard = newWildcard == null ? WILDCARD_EDEFAULT : newWildcard;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTEXT_SEARCH_FIELD__WILDCARD, oldWildcard, wildcard));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__WILDCARD, oldWildcard, wildcard));
 	}
 
 	/**
@@ -292,7 +349,70 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 		String oldPropertyPath = propertyPath;
 		propertyPath = newPropertyPath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTEXT_SEARCH_FIELD__PROPERTY_PATH, oldPropertyPath, propertyPath));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__PROPERTY_PATH, oldPropertyPath, propertyPath));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Class<?> getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(Class<?> newType) {
+		Class<?> oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEmfNsURI() {
+		return emfNsURI;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmfNsURI(String newEmfNsURI) {
+		String oldEmfNsURI = emfNsURI;
+		emfNsURI = newEmfNsURI;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__EMF_NS_URI, oldEmfNsURI, emfNsURI));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTypeQualifiedName() {
+		return typeQualifiedName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypeQualifiedName(String newTypeQualifiedName) {
+		String oldTypeQualifiedName = typeQualifiedName;
+		typeQualifiedName = newTypeQualifiedName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME, oldTypeQualifiedName, typeQualifiedName));
 	}
 
 	/**
@@ -314,7 +434,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
 				if (valueBindingEndpoint != null)
 					msgs = ((InternalEObject)valueBindingEndpoint).eInverseRemove(this, CoreModelPackage.YEMBEDDABLE_VALUE_ENDPOINT__ELEMENT, YEmbeddableValueEndpoint.class, msgs);
 				return basicSetValueBindingEndpoint((YEmbeddableValueEndpoint)otherEnd, msgs);
@@ -330,7 +450,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
 				return basicSetValueBindingEndpoint(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -344,18 +464,24 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
 				if (resolve) return getValueBindingEndpoint();
 				return basicGetValueBindingEndpoint();
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__DATADESCRIPTION:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE:
 				return getValue();
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__WILDCARD:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__WILDCARD:
 				return getWildcard();
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__PROPERTY_PATH:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__PROPERTY_PATH:
 				return getPropertyPath();
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE:
+				return getType();
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__EMF_NS_URI:
+				return getEmfNsURI();
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				return getTypeQualifiedName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -368,20 +494,29 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
 				setValueBindingEndpoint((YEmbeddableValueEndpoint)newValue);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__DATADESCRIPTION:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE:
-				setValue((String)newValue);
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE:
+				setValue(newValue);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__WILDCARD:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__WILDCARD:
 				setWildcard((YSearchWildcards)newValue);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__PROPERTY_PATH:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__PROPERTY_PATH:
 				setPropertyPath((String)newValue);
+				return;
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE:
+				setType((Class<?>)newValue);
+				return;
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__EMF_NS_URI:
+				setEmfNsURI((String)newValue);
+				return;
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				setTypeQualifiedName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -395,20 +530,29 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
 				setValueBindingEndpoint((YEmbeddableValueEndpoint)null);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__DATADESCRIPTION:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__WILDCARD:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__WILDCARD:
 				setWildcard(WILDCARD_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__PROPERTY_PATH:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__PROPERTY_PATH:
 				setPropertyPath(PROPERTY_PATH_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE:
+				setType((Class<?>)null);
+				return;
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__EMF_NS_URI:
+				setEmfNsURI(EMF_NS_URI_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -422,16 +566,22 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT:
 				return valueBindingEndpoint != null;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__DATADESCRIPTION:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__DATADESCRIPTION:
 				return datadescription != null;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__WILDCARD:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__WILDCARD:
 				return wildcard != WILDCARD_EDEFAULT;
-			case ExtensionModelPackage.YTEXT_SEARCH_FIELD__PROPERTY_PATH:
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__PROPERTY_PATH:
 				return PROPERTY_PATH_EDEFAULT == null ? propertyPath != null : !PROPERTY_PATH_EDEFAULT.equals(propertyPath);
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE:
+				return type != null;
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__EMF_NS_URI:
+				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__TYPE_QUALIFIED_NAME:
+				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -450,7 +600,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 		}
 		if (baseClass == YValueBindable.class) {
 			switch (derivedFeatureID) {
-				case ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT: return CoreModelPackage.YVALUE_BINDABLE__VALUE_BINDING_ENDPOINT;
+				case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT: return CoreModelPackage.YVALUE_BINDABLE__VALUE_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
@@ -471,7 +621,7 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 		}
 		if (baseClass == YValueBindable.class) {
 			switch (baseFeatureID) {
-				case CoreModelPackage.YVALUE_BINDABLE__VALUE_BINDING_ENDPOINT: return ExtensionModelPackage.YTEXT_SEARCH_FIELD__VALUE_BINDING_ENDPOINT;
+				case CoreModelPackage.YVALUE_BINDABLE__VALUE_BINDING_ENDPOINT: return ExtensionModelPackage.YREFERENCE_SEARCH_FIELD__VALUE_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
@@ -494,50 +644,14 @@ public class YTextSearchFieldImpl extends YInputImpl implements YTextSearchField
 		result.append(wildcard);
 		result.append(", propertyPath: ");
 		result.append(propertyPath);
+		result.append(", type: ");
+		result.append(type);
+		result.append(", emfNsURI: ");
+		result.append(emfNsURI);
+		result.append(", typeQualifiedName: ");
+		result.append(typeQualifiedName);
 		result.append(')');
 		return result.toString();
 	}
-	
-	/**
-	 * Sets the label by creating a new datadescription.
-	 * 
-	 * @param label
-	 */
-	public void setLabel(String label) {
-		YDatadescription ds = getDatadescription();
-		if (ds == null) {
-			setDatadescription(createDatadescription(label));
-		} else {
-			ds.setLabel(label);
-		}
-	}
 
-	/**
-	 * Sets the label i18nKey by creating a new datadescription.
-	 * 
-	 * @param label
-	 */
-	public void setLabelI18nKey(String i18nKey) {
-		YDatadescription ds = getDatadescription();
-		if (ds == null) {
-			setDatadescription(createDatadescriptionForI18n(i18nKey));
-		} else {
-			ds.setLabelI18nKey(i18nKey);
-		}
-	}
-	
-	protected YDatadescription createDatadescription(String label) {
-		YDatadescription dsc = DatatypesFactory.eINSTANCE
-				.createYDatadescription();
-		dsc.setLabel(label);
-		return dsc;
-	}
-
-	protected YDatadescription createDatadescriptionForI18n(String i18nKey) {
-		YDatadescription dsc = DatatypesFactory.eINSTANCE
-				.createYDatadescription();
-		dsc.setLabelI18nKey(i18nKey);
-		return dsc;
-	}
-
-} //YTextSearchFieldImpl
+} //YReferenceSearchFieldImpl

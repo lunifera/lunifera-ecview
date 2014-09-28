@@ -108,6 +108,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute typeQualifiedName : EString
     Reference columns : YColumn<<0..*>>
     Attribute itemImageProperty : EString
+    Attribute filter : EJavaObject
 
   Class YColumn -> YElement
     Attribute icon : EString
@@ -119,6 +120,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute collapsible : EBoolean
     Attribute alignment : YFlatAlignment
     Attribute expandRatio : EFloat
+    Attribute propertyPath : EString
 
   Class YTree -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
     Reference datatype : YTreeDatatype
@@ -256,15 +258,29 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Reference datadescription : YDatadescription
     Attribute value : EString
     Attribute wildcard : YSearchWildcards
+    Attribute propertyPath : EString
 
   Class YBooleanSearchField -> YInput, YValueBindable
     Reference datadescription : YDatadescription
     Attribute value : YBooleanSearchOption
+    Attribute propertyPath : EString
 
   Class YNumericSearchField -> YInput, YValueBindable
     Reference datadescription : YDatadescription
     Attribute value : EString
     Attribute wildcard : YSearchWildcards
+    Attribute propertyPath : EString
+    Attribute type : EJavaClass
+    Attribute typeQualifiedName : EString
+
+  Class YReferenceSearchField -> YInput, YValueBindable
+    Reference datadescription : YDatadescription
+    Attribute value : EJavaObject
+    Attribute wildcard : YSearchWildcards
+    Attribute propertyPath : EString
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
 
   Class YPanel -> YLayout
     Reference datadescription : YDatadescription

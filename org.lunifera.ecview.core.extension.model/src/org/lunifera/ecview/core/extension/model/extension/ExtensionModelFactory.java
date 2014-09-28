@@ -301,6 +301,15 @@ public interface ExtensionModelFactory extends EFactory {
 	YNumericSearchField createYNumericSearchField();
 
 	/**
+	 * Returns a new object of class '<em>YReference Search Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YReference Search Field</em>'.
+	 * @generated
+	 */
+	YReferenceSearchField createYReferenceSearchField();
+
+	/**
 	 * Returns a new object of class '<em>YPanel</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

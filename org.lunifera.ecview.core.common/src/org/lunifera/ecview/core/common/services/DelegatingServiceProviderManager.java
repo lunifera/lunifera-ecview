@@ -94,7 +94,7 @@ public final class DelegatingServiceProviderManager implements IServiceProvider 
 				}
 			}
 		}
-		LOGGER.error("No proper serviceProvider found for element {}", selector);
+		LOGGER.debug("No proper serviceProvider found for element {}", selector);
 		return null;
 	}
 

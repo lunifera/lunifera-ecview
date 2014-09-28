@@ -20,4 +20,10 @@ public interface YNumericSearchFieldValidator {
 	boolean validateDatadescription(YDatadescription value);
 	boolean validateValue(String value);
 	boolean validateWildcard(YSearchWildcards value);
+
+	boolean validatePropertyPath(String value);
+
+	boolean validateType(Class value);
+
+	boolean validateTypeQualifiedName(String value);
 }

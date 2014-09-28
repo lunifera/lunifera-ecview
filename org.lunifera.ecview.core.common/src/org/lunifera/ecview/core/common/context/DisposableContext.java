@@ -170,6 +170,10 @@ public abstract class DisposableContext extends AbstractDisposable implements
 				service = (S) bundleContext.getService(serviceRef);
 			}
 		}
+		
+		if(service == null){
+			logger.warn("No proper serviceProvider found for element {}", selector);
+		}
 
 		return service;
 	}

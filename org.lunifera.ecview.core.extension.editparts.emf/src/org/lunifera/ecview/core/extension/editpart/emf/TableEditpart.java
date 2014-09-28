@@ -10,7 +10,9 @@
  */
 package org.lunifera.ecview.core.extension.editpart.emf;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.lunifera.ecview.core.common.editpart.emf.FieldEditpart;
+import org.lunifera.ecview.core.common.filter.IFilterablePresentation;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
@@ -30,6 +32,23 @@ public class TableEditpart extends FieldEditpart<YTable> implements
 	@Override
 	protected YTable createModel() {
 		return (YTable) ExtensionModelFactory.eINSTANCE.createYTable();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	protected void handleModelSet(int featureId, Notification notification) {
+		checkDisposed();
+
+		switch (featureId) {
+		case ExtensionModelPackage.YTABLE__FILTER:
+			IFilterablePresentation presentation = getPresentation();
+			presentation.applyFilter(notification.getNewValue());
+			break;
+		default:
+			super.handleModelSet(featureId, notification);
+		}
+
 	}
 
 }

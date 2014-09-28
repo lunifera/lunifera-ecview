@@ -48,6 +48,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTable;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getColumns <em>Columns</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getItemImageProperty <em>Item Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getFilter <em>Filter</em>}</li>
  * </ul>
  * </p>
  *
@@ -225,6 +226,25 @@ public class YTableImpl extends YInputImpl implements YTable {
 	 * @ordered
 	 */
 	protected String itemImageProperty = ITEM_IMAGE_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFilter() <em>Filter</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFilter()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Object FILTER_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getFilter() <em>Filter</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFilter()
+	 * @generated
+	 * @ordered
+	 */
+	protected Object filter = FILTER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -650,6 +670,27 @@ public class YTableImpl extends YInputImpl implements YTable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Object getFilter() {
+		return filter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFilter(Object newFilter) {
+		Object oldFilter = filter;
+		filter = newFilter;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTABLE__FILTER, oldFilter, filter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableMultiSelectionEndpoint createMultiSelectionEndpointGen() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -798,6 +839,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 				return getColumns();
 			case ExtensionModelPackage.YTABLE__ITEM_IMAGE_PROPERTY:
 				return getItemImageProperty();
+			case ExtensionModelPackage.YTABLE__FILTER:
+				return getFilter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -855,6 +898,9 @@ public class YTableImpl extends YInputImpl implements YTable {
 			case ExtensionModelPackage.YTABLE__ITEM_IMAGE_PROPERTY:
 				setItemImageProperty((String)newValue);
 				return;
+			case ExtensionModelPackage.YTABLE__FILTER:
+				setFilter(newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -908,6 +954,9 @@ public class YTableImpl extends YInputImpl implements YTable {
 			case ExtensionModelPackage.YTABLE__ITEM_IMAGE_PROPERTY:
 				setItemImageProperty(ITEM_IMAGE_PROPERTY_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YTABLE__FILTER:
+				setFilter(FILTER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -947,6 +996,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 				return columns != null && !columns.isEmpty();
 			case ExtensionModelPackage.YTABLE__ITEM_IMAGE_PROPERTY:
 				return ITEM_IMAGE_PROPERTY_EDEFAULT == null ? itemImageProperty != null : !ITEM_IMAGE_PROPERTY_EDEFAULT.equals(itemImageProperty);
+			case ExtensionModelPackage.YTABLE__FILTER:
+				return FILTER_EDEFAULT == null ? filter != null : !FILTER_EDEFAULT.equals(filter);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1040,6 +1091,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 		result.append(typeQualifiedName);
 		result.append(", itemImageProperty: ");
 		result.append(itemImageProperty);
+		result.append(", filter: ");
+		result.append(filter);
 		result.append(')');
 		return result.toString();
 	}

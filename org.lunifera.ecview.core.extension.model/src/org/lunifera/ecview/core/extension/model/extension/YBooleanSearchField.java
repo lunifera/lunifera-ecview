@@ -16,6 +16,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField#getValue <em>Value</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField#getPropertyPath <em>Property Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,5 +79,31 @@ public interface YBooleanSearchField extends YInput, YValueBindable {
 	 * @generated
 	 */
 	void setValue(YBooleanSearchOption value);
+
+	/**
+	 * Returns the value of the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Property Path</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Property Path</em>' attribute.
+	 * @see #setPropertyPath(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYBooleanSearchField_PropertyPath()
+	 * @model
+	 * @generated
+	 */
+	String getPropertyPath();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField#getPropertyPath <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Property Path</em>' attribute.
+	 * @see #getPropertyPath()
+	 * @generated
+	 */
+	void setPropertyPath(String value);
 
 } // YBooleanSearchField

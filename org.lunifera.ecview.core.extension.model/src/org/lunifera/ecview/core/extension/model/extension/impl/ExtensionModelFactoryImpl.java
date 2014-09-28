@@ -88,6 +88,7 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YTEXT_SEARCH_FIELD: return createYTextSearchField();
 			case ExtensionModelPackage.YBOOLEAN_SEARCH_FIELD: return createYBooleanSearchField();
 			case ExtensionModelPackage.YNUMERIC_SEARCH_FIELD: return createYNumericSearchField();
+			case ExtensionModelPackage.YREFERENCE_SEARCH_FIELD: return createYReferenceSearchField();
 			case ExtensionModelPackage.YPANEL: return createYPanel();
 			case ExtensionModelPackage.YSPLIT_PANEL: return createYSplitPanel();
 			case ExtensionModelPackage.YSEARCH_PANEL: return createYSearchPanel();
@@ -446,6 +447,16 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YNumericSearchField createYNumericSearchField() {
 		YNumericSearchFieldImpl yNumericSearchField = new YNumericSearchFieldImpl();
 		return yNumericSearchField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YReferenceSearchField createYReferenceSearchField() {
+		YReferenceSearchFieldImpl yReferenceSearchField = new YReferenceSearchFieldImpl();
+		return yReferenceSearchField;
 	}
 
 	/**

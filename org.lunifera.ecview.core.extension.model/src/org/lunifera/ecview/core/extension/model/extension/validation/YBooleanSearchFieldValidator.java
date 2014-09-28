@@ -19,4 +19,6 @@ public interface YBooleanSearchFieldValidator {
 
 	boolean validateDatadescription(YDatadescription value);
 	boolean validateValue(YBooleanSearchOption value);
+
+	boolean validatePropertyPath(String value);
 }

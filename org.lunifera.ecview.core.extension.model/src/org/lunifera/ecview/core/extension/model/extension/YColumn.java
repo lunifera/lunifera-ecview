@@ -23,6 +23,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YColumn#isCollapsible <em>Collapsible</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YColumn#getAlignment <em>Alignment</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YColumn#getExpandRatio <em>Expand Ratio</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YColumn#getPropertyPath <em>Property Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -276,6 +277,32 @@ public interface YColumn extends YElement {
 	 * @generated
 	 */
 	void setExpandRatio(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Property Path</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Property Path</em>' attribute.
+	 * @see #setPropertyPath(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYColumn_PropertyPath()
+	 * @model
+	 * @generated
+	 */
+	String getPropertyPath();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YColumn#getPropertyPath <em>Property Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Property Path</em>' attribute.
+	 * @see #getPropertyPath()
+	 * @generated
+	 */
+	void setPropertyPath(String value);
 
 	/**
 	 * Sets the label by creating a new datadescription.
