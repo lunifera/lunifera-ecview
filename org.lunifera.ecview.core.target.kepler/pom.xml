@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>org.lunifera.ecview.core</artifactId>
 		<groupId>org.lunifera.ecview.core</groupId>
-		<version>0.7.3-SNAPSHOT</version>
+		<version>0.7.4</version>
 	</parent>
 	<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
 	<packaging>eclipse-target-definition</packaging>

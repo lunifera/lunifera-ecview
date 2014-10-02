@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.lunifera.ecview.core</groupId>
 		<artifactId>org.lunifera.ecview.core</artifactId>
-		<version>0.7.3-SNAPSHOT</version>
+		<version>0.7.4</version>
 	</parent>
 
 	<artifactId>org.lunifera.ecview.core.common.editparts.emf</artifactId>

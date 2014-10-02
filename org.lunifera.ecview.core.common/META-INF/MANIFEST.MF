@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Common API
 Bundle-SymbolicName: org.lunifera.ecview.core.common
-Bundle-Version: 0.7.3.qualifier
+Bundle-Version: 0.7.4
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.apache.commons.logging;version="1.0.4",
  org.osgi.framework;version="1.7.0",
@@ -13,25 +13,22 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: org.apache.commons.beanutils;bundle-version="1.8.0",
  org.eclipse.core.databinding.observable;bundle-version="1.4.1",
  org.eclipse.core.databinding;bundle-version="1.4.1"
-Export-Package: org.lunifera.ecview.core.common;version="0.7.3",
- org.lunifera.ecview.core.common.beans;version="0.7.3",
- org.lunifera.ecview.core.common.binding;version="0.7.3",
- org.lunifera.ecview.core.common.binding.observables;version="0.7.3",
- org.lunifera.ecview.core.common.concurrent;version="0.7.3",
- org.lunifera.ecview.core.common.concurrent.internal;version="0.7.3";x-internal:=true,
- org.lunifera.ecview.core.common.context;version="0.7.3",
- org.lunifera.ecview.core.common.disposal;version="0.7.3",
- org.lunifera.ecview.core.common.editpart;version="0.7.3",
- org.lunifera.ecview.core.common.editpart.binding;version="0.7.3",
- org.lunifera.ecview.core.common.editpart.datatypes;version="0.7.3",
- org.lunifera.ecview.core.common.editpart.validation;version="0.7.3",
- org.lunifera.ecview.core.common.editpart.visibility;version="0.7.3",
- org.lunifera.ecview.core.common.filter,
- org.lunifera.ecview.core.common.notification;version="0.7.3",
- org.lunifera.ecview.core.common.presentation;version="0.7.3",
- org.lunifera.ecview.core.common.services;version="0.7.3",
- org.lunifera.ecview.core.common.tooling,
- org.lunifera.ecview.core.common.types;version="0.7.3",
- org.lunifera.ecview.core.common.uri;version="0.7.3",
- org.lunifera.ecview.core.common.validation;version="0.7.3",
- org.lunifera.ecview.core.common.visibility
+Export-Package: org.lunifera.ecview.core.common;version="0.7.4",org.lu
+ nifera.ecview.core.common.beans;version="0.7.4",org.lunifera.ecview.c
+ ore.common.binding;version="0.7.4",org.lunifera.ecview.core.common.bi
+ nding.observables;version="0.7.4",org.lunifera.ecview.core.common.con
+ current;version="0.7.4",org.lunifera.ecview.core.common.concurrent.in
+ ternal;version="0.7.4";x-internal:=true,org.lunifera.ecview.core.comm
+ on.context;version="0.7.4",org.lunifera.ecview.core.common.disposal;v
+ ersion="0.7.4",org.lunifera.ecview.core.common.editpart;version="0.7.
+ 4",org.lunifera.ecview.core.common.editpart.binding;version="0.7.4",o
+ rg.lunifera.ecview.core.common.editpart.datatypes;version="0.7.4",org
+ .lunifera.ecview.core.common.editpart.validation;version="0.7.4",org.
+ lunifera.ecview.core.common.editpart.visibility;version="0.7.4",org.l
+ unifera.ecview.core.common.filter,org.lunifera.ecview.core.common.not
+ ification;version="0.7.4",org.lunifera.ecview.core.common.presentatio
+ n;version="0.7.4",org.lunifera.ecview.core.common.services;version="0
+ .7.4",org.lunifera.ecview.core.common.tooling,org.lunifera.ecview.cor
+ e.common.types;version="0.7.4",org.lunifera.ecview.core.common.uri;ve
+ rsion="0.7.4",org.lunifera.ecview.core.common.validation;version="0.7
+ .4",org.lunifera.ecview.core.common.visibility
