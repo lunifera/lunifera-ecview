@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.lunifera.ecview.core.databinding.tests;singleton:=true
-Bundle-Version: 0.7.4
+Bundle-Version: 0.7.5.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.lunifera.ecview.core.databinding.tests.emf.model,
- org.lunifera.ecview.core.databinding.tests.emf.model.impl,
- org.lunifera.ecview.core.databinding.tests.emf.model.util
+Export-Package: org.lunifera.ecview.core.databinding.tests.emf.model,o
+ rg.lunifera.ecview.core.databinding.tests.emf.model.impl,org.lunifera
+ .ecview.core.databinding.tests.emf.model.util
 Require-Bundle: org.lunifera.ecview.core.databinding.beans;bundle-version="0.0.1",
  org.junit;bundle-version="4.10.0",
  org.lunifera.ecview.core.common;bundle-version="0.0.1",

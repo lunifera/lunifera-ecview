@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.lunifera.ecview.core</groupId>
 		<artifactId>org.lunifera.ecview.core</artifactId>
-		<version>0.7.4</version>
+		<version>0.7.5-SNAPSHOT</version>
 	</parent>
 	<artifactId>org.lunifera.ecview.core.p2</artifactId>
 	<name>ECView P2 repo</name>

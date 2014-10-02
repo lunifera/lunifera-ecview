@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Beans and POJO binding delegates for ECView
 Bundle-SymbolicName: org.lunifera.ecview.core.databinding.beans
-Bundle-Version: 0.7.4
+Bundle-Version: 0.7.5.qualifier
 Require-Bundle: org.eclipse.core.databinding.beans,
  org.eclipse.core.databinding.observable,
  org.eclipse.core.databinding.property,
@@ -10,6 +10,6 @@ Require-Bundle: org.eclipse.core.databinding.beans,
  org.apache.commons.beanutils;bundle-version="1.8.0"
 Service-Component: OSGI-INF/beanBindingDelegate.xml, OSGI-INF/pojoBindingDelegate.xml
 Export-Package: org.lunifera.ecview.core.databinding.beans.context;ver
- sion="0.7.4";x-internal:=true
+ sion="0.7.5";x-internal:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
