@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Common Core Feature Tests
 Bundle-SymbolicName: org.lunifera.ecview.core.common.tests;singleton:=true
-Bundle-Version: 0.0.1.qualifier
+Bundle-Version: 0.7.5.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.core.runtime,
