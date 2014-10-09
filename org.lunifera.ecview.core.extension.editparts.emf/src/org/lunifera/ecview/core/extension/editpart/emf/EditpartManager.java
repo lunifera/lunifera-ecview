@@ -44,6 +44,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTextAreaDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YTreeDatatype;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YBrowser;
 import org.lunifera.ecview.core.extension.model.extension.YButton;
@@ -73,6 +74,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTextField;
 import org.lunifera.ecview.core.extension.model.extension.YTextSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YTree;
 import org.lunifera.ecview.core.extension.model.extension.YVerticalLayout;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IBeanReferenceFieldEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IBooleanSearchFieldEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IBrowserEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IButtonEditpart;
@@ -250,6 +252,9 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(PanelEditpart.class);
 		} else if (editPartClazz.isAssignableFrom(ISearchPanelEditpart.class)) {
 			result = createNewInstance(SearchPanelEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IBeanReferenceFieldEditpart.class)) {
+			result = createNewInstance(BeanReferenceFieldEditpart.class);
 		}
 
 		if (result != null) {
@@ -360,6 +365,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(PanelEditpart.class);
 		} else if (yElement instanceof YSearchPanel) {
 			result = createNewInstance(SearchPanelEditpart.class);
+		} else if (yElement instanceof YBeanReferenceField) {
+			result = createNewInstance(BeanReferenceFieldEditpart.class);
 		}
 
 		if (result != null) {

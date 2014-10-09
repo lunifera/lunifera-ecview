@@ -278,13 +278,49 @@ public interface CoreModelPackage extends EPackage {
 	int YLAYOUT__ORPHAN_DATADESCRIPTIONS = YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLAYOUT__INITIAL_EDITABLE = YEMBEDDABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLAYOUT__EDITABLE = YEMBEDDABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLAYOUT__INITIAL_ENABLED = YEMBEDDABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLAYOUT__ENABLED = YEMBEDDABLE_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YLAYOUT__ELEMENTS = YEMBEDDABLE_FEATURE_COUNT + 0;
+	int YLAYOUT__ELEMENTS = YEMBEDDABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>YLayout</em>' class.
@@ -293,7 +329,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLAYOUT_FEATURE_COUNT = YEMBEDDABLE_FEATURE_COUNT + 1;
+	int YLAYOUT_FEATURE_COUNT = YEMBEDDABLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl <em>YField</em>}' class.

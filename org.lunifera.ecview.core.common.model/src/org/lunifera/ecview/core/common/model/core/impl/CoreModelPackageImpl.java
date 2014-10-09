@@ -1644,6 +1644,8 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 
 		// Add supertypes to classes
 		yLayoutEClass.getESuperTypes().add(this.getYEmbeddable());
+		yLayoutEClass.getESuperTypes().add(this.getYEditable());
+		yLayoutEClass.getESuperTypes().add(this.getYEnable());
 		yFieldEClass.getESuperTypes().add(this.getYEmbeddable());
 		yFieldEClass.getESuperTypes().add(this.getYEditable());
 		yFieldEClass.getESuperTypes().add(this.getYEnable());

@@ -156,6 +156,8 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
+    Attribute itemCaptionProperty : EString
+    Attribute itemImageProperty : EString
 
   Class YLabel -> YField, YValueBindable
     Reference datadescription : YDatadescription
@@ -169,6 +171,17 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Reference datatype : YTextDatatype
     Reference datadescription : YDatadescription
     Attribute value : EString
+
+  Class YBeanReferenceField -> YInput, YValueBindable
+    Reference datadescription : YDatadescription
+    Attribute value : EJavaObject
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+    Attribute inMemoryBeanProvider : EJavaClass
+    Attribute inMemoryBeanProviderQualifiedName : EString
+    Attribute captionPropertyPath : EString
+    Attribute imagePropertyPath : EString
 
   Class YTextArea -> YInput, YValueBindable
     Reference datadescription : YDatadescription

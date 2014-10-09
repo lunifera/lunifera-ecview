@@ -101,6 +101,8 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYSpacingable(yGridLayout);
 				if (result == null) result = caseYMarginable(yGridLayout);
 				if (result == null) result = caseYEmbeddable(yGridLayout);
+				if (result == null) result = caseYEditable(yGridLayout);
+				if (result == null) result = caseYEnable(yGridLayout);
 				if (result == null) result = caseYElement(yGridLayout);
 				if (result == null) result = caseYCssAble(yGridLayout);
 				if (result == null) result = caseYVisibleable(yGridLayout);
@@ -120,6 +122,8 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYSpacingable(yHorizontalLayout);
 				if (result == null) result = caseYMarginable(yHorizontalLayout);
 				if (result == null) result = caseYEmbeddable(yHorizontalLayout);
+				if (result == null) result = caseYEditable(yHorizontalLayout);
+				if (result == null) result = caseYEnable(yHorizontalLayout);
 				if (result == null) result = caseYElement(yHorizontalLayout);
 				if (result == null) result = caseYCssAble(yHorizontalLayout);
 				if (result == null) result = caseYVisibleable(yHorizontalLayout);
@@ -139,6 +143,8 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYSpacingable(yVerticalLayout);
 				if (result == null) result = caseYMarginable(yVerticalLayout);
 				if (result == null) result = caseYEmbeddable(yVerticalLayout);
+				if (result == null) result = caseYEditable(yVerticalLayout);
+				if (result == null) result = caseYEnable(yVerticalLayout);
 				if (result == null) result = caseYElement(yVerticalLayout);
 				if (result == null) result = caseYCssAble(yVerticalLayout);
 				if (result == null) result = caseYVisibleable(yVerticalLayout);
@@ -279,6 +285,22 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(yTextField);
 				if (result == null) result = caseYCssAble(yTextField);
 				if (result == null) result = caseYVisibleable(yTextField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD: {
+				YBeanReferenceField yBeanReferenceField = (YBeanReferenceField)theEObject;
+				T result = caseYBeanReferenceField(yBeanReferenceField);
+				if (result == null) result = caseYInput(yBeanReferenceField);
+				if (result == null) result = caseYValueBindable(yBeanReferenceField);
+				if (result == null) result = caseYField(yBeanReferenceField);
+				if (result == null) result = caseYBindable(yBeanReferenceField);
+				if (result == null) result = caseYEmbeddable(yBeanReferenceField);
+				if (result == null) result = caseYEditable(yBeanReferenceField);
+				if (result == null) result = caseYEnable(yBeanReferenceField);
+				if (result == null) result = caseYElement(yBeanReferenceField);
+				if (result == null) result = caseYCssAble(yBeanReferenceField);
+				if (result == null) result = caseYVisibleable(yBeanReferenceField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -480,6 +502,8 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYSpacingable(yFormLayout);
 				if (result == null) result = caseYMarginable(yFormLayout);
 				if (result == null) result = caseYEmbeddable(yFormLayout);
+				if (result == null) result = caseYEditable(yFormLayout);
+				if (result == null) result = caseYEnable(yFormLayout);
 				if (result == null) result = caseYElement(yFormLayout);
 				if (result == null) result = caseYCssAble(yFormLayout);
 				if (result == null) result = caseYVisibleable(yFormLayout);
@@ -561,6 +585,8 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				T result = caseYPanel(yPanel);
 				if (result == null) result = caseYLayout(yPanel);
 				if (result == null) result = caseYEmbeddable(yPanel);
+				if (result == null) result = caseYEditable(yPanel);
+				if (result == null) result = caseYEnable(yPanel);
 				if (result == null) result = caseYElement(yPanel);
 				if (result == null) result = caseYCssAble(yPanel);
 				if (result == null) result = caseYVisibleable(yPanel);
@@ -572,6 +598,8 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				T result = caseYSplitPanel(ySplitPanel);
 				if (result == null) result = caseYLayout(ySplitPanel);
 				if (result == null) result = caseYEmbeddable(ySplitPanel);
+				if (result == null) result = caseYEditable(ySplitPanel);
+				if (result == null) result = caseYEnable(ySplitPanel);
 				if (result == null) result = caseYElement(ySplitPanel);
 				if (result == null) result = caseYCssAble(ySplitPanel);
 				if (result == null) result = caseYVisibleable(ySplitPanel);
@@ -585,6 +613,8 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYSpacingable(ySearchPanel);
 				if (result == null) result = caseYMarginable(ySearchPanel);
 				if (result == null) result = caseYEmbeddable(ySearchPanel);
+				if (result == null) result = caseYEditable(ySearchPanel);
+				if (result == null) result = caseYEnable(ySearchPanel);
 				if (result == null) result = caseYElement(ySearchPanel);
 				if (result == null) result = caseYCssAble(ySearchPanel);
 				if (result == null) result = caseYVisibleable(ySearchPanel);
@@ -607,6 +637,21 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYTextField(YTextField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YBean Reference Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YBean Reference Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYBeanReferenceField(YBeanReferenceField object) {
 		return null;
 	}
 

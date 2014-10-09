@@ -6,7 +6,7 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YLayout" eSuperTypes="#//YEmbeddable">
+  <eClassifiers xsi:type="ecore:EClass" name="YLayout" eSuperTypes="#//YEmbeddable #//YEditable #//YEnable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//YEmbeddable" containment="true"/>
   </eClassifiers>

@@ -296,6 +296,42 @@ public interface ExtensionModelPackage extends EPackage {
 	int YGRID_LAYOUT__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGRID_LAYOUT__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGRID_LAYOUT__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGRID_LAYOUT__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGRID_LAYOUT__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -478,6 +514,42 @@ public interface ExtensionModelPackage extends EPackage {
 	int YHORIZONTAL_LAYOUT__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YHORIZONTAL_LAYOUT__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YHORIZONTAL_LAYOUT__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YHORIZONTAL_LAYOUT__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YHORIZONTAL_LAYOUT__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -640,6 +712,42 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVERTICAL_LAYOUT__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVERTICAL_LAYOUT__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVERTICAL_LAYOUT__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVERTICAL_LAYOUT__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVERTICAL_LAYOUT__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -1203,7 +1311,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYTextArea()
 	 * @generated
 	 */
-	int YTEXT_AREA = 16;
+	int YTEXT_AREA = 17;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YCheckBoxImpl <em>YCheck Box</em>}' class.
@@ -1213,7 +1321,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYCheckBox()
 	 * @generated
 	 */
-	int YCHECK_BOX = 17;
+	int YCHECK_BOX = 18;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YBrowserImpl <em>YBrowser</em>}' class.
@@ -1223,7 +1331,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBrowser()
 	 * @generated
 	 */
-	int YBROWSER = 18;
+	int YBROWSER = 19;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YDateTimeImpl <em>YDate Time</em>}' class.
@@ -1233,7 +1341,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYDateTime()
 	 * @generated
 	 */
-	int YDATE_TIME = 19;
+	int YDATE_TIME = 20;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YDecimalFieldImpl <em>YDecimal Field</em>}' class.
@@ -1243,7 +1351,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYDecimalField()
 	 * @generated
 	 */
-	int YDECIMAL_FIELD = 20;
+	int YDECIMAL_FIELD = 21;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YNumericFieldImpl <em>YNumeric Field</em>}' class.
@@ -1253,7 +1361,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYNumericField()
 	 * @generated
 	 */
-	int YNUMERIC_FIELD = 21;
+	int YNUMERIC_FIELD = 22;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl <em>YCombo Box</em>}' class.
@@ -1263,7 +1371,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYComboBox()
 	 * @generated
 	 */
-	int YCOMBO_BOX = 22;
+	int YCOMBO_BOX = 23;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl <em>YList</em>}' class.
@@ -1283,7 +1391,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButton()
 	 * @generated
 	 */
-	int YBUTTON = 23;
+	int YBUTTON = 24;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YToggleButtonImpl <em>YToggle Button</em>}' class.
@@ -1293,7 +1401,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYToggleButton()
 	 * @generated
 	 */
-	int YTOGGLE_BUTTON = 24;
+	int YTOGGLE_BUTTON = 25;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.
@@ -2054,13 +2162,31 @@ public interface ExtensionModelPackage extends EPackage {
 	int YLIST__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Item Caption Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST__ITEM_CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Item Image Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+
+	/**
 	 * The number of structural features of the '<em>YList</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 12;
+	int YLIST_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2566,6 +2692,241 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YTEXT_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl <em>YBean Reference Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBeanReferenceField()
+	 * @generated
+	 */
+	int YBEAN_REFERENCE_FIELD = 16;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__VALUE = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__TYPE = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__EMF_NS_URI = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>In Memory Bean Provider</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER = YINPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>In Memory Bean Provider Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Caption Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__CAPTION_PROPERTY_PATH = YINPUT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Image Property Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH = YINPUT_FEATURE_COUNT + 9;
+
+	/**
+	 * The number of structural features of the '<em>YBean Reference Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4105,7 +4466,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYProgressBar()
 	 * @generated
 	 */
-	int YPROGRESS_BAR = 25;
+	int YPROGRESS_BAR = 26;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4286,7 +4647,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYTabSheet()
 	 * @generated
 	 */
-	int YTAB_SHEET = 26;
+	int YTAB_SHEET = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4386,7 +4747,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYTab()
 	 * @generated
 	 */
-	int YTAB = 27;
+	int YTAB = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4468,7 +4829,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYMasterDetail()
 	 * @generated
 	 */
-	int YMASTER_DETAIL = 28;
+	int YMASTER_DETAIL = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4712,7 +5073,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYFormLayout()
 	 * @generated
 	 */
-	int YFORM_LAYOUT = 29;
+	int YFORM_LAYOUT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4787,6 +5148,42 @@ public interface ExtensionModelPackage extends EPackage {
 	int YFORM_LAYOUT__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFORM_LAYOUT__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFORM_LAYOUT__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFORM_LAYOUT__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFORM_LAYOUT__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4839,7 +5236,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYFormLayoutCellStyle()
 	 * @generated
 	 */
-	int YFORM_LAYOUT_CELL_STYLE = 30;
+	int YFORM_LAYOUT_CELL_STYLE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -4876,7 +5273,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYTextSearchField()
 	 * @generated
 	 */
-	int YTEXT_SEARCH_FIELD = 31;
+	int YTEXT_SEARCH_FIELD = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5066,7 +5463,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchField()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_FIELD = 32;
+	int YBOOLEAN_SEARCH_FIELD = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5247,7 +5644,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYNumericSearchField()
 	 * @generated
 	 */
-	int YNUMERIC_SEARCH_FIELD = 33;
+	int YNUMERIC_SEARCH_FIELD = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5455,7 +5852,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYReferenceSearchField()
 	 * @generated
 	 */
-	int YREFERENCE_SEARCH_FIELD = 34;
+	int YREFERENCE_SEARCH_FIELD = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5672,7 +6069,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYPanel()
 	 * @generated
 	 */
-	int YPANEL = 35;
+	int YPANEL = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5747,6 +6144,42 @@ public interface ExtensionModelPackage extends EPackage {
 	int YPANEL__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5799,7 +6232,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSplitPanel()
 	 * @generated
 	 */
-	int YSPLIT_PANEL = 36;
+	int YSPLIT_PANEL = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5874,6 +6307,42 @@ public interface ExtensionModelPackage extends EPackage {
 	int YSPLIT_PANEL__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5944,7 +6413,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchPanel()
 	 * @generated
 	 */
-	int YSEARCH_PANEL = 37;
+	int YSEARCH_PANEL = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6017,6 +6486,42 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YSEARCH_PANEL__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -6107,7 +6612,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 41;
+	int YBUTTON_CLICK_LISTENER = 42;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -6117,7 +6622,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 38;
+	int YSELECTION_TYPE = 39;
 
 
 	/**
@@ -6128,7 +6633,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 39;
+	int YBOOLEAN_SEARCH_OPTION = 40;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -6138,7 +6643,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 40;
+	int YSEARCH_WILDCARDS = 41;
 
 
 	/**
@@ -6183,6 +6688,115 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYTextField_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField <em>YBean Reference Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YBean Reference Field</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField
+	 * @generated
+	 */
+	EClass getYBeanReferenceField();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDatadescription()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EReference getYBeanReferenceField_Datadescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getValue()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getType()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getEmfNsURI()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getTypeQualifiedName()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getInMemoryBeanProvider <em>In Memory Bean Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>In Memory Bean Provider</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getInMemoryBeanProvider()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_InMemoryBeanProvider();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getInMemoryBeanProviderQualifiedName <em>In Memory Bean Provider Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>In Memory Bean Provider Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getInMemoryBeanProviderQualifiedName()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_InMemoryBeanProviderQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getCaptionPropertyPath <em>Caption Property Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Caption Property Path</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getCaptionPropertyPath()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_CaptionPropertyPath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getImagePropertyPath <em>Image Property Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image Property Path</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getImagePropertyPath()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_ImagePropertyPath();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YGridLayout <em>YGrid Layout</em>}'.
@@ -7230,6 +7844,28 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYList_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemCaptionProperty <em>Item Caption Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Item Caption Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getItemCaptionProperty()
+	 * @see #getYList()
+	 * @generated
+	 */
+	EAttribute getYList_ItemCaptionProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemImageProperty <em>Item Image Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Item Image Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getItemImageProperty()
+	 * @see #getYList()
+	 * @generated
+	 */
+	EAttribute getYList_ItemImageProperty();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YButton <em>YButton</em>}'.
@@ -8335,6 +8971,88 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YTEXT_FIELD__VALUE = eINSTANCE.getYTextField_Value();
 
 		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl <em>YBean Reference Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBeanReferenceField()
+		 * @generated
+		 */
+		EClass YBEAN_REFERENCE_FIELD = eINSTANCE.getYBeanReferenceField();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YBEAN_REFERENCE_FIELD__DATADESCRIPTION = eINSTANCE.getYBeanReferenceField_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__VALUE = eINSTANCE.getYBeanReferenceField_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__TYPE = eINSTANCE.getYBeanReferenceField_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__EMF_NS_URI = eINSTANCE.getYBeanReferenceField_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__TYPE_QUALIFIED_NAME = eINSTANCE.getYBeanReferenceField_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>In Memory Bean Provider</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER = eINSTANCE.getYBeanReferenceField_InMemoryBeanProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>In Memory Bean Provider Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER_QUALIFIED_NAME = eINSTANCE.getYBeanReferenceField_InMemoryBeanProviderQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Caption Property Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__CAPTION_PROPERTY_PATH = eINSTANCE.getYBeanReferenceField_CaptionPropertyPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Property Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH = eINSTANCE.getYBeanReferenceField_ImagePropertyPath();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl <em>YGrid Layout</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9149,6 +9867,22 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YLIST__TYPE_QUALIFIED_NAME = eINSTANCE.getYList_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Item Caption Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YLIST__ITEM_CAPTION_PROPERTY = eINSTANCE.getYList_ItemCaptionProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Item Image Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YLIST__ITEM_IMAGE_PROPERTY = eINSTANCE.getYList_ItemImageProperty();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl <em>YButton</em>}' class.

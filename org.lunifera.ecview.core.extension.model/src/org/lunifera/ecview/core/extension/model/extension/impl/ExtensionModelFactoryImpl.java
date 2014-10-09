@@ -70,6 +70,7 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YLABEL: return createYLabel();
 			case ExtensionModelPackage.YIMAGE: return createYImage();
 			case ExtensionModelPackage.YTEXT_FIELD: return createYTextField();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD: return createYBeanReferenceField();
 			case ExtensionModelPackage.YTEXT_AREA: return createYTextArea();
 			case ExtensionModelPackage.YCHECK_BOX: return createYCheckBox();
 			case ExtensionModelPackage.YBROWSER: return createYBrowser();
@@ -147,6 +148,16 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YTextField createYTextField() {
 		YTextFieldImpl yTextField = new YTextFieldImpl();
 		return yTextField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YBeanReferenceField createYBeanReferenceField() {
+		YBeanReferenceFieldImpl yBeanReferenceField = new YBeanReferenceFieldImpl();
+		return yBeanReferenceField;
 	}
 
 	/**

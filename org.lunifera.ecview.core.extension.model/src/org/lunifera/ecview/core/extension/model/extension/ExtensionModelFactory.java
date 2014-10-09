@@ -31,6 +31,15 @@ public interface ExtensionModelFactory extends EFactory {
 	YTextField createYTextField();
 
 	/**
+	 * Returns a new object of class '<em>YBean Reference Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YBean Reference Field</em>'.
+	 * @generated
+	 */
+	YBeanReferenceField createYBeanReferenceField();
+
+	/**
 	 * Returns a new object of class '<em>YGrid Layout</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -24,4 +24,12 @@ public interface YReferenceSearchFieldValidator {
 	boolean validateType(Class<?> value);
 	boolean validateEmfNsURI(String value);
 	boolean validateTypeQualifiedName(String value);
+
+	boolean validateInMemoryService(Class<?> value);
+
+	boolean validateInMemoryServiceQualifiedName(String value);
+
+	boolean validateCaptionPropertyPath(String value);
+
+	boolean validateImagePropertyPath(String value);
 }

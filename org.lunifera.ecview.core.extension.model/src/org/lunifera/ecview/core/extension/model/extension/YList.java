@@ -35,6 +35,8 @@ import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getType <em>Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemCaptionProperty <em>Item Caption Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemImageProperty <em>Item Image Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -259,5 +261,57 @@ public interface YList extends YInput, YCollectionBindable, YSelectionBindable, 
 	 * @generated
 	 */
 	void setTypeQualifiedName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Item Caption Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Item Caption Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Item Caption Property</em>' attribute.
+	 * @see #setItemCaptionProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYList_ItemCaptionProperty()
+	 * @model
+	 * @generated
+	 */
+	String getItemCaptionProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemCaptionProperty <em>Item Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Item Caption Property</em>' attribute.
+	 * @see #getItemCaptionProperty()
+	 * @generated
+	 */
+	void setItemCaptionProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Item Image Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Item Image Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Item Image Property</em>' attribute.
+	 * @see #setItemImageProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYList_ItemImageProperty()
+	 * @model
+	 * @generated
+	 */
+	String getItemImageProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemImageProperty <em>Item Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Item Image Property</em>' attribute.
+	 * @see #getItemImageProperty()
+	 * @generated
+	 */
+	void setItemImageProperty(String value);
 
 } // YUiList

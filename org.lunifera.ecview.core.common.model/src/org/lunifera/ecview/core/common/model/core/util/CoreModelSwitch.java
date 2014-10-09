@@ -87,6 +87,8 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				YLayout yLayout = (YLayout)theEObject;
 				T result = caseYLayout(yLayout);
 				if (result == null) result = caseYEmbeddable(yLayout);
+				if (result == null) result = caseYEditable(yLayout);
+				if (result == null) result = caseYEnable(yLayout);
 				if (result == null) result = caseYElement(yLayout);
 				if (result == null) result = caseYCssAble(yLayout);
 				if (result == null) result = caseYVisibleable(yLayout);

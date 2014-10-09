@@ -43,6 +43,8 @@ import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getItemCaptionProperty <em>Item Caption Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getItemImageProperty <em>Item Image Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -203,6 +205,46 @@ public class YListImpl extends YInputImpl implements YList {
 	 * @ordered
 	 */
 	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemCaptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ITEM_CAPTION_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemCaptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String itemCaptionProperty = ITEM_CAPTION_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemImageProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ITEM_IMAGE_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItemImageProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String itemImageProperty = ITEM_IMAGE_PROPERTY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -595,6 +637,48 @@ public class YListImpl extends YInputImpl implements YList {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getItemCaptionProperty() {
+		return itemCaptionProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setItemCaptionProperty(String newItemCaptionProperty) {
+		String oldItemCaptionProperty = itemCaptionProperty;
+		itemCaptionProperty = newItemCaptionProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__ITEM_CAPTION_PROPERTY, oldItemCaptionProperty, itemCaptionProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getItemImageProperty() {
+		return itemImageProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setItemImageProperty(String newItemImageProperty) {
+		String oldItemImageProperty = itemImageProperty;
+		itemImageProperty = newItemImageProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__ITEM_IMAGE_PROPERTY, oldItemImageProperty, itemImageProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableMultiSelectionEndpoint createMultiSelectionEndpointGen() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -737,6 +821,10 @@ public class YListImpl extends YInputImpl implements YList {
 				return getEmfNsURI();
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				return getTypeQualifiedName();
+			case ExtensionModelPackage.YLIST__ITEM_CAPTION_PROPERTY:
+				return getItemCaptionProperty();
+			case ExtensionModelPackage.YLIST__ITEM_IMAGE_PROPERTY:
+				return getItemImageProperty();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -787,6 +875,12 @@ public class YListImpl extends YInputImpl implements YList {
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName((String)newValue);
 				return;
+			case ExtensionModelPackage.YLIST__ITEM_CAPTION_PROPERTY:
+				setItemCaptionProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YLIST__ITEM_IMAGE_PROPERTY:
+				setItemImageProperty((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -834,6 +928,12 @@ public class YListImpl extends YInputImpl implements YList {
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YLIST__ITEM_CAPTION_PROPERTY:
+				setItemCaptionProperty(ITEM_CAPTION_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YLIST__ITEM_IMAGE_PROPERTY:
+				setItemImageProperty(ITEM_IMAGE_PROPERTY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -869,6 +969,10 @@ public class YListImpl extends YInputImpl implements YList {
 				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
+			case ExtensionModelPackage.YLIST__ITEM_CAPTION_PROPERTY:
+				return ITEM_CAPTION_PROPERTY_EDEFAULT == null ? itemCaptionProperty != null : !ITEM_CAPTION_PROPERTY_EDEFAULT.equals(itemCaptionProperty);
+			case ExtensionModelPackage.YLIST__ITEM_IMAGE_PROPERTY:
+				return ITEM_IMAGE_PROPERTY_EDEFAULT == null ? itemImageProperty != null : !ITEM_IMAGE_PROPERTY_EDEFAULT.equals(itemImageProperty);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -960,6 +1064,10 @@ public class YListImpl extends YInputImpl implements YList {
 		result.append(emfNsURI);
 		result.append(", typeQualifiedName: ");
 		result.append(typeQualifiedName);
+		result.append(", itemCaptionProperty: ");
+		result.append(itemCaptionProperty);
+		result.append(", itemImageProperty: ");
+		result.append(itemImageProperty);
 		result.append(')');
 		return result.toString();
 	}
