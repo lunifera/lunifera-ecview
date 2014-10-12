@@ -17,6 +17,7 @@ import java.util.Map;
 import java.util.concurrent.Future;
 
 import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
+import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
 import org.lunifera.ecview.core.common.services.IWidgetAssocationsService;
@@ -135,6 +136,11 @@ public class ViewContext extends DisposableContext implements IViewContext {
 			visibilityManager = new VisibilityManager(this);
 		}
 		return visibilityManager;
+	}
+
+	@Override
+	public List<IExposedActionEditpart> getExposedActions() {
+		return getViewEditpart().getExposedActions();
 	}
 
 	/**

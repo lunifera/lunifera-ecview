@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -10,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBindable;
 import org.lunifera.ecview.core.common.model.core.YCollectionBindable;
@@ -20,39 +20,35 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddableSelectionEndpoint;
 import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
 import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
-import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
+import org.lunifera.ecview.core.extension.model.datatypes.YOptionsGroupDataType;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
-import org.lunifera.ecview.core.extension.model.extension.YList;
+import org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>YUi List</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>YEnum Options Group</b></em>'.
+ * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getMultiSelectionBindingEndpoint <em>Multi Selection Binding Endpoint</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDatadescription <em>Datadescription</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDatatype <em>Datatype</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getSelectionType <em>Selection Type</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getSelection <em>Selection</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getMultiSelection <em>Multi Selection</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getCollection <em>Collection</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getCaptionProperty <em>Caption Property</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getImageProperty <em>Image Property</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDescriptionProperty <em>Description Property</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getMultiSelectionBindingEndpoint <em>Multi Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getDatatype <em>Datatype</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getSelectionType <em>Selection Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getSelection <em>Selection</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getMultiSelection <em>Multi Selection</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class YListImpl extends YInputImpl implements YList {
+public class YEnumOptionsGroupImpl extends YInputImpl implements YEnumOptionsGroup {
 	/**
 	 * The cached value of the '{@link #getCollectionBindingEndpoint() <em>Collection Binding Endpoint</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -85,8 +81,8 @@ public class YListImpl extends YInputImpl implements YList {
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDatadescription()
 	 * @generated
 	 * @ordered
@@ -95,17 +91,18 @@ public class YListImpl extends YInputImpl implements YList {
 
 	/**
 	 * The cached value of the '{@link #getDatatype() <em>Datatype</em>}' reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDatatype()
 	 * @generated
 	 * @ordered
 	 */
-	protected YListDataType datatype;
+	protected YOptionsGroupDataType datatype;
 
 	/**
 	 * The default value of the '{@link #getSelectionType() <em>Selection Type</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSelectionType()
 	 * @generated
 	 * @ordered
@@ -114,8 +111,8 @@ public class YListImpl extends YInputImpl implements YList {
 
 	/**
 	 * The cached value of the '{@link #getSelectionType() <em>Selection Type</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSelectionType()
 	 * @generated
 	 * @ordered
@@ -124,7 +121,8 @@ public class YListImpl extends YInputImpl implements YList {
 
 	/**
 	 * The default value of the '{@link #getSelection() <em>Selection</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSelection()
 	 * @generated
 	 * @ordered
@@ -133,7 +131,8 @@ public class YListImpl extends YInputImpl implements YList {
 
 	/**
 	 * The cached value of the '{@link #getSelection() <em>Selection</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSelection()
 	 * @generated
 	 * @ordered
@@ -151,17 +150,9 @@ public class YListImpl extends YInputImpl implements YList {
 	protected EList<Object> multiSelection;
 
 	/**
-	 * The cached value of the '{@link #getCollection() <em>Collection</em>}' attribute list.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getCollection()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Object> collection;
-
-	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -209,104 +200,27 @@ public class YListImpl extends YInputImpl implements YList {
 	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCaptionProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CAPTION_PROPERTY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCaptionProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected String captionProperty = CAPTION_PROPERTY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImageProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String IMAGE_PROPERTY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImageProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected String imageProperty = IMAGE_PROPERTY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescriptionProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_PROPERTY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescriptionProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected String descriptionProperty = DESCRIPTION_PROPERTY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected YListImpl() {
+	protected YEnumOptionsGroupImpl() {
 		super();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ExtensionModelPackage.Literals.YLIST;
+		return ExtensionModelPackage.Literals.YENUM_OPTIONS_GROUP;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableCollectionEndpoint getCollectionBindingEndpoint() {
@@ -315,14 +229,15 @@ public class YListImpl extends YInputImpl implements YList {
 			collectionBindingEndpoint = (YEmbeddableCollectionEndpoint)eResolveProxy(oldCollectionBindingEndpoint);
 			if (collectionBindingEndpoint != oldCollectionBindingEndpoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT, oldCollectionBindingEndpoint, collectionBindingEndpoint));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT, oldCollectionBindingEndpoint, collectionBindingEndpoint));
 			}
 		}
 		return collectionBindingEndpoint;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableCollectionEndpoint basicGetCollectionBindingEndpoint() {
@@ -338,18 +253,18 @@ public class YListImpl extends YInputImpl implements YList {
 		YEmbeddableCollectionEndpoint oldCollectionBindingEndpoint = collectionBindingEndpoint;
 		collectionBindingEndpoint = newCollectionBindingEndpoint;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT, oldCollectionBindingEndpoint, newCollectionBindingEndpoint);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT, oldCollectionBindingEndpoint, newCollectionBindingEndpoint);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCollectionBindingEndpoint(
-			YEmbeddableCollectionEndpoint newCollectionBindingEndpoint) {
+	public void setCollectionBindingEndpoint(YEmbeddableCollectionEndpoint newCollectionBindingEndpoint) {
 		if (newCollectionBindingEndpoint != collectionBindingEndpoint) {
 			NotificationChain msgs = null;
 			if (collectionBindingEndpoint != null)
@@ -360,11 +275,12 @@ public class YListImpl extends YInputImpl implements YList {
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT, newCollectionBindingEndpoint, newCollectionBindingEndpoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT, newCollectionBindingEndpoint, newCollectionBindingEndpoint));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableSelectionEndpoint getSelectionBindingEndpoint() {
@@ -373,14 +289,15 @@ public class YListImpl extends YInputImpl implements YList {
 			selectionBindingEndpoint = (YEmbeddableSelectionEndpoint)eResolveProxy(oldSelectionBindingEndpoint);
 			if (selectionBindingEndpoint != oldSelectionBindingEndpoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT, oldSelectionBindingEndpoint, selectionBindingEndpoint));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT, oldSelectionBindingEndpoint, selectionBindingEndpoint));
 			}
 		}
 		return selectionBindingEndpoint;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableSelectionEndpoint basicGetSelectionBindingEndpoint() {
@@ -388,27 +305,26 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSelectionBindingEndpoint(
-			YEmbeddableSelectionEndpoint newSelectionBindingEndpoint,
-			NotificationChain msgs) {
+	public NotificationChain basicSetSelectionBindingEndpoint(YEmbeddableSelectionEndpoint newSelectionBindingEndpoint, NotificationChain msgs) {
 		YEmbeddableSelectionEndpoint oldSelectionBindingEndpoint = selectionBindingEndpoint;
 		selectionBindingEndpoint = newSelectionBindingEndpoint;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT, oldSelectionBindingEndpoint, newSelectionBindingEndpoint);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT, oldSelectionBindingEndpoint, newSelectionBindingEndpoint);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelectionBindingEndpoint(
-			YEmbeddableSelectionEndpoint newSelectionBindingEndpoint) {
+	public void setSelectionBindingEndpoint(YEmbeddableSelectionEndpoint newSelectionBindingEndpoint) {
 		if (newSelectionBindingEndpoint != selectionBindingEndpoint) {
 			NotificationChain msgs = null;
 			if (selectionBindingEndpoint != null)
@@ -419,7 +335,7 @@ public class YListImpl extends YInputImpl implements YList {
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT, newSelectionBindingEndpoint, newSelectionBindingEndpoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT, newSelectionBindingEndpoint, newSelectionBindingEndpoint));
 	}
 
 	/**
@@ -433,7 +349,7 @@ public class YListImpl extends YInputImpl implements YList {
 			multiSelectionBindingEndpoint = (YEmbeddableMultiSelectionEndpoint)eResolveProxy(oldMultiSelectionBindingEndpoint);
 			if (multiSelectionBindingEndpoint != oldMultiSelectionBindingEndpoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT, oldMultiSelectionBindingEndpoint, multiSelectionBindingEndpoint));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT, oldMultiSelectionBindingEndpoint, multiSelectionBindingEndpoint));
 			}
 		}
 		return multiSelectionBindingEndpoint;
@@ -457,7 +373,7 @@ public class YListImpl extends YInputImpl implements YList {
 		YEmbeddableMultiSelectionEndpoint oldMultiSelectionBindingEndpoint = multiSelectionBindingEndpoint;
 		multiSelectionBindingEndpoint = newMultiSelectionBindingEndpoint;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT, oldMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT, oldMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -479,11 +395,12 @@ public class YListImpl extends YInputImpl implements YList {
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT, newMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT, newMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YDatadescription getDatadescription() {
@@ -492,14 +409,15 @@ public class YListImpl extends YInputImpl implements YList {
 			datadescription = (YDatadescription)eResolveProxy(oldDatadescription);
 			if (datadescription != oldDatadescription) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YLIST__DATADESCRIPTION, oldDatadescription, datadescription));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATADESCRIPTION, oldDatadescription, datadescription));
 			}
 		}
 		return datadescription;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YDatadescription basicGetDatadescription() {
@@ -507,53 +425,58 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setDatadescription(YDatadescription newDatadescription) {
 		YDatadescription oldDatadescription = datadescription;
 		datadescription = newDatadescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__DATADESCRIPTION, oldDatadescription, datadescription));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATADESCRIPTION, oldDatadescription, datadescription));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YListDataType getDatatype() {
+	public YOptionsGroupDataType getDatatype() {
 		if (datatype != null && datatype.eIsProxy()) {
 			InternalEObject oldDatatype = (InternalEObject)datatype;
-			datatype = (YListDataType)eResolveProxy(oldDatatype);
+			datatype = (YOptionsGroupDataType)eResolveProxy(oldDatatype);
 			if (datatype != oldDatatype) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YLIST__DATATYPE, oldDatatype, datatype));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATATYPE, oldDatatype, datatype));
 			}
 		}
 		return datatype;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YListDataType basicGetDatatype() {
+	public YOptionsGroupDataType basicGetDatatype() {
 		return datatype;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDatatype(YListDataType newDatatype) {
-		YListDataType oldDatatype = datatype;
+	public void setDatatype(YOptionsGroupDataType newDatatype) {
+		YOptionsGroupDataType oldDatatype = datatype;
 		datatype = newDatatype;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__DATATYPE, oldDatatype, datatype));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATATYPE, oldDatatype, datatype));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YSelectionType getSelectionType() {
@@ -561,18 +484,20 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSelectionType(YSelectionType newSelectionType) {
 		YSelectionType oldSelectionType = selectionType;
 		selectionType = newSelectionType == null ? SELECTION_TYPE_EDEFAULT : newSelectionType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__SELECTION_TYPE, oldSelectionType, selectionType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_TYPE, oldSelectionType, selectionType));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Object getSelection() {
@@ -580,14 +505,15 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSelection(Object newSelection) {
 		Object oldSelection = selection;
 		selection = newSelection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__SELECTION, oldSelection, selection));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION, oldSelection, selection));
 	}
 
 	/**
@@ -597,24 +523,14 @@ public class YListImpl extends YInputImpl implements YList {
 	 */
 	public EList<Object> getMultiSelection() {
 		if (multiSelection == null) {
-			multiSelection = new EDataTypeUniqueEList<Object>(Object.class, this, ExtensionModelPackage.YLIST__MULTI_SELECTION);
+			multiSelection = new EDataTypeUniqueEList<Object>(Object.class, this, ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION);
 		}
 		return multiSelection;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Object> getCollection() {
-		if (collection == null) {
-			collection = new EDataTypeUniqueEList<Object>(Object.class, this, ExtensionModelPackage.YLIST__COLLECTION);
-		}
-		return collection;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Class<?> getType() {
@@ -622,14 +538,15 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setType(Class<?> newType) {
 		Class<?> oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE, oldType, type));
 	}
 
 	/**
@@ -650,7 +567,7 @@ public class YListImpl extends YInputImpl implements YList {
 		String oldEmfNsURI = emfNsURI;
 		emfNsURI = newEmfNsURI;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__EMF_NS_URI, oldEmfNsURI, emfNsURI));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__EMF_NS_URI, oldEmfNsURI, emfNsURI));
 	}
 
 	/**
@@ -671,179 +588,59 @@ public class YListImpl extends YInputImpl implements YList {
 		String oldTypeQualifiedName = typeQualifiedName;
 		typeQualifiedName = newTypeQualifiedName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME, oldTypeQualifiedName, typeQualifiedName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME, oldTypeQualifiedName, typeQualifiedName));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 */
-	public String getCaptionProperty() {
-		return captionProperty;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCaptionProperty(String newCaptionProperty) {
-		String oldCaptionProperty = captionProperty;
-		captionProperty = newCaptionProperty;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__CAPTION_PROPERTY, oldCaptionProperty, captionProperty));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getImageProperty() {
-		return imageProperty;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImageProperty(String newImageProperty) {
-		String oldImageProperty = imageProperty;
-		imageProperty = newImageProperty;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__IMAGE_PROPERTY, oldImageProperty, imageProperty));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescriptionProperty() {
-		return descriptionProperty;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescriptionProperty(String newDescriptionProperty) {
-		String oldDescriptionProperty = descriptionProperty;
-		descriptionProperty = newDescriptionProperty;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY, oldDescriptionProperty, descriptionProperty));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__DESCRIPTION, oldDescription, description));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YEmbeddableMultiSelectionEndpoint createMultiSelectionEndpointGen() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YEmbeddableSelectionEndpoint createSelectionEndpointGen() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public YEmbeddableCollectionEndpoint createCollectionEndpointGen() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * Creates a new instance of selection endpoint with a reference to that
-	 * embeddable.
-	 * 
-	 * @generated NOT
-	 */
-	public YEmbeddableSelectionEndpoint createSelectionEndpoint() {
-		YEmbeddableSelectionEndpoint ep = CoreModelFactory.eINSTANCE
-				.createYEmbeddableSelectionEndpoint();
-		ep.setElement(this);
-		return ep;
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
 	 */
 	public YEmbeddableMultiSelectionEndpoint createMultiSelectionEndpoint() {
-		YEmbeddableMultiSelectionEndpoint ep = CoreModelFactory.eINSTANCE
-				.createYEmbeddableMultiSelectionEndpoint();
-		ep.setElement(this);
-		return ep;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * Creates a new instance of collection endpoint with a reference to that
-	 * embeddable.
-	 * 
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YEmbeddableSelectionEndpoint createSelectionEndpoint() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public YEmbeddableCollectionEndpoint createCollectionEndpoint() {
-		YEmbeddableCollectionEndpoint ep = CoreModelFactory.eINSTANCE
-				.createYEmbeddableCollectionEndpoint();
-		ep.setElement(this);
-		return ep;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT:
 				if (collectionBindingEndpoint != null)
 					msgs = ((InternalEObject)collectionBindingEndpoint).eInverseRemove(this, CoreModelPackage.YEMBEDDABLE_COLLECTION_ENDPOINT__ELEMENT, YEmbeddableCollectionEndpoint.class, msgs);
 				return basicSetCollectionBindingEndpoint((YEmbeddableCollectionEndpoint)otherEnd, msgs);
-			case ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT:
 				if (selectionBindingEndpoint != null)
 					msgs = ((InternalEObject)selectionBindingEndpoint).eInverseRemove(this, CoreModelPackage.YEMBEDDABLE_SELECTION_ENDPOINT__ELEMENT, YEmbeddableSelectionEndpoint.class, msgs);
 				return basicSetSelectionBindingEndpoint((YEmbeddableSelectionEndpoint)otherEnd, msgs);
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				if (multiSelectionBindingEndpoint != null)
 					msgs = ((InternalEObject)multiSelectionBindingEndpoint).eInverseRemove(this, CoreModelPackage.YEMBEDDABLE_MULTI_SELECTION_ENDPOINT__ELEMENT, YEmbeddableMultiSelectionEndpoint.class, msgs);
 				return basicSetMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)otherEnd, msgs);
@@ -852,237 +649,191 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT:
 				return basicSetCollectionBindingEndpoint(null, msgs);
-			case ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT:
 				return basicSetSelectionBindingEndpoint(null, msgs);
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				return basicSetMultiSelectionBindingEndpoint(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT:
 				if (resolve) return getCollectionBindingEndpoint();
 				return basicGetCollectionBindingEndpoint();
-			case ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getSelectionBindingEndpoint();
 				return basicGetSelectionBindingEndpoint();
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getMultiSelectionBindingEndpoint();
 				return basicGetMultiSelectionBindingEndpoint();
-			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
-			case ExtensionModelPackage.YLIST__DATATYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATATYPE:
 				if (resolve) return getDatatype();
 				return basicGetDatatype();
-			case ExtensionModelPackage.YLIST__SELECTION_TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_TYPE:
 				return getSelectionType();
-			case ExtensionModelPackage.YLIST__SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION:
 				return getSelection();
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION:
 				return getMultiSelection();
-			case ExtensionModelPackage.YLIST__COLLECTION:
-				return getCollection();
-			case ExtensionModelPackage.YLIST__TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE:
 				return getType();
-			case ExtensionModelPackage.YLIST__EMF_NS_URI:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__EMF_NS_URI:
 				return getEmfNsURI();
-			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return getTypeQualifiedName();
-			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
-				return getCaptionProperty();
-			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
-				return getImageProperty();
-			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
-				return getDescriptionProperty();
-			case ExtensionModelPackage.YLIST__DESCRIPTION:
-				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT:
 				setCollectionBindingEndpoint((YEmbeddableCollectionEndpoint)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT:
 				setSelectionBindingEndpoint((YEmbeddableSelectionEndpoint)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__DATATYPE:
-				setDatatype((YListDataType)newValue);
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATATYPE:
+				setDatatype((YOptionsGroupDataType)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__SELECTION_TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_TYPE:
 				setSelectionType((YSelectionType)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION:
 				setSelection(newValue);
 				return;
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION:
 				getMultiSelection().clear();
 				getMultiSelection().addAll((Collection<? extends Object>)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__COLLECTION:
-				getCollection().clear();
-				getCollection().addAll((Collection<? extends Object>)newValue);
-				return;
-			case ExtensionModelPackage.YLIST__TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE:
 				setType((Class<?>)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__EMF_NS_URI:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__EMF_NS_URI:
 				setEmfNsURI((String)newValue);
 				return;
-			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName((String)newValue);
-				return;
-			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
-				setCaptionProperty((String)newValue);
-				return;
-			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
-				setImageProperty((String)newValue);
-				return;
-			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
-				setDescriptionProperty((String)newValue);
-				return;
-			case ExtensionModelPackage.YLIST__DESCRIPTION:
-				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT:
 				setCollectionBindingEndpoint((YEmbeddableCollectionEndpoint)null);
 				return;
-			case ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT:
 				setSelectionBindingEndpoint((YEmbeddableSelectionEndpoint)null);
 				return;
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)null);
 				return;
-			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
-			case ExtensionModelPackage.YLIST__DATATYPE:
-				setDatatype((YListDataType)null);
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATATYPE:
+				setDatatype((YOptionsGroupDataType)null);
 				return;
-			case ExtensionModelPackage.YLIST__SELECTION_TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_TYPE:
 				setSelectionType(SELECTION_TYPE_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YLIST__SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION:
 				setSelection(SELECTION_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION:
 				getMultiSelection().clear();
 				return;
-			case ExtensionModelPackage.YLIST__COLLECTION:
-				getCollection().clear();
-				return;
-			case ExtensionModelPackage.YLIST__TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE:
 				setType((Class<?>)null);
 				return;
-			case ExtensionModelPackage.YLIST__EMF_NS_URI:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__EMF_NS_URI:
 				setEmfNsURI(EMF_NS_URI_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
-				return;
-			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
-				setCaptionProperty(CAPTION_PROPERTY_EDEFAULT);
-				return;
-			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
-				setImageProperty(IMAGE_PROPERTY_EDEFAULT);
-				return;
-			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
-				setDescriptionProperty(DESCRIPTION_PROPERTY_EDEFAULT);
-				return;
-			case ExtensionModelPackage.YLIST__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT:
 				return collectionBindingEndpoint != null;
-			case ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT:
 				return selectionBindingEndpoint != null;
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				return multiSelectionBindingEndpoint != null;
-			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATADESCRIPTION:
 				return datadescription != null;
-			case ExtensionModelPackage.YLIST__DATATYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__DATATYPE:
 				return datatype != null;
-			case ExtensionModelPackage.YLIST__SELECTION_TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_TYPE:
 				return selectionType != SELECTION_TYPE_EDEFAULT;
-			case ExtensionModelPackage.YLIST__SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION:
 				return SELECTION_EDEFAULT == null ? selection != null : !SELECTION_EDEFAULT.equals(selection);
-			case ExtensionModelPackage.YLIST__MULTI_SELECTION:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION:
 				return multiSelection != null && !multiSelection.isEmpty();
-			case ExtensionModelPackage.YLIST__COLLECTION:
-				return collection != null && !collection.isEmpty();
-			case ExtensionModelPackage.YLIST__TYPE:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE:
 				return type != null;
-			case ExtensionModelPackage.YLIST__EMF_NS_URI:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__EMF_NS_URI:
 				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
-			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
-			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
-				return CAPTION_PROPERTY_EDEFAULT == null ? captionProperty != null : !CAPTION_PROPERTY_EDEFAULT.equals(captionProperty);
-			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
-				return IMAGE_PROPERTY_EDEFAULT == null ? imageProperty != null : !IMAGE_PROPERTY_EDEFAULT.equals(imageProperty);
-			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
-				return DESCRIPTION_PROPERTY_EDEFAULT == null ? descriptionProperty != null : !DESCRIPTION_PROPERTY_EDEFAULT.equals(descriptionProperty);
-			case ExtensionModelPackage.YLIST__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1094,19 +845,19 @@ public class YListImpl extends YInputImpl implements YList {
 		}
 		if (baseClass == YCollectionBindable.class) {
 			switch (derivedFeatureID) {
-				case ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT: return CoreModelPackage.YCOLLECTION_BINDABLE__COLLECTION_BINDING_ENDPOINT;
+				case ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT: return CoreModelPackage.YCOLLECTION_BINDABLE__COLLECTION_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
 		if (baseClass == YSelectionBindable.class) {
 			switch (derivedFeatureID) {
-				case ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT: return CoreModelPackage.YSELECTION_BINDABLE__SELECTION_BINDING_ENDPOINT;
+				case ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT: return CoreModelPackage.YSELECTION_BINDABLE__SELECTION_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
 		if (baseClass == YMultiSelectionBindable.class) {
 			switch (derivedFeatureID) {
-				case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT: return CoreModelPackage.YMULTI_SELECTION_BINDABLE__MULTI_SELECTION_BINDING_ENDPOINT;
+				case ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT: return CoreModelPackage.YMULTI_SELECTION_BINDABLE__MULTI_SELECTION_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
@@ -1114,7 +865,8 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1126,19 +878,19 @@ public class YListImpl extends YInputImpl implements YList {
 		}
 		if (baseClass == YCollectionBindable.class) {
 			switch (baseFeatureID) {
-				case CoreModelPackage.YCOLLECTION_BINDABLE__COLLECTION_BINDING_ENDPOINT: return ExtensionModelPackage.YLIST__COLLECTION_BINDING_ENDPOINT;
+				case CoreModelPackage.YCOLLECTION_BINDABLE__COLLECTION_BINDING_ENDPOINT: return ExtensionModelPackage.YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
 		if (baseClass == YSelectionBindable.class) {
 			switch (baseFeatureID) {
-				case CoreModelPackage.YSELECTION_BINDABLE__SELECTION_BINDING_ENDPOINT: return ExtensionModelPackage.YLIST__SELECTION_BINDING_ENDPOINT;
+				case CoreModelPackage.YSELECTION_BINDABLE__SELECTION_BINDING_ENDPOINT: return ExtensionModelPackage.YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
 		if (baseClass == YMultiSelectionBindable.class) {
 			switch (baseFeatureID) {
-				case CoreModelPackage.YMULTI_SELECTION_BINDABLE__MULTI_SELECTION_BINDING_ENDPOINT: return ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT;
+				case CoreModelPackage.YMULTI_SELECTION_BINDABLE__MULTI_SELECTION_BINDING_ENDPOINT: return ExtensionModelPackage.YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT;
 				default: return -1;
 			}
 		}
@@ -1146,7 +898,8 @@ public class YListImpl extends YInputImpl implements YList {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -1160,22 +913,12 @@ public class YListImpl extends YInputImpl implements YList {
 		result.append(selection);
 		result.append(", multiSelection: ");
 		result.append(multiSelection);
-		result.append(", collection: ");
-		result.append(collection);
 		result.append(", type: ");
 		result.append(type);
 		result.append(", emfNsURI: ");
 		result.append(emfNsURI);
 		result.append(", typeQualifiedName: ");
 		result.append(typeQualifiedName);
-		result.append(", captionProperty: ");
-		result.append(captionProperty);
-		result.append(", imageProperty: ");
-		result.append(imageProperty);
-		result.append(", descriptionProperty: ");
-		result.append(descriptionProperty);
-		result.append(", description: ");
-		result.append(description);
 		result.append(')');
 		return result.toString();
 	}
@@ -1208,4 +951,4 @@ public class YListImpl extends YInputImpl implements YList {
 		}
 	}
 
-} // YUiListImpl
+} //YEnumOptionsGroupImpl

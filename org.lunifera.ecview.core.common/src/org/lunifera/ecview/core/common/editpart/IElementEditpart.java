@@ -23,7 +23,7 @@ public interface IElementEditpart extends IDisposable {
 	 * @return id The id of the editpart
 	 */
 	String getId();
-
+	
 	/**
 	 * Returns the model associated with this edit part.<br>
 	 * Or <code>null</code> if the edit parts are not based on a model.

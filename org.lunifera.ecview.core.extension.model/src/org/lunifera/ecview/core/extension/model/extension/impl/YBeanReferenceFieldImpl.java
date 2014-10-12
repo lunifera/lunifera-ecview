@@ -32,6 +32,8 @@ import org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getInMemoryBeanProviderQualifiedName <em>In Memory Bean Provider Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getCaptionPropertyPath <em>Caption Property Path</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getImagePropertyPath <em>Image Property Path</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getDescriptionProperty <em>Description Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -197,6 +199,46 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 	 * @ordered
 	 */
 	protected String imagePropertyPath = IMAGE_PROPERTY_PATH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descriptionProperty = DESCRIPTION_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -488,6 +530,48 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescriptionProperty() {
+		return descriptionProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescriptionProperty(String newDescriptionProperty) {
+		String oldDescriptionProperty = descriptionProperty;
+		descriptionProperty = newDescriptionProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY, oldDescriptionProperty, descriptionProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableValueEndpoint createValueEndpoint() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -554,6 +638,10 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				return getCaptionPropertyPath();
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH:
 				return getImagePropertyPath();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY:
+				return getDescriptionProperty();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -595,6 +683,12 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				return;
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH:
 				setImagePropertyPath((String)newValue);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY:
+				setDescriptionProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -638,6 +732,12 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH:
 				setImagePropertyPath(IMAGE_PROPERTY_PATH_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY:
+				setDescriptionProperty(DESCRIPTION_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -670,6 +770,10 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				return CAPTION_PROPERTY_PATH_EDEFAULT == null ? captionPropertyPath != null : !CAPTION_PROPERTY_PATH_EDEFAULT.equals(captionPropertyPath);
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH:
 				return IMAGE_PROPERTY_PATH_EDEFAULT == null ? imagePropertyPath != null : !IMAGE_PROPERTY_PATH_EDEFAULT.equals(imagePropertyPath);
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY:
+				return DESCRIPTION_PROPERTY_EDEFAULT == null ? descriptionProperty != null : !DESCRIPTION_PROPERTY_EDEFAULT.equals(descriptionProperty);
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -742,6 +846,10 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 		result.append(captionPropertyPath);
 		result.append(", imagePropertyPath: ");
 		result.append(imagePropertyPath);
+		result.append(", descriptionProperty: ");
+		result.append(descriptionProperty);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

@@ -55,16 +55,17 @@ public class ContextBeanBindingDelegate extends ContextBindingDelegate {
 	 * @return
 	 */
 	protected boolean hasPropertyChangeSupport(Class<?> valueType) {
-		@SuppressWarnings("unused")
-		Method method = null;
+		if(valueType == null){
+			return false;
+		}
 		try {
 			try {
-				method = valueType.getMethod("addPropertyChangeListener",
+				valueType.getMethod("addPropertyChangeListener",
 						new Class[] { String.class,
 								PropertyChangeListener.class });
 				return true;
 			} catch (NoSuchMethodException e) {
-				method = valueType.getMethod("addPropertyChangeListener",
+				valueType.getMethod("addPropertyChangeListener",
 						new Class[] { PropertyChangeListener.class });
 				return true;
 			}

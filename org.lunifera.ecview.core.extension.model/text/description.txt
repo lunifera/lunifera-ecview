@@ -143,8 +143,10 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
-    Attribute itemCaptionProperty : EString
-    Attribute itemImageProperty : EString
+    Attribute captionProperty : EString
+    Attribute imageProperty : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
   Class YList -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
     Reference datadescription : YDatadescription
@@ -156,8 +158,10 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
-    Attribute itemCaptionProperty : EString
-    Attribute itemImageProperty : EString
+    Attribute captionProperty : EString
+    Attribute imageProperty : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
   Class YLabel -> YField, YValueBindable
     Reference datadescription : YDatadescription
@@ -182,6 +186,8 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute inMemoryBeanProviderQualifiedName : EString
     Attribute captionPropertyPath : EString
     Attribute imagePropertyPath : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
   Class YTextArea -> YInput, YValueBindable
     Reference datadescription : YDatadescription
@@ -221,8 +227,10 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
-    Attribute itemCaptionProperty : EString
-    Attribute itemImageProperty : EString
+    Attribute captionProperty : EString
+    Attribute imageProperty : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
   Class YButton -> YAction, YVisibleable, YEditable, YEnable
     Reference datadescription : YDatadescription
@@ -315,6 +323,34 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute typeQualifiedName : EString
     Attribute applyFilter : EJavaObject
     Attribute filter : EJavaObject
+
+  Class YEnumOptionsGroup -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+    Reference datadescription : YDatadescription
+    Reference datatype : YOptionsGroupDataType
+    Attribute selectionType : YSelectionType
+    Attribute selection : EJavaObject
+    Attribute multiSelection : EJavaObject<<0..*>>
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+
+  Class YEnumList -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+    Reference datadescription : YDatadescription
+    Reference datatype : YListDataType
+    Attribute selectionType : YSelectionType
+    Attribute selection : EJavaObject
+    Attribute multiSelection : EJavaObject<<0..*>>
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+
+  Class YEnumComboBox -> YInput, YCollectionBindable, YSelectionBindable
+    Reference datadescription : YDatadescription
+    Reference datatype : YComboBoxDatatype
+    Attribute selection : EJavaObject
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
 
   Enum YSelectionType
     Literal SINGLE = 0

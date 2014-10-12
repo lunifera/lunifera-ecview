@@ -23,6 +23,8 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getInMemoryBeanProviderQualifiedName <em>In Memory Bean Provider Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getCaptionPropertyPath <em>Caption Property Path</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getImagePropertyPath <em>Image Property Path</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescriptionProperty <em>Description Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -264,5 +266,57 @@ public interface YBeanReferenceField extends YInput, YValueBindable {
 	 * @generated
 	 */
 	void setImagePropertyPath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description Property</em>' attribute.
+	 * @see #setDescriptionProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYBeanReferenceField_DescriptionProperty()
+	 * @model
+	 * @generated
+	 */
+	String getDescriptionProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescriptionProperty <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description Property</em>' attribute.
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 */
+	void setDescriptionProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYBeanReferenceField_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // YBeanReferenceField

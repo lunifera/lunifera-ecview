@@ -93,6 +93,9 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YPANEL: return createYPanel();
 			case ExtensionModelPackage.YSPLIT_PANEL: return createYSplitPanel();
 			case ExtensionModelPackage.YSEARCH_PANEL: return createYSearchPanel();
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP: return createYEnumOptionsGroup();
+			case ExtensionModelPackage.YENUM_LIST: return createYEnumList();
+			case ExtensionModelPackage.YENUM_COMBO_BOX: return createYEnumComboBox();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -498,6 +501,36 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YSearchPanel createYSearchPanel() {
 		YSearchPanelImpl ySearchPanel = new YSearchPanelImpl();
 		return ySearchPanel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YEnumOptionsGroup createYEnumOptionsGroup() {
+		YEnumOptionsGroupImpl yEnumOptionsGroup = new YEnumOptionsGroupImpl();
+		return yEnumOptionsGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YEnumList createYEnumList() {
+		YEnumListImpl yEnumList = new YEnumListImpl();
+		return yEnumList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YEnumComboBox createYEnumComboBox() {
+		YEnumComboBoxImpl yEnumComboBox = new YEnumComboBoxImpl();
+		return yEnumComboBox;
 	}
 
 	/**

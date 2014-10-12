@@ -29,6 +29,7 @@ import org.lunifera.ecview.core.common.editpart.ICommandSetEditpart;
 import org.lunifera.ecview.core.common.editpart.IDialogEditpart;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
+import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
@@ -43,6 +44,7 @@ import org.lunifera.ecview.core.common.model.core.YBindable;
 import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
@@ -74,6 +76,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	private ICommandSetEditpart commandSet;
 	private Set<IDialogEditpart> openDialogs;
 	private List<IVisibilityProcessorEditpart> vProcessorEditparts;
+	private List<IExposedActionEditpart> exposedActionEditparts;
 
 	/**
 	 * Default constructor.
@@ -606,6 +609,11 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 					.getNewValue();
 			internalAddVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
 			break;
+		case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
+			YExposedAction yAction = (YExposedAction) notification
+					.getNewValue();
+			internalAddExposedAction((IExposedActionEditpart) getEditpart(yAction));
+			break;
 		default:
 			break;
 		}
@@ -622,6 +630,11 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			YVisibilityProcessor yElement = (YVisibilityProcessor) notification
 					.getNewValue();
 			internalRemoveVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
+			break;
+		case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
+			YExposedAction yAction = (YExposedAction) notification
+					.getNewValue();
+			internalRemoveExposedAction((IExposedActionEditpart) getEditpart(yAction));
 			break;
 		default:
 			break;
@@ -728,6 +741,100 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 					.getVisibilityProcessors()) {
 				IVisibilityProcessorEditpart editPart = getEditpart(yVisibilityProcessor);
 				internalAddVisibilityProcessor(editPart);
+			}
+		}
+	}
+
+	public List<IExposedActionEditpart> getExposedActions() {
+		if (exposedActionEditparts == null) {
+			internalLoadExposedActions();
+		}
+		return Collections.unmodifiableList(exposedActionEditparts);
+	}
+
+	public void addExposedActions(IExposedActionEditpart element) {
+		try {
+			checkDisposed();
+
+			// add the element by using the model
+			//
+			M yView = getModel();
+			YExposedAction yExposedAction = (YExposedAction) element
+					.getModel();
+			yView.getExposedActions().add(yExposedAction);
+			// BEGIN SUPRESS CATCH EXCEPTION
+		} catch (RuntimeException e) {
+			// END SUPRESS CATCH EXCEPTION
+			LOGGER.error("{}", e);
+			throw e;
+		}
+	}
+
+	public void removeExposedAction(IExposedActionEditpart element) {
+		try {
+			checkDisposed();
+
+			// remove the element by using the model
+			//
+			M yView = getModel();
+			YExposedAction yExposedAction = (YExposedAction) element
+					.getModel();
+			yView.getExposedActions().remove(yExposedAction);
+			// BEGIN SUPRESS CATCH EXCEPTION
+		} catch (RuntimeException e) {
+			// END SUPRESS CATCH EXCEPTION
+			LOGGER.error("{}", e);
+			throw e;
+		}
+	}
+
+	/**
+	 * Is called to change the internal state and add the given editpart to the
+	 * list of processors.
+	 * 
+	 * @param editpart
+	 *            The editpart to be added
+	 */
+	protected void internalAddExposedAction(
+			IExposedActionEditpart editpart) {
+		checkDisposed();
+
+		if (exposedActionEditparts == null) {
+			internalLoadExposedActions();
+		}
+		if (!exposedActionEditparts.contains(editpart)) {
+			exposedActionEditparts.add(editpart);
+		}
+	}
+
+	/**
+	 * Is called to change the internal state and remove the given editpart from
+	 * the list of processors.
+	 * 
+	 * @param editpart
+	 *            The editpart to be removed
+	 */
+	protected void internalRemoveExposedAction(
+			IExposedActionEditpart editpart) {
+		checkDisposed();
+
+		if (exposedActionEditparts != null && editpart != null) {
+			exposedActionEditparts.remove(editpart);
+		}
+	}
+
+	/**
+	 * Is called to load and initialize all elements.
+	 */
+	protected void internalLoadExposedActions() {
+		checkDisposed();
+
+		if (exposedActionEditparts == null) {
+			exposedActionEditparts = new ArrayList<IExposedActionEditpart>();
+			for (YExposedAction exposedActionEditpart : getModel()
+					.getExposedActions()) {
+				IExposedActionEditpart editPart = getEditpart(exposedActionEditpart);
+				internalAddExposedAction(editPart);
 			}
 		}
 	}

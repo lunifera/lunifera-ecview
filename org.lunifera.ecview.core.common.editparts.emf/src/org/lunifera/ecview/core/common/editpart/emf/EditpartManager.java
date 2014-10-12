@@ -25,6 +25,7 @@ import org.lunifera.ecview.core.common.editpart.IEmbeddableCollectionEndpointEdi
 import org.lunifera.ecview.core.common.editpart.IEmbeddableMultiSelectionEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableSelectionEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableValueBindingEndpointEditpart;
+import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.IOpenDialogCommandEditpart;
@@ -77,6 +78,7 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddableCollectionEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableMultiSelectionEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableSelectionEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
+import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YOpenDialogCommand;
@@ -205,6 +207,8 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(IVisibilityProcessorEditpart.class)) {
 			result = createNewInstance(VisibilityProcessorEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(IExposedActionEditpart.class)) {
+			result = createNewInstance(ExposedActionEditpart.class);
 		}
 
 		if (result != null) {
@@ -287,6 +291,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(VisibilityProcessorValueBindingEndpointEditpart.class);
 		} else if (yElement instanceof YVisibilityProcessor) {
 			result = createNewInstance(VisibilityProcessorEditpart.class);
+		} else if (yElement instanceof YExposedAction) {
+			result = createNewInstance(ExposedActionEditpart.class);
 		}
 
 		if (result != null) {

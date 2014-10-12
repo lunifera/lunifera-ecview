@@ -32,4 +32,8 @@ public interface YBeanReferenceFieldValidator {
 	boolean validateCaptionPropertyPath(String value);
 
 	boolean validateImagePropertyPath(String value);
+
+	boolean validateDescriptionProperty(String value);
+
+	boolean validateDescription(String value);
 }

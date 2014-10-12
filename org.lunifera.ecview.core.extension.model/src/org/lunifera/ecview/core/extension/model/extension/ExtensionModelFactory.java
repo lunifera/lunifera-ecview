@@ -346,6 +346,33 @@ public interface ExtensionModelFactory extends EFactory {
 	YSearchPanel createYSearchPanel();
 
 	/**
+	 * Returns a new object of class '<em>YEnum Options Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YEnum Options Group</em>'.
+	 * @generated
+	 */
+	YEnumOptionsGroup createYEnumOptionsGroup();
+
+	/**
+	 * Returns a new object of class '<em>YEnum List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YEnum List</em>'.
+	 * @generated
+	 */
+	YEnumList createYEnumList();
+
+	/**
+	 * Returns a new object of class '<em>YEnum Combo Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YEnum Combo Box</em>'.
+	 * @generated
+	 */
+	YEnumComboBox createYEnumComboBox();
+
+	/**
 	 * Returns a new object of class '<em>YTree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -32,8 +32,10 @@ import org.lunifera.ecview.core.extension.model.datatypes.YComboBoxDatatype;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getType <em>Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemCaptionProperty <em>Item Caption Property</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemImageProperty <em>Item Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getCaptionProperty <em>Caption Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getImageProperty <em>Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescriptionProperty <em>Description Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -215,55 +217,107 @@ public interface YComboBox extends YInput, YCollectionBindable, YSelectionBindab
 	void setTypeQualifiedName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Item Caption Property</b></em>' attribute.
+	 * Returns the value of the '<em><b>Caption Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Item Caption Property</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Caption Property</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Item Caption Property</em>' attribute.
-	 * @see #setItemCaptionProperty(String)
-	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYComboBox_ItemCaptionProperty()
+	 * @return the value of the '<em>Caption Property</em>' attribute.
+	 * @see #setCaptionProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYComboBox_CaptionProperty()
 	 * @model
 	 * @generated
 	 */
-	String getItemCaptionProperty();
+	String getCaptionProperty();
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemCaptionProperty <em>Item Caption Property</em>}' attribute.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getCaptionProperty <em>Caption Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Item Caption Property</em>' attribute.
-	 * @see #getItemCaptionProperty()
+	 * @param value the new value of the '<em>Caption Property</em>' attribute.
+	 * @see #getCaptionProperty()
 	 * @generated
 	 */
-	void setItemCaptionProperty(String value);
+	void setCaptionProperty(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Item Image Property</b></em>' attribute.
+	 * Returns the value of the '<em><b>Image Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Item Image Property</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Image Property</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Item Image Property</em>' attribute.
-	 * @see #setItemImageProperty(String)
-	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYComboBox_ItemImageProperty()
+	 * @return the value of the '<em>Image Property</em>' attribute.
+	 * @see #setImageProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYComboBox_ImageProperty()
 	 * @model
 	 * @generated
 	 */
-	String getItemImageProperty();
+	String getImageProperty();
 
 	/**
-	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemImageProperty <em>Item Image Property</em>}' attribute.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getImageProperty <em>Image Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Item Image Property</em>' attribute.
-	 * @see #getItemImageProperty()
+	 * @param value the new value of the '<em>Image Property</em>' attribute.
+	 * @see #getImageProperty()
 	 * @generated
 	 */
-	void setItemImageProperty(String value);
+	void setImageProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description Property</em>' attribute.
+	 * @see #setDescriptionProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYComboBox_DescriptionProperty()
+	 * @model
+	 * @generated
+	 */
+	String getDescriptionProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescriptionProperty <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description Property</em>' attribute.
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 */
+	void setDescriptionProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYComboBox_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // YUiComboBox

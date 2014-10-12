@@ -52,6 +52,9 @@ import org.lunifera.ecview.core.extension.model.extension.YCheckBox;
 import org.lunifera.ecview.core.extension.model.extension.YComboBox;
 import org.lunifera.ecview.core.extension.model.extension.YDateTime;
 import org.lunifera.ecview.core.extension.model.extension.YDecimalField;
+import org.lunifera.ecview.core.extension.model.extension.YEnumComboBox;
+import org.lunifera.ecview.core.extension.model.extension.YEnumList;
+import org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YFormLayout;
 import org.lunifera.ecview.core.extension.model.extension.YGridLayout;
 import org.lunifera.ecview.core.extension.model.extension.YHorizontalLayout;
@@ -81,6 +84,9 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IButtonEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ICheckboxEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IDateTimeEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IDecimalFieldEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumComboBoxEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumListEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumOptionsGroupEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IFormLayoutEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IGridLayoutEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IHorizontalLayoutEditpart;
@@ -255,6 +261,13 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(IBeanReferenceFieldEditpart.class)) {
 			result = createNewInstance(BeanReferenceFieldEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(IEnumComboBoxEditpart.class)) {
+			result = createNewInstance(EnumComboBoxEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(IEnumListEditpart.class)) {
+			result = createNewInstance(EnumListEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IEnumOptionsGroupEditpart.class)) {
+			result = createNewInstance(EnumOptionsGroupEditpart.class);
 		}
 
 		if (result != null) {
@@ -367,6 +380,12 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(SearchPanelEditpart.class);
 		} else if (yElement instanceof YBeanReferenceField) {
 			result = createNewInstance(BeanReferenceFieldEditpart.class);
+		} else if (yElement instanceof YEnumComboBox) {
+			result = createNewInstance(EnumComboBoxEditpart.class);
+		} else if (yElement instanceof YEnumList) {
+			result = createNewInstance(EnumListEditpart.class);
+		} else if (yElement instanceof YEnumOptionsGroup) {
+			result = createNewInstance(EnumOptionsGroupEditpart.class);
 		}
 
 		if (result != null) {

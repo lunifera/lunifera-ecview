@@ -622,13 +622,22 @@ public interface CoreModelPackage extends EPackage {
 	int YVIEW__VISIBILITY_PROCESSORS = YELEMENT_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Exposed Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__EXPOSED_ACTIONS = YELEMENT_FEATURE_COUNT + 13;
+
+	/**
 	 * The number of structural features of the '<em>YView</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 13;
+	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -2066,6 +2075,70 @@ public interface CoreModelPackage extends EPackage {
 	int YOPEN_DIALOG_COMMAND_FEATURE_COUNT = YCOMMAND_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl <em>YExposed Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYExposedAction()
+	 * @generated
+	 */
+	int YEXPOSED_ACTION = 36;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__ID = YELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__ICON = YELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__LABEL = YELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Label I1 8n Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__LABEL_I1_8N_KEY = YELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>YExposed Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2073,7 +2146,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDeviceType()
 	 * @generated
 	 */
-	int YDEVICE_TYPE = 36;
+	int YDEVICE_TYPE = 37;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}' enum.
@@ -2083,7 +2156,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAlignment()
 	 * @generated
 	 */
-	int YALIGNMENT = 37;
+	int YALIGNMENT = 38;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}' enum.
@@ -2093,7 +2166,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFlatAlignment()
 	 * @generated
 	 */
-	int YFLAT_ALIGNMENT = 38;
+	int YFLAT_ALIGNMENT = 39;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}' enum.
@@ -2103,7 +2176,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYUnit()
 	 * @generated
 	 */
-	int YUNIT = 39;
+	int YUNIT = 40;
 
 	/**
 	 * The meta object id for the '<em>YURI</em>' data type.
@@ -2113,7 +2186,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYURI()
 	 * @generated
 	 */
-	int YURI = 40;
+	int YURI = 41;
 
 
 	/**
@@ -2124,7 +2197,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYValueChangeListener()
 	 * @generated
 	 */
-	int YVALUE_CHANGE_LISTENER = 41;
+	int YVALUE_CHANGE_LISTENER = 42;
 
 
 	/**
@@ -2331,6 +2404,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getYView_VisibilityProcessors();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.ecview.core.common.model.core.YView#getExposedActions <em>Exposed Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Exposed Actions</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YView#getExposedActions()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EReference getYView_ExposedActions();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YViewSet <em>YView Set</em>}'.
@@ -3236,6 +3320,49 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYOpenDialogCommand_Trigger();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YExposedAction <em>YExposed Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YExposed Action</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction
+	 * @generated
+	 */
+	EClass getYExposedAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getIcon <em>Icon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Icon</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getIcon()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_Icon();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getLabel()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_Label();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLabelI18nKey <em>Label I1 8n Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label I1 8n Key</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getLabelI18nKey()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_LabelI18nKey();
+
+	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3478,6 +3605,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference YVIEW__VISIBILITY_PROCESSORS = eINSTANCE.getYView_VisibilityProcessors();
+
+		/**
+		 * The meta object literal for the '<em><b>Exposed Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YVIEW__EXPOSED_ACTIONS = eINSTANCE.getYView_ExposedActions();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -4222,6 +4357,40 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YOPEN_DIALOG_COMMAND__TRIGGER = eINSTANCE.getYOpenDialogCommand_Trigger();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl <em>YExposed Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYExposedAction()
+		 * @generated
+		 */
+		EClass YEXPOSED_ACTION = eINSTANCE.getYExposedAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Icon</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__ICON = eINSTANCE.getYExposedAction_Icon();
+
+		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__LABEL = eINSTANCE.getYExposedAction_Label();
+
+		/**
+		 * The meta object literal for the '<em><b>Label I1 8n Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__LABEL_I1_8N_KEY = eINSTANCE.getYExposedAction_LabelI18nKey();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.

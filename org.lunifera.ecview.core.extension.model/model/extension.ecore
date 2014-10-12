@@ -170,8 +170,10 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemCaptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemImageProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="captionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YList" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
@@ -192,8 +194,10 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemCaptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemImageProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="captionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YLabel" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YField ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YValueBindable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
@@ -231,6 +235,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="captionPropertyPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePropertyPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YTextArea" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YValueBindable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
@@ -283,8 +289,10 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemCaptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemImageProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="captionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YVisibleable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEditable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEnable">
     <eOperations name="addClickListener">
@@ -451,5 +459,52 @@
         transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
         transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEnumOptionsGroup" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YOptionsGroupDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectionType" eType="#//YSelectionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiSelection" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEnumList" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YListDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectionType" eType="#//YSelectionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiSelection" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YEnumComboBox" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YComboBoxDatatype"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -1901,22 +1901,40 @@ public interface ExtensionModelPackage extends EPackage {
 	int YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Item Caption Property</b></em>' attribute.
+	 * The feature id for the '<em><b>Caption Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+	int YOPTIONS_GROUP__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Item Image Property</b></em>' attribute.
+	 * The feature id for the '<em><b>Image Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+	int YOPTIONS_GROUP__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP__DESCRIPTION = YINPUT_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>YOptions Group</em>' class.
@@ -1925,7 +1943,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 14;
+	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2162,22 +2180,40 @@ public interface ExtensionModelPackage extends EPackage {
 	int YLIST__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Item Caption Property</b></em>' attribute.
+	 * The feature id for the '<em><b>Caption Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__ITEM_CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+	int YLIST__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Item Image Property</b></em>' attribute.
+	 * The feature id for the '<em><b>Image Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+	int YLIST__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST__DESCRIPTION = YINPUT_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>YList</em>' class.
@@ -2186,7 +2222,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 14;
+	int YLIST_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2920,13 +2956,31 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH = YINPUT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__DESCRIPTION = YINPUT_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>YBean Reference Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 10;
+	int YBEAN_REFERENCE_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4162,22 +4216,40 @@ public interface ExtensionModelPackage extends EPackage {
 	int YCOMBO_BOX__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Item Caption Property</b></em>' attribute.
+	 * The feature id for the '<em><b>Caption Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__ITEM_CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 9;
+	int YCOMBO_BOX__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Item Image Property</b></em>' attribute.
+	 * The feature id for the '<em><b>Image Property</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 10;
+	int YCOMBO_BOX__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMBO_BOX__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMBO_BOX__DESCRIPTION = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>YCombo Box</em>' class.
@@ -4186,7 +4258,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 11;
+	int YCOMBO_BOX_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6605,6 +6677,711 @@ public interface ExtensionModelPackage extends EPackage {
 	int YSEARCH_PANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 7;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl <em>YEnum Options Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYEnumOptionsGroup()
+	 * @generated
+	 */
+	int YENUM_OPTIONS_GROUP = 39;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Collection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__COLLECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Selection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Multi Selection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Datatype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__DATATYPE = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Selection Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__SELECTION = YINPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Multi Selection</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__TYPE = YINPUT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__EMF_NS_URI = YINPUT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 10;
+
+	/**
+	 * The number of structural features of the '<em>YEnum Options Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 11;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumListImpl <em>YEnum List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YEnumListImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYEnumList()
+	 * @generated
+	 */
+	int YENUM_LIST = 40;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Collection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__COLLECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Selection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Multi Selection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__MULTI_SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Datatype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__DATATYPE = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Selection Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__SELECTION = YINPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Multi Selection</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__TYPE = YINPUT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__EMF_NS_URI = YINPUT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 10;
+
+	/**
+	 * The number of structural features of the '<em>YEnum List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 11;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumComboBoxImpl <em>YEnum Combo Box</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YEnumComboBoxImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYEnumComboBox()
+	 * @generated
+	 */
+	int YENUM_COMBO_BOX = 41;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__ID = YINPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__CSS_CLASS = YINPUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__CSS_ID = YINPUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__INITIAL_VISIBLE = YINPUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__VISIBLE = YINPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__ORPHAN_DATATYPES = YINPUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__ORPHAN_DATADESCRIPTIONS = YINPUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__INITIAL_EDITABLE = YINPUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__EDITABLE = YINPUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__INITIAL_ENABLED = YINPUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__VALIDATORS = YINPUT__VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__INTERNAL_VALIDATORS = YINPUT__INTERNAL_VALIDATORS;
+
+	/**
+	 * The feature id for the '<em><b>Collection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__COLLECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Selection Binding Endpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Datatype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__DATATYPE = YINPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Selection</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__SELECTION = YINPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__TYPE = YINPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__EMF_NS_URI = YINPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>YEnum Combo Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 8;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6612,7 +7389,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 42;
+	int YBUTTON_CLICK_LISTENER = 45;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -6622,7 +7399,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 39;
+	int YSELECTION_TYPE = 42;
 
 
 	/**
@@ -6633,7 +7410,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 40;
+	int YBOOLEAN_SEARCH_OPTION = 43;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -6643,7 +7420,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 41;
+	int YSEARCH_WILDCARDS = 44;
 
 
 	/**
@@ -6797,6 +7574,28 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYBeanReferenceField_ImagePropertyPath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescriptionProperty <em>Description Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescriptionProperty()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_DescriptionProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescription()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YGridLayout <em>YGrid Layout</em>}'.
@@ -7715,26 +8514,48 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYComboBox_TypeQualifiedName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemCaptionProperty <em>Item Caption Property</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getCaptionProperty <em>Caption Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Item Caption Property</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemCaptionProperty()
+	 * @return the meta object for the attribute '<em>Caption Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YComboBox#getCaptionProperty()
 	 * @see #getYComboBox()
 	 * @generated
 	 */
-	EAttribute getYComboBox_ItemCaptionProperty();
+	EAttribute getYComboBox_CaptionProperty();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemImageProperty <em>Item Image Property</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getImageProperty <em>Image Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Item Image Property</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YComboBox#getItemImageProperty()
+	 * @return the meta object for the attribute '<em>Image Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YComboBox#getImageProperty()
 	 * @see #getYComboBox()
 	 * @generated
 	 */
-	EAttribute getYComboBox_ItemImageProperty();
+	EAttribute getYComboBox_ImageProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescriptionProperty <em>Description Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescriptionProperty()
+	 * @see #getYComboBox()
+	 * @generated
+	 */
+	EAttribute getYComboBox_DescriptionProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YComboBox#getDescription()
+	 * @see #getYComboBox()
+	 * @generated
+	 */
+	EAttribute getYComboBox_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YList <em>YList</em>}'.
@@ -7846,26 +8667,48 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYList_TypeQualifiedName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemCaptionProperty <em>Item Caption Property</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getCaptionProperty <em>Caption Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Item Caption Property</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getItemCaptionProperty()
+	 * @return the meta object for the attribute '<em>Caption Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getCaptionProperty()
 	 * @see #getYList()
 	 * @generated
 	 */
-	EAttribute getYList_ItemCaptionProperty();
+	EAttribute getYList_CaptionProperty();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getItemImageProperty <em>Item Image Property</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getImageProperty <em>Image Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Item Image Property</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getItemImageProperty()
+	 * @return the meta object for the attribute '<em>Image Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getImageProperty()
 	 * @see #getYList()
 	 * @generated
 	 */
-	EAttribute getYList_ItemImageProperty();
+	EAttribute getYList_ImageProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getDescriptionProperty <em>Description Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getDescriptionProperty()
+	 * @see #getYList()
+	 * @generated
+	 */
+	EAttribute getYList_DescriptionProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YList#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YList#getDescription()
+	 * @see #getYList()
+	 * @generated
+	 */
+	EAttribute getYList_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YButton <em>YButton</em>}'.
@@ -8634,6 +9477,278 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYSearchPanel_Filter();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup <em>YEnum Options Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YEnum Options Group</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup
+	 * @generated
+	 */
+	EClass getYEnumOptionsGroup();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getDatadescription()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EReference getYEnumOptionsGroup_Datadescription();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getDatatype <em>Datatype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datatype</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getDatatype()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EReference getYEnumOptionsGroup_Datatype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getSelectionType <em>Selection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selection Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getSelectionType()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYEnumOptionsGroup_SelectionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getSelection <em>Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selection</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getSelection()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYEnumOptionsGroup_Selection();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getMultiSelection <em>Multi Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Multi Selection</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getMultiSelection()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYEnumOptionsGroup_MultiSelection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getType()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYEnumOptionsGroup_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getEmfNsURI()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYEnumOptionsGroup_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup#getTypeQualifiedName()
+	 * @see #getYEnumOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYEnumOptionsGroup_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList <em>YEnum List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YEnum List</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList
+	 * @generated
+	 */
+	EClass getYEnumList();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getDatadescription()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EReference getYEnumList_Datadescription();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getDatatype <em>Datatype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datatype</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getDatatype()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EReference getYEnumList_Datatype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getSelectionType <em>Selection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selection Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getSelectionType()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EAttribute getYEnumList_SelectionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getSelection <em>Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selection</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getSelection()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EAttribute getYEnumList_Selection();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getMultiSelection <em>Multi Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Multi Selection</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getMultiSelection()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EAttribute getYEnumList_MultiSelection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getType()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EAttribute getYEnumList_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getEmfNsURI()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EAttribute getYEnumList_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList#getTypeQualifiedName()
+	 * @see #getYEnumList()
+	 * @generated
+	 */
+	EAttribute getYEnumList_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox <em>YEnum Combo Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YEnum Combo Box</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox
+	 * @generated
+	 */
+	EClass getYEnumComboBox();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getDatadescription()
+	 * @see #getYEnumComboBox()
+	 * @generated
+	 */
+	EReference getYEnumComboBox_Datadescription();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getDatatype <em>Datatype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datatype</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getDatatype()
+	 * @see #getYEnumComboBox()
+	 * @generated
+	 */
+	EReference getYEnumComboBox_Datatype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getSelection <em>Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selection</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getSelection()
+	 * @see #getYEnumComboBox()
+	 * @generated
+	 */
+	EAttribute getYEnumComboBox_Selection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getType()
+	 * @see #getYEnumComboBox()
+	 * @generated
+	 */
+	EAttribute getYEnumComboBox_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getEmfNsURI()
+	 * @see #getYEnumComboBox()
+	 * @generated
+	 */
+	EAttribute getYEnumComboBox_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox#getTypeQualifiedName()
+	 * @see #getYEnumComboBox()
+	 * @generated
+	 */
+	EAttribute getYEnumComboBox_TypeQualifiedName();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8852,26 +9967,48 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYOptionsGroup_TypeQualifiedName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getItemCaptionProperty <em>Item Caption Property</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getCaptionProperty <em>Caption Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Item Caption Property</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getItemCaptionProperty()
+	 * @return the meta object for the attribute '<em>Caption Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getCaptionProperty()
 	 * @see #getYOptionsGroup()
 	 * @generated
 	 */
-	EAttribute getYOptionsGroup_ItemCaptionProperty();
+	EAttribute getYOptionsGroup_CaptionProperty();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getItemImageProperty <em>Item Image Property</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getImageProperty <em>Image Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Item Image Property</em>'.
-	 * @see org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getItemImageProperty()
+	 * @return the meta object for the attribute '<em>Image Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getImageProperty()
 	 * @see #getYOptionsGroup()
 	 * @generated
 	 */
-	EAttribute getYOptionsGroup_ItemImageProperty();
+	EAttribute getYOptionsGroup_ImageProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getDescriptionProperty <em>Description Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getDescriptionProperty()
+	 * @see #getYOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYOptionsGroup_DescriptionProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YOptionsGroup#getDescription()
+	 * @see #getYOptionsGroup()
+	 * @generated
+	 */
+	EAttribute getYOptionsGroup_Description();
 
 	/**
 	 * Returns the meta object for data type '{@link org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickListener <em>YButton Click Listener</em>}'.
@@ -9051,6 +10188,22 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH = eINSTANCE.getYBeanReferenceField_ImagePropertyPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Description Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY = eINSTANCE.getYBeanReferenceField_DescriptionProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__DESCRIPTION = eINSTANCE.getYBeanReferenceField_Description();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl <em>YGrid Layout</em>}' class.
@@ -9771,20 +10924,36 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YCOMBO_BOX__TYPE_QUALIFIED_NAME = eINSTANCE.getYComboBox_TypeQualifiedName();
 
 		/**
-		 * The meta object literal for the '<em><b>Item Caption Property</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Caption Property</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute YCOMBO_BOX__ITEM_CAPTION_PROPERTY = eINSTANCE.getYComboBox_ItemCaptionProperty();
+		EAttribute YCOMBO_BOX__CAPTION_PROPERTY = eINSTANCE.getYComboBox_CaptionProperty();
 
 		/**
-		 * The meta object literal for the '<em><b>Item Image Property</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Image Property</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute YCOMBO_BOX__ITEM_IMAGE_PROPERTY = eINSTANCE.getYComboBox_ItemImageProperty();
+		EAttribute YCOMBO_BOX__IMAGE_PROPERTY = eINSTANCE.getYComboBox_ImageProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Description Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YCOMBO_BOX__DESCRIPTION_PROPERTY = eINSTANCE.getYComboBox_DescriptionProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YCOMBO_BOX__DESCRIPTION = eINSTANCE.getYComboBox_Description();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl <em>YList</em>}' class.
@@ -9869,20 +11038,36 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YLIST__TYPE_QUALIFIED_NAME = eINSTANCE.getYList_TypeQualifiedName();
 
 		/**
-		 * The meta object literal for the '<em><b>Item Caption Property</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Caption Property</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute YLIST__ITEM_CAPTION_PROPERTY = eINSTANCE.getYList_ItemCaptionProperty();
+		EAttribute YLIST__CAPTION_PROPERTY = eINSTANCE.getYList_CaptionProperty();
 
 		/**
-		 * The meta object literal for the '<em><b>Item Image Property</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Image Property</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute YLIST__ITEM_IMAGE_PROPERTY = eINSTANCE.getYList_ItemImageProperty();
+		EAttribute YLIST__IMAGE_PROPERTY = eINSTANCE.getYList_ImageProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Description Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YLIST__DESCRIPTION_PROPERTY = eINSTANCE.getYList_DescriptionProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YLIST__DESCRIPTION = eINSTANCE.getYList_Description();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl <em>YButton</em>}' class.
@@ -10483,6 +11668,212 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YSEARCH_PANEL__FILTER = eINSTANCE.getYSearchPanel_Filter();
 
 		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl <em>YEnum Options Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YEnumOptionsGroupImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYEnumOptionsGroup()
+		 * @generated
+		 */
+		EClass YENUM_OPTIONS_GROUP = eINSTANCE.getYEnumOptionsGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YENUM_OPTIONS_GROUP__DATADESCRIPTION = eINSTANCE.getYEnumOptionsGroup_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Datatype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YENUM_OPTIONS_GROUP__DATATYPE = eINSTANCE.getYEnumOptionsGroup_Datatype();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_OPTIONS_GROUP__SELECTION_TYPE = eINSTANCE.getYEnumOptionsGroup_SelectionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_OPTIONS_GROUP__SELECTION = eINSTANCE.getYEnumOptionsGroup_Selection();
+
+		/**
+		 * The meta object literal for the '<em><b>Multi Selection</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_OPTIONS_GROUP__MULTI_SELECTION = eINSTANCE.getYEnumOptionsGroup_MultiSelection();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_OPTIONS_GROUP__TYPE = eINSTANCE.getYEnumOptionsGroup_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_OPTIONS_GROUP__EMF_NS_URI = eINSTANCE.getYEnumOptionsGroup_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME = eINSTANCE.getYEnumOptionsGroup_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumListImpl <em>YEnum List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YEnumListImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYEnumList()
+		 * @generated
+		 */
+		EClass YENUM_LIST = eINSTANCE.getYEnumList();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YENUM_LIST__DATADESCRIPTION = eINSTANCE.getYEnumList_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Datatype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YENUM_LIST__DATATYPE = eINSTANCE.getYEnumList_Datatype();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_LIST__SELECTION_TYPE = eINSTANCE.getYEnumList_SelectionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_LIST__SELECTION = eINSTANCE.getYEnumList_Selection();
+
+		/**
+		 * The meta object literal for the '<em><b>Multi Selection</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_LIST__MULTI_SELECTION = eINSTANCE.getYEnumList_MultiSelection();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_LIST__TYPE = eINSTANCE.getYEnumList_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_LIST__EMF_NS_URI = eINSTANCE.getYEnumList_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_LIST__TYPE_QUALIFIED_NAME = eINSTANCE.getYEnumList_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YEnumComboBoxImpl <em>YEnum Combo Box</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YEnumComboBoxImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYEnumComboBox()
+		 * @generated
+		 */
+		EClass YENUM_COMBO_BOX = eINSTANCE.getYEnumComboBox();
+
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YENUM_COMBO_BOX__DATADESCRIPTION = eINSTANCE.getYEnumComboBox_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Datatype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YENUM_COMBO_BOX__DATATYPE = eINSTANCE.getYEnumComboBox_Datatype();
+
+		/**
+		 * The meta object literal for the '<em><b>Selection</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_COMBO_BOX__SELECTION = eINSTANCE.getYEnumComboBox_Selection();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_COMBO_BOX__TYPE = eINSTANCE.getYEnumComboBox_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_COMBO_BOX__EMF_NS_URI = eINSTANCE.getYEnumComboBox_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YENUM_COMBO_BOX__TYPE_QUALIFIED_NAME = eINSTANCE.getYEnumComboBox_TypeQualifiedName();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10647,20 +12038,36 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = eINSTANCE.getYOptionsGroup_TypeQualifiedName();
 
 		/**
-		 * The meta object literal for the '<em><b>Item Caption Property</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Caption Property</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY = eINSTANCE.getYOptionsGroup_ItemCaptionProperty();
+		EAttribute YOPTIONS_GROUP__CAPTION_PROPERTY = eINSTANCE.getYOptionsGroup_CaptionProperty();
 
 		/**
-		 * The meta object literal for the '<em><b>Item Image Property</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Image Property</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY = eINSTANCE.getYOptionsGroup_ItemImageProperty();
+		EAttribute YOPTIONS_GROUP__IMAGE_PROPERTY = eINSTANCE.getYOptionsGroup_ImageProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Description Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YOPTIONS_GROUP__DESCRIPTION_PROPERTY = eINSTANCE.getYOptionsGroup_DescriptionProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YOPTIONS_GROUP__DESCRIPTION = eINSTANCE.getYOptionsGroup_Description();
 
 		/**
 		 * The meta object literal for the '<em>YButton Click Listener</em>' data type.

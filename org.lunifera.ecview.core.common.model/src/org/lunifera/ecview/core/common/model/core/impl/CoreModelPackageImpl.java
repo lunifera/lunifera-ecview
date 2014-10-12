@@ -41,6 +41,7 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddableMultiSelectionEndpo
 import org.lunifera.ecview.core.common.model.core.YEmbeddableSelectionEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEnable;
+import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
 import org.lunifera.ecview.core.common.model.core.YHeightable;
@@ -328,6 +329,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass yExposedActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum yDeviceTypeEEnum = null;
 
 	/**
@@ -609,6 +617,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EReference getYView_VisibilityProcessors() {
 		return (EReference)yViewEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYView_ExposedActions() {
+		return (EReference)yViewEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1381,6 +1398,42 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getYExposedAction() {
+		return yExposedActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYExposedAction_Icon() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYExposedAction_Label() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYExposedAction_LabelI18nKey() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYDeviceType() {
 		return yDeviceTypeEEnum;
 	}
@@ -1480,6 +1533,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yViewEClass, YVIEW__DEVICE_TYPE);
 		createEAttribute(yViewEClass, YVIEW__CONTENT_ALIGNMENT);
 		createEReference(yViewEClass, YVIEW__VISIBILITY_PROCESSORS);
+		createEReference(yViewEClass, YVIEW__EXPOSED_ACTIONS);
 
 		yViewSetEClass = createEClass(YVIEW_SET);
 		createEReference(yViewSetEClass, YVIEW_SET__VIEWS);
@@ -1598,6 +1652,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEReference(yOpenDialogCommandEClass, YOPEN_DIALOG_COMMAND__DIALOG);
 		createEAttribute(yOpenDialogCommandEClass, YOPEN_DIALOG_COMMAND__TRIGGER);
 
+		yExposedActionEClass = createEClass(YEXPOSED_ACTION);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__ICON);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL_I1_8N_KEY);
+
 		// Create enums
 		yDeviceTypeEEnum = createEEnum(YDEVICE_TYPE);
 		yAlignmentEEnum = createEEnum(YALIGNMENT);
@@ -1684,6 +1743,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yCommandEClass.getESuperTypes().add(this.getYElement());
 		yCommandSetEClass.getESuperTypes().add(this.getYElement());
 		yOpenDialogCommandEClass.getESuperTypes().add(this.getYCommand());
+		yExposedActionEClass.getESuperTypes().add(this.getYElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yElementEClass, YElement.class, "YElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1716,6 +1776,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYView_DeviceType(), this.getYDeviceType(), "deviceType", "IDE", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_ContentAlignment(), this.getYAlignment(), "contentAlignment", "FILL_FILL", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_VisibilityProcessors(), theVisibilityPackage.getYVisibilityProcessor(), null, "visibilityProcessors", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYView_ExposedActions(), this.getYExposedAction(), null, "exposedActions", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yViewEClass, theBindingPackage.getYBindingSet(), "getOrCreateBindingSet", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1872,6 +1933,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		addEOperation(yOpenDialogCommandEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(yOpenDialogCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createTriggerDialogEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(yExposedActionEClass, YExposedAction.class, "YExposedAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYExposedAction_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_Label(), ecorePackage.getEString(), "label", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_LabelI18nKey(), ecorePackage.getEString(), "labelI18nKey", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(yExposedActionEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(yDeviceTypeEEnum, YDeviceType.class, "YDeviceType");

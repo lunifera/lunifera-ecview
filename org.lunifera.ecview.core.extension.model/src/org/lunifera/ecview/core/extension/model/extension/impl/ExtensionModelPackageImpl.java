@@ -30,6 +30,9 @@ import org.lunifera.ecview.core.extension.model.extension.YColumn;
 import org.lunifera.ecview.core.extension.model.extension.YComboBox;
 import org.lunifera.ecview.core.extension.model.extension.YDateTime;
 import org.lunifera.ecview.core.extension.model.extension.YDecimalField;
+import org.lunifera.ecview.core.extension.model.extension.YEnumComboBox;
+import org.lunifera.ecview.core.extension.model.extension.YEnumList;
+import org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YFormLayout;
 import org.lunifera.ecview.core.extension.model.extension.YFormLayoutCellStyle;
 import org.lunifera.ecview.core.extension.model.extension.YGridLayout;
@@ -304,6 +307,27 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	private EClass ySearchPanelEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yEnumOptionsGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yEnumListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yEnumComboBoxEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -536,6 +560,24 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getYBeanReferenceField_ImagePropertyPath() {
 		return (EAttribute)yBeanReferenceFieldEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanReferenceField_DescriptionProperty() {
+		return (EAttribute)yBeanReferenceFieldEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanReferenceField_Description() {
+		return (EAttribute)yBeanReferenceFieldEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1244,7 +1286,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYComboBox_ItemCaptionProperty() {
+	public EAttribute getYComboBox_CaptionProperty() {
 		return (EAttribute)yComboBoxEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1253,8 +1295,26 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYComboBox_ItemImageProperty() {
+	public EAttribute getYComboBox_ImageProperty() {
 		return (EAttribute)yComboBoxEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYComboBox_DescriptionProperty() {
+		return (EAttribute)yComboBoxEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYComboBox_Description() {
+		return (EAttribute)yComboBoxEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1344,7 +1404,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYList_ItemCaptionProperty() {
+	public EAttribute getYList_CaptionProperty() {
 		return (EAttribute)yListEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1353,8 +1413,26 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYList_ItemImageProperty() {
+	public EAttribute getYList_ImageProperty() {
 		return (EAttribute)yListEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYList_DescriptionProperty() {
+		return (EAttribute)yListEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYList_Description() {
+		return (EAttribute)yListEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -1969,6 +2047,231 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYEnumOptionsGroup() {
+		return yEnumOptionsGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYEnumOptionsGroup_Datadescription() {
+		return (EReference)yEnumOptionsGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYEnumOptionsGroup_Datatype() {
+		return (EReference)yEnumOptionsGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumOptionsGroup_SelectionType() {
+		return (EAttribute)yEnumOptionsGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumOptionsGroup_Selection() {
+		return (EAttribute)yEnumOptionsGroupEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumOptionsGroup_MultiSelection() {
+		return (EAttribute)yEnumOptionsGroupEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumOptionsGroup_Type() {
+		return (EAttribute)yEnumOptionsGroupEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumOptionsGroup_EmfNsURI() {
+		return (EAttribute)yEnumOptionsGroupEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumOptionsGroup_TypeQualifiedName() {
+		return (EAttribute)yEnumOptionsGroupEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYEnumList() {
+		return yEnumListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYEnumList_Datadescription() {
+		return (EReference)yEnumListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYEnumList_Datatype() {
+		return (EReference)yEnumListEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumList_SelectionType() {
+		return (EAttribute)yEnumListEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumList_Selection() {
+		return (EAttribute)yEnumListEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumList_MultiSelection() {
+		return (EAttribute)yEnumListEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumList_Type() {
+		return (EAttribute)yEnumListEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumList_EmfNsURI() {
+		return (EAttribute)yEnumListEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumList_TypeQualifiedName() {
+		return (EAttribute)yEnumListEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYEnumComboBox() {
+		return yEnumComboBoxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYEnumComboBox_Datadescription() {
+		return (EReference)yEnumComboBoxEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYEnumComboBox_Datatype() {
+		return (EReference)yEnumComboBoxEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumComboBox_Selection() {
+		return (EAttribute)yEnumComboBoxEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumComboBox_Type() {
+		return (EAttribute)yEnumComboBoxEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumComboBox_EmfNsURI() {
+		return (EAttribute)yEnumComboBoxEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYEnumComboBox_TypeQualifiedName() {
+		return (EAttribute)yEnumComboBoxEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2137,7 +2440,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYOptionsGroup_ItemCaptionProperty() {
+	public EAttribute getYOptionsGroup_CaptionProperty() {
 		return (EAttribute)yOptionsGroupEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -2146,8 +2449,26 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYOptionsGroup_ItemImageProperty() {
+	public EAttribute getYOptionsGroup_ImageProperty() {
 		return (EAttribute)yOptionsGroupEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYOptionsGroup_DescriptionProperty() {
+		return (EAttribute)yOptionsGroupEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYOptionsGroup_Description() {
+		return (EAttribute)yOptionsGroupEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -2288,8 +2609,10 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__TYPE);
 		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__EMF_NS_URI);
 		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__TYPE_QUALIFIED_NAME);
-		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY);
-		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY);
+		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__CAPTION_PROPERTY);
+		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__IMAGE_PROPERTY);
+		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__DESCRIPTION_PROPERTY);
+		createEAttribute(yOptionsGroupEClass, YOPTIONS_GROUP__DESCRIPTION);
 
 		yListEClass = createEClass(YLIST);
 		createEReference(yListEClass, YLIST__DATADESCRIPTION);
@@ -2301,8 +2624,10 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yListEClass, YLIST__TYPE);
 		createEAttribute(yListEClass, YLIST__EMF_NS_URI);
 		createEAttribute(yListEClass, YLIST__TYPE_QUALIFIED_NAME);
-		createEAttribute(yListEClass, YLIST__ITEM_CAPTION_PROPERTY);
-		createEAttribute(yListEClass, YLIST__ITEM_IMAGE_PROPERTY);
+		createEAttribute(yListEClass, YLIST__CAPTION_PROPERTY);
+		createEAttribute(yListEClass, YLIST__IMAGE_PROPERTY);
+		createEAttribute(yListEClass, YLIST__DESCRIPTION_PROPERTY);
+		createEAttribute(yListEClass, YLIST__DESCRIPTION);
 
 		yLabelEClass = createEClass(YLABEL);
 		createEReference(yLabelEClass, YLABEL__DATADESCRIPTION);
@@ -2327,6 +2652,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER_QUALIFIED_NAME);
 		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__CAPTION_PROPERTY_PATH);
 		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH);
+		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY);
+		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__DESCRIPTION);
 
 		yTextAreaEClass = createEClass(YTEXT_AREA);
 		createEReference(yTextAreaEClass, YTEXT_AREA__DATADESCRIPTION);
@@ -2366,8 +2693,10 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yComboBoxEClass, YCOMBO_BOX__TYPE);
 		createEAttribute(yComboBoxEClass, YCOMBO_BOX__EMF_NS_URI);
 		createEAttribute(yComboBoxEClass, YCOMBO_BOX__TYPE_QUALIFIED_NAME);
-		createEAttribute(yComboBoxEClass, YCOMBO_BOX__ITEM_CAPTION_PROPERTY);
-		createEAttribute(yComboBoxEClass, YCOMBO_BOX__ITEM_IMAGE_PROPERTY);
+		createEAttribute(yComboBoxEClass, YCOMBO_BOX__CAPTION_PROPERTY);
+		createEAttribute(yComboBoxEClass, YCOMBO_BOX__IMAGE_PROPERTY);
+		createEAttribute(yComboBoxEClass, YCOMBO_BOX__DESCRIPTION_PROPERTY);
+		createEAttribute(yComboBoxEClass, YCOMBO_BOX__DESCRIPTION);
 
 		yButtonEClass = createEClass(YBUTTON);
 		createEReference(yButtonEClass, YBUTTON__DATADESCRIPTION);
@@ -2454,6 +2783,34 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__TYPE_QUALIFIED_NAME);
 		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__APPLY_FILTER);
 		createEAttribute(ySearchPanelEClass, YSEARCH_PANEL__FILTER);
+
+		yEnumOptionsGroupEClass = createEClass(YENUM_OPTIONS_GROUP);
+		createEReference(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__DATADESCRIPTION);
+		createEReference(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__DATATYPE);
+		createEAttribute(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__SELECTION_TYPE);
+		createEAttribute(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__SELECTION);
+		createEAttribute(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__MULTI_SELECTION);
+		createEAttribute(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__TYPE);
+		createEAttribute(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__EMF_NS_URI);
+		createEAttribute(yEnumOptionsGroupEClass, YENUM_OPTIONS_GROUP__TYPE_QUALIFIED_NAME);
+
+		yEnumListEClass = createEClass(YENUM_LIST);
+		createEReference(yEnumListEClass, YENUM_LIST__DATADESCRIPTION);
+		createEReference(yEnumListEClass, YENUM_LIST__DATATYPE);
+		createEAttribute(yEnumListEClass, YENUM_LIST__SELECTION_TYPE);
+		createEAttribute(yEnumListEClass, YENUM_LIST__SELECTION);
+		createEAttribute(yEnumListEClass, YENUM_LIST__MULTI_SELECTION);
+		createEAttribute(yEnumListEClass, YENUM_LIST__TYPE);
+		createEAttribute(yEnumListEClass, YENUM_LIST__EMF_NS_URI);
+		createEAttribute(yEnumListEClass, YENUM_LIST__TYPE_QUALIFIED_NAME);
+
+		yEnumComboBoxEClass = createEClass(YENUM_COMBO_BOX);
+		createEReference(yEnumComboBoxEClass, YENUM_COMBO_BOX__DATADESCRIPTION);
+		createEReference(yEnumComboBoxEClass, YENUM_COMBO_BOX__DATATYPE);
+		createEAttribute(yEnumComboBoxEClass, YENUM_COMBO_BOX__SELECTION);
+		createEAttribute(yEnumComboBoxEClass, YENUM_COMBO_BOX__TYPE);
+		createEAttribute(yEnumComboBoxEClass, YENUM_COMBO_BOX__EMF_NS_URI);
+		createEAttribute(yEnumComboBoxEClass, YENUM_COMBO_BOX__TYPE_QUALIFIED_NAME);
 
 		// Create enums
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
@@ -2577,6 +2934,17 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYSpacingable());
 		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYMarginable());
+		yEnumOptionsGroupEClass.getESuperTypes().add(this.getYInput());
+		yEnumOptionsGroupEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
+		yEnumOptionsGroupEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
+		yEnumOptionsGroupEClass.getESuperTypes().add(theCoreModelPackage.getYMultiSelectionBindable());
+		yEnumListEClass.getESuperTypes().add(this.getYInput());
+		yEnumListEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
+		yEnumListEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
+		yEnumListEClass.getESuperTypes().add(theCoreModelPackage.getYMultiSelectionBindable());
+		yEnumComboBoxEClass.getESuperTypes().add(this.getYInput());
+		yEnumComboBoxEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
+		yEnumComboBoxEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yInputEClass, YInput.class, "YInput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2678,8 +3046,10 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYOptionsGroup_Type(), g1, "type", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYOptionsGroup_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYOptionsGroup_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYOptionsGroup_ItemCaptionProperty(), ecorePackage.getEString(), "itemCaptionProperty", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYOptionsGroup_ItemImageProperty(), ecorePackage.getEString(), "itemImageProperty", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYOptionsGroup_CaptionProperty(), ecorePackage.getEString(), "captionProperty", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYOptionsGroup_ImageProperty(), ecorePackage.getEString(), "imageProperty", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYOptionsGroup_DescriptionProperty(), ecorePackage.getEString(), "descriptionProperty", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYOptionsGroup_Description(), ecorePackage.getEString(), "description", null, 0, 1, YOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yListEClass, YList.class, "YList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYList_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2694,8 +3064,10 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYList_Type(), g1, "type", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYList_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYList_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYList_ItemCaptionProperty(), ecorePackage.getEString(), "itemCaptionProperty", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYList_ItemImageProperty(), ecorePackage.getEString(), "itemImageProperty", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYList_CaptionProperty(), ecorePackage.getEString(), "captionProperty", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYList_ImageProperty(), ecorePackage.getEString(), "imageProperty", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYList_DescriptionProperty(), ecorePackage.getEString(), "descriptionProperty", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYList_Description(), ecorePackage.getEString(), "description", null, 0, 1, YList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yLabelEClass, YLabel.class, "YLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYLabel_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2726,6 +3098,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYBeanReferenceField_InMemoryBeanProviderQualifiedName(), ecorePackage.getEString(), "inMemoryBeanProviderQualifiedName", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBeanReferenceField_CaptionPropertyPath(), ecorePackage.getEString(), "captionPropertyPath", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBeanReferenceField_ImagePropertyPath(), ecorePackage.getEString(), "imagePropertyPath", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanReferenceField_DescriptionProperty(), ecorePackage.getEString(), "descriptionProperty", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanReferenceField_Description(), ecorePackage.getEString(), "description", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yTextAreaEClass, YTextArea.class, "YTextArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYTextArea_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2768,8 +3142,10 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYComboBox_Type(), g1, "type", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYComboBox_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYComboBox_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYComboBox_ItemCaptionProperty(), ecorePackage.getEString(), "itemCaptionProperty", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYComboBox_ItemImageProperty(), ecorePackage.getEString(), "itemImageProperty", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYComboBox_CaptionProperty(), ecorePackage.getEString(), "captionProperty", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYComboBox_ImageProperty(), ecorePackage.getEString(), "imageProperty", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYComboBox_DescriptionProperty(), ecorePackage.getEString(), "descriptionProperty", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYComboBox_Description(), ecorePackage.getEString(), "description", null, 0, 1, YComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yButtonEClass, YButton.class, "YButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYButton_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2881,6 +3257,43 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYSearchPanel_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YSearchPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYSearchPanel_ApplyFilter(), ecorePackage.getEJavaObject(), "applyFilter", null, 0, 1, YSearchPanel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYSearchPanel_Filter(), ecorePackage.getEJavaObject(), "filter", null, 0, 1, YSearchPanel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yEnumOptionsGroupEClass, YEnumOptionsGroup.class, "YEnumOptionsGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYEnumOptionsGroup_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YEnumOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYEnumOptionsGroup_Datatype(), theExtDatatypesPackage.getYOptionsGroupDataType(), null, "datatype", null, 0, 1, YEnumOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumOptionsGroup_SelectionType(), this.getYSelectionType(), "selectionType", null, 0, 1, YEnumOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumOptionsGroup_Selection(), ecorePackage.getEJavaObject(), "selection", null, 0, 1, YEnumOptionsGroup.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumOptionsGroup_MultiSelection(), ecorePackage.getEJavaObject(), "multiSelection", null, 0, -1, YEnumOptionsGroup.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYEnumOptionsGroup_Type(), g1, "type", null, 0, 1, YEnumOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumOptionsGroup_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YEnumOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumOptionsGroup_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YEnumOptionsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yEnumListEClass, YEnumList.class, "YEnumList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYEnumList_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YEnumList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYEnumList_Datatype(), theExtDatatypesPackage.getYListDataType(), null, "datatype", null, 0, 1, YEnumList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumList_SelectionType(), this.getYSelectionType(), "selectionType", null, 0, 1, YEnumList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumList_Selection(), ecorePackage.getEJavaObject(), "selection", null, 0, 1, YEnumList.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumList_MultiSelection(), ecorePackage.getEJavaObject(), "multiSelection", null, 0, -1, YEnumList.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYEnumList_Type(), g1, "type", null, 0, 1, YEnumList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumList_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YEnumList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumList_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YEnumList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yEnumComboBoxEClass, YEnumComboBox.class, "YEnumComboBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYEnumComboBox_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYEnumComboBox_Datatype(), theExtDatatypesPackage.getYComboBoxDatatype(), null, "datatype", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumComboBox_Selection(), ecorePackage.getEJavaObject(), "selection", null, 0, 1, YEnumComboBox.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYEnumComboBox_Type(), g1, "type", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumComboBox_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYEnumComboBox_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");

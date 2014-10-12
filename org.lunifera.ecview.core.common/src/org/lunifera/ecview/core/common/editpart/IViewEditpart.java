@@ -10,6 +10,7 @@
  */
 package org.lunifera.ecview.core.common.editpart;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 
@@ -112,6 +113,16 @@ public interface IViewEditpart extends IElementEditpart, IEmbeddableParent {
 	 * @return
 	 */
 	IBindingSetEditpart getBindingSet();
+
+	/**
+	 * Returns the exposed actions. These actions have to be handled by the
+	 * wrapping UI elements. For instance an Eclipse view, Eclipse editor or a
+	 * Vaaclipse view. Exposed actions are used to define the actions provided
+	 * by the wrapping UI element.
+	 * 
+	 * @return
+	 */
+	List<IExposedActionEditpart> getExposedActions();
 
 	/**
 	 * Is called to set the bindingSet of the view.

@@ -621,6 +621,59 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP: {
+				YEnumOptionsGroup yEnumOptionsGroup = (YEnumOptionsGroup)theEObject;
+				T result = caseYEnumOptionsGroup(yEnumOptionsGroup);
+				if (result == null) result = caseYInput(yEnumOptionsGroup);
+				if (result == null) result = caseYCollectionBindable(yEnumOptionsGroup);
+				if (result == null) result = caseYSelectionBindable(yEnumOptionsGroup);
+				if (result == null) result = caseYMultiSelectionBindable(yEnumOptionsGroup);
+				if (result == null) result = caseYField(yEnumOptionsGroup);
+				if (result == null) result = caseYBindable(yEnumOptionsGroup);
+				if (result == null) result = caseYEmbeddable(yEnumOptionsGroup);
+				if (result == null) result = caseYEditable(yEnumOptionsGroup);
+				if (result == null) result = caseYEnable(yEnumOptionsGroup);
+				if (result == null) result = caseYElement(yEnumOptionsGroup);
+				if (result == null) result = caseYCssAble(yEnumOptionsGroup);
+				if (result == null) result = caseYVisibleable(yEnumOptionsGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YENUM_LIST: {
+				YEnumList yEnumList = (YEnumList)theEObject;
+				T result = caseYEnumList(yEnumList);
+				if (result == null) result = caseYInput(yEnumList);
+				if (result == null) result = caseYCollectionBindable(yEnumList);
+				if (result == null) result = caseYSelectionBindable(yEnumList);
+				if (result == null) result = caseYMultiSelectionBindable(yEnumList);
+				if (result == null) result = caseYField(yEnumList);
+				if (result == null) result = caseYBindable(yEnumList);
+				if (result == null) result = caseYEmbeddable(yEnumList);
+				if (result == null) result = caseYEditable(yEnumList);
+				if (result == null) result = caseYEnable(yEnumList);
+				if (result == null) result = caseYElement(yEnumList);
+				if (result == null) result = caseYCssAble(yEnumList);
+				if (result == null) result = caseYVisibleable(yEnumList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YENUM_COMBO_BOX: {
+				YEnumComboBox yEnumComboBox = (YEnumComboBox)theEObject;
+				T result = caseYEnumComboBox(yEnumComboBox);
+				if (result == null) result = caseYInput(yEnumComboBox);
+				if (result == null) result = caseYCollectionBindable(yEnumComboBox);
+				if (result == null) result = caseYSelectionBindable(yEnumComboBox);
+				if (result == null) result = caseYField(yEnumComboBox);
+				if (result == null) result = caseYBindable(yEnumComboBox);
+				if (result == null) result = caseYEmbeddable(yEnumComboBox);
+				if (result == null) result = caseYEditable(yEnumComboBox);
+				if (result == null) result = caseYEnable(yEnumComboBox);
+				if (result == null) result = caseYElement(yEnumComboBox);
+				if (result == null) result = caseYCssAble(yEnumComboBox);
+				if (result == null) result = caseYVisibleable(yEnumComboBox);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -1177,6 +1230,51 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYSearchPanel(YSearchPanel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YEnum Options Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YEnum Options Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYEnumOptionsGroup(YEnumOptionsGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YEnum List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YEnum List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYEnumList(YEnumList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YEnum Combo Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YEnum Combo Box</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYEnumComboBox(YEnumComboBox object) {
 		return null;
 	}
 
