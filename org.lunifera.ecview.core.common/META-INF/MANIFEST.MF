@@ -10,7 +10,7 @@ Import-Package: org.apache.commons.logging;version="1.0.4",
  org.slf4j
 Service-Component: OSGI-INF/*.xml
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.apache.commons.beanutils;bundle-version="1.8.4",
+Require-Bundle: org.apache.commons.beanutils;bundle-version="1.8.0",
  org.eclipse.core.databinding.observable;bundle-version="1.4.1",
  org.eclipse.core.databinding;bundle-version="1.4.1"
 Export-Package: org.lunifera.ecview.core.common;version="0.7.4",org.lu

@@ -11,7 +11,7 @@
 		<module>org.lunifera.ecview.core.common.editparts.emf</module>
 		<module>org.lunifera.ecview.core.common.model</module>
 		<module>org.lunifera.ecview.core.common.model.tests</module>
-<!-- 		<module>org.lunifera.ecview.core.common.tests</module> -->
+		<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
 		<module>org.lunifera.ecview.core.databinding.beans</module>
 		<module>org.lunifera.ecview.core.databinding.emf</module>
 		<!-- <module>org.lunifera.ecview.core.databinding.tests</module> -->
@@ -22,7 +22,8 @@
 		<!-- <module>org.lunifera.ecview.core.extension.tests</module> -->
 		<module>org.lunifera.ecview.core.feature.core</module>
 		<module>org.lunifera.ecview.core.p2</module>
-		<module>org.lunifera.ecview.core.target.kepler</module>
+		<!-- <module>org.lunifera.ecview.core.target.kepler</module> -->
+		<!-- <module>org.lunifera.ecview.core.target.luna</module> -->
 		<!-- <module>org.lunifera.ecview.core.ui.e4.css.core</module> -->
 		<!-- <module>org.lunifera.ecview.core.ui.e4.css.swt</module> -->
 		<module>org.lunifera.ecview.core.ui.presentation.common</module>
@@ -62,6 +63,7 @@
 			<url>http://maven.lunifera.org:8086/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
+
 
 	<profiles>
 		<profile>
@@ -116,7 +118,8 @@
 							<target>
 								<artifact>
 									<groupId>org.lunifera.ecview.core</groupId>
-									<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
+									<!-- <artifactId>org.lunifera.ecview.core.target.kepler</artifactId> -->
+									<!-- <artifactId>org.lunifera.ecview.core.target.luna</artifactId> -->
 									<version>${project.version}</version>
 								</artifact>
 							</target>
@@ -128,13 +131,14 @@
 				<module>org.lunifera.ecview.core.common.model.tests</module>
 				<module>org.lunifera.ecview.core.extension.tests</module>
 				<module>org.lunifera.ecview.core.databinding.tests</module>
-<!-- 				<module>org.lunifera.ecview.core.common.tests</module> -->
-				<module>org.lunifera.ecview.core.target.kepler</module>
+				<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.target.kepler</module> -->
+				<!-- <module>org.lunifera.ecview.core.target.luna</module> -->
 				<module>org.lunifera.ecview.core.common</module>
 				<module>org.lunifera.ecview.core.common.model</module>
 				<module>org.lunifera.ecview.core.extension.model</module>
 				<module>org.lunifera.ecview.core.extension.editparts</module>
-<!-- 				<module>org.lunifera.ecview.core.ui.e4.css.core</module> -->
+				<!-- <module>org.lunifera.ecview.core.ui.e4.css.core</module> -->
 				<module>org.lunifera.ecview.core.ui.presentation.common</module>
 				<!-- <module>org.lunifera.ecview.core.ui.presentation.swt</module> -->
 				<!-- <module>org.lunifera.ecview.core.ui.presentation.swt.tests</module> -->
@@ -150,6 +154,7 @@
 			</modules>
 		</profile>
 
+	
 		<profile>
 			<id>p2-luna-core</id>
 			<activation>
@@ -157,32 +162,46 @@
 			</activation>
 			<build>
 				<defaultGoal>verify</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>org.eclipse.tycho</groupId>
-						<artifactId>target-platform-configuration</artifactId>
-						<version>${tycho-version}</version>
-						<configuration>
-							<dependency-resolution>
-								<optionalDependencies>ignore</optionalDependencies>
-							</dependency-resolution>
-							<!-- <resolver>p2</resolver> -->
-							<!-- <pomDependencies>consider</pomDependencies> -->
-							<ignoreTychoRepositories>true</ignoreTychoRepositories>
-							<target>
-								<artifact>
-									<groupId>org.lunifera.ecview.core</groupId>
-									<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
-									<version>${project.version}</version>
-								</artifact>
-							</target>
-						</configuration>
-					</plugin>
-				</plugins>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.eclipse.tycho</groupId>
+							<artifactId>target-platform-configuration</artifactId>
+							<version>${tycho-version}</version>
+							<configuration>
+								<resolver>p2</resolver>
+								<pomDependencies>consider</pomDependencies>
+								<environments>
+									<environment>
+										<os>win32</os>
+										<ws>win32</ws>
+										<arch>x86_64</arch>
+									</environment>
+									<environment>
+										<os>linux</os>
+										<ws>gtk</ws>
+										<arch>x86</arch>
+									</environment>
+									<environment>
+										<os>linux</os>
+										<ws>gtk</ws>
+										<arch>x86_64</arch>
+									</environment>
+									<environment>
+										<os>macosx</os>
+										<ws>cocoa</ws>
+										<arch>x86_64</arch>
+									</environment>
+								</environments>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
 			</build>
 			<modules>
 				<!-- exclusive for P2 -->
-				<module>org.lunifera.ecview.core.target.kepler</module>
+				<!-- <module>org.lunifera.ecview.core.target.kepler</module> -->
+				<module>org.lunifera.ecview.core.target.luna</module>
 				<module>org.lunifera.ecview.core.p2</module>
 				<!-- P2 features -->
 				<module>org.lunifera.ecview.core.feature.core</module>
@@ -202,13 +221,14 @@
 
 				<module>org.lunifera.ecview.core.ui.presentation.common</module>
 
-<!-- 				<module>org.lunifera.ecview.core.common.model.tests</module> -->
-<!-- 				<module>org.lunifera.ecview.core.extension.tests</module> -->
-<!-- 				<module>org.lunifera.ecview.core.databinding.tests</module> -->
-<!-- 				<module>org.lunifera.ecview.core.common.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.common.model.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.extension.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.databinding.tests</module> -->
+				<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
 				<!-- P2 bundles -->
 			</modules>
 		</profile>
+
 		<profile>
 			<id>binding</id>
 			<activation>
@@ -231,7 +251,8 @@
 							<target>
 								<artifact>
 									<groupId>org.lunifera.ecview.core</groupId>
-									<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
+									<!-- <artifactId>org.lunifera.ecview.core.target.kepler</artifactId> -->
+									<!-- <artifactId>org.lunifera.ecview.core.target.luna</artifactId> -->
 									<version>${project.version}</version>
 								</artifact>
 							</target>
@@ -241,7 +262,8 @@
 			</build>
 			<modules>
 				<!-- exclusive for P2 -->
-				<module>org.lunifera.ecview.core.target.kepler</module>
+				<!-- <module>org.lunifera.ecview.core.target.kepler</module> -->
+				<!-- <module>org.lunifera.ecview.core.target.luna</module> -->
 				<module>org.lunifera.ecview.core.common</module>
 				<module>org.lunifera.ecview.core.databinding.beans</module>
 				<!-- P2 bundles -->
