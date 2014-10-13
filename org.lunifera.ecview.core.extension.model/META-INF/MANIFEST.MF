@@ -17,6 +17,6 @@ Export-Package: org.lunifera.ecview.core.extension.model.datatypes;ver
  fera.ecview.core.extension.model.extension.util;version="0.7.4"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.lunifera.ecview.core.common.model;bundle-version="[0.7.0,0.8.0)";visibility:=reexport,
- org.lunifera.ecview.core.extension.model;bundle-version="[0.7.0,0.8.0)"
+ org.lunifera.ecview.core.common.model;bundle-version="[0.7.4,0.8.0)";visibility:=reexport,
+ org.lunifera.ecview.core.extension.model;bundle-version="[0.7.4,0.8.0)"
 Bundle-ActivationPolicy: lazy
