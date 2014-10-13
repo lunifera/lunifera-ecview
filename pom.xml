@@ -399,4 +399,9 @@
 	</build>
 	<name>ECView parent</name>
 	<description>ECView parent</description>
+	<parent>
+		<groupId>org.lunifera.releng.maven</groupId>
+		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
+		<version>0.10.1-SNAPSHOT</version>
+	</parent>
 </project>
