@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.lunifera.ecview.core</groupId>
-		<artifactId>org.lunifera.ecview.core</artifactId>
-		<version>0.7.5-SNAPSHOT</version>
+		<groupId>org.lunifera.releng.maven</groupId>
+		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
+		<version>0.12.3-SNAPSHOT</version>
 	</parent>
 	<artifactId>org.lunifera.ecview.core.p2</artifactId>
 	<name>ECView P2 repo</name>
