@@ -209,6 +209,22 @@
 				<!-- P2 bundles -->
 			</modules>
 		</profile>
+		
+<!-- 		<profile> -->
+<!-- 			<id>build.p2</id> -->
+<!-- 			<activation> -->
+<!-- 				<property> -->
+<!-- 					<name>lunifera.build.p2</name> -->
+<!-- 				</property> -->
+<!-- 			</activation> -->
+<!-- 			<build> -->
+<!-- 				<defaultGoal>clean verify</defaultGoal> -->
+<!-- 			</build> -->
+<!-- 			<modules> -->
+<!-- 				<module>org.lunifera.ecview.core.p2</module> -->
+<!-- 			</modules> -->
+<!-- 		</profile> -->
+		
 		<profile>
 			<id>binding</id>
 			<activation>
