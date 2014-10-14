@@ -22,6 +22,7 @@ import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.datatypes.YOptionsGroupDataType;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 
@@ -34,6 +35,7 @@ import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getMultiSelectionBindingEndpoint <em>Multi Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#isUseBeanService <em>Use Bean Service</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getSelectionType <em>Selection Type</em>}</li>
@@ -83,6 +85,26 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * @ordered
 	 */
 	protected YEmbeddableMultiSelectionEndpoint multiSelectionBindingEndpoint;
+
+	/**
+	 * The default value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_BEAN_SERVICE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useBeanService = USE_BEAN_SERVICE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
@@ -479,6 +501,27 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT, newMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUseBeanService() {
+		return useBeanService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseBeanService(boolean newUseBeanService) {
+		boolean oldUseBeanService = useBeanService;
+		useBeanService = newUseBeanService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE, oldUseBeanService, useBeanService));
 	}
 
 	/**
@@ -882,6 +925,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getMultiSelectionBindingEndpoint();
 				return basicGetMultiSelectionBindingEndpoint();
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				return isUseBeanService();
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -930,6 +975,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)newValue);
+				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				setUseBeanService((Boolean)newValue);
 				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
@@ -992,6 +1040,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)null);
 				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				setUseBeanService(USE_BEAN_SERVICE_EDEFAULT);
+				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
@@ -1048,6 +1099,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return selectionBindingEndpoint != null;
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				return multiSelectionBindingEndpoint != null;
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				return useBeanService != USE_BEAN_SERVICE_EDEFAULT;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATATYPE:
@@ -1107,6 +1160,12 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -1139,6 +1198,12 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (baseFeatureID) {
+				case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE: return ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -1151,7 +1216,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (selectionType: ");
+		result.append(" (useBeanService: ");
+		result.append(useBeanService);
+		result.append(", selectionType: ");
 		result.append(selectionType);
 		result.append(", selection: ");
 		result.append(selection);

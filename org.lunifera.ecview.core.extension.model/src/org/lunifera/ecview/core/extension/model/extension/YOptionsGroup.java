@@ -37,7 +37,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YOptionsGroupDataType;
  * @model
  * @generated
  */
-public interface YOptionsGroup extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable {
+public interface YOptionsGroup extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->

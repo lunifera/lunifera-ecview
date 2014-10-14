@@ -1050,13 +1050,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTABLE__MULTI_SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Use Bean Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTABLE__USE_BEAN_SERVICE = YINPUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Datatype</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__DATATYPE = YINPUT_FEATURE_COUNT + 3;
+	int YTABLE__DATATYPE = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
@@ -1065,7 +1074,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 4;
+	int YTABLE__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Selection Type</b></em>' attribute.
@@ -1074,7 +1083,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 5;
+	int YTABLE__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' attribute.
@@ -1083,7 +1092,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__SELECTION = YINPUT_FEATURE_COUNT + 6;
+	int YTABLE__SELECTION = YINPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Multi Selection</b></em>' attribute list.
@@ -1092,7 +1101,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 7;
+	int YTABLE__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Collection</b></em>' attribute list.
@@ -1101,7 +1110,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__COLLECTION = YINPUT_FEATURE_COUNT + 8;
+	int YTABLE__COLLECTION = YINPUT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1110,7 +1119,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__TYPE = YINPUT_FEATURE_COUNT + 9;
+	int YTABLE__TYPE = YINPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
@@ -1119,7 +1128,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__EMF_NS_URI = YINPUT_FEATURE_COUNT + 10;
+	int YTABLE__EMF_NS_URI = YINPUT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
@@ -1128,7 +1137,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
+	int YTABLE__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
@@ -1137,7 +1146,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__COLUMNS = YINPUT_FEATURE_COUNT + 12;
+	int YTABLE__COLUMNS = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Item Image Property</b></em>' attribute.
@@ -1146,7 +1155,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+	int YTABLE__ITEM_IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' attribute.
@@ -1155,7 +1164,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE__FILTER = YINPUT_FEATURE_COUNT + 14;
+	int YTABLE__FILTER = YINPUT_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>YTable</em>' class.
@@ -1164,7 +1173,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 15;
+	int YTABLE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 16;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl <em>YColumn</em>}' class.
@@ -1567,13 +1576,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTREE__MULTI_SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Use Bean Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTREE__USE_BEAN_SERVICE = YINPUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Datatype</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__DATATYPE = YINPUT_FEATURE_COUNT + 3;
+	int YTREE__DATATYPE = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
@@ -1582,7 +1600,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 4;
+	int YTREE__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Selection Type</b></em>' attribute.
@@ -1591,7 +1609,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 5;
+	int YTREE__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' attribute.
@@ -1600,7 +1618,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__SELECTION = YINPUT_FEATURE_COUNT + 6;
+	int YTREE__SELECTION = YINPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Multi Selection</b></em>' attribute list.
@@ -1609,7 +1627,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 7;
+	int YTREE__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Collection</b></em>' attribute list.
@@ -1618,7 +1636,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__COLLECTION = YINPUT_FEATURE_COUNT + 8;
+	int YTREE__COLLECTION = YINPUT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1627,7 +1645,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__TYPE = YINPUT_FEATURE_COUNT + 9;
+	int YTREE__TYPE = YINPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
@@ -1636,7 +1654,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__EMF_NS_URI = YINPUT_FEATURE_COUNT + 10;
+	int YTREE__EMF_NS_URI = YINPUT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
@@ -1645,7 +1663,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
+	int YTREE__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>YTree</em>' class.
@@ -1654,7 +1672,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTREE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 12;
+	int YTREE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl <em>YOptions Group</em>}' class.
@@ -1820,13 +1838,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Use Bean Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP__USE_BEAN_SERVICE = YINPUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 3;
+	int YOPTIONS_GROUP__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Datatype</b></em>' reference.
@@ -1835,7 +1862,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__DATATYPE = YINPUT_FEATURE_COUNT + 4;
+	int YOPTIONS_GROUP__DATATYPE = YINPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Selection Type</b></em>' attribute.
@@ -1844,7 +1871,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 5;
+	int YOPTIONS_GROUP__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' attribute.
@@ -1853,7 +1880,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__SELECTION = YINPUT_FEATURE_COUNT + 6;
+	int YOPTIONS_GROUP__SELECTION = YINPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Multi Selection</b></em>' attribute list.
@@ -1862,7 +1889,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 7;
+	int YOPTIONS_GROUP__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Collection</b></em>' attribute list.
@@ -1871,7 +1898,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__COLLECTION = YINPUT_FEATURE_COUNT + 8;
+	int YOPTIONS_GROUP__COLLECTION = YINPUT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1880,7 +1907,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__TYPE = YINPUT_FEATURE_COUNT + 9;
+	int YOPTIONS_GROUP__TYPE = YINPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
@@ -1889,7 +1916,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__EMF_NS_URI = YINPUT_FEATURE_COUNT + 10;
+	int YOPTIONS_GROUP__EMF_NS_URI = YINPUT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
@@ -1898,7 +1925,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
+	int YOPTIONS_GROUP__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Caption Property</b></em>' attribute.
@@ -1907,7 +1934,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+	int YOPTIONS_GROUP__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Image Property</b></em>' attribute.
@@ -1916,7 +1943,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+	int YOPTIONS_GROUP__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
@@ -1925,7 +1952,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 14;
+	int YOPTIONS_GROUP__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1934,7 +1961,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP__DESCRIPTION = YINPUT_FEATURE_COUNT + 15;
+	int YOPTIONS_GROUP__DESCRIPTION = YINPUT_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>YOptions Group</em>' class.
@@ -1943,7 +1970,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 16;
+	int YOPTIONS_GROUP_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2099,13 +2126,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YLIST__MULTI_SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Use Bean Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST__USE_BEAN_SERVICE = YINPUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 3;
+	int YLIST__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Datatype</b></em>' reference.
@@ -2114,7 +2150,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__DATATYPE = YINPUT_FEATURE_COUNT + 4;
+	int YLIST__DATATYPE = YINPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Selection Type</b></em>' attribute.
@@ -2123,7 +2159,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 5;
+	int YLIST__SELECTION_TYPE = YINPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' attribute.
@@ -2132,7 +2168,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__SELECTION = YINPUT_FEATURE_COUNT + 6;
+	int YLIST__SELECTION = YINPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Multi Selection</b></em>' attribute list.
@@ -2141,7 +2177,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 7;
+	int YLIST__MULTI_SELECTION = YINPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Collection</b></em>' attribute list.
@@ -2150,7 +2186,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__COLLECTION = YINPUT_FEATURE_COUNT + 8;
+	int YLIST__COLLECTION = YINPUT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2159,7 +2195,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__TYPE = YINPUT_FEATURE_COUNT + 9;
+	int YLIST__TYPE = YINPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
@@ -2168,7 +2204,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__EMF_NS_URI = YINPUT_FEATURE_COUNT + 10;
+	int YLIST__EMF_NS_URI = YINPUT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
@@ -2177,7 +2213,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 11;
+	int YLIST__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Caption Property</b></em>' attribute.
@@ -2186,7 +2222,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
+	int YLIST__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Image Property</b></em>' attribute.
@@ -2195,7 +2231,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 13;
+	int YLIST__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
@@ -2204,7 +2240,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 14;
+	int YLIST__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2213,7 +2249,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST__DESCRIPTION = YINPUT_FEATURE_COUNT + 15;
+	int YLIST__DESCRIPTION = YINPUT_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>YList</em>' class.
@@ -2222,7 +2258,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YLIST_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 16;
+	int YLIST_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2875,13 +2911,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBEAN_REFERENCE_FIELD__VALUE_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Use Bean Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE = YINPUT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 1;
+	int YBEAN_REFERENCE_FIELD__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2890,7 +2935,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__VALUE = YINPUT_FEATURE_COUNT + 2;
+	int YBEAN_REFERENCE_FIELD__VALUE = YINPUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2899,7 +2944,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__TYPE = YINPUT_FEATURE_COUNT + 3;
+	int YBEAN_REFERENCE_FIELD__TYPE = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
@@ -2908,7 +2953,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__EMF_NS_URI = YINPUT_FEATURE_COUNT + 4;
+	int YBEAN_REFERENCE_FIELD__EMF_NS_URI = YINPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
@@ -2917,7 +2962,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 5;
+	int YBEAN_REFERENCE_FIELD__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>In Memory Bean Provider</b></em>' attribute.
@@ -2926,7 +2971,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER = YINPUT_FEATURE_COUNT + 6;
+	int YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER = YINPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>In Memory Bean Provider Qualified Name</b></em>' attribute.
@@ -2935,7 +2980,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 7;
+	int YBEAN_REFERENCE_FIELD__IN_MEMORY_BEAN_PROVIDER_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Caption Property Path</b></em>' attribute.
@@ -2944,7 +2989,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__CAPTION_PROPERTY_PATH = YINPUT_FEATURE_COUNT + 8;
+	int YBEAN_REFERENCE_FIELD__CAPTION_PROPERTY_PATH = YINPUT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Image Property Path</b></em>' attribute.
@@ -2953,7 +2998,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH = YINPUT_FEATURE_COUNT + 9;
+	int YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH = YINPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
@@ -2962,7 +3007,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 10;
+	int YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2971,7 +3016,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD__DESCRIPTION = YINPUT_FEATURE_COUNT + 11;
+	int YBEAN_REFERENCE_FIELD__DESCRIPTION = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>YBean Reference Field</em>' class.
@@ -2980,7 +3025,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 12;
+	int YBEAN_REFERENCE_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4153,13 +4198,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YCOMBO_BOX__SELECTION_BINDING_ENDPOINT = YINPUT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Use Bean Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMBO_BOX__USE_BEAN_SERVICE = YINPUT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 2;
+	int YCOMBO_BOX__DATADESCRIPTION = YINPUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Datatype</b></em>' reference.
@@ -4168,7 +4222,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__DATATYPE = YINPUT_FEATURE_COUNT + 3;
+	int YCOMBO_BOX__DATATYPE = YINPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Selection</b></em>' attribute.
@@ -4177,7 +4231,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__SELECTION = YINPUT_FEATURE_COUNT + 4;
+	int YCOMBO_BOX__SELECTION = YINPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Collection</b></em>' attribute list.
@@ -4186,7 +4240,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__COLLECTION = YINPUT_FEATURE_COUNT + 5;
+	int YCOMBO_BOX__COLLECTION = YINPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -4195,7 +4249,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__TYPE = YINPUT_FEATURE_COUNT + 6;
+	int YCOMBO_BOX__TYPE = YINPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
@@ -4204,7 +4258,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__EMF_NS_URI = YINPUT_FEATURE_COUNT + 7;
+	int YCOMBO_BOX__EMF_NS_URI = YINPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
@@ -4213,7 +4267,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 8;
+	int YCOMBO_BOX__TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Caption Property</b></em>' attribute.
@@ -4222,7 +4276,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 9;
+	int YCOMBO_BOX__CAPTION_PROPERTY = YINPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Image Property</b></em>' attribute.
@@ -4231,7 +4285,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 10;
+	int YCOMBO_BOX__IMAGE_PROPERTY = YINPUT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Description Property</b></em>' attribute.
@@ -4240,7 +4294,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 11;
+	int YCOMBO_BOX__DESCRIPTION_PROPERTY = YINPUT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4249,7 +4303,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX__DESCRIPTION = YINPUT_FEATURE_COUNT + 12;
+	int YCOMBO_BOX__DESCRIPTION = YINPUT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>YCombo Box</em>' class.
@@ -4258,7 +4312,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YCOMBO_BOX_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 13;
+	int YCOMBO_BOX_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -7382,6 +7436,34 @@ public interface ExtensionModelPackage extends EPackage {
 	int YENUM_COMBO_BOX_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 8;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer <em>YBean Service Consumer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBeanServiceConsumer()
+	 * @generated
+	 */
+	int YBEAN_SERVICE_CONSUMER = 42;
+
+	/**
+	 * The feature id for the '<em><b>Use Bean Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE = 0;
+
+	/**
+	 * The number of structural features of the '<em>YBean Service Consumer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_SERVICE_CONSUMER_FEATURE_COUNT = 1;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7389,7 +7471,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 45;
+	int YBUTTON_CLICK_LISTENER = 46;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -7399,7 +7481,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 42;
+	int YSELECTION_TYPE = 43;
 
 
 	/**
@@ -7410,7 +7492,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 43;
+	int YBOOLEAN_SEARCH_OPTION = 44;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -7420,7 +7502,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 44;
+	int YSEARCH_WILDCARDS = 45;
 
 
 	/**
@@ -9749,6 +9831,27 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYEnumComboBox_TypeQualifiedName();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer <em>YBean Service Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YBean Service Consumer</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer
+	 * @generated
+	 */
+	EClass getYBeanServiceConsumer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer#isUseBeanService <em>Use Bean Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Use Bean Service</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer#isUseBeanService()
+	 * @see #getYBeanServiceConsumer()
+	 * @generated
+	 */
+	EAttribute getYBeanServiceConsumer_UseBeanService();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11872,6 +11975,24 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YENUM_COMBO_BOX__TYPE_QUALIFIED_NAME = eINSTANCE.getYEnumComboBox_TypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer <em>YBean Service Consumer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBeanServiceConsumer()
+		 * @generated
+		 */
+		EClass YBEAN_SERVICE_CONSUMER = eINSTANCE.getYBeanServiceConsumer();
+
+		/**
+		 * The meta object literal for the '<em><b>Use Bean Service</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE = eINSTANCE.getYBeanServiceConsumer_UseBeanService();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.

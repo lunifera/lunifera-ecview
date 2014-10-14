@@ -45,7 +45,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTableDatatype;
  * @model
  * @generated
  */
-public interface YTable extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable {
+public interface YTable extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer {
 	/**
 	 * Returns the value of the '<em><b>Datatype</b></em>' reference.
 	 * <!-- begin-user-doc -->

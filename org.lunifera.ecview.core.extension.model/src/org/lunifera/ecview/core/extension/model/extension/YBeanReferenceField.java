@@ -32,7 +32,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * @model
  * @generated
  */
-public interface YBeanReferenceField extends YInput, YValueBindable {
+public interface YBeanReferenceField extends YInput, YValueBindable, YBeanServiceConsumer {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->

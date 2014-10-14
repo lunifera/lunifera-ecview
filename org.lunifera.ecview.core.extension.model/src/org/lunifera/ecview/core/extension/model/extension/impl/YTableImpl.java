@@ -24,6 +24,7 @@ import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.datatypes.YTableDatatype;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YColumn;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
@@ -37,6 +38,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTable;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getMultiSelectionBindingEndpoint <em>Multi Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#isUseBeanService <em>Use Bean Service</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getSelectionType <em>Selection Type</em>}</li>
@@ -82,6 +84,24 @@ public class YTableImpl extends YInputImpl implements YTable {
 	 * @ordered
 	 */
 	protected YEmbeddableMultiSelectionEndpoint multiSelectionBindingEndpoint;
+	/**
+	 * The default value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_BEAN_SERVICE_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useBeanService = USE_BEAN_SERVICE_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getDatatype() <em>Datatype</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -438,6 +458,27 @@ public class YTableImpl extends YInputImpl implements YTable {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTABLE__MULTI_SELECTION_BINDING_ENDPOINT, newMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUseBeanService() {
+		return useBeanService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseBeanService(boolean newUseBeanService) {
+		boolean oldUseBeanService = useBeanService;
+		useBeanService = newUseBeanService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTABLE__USE_BEAN_SERVICE, oldUseBeanService, useBeanService));
 	}
 
 	/**
@@ -815,6 +856,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 			case ExtensionModelPackage.YTABLE__MULTI_SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getMultiSelectionBindingEndpoint();
 				return basicGetMultiSelectionBindingEndpoint();
+			case ExtensionModelPackage.YTABLE__USE_BEAN_SERVICE:
+				return isUseBeanService();
 			case ExtensionModelPackage.YTABLE__DATATYPE:
 				if (resolve) return getDatatype();
 				return basicGetDatatype();
@@ -861,6 +904,9 @@ public class YTableImpl extends YInputImpl implements YTable {
 				return;
 			case ExtensionModelPackage.YTABLE__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)newValue);
+				return;
+			case ExtensionModelPackage.YTABLE__USE_BEAN_SERVICE:
+				setUseBeanService((Boolean)newValue);
 				return;
 			case ExtensionModelPackage.YTABLE__DATATYPE:
 				setDatatype((YTableDatatype)newValue);
@@ -921,6 +967,9 @@ public class YTableImpl extends YInputImpl implements YTable {
 			case ExtensionModelPackage.YTABLE__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)null);
 				return;
+			case ExtensionModelPackage.YTABLE__USE_BEAN_SERVICE:
+				setUseBeanService(USE_BEAN_SERVICE_EDEFAULT);
+				return;
 			case ExtensionModelPackage.YTABLE__DATATYPE:
 				setDatatype((YTableDatatype)null);
 				return;
@@ -974,6 +1023,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 				return selectionBindingEndpoint != null;
 			case ExtensionModelPackage.YTABLE__MULTI_SELECTION_BINDING_ENDPOINT:
 				return multiSelectionBindingEndpoint != null;
+			case ExtensionModelPackage.YTABLE__USE_BEAN_SERVICE:
+				return useBeanService != USE_BEAN_SERVICE_EDEFAULT;
 			case ExtensionModelPackage.YTABLE__DATATYPE:
 				return datatype != null;
 			case ExtensionModelPackage.YTABLE__DATADESCRIPTION:
@@ -1031,6 +1082,12 @@ public class YTableImpl extends YInputImpl implements YTable {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YTABLE__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -1063,6 +1120,12 @@ public class YTableImpl extends YInputImpl implements YTable {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (baseFeatureID) {
+				case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE: return ExtensionModelPackage.YTABLE__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -1075,7 +1138,9 @@ public class YTableImpl extends YInputImpl implements YTable {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (selectionType: ");
+		result.append(" (useBeanService: ");
+		result.append(useBeanService);
+		result.append(", selectionType: ");
 		result.append(selectionType);
 		result.append(", selection: ");
 		result.append(selection);

@@ -170,6 +170,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYCollectionBindable(yTable);
 				if (result == null) result = caseYSelectionBindable(yTable);
 				if (result == null) result = caseYMultiSelectionBindable(yTable);
+				if (result == null) result = caseYBeanServiceConsumer(yTable);
 				if (result == null) result = caseYField(yTable);
 				if (result == null) result = caseYBindable(yTable);
 				if (result == null) result = caseYEmbeddable(yTable);
@@ -195,6 +196,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYCollectionBindable(yTree);
 				if (result == null) result = caseYSelectionBindable(yTree);
 				if (result == null) result = caseYMultiSelectionBindable(yTree);
+				if (result == null) result = caseYBeanServiceConsumer(yTree);
 				if (result == null) result = caseYField(yTree);
 				if (result == null) result = caseYBindable(yTree);
 				if (result == null) result = caseYEmbeddable(yTree);
@@ -213,6 +215,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYCollectionBindable(yOptionsGroup);
 				if (result == null) result = caseYSelectionBindable(yOptionsGroup);
 				if (result == null) result = caseYMultiSelectionBindable(yOptionsGroup);
+				if (result == null) result = caseYBeanServiceConsumer(yOptionsGroup);
 				if (result == null) result = caseYField(yOptionsGroup);
 				if (result == null) result = caseYBindable(yOptionsGroup);
 				if (result == null) result = caseYEmbeddable(yOptionsGroup);
@@ -231,6 +234,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYCollectionBindable(yList);
 				if (result == null) result = caseYSelectionBindable(yList);
 				if (result == null) result = caseYMultiSelectionBindable(yList);
+				if (result == null) result = caseYBeanServiceConsumer(yList);
 				if (result == null) result = caseYField(yList);
 				if (result == null) result = caseYBindable(yList);
 				if (result == null) result = caseYEmbeddable(yList);
@@ -293,6 +297,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				T result = caseYBeanReferenceField(yBeanReferenceField);
 				if (result == null) result = caseYInput(yBeanReferenceField);
 				if (result == null) result = caseYValueBindable(yBeanReferenceField);
+				if (result == null) result = caseYBeanServiceConsumer(yBeanReferenceField);
 				if (result == null) result = caseYField(yBeanReferenceField);
 				if (result == null) result = caseYBindable(yBeanReferenceField);
 				if (result == null) result = caseYEmbeddable(yBeanReferenceField);
@@ -406,6 +411,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYInput(yComboBox);
 				if (result == null) result = caseYCollectionBindable(yComboBox);
 				if (result == null) result = caseYSelectionBindable(yComboBox);
+				if (result == null) result = caseYBeanServiceConsumer(yComboBox);
 				if (result == null) result = caseYField(yComboBox);
 				if (result == null) result = caseYBindable(yComboBox);
 				if (result == null) result = caseYEmbeddable(yComboBox);
@@ -671,6 +677,12 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(yEnumComboBox);
 				if (result == null) result = caseYCssAble(yEnumComboBox);
 				if (result == null) result = caseYVisibleable(yEnumComboBox);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER: {
+				YBeanServiceConsumer yBeanServiceConsumer = (YBeanServiceConsumer)theEObject;
+				T result = caseYBeanServiceConsumer(yBeanServiceConsumer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1275,6 +1287,21 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYEnumComboBox(YEnumComboBox object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YBean Service Consumer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YBean Service Consumer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYBeanServiceConsumer(YBeanServiceConsumer object) {
 		return null;
 	}
 
