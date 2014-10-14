@@ -21,6 +21,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.impl.ExtDatatypesPacka
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchOption;
 import org.lunifera.ecview.core.extension.model.extension.YBrowser;
@@ -326,6 +327,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass yEnumComboBoxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yBeanServiceConsumerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -2272,6 +2280,24 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYBeanServiceConsumer() {
+		return yBeanServiceConsumerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanServiceConsumer_UseBeanService() {
+		return (EAttribute)yBeanServiceConsumerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2812,6 +2838,9 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yEnumComboBoxEClass, YENUM_COMBO_BOX__EMF_NS_URI);
 		createEAttribute(yEnumComboBoxEClass, YENUM_COMBO_BOX__TYPE_QUALIFIED_NAME);
 
+		yBeanServiceConsumerEClass = createEClass(YBEAN_SERVICE_CONSUMER);
+		createEAttribute(yBeanServiceConsumerEClass, YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE);
+
 		// Create enums
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
 		yBooleanSearchOptionEEnum = createEEnum(YBOOLEAN_SEARCH_OPTION);
@@ -2868,19 +2897,23 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yTableEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
 		yTableEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
 		yTableEClass.getESuperTypes().add(theCoreModelPackage.getYMultiSelectionBindable());
+		yTableEClass.getESuperTypes().add(this.getYBeanServiceConsumer());
 		yColumnEClass.getESuperTypes().add(theCoreModelPackage.getYElement());
 		yTreeEClass.getESuperTypes().add(this.getYInput());
 		yTreeEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
 		yTreeEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
 		yTreeEClass.getESuperTypes().add(theCoreModelPackage.getYMultiSelectionBindable());
+		yTreeEClass.getESuperTypes().add(this.getYBeanServiceConsumer());
 		yOptionsGroupEClass.getESuperTypes().add(this.getYInput());
 		yOptionsGroupEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
 		yOptionsGroupEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
 		yOptionsGroupEClass.getESuperTypes().add(theCoreModelPackage.getYMultiSelectionBindable());
+		yOptionsGroupEClass.getESuperTypes().add(this.getYBeanServiceConsumer());
 		yListEClass.getESuperTypes().add(this.getYInput());
 		yListEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
 		yListEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
 		yListEClass.getESuperTypes().add(theCoreModelPackage.getYMultiSelectionBindable());
+		yListEClass.getESuperTypes().add(this.getYBeanServiceConsumer());
 		yLabelEClass.getESuperTypes().add(theCoreModelPackage.getYField());
 		yLabelEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yImageEClass.getESuperTypes().add(theCoreModelPackage.getYField());
@@ -2889,6 +2922,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yTextFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yBeanReferenceFieldEClass.getESuperTypes().add(this.getYInput());
 		yBeanReferenceFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
+		yBeanReferenceFieldEClass.getESuperTypes().add(this.getYBeanServiceConsumer());
 		yTextAreaEClass.getESuperTypes().add(this.getYInput());
 		yTextAreaEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yCheckBoxEClass.getESuperTypes().add(this.getYInput());
@@ -2904,6 +2938,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yComboBoxEClass.getESuperTypes().add(this.getYInput());
 		yComboBoxEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
 		yComboBoxEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
+		yComboBoxEClass.getESuperTypes().add(this.getYBeanServiceConsumer());
 		yButtonEClass.getESuperTypes().add(theCoreModelPackage.getYAction());
 		yButtonEClass.getESuperTypes().add(theCoreModelPackage.getYVisibleable());
 		yButtonEClass.getESuperTypes().add(theCoreModelPackage.getYEditable());
@@ -3294,6 +3329,9 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYEnumComboBox_Type(), g1, "type", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYEnumComboBox_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYEnumComboBox_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YEnumComboBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yBeanServiceConsumerEClass, YBeanServiceConsumer.class, "YBeanServiceConsumer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYBeanServiceConsumer_UseBeanService(), ecorePackage.getEBoolean(), "useBeanService", null, 0, 1, YBeanServiceConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");

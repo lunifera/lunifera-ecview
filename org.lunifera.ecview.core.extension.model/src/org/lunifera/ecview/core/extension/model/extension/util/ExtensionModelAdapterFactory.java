@@ -250,6 +250,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYEnumComboBoxAdapter();
 			}
 			@Override
+			public Adapter caseYBeanServiceConsumer(YBeanServiceConsumer object) {
+				return createYBeanServiceConsumerAdapter();
+			}
+			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
 			}
@@ -894,6 +898,20 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYEnumComboBoxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer <em>YBean Service Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer
+	 * @generated
+	 */
+	public Adapter createYBeanServiceConsumerAdapter() {
 		return null;
 	}
 

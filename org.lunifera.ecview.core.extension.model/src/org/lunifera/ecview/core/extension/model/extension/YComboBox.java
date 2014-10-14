@@ -43,7 +43,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YComboBoxDatatype;
  * @model
  * @generated
  */
-public interface YComboBox extends YInput, YCollectionBindable, YSelectionBindable {
+public interface YComboBox extends YInput, YCollectionBindable, YSelectionBindable, YBeanServiceConsumer {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->

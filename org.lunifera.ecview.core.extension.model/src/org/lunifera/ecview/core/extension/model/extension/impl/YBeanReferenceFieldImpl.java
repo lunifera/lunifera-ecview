@@ -14,6 +14,7 @@ import org.lunifera.ecview.core.common.model.core.YValueBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +24,7 @@ import org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getValueBindingEndpoint <em>Value Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#isUseBeanService <em>Use Bean Service</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getType <em>Type</em>}</li>
@@ -49,6 +51,26 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 	 * @ordered
 	 */
 	protected YEmbeddableValueEndpoint valueBindingEndpoint;
+
+	/**
+	 * The default value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_BEAN_SERVICE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useBeanService = USE_BEAN_SERVICE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
@@ -317,6 +339,27 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBEAN_REFERENCE_FIELD__VALUE_BINDING_ENDPOINT, newValueBindingEndpoint, newValueBindingEndpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUseBeanService() {
+		return useBeanService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseBeanService(boolean newUseBeanService) {
+		boolean oldUseBeanService = useBeanService;
+		useBeanService = newUseBeanService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE, oldUseBeanService, useBeanService));
 	}
 
 	/**
@@ -619,6 +662,8 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__VALUE_BINDING_ENDPOINT:
 				if (resolve) return getValueBindingEndpoint();
 				return basicGetValueBindingEndpoint();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE:
+				return isUseBeanService();
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -656,6 +701,9 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 		switch (featureID) {
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__VALUE_BINDING_ENDPOINT:
 				setValueBindingEndpoint((YEmbeddableValueEndpoint)newValue);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE:
+				setUseBeanService((Boolean)newValue);
 				return;
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
@@ -705,6 +753,9 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__VALUE_BINDING_ENDPOINT:
 				setValueBindingEndpoint((YEmbeddableValueEndpoint)null);
 				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE:
+				setUseBeanService(USE_BEAN_SERVICE_EDEFAULT);
+				return;
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
@@ -752,6 +803,8 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 		switch (featureID) {
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__VALUE_BINDING_ENDPOINT:
 				return valueBindingEndpoint != null;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE:
+				return useBeanService != USE_BEAN_SERVICE_EDEFAULT;
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__VALUE:
@@ -796,6 +849,12 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -817,6 +876,12 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (baseFeatureID) {
+				case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_REFERENCE_FIELD__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -830,7 +895,9 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
+		result.append(" (useBeanService: ");
+		result.append(useBeanService);
+		result.append(", value: ");
 		result.append(value);
 		result.append(", type: ");
 		result.append(type);

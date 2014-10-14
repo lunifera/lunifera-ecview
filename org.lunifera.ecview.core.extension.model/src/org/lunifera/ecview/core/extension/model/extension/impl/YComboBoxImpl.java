@@ -21,6 +21,7 @@ import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.datatypes.YComboBoxDatatype;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YComboBox;
 
 /**
@@ -31,6 +32,7 @@ import org.lunifera.ecview.core.extension.model.extension.YComboBox;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#isUseBeanService <em>Use Bean Service</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getSelection <em>Selection</em>}</li>
@@ -67,6 +69,26 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 	 * @ordered
 	 */
 	protected YEmbeddableSelectionEndpoint selectionBindingEndpoint;
+
+	/**
+	 * The default value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_BEAN_SERVICE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useBeanService = USE_BEAN_SERVICE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
@@ -376,6 +398,27 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT, newSelectionBindingEndpoint, newSelectionBindingEndpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUseBeanService() {
+		return useBeanService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseBeanService(boolean newUseBeanService) {
+		boolean oldUseBeanService = useBeanService;
+		useBeanService = newUseBeanService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE, oldUseBeanService, useBeanService));
 	}
 
 	/**
@@ -753,6 +796,8 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getSelectionBindingEndpoint();
 				return basicGetSelectionBindingEndpoint();
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				return isUseBeanService();
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -794,6 +839,9 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				return;
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				setSelectionBindingEndpoint((YEmbeddableSelectionEndpoint)newValue);
+				return;
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				setUseBeanService((Boolean)newValue);
 				return;
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
@@ -846,6 +894,9 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				setSelectionBindingEndpoint((YEmbeddableSelectionEndpoint)null);
 				return;
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				setUseBeanService(USE_BEAN_SERVICE_EDEFAULT);
+				return;
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
@@ -894,6 +945,8 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				return collectionBindingEndpoint != null;
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				return selectionBindingEndpoint != null;
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				return useBeanService != USE_BEAN_SERVICE_EDEFAULT;
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YCOMBO_BOX__DATATYPE:
@@ -943,6 +996,12 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -969,6 +1028,12 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (baseFeatureID) {
+				case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE: return ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -981,7 +1046,9 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (selection: ");
+		result.append(" (useBeanService: ");
+		result.append(useBeanService);
+		result.append(", selection: ");
 		result.append(selection);
 		result.append(", collection: ");
 		result.append(collection);

@@ -46,7 +46,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
  * @model
  * @generated
  */
-public interface YList extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable {
+public interface YList extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->

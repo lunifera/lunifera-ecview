@@ -86,7 +86,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YTable" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable">
+  <eClassifiers xsi:type="ecore:EClass" name="YTable" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable #//YBeanServiceConsumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YTableDatatype"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectionType" eType="#//YSelectionType"/>
@@ -131,7 +131,7 @@
         defaultValueLiteral="-1.0f"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YTree" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable">
+  <eClassifiers xsi:type="ecore:EClass" name="YTree" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable #//YBeanServiceConsumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YTreeDatatype"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectionType" eType="#//YSelectionType"/>
@@ -151,7 +151,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YOptionsGroup" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable">
+  <eClassifiers xsi:type="ecore:EClass" name="YOptionsGroup" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable #//YBeanServiceConsumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YOptionsGroupDataType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectionType" eType="#//YSelectionType"/>
@@ -175,7 +175,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YList" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable">
+  <eClassifiers xsi:type="ecore:EClass" name="YList" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMultiSelectionBindable #//YBeanServiceConsumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YListDataType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectionType" eType="#//YSelectionType"/>
@@ -215,7 +215,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         transient="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YBeanReferenceField" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YValueBindable">
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanReferenceField" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YValueBindable #//YBeanServiceConsumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
         transient="true"/>
@@ -274,7 +274,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
         transient="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YComboBox" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable">
+  <eClassifiers xsi:type="ecore:EClass" name="YComboBox" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCollectionBindable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSelectionBindable #//YBeanServiceConsumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YComboBoxDatatype"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
@@ -506,5 +506,9 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanServiceConsumer" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useBeanService" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
 </ecore:EPackage>
