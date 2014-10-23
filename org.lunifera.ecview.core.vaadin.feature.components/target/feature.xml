@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.lunifera.runtime.web.feature.vaadin.components"
+      label="%featureName"
+      version="0.7.3.201409081045"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="org.lunifera.runtime.web.vaadin.components"
+         download-size="34"
+         install-size="72"
+         version="0.7.3.201409081045"
+         unpack="false"/>
+
+	<plugin
+	     id="org.lunifera.runtime.web.vaadin.widgetset"
+	     download-size="604"
+	     install-size="3482"
+	     version="0.7.3.201409081045"
+	     unpack="false"/>
+
+</feature>

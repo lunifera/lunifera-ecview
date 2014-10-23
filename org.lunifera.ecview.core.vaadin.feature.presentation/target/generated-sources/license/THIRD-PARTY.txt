@@ -1,0 +1,16 @@
+
+Lists of 14 third-party dependencies.
+     (Eclipse Public License - v 1.0) (GNU Lesser General Public License) Logback Classic Module (ch.qos.logback:logback-classic:1.0.13 - http://logback.qos.ch)
+     (Eclipse Public License - v 1.0) (GNU Lesser General Public License) Logback Core Module (ch.qos.logback:logback-core:1.0.13 - http://logback.qos.ch)
+     (The Apache Software License, Version 2.0) Guava: Google Core Libraries for Java (com.google.guava:guava:16.0.1 - http://code.google.com/p/guava-libraries/guava)
+     (Apache License Version 2.0) Vaadin (com.vaadin:vaadin-themes:7.2.5 - http://vaadin.com)
+     (The Apache Software License, Version 2.0) Commons IO (commons-io:commons-io:2.4 - http://commons.apache.org/io/)
+     (Common Public License Version 1.0) JUnit (junit:junit:4.11 - http://junit.org)
+     (New BSD License) Hamcrest Core (org.hamcrest:hamcrest-core:1.3 - https://github.com/hamcrest/JavaHamcrest/hamcrest-core)
+     (New BSD License) Hamcrest Integration (org.hamcrest:hamcrest-integration:1.3 - https://github.com/hamcrest/JavaHamcrest/hamcrest-integration)
+     (New BSD License) Hamcrest library (org.hamcrest:hamcrest-library:1.3 - https://github.com/hamcrest/JavaHamcrest/hamcrest-library)
+     (Eclipse Public License v1.0) Lunifera Releng Maven - Licenses Repository Artifact (org.lunifera.releng.maven:lunifera-releng-maven-licenses:0.10.1-SNAPSHOT - http://lunifera.github.io/lunifera-releng-maven/lunifera-releng-maven-licenses)
+     (Eclipse Public License v1.0) Vaadin presentation layer of ECView (org.lunifera.runtime.web:org.lunifera.runtime.web.ecview.presentation.vaadin:0.7.3-SNAPSHOT - http://lunifera.github.io/lunifera-releng-maven/lunifera-releng-maven-parent-tycho/org.lunifera.runtime.web.parent/org.lunifera.runtime.web.ecview.presentation.vaadin)
+     (Eclipse Public License v1.0) Vaadin components for Lunifera (org.lunifera.runtime.web:org.lunifera.runtime.web.vaadin.components:0.7.3-SNAPSHOT - http://lunifera.github.io/lunifera-releng-maven/lunifera-releng-maven-parent-tycho/org.lunifera.runtime.web.parent/org.lunifera.runtime.web.vaadin.components)
+     (Eclipse Public License v1.0) Eclipse Databinding for Vaadin (org.lunifera.runtime.web:org.lunifera.runtime.web.vaadin.databinding:0.7.3-SNAPSHOT - http://lunifera.github.io/lunifera-releng-maven/lunifera-releng-maven-parent-tycho/org.lunifera.runtime.web.parent/org.lunifera.runtime.web.vaadin.databinding)
+     (MIT License) SLF4J API Module (org.slf4j:slf4j-api:1.7.5 - http://www.slf4j.org)
