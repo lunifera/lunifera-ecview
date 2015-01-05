@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Common API
 Bundle-SymbolicName: org.lunifera.ecview.core.ui.presentation.common
-Bundle-Version: 0.8.0
+Bundle-Version: 0.8.1.qualifier
 Import-Package: org.apache.commons.logging;version="1.0.4",
  org.osgi.service.component;version="1.2.0",
  org.slf4j
