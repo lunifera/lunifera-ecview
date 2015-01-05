@@ -146,6 +146,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYTextFieldAdapter();
 			}
 			@Override
+			public Adapter caseYBeanReferenceField(YBeanReferenceField object) {
+				return createYBeanReferenceFieldAdapter();
+			}
+			@Override
 			public Adapter caseYTextArea(YTextArea object) {
 				return createYTextAreaAdapter();
 			}
@@ -232,6 +236,22 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYSearchPanel(YSearchPanel object) {
 				return createYSearchPanelAdapter();
+			}
+			@Override
+			public Adapter caseYEnumOptionsGroup(YEnumOptionsGroup object) {
+				return createYEnumOptionsGroupAdapter();
+			}
+			@Override
+			public Adapter caseYEnumList(YEnumList object) {
+				return createYEnumListAdapter();
+			}
+			@Override
+			public Adapter caseYEnumComboBox(YEnumComboBox object) {
+				return createYEnumComboBoxAdapter();
+			}
+			@Override
+			public Adapter caseYBeanServiceConsumer(YBeanServiceConsumer object) {
+				return createYBeanServiceConsumerAdapter();
 			}
 			@Override
 			public Adapter caseYElement(YElement object) {
@@ -332,6 +352,20 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYTextFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField <em>YBean Reference Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField
+	 * @generated
+	 */
+	public Adapter createYBeanReferenceFieldAdapter() {
 		return null;
 	}
 
@@ -822,6 +856,62 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYSearchPanelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup <em>YEnum Options Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup
+	 * @generated
+	 */
+	public Adapter createYEnumOptionsGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YEnumList <em>YEnum List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumList
+	 * @generated
+	 */
+	public Adapter createYEnumListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YEnumComboBox <em>YEnum Combo Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YEnumComboBox
+	 * @generated
+	 */
+	public Adapter createYEnumComboBoxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer <em>YBean Service Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer
+	 * @generated
+	 */
+	public Adapter createYBeanServiceConsumerAdapter() {
 		return null;
 	}
 

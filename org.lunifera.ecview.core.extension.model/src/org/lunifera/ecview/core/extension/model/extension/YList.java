@@ -35,6 +35,10 @@ import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getType <em>Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getCaptionProperty <em>Caption Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getImageProperty <em>Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getDescriptionProperty <em>Description Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YList#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,7 +46,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
  * @model
  * @generated
  */
-public interface YList extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable {
+public interface YList extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -259,5 +263,109 @@ public interface YList extends YInput, YCollectionBindable, YSelectionBindable, 
 	 * @generated
 	 */
 	void setTypeQualifiedName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Caption Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Caption Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Caption Property</em>' attribute.
+	 * @see #setCaptionProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYList_CaptionProperty()
+	 * @model
+	 * @generated
+	 */
+	String getCaptionProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YList#getCaptionProperty <em>Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Caption Property</em>' attribute.
+	 * @see #getCaptionProperty()
+	 * @generated
+	 */
+	void setCaptionProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Image Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Image Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Image Property</em>' attribute.
+	 * @see #setImageProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYList_ImageProperty()
+	 * @model
+	 * @generated
+	 */
+	String getImageProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YList#getImageProperty <em>Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Image Property</em>' attribute.
+	 * @see #getImageProperty()
+	 * @generated
+	 */
+	void setImageProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description Property</em>' attribute.
+	 * @see #setDescriptionProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYList_DescriptionProperty()
+	 * @model
+	 * @generated
+	 */
+	String getDescriptionProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YList#getDescriptionProperty <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description Property</em>' attribute.
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 */
+	void setDescriptionProperty(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYList_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YList#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // YUiList

@@ -70,6 +70,7 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YLABEL: return createYLabel();
 			case ExtensionModelPackage.YIMAGE: return createYImage();
 			case ExtensionModelPackage.YTEXT_FIELD: return createYTextField();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD: return createYBeanReferenceField();
 			case ExtensionModelPackage.YTEXT_AREA: return createYTextArea();
 			case ExtensionModelPackage.YCHECK_BOX: return createYCheckBox();
 			case ExtensionModelPackage.YBROWSER: return createYBrowser();
@@ -92,6 +93,9 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YPANEL: return createYPanel();
 			case ExtensionModelPackage.YSPLIT_PANEL: return createYSplitPanel();
 			case ExtensionModelPackage.YSEARCH_PANEL: return createYSearchPanel();
+			case ExtensionModelPackage.YENUM_OPTIONS_GROUP: return createYEnumOptionsGroup();
+			case ExtensionModelPackage.YENUM_LIST: return createYEnumList();
+			case ExtensionModelPackage.YENUM_COMBO_BOX: return createYEnumComboBox();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -147,6 +151,16 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YTextField createYTextField() {
 		YTextFieldImpl yTextField = new YTextFieldImpl();
 		return yTextField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YBeanReferenceField createYBeanReferenceField() {
+		YBeanReferenceFieldImpl yBeanReferenceField = new YBeanReferenceFieldImpl();
+		return yBeanReferenceField;
 	}
 
 	/**
@@ -487,6 +501,36 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YSearchPanel createYSearchPanel() {
 		YSearchPanelImpl ySearchPanel = new YSearchPanelImpl();
 		return ySearchPanel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YEnumOptionsGroup createYEnumOptionsGroup() {
+		YEnumOptionsGroupImpl yEnumOptionsGroup = new YEnumOptionsGroupImpl();
+		return yEnumOptionsGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YEnumList createYEnumList() {
+		YEnumListImpl yEnumList = new YEnumListImpl();
+		return yEnumList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YEnumComboBox createYEnumComboBox() {
+		YEnumComboBoxImpl yEnumComboBox = new YEnumComboBoxImpl();
+		return yEnumComboBox;
 	}
 
 	/**

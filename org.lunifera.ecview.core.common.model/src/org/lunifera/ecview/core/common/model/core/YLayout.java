@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface YLayout extends YEmbeddable {
+public interface YLayout extends YEmbeddable, YEditable, YEnable {
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference
 	 * list. The list contents are of type

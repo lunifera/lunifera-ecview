@@ -14,6 +14,7 @@ import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YDeviceType;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
@@ -43,6 +44,10 @@ public interface YViewValidator {
 	boolean validateContentAlignment(YAlignment value);
 
 	boolean validateVisibilityProcessors(EList<YVisibilityProcessor> value);
+
+	boolean validateExposedActions(EList<YExposedAction> value);
+
+	boolean validateExposedActions(YExposedAction value);
 
 	boolean validateVisibilityProcessor(EList<YVisibilityProcessor> value);
 

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lunifera.ecview.core</groupId>
 	<artifactId>org.lunifera.ecview.core</artifactId>
-	<version>0.7.4</version>
+	<version>0.8.0</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -35,8 +35,8 @@
 
 	<properties>
 		<next-release>0.7.6</next-release>
-		<tycho-version>0.20.0</tycho-version>
-		<tychoExtrasVersion>0.20.0</tychoExtrasVersion>
+		<tycho-version>0.21.0</tycho-version>
+		<tychoExtrasVersion>0.21.0</tychoExtrasVersion>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -132,8 +132,7 @@
 				<module>org.lunifera.ecview.core.extension.tests</module>
 				<module>org.lunifera.ecview.core.databinding.tests</module>
 				<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
-				<!-- <module>org.lunifera.ecview.core.target.kepler</module> -->
-				<!-- <module>org.lunifera.ecview.core.target.luna</module> -->
+				<module>org.lunifera.ecview.core.target.kepler</module>
 				<module>org.lunifera.ecview.core.common</module>
 				<module>org.lunifera.ecview.core.common.model</module>
 				<module>org.lunifera.ecview.core.extension.model</module>
@@ -162,41 +161,56 @@
 			</activation>
 			<build>
 				<defaultGoal>verify</defaultGoal>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<groupId>org.eclipse.tycho</groupId>
-							<artifactId>target-platform-configuration</artifactId>
-							<version>${tycho-version}</version>
-							<configuration>
-								<resolver>p2</resolver>
-								<pomDependencies>consider</pomDependencies>
-								<environments>
-									<environment>
-										<os>win32</os>
-										<ws>win32</ws>
-										<arch>x86_64</arch>
-									</environment>
-									<environment>
-										<os>linux</os>
-										<ws>gtk</ws>
-										<arch>x86</arch>
-									</environment>
-									<environment>
-										<os>linux</os>
-										<ws>gtk</ws>
-										<arch>x86_64</arch>
-									</environment>
-									<environment>
-										<os>macosx</os>
-										<ws>cocoa</ws>
-										<arch>x86_64</arch>
-									</environment>
-								</environments>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>target-platform-configuration</artifactId>
+						<version>${tycho-version}</version>
+						<configuration>
+							<dependency-resolution>
+								<optionalDependencies>ignore</optionalDependencies>
+							</dependency-resolution>
+							<!-- <resolver>p2</resolver> -->
+							<!-- <pomDependencies>consider</pomDependencies> -->
+							<ignoreTychoRepositories>true</ignoreTychoRepositories>
+							<target>
+								<artifact>
+									<groupId>org.lunifera.ecview.core</groupId>
+									<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
+									<version>${project.version}</version>
+								</artifact>
+							</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<artifactId>maven-clean-plugin</artifactId>
+						<configuration>
+							<filesets>
+								<fileset>
+									<directory>xtend-gen</directory>
+									<includes>
+										<include>**</include>
+									</includes>
+								</fileset>
+							</filesets>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.eclipse.xtend</groupId>
+						<artifactId>xtend-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>compile</goal>
+									<goal>testCompile</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>xtend-gen</outputDirectory>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
 			</build>
 			<modules>
 				<!-- exclusive for P2 -->
@@ -228,6 +242,21 @@
 				<!-- P2 bundles -->
 			</modules>
 		</profile>
+
+		<!-- <profile> -->
+		<!-- <id>build.p2</id> -->
+		<!-- <activation> -->
+		<!-- <property> -->
+		<!-- <name>lunifera.build.p2</name> -->
+		<!-- </property> -->
+		<!-- </activation> -->
+		<!-- <build> -->
+		<!-- <defaultGoal>clean verify</defaultGoal> -->
+		<!-- </build> -->
+		<!-- <modules> -->
+		<!-- <module>org.lunifera.ecview.core.p2</module> -->
+		<!-- </modules> -->
+		<!-- </profile> -->
 
 		<profile>
 			<id>binding</id>

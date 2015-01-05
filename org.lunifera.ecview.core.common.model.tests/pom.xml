@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.lunifera.ecview.core</groupId>
     <artifactId>org.lunifera.ecview.core</artifactId>
-    <version>0.7.4</version>
+    <version>0.8.0</version>
   </parent>
   <artifactId>org.lunifera.ecview.core.common.model.tests</artifactId>
   <packaging>eclipse-test-plugin</packaging>

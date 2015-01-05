@@ -33,7 +33,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTreeDatatype;
  * @model
  * @generated
  */
-public interface YTree extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable {
+public interface YTree extends YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer {
 	/**
 	 * Returns the value of the '<em><b>Datatype</b></em>' reference.
 	 * <!-- begin-user-doc -->

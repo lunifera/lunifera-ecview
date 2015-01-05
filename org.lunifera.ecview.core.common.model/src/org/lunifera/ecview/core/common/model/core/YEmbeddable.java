@@ -22,12 +22,8 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.YEmbeddable#getOrphanDatatypes
- * <em>Orphan Datatypes</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.YEmbeddable#getOrphanDatadescriptions
- * <em>Orphan Datadescriptions</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YEmbeddable#getOrphanDatatypes <em>Orphan Datatypes</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YEmbeddable#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,9 +52,8 @@ public interface YEmbeddable extends YElement, YCssAble, YVisibleable {
 	EList<YDatatype> getOrphanDatatypes();
 
 	/**
-	 * Returns the value of the '<em><b>Orphan Datadescriptions</b></em>'
-	 * containment reference list. The list contents are of type
-	 * {@link org.lunifera.ecview.core.common.model.datatypes.YDatadescription}.
+	 * Returns the value of the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.datatypes.YDatadescription}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Orphan Datadescriptions</em>' containment
@@ -66,9 +61,7 @@ public interface YEmbeddable extends YElement, YCssAble, YVisibleable {
 	 * here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
-	 * @return the value of the '<em>Orphan Datadescriptions</em>' containment
-	 *         reference list.
+	 * @return the value of the '<em>Orphan Datadescriptions</em>' containment reference list.
 	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYEmbeddable_OrphanDatadescriptions()
 	 * @model containment="true" resolveProxies="true"
 	 * @generated
@@ -82,7 +75,6 @@ public interface YEmbeddable extends YElement, YCssAble, YVisibleable {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @model kind="operation"
 	 * @generated
 	 */
@@ -90,7 +82,6 @@ public interface YEmbeddable extends YElement, YCssAble, YVisibleable {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @model kind="operation"
 	 * @generated
 	 */

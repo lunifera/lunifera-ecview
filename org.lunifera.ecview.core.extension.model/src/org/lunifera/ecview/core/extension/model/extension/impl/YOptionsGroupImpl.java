@@ -22,6 +22,7 @@ import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.datatypes.YOptionsGroupDataType;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 
@@ -34,6 +35,7 @@ import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getMultiSelectionBindingEndpoint <em>Multi Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#isUseBeanService <em>Use Bean Service</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getSelectionType <em>Selection Type</em>}</li>
@@ -43,8 +45,10 @@ import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getItemCaptionProperty <em>Item Caption Property</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getItemImageProperty <em>Item Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getCaptionProperty <em>Caption Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getImageProperty <em>Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getDescriptionProperty <em>Description Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YOptionsGroupImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,6 +85,26 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * @ordered
 	 */
 	protected YEmbeddableMultiSelectionEndpoint multiSelectionBindingEndpoint;
+
+	/**
+	 * The default value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_BEAN_SERVICE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useBeanService = USE_BEAN_SERVICE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
@@ -208,44 +232,84 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * The default value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemCaptionProperty()
+	 * @see #getCaptionProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ITEM_CAPTION_PROPERTY_EDEFAULT = null;
+	protected static final String CAPTION_PROPERTY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * The cached value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemCaptionProperty()
+	 * @see #getCaptionProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected String itemCaptionProperty = ITEM_CAPTION_PROPERTY_EDEFAULT;
+	protected String captionProperty = CAPTION_PROPERTY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * The default value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemImageProperty()
+	 * @see #getImageProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ITEM_IMAGE_PROPERTY_EDEFAULT = null;
+	protected static final String IMAGE_PROPERTY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * The cached value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemImageProperty()
+	 * @see #getImageProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected String itemImageProperty = ITEM_IMAGE_PROPERTY_EDEFAULT;
+	protected String imageProperty = IMAGE_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descriptionProperty = DESCRIPTION_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -437,6 +501,27 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT, newMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUseBeanService() {
+		return useBeanService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseBeanService(boolean newUseBeanService) {
+		boolean oldUseBeanService = useBeanService;
+		useBeanService = newUseBeanService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE, oldUseBeanService, useBeanService));
 	}
 
 	/**
@@ -635,8 +720,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getItemCaptionProperty() {
-		return itemCaptionProperty;
+	public String getCaptionProperty() {
+		return captionProperty;
 	}
 
 	/**
@@ -644,11 +729,11 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setItemCaptionProperty(String newItemCaptionProperty) {
-		String oldItemCaptionProperty = itemCaptionProperty;
-		itemCaptionProperty = newItemCaptionProperty;
+	public void setCaptionProperty(String newCaptionProperty) {
+		String oldCaptionProperty = captionProperty;
+		captionProperty = newCaptionProperty;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY, oldItemCaptionProperty, itemCaptionProperty));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__CAPTION_PROPERTY, oldCaptionProperty, captionProperty));
 	}
 
 	/**
@@ -656,8 +741,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getItemImageProperty() {
-		return itemImageProperty;
+	public String getImageProperty() {
+		return imageProperty;
 	}
 
 	/**
@@ -665,11 +750,53 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setItemImageProperty(String newItemImageProperty) {
-		String oldItemImageProperty = itemImageProperty;
-		itemImageProperty = newItemImageProperty;
+	public void setImageProperty(String newImageProperty) {
+		String oldImageProperty = imageProperty;
+		imageProperty = newImageProperty;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY, oldItemImageProperty, itemImageProperty));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__IMAGE_PROPERTY, oldImageProperty, imageProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescriptionProperty() {
+		return descriptionProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescriptionProperty(String newDescriptionProperty) {
+		String oldDescriptionProperty = descriptionProperty;
+		descriptionProperty = newDescriptionProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION_PROPERTY, oldDescriptionProperty, descriptionProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -798,6 +925,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getMultiSelectionBindingEndpoint();
 				return basicGetMultiSelectionBindingEndpoint();
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				return isUseBeanService();
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -818,10 +947,14 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return getEmfNsURI();
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return getTypeQualifiedName();
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
-				return getItemCaptionProperty();
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
-				return getItemImageProperty();
+			case ExtensionModelPackage.YOPTIONS_GROUP__CAPTION_PROPERTY:
+				return getCaptionProperty();
+			case ExtensionModelPackage.YOPTIONS_GROUP__IMAGE_PROPERTY:
+				return getImageProperty();
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION_PROPERTY:
+				return getDescriptionProperty();
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -842,6 +975,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)newValue);
+				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				setUseBeanService((Boolean)newValue);
 				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
@@ -872,11 +1008,17 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName((String)newValue);
 				return;
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
-				setItemCaptionProperty((String)newValue);
+			case ExtensionModelPackage.YOPTIONS_GROUP__CAPTION_PROPERTY:
+				setCaptionProperty((String)newValue);
 				return;
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
-				setItemImageProperty((String)newValue);
+			case ExtensionModelPackage.YOPTIONS_GROUP__IMAGE_PROPERTY:
+				setImageProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION_PROPERTY:
+				setDescriptionProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -897,6 +1039,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)null);
+				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				setUseBeanService(USE_BEAN_SERVICE_EDEFAULT);
 				return;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
@@ -925,11 +1070,17 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
-				setItemCaptionProperty(ITEM_CAPTION_PROPERTY_EDEFAULT);
+			case ExtensionModelPackage.YOPTIONS_GROUP__CAPTION_PROPERTY:
+				setCaptionProperty(CAPTION_PROPERTY_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
-				setItemImageProperty(ITEM_IMAGE_PROPERTY_EDEFAULT);
+			case ExtensionModelPackage.YOPTIONS_GROUP__IMAGE_PROPERTY:
+				setImageProperty(IMAGE_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION_PROPERTY:
+				setDescriptionProperty(DESCRIPTION_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -948,6 +1099,8 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return selectionBindingEndpoint != null;
 			case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT:
 				return multiSelectionBindingEndpoint != null;
+			case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE:
+				return useBeanService != USE_BEAN_SERVICE_EDEFAULT;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YOPTIONS_GROUP__DATATYPE:
@@ -966,10 +1119,14 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
 			case ExtensionModelPackage.YOPTIONS_GROUP__TYPE_QUALIFIED_NAME:
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_CAPTION_PROPERTY:
-				return ITEM_CAPTION_PROPERTY_EDEFAULT == null ? itemCaptionProperty != null : !ITEM_CAPTION_PROPERTY_EDEFAULT.equals(itemCaptionProperty);
-			case ExtensionModelPackage.YOPTIONS_GROUP__ITEM_IMAGE_PROPERTY:
-				return ITEM_IMAGE_PROPERTY_EDEFAULT == null ? itemImageProperty != null : !ITEM_IMAGE_PROPERTY_EDEFAULT.equals(itemImageProperty);
+			case ExtensionModelPackage.YOPTIONS_GROUP__CAPTION_PROPERTY:
+				return CAPTION_PROPERTY_EDEFAULT == null ? captionProperty != null : !CAPTION_PROPERTY_EDEFAULT.equals(captionProperty);
+			case ExtensionModelPackage.YOPTIONS_GROUP__IMAGE_PROPERTY:
+				return IMAGE_PROPERTY_EDEFAULT == null ? imageProperty != null : !IMAGE_PROPERTY_EDEFAULT.equals(imageProperty);
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION_PROPERTY:
+				return DESCRIPTION_PROPERTY_EDEFAULT == null ? descriptionProperty != null : !DESCRIPTION_PROPERTY_EDEFAULT.equals(descriptionProperty);
+			case ExtensionModelPackage.YOPTIONS_GROUP__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1000,6 +1157,12 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		if (baseClass == YMultiSelectionBindable.class) {
 			switch (derivedFeatureID) {
 				case ExtensionModelPackage.YOPTIONS_GROUP__MULTI_SELECTION_BINDING_ENDPOINT: return CoreModelPackage.YMULTI_SELECTION_BINDABLE__MULTI_SELECTION_BINDING_ENDPOINT;
+				default: return -1;
+			}
+		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE;
 				default: return -1;
 			}
 		}
@@ -1035,6 +1198,12 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (baseFeatureID) {
+				case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE: return ExtensionModelPackage.YOPTIONS_GROUP__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -1047,7 +1216,9 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (selectionType: ");
+		result.append(" (useBeanService: ");
+		result.append(useBeanService);
+		result.append(", selectionType: ");
 		result.append(selectionType);
 		result.append(", selection: ");
 		result.append(selection);
@@ -1061,10 +1232,14 @@ public class YOptionsGroupImpl extends YInputImpl implements YOptionsGroup {
 		result.append(emfNsURI);
 		result.append(", typeQualifiedName: ");
 		result.append(typeQualifiedName);
-		result.append(", itemCaptionProperty: ");
-		result.append(itemCaptionProperty);
-		result.append(", itemImageProperty: ");
-		result.append(itemImageProperty);
+		result.append(", captionProperty: ");
+		result.append(captionProperty);
+		result.append(", imageProperty: ");
+		result.append(imageProperty);
+		result.append(", descriptionProperty: ");
+		result.append(descriptionProperty);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

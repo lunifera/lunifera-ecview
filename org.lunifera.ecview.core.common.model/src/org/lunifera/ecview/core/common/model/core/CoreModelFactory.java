@@ -192,6 +192,15 @@ public interface CoreModelFactory extends EFactory {
 	YOpenDialogCommand createYOpenDialogCommand();
 
 	/**
+	 * Returns a new object of class '<em>YExposed Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YExposed Action</em>'.
+	 * @generated
+	 */
+	YExposedAction createYExposedAction();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

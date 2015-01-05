@@ -31,6 +31,15 @@ public interface ExtensionModelFactory extends EFactory {
 	YTextField createYTextField();
 
 	/**
+	 * Returns a new object of class '<em>YBean Reference Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YBean Reference Field</em>'.
+	 * @generated
+	 */
+	YBeanReferenceField createYBeanReferenceField();
+
+	/**
 	 * Returns a new object of class '<em>YGrid Layout</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -335,6 +344,33 @@ public interface ExtensionModelFactory extends EFactory {
 	 * @generated
 	 */
 	YSearchPanel createYSearchPanel();
+
+	/**
+	 * Returns a new object of class '<em>YEnum Options Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YEnum Options Group</em>'.
+	 * @generated
+	 */
+	YEnumOptionsGroup createYEnumOptionsGroup();
+
+	/**
+	 * Returns a new object of class '<em>YEnum List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YEnum List</em>'.
+	 * @generated
+	 */
+	YEnumList createYEnumList();
+
+	/**
+	 * Returns a new object of class '<em>YEnum Combo Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YEnum Combo Box</em>'.
+	 * @generated
+	 */
+	YEnumComboBox createYEnumComboBox();
 
 	/**
 	 * Returns a new object of class '<em>YTree</em>'.

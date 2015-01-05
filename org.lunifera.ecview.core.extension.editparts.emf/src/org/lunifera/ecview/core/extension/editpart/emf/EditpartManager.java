@@ -44,6 +44,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTextAreaDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YTreeDatatype;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YBrowser;
 import org.lunifera.ecview.core.extension.model.extension.YButton;
@@ -51,6 +52,9 @@ import org.lunifera.ecview.core.extension.model.extension.YCheckBox;
 import org.lunifera.ecview.core.extension.model.extension.YComboBox;
 import org.lunifera.ecview.core.extension.model.extension.YDateTime;
 import org.lunifera.ecview.core.extension.model.extension.YDecimalField;
+import org.lunifera.ecview.core.extension.model.extension.YEnumComboBox;
+import org.lunifera.ecview.core.extension.model.extension.YEnumList;
+import org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YFormLayout;
 import org.lunifera.ecview.core.extension.model.extension.YGridLayout;
 import org.lunifera.ecview.core.extension.model.extension.YHorizontalLayout;
@@ -73,12 +77,16 @@ import org.lunifera.ecview.core.extension.model.extension.YTextField;
 import org.lunifera.ecview.core.extension.model.extension.YTextSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YTree;
 import org.lunifera.ecview.core.extension.model.extension.YVerticalLayout;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IBeanReferenceFieldEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IBooleanSearchFieldEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IBrowserEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IButtonEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ICheckboxEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IDateTimeEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IDecimalFieldEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumComboBoxEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumListEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumOptionsGroupEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IFormLayoutEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IGridLayoutEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IHorizontalLayoutEditpart;
@@ -250,6 +258,16 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(PanelEditpart.class);
 		} else if (editPartClazz.isAssignableFrom(ISearchPanelEditpart.class)) {
 			result = createNewInstance(SearchPanelEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IBeanReferenceFieldEditpart.class)) {
+			result = createNewInstance(BeanReferenceFieldEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(IEnumComboBoxEditpart.class)) {
+			result = createNewInstance(EnumComboBoxEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(IEnumListEditpart.class)) {
+			result = createNewInstance(EnumListEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IEnumOptionsGroupEditpart.class)) {
+			result = createNewInstance(EnumOptionsGroupEditpart.class);
 		}
 
 		if (result != null) {
@@ -360,6 +378,14 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(PanelEditpart.class);
 		} else if (yElement instanceof YSearchPanel) {
 			result = createNewInstance(SearchPanelEditpart.class);
+		} else if (yElement instanceof YBeanReferenceField) {
+			result = createNewInstance(BeanReferenceFieldEditpart.class);
+		} else if (yElement instanceof YEnumComboBox) {
+			result = createNewInstance(EnumComboBoxEditpart.class);
+		} else if (yElement instanceof YEnumList) {
+			result = createNewInstance(EnumListEditpart.class);
+		} else if (yElement instanceof YEnumOptionsGroup) {
+			result = createNewInstance(EnumOptionsGroupEditpart.class);
 		}
 
 		if (result != null) {

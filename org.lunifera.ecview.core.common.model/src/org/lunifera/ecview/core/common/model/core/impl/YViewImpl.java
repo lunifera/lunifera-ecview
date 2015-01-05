@@ -31,6 +31,7 @@ import org.lunifera.ecview.core.common.model.core.YCssAble;
 import org.lunifera.ecview.core.common.model.core.YDeviceType;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
@@ -57,6 +58,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getDeviceType <em>Device Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getContentAlignment <em>Content Alignment</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getVisibilityProcessors <em>Visibility Processors</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getExposedActions <em>Exposed Actions</em>}</li>
  * </ul>
  * </p>
  *
@@ -278,6 +280,16 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected EList<YVisibilityProcessor> visibilityProcessors;
+
+	/**
+	 * The cached value of the '{@link #getExposedActions() <em>Exposed Actions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExposedActions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<YExposedAction> exposedActions;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -670,6 +682,18 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<YExposedAction> getExposedActions() {
+		if (exposedActions == null) {
+			exposedActions = new EObjectContainmentEList.Resolving<YExposedAction>(YExposedAction.class, this, CoreModelPackage.YVIEW__EXPOSED_ACTIONS);
+		}
+		return exposedActions;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -837,6 +861,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return ((InternalEList<?>)getDialogs()).basicRemove(otherEnd, msgs);
 			case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 				return ((InternalEList<?>)getVisibilityProcessors()).basicRemove(otherEnd, msgs);
+			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
+				return ((InternalEList<?>)getExposedActions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -882,6 +908,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getContentAlignment();
 			case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 				return getVisibilityProcessors();
+			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
+				return getExposedActions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -942,6 +970,10 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				getVisibilityProcessors().clear();
 				getVisibilityProcessors().addAll((Collection<? extends YVisibilityProcessor>)newValue);
 				return;
+			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
+				getExposedActions().clear();
+				getExposedActions().addAll((Collection<? extends YExposedAction>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -998,6 +1030,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 				getVisibilityProcessors().clear();
 				return;
+			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
+				getExposedActions().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1039,6 +1074,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return contentAlignment != CONTENT_ALIGNMENT_EDEFAULT;
 			case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 				return visibilityProcessors != null && !visibilityProcessors.isEmpty();
+			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
+				return exposedActions != null && !exposedActions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

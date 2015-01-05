@@ -21,6 +21,7 @@ import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.datatypes.YComboBoxDatatype;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YComboBox;
 
 /**
@@ -31,6 +32,7 @@ import org.lunifera.ecview.core.extension.model.extension.YComboBox;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#isUseBeanService <em>Use Bean Service</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getSelection <em>Selection</em>}</li>
@@ -38,8 +40,10 @@ import org.lunifera.ecview.core.extension.model.extension.YComboBox;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getItemCaptionProperty <em>Item Caption Property</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getItemImageProperty <em>Item Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getCaptionProperty <em>Caption Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getImageProperty <em>Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getDescriptionProperty <em>Description Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YComboBoxImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,6 +69,26 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 	 * @ordered
 	 */
 	protected YEmbeddableSelectionEndpoint selectionBindingEndpoint;
+
+	/**
+	 * The default value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_BEAN_SERVICE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useBeanService = USE_BEAN_SERVICE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
@@ -163,44 +187,84 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * The default value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemCaptionProperty()
+	 * @see #getCaptionProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ITEM_CAPTION_PROPERTY_EDEFAULT = null;
+	protected static final String CAPTION_PROPERTY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getItemCaptionProperty() <em>Item Caption Property</em>}' attribute.
+	 * The cached value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemCaptionProperty()
+	 * @see #getCaptionProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected String itemCaptionProperty = ITEM_CAPTION_PROPERTY_EDEFAULT;
+	protected String captionProperty = CAPTION_PROPERTY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * The default value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemImageProperty()
+	 * @see #getImageProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ITEM_IMAGE_PROPERTY_EDEFAULT = null;
+	protected static final String IMAGE_PROPERTY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getItemImageProperty() <em>Item Image Property</em>}' attribute.
+	 * The cached value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemImageProperty()
+	 * @see #getImageProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected String itemImageProperty = ITEM_IMAGE_PROPERTY_EDEFAULT;
+	protected String imageProperty = IMAGE_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descriptionProperty = DESCRIPTION_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -334,6 +398,27 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT, newSelectionBindingEndpoint, newSelectionBindingEndpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUseBeanService() {
+		return useBeanService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseBeanService(boolean newUseBeanService) {
+		boolean oldUseBeanService = useBeanService;
+		useBeanService = newUseBeanService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE, oldUseBeanService, useBeanService));
 	}
 
 	/**
@@ -504,8 +589,8 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getItemCaptionProperty() {
-		return itemCaptionProperty;
+	public String getCaptionProperty() {
+		return captionProperty;
 	}
 
 	/**
@@ -513,11 +598,11 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setItemCaptionProperty(String newItemCaptionProperty) {
-		String oldItemCaptionProperty = itemCaptionProperty;
-		itemCaptionProperty = newItemCaptionProperty;
+	public void setCaptionProperty(String newCaptionProperty) {
+		String oldCaptionProperty = captionProperty;
+		captionProperty = newCaptionProperty;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__ITEM_CAPTION_PROPERTY, oldItemCaptionProperty, itemCaptionProperty));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__CAPTION_PROPERTY, oldCaptionProperty, captionProperty));
 	}
 
 	/**
@@ -525,8 +610,8 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getItemImageProperty() {
-		return itemImageProperty;
+	public String getImageProperty() {
+		return imageProperty;
 	}
 
 	/**
@@ -534,11 +619,53 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setItemImageProperty(String newItemImageProperty) {
-		String oldItemImageProperty = itemImageProperty;
-		itemImageProperty = newItemImageProperty;
+	public void setImageProperty(String newImageProperty) {
+		String oldImageProperty = imageProperty;
+		imageProperty = newImageProperty;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__ITEM_IMAGE_PROPERTY, oldItemImageProperty, itemImageProperty));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__IMAGE_PROPERTY, oldImageProperty, imageProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescriptionProperty() {
+		return descriptionProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescriptionProperty(String newDescriptionProperty) {
+		String oldDescriptionProperty = descriptionProperty;
+		descriptionProperty = newDescriptionProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION_PROPERTY, oldDescriptionProperty, descriptionProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION, oldDescription, description));
 	}
 
 	//	/**
@@ -669,6 +796,8 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getSelectionBindingEndpoint();
 				return basicGetSelectionBindingEndpoint();
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				return isUseBeanService();
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -685,10 +814,14 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				return getEmfNsURI();
 			case ExtensionModelPackage.YCOMBO_BOX__TYPE_QUALIFIED_NAME:
 				return getTypeQualifiedName();
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_CAPTION_PROPERTY:
-				return getItemCaptionProperty();
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_IMAGE_PROPERTY:
-				return getItemImageProperty();
+			case ExtensionModelPackage.YCOMBO_BOX__CAPTION_PROPERTY:
+				return getCaptionProperty();
+			case ExtensionModelPackage.YCOMBO_BOX__IMAGE_PROPERTY:
+				return getImageProperty();
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION_PROPERTY:
+				return getDescriptionProperty();
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -706,6 +839,9 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				return;
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				setSelectionBindingEndpoint((YEmbeddableSelectionEndpoint)newValue);
+				return;
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				setUseBeanService((Boolean)newValue);
 				return;
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
@@ -729,11 +865,17 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 			case ExtensionModelPackage.YCOMBO_BOX__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName((String)newValue);
 				return;
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_CAPTION_PROPERTY:
-				setItemCaptionProperty((String)newValue);
+			case ExtensionModelPackage.YCOMBO_BOX__CAPTION_PROPERTY:
+				setCaptionProperty((String)newValue);
 				return;
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_IMAGE_PROPERTY:
-				setItemImageProperty((String)newValue);
+			case ExtensionModelPackage.YCOMBO_BOX__IMAGE_PROPERTY:
+				setImageProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION_PROPERTY:
+				setDescriptionProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -751,6 +893,9 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				return;
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				setSelectionBindingEndpoint((YEmbeddableSelectionEndpoint)null);
+				return;
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				setUseBeanService(USE_BEAN_SERVICE_EDEFAULT);
 				return;
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
@@ -773,11 +918,17 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 			case ExtensionModelPackage.YCOMBO_BOX__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_CAPTION_PROPERTY:
-				setItemCaptionProperty(ITEM_CAPTION_PROPERTY_EDEFAULT);
+			case ExtensionModelPackage.YCOMBO_BOX__CAPTION_PROPERTY:
+				setCaptionProperty(CAPTION_PROPERTY_EDEFAULT);
 				return;
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_IMAGE_PROPERTY:
-				setItemImageProperty(ITEM_IMAGE_PROPERTY_EDEFAULT);
+			case ExtensionModelPackage.YCOMBO_BOX__IMAGE_PROPERTY:
+				setImageProperty(IMAGE_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION_PROPERTY:
+				setDescriptionProperty(DESCRIPTION_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -794,6 +945,8 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				return collectionBindingEndpoint != null;
 			case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT:
 				return selectionBindingEndpoint != null;
+			case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE:
+				return useBeanService != USE_BEAN_SERVICE_EDEFAULT;
 			case ExtensionModelPackage.YCOMBO_BOX__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YCOMBO_BOX__DATATYPE:
@@ -808,10 +961,14 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
 			case ExtensionModelPackage.YCOMBO_BOX__TYPE_QUALIFIED_NAME:
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_CAPTION_PROPERTY:
-				return ITEM_CAPTION_PROPERTY_EDEFAULT == null ? itemCaptionProperty != null : !ITEM_CAPTION_PROPERTY_EDEFAULT.equals(itemCaptionProperty);
-			case ExtensionModelPackage.YCOMBO_BOX__ITEM_IMAGE_PROPERTY:
-				return ITEM_IMAGE_PROPERTY_EDEFAULT == null ? itemImageProperty != null : !ITEM_IMAGE_PROPERTY_EDEFAULT.equals(itemImageProperty);
+			case ExtensionModelPackage.YCOMBO_BOX__CAPTION_PROPERTY:
+				return CAPTION_PROPERTY_EDEFAULT == null ? captionProperty != null : !CAPTION_PROPERTY_EDEFAULT.equals(captionProperty);
+			case ExtensionModelPackage.YCOMBO_BOX__IMAGE_PROPERTY:
+				return IMAGE_PROPERTY_EDEFAULT == null ? imageProperty != null : !IMAGE_PROPERTY_EDEFAULT.equals(imageProperty);
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION_PROPERTY:
+				return DESCRIPTION_PROPERTY_EDEFAULT == null ? descriptionProperty != null : !DESCRIPTION_PROPERTY_EDEFAULT.equals(descriptionProperty);
+			case ExtensionModelPackage.YCOMBO_BOX__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -836,6 +993,12 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 		if (baseClass == YSelectionBindable.class) {
 			switch (derivedFeatureID) {
 				case ExtensionModelPackage.YCOMBO_BOX__SELECTION_BINDING_ENDPOINT: return CoreModelPackage.YSELECTION_BINDABLE__SELECTION_BINDING_ENDPOINT;
+				default: return -1;
+			}
+		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE;
 				default: return -1;
 			}
 		}
@@ -865,6 +1028,12 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (baseFeatureID) {
+				case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE: return ExtensionModelPackage.YCOMBO_BOX__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -877,7 +1046,9 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (selection: ");
+		result.append(" (useBeanService: ");
+		result.append(useBeanService);
+		result.append(", selection: ");
 		result.append(selection);
 		result.append(", collection: ");
 		result.append(collection);
@@ -887,10 +1058,14 @@ public class YComboBoxImpl extends YInputImpl implements YComboBox {
 		result.append(emfNsURI);
 		result.append(", typeQualifiedName: ");
 		result.append(typeQualifiedName);
-		result.append(", itemCaptionProperty: ");
-		result.append(itemCaptionProperty);
-		result.append(", itemImageProperty: ");
-		result.append(itemImageProperty);
+		result.append(", captionProperty: ");
+		result.append(captionProperty);
+		result.append(", imageProperty: ");
+		result.append(imageProperty);
+		result.append(", descriptionProperty: ");
+		result.append(descriptionProperty);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

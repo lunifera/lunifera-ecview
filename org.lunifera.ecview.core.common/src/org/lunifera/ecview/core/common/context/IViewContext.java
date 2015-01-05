@@ -10,10 +10,12 @@
  */
 package org.lunifera.ecview.core.common.context;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 
 import org.lunifera.ecview.core.common.beans.ISlot;
+import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.visibility.IVisibilityManager;
 
@@ -64,6 +66,16 @@ public interface IViewContext extends IContext {
 	 * @return parentContext
 	 */
 	IViewSetContext getParentContext();
+
+	/**
+	 * Returns a list of exposed actions. These actions must be supported by the
+	 * UI element, that embeds the view rendered by this context.<br>
+	 * Common usecases may be "loading models from JPA", "support JPA queries",
+	 * "open different eclipse or vaaclipse views",...
+	 * 
+	 * @return
+	 */
+	List<IExposedActionEditpart> getExposedActions();
 
 	/**
 	 * Registers an instance of value bean to the context. It can be accessed by

@@ -93,7 +93,7 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Attribute id : EString
     Attribute name : EString
 
-  Class YLayout -> YEmbeddable
+  Class YLayout -> YEmbeddable, YEditable, YEnable
     Reference elements : YEmbeddable<<0..*>>
 
   Class YField -> YEmbeddable, YEditable, YEnable
@@ -114,6 +114,7 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Attribute deviceType : YDeviceType
     Attribute contentAlignment : YAlignment
     Reference visibilityProcessors : YVisibilityProcessor<<0..*>>
+    Reference exposedActions : YExposedAction<<0..*>>
     Operation getOrCreateBindingSet() : YBindingSet
 
   Class YViewSet -> YElement
@@ -245,6 +246,12 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Attribute trigger : EJavaObject
     Operation getView() : YView
     Operation createTriggerDialogEndpoint() : YECViewModelValueBindingEndpoint
+
+  Class YExposedAction -> YElement
+    Attribute icon : EString
+    Attribute label : EString
+    Attribute labelI18nKey : EString
+    Operation getView() : YView
 
   Enum YDeviceType
     Literal IDE = 0

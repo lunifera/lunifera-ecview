@@ -22,6 +22,7 @@ import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YList;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 
@@ -34,6 +35,7 @@ import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getCollectionBindingEndpoint <em>Collection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getSelectionBindingEndpoint <em>Selection Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getMultiSelectionBindingEndpoint <em>Multi Selection Binding Endpoint</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#isUseBeanService <em>Use Bean Service</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getSelectionType <em>Selection Type</em>}</li>
@@ -43,6 +45,10 @@ import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getCaptionProperty <em>Caption Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getImageProperty <em>Image Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDescriptionProperty <em>Description Property</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YListImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,6 +84,26 @@ public class YListImpl extends YInputImpl implements YList {
 	 * @ordered
 	 */
 	protected YEmbeddableMultiSelectionEndpoint multiSelectionBindingEndpoint;
+
+	/**
+	 * The default value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean USE_BEAN_SERVICE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUseBeanService() <em>Use Bean Service</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUseBeanService()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean useBeanService = USE_BEAN_SERVICE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
@@ -203,6 +229,86 @@ public class YListImpl extends YInputImpl implements YList {
 	 * @ordered
 	 */
 	protected String typeQualifiedName = TYPE_QUALIFIED_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCaptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CAPTION_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCaptionProperty() <em>Caption Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCaptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String captionProperty = CAPTION_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImageProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMAGE_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getImageProperty() <em>Image Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImageProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String imageProperty = IMAGE_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescriptionProperty() <em>Description Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescriptionProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descriptionProperty = DESCRIPTION_PROPERTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -396,6 +502,27 @@ public class YListImpl extends YInputImpl implements YList {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT, newMultiSelectionBindingEndpoint, newMultiSelectionBindingEndpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isUseBeanService() {
+		return useBeanService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseBeanService(boolean newUseBeanService) {
+		boolean oldUseBeanService = useBeanService;
+		useBeanService = newUseBeanService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__USE_BEAN_SERVICE, oldUseBeanService, useBeanService));
 	}
 
 	/**
@@ -595,6 +722,90 @@ public class YListImpl extends YInputImpl implements YList {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCaptionProperty() {
+		return captionProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCaptionProperty(String newCaptionProperty) {
+		String oldCaptionProperty = captionProperty;
+		captionProperty = newCaptionProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__CAPTION_PROPERTY, oldCaptionProperty, captionProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getImageProperty() {
+		return imageProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImageProperty(String newImageProperty) {
+		String oldImageProperty = imageProperty;
+		imageProperty = newImageProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__IMAGE_PROPERTY, oldImageProperty, imageProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescriptionProperty() {
+		return descriptionProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescriptionProperty(String newDescriptionProperty) {
+		String oldDescriptionProperty = descriptionProperty;
+		descriptionProperty = newDescriptionProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY, oldDescriptionProperty, descriptionProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YLIST__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableMultiSelectionEndpoint createMultiSelectionEndpointGen() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -717,6 +928,8 @@ public class YListImpl extends YInputImpl implements YList {
 			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
 				if (resolve) return getMultiSelectionBindingEndpoint();
 				return basicGetMultiSelectionBindingEndpoint();
+			case ExtensionModelPackage.YLIST__USE_BEAN_SERVICE:
+				return isUseBeanService();
 			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -737,6 +950,14 @@ public class YListImpl extends YInputImpl implements YList {
 				return getEmfNsURI();
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				return getTypeQualifiedName();
+			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
+				return getCaptionProperty();
+			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
+				return getImageProperty();
+			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
+				return getDescriptionProperty();
+			case ExtensionModelPackage.YLIST__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -757,6 +978,9 @@ public class YListImpl extends YInputImpl implements YList {
 				return;
 			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)newValue);
+				return;
+			case ExtensionModelPackage.YLIST__USE_BEAN_SERVICE:
+				setUseBeanService((Boolean)newValue);
 				return;
 			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
@@ -787,6 +1011,18 @@ public class YListImpl extends YInputImpl implements YList {
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName((String)newValue);
 				return;
+			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
+				setCaptionProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
+				setImageProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
+				setDescriptionProperty((String)newValue);
+				return;
+			case ExtensionModelPackage.YLIST__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -806,6 +1042,9 @@ public class YListImpl extends YInputImpl implements YList {
 				return;
 			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
 				setMultiSelectionBindingEndpoint((YEmbeddableMultiSelectionEndpoint)null);
+				return;
+			case ExtensionModelPackage.YLIST__USE_BEAN_SERVICE:
+				setUseBeanService(USE_BEAN_SERVICE_EDEFAULT);
 				return;
 			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
@@ -834,6 +1073,18 @@ public class YListImpl extends YInputImpl implements YList {
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				setTypeQualifiedName(TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
+				setCaptionProperty(CAPTION_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
+				setImageProperty(IMAGE_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
+				setDescriptionProperty(DESCRIPTION_PROPERTY_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YLIST__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -851,6 +1102,8 @@ public class YListImpl extends YInputImpl implements YList {
 				return selectionBindingEndpoint != null;
 			case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT:
 				return multiSelectionBindingEndpoint != null;
+			case ExtensionModelPackage.YLIST__USE_BEAN_SERVICE:
+				return useBeanService != USE_BEAN_SERVICE_EDEFAULT;
 			case ExtensionModelPackage.YLIST__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YLIST__DATATYPE:
@@ -869,6 +1122,14 @@ public class YListImpl extends YInputImpl implements YList {
 				return EMF_NS_URI_EDEFAULT == null ? emfNsURI != null : !EMF_NS_URI_EDEFAULT.equals(emfNsURI);
 			case ExtensionModelPackage.YLIST__TYPE_QUALIFIED_NAME:
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
+			case ExtensionModelPackage.YLIST__CAPTION_PROPERTY:
+				return CAPTION_PROPERTY_EDEFAULT == null ? captionProperty != null : !CAPTION_PROPERTY_EDEFAULT.equals(captionProperty);
+			case ExtensionModelPackage.YLIST__IMAGE_PROPERTY:
+				return IMAGE_PROPERTY_EDEFAULT == null ? imageProperty != null : !IMAGE_PROPERTY_EDEFAULT.equals(imageProperty);
+			case ExtensionModelPackage.YLIST__DESCRIPTION_PROPERTY:
+				return DESCRIPTION_PROPERTY_EDEFAULT == null ? descriptionProperty != null : !DESCRIPTION_PROPERTY_EDEFAULT.equals(descriptionProperty);
+			case ExtensionModelPackage.YLIST__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -899,6 +1160,12 @@ public class YListImpl extends YInputImpl implements YList {
 		if (baseClass == YMultiSelectionBindable.class) {
 			switch (derivedFeatureID) {
 				case ExtensionModelPackage.YLIST__MULTI_SELECTION_BINDING_ENDPOINT: return CoreModelPackage.YMULTI_SELECTION_BINDABLE__MULTI_SELECTION_BINDING_ENDPOINT;
+				default: return -1;
+			}
+		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YLIST__USE_BEAN_SERVICE: return ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE;
 				default: return -1;
 			}
 		}
@@ -934,6 +1201,12 @@ public class YListImpl extends YInputImpl implements YList {
 				default: return -1;
 			}
 		}
+		if (baseClass == YBeanServiceConsumer.class) {
+			switch (baseFeatureID) {
+				case ExtensionModelPackage.YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE: return ExtensionModelPackage.YLIST__USE_BEAN_SERVICE;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -946,7 +1219,9 @@ public class YListImpl extends YInputImpl implements YList {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (selectionType: ");
+		result.append(" (useBeanService: ");
+		result.append(useBeanService);
+		result.append(", selectionType: ");
 		result.append(selectionType);
 		result.append(", selection: ");
 		result.append(selection);
@@ -960,6 +1235,14 @@ public class YListImpl extends YInputImpl implements YList {
 		result.append(emfNsURI);
 		result.append(", typeQualifiedName: ");
 		result.append(typeQualifiedName);
+		result.append(", captionProperty: ");
+		result.append(captionProperty);
+		result.append(", imageProperty: ");
+		result.append(imageProperty);
+		result.append(", descriptionProperty: ");
+		result.append(descriptionProperty);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

@@ -46,7 +46,7 @@ public class VisibilityProcessorEditpart<M extends YVisibilityProcessor>
 	protected M createModel() {
 		return (M) VisibilityFactory.eINSTANCE.createYVisibilityProcessor();
 	}
- 
+
 	@Override
 	public void activate() {
 		processor = loadProcessor();

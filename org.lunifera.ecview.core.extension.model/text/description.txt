@@ -96,7 +96,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute columnTo : EInt
     Attribute rowTo : EInt
 
-  Class YTable -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+  Class YTable -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer
     Reference datatype : YTableDatatype
     Reference datadescription : YDatadescription
     Attribute selectionType : YSelectionType
@@ -122,7 +122,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute expandRatio : EFloat
     Attribute propertyPath : EString
 
-  Class YTree -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+  Class YTree -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer
     Reference datatype : YTreeDatatype
     Reference datadescription : YDatadescription
     Attribute selectionType : YSelectionType
@@ -133,7 +133,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
 
-  Class YOptionsGroup -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+  Class YOptionsGroup -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer
     Reference datadescription : YDatadescription
     Reference datatype : YOptionsGroupDataType
     Attribute selectionType : YSelectionType
@@ -143,10 +143,12 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
-    Attribute itemCaptionProperty : EString
-    Attribute itemImageProperty : EString
+    Attribute captionProperty : EString
+    Attribute imageProperty : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
-  Class YList -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+  Class YList -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable, YBeanServiceConsumer
     Reference datadescription : YDatadescription
     Reference datatype : YListDataType
     Attribute selectionType : YSelectionType
@@ -156,6 +158,10 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
+    Attribute captionProperty : EString
+    Attribute imageProperty : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
   Class YLabel -> YField, YValueBindable
     Reference datadescription : YDatadescription
@@ -169,6 +175,19 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Reference datatype : YTextDatatype
     Reference datadescription : YDatadescription
     Attribute value : EString
+
+  Class YBeanReferenceField -> YInput, YValueBindable, YBeanServiceConsumer
+    Reference datadescription : YDatadescription
+    Attribute value : EJavaObject
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+    Attribute inMemoryBeanProvider : EJavaClass
+    Attribute inMemoryBeanProviderQualifiedName : EString
+    Attribute captionPropertyPath : EString
+    Attribute imagePropertyPath : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
   Class YTextArea -> YInput, YValueBindable
     Reference datadescription : YDatadescription
@@ -200,7 +219,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Reference datadescription : YDatadescription
     Attribute value : ELong
 
-  Class YComboBox -> YInput, YCollectionBindable, YSelectionBindable
+  Class YComboBox -> YInput, YCollectionBindable, YSelectionBindable, YBeanServiceConsumer
     Reference datadescription : YDatadescription
     Reference datatype : YComboBoxDatatype
     Attribute selection : EJavaObject
@@ -208,8 +227,10 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute type : EJavaClass
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
-    Attribute itemCaptionProperty : EString
-    Attribute itemImageProperty : EString
+    Attribute captionProperty : EString
+    Attribute imageProperty : EString
+    Attribute descriptionProperty : EString
+    Attribute description : EString
 
   Class YButton -> YAction, YVisibleable, YEditable, YEnable
     Reference datadescription : YDatadescription
@@ -302,6 +323,37 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute typeQualifiedName : EString
     Attribute applyFilter : EJavaObject
     Attribute filter : EJavaObject
+
+  Class YEnumOptionsGroup -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+    Reference datadescription : YDatadescription
+    Reference datatype : YOptionsGroupDataType
+    Attribute selectionType : YSelectionType
+    Attribute selection : EJavaObject
+    Attribute multiSelection : EJavaObject<<0..*>>
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+
+  Class YEnumList -> YInput, YCollectionBindable, YSelectionBindable, YMultiSelectionBindable
+    Reference datadescription : YDatadescription
+    Reference datatype : YListDataType
+    Attribute selectionType : YSelectionType
+    Attribute selection : EJavaObject
+    Attribute multiSelection : EJavaObject<<0..*>>
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+
+  Class YEnumComboBox -> YInput, YCollectionBindable, YSelectionBindable
+    Reference datadescription : YDatadescription
+    Reference datatype : YComboBoxDatatype
+    Attribute selection : EJavaObject
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+
+  Class YBeanServiceConsumer
+    Attribute useBeanService : EBoolean
 
   Enum YSelectionType
     Literal SINGLE = 0

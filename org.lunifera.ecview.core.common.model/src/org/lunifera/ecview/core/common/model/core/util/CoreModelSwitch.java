@@ -87,6 +87,8 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				YLayout yLayout = (YLayout)theEObject;
 				T result = caseYLayout(yLayout);
 				if (result == null) result = caseYEmbeddable(yLayout);
+				if (result == null) result = caseYEditable(yLayout);
+				if (result == null) result = caseYEnable(yLayout);
 				if (result == null) result = caseYElement(yLayout);
 				if (result == null) result = caseYCssAble(yLayout);
 				if (result == null) result = caseYVisibleable(yLayout);
@@ -358,6 +360,13 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				T result = caseYOpenDialogCommand(yOpenDialogCommand);
 				if (result == null) result = caseYCommand(yOpenDialogCommand);
 				if (result == null) result = caseYElement(yOpenDialogCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CoreModelPackage.YEXPOSED_ACTION: {
+				YExposedAction yExposedAction = (YExposedAction)theEObject;
+				T result = caseYExposedAction(yExposedAction);
+				if (result == null) result = caseYElement(yExposedAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -902,6 +911,21 @@ public class CoreModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYOpenDialogCommand(YOpenDialogCommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YExposed Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YExposed Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYExposedAction(YExposedAction object) {
 		return null;
 	}
 
