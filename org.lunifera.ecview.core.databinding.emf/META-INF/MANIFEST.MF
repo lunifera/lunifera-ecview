@@ -2,15 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMF databinding delegate
 Bundle-SymbolicName: org.lunifera.ecview.core.databinding.emf
-Bundle-Version: 0.7.5.qualifier
+Bundle-Version: 0.8.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.eclipse.emf.databinding,
- org.lunifera.ecview.core.common;bundle-version="[0.7.0,0.8.0)",
+ org.lunifera.ecview.core.common;bundle-version="[0.8.0,0.9.0)",
  org.eclipse.core.databinding.beans,
  org.eclipse.core.databinding.property,
  com.ibm.icu
-Export-Package: org.lunifera.ecview.core.databinding.emf.common;versio
- n="0.7.5",org.lunifera.ecview.core.databinding.emf.context;version="0
- .7.5";x-internal:=true,org.lunifera.ecview.core.databinding.emf.model
- ;version="0.7.5";x-internal:=true
+Export-Package: org.lunifera.ecview.core.databinding.emf.common;version="0.8.0",
+ org.lunifera.ecview.core.databinding.emf.context;version="0.8.0";x-internal:="true",
+ org.lunifera.ecview.core.databinding.emf.model;version="0.8.0";x-internal:="true"
 Service-Component: OSGI-INF/emfBindingDelegate.xml
