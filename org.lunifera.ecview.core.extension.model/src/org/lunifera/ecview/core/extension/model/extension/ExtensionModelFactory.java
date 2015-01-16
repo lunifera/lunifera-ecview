@@ -373,6 +373,24 @@ public interface ExtensionModelFactory extends EFactory {
 	YEnumComboBox createYEnumComboBox();
 
 	/**
+	 * Returns a new object of class '<em>YAdd To Table Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YAdd To Table Command</em>'.
+	 * @generated
+	 */
+	YAddToTableCommand createYAddToTableCommand();
+
+	/**
+	 * Returns a new object of class '<em>YRemove From Table Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YRemove From Table Command</em>'.
+	 * @generated
+	 */
+	YRemoveFromTableCommand createYRemoveFromTableCommand();
+
+	/**
 	 * Returns a new object of class '<em>YTree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

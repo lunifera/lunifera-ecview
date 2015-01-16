@@ -9,6 +9,7 @@ Import-Package: org.osgi.service.component;version="1.2.0",
 Service-Component: OSGI-INF/editPartManager.xml, OSGI-INF/presenterFactory.xml 
 Bundle-ActivationPolicy: lazy
 Export-Package: org.lunifera.ecview.core.ui.core.editparts.extension;version="0.8.1",
+ org.lunifera.ecview.core.ui.core.editparts.extension.commands;version="0.8.1",
  org.lunifera.ecview.core.ui.core.editparts.extension.datatypes;version="0.8.1",
  org.lunifera.ecview.core.ui.core.editparts.extension.presentation;version="0.8.1"
 Require-Bundle: org.lunifera.ecview.core.common;bundle-version="[0.8.0,0.9.0)",

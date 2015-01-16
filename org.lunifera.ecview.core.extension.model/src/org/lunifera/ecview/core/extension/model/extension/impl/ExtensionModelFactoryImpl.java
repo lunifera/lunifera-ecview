@@ -96,6 +96,8 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YENUM_OPTIONS_GROUP: return createYEnumOptionsGroup();
 			case ExtensionModelPackage.YENUM_LIST: return createYEnumList();
 			case ExtensionModelPackage.YENUM_COMBO_BOX: return createYEnumComboBox();
+			case ExtensionModelPackage.YADD_TO_TABLE_COMMAND: return createYAddToTableCommand();
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND: return createYRemoveFromTableCommand();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -531,6 +533,26 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YEnumComboBox createYEnumComboBox() {
 		YEnumComboBoxImpl yEnumComboBox = new YEnumComboBoxImpl();
 		return yEnumComboBox;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YAddToTableCommand createYAddToTableCommand() {
+		YAddToTableCommandImpl yAddToTableCommand = new YAddToTableCommandImpl();
+		return yAddToTableCommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YRemoveFromTableCommand createYRemoveFromTableCommand() {
+		YRemoveFromTableCommandImpl yRemoveFromTableCommand = new YRemoveFromTableCommandImpl();
+		return yRemoveFromTableCommand;
 	}
 
 	/**

@@ -7464,6 +7464,116 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBEAN_SERVICE_CONSUMER_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YAddToTableCommandImpl <em>YAdd To Table Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YAddToTableCommandImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYAddToTableCommand()
+	 * @generated
+	 */
+	int YADD_TO_TABLE_COMMAND = 43;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YADD_TO_TABLE_COMMAND__ID = CoreModelPackage.YCOMMAND__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YADD_TO_TABLE_COMMAND__NAME = CoreModelPackage.YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Table</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YADD_TO_TABLE_COMMAND__TABLE = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Trigger</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YADD_TO_TABLE_COMMAND__TRIGGER = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>YAdd To Table Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YADD_TO_TABLE_COMMAND_FEATURE_COUNT = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl <em>YRemove From Table Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYRemoveFromTableCommand()
+	 * @generated
+	 */
+	int YREMOVE_FROM_TABLE_COMMAND = 44;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREMOVE_FROM_TABLE_COMMAND__ID = CoreModelPackage.YCOMMAND__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREMOVE_FROM_TABLE_COMMAND__NAME = CoreModelPackage.YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Table</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREMOVE_FROM_TABLE_COMMAND__TABLE = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Trigger</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREMOVE_FROM_TABLE_COMMAND__TRIGGER = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>YRemove From Table Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREMOVE_FROM_TABLE_COMMAND_FEATURE_COUNT = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7471,7 +7581,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 46;
+	int YBUTTON_CLICK_LISTENER = 48;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -7481,7 +7591,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 43;
+	int YSELECTION_TYPE = 45;
 
 
 	/**
@@ -7492,7 +7602,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 44;
+	int YBOOLEAN_SEARCH_OPTION = 46;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -7502,7 +7612,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 45;
+	int YSEARCH_WILDCARDS = 47;
 
 
 	/**
@@ -9852,6 +9962,70 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYBeanServiceConsumer_UseBeanService();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand <em>YAdd To Table Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YAdd To Table Command</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand
+	 * @generated
+	 */
+	EClass getYAddToTableCommand();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand#getTable <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Table</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand#getTable()
+	 * @see #getYAddToTableCommand()
+	 * @generated
+	 */
+	EReference getYAddToTableCommand_Table();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand#getTrigger <em>Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trigger</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand#getTrigger()
+	 * @see #getYAddToTableCommand()
+	 * @generated
+	 */
+	EAttribute getYAddToTableCommand_Trigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand <em>YRemove From Table Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YRemove From Table Command</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand
+	 * @generated
+	 */
+	EClass getYRemoveFromTableCommand();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTable <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Table</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTable()
+	 * @see #getYRemoveFromTableCommand()
+	 * @generated
+	 */
+	EReference getYRemoveFromTableCommand_Table();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTrigger <em>Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trigger</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTrigger()
+	 * @see #getYRemoveFromTableCommand()
+	 * @generated
+	 */
+	EAttribute getYRemoveFromTableCommand_Trigger();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11993,6 +12167,58 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE = eINSTANCE.getYBeanServiceConsumer_UseBeanService();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YAddToTableCommandImpl <em>YAdd To Table Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YAddToTableCommandImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYAddToTableCommand()
+		 * @generated
+		 */
+		EClass YADD_TO_TABLE_COMMAND = eINSTANCE.getYAddToTableCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Table</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YADD_TO_TABLE_COMMAND__TABLE = eINSTANCE.getYAddToTableCommand_Table();
+
+		/**
+		 * The meta object literal for the '<em><b>Trigger</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YADD_TO_TABLE_COMMAND__TRIGGER = eINSTANCE.getYAddToTableCommand_Trigger();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl <em>YRemove From Table Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYRemoveFromTableCommand()
+		 * @generated
+		 */
+		EClass YREMOVE_FROM_TABLE_COMMAND = eINSTANCE.getYRemoveFromTableCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Table</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YREMOVE_FROM_TABLE_COMMAND__TABLE = eINSTANCE.getYRemoveFromTableCommand_Table();
+
+		/**
+		 * The meta object literal for the '<em><b>Trigger</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YREMOVE_FROM_TABLE_COMMAND__TRIGGER = eINSTANCE.getYRemoveFromTableCommand_Trigger();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.

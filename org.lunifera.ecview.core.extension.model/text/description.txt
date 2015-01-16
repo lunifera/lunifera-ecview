@@ -355,6 +355,14 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
   Class YBeanServiceConsumer
     Attribute useBeanService : EBoolean
 
+  Class YAddToTableCommand -> YCommand
+    Reference table : YTable
+    Attribute trigger : EJavaObject
+
+  Class YRemoveFromTableCommand -> YCommand
+    Reference table : YTable
+    Attribute trigger : EJavaObject
+
   Enum YSelectionType
     Literal SINGLE = 0
     Literal MULTI = 1

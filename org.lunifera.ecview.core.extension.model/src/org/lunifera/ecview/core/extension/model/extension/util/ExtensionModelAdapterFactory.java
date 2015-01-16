@@ -10,6 +10,7 @@ import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YActivateable;
 import org.lunifera.ecview.core.common.model.core.YBindable;
 import org.lunifera.ecview.core.common.model.core.YCollectionBindable;
+import org.lunifera.ecview.core.common.model.core.YCommand;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
 import org.lunifera.ecview.core.common.model.core.YEditable;
 import org.lunifera.ecview.core.common.model.core.YElement;
@@ -254,6 +255,14 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYBeanServiceConsumerAdapter();
 			}
 			@Override
+			public Adapter caseYAddToTableCommand(YAddToTableCommand object) {
+				return createYAddToTableCommandAdapter();
+			}
+			@Override
+			public Adapter caseYRemoveFromTableCommand(YRemoveFromTableCommand object) {
+				return createYRemoveFromTableCommandAdapter();
+			}
+			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
 			}
@@ -320,6 +329,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYActivateable(YActivateable object) {
 				return createYActivateableAdapter();
+			}
+			@Override
+			public Adapter caseYCommand(YCommand object) {
+				return createYCommandAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -916,6 +929,34 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand <em>YAdd To Table Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand
+	 * @generated
+	 */
+	public Adapter createYAddToTableCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand <em>YRemove From Table Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand
+	 * @generated
+	 */
+	public Adapter createYRemoveFromTableCommandAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1178,6 +1219,20 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYActivateableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YCommand <em>YCommand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YCommand
+	 * @generated
+	 */
+	public Adapter createYCommandAdapter() {
 		return null;
 	}
 

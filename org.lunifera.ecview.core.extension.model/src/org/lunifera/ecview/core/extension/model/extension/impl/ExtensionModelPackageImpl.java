@@ -20,6 +20,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesPackage;
 import org.lunifera.ecview.core.extension.model.datatypes.impl.ExtDatatypesPackageImpl;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand;
 import org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField;
 import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
@@ -51,6 +52,7 @@ import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
 import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
 import org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField;
+import org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand;
 import org.lunifera.ecview.core.extension.model.extension.YSearchPanel;
 import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
@@ -334,6 +336,20 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass yBeanServiceConsumerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yAddToTableCommandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yRemoveFromTableCommandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -2298,6 +2314,60 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYAddToTableCommand() {
+		return yAddToTableCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYAddToTableCommand_Table() {
+		return (EReference)yAddToTableCommandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYAddToTableCommand_Trigger() {
+		return (EAttribute)yAddToTableCommandEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYRemoveFromTableCommand() {
+		return yRemoveFromTableCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYRemoveFromTableCommand_Table() {
+		return (EReference)yRemoveFromTableCommandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYRemoveFromTableCommand_Trigger() {
+		return (EAttribute)yRemoveFromTableCommandEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2841,6 +2911,14 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yBeanServiceConsumerEClass = createEClass(YBEAN_SERVICE_CONSUMER);
 		createEAttribute(yBeanServiceConsumerEClass, YBEAN_SERVICE_CONSUMER__USE_BEAN_SERVICE);
 
+		yAddToTableCommandEClass = createEClass(YADD_TO_TABLE_COMMAND);
+		createEReference(yAddToTableCommandEClass, YADD_TO_TABLE_COMMAND__TABLE);
+		createEAttribute(yAddToTableCommandEClass, YADD_TO_TABLE_COMMAND__TRIGGER);
+
+		yRemoveFromTableCommandEClass = createEClass(YREMOVE_FROM_TABLE_COMMAND);
+		createEReference(yRemoveFromTableCommandEClass, YREMOVE_FROM_TABLE_COMMAND__TABLE);
+		createEAttribute(yRemoveFromTableCommandEClass, YREMOVE_FROM_TABLE_COMMAND__TRIGGER);
+
 		// Create enums
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
 		yBooleanSearchOptionEEnum = createEEnum(YBOOLEAN_SEARCH_OPTION);
@@ -2980,6 +3058,8 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yEnumComboBoxEClass.getESuperTypes().add(this.getYInput());
 		yEnumComboBoxEClass.getESuperTypes().add(theCoreModelPackage.getYCollectionBindable());
 		yEnumComboBoxEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
+		yAddToTableCommandEClass.getESuperTypes().add(theCoreModelPackage.getYCommand());
+		yRemoveFromTableCommandEClass.getESuperTypes().add(theCoreModelPackage.getYCommand());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yInputEClass, YInput.class, "YInput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3332,6 +3412,14 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		initEClass(yBeanServiceConsumerEClass, YBeanServiceConsumer.class, "YBeanServiceConsumer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYBeanServiceConsumer_UseBeanService(), ecorePackage.getEBoolean(), "useBeanService", null, 0, 1, YBeanServiceConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yAddToTableCommandEClass, YAddToTableCommand.class, "YAddToTableCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYAddToTableCommand_Table(), this.getYTable(), null, "table", null, 0, 1, YAddToTableCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYAddToTableCommand_Trigger(), ecorePackage.getEJavaObject(), "trigger", null, 0, 1, YAddToTableCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yRemoveFromTableCommandEClass, YRemoveFromTableCommand.class, "YRemoveFromTableCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYRemoveFromTableCommand_Table(), this.getYTable(), null, "table", null, 0, 1, YRemoveFromTableCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYRemoveFromTableCommand_Trigger(), ecorePackage.getEJavaObject(), "trigger", null, 0, 1, YRemoveFromTableCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");
