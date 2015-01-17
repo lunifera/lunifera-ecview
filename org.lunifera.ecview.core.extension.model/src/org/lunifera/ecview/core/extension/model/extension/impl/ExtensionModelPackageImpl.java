@@ -894,6 +894,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYTable_Refresh() {
+		return (EAttribute)yTableEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYColumn() {
 		return yColumnEClass;
 	}
@@ -2671,6 +2680,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEReference(yTableEClass, YTABLE__COLUMNS);
 		createEAttribute(yTableEClass, YTABLE__ITEM_IMAGE_PROPERTY);
 		createEAttribute(yTableEClass, YTABLE__FILTER);
+		createEAttribute(yTableEClass, YTABLE__REFRESH);
 
 		yColumnEClass = createEClass(YCOLUMN);
 		createEAttribute(yColumnEClass, YCOLUMN__ICON);
@@ -3121,6 +3131,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEReference(getYTable_Columns(), this.getYColumn(), null, "columns", null, 0, -1, YTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYTable_ItemImageProperty(), ecorePackage.getEString(), "itemImageProperty", null, 0, 1, YTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYTable_Filter(), ecorePackage.getEJavaObject(), "filter", null, 0, 1, YTable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYTable_Refresh(), ecorePackage.getEJavaObject(), "refresh", null, 0, 1, YTable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yColumnEClass, YColumn.class, "YColumn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYColumn_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, YColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

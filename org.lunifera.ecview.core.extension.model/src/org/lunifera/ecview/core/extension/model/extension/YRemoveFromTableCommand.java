@@ -12,12 +12,8 @@ import org.lunifera.ecview.core.common.model.core.YCommand;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>
- * {@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTable
- * <em>Table</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTrigger
- * <em>Trigger</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTable <em>Table</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTrigger <em>Trigger</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,12 +40,9 @@ public interface YRemoveFromTableCommand extends YCommand {
 	YTable getTable();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTable
-	 * <em>Table</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Table</em>' reference.
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand#getTable <em>Table</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Table</em>' reference.
 	 * @see #getTable()
 	 * @generated
 	 */
@@ -84,13 +77,7 @@ public interface YRemoveFromTableCommand extends YCommand {
 	 * @generated
 	 */
 	void setTrigger(Object value);
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @model
-	 * @generated
-	 */
-	YECViewModelValueBindingEndpoint createTriggerEndpoint();
+	
+	public YECViewModelValueBindingEndpoint createTriggerEndpoint();
 
 } // YRemoveFromTableCommand

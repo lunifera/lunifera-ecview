@@ -23,18 +23,10 @@ import org.lunifera.ecview.core.extension.model.extension.YTable;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>
- * {@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getId
- * <em>Id</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getName
- * <em>Name</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getTable
- * <em>Table</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getTrigger
- * <em>Trigger</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getTable <em>Table</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getTrigger <em>Trigger</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,7 +57,6 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -75,7 +66,6 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -85,7 +75,6 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 	/**
 	 * The cached value of the '{@link #getTable() <em>Table</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getTable()
 	 * @generated
 	 * @ordered
@@ -93,9 +82,8 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 	protected YTable table;
 
 	/**
-	 * The default value of the '{@link #getTrigger() <em>Trigger</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getTrigger() <em>Trigger</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTrigger()
 	 * @generated
 	 * @ordered
@@ -103,9 +91,8 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 	protected static final Object TRIGGER_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTrigger() <em>Trigger</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getTrigger() <em>Trigger</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTrigger()
 	 * @generated
 	 * @ordered
@@ -114,7 +101,6 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected YRemoveFromTableCommandImpl() {
@@ -123,7 +109,6 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -133,7 +118,6 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getId() {
@@ -142,21 +126,17 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID,
-					oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID, oldId, id));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -165,34 +145,26 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME,
-					oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME, oldName, name));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YTable getTable() {
 		if (table != null && table.eIsProxy()) {
-			InternalEObject oldTable = (InternalEObject) table;
-			table = (YTable) eResolveProxy(oldTable);
+			InternalEObject oldTable = (InternalEObject)table;
+			table = (YTable)eResolveProxy(oldTable);
 			if (table != oldTable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE,
-							oldTable, table));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE, oldTable, table));
 			}
 		}
 		return table;
@@ -200,7 +172,6 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YTable basicGetTable() {
@@ -209,21 +180,17 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setTable(YTable newTable) {
 		YTable oldTable = table;
 		table = newTable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE,
-					oldTable, table));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE, oldTable, table));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Object getTrigger() {
@@ -232,24 +199,22 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setTrigger(Object newTrigger) {
 		Object oldTrigger = trigger;
 		trigger = newTrigger;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER,
-					oldTrigger, trigger));
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER, oldTrigger, trigger));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YView getViewGen() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
@@ -273,105 +238,96 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
-			return getId();
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
-			return getName();
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
-			if (resolve)
-				return getTable();
-			return basicGetTable();
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
-			return getTrigger();
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
+				return getId();
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
+				return getName();
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
+				if (resolve) return getTable();
+				return basicGetTable();
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
+				return getTrigger();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
-			setId((String) newValue);
-			return;
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
-			setName((String) newValue);
-			return;
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
-			setTable((YTable) newValue);
-			return;
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
-			setTrigger(newValue);
-			return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
+				setId((String)newValue);
+				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
+				setName((String)newValue);
+				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
+				setTable((YTable)newValue);
+				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
+				setTrigger(newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
-			setId(ID_EDEFAULT);
-			return;
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
-			setTable((YTable) null);
-			return;
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
-			setTrigger(TRIGGER_EDEFAULT);
-			return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
+				setTable((YTable)null);
+				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
+				setTrigger(TRIGGER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
-			return table != null;
-		case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
-			return TRIGGER_EDEFAULT == null ? trigger != null
-					: !TRIGGER_EDEFAULT.equals(trigger);
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
+				return table != null;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:
+				return TRIGGER_EDEFAULT == null ? trigger != null : !TRIGGER_EDEFAULT.equals(trigger);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");

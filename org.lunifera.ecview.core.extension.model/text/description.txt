@@ -109,6 +109,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Reference columns : YColumn<<0..*>>
     Attribute itemImageProperty : EString
     Attribute filter : EJavaObject
+    Attribute refresh : EJavaObject
 
   Class YColumn -> YElement
     Attribute icon : EString

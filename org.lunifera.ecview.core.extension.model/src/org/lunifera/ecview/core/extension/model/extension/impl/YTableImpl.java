@@ -51,6 +51,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTable;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getColumns <em>Columns</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getItemImageProperty <em>Item Image Property</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getFilter <em>Filter</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTableImpl#getRefresh <em>Refresh</em>}</li>
  * </ul>
  * </p>
  *
@@ -265,6 +266,25 @@ public class YTableImpl extends YInputImpl implements YTable {
 	 * @ordered
 	 */
 	protected Object filter = FILTER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRefresh() <em>Refresh</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefresh()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Object REFRESH_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getRefresh() <em>Refresh</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefresh()
+	 * @generated
+	 * @ordered
+	 */
+	protected Object refresh = REFRESH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -732,6 +752,27 @@ public class YTableImpl extends YInputImpl implements YTable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Object getRefresh() {
+		return refresh;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRefresh(Object newRefresh) {
+		Object oldRefresh = refresh;
+		refresh = newRefresh;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTABLE__REFRESH, oldRefresh, refresh));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableMultiSelectionEndpoint createMultiSelectionEndpointGen() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -884,6 +925,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 				return getItemImageProperty();
 			case ExtensionModelPackage.YTABLE__FILTER:
 				return getFilter();
+			case ExtensionModelPackage.YTABLE__REFRESH:
+				return getRefresh();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -947,6 +990,9 @@ public class YTableImpl extends YInputImpl implements YTable {
 			case ExtensionModelPackage.YTABLE__FILTER:
 				setFilter(newValue);
 				return;
+			case ExtensionModelPackage.YTABLE__REFRESH:
+				setRefresh(newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1006,6 +1052,9 @@ public class YTableImpl extends YInputImpl implements YTable {
 			case ExtensionModelPackage.YTABLE__FILTER:
 				setFilter(FILTER_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YTABLE__REFRESH:
+				setRefresh(REFRESH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1049,6 +1098,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 				return ITEM_IMAGE_PROPERTY_EDEFAULT == null ? itemImageProperty != null : !ITEM_IMAGE_PROPERTY_EDEFAULT.equals(itemImageProperty);
 			case ExtensionModelPackage.YTABLE__FILTER:
 				return FILTER_EDEFAULT == null ? filter != null : !FILTER_EDEFAULT.equals(filter);
+			case ExtensionModelPackage.YTABLE__REFRESH:
+				return REFRESH_EDEFAULT == null ? refresh != null : !REFRESH_EDEFAULT.equals(refresh);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1158,6 +1209,8 @@ public class YTableImpl extends YInputImpl implements YTable {
 		result.append(itemImageProperty);
 		result.append(", filter: ");
 		result.append(filter);
+		result.append(", refresh: ");
+		result.append(refresh);
 		result.append(')');
 		return result.toString();
 	}

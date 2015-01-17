@@ -1167,13 +1167,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTABLE__FILTER = YINPUT_FEATURE_COUNT + 15;
 
 	/**
+	 * The feature id for the '<em><b>Refresh</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTABLE__REFRESH = YINPUT_FEATURE_COUNT + 16;
+
+	/**
 	 * The number of structural features of the '<em>YTable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTABLE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 16;
+	int YTABLE_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 17;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl <em>YColumn</em>}' class.
@@ -8167,6 +8176,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYTable_Filter();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YTable#getRefresh <em>Refresh</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Refresh</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YTable#getRefresh()
+	 * @see #getYTable()
+	 * @generated
+	 */
+	EAttribute getYTable_Refresh();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YColumn <em>YColumn</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10777,6 +10797,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YTABLE__FILTER = eINSTANCE.getYTable_Filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YTABLE__REFRESH = eINSTANCE.getYTable_Refresh();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl <em>YColumn</em>}' class.

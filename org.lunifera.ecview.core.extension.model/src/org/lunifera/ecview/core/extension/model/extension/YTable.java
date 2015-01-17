@@ -38,6 +38,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTableDatatype;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getColumns <em>Columns</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getItemImageProperty <em>Item Image Property</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getFilter <em>Filter</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTable#getRefresh <em>Refresh</em>}</li>
  * </ul>
  * </p>
  *
@@ -330,5 +331,31 @@ public interface YTable extends YInput, YCollectionBindable, YSelectionBindable,
 	 * @generated
 	 */
 	void setFilter(Object value);
+
+	/**
+	 * Returns the value of the '<em><b>Refresh</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Refresh</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Refresh</em>' attribute.
+	 * @see #setRefresh(Object)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYTable_Refresh()
+	 * @model transient="true"
+	 * @generated
+	 */
+	Object getRefresh();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YTable#getRefresh <em>Refresh</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Refresh</em>' attribute.
+	 * @see #getRefresh()
+	 * @generated
+	 */
+	void setRefresh(Object value);
 
 } // YUiTable

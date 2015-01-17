@@ -29,7 +29,7 @@ public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand> {
 		// bind the values
 		IECViewBindingManager bindingManager = getView().getContext()
 				.getService(IECViewBindingManager.class.getName());
-
+ 
 		// Bind the trigger
 		IBindableValueEndpointEditpart triggerEPEditpart = (IBindableValueEndpointEditpart) getEditpart(getModel()
 				.createTriggerEndpoint());

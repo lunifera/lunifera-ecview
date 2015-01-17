@@ -163,12 +163,17 @@ public class ViewContext extends DisposableContext implements IViewContext {
 
 		return rootLayout;
 	}
+	
+	@Override
+	synchronized public void dispose() {
+		super.dispose();
+	}
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void render(String presentationURI, Object rootLayout,
+	synchronized public void render(String presentationURI, Object rootLayout,
 			Map<String, Object> parameter) throws ContextException {
 		checkDisposed();
 

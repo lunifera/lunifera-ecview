@@ -35,4 +35,6 @@ public interface YTableValidator {
 	boolean validateItemImageProperty(String value);
 
 	boolean validateFilter(Object value);
+
+	boolean validateRefresh(Object value);
 }
