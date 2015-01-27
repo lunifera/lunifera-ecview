@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.lunifera.ecview.core.common.model.binding.impl.YListBindingEndpointImpl;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YCollectionBindable;
+import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableCollectionEndpoint;
 
 /**
@@ -204,4 +205,9 @@ public class YEmbeddableCollectionEndpointImpl extends YListBindingEndpointImpl 
 		return super.eIsSet(featureID);
 	}
 
+	@Override
+	public boolean isBindsElement(YElement element) {
+		return element == getElement();
+	}
+	
 } //YEmbeddableCollectionEndpointImpl

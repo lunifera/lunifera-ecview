@@ -147,15 +147,6 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 		return cellStyles;
 	}
 
-	public YVerticalLayoutCellStyle getCellStyle(YEmbeddable element) {
-		for (YVerticalLayoutCellStyle style : getCellStyles()) {
-			if (element == style.getTarget()) {
-				return style;
-			}
-		}
-		return null;
-	}
-
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -303,6 +294,15 @@ public class YVerticalLayoutImpl extends YLayoutImpl implements YVerticalLayout 
 		result.append(margin);
 		result.append(')');
 		return result.toString();
+	}
+	
+	public YVerticalLayoutCellStyle getCellStyle(YEmbeddable element) {
+		for (YVerticalLayoutCellStyle style : getCellStyles()) {
+			if (element == style.getTarget()) {
+				return style;
+			}
+		}
+		return null;
 	}
 	
 	@Override

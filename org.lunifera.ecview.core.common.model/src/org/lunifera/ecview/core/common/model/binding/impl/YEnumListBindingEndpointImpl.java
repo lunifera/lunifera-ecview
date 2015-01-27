@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YEnumListBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -144,6 +145,11 @@ public class YEnumListBindingEndpointImpl extends YListBindingEndpointImpl imple
 		result.append(enum_);
 		result.append(')');
 		return result.toString();
+	}
+	
+	@Override
+	public boolean isBindsElement(YElement element) {
+		return false;
 	}
 
 } //YEnumListBindingEndpointImpl

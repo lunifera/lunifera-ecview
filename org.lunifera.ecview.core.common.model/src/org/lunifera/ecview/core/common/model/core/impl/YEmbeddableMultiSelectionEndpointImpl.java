@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.lunifera.ecview.core.common.model.binding.impl.YListBindingEndpointImpl;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableMultiSelectionEndpoint;
 import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
 
@@ -202,6 +203,11 @@ public class YEmbeddableMultiSelectionEndpointImpl extends YListBindingEndpointI
 				return element != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public boolean isBindsElement(YElement element) {
+		return element == getElement();
 	}
 
 } //YEmbeddableMultiSelectionEndpointImpl

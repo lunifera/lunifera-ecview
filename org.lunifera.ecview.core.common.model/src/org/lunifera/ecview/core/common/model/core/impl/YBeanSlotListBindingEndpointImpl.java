@@ -10,6 +10,7 @@ import org.lunifera.ecview.core.common.model.binding.impl.YListBindingEndpointIm
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBeanSlot;
 import org.lunifera.ecview.core.common.model.core.YBeanSlotListBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -315,6 +316,11 @@ public class YBeanSlotListBindingEndpointImpl extends YListBindingEndpointImpl i
 		result.append(collectionTypeQualifiedName);
 		result.append(')');
 		return result.toString();
+	}
+	
+	@Override
+	public boolean isBindsElement(YElement element) {
+		return element == getBeanSlot();
 	}
 
 } //YBeanSlotListBindingEndpointImpl

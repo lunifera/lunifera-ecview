@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelListBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -408,6 +409,11 @@ public class YECViewModelListBindingEndpointImpl extends YListBindingEndpointImp
 		result.append(emfNsURI);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public boolean isBindsElement(YElement element) {
+		return element == getElement();
 	}
 
 } //YECViewModelListBindingEndpointImpl
