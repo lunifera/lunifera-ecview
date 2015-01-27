@@ -7583,6 +7583,52 @@ public interface ExtensionModelPackage extends EPackage {
 	int YREMOVE_FROM_TABLE_COMMAND_FEATURE_COUNT = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YBrowserStreamInputImpl <em>YBrowser Stream Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YBrowserStreamInputImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBrowserStreamInput()
+	 * @generated
+	 */
+	int YBROWSER_STREAM_INPUT = 45;
+
+	/**
+	 * The feature id for the '<em><b>Filename</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBROWSER_STREAM_INPUT__FILENAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Input Stream</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBROWSER_STREAM_INPUT__INPUT_STREAM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Mime Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBROWSER_STREAM_INPUT__MIME_TYPE = 2;
+
+	/**
+	 * The number of structural features of the '<em>YBrowser Stream Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBROWSER_STREAM_INPUT_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7590,7 +7636,17 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 48;
+	int YBUTTON_CLICK_LISTENER = 49;
+
+	/**
+	 * The meta object id for the '<em>YInput Stream</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.io.InputStream
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYInputStream()
+	 * @generated
+	 */
+	int YINPUT_STREAM = 50;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -7600,7 +7656,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 45;
+	int YSELECTION_TYPE = 46;
 
 
 	/**
@@ -7611,7 +7667,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 46;
+	int YBOOLEAN_SEARCH_OPTION = 47;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -7621,7 +7677,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 47;
+	int YSEARCH_WILDCARDS = 48;
 
 
 	/**
@@ -10046,6 +10102,49 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYRemoveFromTableCommand_Trigger();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput <em>YBrowser Stream Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YBrowser Stream Input</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput
+	 * @generated
+	 */
+	EClass getYBrowserStreamInput();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput#getFilename <em>Filename</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filename</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput#getFilename()
+	 * @see #getYBrowserStreamInput()
+	 * @generated
+	 */
+	EAttribute getYBrowserStreamInput_Filename();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput#getInputStream <em>Input Stream</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Stream</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput#getInputStream()
+	 * @see #getYBrowserStreamInput()
+	 * @generated
+	 */
+	EAttribute getYBrowserStreamInput_InputStream();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput#getMimeType <em>Mime Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mime Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput#getMimeType()
+	 * @see #getYBrowserStreamInput()
+	 * @generated
+	 */
+	EAttribute getYBrowserStreamInput_MimeType();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10317,6 +10416,17 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getYButtonClickListener();
+
+	/**
+	 * Returns the meta object for data type '{@link java.io.InputStream <em>YInput Stream</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>YInput Stream</em>'.
+	 * @see java.io.InputStream
+	 * @model instanceClass="java.io.InputStream"
+	 * @generated
+	 */
+	EDataType getYInputStream();
 
 	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}'.
@@ -12249,6 +12359,40 @@ public interface ExtensionModelPackage extends EPackage {
 		EAttribute YREMOVE_FROM_TABLE_COMMAND__TRIGGER = eINSTANCE.getYRemoveFromTableCommand_Trigger();
 
 		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YBrowserStreamInputImpl <em>YBrowser Stream Input</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YBrowserStreamInputImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBrowserStreamInput()
+		 * @generated
+		 */
+		EClass YBROWSER_STREAM_INPUT = eINSTANCE.getYBrowserStreamInput();
+
+		/**
+		 * The meta object literal for the '<em><b>Filename</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBROWSER_STREAM_INPUT__FILENAME = eINSTANCE.getYBrowserStreamInput_Filename();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Stream</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBROWSER_STREAM_INPUT__INPUT_STREAM = eINSTANCE.getYBrowserStreamInput_InputStream();
+
+		/**
+		 * The meta object literal for the '<em><b>Mime Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBROWSER_STREAM_INPUT__MIME_TYPE = eINSTANCE.getYBrowserStreamInput_MimeType();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12453,6 +12597,16 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType YBUTTON_CLICK_LISTENER = eINSTANCE.getYButtonClickListener();
+
+		/**
+		 * The meta object literal for the '<em>YInput Stream</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.io.InputStream
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYInputStream()
+		 * @generated
+		 */
+		EDataType YINPUT_STREAM = eINSTANCE.getYInputStream();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.

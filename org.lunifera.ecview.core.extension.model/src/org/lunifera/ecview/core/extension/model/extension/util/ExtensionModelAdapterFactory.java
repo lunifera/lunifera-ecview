@@ -263,6 +263,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYRemoveFromTableCommandAdapter();
 			}
 			@Override
+			public Adapter caseYBrowserStreamInput(YBrowserStreamInput object) {
+				return createYBrowserStreamInputAdapter();
+			}
+			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
 			}
@@ -953,6 +957,20 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYRemoveFromTableCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput <em>YBrowser Stream Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput
+	 * @generated
+	 */
+	public Adapter createYBrowserStreamInputAdapter() {
 		return null;
 	}
 

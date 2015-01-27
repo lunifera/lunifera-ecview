@@ -255,7 +255,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="YBrowser" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YValueBindable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="ecore:EClass extdatatypes.ecore#//YBrowserDatatype"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
         transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YDateTime" eSuperTypes="#//YInput ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YValueBindable">
@@ -521,4 +521,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="table" eType="#//YTable"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBrowserStreamInput">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputStream" lowerBound="1"
+        eType="#//YInputStream"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mimeType" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="YInputStream" instanceClassName="java.io.InputStream"/>
 </ecore:EPackage>

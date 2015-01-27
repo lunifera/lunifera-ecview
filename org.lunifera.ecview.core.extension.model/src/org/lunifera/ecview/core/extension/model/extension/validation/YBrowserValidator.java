@@ -4,6 +4,7 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.validation;
 
+import java.io.InputStream;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 import org.lunifera.ecview.core.extension.model.datatypes.YBrowserDatatype;
@@ -19,5 +20,9 @@ public interface YBrowserValidator {
 
 	boolean validateDatatype(YBrowserDatatype value);
 	boolean validateDatadescription(YDatadescription value);
+	boolean validateValue(Object value);
+
 	boolean validateValue(String value);
+
+	boolean validateStreamValue(InputStream value);
 }

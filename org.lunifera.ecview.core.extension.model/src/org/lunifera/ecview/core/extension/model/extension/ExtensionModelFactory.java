@@ -391,6 +391,15 @@ public interface ExtensionModelFactory extends EFactory {
 	YRemoveFromTableCommand createYRemoveFromTableCommand();
 
 	/**
+	 * Returns a new object of class '<em>YBrowser Stream Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YBrowser Stream Input</em>'.
+	 * @generated
+	 */
+	YBrowserStreamInput createYBrowserStreamInput();
+
+	/**
 	 * Returns a new object of class '<em>YTree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

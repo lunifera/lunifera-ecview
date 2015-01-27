@@ -2,6 +2,7 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
+import java.io.InputStream;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -98,6 +99,7 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YENUM_COMBO_BOX: return createYEnumComboBox();
 			case ExtensionModelPackage.YADD_TO_TABLE_COMMAND: return createYAddToTableCommand();
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND: return createYRemoveFromTableCommand();
+			case ExtensionModelPackage.YBROWSER_STREAM_INPUT: return createYBrowserStreamInput();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -119,6 +121,8 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 				return createYSearchWildcardsFromString(eDataType, initialValue);
 			case ExtensionModelPackage.YBUTTON_CLICK_LISTENER:
 				return createYButtonClickListenerFromString(eDataType, initialValue);
+			case ExtensionModelPackage.YINPUT_STREAM:
+				return createYInputStreamFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -140,6 +144,8 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 				return convertYSearchWildcardsToString(eDataType, instanceValue);
 			case ExtensionModelPackage.YBUTTON_CLICK_LISTENER:
 				return convertYButtonClickListenerToString(eDataType, instanceValue);
+			case ExtensionModelPackage.YINPUT_STREAM:
+				return convertYInputStreamToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -560,6 +566,16 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public YBrowserStreamInput createYBrowserStreamInput() {
+		YBrowserStreamInputImpl yBrowserStreamInput = new YBrowserStreamInputImpl();
+		return yBrowserStreamInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YTree createYTree() {
 		YTreeImpl yTree = new YTreeImpl();
 		return yTree;
@@ -650,6 +666,24 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	 * @generated
 	 */
 	public String convertYButtonClickListenerToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputStream createYInputStreamFromString(EDataType eDataType, String initialValue) {
+		return (InputStream)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYInputStreamToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

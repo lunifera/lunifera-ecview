@@ -86,12 +86,12 @@ public interface YBrowser extends YInput, YValueBindable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(String)
+	 * @see #setValue(Object)
 	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYBrowser_Value()
 	 * @model transient="true"
 	 * @generated
 	 */
-	String getValue();
+	Object getValue();
 
 	/**
 	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YBrowser#getValue <em>Value</em>}' attribute.
@@ -101,6 +101,6 @@ public interface YBrowser extends YInput, YValueBindable {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(String value);
+	void setValue(Object value);
 
 } // YBrowser

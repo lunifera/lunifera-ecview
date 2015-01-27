@@ -2,6 +2,7 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
+import java.io.InputStream;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -26,6 +27,7 @@ import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YBooleanSearchOption;
 import org.lunifera.ecview.core.extension.model.extension.YBrowser;
+import org.lunifera.ecview.core.extension.model.extension.YBrowserStreamInput;
 import org.lunifera.ecview.core.extension.model.extension.YButton;
 import org.lunifera.ecview.core.extension.model.extension.YCheckBox;
 import org.lunifera.ecview.core.extension.model.extension.YColumn;
@@ -352,6 +354,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	private EClass yRemoveFromTableCommandEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yBrowserStreamInputEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -388,6 +397,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EDataType yButtonClickListenerEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType yInputStreamEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2377,6 +2393,42 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYBrowserStreamInput() {
+		return yBrowserStreamInputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBrowserStreamInput_Filename() {
+		return (EAttribute)yBrowserStreamInputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBrowserStreamInput_InputStream() {
+		return (EAttribute)yBrowserStreamInputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBrowserStreamInput_MimeType() {
+		return (EAttribute)yBrowserStreamInputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2582,6 +2634,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 */
 	public EDataType getYButtonClickListener() {
 		return yButtonClickListenerEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getYInputStream() {
+		return yInputStreamEDataType;
 	}
 
 	/**
@@ -2929,6 +2990,11 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEReference(yRemoveFromTableCommandEClass, YREMOVE_FROM_TABLE_COMMAND__TABLE);
 		createEAttribute(yRemoveFromTableCommandEClass, YREMOVE_FROM_TABLE_COMMAND__TRIGGER);
 
+		yBrowserStreamInputEClass = createEClass(YBROWSER_STREAM_INPUT);
+		createEAttribute(yBrowserStreamInputEClass, YBROWSER_STREAM_INPUT__FILENAME);
+		createEAttribute(yBrowserStreamInputEClass, YBROWSER_STREAM_INPUT__INPUT_STREAM);
+		createEAttribute(yBrowserStreamInputEClass, YBROWSER_STREAM_INPUT__MIME_TYPE);
+
 		// Create enums
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
 		yBooleanSearchOptionEEnum = createEEnum(YBOOLEAN_SEARCH_OPTION);
@@ -2936,6 +3002,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		// Create data types
 		yButtonClickListenerEDataType = createEDataType(YBUTTON_CLICK_LISTENER);
+		yInputStreamEDataType = createEDataType(YINPUT_STREAM);
 	}
 
 	/**
@@ -3240,7 +3307,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEClass(yBrowserEClass, YBrowser.class, "YBrowser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYBrowser_Datatype(), theExtDatatypesPackage.getYBrowserDatatype(), null, "datatype", null, 0, 1, YBrowser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYBrowser_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YBrowser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYBrowser_Value(), ecorePackage.getEString(), "value", null, 0, 1, YBrowser.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBrowser_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, YBrowser.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yDateTimeEClass, YDateTime.class, "YDateTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYDateTime_Datatype(), theExtDatatypesPackage.getYDateTimeDatatype(), null, "datatype", null, 0, 1, YDateTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3432,6 +3499,11 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEReference(getYRemoveFromTableCommand_Table(), this.getYTable(), null, "table", null, 0, 1, YRemoveFromTableCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYRemoveFromTableCommand_Trigger(), ecorePackage.getEJavaObject(), "trigger", null, 0, 1, YRemoveFromTableCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(yBrowserStreamInputEClass, YBrowserStreamInput.class, "YBrowserStreamInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYBrowserStreamInput_Filename(), ecorePackage.getEString(), "filename", null, 1, 1, YBrowserStreamInput.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBrowserStreamInput_InputStream(), this.getYInputStream(), "inputStream", null, 1, 1, YBrowserStreamInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBrowserStreamInput_MimeType(), ecorePackage.getEString(), "mimeType", null, 1, 1, YBrowserStreamInput.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");
 		addEEnumLiteral(ySelectionTypeEEnum, YSelectionType.SINGLE);
@@ -3453,6 +3525,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 
 		// Initialize data types
 		initEDataType(yButtonClickListenerEDataType, YButtonClickListener.class, "YButtonClickListener", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(yInputStreamEDataType, InputStream.class, "YInputStream", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

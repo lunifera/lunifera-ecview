@@ -70,7 +70,7 @@ public class YBrowserImpl extends YInputImpl implements YBrowser {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final Object VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -79,7 +79,7 @@ public class YBrowserImpl extends YInputImpl implements YBrowser {
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
+	protected Object value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -259,16 +259,17 @@ public class YBrowserImpl extends YInputImpl implements YBrowser {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
+	public Object getValue() {
 		return value;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
+	public void setValue(Object newValue) {
+		Object oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBROWSER__VALUE, oldValue, value));
@@ -376,7 +377,7 @@ public class YBrowserImpl extends YInputImpl implements YBrowser {
 				setDatadescription((YDatadescription)newValue);
 				return;
 			case ExtensionModelPackage.YBROWSER__VALUE:
-				setValue((String)newValue);
+				setValue(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
