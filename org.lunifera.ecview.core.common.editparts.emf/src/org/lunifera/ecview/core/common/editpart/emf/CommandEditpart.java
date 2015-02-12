@@ -16,8 +16,6 @@ import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.model.core.YCommand;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YView;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * See {@link ElementEditpart}.

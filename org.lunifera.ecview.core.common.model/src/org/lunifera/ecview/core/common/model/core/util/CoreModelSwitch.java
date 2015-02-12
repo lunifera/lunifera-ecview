@@ -370,6 +370,14 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CoreModelPackage.YSEND_EVENT_COMMAND: {
+				YSendEventCommand ySendEventCommand = (YSendEventCommand)theEObject;
+				T result = caseYSendEventCommand(ySendEventCommand);
+				if (result == null) result = caseYCommand(ySendEventCommand);
+				if (result == null) result = caseYElement(ySendEventCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -926,6 +934,21 @@ public class CoreModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYExposedAction(YExposedAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YSend Event Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YSend Event Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYSendEventCommand(YSendEventCommand object) {
 		return null;
 	}
 

@@ -151,7 +151,11 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public abstract boolean isBindsElement(YElement element);
+	public boolean isBindsElement(YElement element) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

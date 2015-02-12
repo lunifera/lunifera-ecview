@@ -10,8 +10,10 @@
  */
 package org.lunifera.ecview.core.common.context;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -21,9 +23,12 @@ import org.lunifera.ecview.core.common.beans.ObjectBean;
 import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
 import org.lunifera.ecview.core.common.services.DelegatingServiceProviderManager;
 import org.lunifera.ecview.core.common.services.IServiceRegistry;
+import org.lunifera.runtime.common.event.IEventBroker;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
+import org.osgi.service.event.Event;
+import org.osgi.service.event.EventHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,7 +47,12 @@ public abstract class DisposableContext extends AbstractDisposable implements
 	private Map<String, Object> services = Collections
 			.synchronizedMap(new HashMap<String, Object>());
 
+	// preparations for final disposal after view has been disposed
+	private Map<String, Object> finalDispose = new HashMap<String, Object>();
+
 	private Locale locale = Locale.getDefault();
+
+	private List<EventHandler> eventHandlers = new ArrayList<EventHandler>();
 
 	@Override
 	public void setLocale(Locale locale) {
@@ -121,6 +131,28 @@ public abstract class DisposableContext extends AbstractDisposable implements
 		return slot;
 	}
 
+	@Override
+	public ISlot createBeanSlot(String selector, Class<?> type,
+			String eventTopic) {
+		final ISlot slot = createBeanSlot(selector, type);
+		if (eventTopic != null && !eventTopic.equals("")) {
+			IEventBroker eventBroker = getService(IEventBroker.class.getName());
+			if (eventBroker != null) {
+				EventHandler handler = new EventHandler() {
+					@Override
+					public void handleEvent(Event event) {
+						slot.setValue(event.getProperty(IEventBroker.DATA));
+					}
+				};
+				eventHandlers.add(handler);
+				eventBroker.subscribe(eventTopic, handler);
+			} else {
+				logger.error("EventBroker service not available!");
+			}
+		}
+		return slot;
+	}
+ 
 	public void registerService(String selector, Object service) {
 		checkDisposed();
 		synchronized (services) {
@@ -170,9 +202,10 @@ public abstract class DisposableContext extends AbstractDisposable implements
 				service = (S) bundleContext.getService(serviceRef);
 			}
 		}
-		
-		if(service == null){
-			logger.warn("No proper serviceProvider found for element {}", selector);
+
+		if (service == null) {
+			logger.warn("No proper serviceProvider found for element {}",
+					selector);
 		}
 
 		return service;
@@ -189,10 +222,31 @@ public abstract class DisposableContext extends AbstractDisposable implements
 		return null;
 	}
 
+	/**
+	 * Allows the context to prepare its disposal. In a first state, the view
+	 * will be disposed and afterwards the context needs to do some clean up. To
+	 * avoid disposed exceptions, the context may prepare required services,...
+	 */
+	protected void preDispose() {
+		if (eventHandlers != null) {
+			finalDispose.put(IEventBroker.class.getName(),
+					getService(IEventBroker.class.getName()));
+		}
+	}
+
 	@Override
 	protected void internalDispose() {
+		// Remove all event handler from the event service
+		IEventBroker eventBroker = (IEventBroker) finalDispose
+				.get(IEventBroker.class.getName());
+		for (EventHandler eventHandler : eventHandlers) {
+			eventBroker.unsubscribe(eventHandler);
+		}
+
+		eventHandlers = null;
 		valueBeans = null;
 		services = null;
+		finalDispose = null;
 	}
 
 }

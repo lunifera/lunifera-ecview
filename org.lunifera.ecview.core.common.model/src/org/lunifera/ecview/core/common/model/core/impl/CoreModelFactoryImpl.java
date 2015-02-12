@@ -93,6 +93,7 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 			case CoreModelPackage.YCOMMAND_SET: return createYCommandSet();
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND: return createYOpenDialogCommand();
 			case CoreModelPackage.YEXPOSED_ACTION: return createYExposedAction();
+			case CoreModelPackage.YSEND_EVENT_COMMAND: return createYSendEventCommand();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -336,6 +337,16 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	public YExposedAction createYExposedAction() {
 		YExposedActionImpl yExposedAction = new YExposedActionImpl();
 		return yExposedAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YSendEventCommand createYSendEventCommand() {
+		YSendEventCommandImpl ySendEventCommand = new YSendEventCommandImpl();
+		return ySendEventCommand;
 	}
 
 	/**

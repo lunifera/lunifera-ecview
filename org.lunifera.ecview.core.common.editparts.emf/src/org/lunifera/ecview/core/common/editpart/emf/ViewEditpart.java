@@ -648,7 +648,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 */
 	protected void internalAddBeanSlot(YBeanSlot yBeanSlot) {
 		checkDisposed();
-		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType());
+		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType(), yBeanSlot.getEventTopic());
 	}
 
 	public List<IVisibilityProcessorEditpart> getVisibilityProcessors() {
@@ -907,7 +907,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	@Override
 	public IViewSetEditpart getParent() {
 		checkDisposed();
-
+		
 		YViewSet yViewSet = getModel().getRoot();
 		return yViewSet != null ? (IViewSetEditpart) getEditpart(yViewSet)
 				: null;

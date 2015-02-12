@@ -11,6 +11,7 @@
 package org.lunifera.ecview.core.common.context;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -34,6 +35,9 @@ public class ViewContext extends DisposableContext implements IViewContext {
 
 	private static final Logger logger = LoggerFactory
 			.getLogger(ViewContext.class);
+
+	// preparations for final disposal after view has been disposed
+	private Map<String, Object> finalDispose = new HashMap<String, Object>();
 
 	private VisibilityManager visibilityManager;
 	private final IViewEditpart viewEditpart;
@@ -163,9 +167,11 @@ public class ViewContext extends DisposableContext implements IViewContext {
 
 		return rootLayout;
 	}
-	
+
 	@Override
 	synchronized public void dispose() {
+		preDispose();
+
 		super.dispose();
 	}
 
@@ -253,6 +259,13 @@ public class ViewContext extends DisposableContext implements IViewContext {
 		}
 	}
 
+	protected void preDispose() {
+		super.preDispose();
+
+		finalDispose.put(IWidgetAssocationsService.class.getName(),
+				getService(IWidgetAssocationsService.ID));
+	}
+
 	/**
 	 * {@inheritDoc}
 	 */
@@ -262,8 +275,12 @@ public class ViewContext extends DisposableContext implements IViewContext {
 			viewEditpart.dispose();
 
 			// Clear all associations
-			IWidgetAssocationsService service = getService(IWidgetAssocationsService.ID);
+			@SuppressWarnings("rawtypes")
+			IWidgetAssocationsService service = (IWidgetAssocationsService) finalDispose
+					.get(IWidgetAssocationsService.ID);
 			service.clear();
+			finalDispose = null;
+			visibilityManager = null;
 		} finally {
 			super.internalDispose();
 		}

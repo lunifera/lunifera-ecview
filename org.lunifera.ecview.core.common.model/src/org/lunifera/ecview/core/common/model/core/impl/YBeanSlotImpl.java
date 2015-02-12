@@ -21,6 +21,7 @@ import org.lunifera.ecview.core.common.model.core.YBeanSlotValueBindingEndpoint;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#getValueType <em>Value Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#getValueTypeQualifiedName <em>Value Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#getEventTopic <em>Event Topic</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,6 +75,26 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String valueTypeQualifiedName = VALUE_TYPE_QUALIFIED_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEventTopic() <em>Event Topic</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEventTopic()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EVENT_TOPIC_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEventTopic() <em>Event Topic</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEventTopic()
+	 * @generated
+	 * @ordered
+	 */
+	protected String eventTopic = EVENT_TOPIC_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -152,6 +173,27 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEventTopic() {
+		return eventTopic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEventTopic(String newEventTopic) {
+		String oldEventTopic = eventTopic;
+		eventTopic = newEventTopic;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC, oldEventTopic, eventTopic));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -164,6 +206,8 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 				return getValueType();
 			case CoreModelPackage.YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME:
 				return getValueTypeQualifiedName();
+			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
+				return getEventTopic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -183,6 +227,9 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case CoreModelPackage.YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME:
 				setValueTypeQualifiedName((String)newValue);
+				return;
+			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
+				setEventTopic((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -204,6 +251,9 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 			case CoreModelPackage.YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME:
 				setValueTypeQualifiedName(VALUE_TYPE_QUALIFIED_NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
+				setEventTopic(EVENT_TOPIC_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -221,6 +271,8 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 				return valueType != null;
 			case CoreModelPackage.YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME:
 				return VALUE_TYPE_QUALIFIED_NAME_EDEFAULT == null ? valueTypeQualifiedName != null : !VALUE_TYPE_QUALIFIED_NAME_EDEFAULT.equals(valueTypeQualifiedName);
+			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
+				return EVENT_TOPIC_EDEFAULT == null ? eventTopic != null : !EVENT_TOPIC_EDEFAULT.equals(eventTopic);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -240,6 +292,8 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 		result.append(valueType);
 		result.append(", valueTypeQualifiedName: ");
 		result.append(valueTypeQualifiedName);
+		result.append(", eventTopic: ");
+		result.append(eventTopic);
 		result.append(')');
 		return result.toString();
 	}

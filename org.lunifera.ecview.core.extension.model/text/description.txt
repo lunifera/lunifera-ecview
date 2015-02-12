@@ -203,7 +203,7 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
   Class YBrowser -> YInput, YValueBindable
     Reference datatype : YBrowserDatatype
     Reference datadescription : YDatadescription
-    Attribute value : EString
+    Attribute value : EJavaObject
 
   Class YDateTime -> YInput, YValueBindable
     Reference datatype : YDateTimeDatatype
@@ -364,6 +364,11 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Reference table : YTable
     Attribute trigger : EJavaObject
 
+  Class YBrowserStreamInput
+    Attribute filename : EString<<1..1>>
+    Attribute inputStream : YInputStream<<1..1>>
+    Attribute mimeType : EString<<1..1>>
+
   Enum YSelectionType
     Literal SINGLE = 0
     Literal MULTI = 1
@@ -383,3 +388,5 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Literal ANY = 6
 
   DataType YButtonClickListener <org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickListener>
+
+  DataType YInputStream <java.io.InputStream>

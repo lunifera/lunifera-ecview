@@ -10,18 +10,12 @@
  */
 package org.lunifera.ecview.core.common.editpart.emf.validation;
 
-import org.eclipse.emf.ecore.EObject;
-import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.context.IViewContext;
-import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
-import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.validator.ClassDelegateValidator;
 import org.lunifera.ecview.core.common.editpart.validation.IClassDelegateValidatorEditpart;
-import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
 import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidator;
-import org.lunifera.ecview.core.common.types.ITypeProviderService;
 import org.lunifera.ecview.core.common.validation.IValidationConfig;
 import org.lunifera.ecview.core.common.validation.IValidator;
 

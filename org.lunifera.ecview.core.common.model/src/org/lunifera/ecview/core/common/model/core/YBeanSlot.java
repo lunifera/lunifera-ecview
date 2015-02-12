@@ -14,6 +14,7 @@ package org.lunifera.ecview.core.common.model.core;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getValueType <em>Value Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getValueTypeQualifiedName <em>Value Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getEventTopic <em>Event Topic</em>}</li>
  * </ul>
  * </p>
  *
@@ -100,6 +101,32 @@ public interface YBeanSlot extends YBindable {
 	 * @generated
 	 */
 	void setValueTypeQualifiedName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Event Topic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Event Topic</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Event Topic</em>' attribute.
+	 * @see #setEventTopic(String)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYBeanSlot_EventTopic()
+	 * @model
+	 * @generated
+	 */
+	String getEventTopic();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getEventTopic <em>Event Topic</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Event Topic</em>' attribute.
+	 * @see #getEventTopic()
+	 * @generated
+	 */
+	void setEventTopic(String value);
 
 	/**
 	 * Creates a binding endpoint that may be used to bind values against this

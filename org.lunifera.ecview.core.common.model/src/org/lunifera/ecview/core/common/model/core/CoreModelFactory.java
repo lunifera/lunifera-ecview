@@ -201,6 +201,15 @@ public interface CoreModelFactory extends EFactory {
 	YExposedAction createYExposedAction();
 
 	/**
+	 * Returns a new object of class '<em>YSend Event Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YSend Event Command</em>'.
+	 * @generated
+	 */
+	YSendEventCommand createYSendEventCommand();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -7,22 +7,22 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.lunifera.ecview.core.common.model.datatypes.impl;version="0.8.1";x-internal:="true",
+Export-Package: org.lunifera.ecview.core.common.model.datatypes.impl;version="0.8.1";x-internal:=true,
  org.lunifera.ecview.core.common.model.binding;version="0.8.1",
- org.lunifera.ecview.core.common.model.binding.impl;version="0.8.1";x-internal:="true",
+ org.lunifera.ecview.core.common.model.binding.impl;version="0.8.1";x-internal:=true,
  org.lunifera.ecview.core.common.model.binding.util;version="0.8.1",
  org.lunifera.ecview.core.common.model.core;version="0.8.1",
- org.lunifera.ecview.core.common.model.core.impl;version="0.8.1";x-internal:="true",
- org.lunifera.ecview.core.common.model.core.impl.custom;version="0.8.1";x-internal:="true",
+ org.lunifera.ecview.core.common.model.core.impl;version="0.8.1";x-internal:=true,
+ org.lunifera.ecview.core.common.model.core.impl.custom;version="0.8.1";x-internal:=true,
  org.lunifera.ecview.core.common.model.core.listeners;version="0.8.1",
  org.lunifera.ecview.core.common.model.core.util;version="0.8.1",
  org.lunifera.ecview.core.common.model.datatypes;version="0.8.1",
  org.lunifera.ecview.core.common.model.datatypes.util;version="0.8.1",
  org.lunifera.ecview.core.common.model.validation;version="0.8.1",
- org.lunifera.ecview.core.common.model.validation.impl;version="0.8.1";x-internal:="true",
+ org.lunifera.ecview.core.common.model.validation.impl;version="0.8.1";x-internal:=true,
  org.lunifera.ecview.core.common.model.validation.util;version="0.8.1",
  org.lunifera.ecview.core.common.model.visibility;version="0.8.1",
- org.lunifera.ecview.core.common.model.visibility.impl;version="0.8.1";x-internal:="true",
+ org.lunifera.ecview.core.common.model.visibility.impl;version="0.8.1";x-internal:=true,
  org.lunifera.ecview.core.common.model.visibility.util;version="0.8.1"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,

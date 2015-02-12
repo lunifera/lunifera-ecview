@@ -226,6 +226,10 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 				return createYExposedActionAdapter();
 			}
 			@Override
+			public Adapter caseYSendEventCommand(YSendEventCommand object) {
+				return createYSendEventCommandAdapter();
+			}
+			@Override
 			public Adapter caseYBindingEndpoint(YBindingEndpoint object) {
 				return createYBindingEndpointAdapter();
 			}
@@ -780,6 +784,20 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYExposedActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand <em>YSend Event Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YSendEventCommand
+	 * @generated
+	 */
+	public Adapter createYSendEventCommandAdapter() {
 		return null;
 	}
 

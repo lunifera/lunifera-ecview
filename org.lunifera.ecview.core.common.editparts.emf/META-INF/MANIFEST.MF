@@ -13,10 +13,12 @@ Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  org.eclipse.core.databinding.beans;bundle-version="1.2.200",
  org.eclipse.core.databinding.property;bundle-version="1.4.200",
  org.apache.commons.lang;bundle-version="2.6.0",
- org.lunifera.ecview.core.databinding.emf;bundle-version="[0.8.0,0.9.0)"
+ org.lunifera.ecview.core.databinding.emf;bundle-version="[0.8.0,0.9.0)",
+ org.lunifera.runtime.common
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.eclipse.emf.databinding,
+ org.osgi.service.event;version="1.3.0",
  org.slf4j;version="1.6.4"
 Export-Package: org.lunifera.ecview.core.common.editpart.emf;version="0.8.1";x-internal:="true",
  org.lunifera.ecview.core.common.editpart.emf.binding;version="0.8.1";x-internal:="true",

@@ -81,4 +81,21 @@ public interface IBeanRegistry {
 	 */
 	ISlot createBeanSlot(String selector, Class<?> type);
 
+	/**
+	 * Creates a new bean slot at the registry. If the slot already exists, that
+	 * instance will be returned.
+	 * 
+	 * @param selector
+	 *            The selector string to identify the bean instance.
+	 * @param type
+	 *            The type of the bean. Must not be <code>null</code>
+	 * @param eventTopic
+	 *            The eventTopic which should be used to retrieve beans. Can be
+	 *            <code>null</code>
+	 *            // TODO Pirchner - should new beans also become published to
+	 *            the event admin?
+	 * @return
+	 */
+	ISlot createBeanSlot(String selector, Class<?> type, String eventTopic);
+
 }

@@ -90,6 +90,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueTypeQualifiedName"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventTopic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YEmbeddable" abstract="true" eSuperTypes="#//YElement #//YCssAble #//YVisibleable">
     <eOperations name="getParent" eType="#//YLayout"/>
@@ -271,5 +272,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelI18nKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YSendEventCommand" eSuperTypes="#//YCommand">
+    <eOperations name="getView" eType="#//YView"/>
+    <eOperations name="createTriggerEndpoint" eType="ecore:EClass binding.ecore#//YECViewModelValueBindingEndpoint"/>
+    <eOperations name="createMessageEndpoint" eType="ecore:EClass binding.ecore#//YECViewModelValueBindingEndpoint"/>
+    <eOperations name="createAutoTriggerEndpoint" eType="ecore:EClass binding.ecore#//YECViewModelValueBindingEndpoint"/>
+    <eOperations name="createEventTopicEndpoint" eType="ecore:EClass binding.ecore#//YECViewModelValueBindingEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventTopic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoTrigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
 </ecore:EPackage>

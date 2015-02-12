@@ -50,6 +50,7 @@ import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
 import org.lunifera.ecview.core.common.model.core.YOpenDialogCommand;
 import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
+import org.lunifera.ecview.core.common.model.core.YSendEventCommand;
 import org.lunifera.ecview.core.common.model.core.YSpacingable;
 import org.lunifera.ecview.core.common.model.core.YUnit;
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
@@ -330,6 +331,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * @generated
 	 */
 	private EClass yExposedActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ySendEventCommandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -689,6 +697,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EAttribute getYBeanSlot_ValueTypeQualifiedName() {
 		return (EAttribute)yBeanSlotEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanSlot_EventTopic() {
+		return (EAttribute)yBeanSlotEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1434,6 +1451,51 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getYSendEventCommand() {
+		return ySendEventCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSendEventCommand_EventTopic() {
+		return (EAttribute)ySendEventCommandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSendEventCommand_Message() {
+		return (EAttribute)ySendEventCommandEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSendEventCommand_Trigger() {
+		return (EAttribute)ySendEventCommandEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSendEventCommand_AutoTrigger() {
+		return (EAttribute)ySendEventCommandEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYDeviceType() {
 		return yDeviceTypeEEnum;
 	}
@@ -1543,6 +1605,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__NAME);
 		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__VALUE_TYPE);
 		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME);
+		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__EVENT_TOPIC);
 
 		yEmbeddableEClass = createEClass(YEMBEDDABLE);
 		createEReference(yEmbeddableEClass, YEMBEDDABLE__ORPHAN_DATATYPES);
@@ -1657,6 +1720,12 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL);
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL_I1_8N_KEY);
 
+		ySendEventCommandEClass = createEClass(YSEND_EVENT_COMMAND);
+		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__EVENT_TOPIC);
+		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__MESSAGE);
+		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__TRIGGER);
+		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__AUTO_TRIGGER);
+
 		// Create enums
 		yDeviceTypeEEnum = createEEnum(YDEVICE_TYPE);
 		yAlignmentEEnum = createEEnum(YALIGNMENT);
@@ -1744,6 +1813,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yCommandSetEClass.getESuperTypes().add(this.getYElement());
 		yOpenDialogCommandEClass.getESuperTypes().add(this.getYCommand());
 		yExposedActionEClass.getESuperTypes().add(this.getYElement());
+		ySendEventCommandEClass.getESuperTypes().add(this.getYCommand());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yElementEClass, YElement.class, "YElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1791,6 +1861,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		g1.getETypeArguments().add(g2);
 		initEAttribute(getYBeanSlot_ValueType(), g1, "valueType", null, 0, 1, YBeanSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBeanSlot_ValueTypeQualifiedName(), ecorePackage.getEString(), "valueTypeQualifiedName", null, 0, 1, YBeanSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanSlot_EventTopic(), ecorePackage.getEString(), "eventTopic", null, 0, 1, YBeanSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yEmbeddableEClass, YEmbeddable.class, "YEmbeddable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYEmbeddable_OrphanDatatypes(), theDatatypesPackage.getYDatatype(), null, "orphanDatatypes", null, 0, -1, YEmbeddable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1940,6 +2011,22 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYExposedAction_LabelI18nKey(), ecorePackage.getEString(), "labelI18nKey", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yExposedActionEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(ySendEventCommandEClass, YSendEventCommand.class, "YSendEventCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYSendEventCommand_EventTopic(), ecorePackage.getEString(), "eventTopic", null, 0, 1, YSendEventCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSendEventCommand_Message(), ecorePackage.getEJavaObject(), "message", null, 0, 1, YSendEventCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSendEventCommand_Trigger(), ecorePackage.getEJavaObject(), "trigger", null, 0, 1, YSendEventCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSendEventCommand_AutoTrigger(), ecorePackage.getEBoolean(), "autoTrigger", "true", 0, 1, YSendEventCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(ySendEventCommandEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(ySendEventCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createTriggerEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(ySendEventCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createMessageEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(ySendEventCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createAutoTriggerEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(ySendEventCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createEventTopicEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(yDeviceTypeEEnum, YDeviceType.class, "YDeviceType");

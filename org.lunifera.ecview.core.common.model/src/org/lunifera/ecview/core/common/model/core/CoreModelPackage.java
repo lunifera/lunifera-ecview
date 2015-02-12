@@ -851,13 +851,22 @@ public interface CoreModelPackage extends EPackage {
 	int YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME = YBINDABLE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Event Topic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_SLOT__EVENT_TOPIC = YBINDABLE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>YBean Slot</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_SLOT_FEATURE_COUNT = YBINDABLE_FEATURE_COUNT + 3;
+	int YBEAN_SLOT_FEATURE_COUNT = YBINDABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl <em>YDialog</em>}' class.
@@ -2139,6 +2148,79 @@ public interface CoreModelPackage extends EPackage {
 	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYSendEventCommand()
+	 * @generated
+	 */
+	int YSEND_EVENT_COMMAND = 37;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND__ID = YCOMMAND__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND__NAME = YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Event Topic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND__EVENT_TOPIC = YCOMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND__MESSAGE = YCOMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Trigger</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND__TRIGGER = YCOMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Auto Trigger</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND__AUTO_TRIGGER = YCOMMAND_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>YSend Event Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND_FEATURE_COUNT = YCOMMAND_FEATURE_COUNT + 4;
+
+	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2146,7 +2228,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDeviceType()
 	 * @generated
 	 */
-	int YDEVICE_TYPE = 37;
+	int YDEVICE_TYPE = 38;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}' enum.
@@ -2156,7 +2238,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAlignment()
 	 * @generated
 	 */
-	int YALIGNMENT = 38;
+	int YALIGNMENT = 39;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}' enum.
@@ -2166,7 +2248,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFlatAlignment()
 	 * @generated
 	 */
-	int YFLAT_ALIGNMENT = 39;
+	int YFLAT_ALIGNMENT = 40;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}' enum.
@@ -2176,7 +2258,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYUnit()
 	 * @generated
 	 */
-	int YUNIT = 40;
+	int YUNIT = 41;
 
 	/**
 	 * The meta object id for the '<em>YURI</em>' data type.
@@ -2186,7 +2268,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYURI()
 	 * @generated
 	 */
-	int YURI = 41;
+	int YURI = 42;
 
 
 	/**
@@ -2197,7 +2279,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYValueChangeListener()
 	 * @generated
 	 */
-	int YVALUE_CHANGE_LISTENER = 42;
+	int YVALUE_CHANGE_LISTENER = 43;
 
 
 	/**
@@ -2490,6 +2572,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYBeanSlot_ValueTypeQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getEventTopic <em>Event Topic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Event Topic</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YBeanSlot#getEventTopic()
+	 * @see #getYBeanSlot()
+	 * @generated
+	 */
+	EAttribute getYBeanSlot_EventTopic();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YEmbeddable <em>YEmbeddable</em>}'.
@@ -3363,6 +3456,60 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYExposedAction_LabelI18nKey();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand <em>YSend Event Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YSend Event Command</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YSendEventCommand
+	 * @generated
+	 */
+	EClass getYSendEventCommand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand#getEventTopic <em>Event Topic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Event Topic</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YSendEventCommand#getEventTopic()
+	 * @see #getYSendEventCommand()
+	 * @generated
+	 */
+	EAttribute getYSendEventCommand_EventTopic();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YSendEventCommand#getMessage()
+	 * @see #getYSendEventCommand()
+	 * @generated
+	 */
+	EAttribute getYSendEventCommand_Message();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand#getTrigger <em>Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trigger</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YSendEventCommand#getTrigger()
+	 * @see #getYSendEventCommand()
+	 * @generated
+	 */
+	EAttribute getYSendEventCommand_Trigger();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand#isAutoTrigger <em>Auto Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auto Trigger</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YSendEventCommand#isAutoTrigger()
+	 * @see #getYSendEventCommand()
+	 * @generated
+	 */
+	EAttribute getYSendEventCommand_AutoTrigger();
+
+	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3673,6 +3820,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME = eINSTANCE.getYBeanSlot_ValueTypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Event Topic</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_SLOT__EVENT_TOPIC = eINSTANCE.getYBeanSlot_EventTopic();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl <em>YEmbeddable</em>}' class.
@@ -4391,6 +4546,48 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YEXPOSED_ACTION__LABEL_I1_8N_KEY = eINSTANCE.getYExposedAction_LabelI18nKey();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYSendEventCommand()
+		 * @generated
+		 */
+		EClass YSEND_EVENT_COMMAND = eINSTANCE.getYSendEventCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Event Topic</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEND_EVENT_COMMAND__EVENT_TOPIC = eINSTANCE.getYSendEventCommand_EventTopic();
+
+		/**
+		 * The meta object literal for the '<em><b>Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEND_EVENT_COMMAND__MESSAGE = eINSTANCE.getYSendEventCommand_Message();
+
+		/**
+		 * The meta object literal for the '<em><b>Trigger</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEND_EVENT_COMMAND__TRIGGER = eINSTANCE.getYSendEventCommand_Trigger();
+
+		/**
+		 * The meta object literal for the '<em><b>Auto Trigger</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSEND_EVENT_COMMAND__AUTO_TRIGGER = eINSTANCE.getYSendEventCommand_AutoTrigger();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.

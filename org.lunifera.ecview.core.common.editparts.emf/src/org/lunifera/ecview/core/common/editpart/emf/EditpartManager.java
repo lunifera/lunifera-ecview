@@ -29,6 +29,7 @@ import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.IOpenDialogCommandEditpart;
+import org.lunifera.ecview.core.common.editpart.ISendEventCommandEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBeanValueBindingEndpointEditpart;
@@ -82,6 +83,7 @@ import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YOpenDialogCommand;
+import org.lunifera.ecview.core.common.model.core.YSendEventCommand;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
@@ -209,6 +211,9 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(VisibilityProcessorEditpart.class);
 		} else if (editPartClazz.isAssignableFrom(IExposedActionEditpart.class)) {
 			result = createNewInstance(ExposedActionEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(ISendEventCommandEditpart.class)) {
+			result = createNewInstance(SendEventCommandEditpart.class);
 		}
 
 		if (result != null) {
@@ -293,6 +298,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(VisibilityProcessorEditpart.class);
 		} else if (yElement instanceof YExposedAction) {
 			result = createNewInstance(ExposedActionEditpart.class);
+		} else if (yElement instanceof YSendEventCommand) {
+			result = createNewInstance(SendEventCommandEditpart.class);
 		}
 
 		if (result != null) {
