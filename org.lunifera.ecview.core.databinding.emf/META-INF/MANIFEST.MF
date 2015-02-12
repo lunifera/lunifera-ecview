@@ -9,7 +9,14 @@ Require-Bundle: org.eclipse.emf.databinding,
  org.eclipse.core.databinding.beans,
  org.eclipse.core.databinding.property,
  com.ibm.icu
-Export-Package: org.lunifera.ecview.core.databinding.emf.common;version="0.8.1",
- org.lunifera.ecview.core.databinding.emf.context;version="0.8.1";x-internal:="true",
- org.lunifera.ecview.core.databinding.emf.model;version="0.8.1";x-internal:="true"
+Export-Package: org.lunifera.ecview.core.databinding.emf.common;version="0.8.1";
+  uses:="org.eclipse.core.databinding.observable.set,
+   org.eclipse.core.databinding.observable,
+   org.eclipse.core.databinding,
+   org.eclipse.emf.databinding,
+   org.eclipse.core.databinding.observable.value,
+   org.eclipse.core.databinding.conversion,
+   org.eclipse.core.databinding.observable.list",
+ org.lunifera.ecview.core.databinding.emf.context;version="0.8.1";x-internal:=true,
+ org.lunifera.ecview.core.databinding.emf.model;version="0.8.1";x-internal:=true
 Service-Component: OSGI-INF/emfBindingDelegate.xml
