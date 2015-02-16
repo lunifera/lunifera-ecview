@@ -3028,13 +3028,40 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBEAN_REFERENCE_FIELD__DESCRIPTION = YINPUT_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Reference Source Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE = YINPUT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Reference Source Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME = YINPUT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Reference Source Type Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY = YINPUT_FEATURE_COUNT + 15;
+
+	/**
 	 * The number of structural features of the '<em>YBean Reference Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_REFERENCE_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 13;
+	int YBEAN_REFERENCE_FIELD_FEATURE_COUNT = YINPUT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -7855,6 +7882,39 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYBeanReferenceField_Description();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceType <em>Reference Source Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reference Source Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceType()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_ReferenceSourceType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeQualifiedName <em>Reference Source Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reference Source Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeQualifiedName()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_ReferenceSourceTypeQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeProperty <em>Reference Source Type Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reference Source Type Property</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeProperty()
+	 * @see #getYBeanReferenceField()
+	 * @generated
+	 */
+	EAttribute getYBeanReferenceField_ReferenceSourceTypeProperty();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YGridLayout <em>YGrid Layout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10611,6 +10671,30 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBEAN_REFERENCE_FIELD__DESCRIPTION = eINSTANCE.getYBeanReferenceField_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference Source Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE = eINSTANCE.getYBeanReferenceField_ReferenceSourceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference Source Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME = eINSTANCE.getYBeanReferenceField_ReferenceSourceTypeQualifiedName();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference Source Type Property</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY = eINSTANCE.getYBeanReferenceField_ReferenceSourceTypeProperty();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YGridLayoutImpl <em>YGrid Layout</em>}' class.

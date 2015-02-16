@@ -189,6 +189,9 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute imagePropertyPath : EString
     Attribute descriptionProperty : EString
     Attribute description : EString
+    Attribute referenceSourceType : EJavaClass
+    Attribute referenceSourceTypeQualifiedName : EString
+    Attribute referenceSourceTypeProperty : EString
 
   Class YTextArea -> YInput, YValueBindable
     Reference datadescription : YDatadescription

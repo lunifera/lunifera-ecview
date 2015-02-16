@@ -25,6 +25,9 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getImagePropertyPath <em>Image Property Path</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescriptionProperty <em>Description Property</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceType <em>Reference Source Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeQualifiedName <em>Reference Source Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeProperty <em>Reference Source Type Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -318,5 +321,83 @@ public interface YBeanReferenceField extends YInput, YValueBindable, YBeanServic
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reference Source Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Reference Source Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reference Source Type</em>' attribute.
+	 * @see #setReferenceSourceType(Class)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYBeanReferenceField_ReferenceSourceType()
+	 * @model
+	 * @generated
+	 */
+	Class<?> getReferenceSourceType();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceType <em>Reference Source Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reference Source Type</em>' attribute.
+	 * @see #getReferenceSourceType()
+	 * @generated
+	 */
+	void setReferenceSourceType(Class<?> value);
+
+	/**
+	 * Returns the value of the '<em><b>Reference Source Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Reference Source Type Qualified Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reference Source Type Qualified Name</em>' attribute.
+	 * @see #setReferenceSourceTypeQualifiedName(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYBeanReferenceField_ReferenceSourceTypeQualifiedName()
+	 * @model
+	 * @generated
+	 */
+	String getReferenceSourceTypeQualifiedName();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeQualifiedName <em>Reference Source Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reference Source Type Qualified Name</em>' attribute.
+	 * @see #getReferenceSourceTypeQualifiedName()
+	 * @generated
+	 */
+	void setReferenceSourceTypeQualifiedName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reference Source Type Property</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Reference Source Type Property</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reference Source Type Property</em>' attribute.
+	 * @see #setReferenceSourceTypeProperty(String)
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYBeanReferenceField_ReferenceSourceTypeProperty()
+	 * @model
+	 * @generated
+	 */
+	String getReferenceSourceTypeProperty();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.extension.model.extension.YBeanReferenceField#getReferenceSourceTypeProperty <em>Reference Source Type Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reference Source Type Property</em>' attribute.
+	 * @see #getReferenceSourceTypeProperty()
+	 * @generated
+	 */
+	void setReferenceSourceTypeProperty(String value);
 
 } // YBeanReferenceField

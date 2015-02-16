@@ -621,6 +621,33 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanReferenceField_ReferenceSourceType() {
+		return (EAttribute)yBeanReferenceFieldEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanReferenceField_ReferenceSourceTypeQualifiedName() {
+		return (EAttribute)yBeanReferenceFieldEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanReferenceField_ReferenceSourceTypeProperty() {
+		return (EAttribute)yBeanReferenceFieldEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2821,6 +2848,9 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__IMAGE_PROPERTY_PATH);
 		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__DESCRIPTION_PROPERTY);
 		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__DESCRIPTION);
+		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE);
+		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME);
+		createEAttribute(yBeanReferenceFieldEClass, YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY);
 
 		yTextAreaEClass = createEClass(YTEXT_AREA);
 		createEReference(yTextAreaEClass, YTEXT_AREA__DATADESCRIPTION);
@@ -3293,6 +3323,12 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYBeanReferenceField_ImagePropertyPath(), ecorePackage.getEString(), "imagePropertyPath", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBeanReferenceField_DescriptionProperty(), ecorePackage.getEString(), "descriptionProperty", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBeanReferenceField_Description(), ecorePackage.getEString(), "description", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYBeanReferenceField_ReferenceSourceType(), g1, "referenceSourceType", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanReferenceField_ReferenceSourceTypeQualifiedName(), ecorePackage.getEString(), "referenceSourceTypeQualifiedName", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanReferenceField_ReferenceSourceTypeProperty(), ecorePackage.getEString(), "referenceSourceTypeProperty", null, 0, 1, YBeanReferenceField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yTextAreaEClass, YTextArea.class, "YTextArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYTextArea_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTextArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

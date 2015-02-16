@@ -36,4 +36,10 @@ public interface YBeanReferenceFieldValidator {
 	boolean validateDescriptionProperty(String value);
 
 	boolean validateDescription(String value);
+
+	boolean validateReferenceSourceType(Class<?> value);
+
+	boolean validateReferenceSourceTypeQualifiedName(String value);
+
+	boolean validateReferenceSourceTypeProperty(String value);
 }

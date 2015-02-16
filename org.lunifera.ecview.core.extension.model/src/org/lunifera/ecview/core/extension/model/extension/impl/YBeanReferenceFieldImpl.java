@@ -36,6 +36,9 @@ import org.lunifera.ecview.core.extension.model.extension.YBeanServiceConsumer;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getImagePropertyPath <em>Image Property Path</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getDescriptionProperty <em>Description Property</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getReferenceSourceType <em>Reference Source Type</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getReferenceSourceTypeQualifiedName <em>Reference Source Type Qualified Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YBeanReferenceFieldImpl#getReferenceSourceTypeProperty <em>Reference Source Type Property</em>}</li>
  * </ul>
  * </p>
  *
@@ -261,6 +264,56 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getReferenceSourceType() <em>Reference Source Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferenceSourceType()
+	 * @generated
+	 * @ordered
+	 */
+	protected Class<?> referenceSourceType;
+
+	/**
+	 * The default value of the '{@link #getReferenceSourceTypeQualifiedName() <em>Reference Source Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferenceSourceTypeQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REFERENCE_SOURCE_TYPE_QUALIFIED_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReferenceSourceTypeQualifiedName() <em>Reference Source Type Qualified Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferenceSourceTypeQualifiedName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String referenceSourceTypeQualifiedName = REFERENCE_SOURCE_TYPE_QUALIFIED_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getReferenceSourceTypeProperty() <em>Reference Source Type Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferenceSourceTypeProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REFERENCE_SOURCE_TYPE_PROPERTY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReferenceSourceTypeProperty() <em>Reference Source Type Property</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferenceSourceTypeProperty()
+	 * @generated
+	 * @ordered
+	 */
+	protected String referenceSourceTypeProperty = REFERENCE_SOURCE_TYPE_PROPERTY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -615,6 +668,69 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Class<?> getReferenceSourceType() {
+		return referenceSourceType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReferenceSourceType(Class<?> newReferenceSourceType) {
+		Class<?> oldReferenceSourceType = referenceSourceType;
+		referenceSourceType = newReferenceSourceType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE, oldReferenceSourceType, referenceSourceType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getReferenceSourceTypeQualifiedName() {
+		return referenceSourceTypeQualifiedName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReferenceSourceTypeQualifiedName(String newReferenceSourceTypeQualifiedName) {
+		String oldReferenceSourceTypeQualifiedName = referenceSourceTypeQualifiedName;
+		referenceSourceTypeQualifiedName = newReferenceSourceTypeQualifiedName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME, oldReferenceSourceTypeQualifiedName, referenceSourceTypeQualifiedName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getReferenceSourceTypeProperty() {
+		return referenceSourceTypeProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReferenceSourceTypeProperty(String newReferenceSourceTypeProperty) {
+		String oldReferenceSourceTypeProperty = referenceSourceTypeProperty;
+		referenceSourceTypeProperty = newReferenceSourceTypeProperty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY, oldReferenceSourceTypeProperty, referenceSourceTypeProperty));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YEmbeddableValueEndpoint createValueEndpoint() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -687,6 +803,12 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				return getDescriptionProperty();
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
 				return getDescription();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE:
+				return getReferenceSourceType();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME:
+				return getReferenceSourceTypeQualifiedName();
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY:
+				return getReferenceSourceTypeProperty();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -737,6 +859,15 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				return;
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE:
+				setReferenceSourceType((Class<?>)newValue);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME:
+				setReferenceSourceTypeQualifiedName((String)newValue);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY:
+				setReferenceSourceTypeProperty((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -789,6 +920,15 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE:
+				setReferenceSourceType((Class<?>)null);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME:
+				setReferenceSourceTypeQualifiedName(REFERENCE_SOURCE_TYPE_QUALIFIED_NAME_EDEFAULT);
+				return;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY:
+				setReferenceSourceTypeProperty(REFERENCE_SOURCE_TYPE_PROPERTY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -827,6 +967,12 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 				return DESCRIPTION_PROPERTY_EDEFAULT == null ? descriptionProperty != null : !DESCRIPTION_PROPERTY_EDEFAULT.equals(descriptionProperty);
 			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE:
+				return referenceSourceType != null;
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_QUALIFIED_NAME:
+				return REFERENCE_SOURCE_TYPE_QUALIFIED_NAME_EDEFAULT == null ? referenceSourceTypeQualifiedName != null : !REFERENCE_SOURCE_TYPE_QUALIFIED_NAME_EDEFAULT.equals(referenceSourceTypeQualifiedName);
+			case ExtensionModelPackage.YBEAN_REFERENCE_FIELD__REFERENCE_SOURCE_TYPE_PROPERTY:
+				return REFERENCE_SOURCE_TYPE_PROPERTY_EDEFAULT == null ? referenceSourceTypeProperty != null : !REFERENCE_SOURCE_TYPE_PROPERTY_EDEFAULT.equals(referenceSourceTypeProperty);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -917,6 +1063,12 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 		result.append(descriptionProperty);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", referenceSourceType: ");
+		result.append(referenceSourceType);
+		result.append(", referenceSourceTypeQualifiedName: ");
+		result.append(referenceSourceTypeQualifiedName);
+		result.append(", referenceSourceTypeProperty: ");
+		result.append(referenceSourceTypeProperty);
 		result.append(')');
 		return result.toString();
 	}
