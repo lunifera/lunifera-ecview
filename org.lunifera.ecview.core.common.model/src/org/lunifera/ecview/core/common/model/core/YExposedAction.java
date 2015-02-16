@@ -14,6 +14,7 @@ package org.lunifera.ecview.core.common.model.core;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLabel <em>Label</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLabelI18nKey <em>Label I1 8n Key</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLastClickTime <em>Last Click Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,6 +100,32 @@ public interface YExposedAction extends YElement {
 	 * @generated
 	 */
 	void setLabelI18nKey(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Last Click Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Click Time</em>' attribute.
+	 * @see #setLastClickTime(long)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYExposedAction_LastClickTime()
+	 * @model
+	 * @generated
+	 */
+	long getLastClickTime();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLastClickTime <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Click Time</em>' attribute.
+	 * @see #getLastClickTime()
+	 * @generated
+	 */
+	void setLastClickTime(long value);
 
 	/**
 	 * <!-- begin-user-doc -->

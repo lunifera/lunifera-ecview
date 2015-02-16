@@ -252,6 +252,7 @@ Package core <http://lunifera.org/ecview/v1/core/view>
     Attribute icon : EString
     Attribute label : EString
     Attribute labelI18nKey : EString
+    Attribute lastClickTime : ELong
     Operation getView() : YView
 
   Class YSendEventCommand -> YCommand

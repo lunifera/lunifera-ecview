@@ -258,6 +258,11 @@ public class ViewContext extends DisposableContext implements IViewContext {
 			service.notifyLocaleChanged(locale);
 		}
 	}
+	
+	@Override
+	public Object findModelElement(String id) {
+		return viewEditpart.findModelElement(id);
+	}
 
 	protected void preDispose() {
 		super.preDispose();

@@ -13,6 +13,7 @@ package org.lunifera.ecview.core.common.editpart.emf;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -20,6 +21,7 @@ import java.util.concurrent.Future;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.lunifera.ecview.core.common.context.ContextException;
@@ -100,6 +102,25 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		checkDisposed();
 
 		return context;
+	}
+
+	@Override
+	public Object findModelElement(String id) {
+		if (id == null || id.equals("")) {
+			return null;
+		}
+
+		Iterator<EObject> iter = getModel().eAllContents();
+		while (iter.hasNext()) {
+			EObject eObject = iter.next();
+			if (eObject instanceof YElement) {
+				YElement yElement = (YElement) eObject;
+				if (id.equals(yElement.getId())) {
+					return yElement;
+				}
+			}
+		}
+		return null;
 	}
 
 	@Override
@@ -648,7 +669,8 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 */
 	protected void internalAddBeanSlot(YBeanSlot yBeanSlot) {
 		checkDisposed();
-		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType(), yBeanSlot.getEventTopic());
+		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType(),
+				yBeanSlot.getEventTopic());
 	}
 
 	public List<IVisibilityProcessorEditpart> getVisibilityProcessors() {
@@ -759,8 +781,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			// add the element by using the model
 			//
 			M yView = getModel();
-			YExposedAction yExposedAction = (YExposedAction) element
-					.getModel();
+			YExposedAction yExposedAction = (YExposedAction) element.getModel();
 			yView.getExposedActions().add(yExposedAction);
 			// BEGIN SUPRESS CATCH EXCEPTION
 		} catch (RuntimeException e) {
@@ -777,8 +798,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			// remove the element by using the model
 			//
 			M yView = getModel();
-			YExposedAction yExposedAction = (YExposedAction) element
-					.getModel();
+			YExposedAction yExposedAction = (YExposedAction) element.getModel();
 			yView.getExposedActions().remove(yExposedAction);
 			// BEGIN SUPRESS CATCH EXCEPTION
 		} catch (RuntimeException e) {
@@ -795,8 +815,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 * @param editpart
 	 *            The editpart to be added
 	 */
-	protected void internalAddExposedAction(
-			IExposedActionEditpart editpart) {
+	protected void internalAddExposedAction(IExposedActionEditpart editpart) {
 		checkDisposed();
 
 		if (exposedActionEditparts == null) {
@@ -814,8 +833,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 * @param editpart
 	 *            The editpart to be removed
 	 */
-	protected void internalRemoveExposedAction(
-			IExposedActionEditpart editpart) {
+	protected void internalRemoveExposedAction(IExposedActionEditpart editpart) {
 		checkDisposed();
 
 		if (exposedActionEditparts != null && editpart != null) {
@@ -907,7 +925,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	@Override
 	public IViewSetEditpart getParent() {
 		checkDisposed();
-		
+
 		YViewSet yViewSet = getModel().getRoot();
 		return yViewSet != null ? (IViewSetEditpart) getEditpart(yViewSet)
 				: null;

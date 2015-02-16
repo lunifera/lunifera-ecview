@@ -1451,6 +1451,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYExposedAction_LastClickTime() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYSendEventCommand() {
 		return ySendEventCommandEClass;
 	}
@@ -1719,6 +1728,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__ICON);
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL);
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL_I1_8N_KEY);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LAST_CLICK_TIME);
 
 		ySendEventCommandEClass = createEClass(YSEND_EVENT_COMMAND);
 		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__EVENT_TOPIC);
@@ -2009,6 +2019,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYExposedAction_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYExposedAction_Label(), ecorePackage.getEString(), "label", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYExposedAction_LabelI18nKey(), ecorePackage.getEString(), "labelI18nKey", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_LastClickTime(), ecorePackage.getELong(), "lastClickTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yExposedActionEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 

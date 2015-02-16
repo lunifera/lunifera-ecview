@@ -19,4 +19,6 @@ public interface YExposedActionValidator {
 	boolean validateLabel(String value);
 
 	boolean validateLabelI18nKey(String value);
+
+	boolean validateLastClickTime(long value);
 }

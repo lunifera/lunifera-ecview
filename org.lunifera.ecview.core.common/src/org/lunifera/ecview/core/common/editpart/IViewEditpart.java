@@ -200,4 +200,13 @@ public interface IViewEditpart extends IElementEditpart, IEmbeddableParent {
 	 */
 	void closeDialog(IDialogEditpart dialogEditpart);
 
+	/**
+	 * Returns the model element with the given id or <code>null</code> if no
+	 * element could be found.
+	 * 
+	 * @param id
+	 * @return
+	 */
+	Object findModelElement(String id);
+
 }

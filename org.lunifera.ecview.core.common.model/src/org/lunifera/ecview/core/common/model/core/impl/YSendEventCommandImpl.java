@@ -21,24 +21,12 @@ import org.lunifera.ecview.core.common.model.core.YView;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getId
- * <em>Id</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getName
- * <em>Name</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getEventTopic
- * <em>Event Topic</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getMessage
- * <em>Message</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getTrigger
- * <em>Trigger</em>}</li>
- * <li>
- * {@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#isAutoTrigger
- * <em>Auto Trigger</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getEventTopic <em>Event Topic</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getMessage <em>Message</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getTrigger <em>Trigger</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#isAutoTrigger <em>Auto Trigger</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,7 +57,6 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -79,7 +66,6 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -87,9 +73,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getEventTopic() <em>Event Topic</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getEventTopic() <em>Event Topic</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getEventTopic()
 	 * @generated
 	 * @ordered
@@ -97,9 +82,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected static final String EVENT_TOPIC_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getEventTopic() <em>Event Topic</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getEventTopic() <em>Event Topic</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getEventTopic()
 	 * @generated
 	 * @ordered
@@ -107,9 +91,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected String eventTopic = EVENT_TOPIC_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMessage() <em>Message</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getMessage() <em>Message</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getMessage()
 	 * @generated
 	 * @ordered
@@ -117,9 +100,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected static final Object MESSAGE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getMessage() <em>Message</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getMessage() <em>Message</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getMessage()
 	 * @generated
 	 * @ordered
@@ -127,9 +109,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected Object message = MESSAGE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTrigger() <em>Trigger</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getTrigger() <em>Trigger</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTrigger()
 	 * @generated
 	 * @ordered
@@ -137,9 +118,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected static final Object TRIGGER_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTrigger() <em>Trigger</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getTrigger() <em>Trigger</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTrigger()
 	 * @generated
 	 * @ordered
@@ -147,9 +127,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected Object trigger = TRIGGER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isAutoTrigger() <em>Auto Trigger</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #isAutoTrigger() <em>Auto Trigger</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isAutoTrigger()
 	 * @generated
 	 * @ordered
@@ -157,9 +136,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	protected static final boolean AUTO_TRIGGER_EDEFAULT = true;
 
 	/**
-	 * The cached value of the '{@link #isAutoTrigger() <em>Auto Trigger</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #isAutoTrigger() <em>Auto Trigger</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isAutoTrigger()
 	 * @generated
 	 * @ordered
@@ -168,7 +146,6 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected YSendEventCommandImpl() {
@@ -177,7 +154,6 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -187,7 +163,6 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getId() {
@@ -196,20 +171,17 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					CoreModelPackage.YSEND_EVENT_COMMAND__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YSEND_EVENT_COMMAND__ID, oldId, id));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -218,20 +190,17 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					CoreModelPackage.YSEND_EVENT_COMMAND__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YSEND_EVENT_COMMAND__NAME, oldName, name));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getEventTopic() {
@@ -240,21 +209,17 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setEventTopic(String newEventTopic) {
 		String oldEventTopic = eventTopic;
 		eventTopic = newEventTopic;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC,
-					oldEventTopic, eventTopic));
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC, oldEventTopic, eventTopic));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Object getMessage() {
@@ -263,21 +228,17 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setMessage(Object newMessage) {
 		Object oldMessage = message;
 		message = newMessage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE, oldMessage,
-					message));
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE, oldMessage, message));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Object getTrigger() {
@@ -286,21 +247,17 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setTrigger(Object newTrigger) {
 		Object oldTrigger = trigger;
 		trigger = newTrigger;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER, oldTrigger,
-					trigger));
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER, oldTrigger, trigger));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean isAutoTrigger() {
@@ -309,24 +266,22 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setAutoTrigger(boolean newAutoTrigger) {
 		boolean oldAutoTrigger = autoTrigger;
 		autoTrigger = newAutoTrigger;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER,
-					oldAutoTrigger, autoTrigger));
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER, oldAutoTrigger, autoTrigger));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YView getViewGen() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
@@ -350,40 +305,40 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YECViewModelValueBindingEndpoint createTriggerEndpointGen() {
+		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YECViewModelValueBindingEndpoint createMessageEndpointGen() {
+		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YECViewModelValueBindingEndpoint createAutoTriggerEndpointGen() {
+		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public YECViewModelValueBindingEndpoint createEventTopicEndpointGen() {
+		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
@@ -433,125 +388,115 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
-			return getId();
-		case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
-			return getName();
-		case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
-			return getEventTopic();
-		case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
-			return getMessage();
-		case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
-			return getTrigger();
-		case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
-			return isAutoTrigger();
+			case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
+				return getId();
+			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
+				return getName();
+			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
+				return getEventTopic();
+			case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
+				return getMessage();
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
+				return getTrigger();
+			case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
+				return isAutoTrigger();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
-			setId((String) newValue);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
-			setName((String) newValue);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
-			setEventTopic((String) newValue);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
-			setMessage(newValue);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
-			setTrigger(newValue);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
-			setAutoTrigger((Boolean) newValue);
-			return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
+				setId((String)newValue);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
+				setName((String)newValue);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
+				setEventTopic((String)newValue);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
+				setMessage(newValue);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
+				setTrigger(newValue);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
+				setAutoTrigger((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
-			setId(ID_EDEFAULT);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
-			setEventTopic(EVENT_TOPIC_EDEFAULT);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
-			setMessage(MESSAGE_EDEFAULT);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
-			setTrigger(TRIGGER_EDEFAULT);
-			return;
-		case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
-			setAutoTrigger(AUTO_TRIGGER_EDEFAULT);
-			return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
+				setEventTopic(EVENT_TOPIC_EDEFAULT);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
+				setMessage(MESSAGE_EDEFAULT);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
+				setTrigger(TRIGGER_EDEFAULT);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
+				setAutoTrigger(AUTO_TRIGGER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
-		case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
-			return EVENT_TOPIC_EDEFAULT == null ? eventTopic != null
-					: !EVENT_TOPIC_EDEFAULT.equals(eventTopic);
-		case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
-			return MESSAGE_EDEFAULT == null ? message != null
-					: !MESSAGE_EDEFAULT.equals(message);
-		case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
-			return TRIGGER_EDEFAULT == null ? trigger != null
-					: !TRIGGER_EDEFAULT.equals(trigger);
-		case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
-			return autoTrigger != AUTO_TRIGGER_EDEFAULT;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
+				return EVENT_TOPIC_EDEFAULT == null ? eventTopic != null : !EVENT_TOPIC_EDEFAULT.equals(eventTopic);
+			case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
+				return MESSAGE_EDEFAULT == null ? message != null : !MESSAGE_EDEFAULT.equals(message);
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TRIGGER:
+				return TRIGGER_EDEFAULT == null ? trigger != null : !TRIGGER_EDEFAULT.equals(trigger);
+			case CoreModelPackage.YSEND_EVENT_COMMAND__AUTO_TRIGGER:
+				return autoTrigger != AUTO_TRIGGER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");

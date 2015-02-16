@@ -2139,13 +2139,22 @@ public interface CoreModelPackage extends EPackage {
 	int YEXPOSED_ACTION__LABEL_I1_8N_KEY = YELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Last Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__LAST_CLICK_TIME = YELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>YExposed Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 3;
+	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.
@@ -3456,6 +3465,17 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYExposedAction_LabelI18nKey();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLastClickTime <em>Last Click Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Click Time</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getLastClickTime()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_LastClickTime();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand <em>YSend Event Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4546,6 +4566,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YEXPOSED_ACTION__LABEL_I1_8N_KEY = eINSTANCE.getYExposedAction_LabelI18nKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Last Click Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__LAST_CLICK_TIME = eINSTANCE.getYExposedAction_LastClickTime();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.

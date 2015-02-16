@@ -126,6 +126,15 @@ public interface IViewContext extends IContext {
 	boolean isRendered();
 
 	/**
+	 * Returns the model element with the given id or <code>null</code> if no
+	 * element could be found.
+	 * 
+	 * @param id
+	 * @return
+	 */
+	Object findModelElement(String id);
+
+	/**
 	 * Executes the given runnable. It is ensured that the runnable will be
 	 * executed within the context of the user interface related to this
 	 * context.

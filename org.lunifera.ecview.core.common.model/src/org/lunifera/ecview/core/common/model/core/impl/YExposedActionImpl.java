@@ -24,6 +24,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLabelI18nKey <em>Label I1 8n Key</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLastClickTime <em>Last Click Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,6 +130,26 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String labelI18nKey = LABEL_I1_8N_KEY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long LAST_CLICK_TIME_EDEFAULT = 0L;
+
+	/**
+	 * The cached value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected long lastClickTime = LAST_CLICK_TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -255,6 +276,27 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public long getLastClickTime() {
+		return lastClickTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastClickTime(long newLastClickTime) {
+		long oldLastClickTime = lastClickTime;
+		lastClickTime = newLastClickTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME, oldLastClickTime, lastClickTime));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -300,6 +342,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return getLabel();
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				return getLabelI18nKey();
+			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
+				return getLastClickTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -326,6 +370,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				setLabelI18nKey((String)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
+				setLastClickTime((Long)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -354,6 +401,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				setLabelI18nKey(LABEL_I1_8N_KEY_EDEFAULT);
 				return;
+			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
+				setLastClickTime(LAST_CLICK_TIME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -376,6 +426,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				return LABEL_I1_8N_KEY_EDEFAULT == null ? labelI18nKey != null : !LABEL_I1_8N_KEY_EDEFAULT.equals(labelI18nKey);
+			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
+				return lastClickTime != LAST_CLICK_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -400,6 +452,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 		result.append(label);
 		result.append(", labelI18nKey: ");
 		result.append(labelI18nKey);
+		result.append(", lastClickTime: ");
+		result.append(lastClickTime);
 		result.append(')');
 		return result.toString();
 	}
