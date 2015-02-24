@@ -129,7 +129,6 @@
 				<module>org.lunifera.ecview.core.extension.tests</module>
 				<module>org.lunifera.ecview.core.databinding.tests</module>
 				<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
-				<module>org.lunifera.ecview.core.target.kepler</module>
 				<module>org.lunifera.ecview.core.common</module>
 				<module>org.lunifera.ecview.core.common.model</module>
 				<module>org.lunifera.ecview.core.extension.model</module>
