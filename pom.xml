@@ -140,7 +140,7 @@
 
 				<!-- exclusive for P2 -->
 				<module>org.lunifera.ecview.core.p2</module>
-				<module>org.lunifera.ecview.core.target.kepler</module>
+<!-- 				<module>org.lunifera.ecview.core.target.kepler</module> -->
 
 				<!-- P2 features -->
 				<module>org.lunifera.ecview.core.feature.core</module>
@@ -209,7 +209,7 @@
 			</build>
 			<modules>
 				<!-- exclusive for P2 -->
-				<module>org.lunifera.ecview.core.target.kepler</module>
+<!-- 				<module>org.lunifera.ecview.core.target.kepler</module> -->
 				<module>org.lunifera.ecview.core.p2</module>
 				<!-- P2 features -->
 				<module>org.lunifera.ecview.core.feature.core</module>
