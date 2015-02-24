@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lunifera.ecview.core</groupId>
 	<artifactId>org.lunifera.ecview.core</artifactId>
-	<version>0.8.0</version>
+	<version>0.9.0</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -144,7 +144,7 @@
 
 				<!-- exclusive for P2 -->
 				<module>org.lunifera.ecview.core.p2</module>
-				<module>org.lunifera.ecview.core.target.kepler</module>
+				<module>org.lunifera.ecview.core.target.luna</module>
 
 				<!-- P2 features -->
 				<module>org.lunifera.ecview.core.feature.core</module>
@@ -176,7 +176,7 @@
 							<target>
 								<artifact>
 									<groupId>org.lunifera.ecview.core</groupId>
-									<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
+									<artifactId>org.lunifera.ecview.core.target.luna</artifactId>
 									<version>${project.version}</version>
 								</artifact>
 							</target>
@@ -431,6 +431,6 @@
 	<parent>
 		<groupId>org.lunifera.releng.maven</groupId>
 		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
-		<version>0.10.1-SNAPSHOT</version>
+		<version>0.12.5-SNAPSHOT</version>
 	</parent>
 </project>

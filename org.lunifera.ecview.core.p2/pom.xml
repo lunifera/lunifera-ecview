@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.lunifera.releng.maven</groupId>
 		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
-		<version>0.12.3-SNAPSHOT</version>
+		<version>0.12.5-SNAPSHOT</version>
 	</parent>
 	<artifactId>org.lunifera.ecview.core.p2</artifactId>
 	<name>ECView P2 repo</name>
@@ -122,6 +122,6 @@
 			</build>
 		</profile>
 	</profiles>
-	<version>0.8.0</version>
+	<version>0.9.0</version>
 	<groupId>org.lunifera.ecview.core</groupId>
 </project>
