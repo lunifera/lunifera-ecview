@@ -165,7 +165,9 @@ public class ViewSetEditpart<M extends YViewSet> extends ElementEditpart<M>
 	 */
 	protected void internalAddBeanSlot(YBeanSlot yBeanSlot) {
 		checkDisposed();
-		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType(), yBeanSlot.getEventTopic());
+		// redirect events are handled from outside
+		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType(),
+				yBeanSlot.isRedirectEvents() ? null : yBeanSlot.getEventTopic());
 	}
 
 	/**

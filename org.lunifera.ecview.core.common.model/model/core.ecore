@@ -46,6 +46,7 @@
         eType="ecore:EClass visibility.ecore#//YVisibilityProcessor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exposedActions" upperBound="-1"
         eType="#//YExposedAction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sharedStateGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YDeviceType">
     <eLiterals name="IDE" literal="IDE"/>
@@ -91,6 +92,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueTypeQualifiedName"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventTopic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="redirectEvents" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YEmbeddable" abstract="true" eSuperTypes="#//YElement #//YCssAble #//YVisibleable">
     <eOperations name="getParent" eType="#//YLayout"/>

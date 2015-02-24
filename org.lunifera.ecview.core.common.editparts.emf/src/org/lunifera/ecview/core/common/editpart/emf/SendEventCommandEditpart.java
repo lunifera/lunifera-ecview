@@ -10,6 +10,9 @@
  */
 package org.lunifera.ecview.core.common.editpart.emf;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.lunifera.ecview.core.common.editpart.ISendEventCommandEditpart;
 import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
@@ -81,8 +84,9 @@ public class SendEventCommandEditpart extends
 				IEventBroker.class.getName());
 		if (eventAdmin != null) {
 			try {
-				eventAdmin
-						.post(yCommand.getEventTopic(), yCommand.getMessage());
+				Map<String, Object> data = new HashMap<String, Object>();
+				data.put(IEventBroker.DATA, yCommand.getMessage());
+				eventAdmin.post(yCommand.getEventTopic(), data);
 			} catch (Exception e) {
 				LOGGER.error("{}", e);
 			}

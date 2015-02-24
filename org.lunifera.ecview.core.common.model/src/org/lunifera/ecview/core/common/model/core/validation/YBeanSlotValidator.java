@@ -19,4 +19,6 @@ public interface YBeanSlotValidator {
 	boolean validateValueTypeQualifiedName(String value);
 
 	boolean validateEventTopic(String value);
+
+	boolean validateRedirectEvents(boolean value);
 }

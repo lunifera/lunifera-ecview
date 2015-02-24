@@ -631,13 +631,22 @@ public interface CoreModelPackage extends EPackage {
 	int YVIEW__EXPOSED_ACTIONS = YELEMENT_FEATURE_COUNT + 13;
 
 	/**
+	 * The feature id for the '<em><b>Shared State Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__SHARED_STATE_GROUP = YELEMENT_FEATURE_COUNT + 14;
+
+	/**
 	 * The number of structural features of the '<em>YView</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 14;
+	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -860,13 +869,22 @@ public interface CoreModelPackage extends EPackage {
 	int YBEAN_SLOT__EVENT_TOPIC = YBINDABLE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Redirect Events</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_SLOT__REDIRECT_EVENTS = YBINDABLE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>YBean Slot</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBEAN_SLOT_FEATURE_COUNT = YBINDABLE_FEATURE_COUNT + 4;
+	int YBEAN_SLOT_FEATURE_COUNT = YBINDABLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl <em>YDialog</em>}' class.
@@ -2508,6 +2526,17 @@ public interface CoreModelPackage extends EPackage {
 	EReference getYView_ExposedActions();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YView#getSharedStateGroup <em>Shared State Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Shared State Group</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YView#getSharedStateGroup()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EAttribute getYView_SharedStateGroup();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YViewSet <em>YView Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2592,6 +2621,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYBeanSlot_EventTopic();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#isRedirectEvents <em>Redirect Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Redirect Events</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YBeanSlot#isRedirectEvents()
+	 * @see #getYBeanSlot()
+	 * @generated
+	 */
+	EAttribute getYBeanSlot_RedirectEvents();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YEmbeddable <em>YEmbeddable</em>}'.
@@ -3782,6 +3822,14 @@ public interface CoreModelPackage extends EPackage {
 		EReference YVIEW__EXPOSED_ACTIONS = eINSTANCE.getYView_ExposedActions();
 
 		/**
+		 * The meta object literal for the '<em><b>Shared State Group</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVIEW__SHARED_STATE_GROUP = eINSTANCE.getYView_SharedStateGroup();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3848,6 +3896,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBEAN_SLOT__EVENT_TOPIC = eINSTANCE.getYBeanSlot_EventTopic();
+
+		/**
+		 * The meta object literal for the '<em><b>Redirect Events</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YBEAN_SLOT__REDIRECT_EVENTS = eINSTANCE.getYBeanSlot_RedirectEvents();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl <em>YEmbeddable</em>}' class.

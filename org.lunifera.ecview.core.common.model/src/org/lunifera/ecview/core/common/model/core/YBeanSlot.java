@@ -15,6 +15,7 @@ package org.lunifera.ecview.core.common.model.core;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getValueType <em>Value Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getValueTypeQualifiedName <em>Value Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#getEventTopic <em>Event Topic</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#isRedirectEvents <em>Redirect Events</em>}</li>
  * </ul>
  * </p>
  *
@@ -127,6 +128,32 @@ public interface YBeanSlot extends YBindable {
 	 * @generated
 	 */
 	void setEventTopic(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Redirect Events</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Redirect Events</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Redirect Events</em>' attribute.
+	 * @see #setRedirectEvents(boolean)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYBeanSlot_RedirectEvents()
+	 * @model
+	 * @generated
+	 */
+	boolean isRedirectEvents();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YBeanSlot#isRedirectEvents <em>Redirect Events</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Redirect Events</em>' attribute.
+	 * @see #isRedirectEvents()
+	 * @generated
+	 */
+	void setRedirectEvents(boolean value);
 
 	/**
 	 * Creates a binding endpoint that may be used to bind values against this

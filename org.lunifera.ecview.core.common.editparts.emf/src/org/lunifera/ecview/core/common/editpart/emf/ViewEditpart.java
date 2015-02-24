@@ -669,8 +669,9 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 */
 	protected void internalAddBeanSlot(YBeanSlot yBeanSlot) {
 		checkDisposed();
+		// redirect events are handled from outside
 		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType(),
-				yBeanSlot.getEventTopic());
+				yBeanSlot.isRedirectEvents() ? null : yBeanSlot.getEventTopic());
 	}
 
 	public List<IVisibilityProcessorEditpart> getVisibilityProcessors() {

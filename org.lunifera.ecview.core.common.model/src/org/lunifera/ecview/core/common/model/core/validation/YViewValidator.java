@@ -47,6 +47,8 @@ public interface YViewValidator {
 
 	boolean validateExposedActions(EList<YExposedAction> value);
 
+	boolean validateSharedStateGroup(String value);
+
 	boolean validateExposedActions(YExposedAction value);
 
 	boolean validateVisibilityProcessor(EList<YVisibilityProcessor> value);

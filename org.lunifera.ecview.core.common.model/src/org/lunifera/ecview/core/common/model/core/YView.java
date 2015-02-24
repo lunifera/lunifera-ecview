@@ -32,6 +32,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getContentAlignment <em>Content Alignment</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getVisibilityProcessors <em>Visibility Processors</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getExposedActions <em>Exposed Actions</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getSharedStateGroup <em>Shared State Group</em>}</li>
  * </ul>
  * </p>
  *
@@ -274,6 +275,32 @@ public interface YView extends YElement, YCssAble, YMarginable {
 	 * @generated
 	 */
 	EList<YExposedAction> getExposedActions();
+
+	/**
+	 * Returns the value of the '<em><b>Shared State Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Shared State Group</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Shared State Group</em>' attribute.
+	 * @see #setSharedStateGroup(String)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_SharedStateGroup()
+	 * @model
+	 * @generated
+	 */
+	String getSharedStateGroup();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YView#getSharedStateGroup <em>Shared State Group</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Shared State Group</em>' attribute.
+	 * @see #getSharedStateGroup()
+	 * @generated
+	 */
+	void setSharedStateGroup(String value);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

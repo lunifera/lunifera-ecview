@@ -59,6 +59,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getContentAlignment <em>Content Alignment</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getVisibilityProcessors <em>Visibility Processors</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getExposedActions <em>Exposed Actions</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getSharedStateGroup <em>Shared State Group</em>}</li>
  * </ul>
  * </p>
  *
@@ -290,6 +291,26 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected EList<YExposedAction> exposedActions;
+
+	/**
+	 * The default value of the '{@link #getSharedStateGroup() <em>Shared State Group</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSharedStateGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SHARED_STATE_GROUP_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSharedStateGroup() <em>Shared State Group</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSharedStateGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected String sharedStateGroup = SHARED_STATE_GROUP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -694,6 +715,27 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSharedStateGroup() {
+		return sharedStateGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSharedStateGroup(String newSharedStateGroup) {
+		String oldSharedStateGroup = sharedStateGroup;
+		sharedStateGroup = newSharedStateGroup;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YVIEW__SHARED_STATE_GROUP, oldSharedStateGroup, sharedStateGroup));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -910,6 +952,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getVisibilityProcessors();
 			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 				return getExposedActions();
+			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
+				return getSharedStateGroup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -974,6 +1018,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				getExposedActions().clear();
 				getExposedActions().addAll((Collection<? extends YExposedAction>)newValue);
 				return;
+			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
+				setSharedStateGroup((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1033,6 +1080,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 				getExposedActions().clear();
 				return;
+			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
+				setSharedStateGroup(SHARED_STATE_GROUP_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1076,6 +1126,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return visibilityProcessors != null && !visibilityProcessors.isEmpty();
 			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 				return exposedActions != null && !exposedActions.isEmpty();
+			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
+				return SHARED_STATE_GROUP_EDEFAULT == null ? sharedStateGroup != null : !SHARED_STATE_GROUP_EDEFAULT.equals(sharedStateGroup);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1149,6 +1201,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 		result.append(deviceType);
 		result.append(", contentAlignment: ");
 		result.append(contentAlignment);
+		result.append(", sharedStateGroup: ");
+		result.append(sharedStateGroup);
 		result.append(')');
 		return result.toString();
 	}

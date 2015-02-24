@@ -22,6 +22,7 @@ import org.lunifera.ecview.core.common.model.core.YBeanSlotValueBindingEndpoint;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#getValueType <em>Value Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#getValueTypeQualifiedName <em>Value Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#getEventTopic <em>Event Topic</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YBeanSlotImpl#isRedirectEvents <em>Redirect Events</em>}</li>
  * </ul>
  * </p>
  *
@@ -95,6 +96,26 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String eventTopic = EVENT_TOPIC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isRedirectEvents() <em>Redirect Events</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isRedirectEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean REDIRECT_EVENTS_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isRedirectEvents() <em>Redirect Events</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isRedirectEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean redirectEvents = REDIRECT_EVENTS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -194,6 +215,27 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isRedirectEvents() {
+		return redirectEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRedirectEvents(boolean newRedirectEvents) {
+		boolean oldRedirectEvents = redirectEvents;
+		redirectEvents = newRedirectEvents;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YBEAN_SLOT__REDIRECT_EVENTS, oldRedirectEvents, redirectEvents));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -208,6 +250,8 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 				return getValueTypeQualifiedName();
 			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
 				return getEventTopic();
+			case CoreModelPackage.YBEAN_SLOT__REDIRECT_EVENTS:
+				return isRedirectEvents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -230,6 +274,9 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
 				setEventTopic((String)newValue);
+				return;
+			case CoreModelPackage.YBEAN_SLOT__REDIRECT_EVENTS:
+				setRedirectEvents((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -254,6 +301,9 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
 				setEventTopic(EVENT_TOPIC_EDEFAULT);
 				return;
+			case CoreModelPackage.YBEAN_SLOT__REDIRECT_EVENTS:
+				setRedirectEvents(REDIRECT_EVENTS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -273,6 +323,8 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 				return VALUE_TYPE_QUALIFIED_NAME_EDEFAULT == null ? valueTypeQualifiedName != null : !VALUE_TYPE_QUALIFIED_NAME_EDEFAULT.equals(valueTypeQualifiedName);
 			case CoreModelPackage.YBEAN_SLOT__EVENT_TOPIC:
 				return EVENT_TOPIC_EDEFAULT == null ? eventTopic != null : !EVENT_TOPIC_EDEFAULT.equals(eventTopic);
+			case CoreModelPackage.YBEAN_SLOT__REDIRECT_EVENTS:
+				return redirectEvents != REDIRECT_EVENTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -294,6 +346,8 @@ public class YBeanSlotImpl extends MinimalEObjectImpl.Container implements
 		result.append(valueTypeQualifiedName);
 		result.append(", eventTopic: ");
 		result.append(eventTopic);
+		result.append(", redirectEvents: ");
+		result.append(redirectEvents);
 		result.append(')');
 		return result.toString();
 	}

@@ -641,6 +641,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYView_SharedStateGroup() {
+		return (EAttribute)yViewEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYViewSet() {
 		return yViewSetEClass;
 	}
@@ -706,6 +715,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EAttribute getYBeanSlot_EventTopic() {
 		return (EAttribute)yBeanSlotEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanSlot_RedirectEvents() {
+		return (EAttribute)yBeanSlotEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1605,6 +1623,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yViewEClass, YVIEW__CONTENT_ALIGNMENT);
 		createEReference(yViewEClass, YVIEW__VISIBILITY_PROCESSORS);
 		createEReference(yViewEClass, YVIEW__EXPOSED_ACTIONS);
+		createEAttribute(yViewEClass, YVIEW__SHARED_STATE_GROUP);
 
 		yViewSetEClass = createEClass(YVIEW_SET);
 		createEReference(yViewSetEClass, YVIEW_SET__VIEWS);
@@ -1615,6 +1634,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__VALUE_TYPE);
 		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__VALUE_TYPE_QUALIFIED_NAME);
 		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__EVENT_TOPIC);
+		createEAttribute(yBeanSlotEClass, YBEAN_SLOT__REDIRECT_EVENTS);
 
 		yEmbeddableEClass = createEClass(YEMBEDDABLE);
 		createEReference(yEmbeddableEClass, YEMBEDDABLE__ORPHAN_DATATYPES);
@@ -1857,6 +1877,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYView_ContentAlignment(), this.getYAlignment(), "contentAlignment", "FILL_FILL", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_VisibilityProcessors(), theVisibilityPackage.getYVisibilityProcessor(), null, "visibilityProcessors", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_ExposedActions(), this.getYExposedAction(), null, "exposedActions", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYView_SharedStateGroup(), ecorePackage.getEString(), "sharedStateGroup", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yViewEClass, theBindingPackage.getYBindingSet(), "getOrCreateBindingSet", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1872,6 +1893,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYBeanSlot_ValueType(), g1, "valueType", null, 0, 1, YBeanSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBeanSlot_ValueTypeQualifiedName(), ecorePackage.getEString(), "valueTypeQualifiedName", null, 0, 1, YBeanSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBeanSlot_EventTopic(), ecorePackage.getEString(), "eventTopic", null, 0, 1, YBeanSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanSlot_RedirectEvents(), ecorePackage.getEBoolean(), "redirectEvents", null, 0, 1, YBeanSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yEmbeddableEClass, YEmbeddable.class, "YEmbeddable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYEmbeddable_OrphanDatatypes(), theDatatypesPackage.getYDatatype(), null, "orphanDatatypes", null, 0, -1, YEmbeddable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
