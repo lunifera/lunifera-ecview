@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lunifera.ecview.core</groupId>
 	<artifactId>org.lunifera.ecview.core</artifactId>
-	<version>0.8.1-SNAPSHOT</version>
+	<version>0.9.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -22,7 +22,7 @@
 		<!-- <module>org.lunifera.ecview.core.extension.tests</module> -->
 		<module>org.lunifera.ecview.core.feature.core</module>
 		<module>org.lunifera.ecview.core.p2</module>
-		<module>org.lunifera.ecview.core.target.kepler</module>
+		<module>org.lunifera.ecview.core.target.luna</module>
 		<!-- <module>org.lunifera.ecview.core.ui.e4.css.core</module> -->
 		<!-- <module>org.lunifera.ecview.core.ui.e4.css.swt</module> -->
 		<module>org.lunifera.ecview.core.ui.presentation.common</module>
@@ -116,7 +116,7 @@
 							<target>
 								<artifact>
 									<groupId>org.lunifera.ecview.core</groupId>
-									<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
+									<artifactId>org.lunifera.ecview.core.target.luna</artifactId>
 									<version>${project.version}</version>
 								</artifact>
 							</target>
@@ -172,7 +172,7 @@
 							<target>
 								<artifact>
 									<groupId>org.lunifera.ecview.core</groupId>
-									<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
+									<artifactId>org.lunifera.ecview.core.target.luna</artifactId>
 									<version>${project.version}</version>
 								</artifact>
 							</target>

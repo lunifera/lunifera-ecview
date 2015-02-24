@@ -4,9 +4,9 @@
 	<parent>
 		<artifactId>org.lunifera.ecview.core</artifactId>
 		<groupId>org.lunifera.ecview.core</groupId>
-		<version>0.8.1-SNAPSHOT</version>
+		<version>0.9.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>org.lunifera.ecview.core.target.kepler</artifactId>
+	<artifactId>org.lunifera.ecview.core.target.luna</artifactId>
 	<packaging>eclipse-target-definition</packaging>
-	<name>Kepler target definition</name>
+	<name>Luna target definition</name>
 </project>
