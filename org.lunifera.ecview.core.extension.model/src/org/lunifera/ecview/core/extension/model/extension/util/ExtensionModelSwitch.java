@@ -709,6 +709,14 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND: {
+				YSetNewBeanInstanceCommand ySetNewBeanInstanceCommand = (YSetNewBeanInstanceCommand)theEObject;
+				T result = caseYSetNewBeanInstanceCommand(ySetNewBeanInstanceCommand);
+				if (result == null) result = caseYCommand(ySetNewBeanInstanceCommand);
+				if (result == null) result = caseYElement(ySetNewBeanInstanceCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -1370,6 +1378,21 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYBrowserStreamInput(YBrowserStreamInput object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YSet New Bean Instance Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YSet New Bean Instance Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYSetNewBeanInstanceCommand(YSetNewBeanInstanceCommand object) {
 		return null;
 	}
 

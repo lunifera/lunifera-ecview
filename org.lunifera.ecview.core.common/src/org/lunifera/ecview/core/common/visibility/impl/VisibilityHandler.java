@@ -10,7 +10,6 @@
  */
 package org.lunifera.ecview.core.common.visibility.impl;
 
-import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessable;
 import org.lunifera.ecview.core.common.visibility.Color;
 import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;

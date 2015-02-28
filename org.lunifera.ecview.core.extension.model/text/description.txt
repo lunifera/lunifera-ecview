@@ -372,6 +372,13 @@ Package extension <http://lunifera.org/ecview/v1/extension/view>
     Attribute inputStream : YInputStream<<1..1>>
     Attribute mimeType : EString<<1..1>>
 
+  Class YSetNewBeanInstanceCommand -> YCommand
+    Reference target : YValueBindingEndpoint
+    Attribute trigger : EJavaObject
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+
   Enum YSelectionType
     Literal SINGLE = 0
     Literal MULTI = 1

@@ -7656,6 +7656,88 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBROWSER_STREAM_INPUT_FEATURE_COUNT = 3;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl <em>YSet New Bean Instance Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl
+	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSetNewBeanInstanceCommand()
+	 * @generated
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND = 46;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__ID = CoreModelPackage.YCOMMAND__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__NAME = CoreModelPackage.YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__TARGET = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Trigger</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__TRIGGER = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__TYPE = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__EMF_NS_URI = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__TYPE_QUALIFIED_NAME = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>YSet New Bean Instance Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND_FEATURE_COUNT = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 5;
+
+	/**
 	 * The meta object id for the '<em>YButton Click Listener</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7663,7 +7745,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYButtonClickListener()
 	 * @generated
 	 */
-	int YBUTTON_CLICK_LISTENER = 49;
+	int YBUTTON_CLICK_LISTENER = 50;
 
 	/**
 	 * The meta object id for the '<em>YInput Stream</em>' data type.
@@ -7673,7 +7755,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYInputStream()
 	 * @generated
 	 */
-	int YINPUT_STREAM = 50;
+	int YINPUT_STREAM = 51;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSelectionType <em>YSelection Type</em>}' enum.
@@ -7683,7 +7765,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSelectionType()
 	 * @generated
 	 */
-	int YSELECTION_TYPE = 46;
+	int YSELECTION_TYPE = 47;
 
 
 	/**
@@ -7694,7 +7776,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYBooleanSearchOption()
 	 * @generated
 	 */
-	int YBOOLEAN_SEARCH_OPTION = 47;
+	int YBOOLEAN_SEARCH_OPTION = 48;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.YSearchWildcards <em>YSearch Wildcards</em>}' enum.
@@ -7704,7 +7786,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSearchWildcards()
 	 * @generated
 	 */
-	int YSEARCH_WILDCARDS = 48;
+	int YSEARCH_WILDCARDS = 49;
 
 
 	/**
@@ -10205,6 +10287,71 @@ public interface ExtensionModelPackage extends EPackage {
 	EAttribute getYBrowserStreamInput_MimeType();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand <em>YSet New Bean Instance Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YSet New Bean Instance Command</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand
+	 * @generated
+	 */
+	EClass getYSetNewBeanInstanceCommand();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Target</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getTarget()
+	 * @see #getYSetNewBeanInstanceCommand()
+	 * @generated
+	 */
+	EReference getYSetNewBeanInstanceCommand_Target();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getTrigger <em>Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Trigger</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getTrigger()
+	 * @see #getYSetNewBeanInstanceCommand()
+	 * @generated
+	 */
+	EAttribute getYSetNewBeanInstanceCommand_Trigger();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getType()
+	 * @see #getYSetNewBeanInstanceCommand()
+	 * @generated
+	 */
+	EAttribute getYSetNewBeanInstanceCommand_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getEmfNsURI()
+	 * @see #getYSetNewBeanInstanceCommand()
+	 * @generated
+	 */
+	EAttribute getYSetNewBeanInstanceCommand_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand#getTypeQualifiedName()
+	 * @see #getYSetNewBeanInstanceCommand()
+	 * @generated
+	 */
+	EAttribute getYSetNewBeanInstanceCommand_TypeQualifiedName();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YTree <em>YTree</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12475,6 +12622,56 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YBROWSER_STREAM_INPUT__MIME_TYPE = eINSTANCE.getYBrowserStreamInput_MimeType();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl <em>YSet New Bean Instance Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl
+		 * @see org.lunifera.ecview.core.extension.model.extension.impl.ExtensionModelPackageImpl#getYSetNewBeanInstanceCommand()
+		 * @generated
+		 */
+		EClass YSET_NEW_BEAN_INSTANCE_COMMAND = eINSTANCE.getYSetNewBeanInstanceCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YSET_NEW_BEAN_INSTANCE_COMMAND__TARGET = eINSTANCE.getYSetNewBeanInstanceCommand_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Trigger</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSET_NEW_BEAN_INSTANCE_COMMAND__TRIGGER = eINSTANCE.getYSetNewBeanInstanceCommand_Trigger();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSET_NEW_BEAN_INSTANCE_COMMAND__TYPE = eINSTANCE.getYSetNewBeanInstanceCommand_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSET_NEW_BEAN_INSTANCE_COMMAND__EMF_NS_URI = eINSTANCE.getYSetNewBeanInstanceCommand_EmfNsURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YSET_NEW_BEAN_INSTANCE_COMMAND__TYPE_QUALIFIED_NAME = eINSTANCE.getYSetNewBeanInstanceCommand_TypeQualifiedName();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTreeImpl <em>YTree</em>}' class.

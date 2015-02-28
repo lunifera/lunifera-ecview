@@ -10,7 +10,7 @@
  */
 package org.lunifera.ecview.core.common.editpart;
 
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * The root editpart. An editpart is a controller that handles the model and the ui presentations.

@@ -400,6 +400,15 @@ public interface ExtensionModelFactory extends EFactory {
 	YBrowserStreamInput createYBrowserStreamInput();
 
 	/**
+	 * Returns a new object of class '<em>YSet New Bean Instance Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YSet New Bean Instance Command</em>'.
+	 * @generated
+	 */
+	YSetNewBeanInstanceCommand createYSetNewBeanInstanceCommand();
+
+	/**
 	 * Returns a new object of class '<em>YTree</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

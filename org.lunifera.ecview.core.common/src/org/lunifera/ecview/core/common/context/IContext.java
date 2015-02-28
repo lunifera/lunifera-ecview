@@ -11,7 +11,7 @@ package org.lunifera.ecview.core.common.context;
 import java.util.Locale;
 
 import org.lunifera.ecview.core.common.IAccessible;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Marker interface for context.

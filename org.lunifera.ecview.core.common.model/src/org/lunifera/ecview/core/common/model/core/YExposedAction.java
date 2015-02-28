@@ -22,7 +22,7 @@ package org.lunifera.ecview.core.common.model.core;
  * @model
  * @generated
  */
-public interface YExposedAction extends YElement {
+public interface YExposedAction extends YElement, YEnable {
 	/**
 	 * Returns the value of the '<em><b>Icon</b></em>' attribute.
 	 * <!-- begin-user-doc -->

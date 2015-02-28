@@ -12,7 +12,7 @@ package org.lunifera.ecview.core.common.context;
 
 import java.util.Locale;
 
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * This service can be consumed by the viewContext or viewSetContext and will

@@ -17,6 +17,7 @@ import org.lunifera.ecview.core.common.editpart.emf.common.AbstractEditpartManag
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.extension.editpart.emf.commands.AddToTableEditpart;
 import org.lunifera.ecview.core.extension.editpart.emf.commands.RemoveFromTableEditpart;
+import org.lunifera.ecview.core.extension.editpart.emf.commands.SetNewBeanInstanceEditpart;
 import org.lunifera.ecview.core.extension.editpart.emf.datatypes.BrowserDatatypeEditpart;
 import org.lunifera.ecview.core.extension.editpart.emf.datatypes.CheckBoxDatatypeEditpart;
 import org.lunifera.ecview.core.extension.editpart.emf.datatypes.ComboBoxDatatypeEditpart;
@@ -72,6 +73,7 @@ import org.lunifera.ecview.core.extension.model.extension.YPanel;
 import org.lunifera.ecview.core.extension.model.extension.YProgressBar;
 import org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand;
 import org.lunifera.ecview.core.extension.model.extension.YSearchPanel;
+import org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand;
 import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.extension.model.extension.YTab;
 import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
@@ -115,6 +117,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ITreeEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IVerticalLayoutEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.commands.IAddToTableCommandEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.commands.IRemoveFromTableCommandEditpart;
+import org.lunifera.ecview.core.ui.core.editparts.extension.commands.ISetNewInstanceCommandEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IBrowserDatatypeEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.ICheckBoxDatatypeEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IComboBoxDatatypeEditpart;
@@ -280,6 +283,9 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(IRemoveFromTableCommandEditpart.class)) {
 			result = createNewInstance(RemoveFromTableEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(ISetNewInstanceCommandEditpart.class)) {
+			result = createNewInstance(SetNewBeanInstanceEditpart.class);
 		}
 
 		if (result != null) {
@@ -402,6 +408,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(AddToTableEditpart.class);
 		} else if (yElement instanceof YRemoveFromTableCommand) {
 			result = createNewInstance(RemoveFromTableEditpart.class);
+		} else if (yElement instanceof YSetNewBeanInstanceCommand) {
+			result = createNewInstance(SetNewBeanInstanceEditpart.class);
 		}
 
 		if (result != null) {

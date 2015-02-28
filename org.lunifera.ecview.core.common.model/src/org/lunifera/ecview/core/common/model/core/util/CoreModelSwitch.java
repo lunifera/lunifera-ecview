@@ -367,6 +367,7 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				YExposedAction yExposedAction = (YExposedAction)theEObject;
 				T result = caseYExposedAction(yExposedAction);
 				if (result == null) result = caseYElement(yExposedAction);
+				if (result == null) result = caseYEnable(yExposedAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

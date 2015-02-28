@@ -269,7 +269,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dialog" eType="#//YDialog"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YExposedAction" eSuperTypes="#//YElement">
+  <eClassifiers xsi:type="ecore:EClass" name="YExposedAction" eSuperTypes="#//YElement #//YEnable">
     <eOperations name="getView" eType="#//YView"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

@@ -11,7 +11,6 @@
 package org.lunifera.ecview.core.ui.core.editparts.extension;
 
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
-import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.ecview.core.ui.core.editparts.extension.presentation.ITabPresentation;

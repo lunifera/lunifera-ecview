@@ -13,7 +13,7 @@ package org.lunifera.ecview.core.common.validation;
 import java.util.Locale;
 
 import org.lunifera.ecview.core.common.context.II18nService;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * A validator is used to validate the given value.

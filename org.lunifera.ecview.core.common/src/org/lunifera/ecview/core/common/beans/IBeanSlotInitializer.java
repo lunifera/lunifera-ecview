@@ -10,7 +10,6 @@
  */
 package org.lunifera.ecview.core.common.beans;
 
-import org.lunifera.ecview.core.common.IAccessible;
 
 /**
  * Implementations are responsible to initialize the bean slots. This is

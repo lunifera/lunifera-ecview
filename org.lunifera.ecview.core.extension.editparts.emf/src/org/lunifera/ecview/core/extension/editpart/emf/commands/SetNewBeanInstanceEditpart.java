@@ -9,19 +9,19 @@ import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEd
 import org.lunifera.ecview.core.common.editpart.emf.CommandEditpart;
 import org.lunifera.ecview.core.common.types.ITypeProviderService;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
-import org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand;
-import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
-import org.lunifera.ecview.core.extension.model.extension.YTable;
-import org.lunifera.ecview.core.ui.core.editparts.extension.commands.IAddToTableCommandEditpart;
+import org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand;
+import org.lunifera.ecview.core.ui.core.editparts.extension.commands.ISetNewInstanceCommandEditpart;
+import org.lunifera.runtime.common.state.ISharedStateContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("restriction")
-public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand>
-		implements IAddToTableCommandEditpart {
+public class SetNewBeanInstanceEditpart extends
+		CommandEditpart<YSetNewBeanInstanceCommand> implements
+		ISetNewInstanceCommandEditpart {
 
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(AddToTableEditpart.class);
+			.getLogger(SetNewBeanInstanceEditpart.class);
 
 	private boolean activated;
 	private Binding triggerBinding;
@@ -47,18 +47,26 @@ public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand>
 
 	@Override
 	public void execute() {
-		YTable yTable = getModel().getTable();
-		Object newEntry = createNewBean(yTable);
-		if (newEntry != null) {
-			yTable.getCollection().add(newEntry);
+		try {
+			Object newEntry = createNewBean();
+			if (newEntry != null) {
 
-			if (yTable.getSelectionType() == YSelectionType.SINGLE) {
-				yTable.setSelection(newEntry);
-			} else {
-				yTable.getMultiSelection().add(newEntry);
+				// add the entry to the shared state, if available
+				ISharedStateContext sharedState = getView().getContext()
+						.getService(ISharedStateContext.class.getName());
+				if (sharedState != null) {
+					sharedState.addNewTransient(newEntry);
+				}
+
+				// now pass the value to the target
+				IBindableValueEndpointEditpart valueEPEditpart = (IBindableValueEndpointEditpart) getEditpart(getModel()
+						.getTarget());
+				valueEPEditpart.getObservable().setValue(newEntry);
 			}
+		} catch (Exception e) {
+			LOGGER.error("{}", e);
+			throw new RuntimeException(e);
 		}
-
 	}
 
 	/**
@@ -66,9 +74,9 @@ public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand>
 	 * 
 	 * @return
 	 */
-	protected Object createNewBean(YTable yTable) {
+	protected Object createNewBean() {
 
-		Class<?> beanClass = yTable.getType();
+		Class<?> beanClass = getModel().getType();
 		Object result = null;
 		if (beanClass != null) {
 			try {
@@ -81,7 +89,8 @@ public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand>
 		if (result == null) {
 			ITypeProviderService service = getViewContext(getModel())
 					.getService(ITypeProviderService.class.getName());
-			beanClass = service.forName(null, yTable.getTypeQualifiedName());
+			beanClass = service
+					.forName(null, getModel().getTypeQualifiedName());
 			try {
 				if (beanClass != null) {
 					result = beanClass.newInstance();
@@ -92,8 +101,8 @@ public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand>
 		}
 
 		if (result == null) {
-			LOGGER.error("Could not create new bean instance for table "
-					+ yTable);
+			LOGGER.error("Could not create new bean instance for "
+					+ getModel().getTypeQualifiedName());
 		}
 
 		return result;
@@ -112,8 +121,9 @@ public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand>
 	}
 
 	@Override
-	protected YAddToTableCommand createModel() {
-		return ExtensionModelFactory.eINSTANCE.createYAddToTableCommand();
+	protected YSetNewBeanInstanceCommand createModel() {
+		return ExtensionModelFactory.eINSTANCE
+				.createYSetNewBeanInstanceCommand();
 	}
 
 	/**

@@ -12,7 +12,7 @@ package org.lunifera.ecview.core.common.context;
 
 import java.util.Locale;
 
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * This service returns the string value for a given i18nKey and locale.

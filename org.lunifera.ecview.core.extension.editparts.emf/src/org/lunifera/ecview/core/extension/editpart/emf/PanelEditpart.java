@@ -13,7 +13,6 @@ package org.lunifera.ecview.core.extension.editpart.emf;
 import org.lunifera.ecview.core.common.editpart.emf.LayoutEditpart;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.YPanel;
-import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IPanelEditpart;
 
 /**

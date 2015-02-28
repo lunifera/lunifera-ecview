@@ -2130,13 +2130,31 @@ public interface CoreModelPackage extends EPackage {
 	int YEXPOSED_ACTION__NAME = YELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__INITIAL_ENABLED = YELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__ENABLED = YELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION__ICON = YELEMENT_FEATURE_COUNT + 0;
+	int YEXPOSED_ACTION__ICON = YELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -2145,7 +2163,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION__LABEL = YELEMENT_FEATURE_COUNT + 1;
+	int YEXPOSED_ACTION__LABEL = YELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Label I1 8n Key</b></em>' attribute.
@@ -2154,7 +2172,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION__LABEL_I1_8N_KEY = YELEMENT_FEATURE_COUNT + 2;
+	int YEXPOSED_ACTION__LABEL_I1_8N_KEY = YELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Last Click Time</b></em>' attribute.
@@ -2163,7 +2181,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION__LAST_CLICK_TIME = YELEMENT_FEATURE_COUNT + 3;
+	int YEXPOSED_ACTION__LAST_CLICK_TIME = YELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>YExposed Action</em>' class.
@@ -2172,7 +2190,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 4;
+	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.

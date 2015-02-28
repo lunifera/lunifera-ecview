@@ -21,7 +21,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.lunifera.ecview.core.common.context.IViewContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IElementEditpartProvider;
@@ -31,6 +30,7 @@ import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.runtime.common.dispose.IDisposable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -92,6 +92,8 @@ public abstract class ElementEditpart<M extends YElement> extends AdapterImpl
 	private List<IDisposable.Listener> disposeListeners;
 	private M model;
 	private String id;
+
+	private boolean disposing;
 
 	/**
 	 * Returns the edit part for the given model yElement.
@@ -490,14 +492,27 @@ public abstract class ElementEditpart<M extends YElement> extends AdapterImpl
 	public boolean isDisposed() {
 		return disposed;
 	}
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean isDisposing() {
+		return disposing;
+	}
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
 	public void dispose() {
-		if (!isDisposed()) {
-			internalDispose();
+		try {
+			disposing = true;
+			if (!isDisposed()) {
+				internalDispose();
+			}
+		} finally {
+			disposed = false;
 		}
 	}
 

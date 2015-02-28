@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YView;
@@ -21,6 +22,8 @@ import org.lunifera.ecview.core.common.model.core.YView;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isInitialEnabled <em>Initial Enabled</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLabelI18nKey <em>Label I1 8n Key</em>}</li>
@@ -70,6 +73,46 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isInitialEnabled() <em>Initial Enabled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isInitialEnabled()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean INITIAL_ENABLED_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isInitialEnabled() <em>Initial Enabled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isInitialEnabled()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean initialEnabled = INITIAL_ENABLED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isEnabled() <em>Enabled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEnabled()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ENABLED_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isEnabled() <em>Enabled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEnabled()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean enabled = ENABLED_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getIcon() <em>Icon</em>}' attribute.
@@ -217,6 +260,48 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isInitialEnabled() {
+		return initialEnabled;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitialEnabled(boolean newInitialEnabled) {
+		boolean oldInitialEnabled = initialEnabled;
+		initialEnabled = newInitialEnabled;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED, oldInitialEnabled, initialEnabled));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEnabled(boolean newEnabled) {
+		boolean oldEnabled = enabled;
+		enabled = newEnabled;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__ENABLED, oldEnabled, enabled));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getIcon() {
 		return icon;
 	}
@@ -336,6 +421,10 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return getId();
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				return getName();
+			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
+				return isInitialEnabled();
+			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:
+				return isEnabled();
 			case CoreModelPackage.YEXPOSED_ACTION__ICON:
 				return getIcon();
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL:
@@ -361,6 +450,12 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
+				setInitialEnabled((Boolean)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:
+				setEnabled((Boolean)newValue);
 				return;
 			case CoreModelPackage.YEXPOSED_ACTION__ICON:
 				setIcon((String)newValue);
@@ -392,6 +487,12 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
+				setInitialEnabled(INITIAL_ENABLED_EDEFAULT);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:
+				setEnabled(ENABLED_EDEFAULT);
+				return;
 			case CoreModelPackage.YEXPOSED_ACTION__ICON:
 				setIcon(ICON_EDEFAULT);
 				return;
@@ -420,6 +521,10 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
+				return initialEnabled != INITIAL_ENABLED_EDEFAULT;
+			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:
+				return enabled != ENABLED_EDEFAULT;
 			case CoreModelPackage.YEXPOSED_ACTION__ICON:
 				return ICON_EDEFAULT == null ? icon != null : !ICON_EDEFAULT.equals(icon);
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL:
@@ -438,6 +543,40 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == YEnable.class) {
+			switch (derivedFeatureID) {
+				case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED: return CoreModelPackage.YENABLE__INITIAL_ENABLED;
+				case CoreModelPackage.YEXPOSED_ACTION__ENABLED: return CoreModelPackage.YENABLE__ENABLED;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == YEnable.class) {
+			switch (baseFeatureID) {
+				case CoreModelPackage.YENABLE__INITIAL_ENABLED: return CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED;
+				case CoreModelPackage.YENABLE__ENABLED: return CoreModelPackage.YEXPOSED_ACTION__ENABLED;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
@@ -446,6 +585,10 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", initialEnabled: ");
+		result.append(initialEnabled);
+		result.append(", enabled: ");
+		result.append(enabled);
 		result.append(", icon: ");
 		result.append(icon);
 		result.append(", label: ");

@@ -13,7 +13,7 @@ package org.lunifera.ecview.core.common.validation;
 import java.util.Locale;
 
 import org.lunifera.ecview.core.common.context.II18nService;
-import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
+import org.lunifera.runtime.common.dispose.AbstractDisposable;
 
 /**
  * A validator that returns true by default, if the given value is not a String.

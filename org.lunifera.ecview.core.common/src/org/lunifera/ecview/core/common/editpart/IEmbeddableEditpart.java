@@ -11,7 +11,6 @@
 package org.lunifera.ecview.core.common.editpart;
 
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessable;
-import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessorEditpart;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 
 /**

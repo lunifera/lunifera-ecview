@@ -17,7 +17,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.Future;
 
-import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
 import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
@@ -25,6 +24,7 @@ import org.lunifera.ecview.core.common.services.IWidgetAssocationsService;
 import org.lunifera.ecview.core.common.tooling.IWidgetMouseClickService;
 import org.lunifera.ecview.core.common.visibility.IVisibilityManager;
 import org.lunifera.ecview.core.common.visibility.impl.VisibilityManager;
+import org.lunifera.runtime.common.dispose.AbstractDisposable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

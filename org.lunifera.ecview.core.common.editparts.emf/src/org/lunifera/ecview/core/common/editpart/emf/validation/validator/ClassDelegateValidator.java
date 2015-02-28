@@ -14,7 +14,6 @@ import java.util.Locale;
 
 import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.context.IViewContext;
-import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
 import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidationConfig;
 import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidator;
@@ -23,6 +22,7 @@ import org.lunifera.ecview.core.common.validation.IStatus;
 import org.lunifera.ecview.core.common.validation.IStatus.Severity;
 import org.lunifera.ecview.core.common.validation.IValidator;
 import org.lunifera.ecview.core.common.validation.Status;
+import org.lunifera.runtime.common.dispose.AbstractDisposable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

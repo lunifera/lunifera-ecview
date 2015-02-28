@@ -19,7 +19,7 @@ import org.eclipse.core.databinding.observable.Realm;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.set.IObservableSet;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
+import org.lunifera.runtime.common.dispose.AbstractDisposable;
 
 /**
  * Is used to bind values. For details see {@link IECViewBindingManager}.

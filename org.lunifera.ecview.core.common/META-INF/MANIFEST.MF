@@ -39,7 +39,6 @@ Export-Package: org.lunifera.ecview.core.common;version="0.9.1";uses:="org.lunif
    org.lunifera.ecview.core.common,
    org.lunifera.ecview.core.common.visibility,
    org.lunifera.ecview.core.common.beans",
- org.lunifera.ecview.core.common.disposal;version="0.9.1",
  org.lunifera.ecview.core.common.editpart;version="0.9.1";
   uses:="org.lunifera.ecview.core.common.editpart.binding,
    org.lunifera.ecview.core.common.disposal,
@@ -77,3 +76,5 @@ Export-Package: org.lunifera.ecview.core.common;version="0.9.1";uses:="org.lunif
    org.lunifera.ecview.core.common.beans",
  org.lunifera.ecview.core.common.validation;version="0.9.1";uses:="org.lunifera.ecview.core.common.disposal,org.lunifera.ecview.core.common.context",
  org.lunifera.ecview.core.common.visibility
+Lun-RuntimeBuilder-BundleSpace: 
+

@@ -58,6 +58,7 @@ import org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableComman
 import org.lunifera.ecview.core.extension.model.extension.YSearchPanel;
 import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
+import org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand;
 import org.lunifera.ecview.core.extension.model.extension.YSpanInfo;
 import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.extension.model.extension.YTab;
@@ -359,6 +360,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass yBrowserStreamInputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ySetNewBeanInstanceCommandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -2456,6 +2464,60 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYSetNewBeanInstanceCommand() {
+		return ySetNewBeanInstanceCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYSetNewBeanInstanceCommand_Target() {
+		return (EReference)ySetNewBeanInstanceCommandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSetNewBeanInstanceCommand_Trigger() {
+		return (EAttribute)ySetNewBeanInstanceCommandEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSetNewBeanInstanceCommand_Type() {
+		return (EAttribute)ySetNewBeanInstanceCommandEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSetNewBeanInstanceCommand_EmfNsURI() {
+		return (EAttribute)ySetNewBeanInstanceCommandEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYSetNewBeanInstanceCommand_TypeQualifiedName() {
+		return (EAttribute)ySetNewBeanInstanceCommandEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3025,6 +3087,13 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEAttribute(yBrowserStreamInputEClass, YBROWSER_STREAM_INPUT__INPUT_STREAM);
 		createEAttribute(yBrowserStreamInputEClass, YBROWSER_STREAM_INPUT__MIME_TYPE);
 
+		ySetNewBeanInstanceCommandEClass = createEClass(YSET_NEW_BEAN_INSTANCE_COMMAND);
+		createEReference(ySetNewBeanInstanceCommandEClass, YSET_NEW_BEAN_INSTANCE_COMMAND__TARGET);
+		createEAttribute(ySetNewBeanInstanceCommandEClass, YSET_NEW_BEAN_INSTANCE_COMMAND__TRIGGER);
+		createEAttribute(ySetNewBeanInstanceCommandEClass, YSET_NEW_BEAN_INSTANCE_COMMAND__TYPE);
+		createEAttribute(ySetNewBeanInstanceCommandEClass, YSET_NEW_BEAN_INSTANCE_COMMAND__EMF_NS_URI);
+		createEAttribute(ySetNewBeanInstanceCommandEClass, YSET_NEW_BEAN_INSTANCE_COMMAND__TYPE_QUALIFIED_NAME);
+
 		// Create enums
 		ySelectionTypeEEnum = createEEnum(YSELECTION_TYPE);
 		yBooleanSearchOptionEEnum = createEEnum(YBOOLEAN_SEARCH_OPTION);
@@ -3167,6 +3236,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yEnumComboBoxEClass.getESuperTypes().add(theCoreModelPackage.getYSelectionBindable());
 		yAddToTableCommandEClass.getESuperTypes().add(theCoreModelPackage.getYCommand());
 		yRemoveFromTableCommandEClass.getESuperTypes().add(theCoreModelPackage.getYCommand());
+		ySetNewBeanInstanceCommandEClass.getESuperTypes().add(theCoreModelPackage.getYCommand());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yInputEClass, YInput.class, "YInput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3539,6 +3609,16 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEAttribute(getYBrowserStreamInput_Filename(), ecorePackage.getEString(), "filename", null, 1, 1, YBrowserStreamInput.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBrowserStreamInput_InputStream(), this.getYInputStream(), "inputStream", null, 1, 1, YBrowserStreamInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYBrowserStreamInput_MimeType(), ecorePackage.getEString(), "mimeType", null, 1, 1, YBrowserStreamInput.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ySetNewBeanInstanceCommandEClass, YSetNewBeanInstanceCommand.class, "YSetNewBeanInstanceCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getYSetNewBeanInstanceCommand_Target(), theBindingPackage.getYValueBindingEndpoint(), null, "target", null, 0, 1, YSetNewBeanInstanceCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSetNewBeanInstanceCommand_Trigger(), ecorePackage.getEJavaObject(), "trigger", null, 0, 1, YSetNewBeanInstanceCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYSetNewBeanInstanceCommand_Type(), g1, "type", null, 0, 1, YSetNewBeanInstanceCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSetNewBeanInstanceCommand_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, YSetNewBeanInstanceCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYSetNewBeanInstanceCommand_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, YSetNewBeanInstanceCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ySelectionTypeEEnum, YSelectionType.class, "YSelectionType");

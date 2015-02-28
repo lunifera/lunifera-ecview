@@ -539,4 +539,16 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="YInputStream" instanceClassName="java.io.InputStream"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YSetNewBeanInstanceCommand" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCommand">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/binding.ecore#//YValueBindingEndpoint"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

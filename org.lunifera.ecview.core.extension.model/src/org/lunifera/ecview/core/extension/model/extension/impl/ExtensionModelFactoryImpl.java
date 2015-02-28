@@ -100,6 +100,7 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 			case ExtensionModelPackage.YADD_TO_TABLE_COMMAND: return createYAddToTableCommand();
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND: return createYRemoveFromTableCommand();
 			case ExtensionModelPackage.YBROWSER_STREAM_INPUT: return createYBrowserStreamInput();
+			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND: return createYSetNewBeanInstanceCommand();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -569,6 +570,16 @@ public class ExtensionModelFactoryImpl extends EFactoryImpl implements Extension
 	public YBrowserStreamInput createYBrowserStreamInput() {
 		YBrowserStreamInputImpl yBrowserStreamInput = new YBrowserStreamInputImpl();
 		return yBrowserStreamInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YSetNewBeanInstanceCommand createYSetNewBeanInstanceCommand() {
+		YSetNewBeanInstanceCommandImpl ySetNewBeanInstanceCommand = new YSetNewBeanInstanceCommandImpl();
+		return ySetNewBeanInstanceCommand;
 	}
 
 	/**

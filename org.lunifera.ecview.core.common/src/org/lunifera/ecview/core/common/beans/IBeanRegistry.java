@@ -16,6 +16,11 @@ package org.lunifera.ecview.core.common.beans;
  */
 public interface IBeanRegistry {
 
+	/**
+	 * The beanslot where implementations will expect the root data.
+	 */
+	public static final String MAIN_BEAN_SLOT = "main";
+
 	public static final String ROOTBEAN_SELECTOR = "http://eclipse.org/emf/emfclient/uimodel/view/rootbean";
 
 	/**

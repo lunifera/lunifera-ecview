@@ -1843,6 +1843,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yCommandSetEClass.getESuperTypes().add(this.getYElement());
 		yOpenDialogCommandEClass.getESuperTypes().add(this.getYCommand());
 		yExposedActionEClass.getESuperTypes().add(this.getYElement());
+		yExposedActionEClass.getESuperTypes().add(this.getYEnable());
 		ySendEventCommandEClass.getESuperTypes().add(this.getYCommand());
 
 		// Initialize classes and features; add operations and parameters

@@ -15,9 +15,9 @@ import java.util.Set;
 import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.observable.IObservable;
 import org.lunifera.ecview.core.common.context.IViewContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeChangeEvent;
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessable;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Widget presenter are used to create and provide widgets that will be

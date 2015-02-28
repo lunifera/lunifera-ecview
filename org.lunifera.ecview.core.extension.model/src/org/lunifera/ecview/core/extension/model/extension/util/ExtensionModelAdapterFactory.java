@@ -267,6 +267,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 				return createYBrowserStreamInputAdapter();
 			}
 			@Override
+			public Adapter caseYSetNewBeanInstanceCommand(YSetNewBeanInstanceCommand object) {
+				return createYSetNewBeanInstanceCommandAdapter();
+			}
+			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
 			}
@@ -971,6 +975,20 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYBrowserStreamInputAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand <em>YSet New Bean Instance Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCommand
+	 * @generated
+	 */
+	public Adapter createYSetNewBeanInstanceCommandAdapter() {
 		return null;
 	}
 
