@@ -20,5 +20,19 @@ public interface YExposedActionValidator {
 
 	boolean validateLabelI18nKey(String value);
 
+	boolean validateExternalClickTime(long value);
+
+	boolean validateInternalClickTime(long value);
+
+	boolean validateExecutedNotificationTime(long value);
+
+	boolean validateCanceledNotificationTime(long value);
+
 	boolean validateLastClickTime(long value);
+
+	boolean validateExecutedTime(long value);
+
+	boolean validateCanceledTime(long value);
+
+	boolean validateCheckDirty(boolean value);
 }

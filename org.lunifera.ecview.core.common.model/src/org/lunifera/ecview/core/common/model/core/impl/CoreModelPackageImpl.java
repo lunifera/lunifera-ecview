@@ -1469,8 +1469,44 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYExposedAction_LastClickTime() {
+	public EAttribute getYExposedAction_ExternalClickTime() {
 		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYExposedAction_InternalClickTime() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYExposedAction_ExecutedNotificationTime() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYExposedAction_CanceledNotificationTime() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYExposedAction_CheckDirty() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1748,7 +1784,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__ICON);
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL);
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LABEL_I1_8N_KEY);
-		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__LAST_CLICK_TIME);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__EXTERNAL_CLICK_TIME);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__INTERNAL_CLICK_TIME);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__CHECK_DIRTY);
 
 		ySendEventCommandEClass = createEClass(YSEND_EVENT_COMMAND);
 		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__EVENT_TOPIC);
@@ -2042,7 +2082,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYExposedAction_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYExposedAction_Label(), ecorePackage.getEString(), "label", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYExposedAction_LabelI18nKey(), ecorePackage.getEString(), "labelI18nKey", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getYExposedAction_LastClickTime(), ecorePackage.getELong(), "lastClickTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_ExternalClickTime(), ecorePackage.getELong(), "externalClickTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_InternalClickTime(), ecorePackage.getELong(), "internalClickTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_ExecutedNotificationTime(), ecorePackage.getELong(), "executedNotificationTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_CanceledNotificationTime(), ecorePackage.getELong(), "canceledNotificationTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_CheckDirty(), ecorePackage.getEBoolean(), "checkDirty", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yExposedActionEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 

@@ -2175,13 +2175,49 @@ public interface CoreModelPackage extends EPackage {
 	int YEXPOSED_ACTION__LABEL_I1_8N_KEY = YELEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Last Click Time</b></em>' attribute.
+	 * The feature id for the '<em><b>External Click Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION__LAST_CLICK_TIME = YELEMENT_FEATURE_COUNT + 5;
+	int YEXPOSED_ACTION__EXTERNAL_CLICK_TIME = YELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Internal Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__INTERNAL_CLICK_TIME = YELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Executed Notification Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME = YELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Canceled Notification Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME = YELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Check Dirty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__CHECK_DIRTY = YELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>YExposed Action</em>' class.
@@ -2190,7 +2226,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 6;
+	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.
@@ -3523,15 +3559,59 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYExposedAction_LabelI18nKey();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getLastClickTime <em>Last Click Time</em>}'.
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getExternalClickTime <em>External Click Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Last Click Time</em>'.
-	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getLastClickTime()
+	 * @return the meta object for the attribute '<em>External Click Time</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getExternalClickTime()
 	 * @see #getYExposedAction()
 	 * @generated
 	 */
-	EAttribute getYExposedAction_LastClickTime();
+	EAttribute getYExposedAction_ExternalClickTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getInternalClickTime <em>Internal Click Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Internal Click Time</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getInternalClickTime()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_InternalClickTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getExecutedNotificationTime <em>Executed Notification Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Executed Notification Time</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getExecutedNotificationTime()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_ExecutedNotificationTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getCanceledNotificationTime <em>Canceled Notification Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Canceled Notification Time</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getCanceledNotificationTime()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_CanceledNotificationTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#isCheckDirty <em>Check Dirty</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Dirty</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#isCheckDirty()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_CheckDirty();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand <em>YSend Event Command</em>}'.
@@ -4642,12 +4722,44 @@ public interface CoreModelPackage extends EPackage {
 		EAttribute YEXPOSED_ACTION__LABEL_I1_8N_KEY = eINSTANCE.getYExposedAction_LabelI18nKey();
 
 		/**
-		 * The meta object literal for the '<em><b>Last Click Time</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>External Click Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute YEXPOSED_ACTION__LAST_CLICK_TIME = eINSTANCE.getYExposedAction_LastClickTime();
+		EAttribute YEXPOSED_ACTION__EXTERNAL_CLICK_TIME = eINSTANCE.getYExposedAction_ExternalClickTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Internal Click Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__INTERNAL_CLICK_TIME = eINSTANCE.getYExposedAction_InternalClickTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Executed Notification Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME = eINSTANCE.getYExposedAction_ExecutedNotificationTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Canceled Notification Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME = eINSTANCE.getYExposedAction_CanceledNotificationTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Dirty</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__CHECK_DIRTY = eINSTANCE.getYExposedAction_CheckDirty();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.

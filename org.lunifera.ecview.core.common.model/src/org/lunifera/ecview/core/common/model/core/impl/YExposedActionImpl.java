@@ -27,7 +27,11 @@ import org.lunifera.ecview.core.common.model.core.YView;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLabelI18nKey <em>Label I1 8n Key</em>}</li>
- *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getLastClickTime <em>Last Click Time</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getExternalClickTime <em>External Click Time</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getInternalClickTime <em>Internal Click Time</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getExecutedNotificationTime <em>Executed Notification Time</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getCanceledNotificationTime <em>Canceled Notification Time</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isCheckDirty <em>Check Dirty</em>}</li>
  * </ul>
  * </p>
  *
@@ -175,24 +179,104 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	protected String labelI18nKey = LABEL_I1_8N_KEY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * The default value of the '{@link #getExternalClickTime() <em>External Click Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastClickTime()
+	 * @see #getExternalClickTime()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long LAST_CLICK_TIME_EDEFAULT = 0L;
+	protected static final long EXTERNAL_CLICK_TIME_EDEFAULT = 0L;
 
 	/**
-	 * The cached value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * The cached value of the '{@link #getExternalClickTime() <em>External Click Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastClickTime()
+	 * @see #getExternalClickTime()
 	 * @generated
 	 * @ordered
 	 */
-	protected long lastClickTime = LAST_CLICK_TIME_EDEFAULT;
+	protected long externalClickTime = EXTERNAL_CLICK_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInternalClickTime() <em>Internal Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInternalClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long INTERNAL_CLICK_TIME_EDEFAULT = 0L;
+
+	/**
+	 * The cached value of the '{@link #getInternalClickTime() <em>Internal Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInternalClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected long internalClickTime = INTERNAL_CLICK_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getExecutedNotificationTime() <em>Executed Notification Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExecutedNotificationTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long EXECUTED_NOTIFICATION_TIME_EDEFAULT = 0L;
+
+	/**
+	 * The cached value of the '{@link #getExecutedNotificationTime() <em>Executed Notification Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExecutedNotificationTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected long executedNotificationTime = EXECUTED_NOTIFICATION_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCanceledNotificationTime() <em>Canceled Notification Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCanceledNotificationTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long CANCELED_NOTIFICATION_TIME_EDEFAULT = 0L;
+
+	/**
+	 * The cached value of the '{@link #getCanceledNotificationTime() <em>Canceled Notification Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCanceledNotificationTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected long canceledNotificationTime = CANCELED_NOTIFICATION_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isCheckDirty() <em>Check Dirty</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCheckDirty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CHECK_DIRTY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isCheckDirty() <em>Check Dirty</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCheckDirty()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean checkDirty = CHECK_DIRTY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -365,8 +449,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getLastClickTime() {
-		return lastClickTime;
+	public long getExternalClickTime() {
+		return externalClickTime;
 	}
 
 	/**
@@ -374,11 +458,95 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastClickTime(long newLastClickTime) {
-		long oldLastClickTime = lastClickTime;
-		lastClickTime = newLastClickTime;
+	public void setExternalClickTime(long newExternalClickTime) {
+		long oldExternalClickTime = externalClickTime;
+		externalClickTime = newExternalClickTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME, oldLastClickTime, lastClickTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_CLICK_TIME, oldExternalClickTime, externalClickTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public long getInternalClickTime() {
+		return internalClickTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInternalClickTime(long newInternalClickTime) {
+		long oldInternalClickTime = internalClickTime;
+		internalClickTime = newInternalClickTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__INTERNAL_CLICK_TIME, oldInternalClickTime, internalClickTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public long getExecutedNotificationTime() {
+		return executedNotificationTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExecutedNotificationTime(long newExecutedNotificationTime) {
+		long oldExecutedNotificationTime = executedNotificationTime;
+		executedNotificationTime = newExecutedNotificationTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME, oldExecutedNotificationTime, executedNotificationTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public long getCanceledNotificationTime() {
+		return canceledNotificationTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCanceledNotificationTime(long newCanceledNotificationTime) {
+		long oldCanceledNotificationTime = canceledNotificationTime;
+		canceledNotificationTime = newCanceledNotificationTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME, oldCanceledNotificationTime, canceledNotificationTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCheckDirty() {
+		return checkDirty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCheckDirty(boolean newCheckDirty) {
+		boolean oldCheckDirty = checkDirty;
+		checkDirty = newCheckDirty;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY, oldCheckDirty, checkDirty));
 	}
 
 	/**
@@ -431,8 +599,16 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return getLabel();
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				return getLabelI18nKey();
-			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
-				return getLastClickTime();
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_CLICK_TIME:
+				return getExternalClickTime();
+			case CoreModelPackage.YEXPOSED_ACTION__INTERNAL_CLICK_TIME:
+				return getInternalClickTime();
+			case CoreModelPackage.YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME:
+				return getExecutedNotificationTime();
+			case CoreModelPackage.YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME:
+				return getCanceledNotificationTime();
+			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
+				return isCheckDirty();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -466,8 +642,20 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				setLabelI18nKey((String)newValue);
 				return;
-			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
-				setLastClickTime((Long)newValue);
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_CLICK_TIME:
+				setExternalClickTime((Long)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__INTERNAL_CLICK_TIME:
+				setInternalClickTime((Long)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME:
+				setExecutedNotificationTime((Long)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME:
+				setCanceledNotificationTime((Long)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
+				setCheckDirty((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -502,8 +690,20 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				setLabelI18nKey(LABEL_I1_8N_KEY_EDEFAULT);
 				return;
-			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
-				setLastClickTime(LAST_CLICK_TIME_EDEFAULT);
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_CLICK_TIME:
+				setExternalClickTime(EXTERNAL_CLICK_TIME_EDEFAULT);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__INTERNAL_CLICK_TIME:
+				setInternalClickTime(INTERNAL_CLICK_TIME_EDEFAULT);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME:
+				setExecutedNotificationTime(EXECUTED_NOTIFICATION_TIME_EDEFAULT);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME:
+				setCanceledNotificationTime(CANCELED_NOTIFICATION_TIME_EDEFAULT);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
+				setCheckDirty(CHECK_DIRTY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -531,8 +731,16 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 			case CoreModelPackage.YEXPOSED_ACTION__LABEL_I1_8N_KEY:
 				return LABEL_I1_8N_KEY_EDEFAULT == null ? labelI18nKey != null : !LABEL_I1_8N_KEY_EDEFAULT.equals(labelI18nKey);
-			case CoreModelPackage.YEXPOSED_ACTION__LAST_CLICK_TIME:
-				return lastClickTime != LAST_CLICK_TIME_EDEFAULT;
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_CLICK_TIME:
+				return externalClickTime != EXTERNAL_CLICK_TIME_EDEFAULT;
+			case CoreModelPackage.YEXPOSED_ACTION__INTERNAL_CLICK_TIME:
+				return internalClickTime != INTERNAL_CLICK_TIME_EDEFAULT;
+			case CoreModelPackage.YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME:
+				return executedNotificationTime != EXECUTED_NOTIFICATION_TIME_EDEFAULT;
+			case CoreModelPackage.YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME:
+				return canceledNotificationTime != CANCELED_NOTIFICATION_TIME_EDEFAULT;
+			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
+				return checkDirty != CHECK_DIRTY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -595,8 +803,16 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 		result.append(label);
 		result.append(", labelI18nKey: ");
 		result.append(labelI18nKey);
-		result.append(", lastClickTime: ");
-		result.append(lastClickTime);
+		result.append(", externalClickTime: ");
+		result.append(externalClickTime);
+		result.append(", internalClickTime: ");
+		result.append(internalClickTime);
+		result.append(", executedNotificationTime: ");
+		result.append(executedNotificationTime);
+		result.append(", canceledNotificationTime: ");
+		result.append(canceledNotificationTime);
+		result.append(", checkDirty: ");
+		result.append(checkDirty);
 		result.append(')');
 		return result.toString();
 	}
