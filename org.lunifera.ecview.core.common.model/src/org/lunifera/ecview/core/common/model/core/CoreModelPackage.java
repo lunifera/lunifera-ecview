@@ -2220,13 +2220,22 @@ public interface CoreModelPackage extends EPackage {
 	int YEXPOSED_ACTION__CHECK_DIRTY = YELEMENT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>External Command Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__EXTERNAL_COMMAND_ID = YELEMENT_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>YExposed Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 10;
+	int YEXPOSED_ACTION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.
@@ -3614,6 +3623,17 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYExposedAction_CheckDirty();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getExternalCommandId <em>External Command Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>External Command Id</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YExposedAction#getExternalCommandId()
+	 * @see #getYExposedAction()
+	 * @generated
+	 */
+	EAttribute getYExposedAction_ExternalCommandId();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YSendEventCommand <em>YSend Event Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4760,6 +4780,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YEXPOSED_ACTION__CHECK_DIRTY = eINSTANCE.getYExposedAction_CheckDirty();
+
+		/**
+		 * The meta object literal for the '<em><b>External Command Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YEXPOSED_ACTION__EXTERNAL_COMMAND_ID = eINSTANCE.getYExposedAction_ExternalCommandId();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl <em>YSend Event Command</em>}' class.

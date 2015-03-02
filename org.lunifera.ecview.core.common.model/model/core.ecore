@@ -281,6 +281,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="canceledNotificationTime"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkDirty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalCommandId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YSendEventCommand" eSuperTypes="#//YCommand">
     <eOperations name="getView" eType="#//YView"/>

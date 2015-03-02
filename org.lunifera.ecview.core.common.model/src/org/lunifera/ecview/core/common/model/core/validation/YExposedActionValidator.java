@@ -35,4 +35,6 @@ public interface YExposedActionValidator {
 	boolean validateCanceledTime(long value);
 
 	boolean validateCheckDirty(boolean value);
+
+	boolean validateExternalCommandId(String value);
 }

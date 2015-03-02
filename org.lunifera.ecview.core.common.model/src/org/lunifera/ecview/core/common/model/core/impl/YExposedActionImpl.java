@@ -32,6 +32,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getExecutedNotificationTime <em>Executed Notification Time</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getCanceledNotificationTime <em>Canceled Notification Time</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isCheckDirty <em>Check Dirty</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getExternalCommandId <em>External Command Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -277,6 +278,26 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected boolean checkDirty = CHECK_DIRTY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getExternalCommandId() <em>External Command Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExternalCommandId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EXTERNAL_COMMAND_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getExternalCommandId() <em>External Command Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExternalCommandId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String externalCommandId = EXTERNAL_COMMAND_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -550,6 +571,27 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getExternalCommandId() {
+		return externalCommandId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExternalCommandId(String newExternalCommandId) {
+		String oldExternalCommandId = externalCommandId;
+		externalCommandId = newExternalCommandId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_COMMAND_ID, oldExternalCommandId, externalCommandId));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -609,6 +651,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return getCanceledNotificationTime();
 			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
 				return isCheckDirty();
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_COMMAND_ID:
+				return getExternalCommandId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -656,6 +700,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
 				setCheckDirty((Boolean)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_COMMAND_ID:
+				setExternalCommandId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -705,6 +752,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
 				setCheckDirty(CHECK_DIRTY_EDEFAULT);
 				return;
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_COMMAND_ID:
+				setExternalCommandId(EXTERNAL_COMMAND_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -741,6 +791,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return canceledNotificationTime != CANCELED_NOTIFICATION_TIME_EDEFAULT;
 			case CoreModelPackage.YEXPOSED_ACTION__CHECK_DIRTY:
 				return checkDirty != CHECK_DIRTY_EDEFAULT;
+			case CoreModelPackage.YEXPOSED_ACTION__EXTERNAL_COMMAND_ID:
+				return EXTERNAL_COMMAND_ID_EDEFAULT == null ? externalCommandId != null : !EXTERNAL_COMMAND_ID_EDEFAULT.equals(externalCommandId);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -813,6 +865,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 		result.append(canceledNotificationTime);
 		result.append(", checkDirty: ");
 		result.append(checkDirty);
+		result.append(", externalCommandId: ");
+		result.append(externalCommandId);
 		result.append(')');
 		return result.toString();
 	}

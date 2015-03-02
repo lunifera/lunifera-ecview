@@ -1514,6 +1514,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYExposedAction_ExternalCommandId() {
+		return (EAttribute)yExposedActionEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYSendEventCommand() {
 		return ySendEventCommandEClass;
 	}
@@ -1789,6 +1798,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__EXECUTED_NOTIFICATION_TIME);
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__CANCELED_NOTIFICATION_TIME);
 		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__CHECK_DIRTY);
+		createEAttribute(yExposedActionEClass, YEXPOSED_ACTION__EXTERNAL_COMMAND_ID);
 
 		ySendEventCommandEClass = createEClass(YSEND_EVENT_COMMAND);
 		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__EVENT_TOPIC);
@@ -2087,6 +2097,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYExposedAction_ExecutedNotificationTime(), ecorePackage.getELong(), "executedNotificationTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYExposedAction_CanceledNotificationTime(), ecorePackage.getELong(), "canceledNotificationTime", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYExposedAction_CheckDirty(), ecorePackage.getEBoolean(), "checkDirty", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYExposedAction_ExternalCommandId(), ecorePackage.getEString(), "externalCommandId", null, 0, 1, YExposedAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yExposedActionEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 

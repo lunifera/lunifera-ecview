@@ -19,6 +19,7 @@ package org.lunifera.ecview.core.common.model.core;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getExecutedNotificationTime <em>Executed Notification Time</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getCanceledNotificationTime <em>Canceled Notification Time</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#isCheckDirty <em>Check Dirty</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getExternalCommandId <em>External Command Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -234,6 +235,32 @@ public interface YExposedAction extends YElement, YEnable {
 	 * @generated
 	 */
 	void setCheckDirty(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>External Command Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>External Command Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>External Command Id</em>' attribute.
+	 * @see #setExternalCommandId(String)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYExposedAction_ExternalCommandId()
+	 * @model
+	 * @generated
+	 */
+	String getExternalCommandId();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YExposedAction#getExternalCommandId <em>External Command Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>External Command Id</em>' attribute.
+	 * @see #getExternalCommandId()
+	 * @generated
+	 */
+	void setExternalCommandId(String value);
 
 	/**
 	 * <!-- begin-user-doc -->
