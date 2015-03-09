@@ -41,12 +41,13 @@ public class ECViewBeanListProperty extends SimpleListProperty {
 				propertyDescriptor));
 	}
 
-	private List<?> asList(Object propertyValue) {
+	@SuppressWarnings("unchecked")
+	private List<Object> asList(Object propertyValue) {
 		if (propertyValue == null)
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		if (propertyDescriptor.getPropertyType().isArray())
 			return Arrays.asList((Object[]) propertyValue);
-		return (List<?>) propertyValue;
+		return (List<Object>) propertyValue;
 	}
 
 	@SuppressWarnings("rawtypes")

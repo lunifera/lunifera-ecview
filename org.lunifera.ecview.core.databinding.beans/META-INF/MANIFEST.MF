@@ -10,5 +10,5 @@ Require-Bundle: org.eclipse.core.databinding.beans,
  org.apache.commons.beanutils;bundle-version="1.8.0"
 Service-Component: OSGI-INF/beanBindingDelegate.xml, OSGI-INF/pojoBindingDelegate.xml
 Export-Package: org.lunifera.ecview.core.databinding.beans.context;version="0.9.1";x-internal:="true"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
