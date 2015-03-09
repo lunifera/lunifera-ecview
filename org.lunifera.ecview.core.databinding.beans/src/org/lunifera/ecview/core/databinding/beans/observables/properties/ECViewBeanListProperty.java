@@ -15,7 +15,7 @@ import org.eclipse.core.databinding.property.list.SimpleListProperty;
 import org.eclipse.core.internal.databinding.beans.BeanPropertyHelper;
 import org.eclipse.core.internal.databinding.beans.BeanPropertyListener;
 
-@SuppressWarnings("restriction")
+@SuppressWarnings({ "restriction", "rawtypes" })
 public class ECViewBeanListProperty extends SimpleListProperty {
 	private final PropertyDescriptor propertyDescriptor;
 	private final Class<?> elementType;
@@ -27,9 +27,28 @@ public class ECViewBeanListProperty extends SimpleListProperty {
 	public ECViewBeanListProperty(PropertyDescriptor propertyDescriptor,
 			Class<?> elementType) {
 		this.propertyDescriptor = propertyDescriptor;
-		this.elementType = elementType == null ? BeanPropertyHelper
-				.getCollectionPropertyElementType(propertyDescriptor)
+		this.elementType = elementType == null ? getCollectionPropertyElementType(propertyDescriptor)
 				: elementType;
+	}
+
+	/**
+	 * Returns the element type of the given collection-typed property for the
+	 * given bean.
+	 * 
+	 * @param descriptor
+	 *            the property being inspected
+	 * @return the element type of the given collection-typed property if it is
+	 *         an array property, or Object.class otherwise.
+	 * 
+	 *         Copied from
+	 *         org.eclipse.core.internal.databinding.beans.BeanPropertyHelper
+	 *         branch R4_2_maintenance.
+	 */
+	public static Class<?> getCollectionPropertyElementType(
+			PropertyDescriptor descriptor) {
+		Class<?> propertyType = descriptor.getPropertyType();
+		return propertyType.isArray() ? propertyType.getComponentType()
+				: Object.class;
 	}
 
 	public Object getElementType() {
@@ -50,12 +69,10 @@ public class ECViewBeanListProperty extends SimpleListProperty {
 		return (List<Object>) propertyValue;
 	}
 
-	@SuppressWarnings("rawtypes")
 	protected void doSetList(Object source, List list, ListDiff diff) {
 		doSetList(source, list);
 	}
 
-	@SuppressWarnings("rawtypes")
 	protected void doSetList(Object source, List list) {
 		BeanPropertyHelper.writeProperty(source, propertyDescriptor,
 				convertListToBeanPropertyType(list));
@@ -74,6 +91,7 @@ public class ECViewBeanListProperty extends SimpleListProperty {
 		return propertyValue;
 	}
 
+	@SuppressWarnings("unchecked")
 	public INativePropertyListener adaptListener(
 			final ISimplePropertyListener listener) {
 		return new BeanPropertyListener(this, propertyDescriptor, listener) {
