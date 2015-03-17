@@ -10,11 +10,14 @@
  */
 package org.lunifera.ecview.core.common.editpart;
 
+import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessable;
+
 /**
  * Exposed actions are defined inside the view, but have to be handeled in the
  * wrapping view, editor,...
  */
-public interface IExposedActionEditpart extends IElementEditpart {
+public interface IExposedActionEditpart extends IElementEditpart,
+		IVisibilityProcessable {
 
 	/**
 	 * Returns the view edit part of this embeddable edit part.<br>

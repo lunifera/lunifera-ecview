@@ -640,13 +640,22 @@ public interface CoreModelPackage extends EPackage {
 	int YVIEW__SHARED_STATE_GROUP = YELEMENT_FEATURE_COUNT + 14;
 
 	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__CATEGORY = YELEMENT_FEATURE_COUNT + 15;
+
+	/**
 	 * The number of structural features of the '<em>YView</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 15;
+	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -2600,6 +2609,17 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYView_SharedStateGroup();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YView#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YView#getCategory()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EAttribute getYView_Category();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YViewSet <em>YView Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3946,6 +3966,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YVIEW__SHARED_STATE_GROUP = eINSTANCE.getYView_SharedStateGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVIEW__CATEGORY = eINSTANCE.getYView_Category();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.

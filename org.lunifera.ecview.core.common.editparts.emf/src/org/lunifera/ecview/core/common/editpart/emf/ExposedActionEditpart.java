@@ -18,6 +18,7 @@ import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
 
 /**
  * See {@link ElementEditpart}.
@@ -66,7 +67,7 @@ public class ExposedActionEditpart extends ElementEditpart<YExposedAction>
 					} else {
 						return getModel().getName();
 					}
-				}else{
+				} else {
 					return value;
 				}
 			}
@@ -91,6 +92,16 @@ public class ExposedActionEditpart extends ElementEditpart<YExposedAction>
 	public IViewEditpart getView() {
 		YView yView = getModel().getView();
 		return yView != null ? (IViewEditpart) getEditpart(yView) : null;
+	}
+
+	@Override
+	public void apply(IVisibilityHandler handler) {
+		getModel().setEnabled(handler.isEnabled());
+	}
+
+	@Override
+	public void resetVisibilityProperties() {
+		getModel().setEnabled(getModel().isInitialEnabled());
 	}
 
 	/**

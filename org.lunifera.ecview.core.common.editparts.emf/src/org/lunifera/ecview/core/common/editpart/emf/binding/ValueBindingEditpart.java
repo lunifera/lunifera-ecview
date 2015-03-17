@@ -225,21 +225,6 @@ public class ValueBindingEditpart extends ElementEditpart<YValueBinding>
 						targetToModelStrategy, modelToTargetStrategy);
 				binding.updateTargetToModel();
 
-				// getTargetEndpoint().setRefreshProvider(
-				// new IBindableEndpointEditpart.RefreshProvider() {
-				// @Override
-				// public void refresh() {
-				// binding.updateTargetToModel();
-				// }
-				// });
-				//
-				// getModelEndpoint().setRefreshProvider(
-				// new IBindableEndpointEditpart.RefreshProvider() {
-				// @Override
-				// public void refresh() {
-				// binding.updateModelToTarget();
-				// }
-				// });
 			} else {
 				LOGGER.error("BindingManager is null!. No bindings processed!");
 			}

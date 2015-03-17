@@ -60,6 +60,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getVisibilityProcessors <em>Visibility Processors</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getExposedActions <em>Exposed Actions</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getSharedStateGroup <em>Shared State Group</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCategory <em>Category</em>}</li>
  * </ul>
  * </p>
  *
@@ -311,6 +312,26 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected String sharedStateGroup = SHARED_STATE_GROUP_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected String category = CATEGORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -736,6 +757,27 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCategory() {
+		return category;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategory(String newCategory) {
+		String oldCategory = category;
+		category = newCategory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YVIEW__CATEGORY, oldCategory, category));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -954,6 +996,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getExposedActions();
 			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
 				return getSharedStateGroup();
+			case CoreModelPackage.YVIEW__CATEGORY:
+				return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1021,6 +1065,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
 				setSharedStateGroup((String)newValue);
 				return;
+			case CoreModelPackage.YVIEW__CATEGORY:
+				setCategory((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1083,6 +1130,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
 				setSharedStateGroup(SHARED_STATE_GROUP_EDEFAULT);
 				return;
+			case CoreModelPackage.YVIEW__CATEGORY:
+				setCategory(CATEGORY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1128,6 +1178,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return exposedActions != null && !exposedActions.isEmpty();
 			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
 				return SHARED_STATE_GROUP_EDEFAULT == null ? sharedStateGroup != null : !SHARED_STATE_GROUP_EDEFAULT.equals(sharedStateGroup);
+			case CoreModelPackage.YVIEW__CATEGORY:
+				return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1203,6 +1255,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 		result.append(contentAlignment);
 		result.append(", sharedStateGroup: ");
 		result.append(sharedStateGroup);
+		result.append(", category: ");
+		result.append(category);
 		result.append(')');
 		return result.toString();
 	}

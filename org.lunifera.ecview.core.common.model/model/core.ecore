@@ -47,6 +47,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="exposedActions" upperBound="-1"
         eType="#//YExposedAction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sharedStateGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YDeviceType">
     <eLiterals name="IDE" literal="IDE"/>

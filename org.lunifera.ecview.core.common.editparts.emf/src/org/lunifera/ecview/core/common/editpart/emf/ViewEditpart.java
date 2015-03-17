@@ -57,6 +57,7 @@ import org.lunifera.ecview.core.common.presentation.DelegatingPresenterFactory;
 import org.lunifera.ecview.core.common.presentation.IViewPresentation;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.ecview.core.common.services.IUiKitBasedService;
+import org.lunifera.ecview.core.common.services.IWidgetAssocationsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -141,6 +142,9 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		// register the context as a bean slot
 		context.createBeanSlot(BEANSLOT__ECVIEW_CONTEXT, IViewContext.class);
 		context.setBean(BEANSLOT__ECVIEW_CONTEXT, getContext());
+
+		// Will create the editparts.
+		internalLoadExposedActions();
 
 		// render the view presentation
 		renderPresentation(options);
@@ -816,6 +820,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 * @param editpart
 	 *            The editpart to be added
 	 */
+	@SuppressWarnings("unchecked")
 	protected void internalAddExposedAction(IExposedActionEditpart editpart) {
 		checkDisposed();
 
@@ -823,6 +828,12 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			internalLoadExposedActions();
 		}
 		if (!exposedActionEditparts.contains(editpart)) {
+
+			@SuppressWarnings("rawtypes")
+			IWidgetAssocationsService associations = context
+					.getService(IWidgetAssocationsService.ID);
+			associations.associate(editpart, editpart.getModel());
+
 			exposedActionEditparts.add(editpart);
 		}
 	}
@@ -834,11 +845,17 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 * @param editpart
 	 *            The editpart to be removed
 	 */
+	@SuppressWarnings("unchecked")
 	protected void internalRemoveExposedAction(IExposedActionEditpart editpart) {
 		checkDisposed();
 
 		if (exposedActionEditparts != null && editpart != null) {
 			exposedActionEditparts.remove(editpart);
+
+			@SuppressWarnings("rawtypes")
+			IWidgetAssocationsService associations = context
+					.getService(IWidgetAssocationsService.ID);
+			associations.remove(editpart);
 		}
 	}
 

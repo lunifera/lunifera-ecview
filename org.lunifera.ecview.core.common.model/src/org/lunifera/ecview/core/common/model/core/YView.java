@@ -33,6 +33,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getVisibilityProcessors <em>Visibility Processors</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getExposedActions <em>Exposed Actions</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getSharedStateGroup <em>Shared State Group</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getCategory <em>Category</em>}</li>
  * </ul>
  * </p>
  *
@@ -301,6 +302,32 @@ public interface YView extends YElement, YCssAble, YMarginable {
 	 * @generated
 	 */
 	void setSharedStateGroup(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Category</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Category</em>' attribute.
+	 * @see #setCategory(String)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_Category()
+	 * @model
+	 * @generated
+	 */
+	String getCategory();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YView#getCategory <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Category</em>' attribute.
+	 * @see #getCategory()
+	 * @generated
+	 */
+	void setCategory(String value);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
