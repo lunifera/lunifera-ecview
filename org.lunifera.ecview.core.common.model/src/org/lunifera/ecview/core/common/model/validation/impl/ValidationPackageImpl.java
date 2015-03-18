@@ -15,6 +15,8 @@ import org.lunifera.ecview.core.common.model.datatypes.DatatypesPackage;
 import org.lunifera.ecview.core.common.model.datatypes.impl.DatatypesPackageImpl;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
+import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidator;
+import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidatorConfig;
 import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidationConfig;
 import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidator;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidationConfig;
@@ -75,6 +77,13 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass yBeanValidationValidatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass yValidationConfigEClass = null;
 
 	/**
@@ -104,6 +113,13 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 	 * @generated
 	 */
 	private EClass yClassDelegateValidationConfigEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yBeanValidationValidatorConfigEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -239,6 +255,15 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getYBeanValidationValidator() {
+		return yBeanValidationValidatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYValidationConfig() {
 		return yValidationConfigEClass;
 	}
@@ -338,6 +363,42 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getYBeanValidationValidatorConfig() {
+		return yBeanValidationValidatorConfigEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanValidationValidatorConfig_BvalClass() {
+		return (EAttribute)yBeanValidationValidatorConfigEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanValidationValidatorConfig_BvalClassFullyQualifiedName() {
+		return (EAttribute)yBeanValidationValidatorConfigEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYBeanValidationValidatorConfig_BvalProperty() {
+		return (EAttribute)yBeanValidationValidatorConfigEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ValidationFactory getValidationFactory() {
 		return (ValidationFactory)getEFactoryInstance();
 	}
@@ -372,6 +433,8 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 
 		yClassDelegateValidatorEClass = createEClass(YCLASS_DELEGATE_VALIDATOR);
 
+		yBeanValidationValidatorEClass = createEClass(YBEAN_VALIDATION_VALIDATOR);
+
 		yValidationConfigEClass = createEClass(YVALIDATION_CONFIG);
 		createEAttribute(yValidationConfigEClass, YVALIDATION_CONFIG__ERROR_CODE);
 		createEAttribute(yValidationConfigEClass, YVALIDATION_CONFIG__DEFAULT_ERROR_MESSAGE);
@@ -387,6 +450,11 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 
 		yClassDelegateValidationConfigEClass = createEClass(YCLASS_DELEGATE_VALIDATION_CONFIG);
 		createEAttribute(yClassDelegateValidationConfigEClass, YCLASS_DELEGATE_VALIDATION_CONFIG__CLASS_NAME);
+
+		yBeanValidationValidatorConfigEClass = createEClass(YBEAN_VALIDATION_VALIDATOR_CONFIG);
+		createEAttribute(yBeanValidationValidatorConfigEClass, YBEAN_VALIDATION_VALIDATOR_CONFIG__BVAL_CLASS);
+		createEAttribute(yBeanValidationValidatorConfigEClass, YBEAN_VALIDATION_VALIDATOR_CONFIG__BVAL_CLASS_FULLY_QUALIFIED_NAME);
+		createEAttribute(yBeanValidationValidatorConfigEClass, YBEAN_VALIDATION_VALIDATOR_CONFIG__BVAL_PROPERTY);
 	}
 
 	/**
@@ -430,10 +498,13 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 		yRegexpValidatorEClass.getESuperTypes().add(this.getYRegexpValidationConfig());
 		yClassDelegateValidatorEClass.getESuperTypes().add(this.getYValidator());
 		yClassDelegateValidatorEClass.getESuperTypes().add(this.getYClassDelegateValidationConfig());
+		yBeanValidationValidatorEClass.getESuperTypes().add(this.getYValidator());
+		yBeanValidationValidatorEClass.getESuperTypes().add(this.getYBeanValidationValidatorConfig());
 		yMinLengthValidationConfigEClass.getESuperTypes().add(this.getYValidationConfig());
 		yMaxLengthValidationConfigEClass.getESuperTypes().add(this.getYValidationConfig());
 		yRegexpValidationConfigEClass.getESuperTypes().add(this.getYValidationConfig());
 		yClassDelegateValidationConfigEClass.getESuperTypes().add(this.getYValidationConfig());
+		yBeanValidationValidatorConfigEClass.getESuperTypes().add(this.getYValidationConfig());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yValidatorEClass, YValidator.class, "YValidator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -450,6 +521,8 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 
 		initEClass(yClassDelegateValidatorEClass, YClassDelegateValidator.class, "YClassDelegateValidator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(yBeanValidationValidatorEClass, YBeanValidationValidator.class, "YBeanValidationValidator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(yValidationConfigEClass, YValidationConfig.class, "YValidationConfig", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYValidationConfig_ErrorCode(), ecorePackage.getEString(), "errorCode", null, 0, 1, YValidationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYValidationConfig_DefaultErrorMessage(), ecorePackage.getEString(), "defaultErrorMessage", null, 0, 1, YValidationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -465,6 +538,14 @@ public class ValidationPackageImpl extends EPackageImpl implements ValidationPac
 
 		initEClass(yClassDelegateValidationConfigEClass, YClassDelegateValidationConfig.class, "YClassDelegateValidationConfig", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYClassDelegateValidationConfig_ClassName(), ecorePackage.getEString(), "className", null, 1, 1, YClassDelegateValidationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yBeanValidationValidatorConfigEClass, YBeanValidationValidatorConfig.class, "YBeanValidationValidatorConfig", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getYBeanValidationValidatorConfig_BvalClass(), g1, "bvalClass", null, 0, 1, YBeanValidationValidatorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanValidationValidatorConfig_BvalClassFullyQualifiedName(), ecorePackage.getEString(), "bvalClassFullyQualifiedName", null, 0, 1, YBeanValidationValidatorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYBeanValidationValidatorConfig_BvalProperty(), ecorePackage.getEString(), "bvalProperty", null, 0, 1, YBeanValidationValidatorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

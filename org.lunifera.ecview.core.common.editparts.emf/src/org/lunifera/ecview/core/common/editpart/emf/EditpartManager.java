@@ -45,12 +45,14 @@ import org.lunifera.ecview.core.common.editpart.emf.binding.ListBindingEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.binding.ValueBindingEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.binding.VisibilityProcessorValueBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.common.AbstractEditpartManager;
+import org.lunifera.ecview.core.common.editpart.emf.validation.BeanValidationValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.ClassDelegateValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.MaxLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.MinLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.RegexpValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.visibility.VisibilityProcessorEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.visibility.VisibilityPropertiesEditpart;
+import org.lunifera.ecview.core.common.editpart.validation.IBeanValidationValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IClassDelegateValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IMaxLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IMinLengthValidatorEditpart;
@@ -87,6 +89,7 @@ import org.lunifera.ecview.core.common.model.core.YSendEventCommand;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
+import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidator;
 import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidator;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidator;
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidator;
@@ -188,8 +191,11 @@ public class EditpartManager extends AbstractEditpartManager {
 				.isAssignableFrom(IClassDelegateValidatorEditpart.class)) {
 			result = createNewInstance(ClassDelegateValidatorEditpart.class);
 		} else if (editPartClazz
-				.isAssignableFrom(IVisibilityProcessorEditpart.class)) {
-			result = createNewInstance(VisibilityProcessorEditpart.class);
+				.isAssignableFrom(IClassDelegateValidatorEditpart.class)) {
+			result = createNewInstance(ClassDelegateValidatorEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IBeanValidationValidatorEditpart.class)) {
+			result = createNewInstance(BeanValidationValidatorEditpart.class);
 		} else if (editPartClazz
 				.isAssignableFrom(IVisibilityProcessorEditpart.class)) {
 			result = createNewInstance(VisibilityProcessorEditpart.class);
@@ -286,6 +292,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(RegexpValidatorEditpart.class);
 		} else if (yElement instanceof YClassDelegateValidator) {
 			result = createNewInstance(ClassDelegateValidatorEditpart.class);
+		} else if (yElement instanceof YBeanValidationValidator) {
+			result = createNewInstance(BeanValidationValidatorEditpart.class);
 		} else if (yElement instanceof YCommandSet) {
 			result = createNewInstance(CommandSetEditpart.class);
 		} else if (yElement instanceof YDialog) {

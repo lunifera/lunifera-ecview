@@ -62,6 +62,7 @@ public class ValidationFactoryImpl extends EFactoryImpl implements ValidationFac
 			case ValidationPackage.YMAX_LENGTH_VALIDATOR: return createYMaxLengthValidator();
 			case ValidationPackage.YREGEXP_VALIDATOR: return createYRegexpValidator();
 			case ValidationPackage.YCLASS_DELEGATE_VALIDATOR: return createYClassDelegateValidator();
+			case ValidationPackage.YBEAN_VALIDATION_VALIDATOR: return createYBeanValidationValidator();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -105,6 +106,16 @@ public class ValidationFactoryImpl extends EFactoryImpl implements ValidationFac
 	public YClassDelegateValidator createYClassDelegateValidator() {
 		YClassDelegateValidatorImpl yClassDelegateValidator = new YClassDelegateValidatorImpl();
 		return yClassDelegateValidator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YBeanValidationValidator createYBeanValidationValidator() {
+		YBeanValidationValidatorImpl yBeanValidationValidator = new YBeanValidationValidatorImpl();
+		return yBeanValidationValidator;
 	}
 
 	/**

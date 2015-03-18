@@ -58,6 +58,15 @@ public interface ValidationFactory extends EFactory {
 	YClassDelegateValidator createYClassDelegateValidator();
 
 	/**
+	 * Returns a new object of class '<em>YBean Validation Validator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YBean Validation Validator</em>'.
+	 * @generated
+	 */
+	YBeanValidationValidator createYBeanValidationValidator();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

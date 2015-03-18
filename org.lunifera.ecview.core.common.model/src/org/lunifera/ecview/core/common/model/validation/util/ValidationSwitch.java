@@ -127,6 +127,17 @@ public class ValidationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ValidationPackage.YBEAN_VALIDATION_VALIDATOR: {
+				YBeanValidationValidator yBeanValidationValidator = (YBeanValidationValidator)theEObject;
+				T result = caseYBeanValidationValidator(yBeanValidationValidator);
+				if (result == null) result = caseYValidator(yBeanValidationValidator);
+				if (result == null) result = caseYBeanValidationValidatorConfig(yBeanValidationValidator);
+				if (result == null) result = caseYElement(yBeanValidationValidator);
+				if (result == null) result = caseYBindable(yBeanValidationValidator);
+				if (result == null) result = caseYValidationConfig(yBeanValidationValidator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ValidationPackage.YVALIDATION_CONFIG: {
 				YValidationConfig yValidationConfig = (YValidationConfig)theEObject;
 				T result = caseYValidationConfig(yValidationConfig);
@@ -158,6 +169,13 @@ public class ValidationSwitch<T> extends Switch<T> {
 				YClassDelegateValidationConfig yClassDelegateValidationConfig = (YClassDelegateValidationConfig)theEObject;
 				T result = caseYClassDelegateValidationConfig(yClassDelegateValidationConfig);
 				if (result == null) result = caseYValidationConfig(yClassDelegateValidationConfig);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValidationPackage.YBEAN_VALIDATION_VALIDATOR_CONFIG: {
+				YBeanValidationValidatorConfig yBeanValidationValidatorConfig = (YBeanValidationValidatorConfig)theEObject;
+				T result = caseYBeanValidationValidatorConfig(yBeanValidationValidatorConfig);
+				if (result == null) result = caseYValidationConfig(yBeanValidationValidatorConfig);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -241,6 +259,21 @@ public class ValidationSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YBean Validation Validator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YBean Validation Validator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYBeanValidationValidator(YBeanValidationValidator object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>YValidation Config</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -312,6 +345,21 @@ public class ValidationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYClassDelegateValidationConfig(YClassDelegateValidationConfig object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YBean Validation Validator Config</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YBean Validation Validator Config</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYBeanValidationValidatorConfig(YBeanValidationValidatorConfig object) {
 		return null;
 	}
 

@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeBridge;
 import org.lunifera.ecview.core.common.editpart.emf.ElementEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.validation.RegexpValidatorEditpart;
+import org.lunifera.ecview.core.common.editpart.validation.IBeanValidationValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IMaxLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IMinLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IRegexpValidatorEditpart;
@@ -14,6 +15,8 @@ import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
+import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidator;
+import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidatorConfig;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidationConfig;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidator;
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidationConfig;
@@ -23,11 +26,16 @@ import org.lunifera.ecview.core.common.model.validation.YRegexpValidator;
 import org.lunifera.ecview.core.common.model.validation.YValidationConfig;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 import org.lunifera.ecview.core.common.validation.IValidationConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A temporary factory. It should be replaced by OSGi services later.
  */
 public class ValidatorByConfigFactory {
+
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(ValidatorByConfigFactory.class);
 
 	/**
 	 * Creates a new minLengthValidator.
@@ -86,6 +94,31 @@ public class ValidatorByConfigFactory {
 			YRegexpValidator yValidator = ValidationFactory.eINSTANCE
 					.createYRegexpValidator();
 			yValidator.setRegExpression(regexp);
+			editpart = getEditpart(yValidator);
+			editpart.setConfig(config);
+		}
+		return editpart;
+	}
+
+	/**
+	 * Creates a new beanValidationValidator.
+	 * 
+	 * @return
+	 */
+	public static IBeanValidationValidatorEditpart createBeanValidationValidator(
+			IValidationConfig config) {
+		YBeanValidationValidatorConfig yValidationConfig = (YBeanValidationValidatorConfig) config
+				.getValidationSettings();
+		IBeanValidationValidatorEditpart editpart = null;
+		Class<?> bvalClass = yValidationConfig.getBvalClass();
+		String bvalClassName = yValidationConfig
+				.getBvalClassFullyQualifiedName();
+		if (bvalClass != null || bvalClassName != null) {
+			YBeanValidationValidator yValidator = ValidationFactory.eINSTANCE
+					.createYBeanValidationValidator();
+			yValidator.setBvalClass(bvalClass);
+			yValidator.setBvalClassFullyQualifiedName(bvalClassName);
+			yValidator.setBvalProperty(yValidationConfig.getBvalProperty());
 			editpart = getEditpart(yValidator);
 			editpart.setConfig(config);
 		}
@@ -153,6 +186,10 @@ public class ValidatorByConfigFactory {
 				// nothing to do -> Other changes of attributes are handled by
 				// the ValidationConfigToValidatorBridge
 			}
+		} else if (notification.getFeature() == ValidationPackage.Literals.YBEAN_VALIDATION_VALIDATOR_CONFIG__BVAL_CLASS
+				|| notification.getFeature() == ValidationPackage.Literals.YBEAN_VALIDATION_VALIDATOR_CONFIG__BVAL_CLASS_FULLY_QUALIFIED_NAME
+				|| notification.getFeature() == ValidationPackage.Literals.YBEAN_VALIDATION_VALIDATOR_CONFIG__BVAL_PROPERTY) {
+			LOGGER.error("Implement adding and removing BeanValidationValidators!");
 		}
 
 		return new DatatypeEditpart.ValidatorDelta(toAdd, toRemove);
@@ -219,6 +256,13 @@ public class ValidatorByConfigFactory {
 			IRegexpValidatorEditpart regexp = createRegExpressionValidator(config);
 			if (regexp != null) {
 				toAdd.add(regexp);
+			}
+		}
+
+		if (yValidationConfig instanceof YBeanValidationValidatorConfig) {
+			IBeanValidationValidatorEditpart beanVal = createBeanValidationValidator(config);
+			if (beanVal != null) {
+				toAdd.add(beanVal);
 			}
 		}
 

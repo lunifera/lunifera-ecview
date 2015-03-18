@@ -96,6 +96,10 @@ public class ValidationAdapterFactory extends AdapterFactoryImpl {
 				return createYClassDelegateValidatorAdapter();
 			}
 			@Override
+			public Adapter caseYBeanValidationValidator(YBeanValidationValidator object) {
+				return createYBeanValidationValidatorAdapter();
+			}
+			@Override
 			public Adapter caseYValidationConfig(YValidationConfig object) {
 				return createYValidationConfigAdapter();
 			}
@@ -114,6 +118,10 @@ public class ValidationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYClassDelegateValidationConfig(YClassDelegateValidationConfig object) {
 				return createYClassDelegateValidationConfigAdapter();
+			}
+			@Override
+			public Adapter caseYBeanValidationValidatorConfig(YBeanValidationValidatorConfig object) {
+				return createYBeanValidationValidatorConfigAdapter();
 			}
 			@Override
 			public Adapter caseYElement(YElement object) {
@@ -214,6 +222,20 @@ public class ValidationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.validation.YBeanValidationValidator <em>YBean Validation Validator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.validation.YBeanValidationValidator
+	 * @generated
+	 */
+	public Adapter createYBeanValidationValidatorAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.validation.YValidationConfig <em>YValidation Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -280,6 +302,20 @@ public class ValidationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYClassDelegateValidationConfigAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.validation.YBeanValidationValidatorConfig <em>YBean Validation Validator Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.validation.YBeanValidationValidatorConfig
+	 * @generated
+	 */
+	public Adapter createYBeanValidationValidatorConfigAdapter() {
 		return null;
 	}
 

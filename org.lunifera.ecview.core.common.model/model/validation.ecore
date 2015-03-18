@@ -13,6 +13,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="YMaxLengthValidator" eSuperTypes="#//YValidator #//YMaxLengthValidationConfig"/>
   <eClassifiers xsi:type="ecore:EClass" name="YRegexpValidator" eSuperTypes="#//YValidator #//YRegexpValidationConfig"/>
   <eClassifiers xsi:type="ecore:EClass" name="YClassDelegateValidator" eSuperTypes="#//YValidator #//YClassDelegateValidationConfig"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanValidationValidator" eSuperTypes="#//YValidator #//YBeanValidationValidatorConfig"/>
   <eClassifiers xsi:type="ecore:EClass" name="YValidationConfig" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultErrorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -36,5 +37,16 @@
       interface="true" eSuperTypes="#//YValidationConfig">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YBeanValidationValidatorConfig" abstract="true"
+      interface="true" eSuperTypes="#//YValidationConfig">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bvalClass">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bvalClassFullyQualifiedName"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bvalProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
