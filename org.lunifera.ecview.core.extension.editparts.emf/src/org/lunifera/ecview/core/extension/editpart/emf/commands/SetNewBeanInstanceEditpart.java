@@ -61,7 +61,29 @@ public class SetNewBeanInstanceEditpart extends
 				// now pass the value to the target
 				IBindableValueEndpointEditpart valueEPEditpart = (IBindableValueEndpointEditpart) getEditpart(getModel()
 						.getTarget());
-				valueEPEditpart.getObservable().setValue(newEntry);
+
+				// TODO workaround for databinding -> New instance may be
+				// polymorphic brother of the current instance. And if binding
+				// the new instance, numeric field will not become unbound. So
+				// lets set a new instance of current set instance before
+				// setting the new entry.
+				IObservableValue observableValue = valueEPEditpart
+						.getObservable();
+				Object value = observableValue.getValue();
+				if (value != null) {
+					Class<?> valueClass = value.getClass();
+					try {
+						// now all fields will become unbound from the current
+						// instance
+						observableValue.setValue(valueClass.newInstance());
+					} catch (Exception e) {
+						LOGGER.warn("Could not reset the value by {}",
+								valueClass.getName());
+					}
+				}
+
+				// and now set the new value
+				observableValue.setValue(newEntry);
 			}
 		} catch (Exception e) {
 			LOGGER.error("{}", e);
