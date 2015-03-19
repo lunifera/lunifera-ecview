@@ -1,6 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.lunifera.releng.maven</groupId>
+		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
+		<version>0.12.5-SNAPSHOT</version>
+		<relativePath />
+	</parent>
+
 	<groupId>org.lunifera.ecview.core</groupId>
 	<artifactId>org.lunifera.ecview.core</artifactId>
 	<version>0.9.1-SNAPSHOT</version>
@@ -11,25 +19,23 @@
 		<module>org.lunifera.ecview.core.common.editparts.emf</module>
 		<module>org.lunifera.ecview.core.common.model</module>
 		<module>org.lunifera.ecview.core.common.model.tests</module>
-		<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
 		<module>org.lunifera.ecview.core.databinding.beans</module>
 		<module>org.lunifera.ecview.core.databinding.emf</module>
-		<!-- <module>org.lunifera.ecview.core.databinding.tests</module> -->
-		<!-- <module>org.lunifera.ecview.core.example.swt</module> -->
 		<module>org.lunifera.ecview.core.extension.editparts</module>
 		<module>org.lunifera.ecview.core.extension.editparts.emf</module>
 		<module>org.lunifera.ecview.core.extension.model</module>
-		<!-- <module>org.lunifera.ecview.core.extension.tests</module> -->
 		<module>org.lunifera.ecview.core.feature.core</module>
 		<module>org.lunifera.ecview.core.p2</module>
 		<module>org.lunifera.ecview.core.target.luna</module>
-		<!-- <module>org.lunifera.ecview.core.ui.e4.css.core</module> -->
-		<!-- <module>org.lunifera.ecview.core.ui.e4.css.swt</module> -->
 		<module>org.lunifera.ecview.core.ui.presentation.common</module>
-		<!-- <module>org.lunifera.ecview.core.ui.presentation.ecp</module> -->
+		<module>org.lunifera.ecview.core.util.emf</module>
+
+		<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
+		<!-- <module>org.lunifera.ecview.core.databinding.tests</module> -->
+		<!-- <module>org.lunifera.ecview.core.example.swt</module> -->
+		<!-- <module>org.lunifera.ecview.core.extension.tests</module> -->
 		<!-- <module>org.lunifera.ecview.core.ui.presentation.swt</module> -->
 		<!-- <module>org.lunifera.ecview.core.ui.presentation.swt.tests</module> -->
-		<module>org.lunifera.ecview.core.util.emf</module>
 	</modules>
 
 	<properties>
@@ -140,7 +146,7 @@
 
 				<!-- exclusive for P2 -->
 				<module>org.lunifera.ecview.core.p2</module>
-<!-- 				<module>org.lunifera.ecview.core.target.kepler</module> -->
+				<!-- <module>org.lunifera.ecview.core.target.kepler</module> -->
 
 				<!-- P2 features -->
 				<module>org.lunifera.ecview.core.feature.core</module>
@@ -209,7 +215,7 @@
 			</build>
 			<modules>
 				<!-- exclusive for P2 -->
-<!-- 				<module>org.lunifera.ecview.core.target.kepler</module> -->
+				<!-- <module>org.lunifera.ecview.core.target.kepler</module> -->
 				<module>org.lunifera.ecview.core.p2</module>
 				<!-- P2 features -->
 				<module>org.lunifera.ecview.core.feature.core</module>
