@@ -7,12 +7,12 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.lunifera.ecview.core.common.binding.IECViewBindingManager;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.CommandEditpart;
-import org.lunifera.ecview.core.common.types.ITypeProviderService;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.YAddToTableCommand;
 import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
 import org.lunifera.ecview.core.ui.core.editparts.extension.commands.IAddToTableCommandEditpart;
+import org.lunifera.runtime.common.types.ITypeProviderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

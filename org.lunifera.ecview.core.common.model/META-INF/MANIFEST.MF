@@ -7,11 +7,8 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.lunifera.ecview.core.common.model.binding;version="0.9.1";
-  uses:="org.eclipse.emf.ecore,
-   org.eclipse.emf.common.util,
-   org.lunifera.ecview.core.common.model.core",
- org.lunifera.ecview.core.common.model.binding.impl;version="0.9.1";x-internal:=true,
+Export-Package: org.lunifera.ecview.core.common.model.binding;version="0.9.1";uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util,org.lunifera.ecview.core.common.model.core",
+ org.lunifera.ecview.core.common.model.binding.impl;version="0.9.1",
  org.lunifera.ecview.core.common.model.binding.util;version="0.9.1";
   uses:="org.eclipse.emf.ecore.util,
    org.lunifera.ecview.core.common.model.binding,
@@ -26,10 +23,9 @@ Export-Package: org.lunifera.ecview.core.common.model.binding;version="0.9.1";
    org.eclipse.emf.common.util,
    org.lunifera.ecview.core.common.model.core.listeners,
    org.lunifera.ecview.core.common.model.datatypes",
- org.lunifera.ecview.core.common.model.core.impl;version="0.9.1";x-internal:=true,
- org.lunifera.ecview.core.common.model.core.impl.custom;version="0.9.1";x-internal:=true,
- org.lunifera.ecview.core.common.model.core.listeners;version="0.9.1";
-  uses:="org.lunifera.ecview.core.common.model.core",
+ org.lunifera.ecview.core.common.model.core.impl;version="0.9.1",
+ org.lunifera.ecview.core.common.model.core.impl.custom;version="0.9.1",
+ org.lunifera.ecview.core.common.model.core.listeners;version="0.9.1";uses:="org.lunifera.ecview.core.common.model.core",
  org.lunifera.ecview.core.common.model.core.util;version="0.9.1";
   uses:="org.eclipse.emf.ecore.util,
    org.lunifera.ecview.core.common.model.binding,
@@ -38,11 +34,8 @@ Export-Package: org.lunifera.ecview.core.common.model.binding;version="0.9.1";
    org.lunifera.ecview.core.common.model.datatypes,
    org.lunifera.ecview.core.common.model.core,
    org.eclipse.emf.common.notify",
- org.lunifera.ecview.core.common.model.datatypes;version="0.9.1";
-  uses:="org.eclipse.emf.ecore,
-   org.eclipse.emf.common.util,
-   org.lunifera.ecview.core.common.model.core",
- org.lunifera.ecview.core.common.model.datatypes.impl;version="0.9.1";x-internal:=true,
+ org.lunifera.ecview.core.common.model.datatypes;version="0.9.1";uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util,org.lunifera.ecview.core.common.model.core",
+ org.lunifera.ecview.core.common.model.datatypes.impl;version="0.9.1",
  org.lunifera.ecview.core.common.model.datatypes.util;version="0.9.1";
   uses:="org.eclipse.emf.ecore.util,
    org.eclipse.emf.ecore,
@@ -50,10 +43,8 @@ Export-Package: org.lunifera.ecview.core.common.model.binding;version="0.9.1";
    org.lunifera.ecview.core.common.model.datatypes,
    org.lunifera.ecview.core.common.model.core,
    org.eclipse.emf.common.notify",
- org.lunifera.ecview.core.common.model.validation;version="0.9.1";
-  uses:="org.eclipse.emf.ecore,
-   org.lunifera.ecview.core.common.model.core",
- org.lunifera.ecview.core.common.model.validation.impl;version="0.9.1";x-internal:=true,
+ org.lunifera.ecview.core.common.model.validation;version="0.9.1";uses:="org.eclipse.emf.ecore,org.lunifera.ecview.core.common.model.core",
+ org.lunifera.ecview.core.common.model.validation.impl;version="0.9.1",
  org.lunifera.ecview.core.common.model.validation.util;version="0.9.1";
   uses:="org.eclipse.emf.ecore.util,
    org.eclipse.emf.ecore,
@@ -61,11 +52,8 @@ Export-Package: org.lunifera.ecview.core.common.model.binding;version="0.9.1";
    org.lunifera.ecview.core.common.model.validation,
    org.lunifera.ecview.core.common.model.core,
    org.eclipse.emf.common.notify",
- org.lunifera.ecview.core.common.model.visibility;version="0.9.1";
-  uses:="org.eclipse.emf.ecore,
-   org.eclipse.emf.common.util,
-   org.lunifera.ecview.core.common.model.core",
- org.lunifera.ecview.core.common.model.visibility.impl;version="0.9.1";x-internal:=true,
+ org.lunifera.ecview.core.common.model.visibility;version="0.9.1";uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util,org.lunifera.ecview.core.common.model.core",
+ org.lunifera.ecview.core.common.model.visibility.impl;version="0.9.1",
  org.lunifera.ecview.core.common.model.visibility.util;version="0.9.1";
   uses:="org.lunifera.ecview.core.common.model.visibility,
    org.eclipse.emf.ecore.util,

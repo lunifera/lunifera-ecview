@@ -25,8 +25,8 @@ import org.lunifera.ecview.core.common.model.binding.YBinding;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityFactory;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
-import org.lunifera.ecview.core.common.types.ITypeProviderService;
 import org.lunifera.ecview.core.common.visibility.IVisibilityProcessor;
+import org.lunifera.runtime.common.types.ITypeProviderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -98,10 +98,10 @@ public class VisibilityProcessorEditpart<M extends YVisibilityProcessor>
 	 * @return
 	 */
 	protected IVisibilityProcessor loadProcessor() {
-		if(processor != null){
+		if (processor != null) {
 			return processor;
 		}
-		
+
 		Class<?> processorClass = getModel().getDelegate();
 		IVisibilityProcessor processor = null;
 		if (processorClass != null) {
@@ -115,16 +115,22 @@ public class VisibilityProcessorEditpart<M extends YVisibilityProcessor>
 		if (processor == null) {
 			ITypeProviderService service = getViewContext(getModel())
 					.getService(ITypeProviderService.class.getName());
-			processorClass = service.forName(
-					VisibilityPackage.Literals.YVISIBILITY_PROCESSOR,
-					getModel().getDelegateQualifiedName());
-			try {
-				if (processorClass != null) {
-					processor = (IVisibilityProcessor) processorClass
-							.newInstance();
+			if (service != null) {
+				processorClass = service.forName(
+						VisibilityPackage.Literals.YVISIBILITY_PROCESSOR,
+						getModel().getDelegateQualifiedName());
+				try {
+					if (processorClass != null) {
+						processor = (IVisibilityProcessor) processorClass
+								.newInstance();
+					}
+				} catch (InstantiationException e) {
+				} catch (IllegalAccessException e) {
 				}
-			} catch (InstantiationException e) {
-			} catch (IllegalAccessException e) {
+			} else {
+				LOGGER.warn(
+						"Could not load visibility processor for class {}!",
+						getModel().getDelegateQualifiedName());
 			}
 		}
 
