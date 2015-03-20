@@ -13,13 +13,19 @@ package org.lunifera.ecview.core.common.beans;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * A default implementation of the slot. Offers {@link PropertyChangeSupport}.
  */
 public class AbstractSlot implements ISlot {
 	private final PropertyChangeSupport changeSupport = new PropertyChangeSupport(
 			this);
-	
+
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(AbstractSlot.class);
+
 	private final Class<?> valueType;
 	private Object value;
 
@@ -116,8 +122,6 @@ public class AbstractSlot implements ISlot {
 
 	@Override
 	public void setValue(Object value) {
-		// BEGIN SUPRESS CATCH EXCEPTION
 		firePropertyChanged("value", this.value, this.value = value);
-		// END SUPRESS CATCH EXCEPTION
 	}
 }
