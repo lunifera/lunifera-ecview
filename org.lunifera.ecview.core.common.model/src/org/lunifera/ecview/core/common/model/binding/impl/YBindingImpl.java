@@ -2,11 +2,14 @@
  */
 package org.lunifera.ecview.core.common.model.binding.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
 import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
@@ -22,6 +25,7 @@ import org.lunifera.ecview.core.common.model.core.YElement;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingImpl#getModelToTargetStrategy <em>Model To Target Strategy</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingImpl#getTargetToModelStrategy <em>Target To Model Strategy</em>}</li>
  * </ul>
@@ -68,6 +72,16 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getModelToTargetStrategy() <em>Model To Target Strategy</em>}' attribute.
@@ -162,6 +176,18 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BindingPackage.YBINDING__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, BindingPackage.YBINDING__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -282,6 +308,8 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 				return getId();
 			case BindingPackage.YBINDING__NAME:
 				return getName();
+			case BindingPackage.YBINDING__TAGS:
+				return getTags();
 			case BindingPackage.YBINDING__MODEL_TO_TARGET_STRATEGY:
 				return getModelToTargetStrategy();
 			case BindingPackage.YBINDING__TARGET_TO_MODEL_STRATEGY:
@@ -294,6 +322,7 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -302,6 +331,10 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 				return;
 			case BindingPackage.YBINDING__NAME:
 				setName((String)newValue);
+				return;
+			case BindingPackage.YBINDING__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case BindingPackage.YBINDING__MODEL_TO_TARGET_STRATEGY:
 				setModelToTargetStrategy((YBindingUpdateStrategy)newValue);
@@ -326,6 +359,9 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 			case BindingPackage.YBINDING__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case BindingPackage.YBINDING__TAGS:
+				getTags().clear();
+				return;
 			case BindingPackage.YBINDING__MODEL_TO_TARGET_STRATEGY:
 				setModelToTargetStrategy(MODEL_TO_TARGET_STRATEGY_EDEFAULT);
 				return;
@@ -347,6 +383,8 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case BindingPackage.YBINDING__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case BindingPackage.YBINDING__TAGS:
+				return tags != null && !tags.isEmpty();
 			case BindingPackage.YBINDING__MODEL_TO_TARGET_STRATEGY:
 				return modelToTargetStrategy != MODEL_TO_TARGET_STRATEGY_EDEFAULT;
 			case BindingPackage.YBINDING__TARGET_TO_MODEL_STRATEGY:
@@ -368,6 +406,8 @@ public abstract class YBindingImpl extends MinimalEObjectImpl.Container
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", modelToTargetStrategy: ");
 		result.append(modelToTargetStrategy);
 		result.append(", targetToModelStrategy: ");

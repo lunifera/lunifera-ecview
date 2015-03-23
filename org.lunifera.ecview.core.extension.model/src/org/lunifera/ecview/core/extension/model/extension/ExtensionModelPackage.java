@@ -87,6 +87,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YINPUT__NAME = CoreModelPackage.YFIELD__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YINPUT__TAGS = CoreModelPackage.YFIELD__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,6 +249,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YGRID_LAYOUT__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YGRID_LAYOUT__TAGS = CoreModelPackage.YLAYOUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -460,6 +478,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YHORIZONTAL_LAYOUT__NAME = CoreModelPackage.YLAYOUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YHORIZONTAL_LAYOUT__TAGS = CoreModelPackage.YLAYOUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -658,6 +685,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVERTICAL_LAYOUT__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVERTICAL_LAYOUT__TAGS = CoreModelPackage.YLAYOUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -913,6 +949,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YTABLE__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTABLE__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -1213,6 +1258,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YCOLUMN__NAME = CoreModelPackage.YELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOLUMN__TAGS = CoreModelPackage.YELEMENT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1448,6 +1502,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YTREE__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTREE__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -1710,6 +1773,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YOPTIONS_GROUP__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -2000,6 +2072,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YLIST__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2288,6 +2369,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YLABEL__NAME = CoreModelPackage.YFIELD__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLABEL__TAGS = CoreModelPackage.YFIELD__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2460,6 +2550,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YIMAGE__NAME = CoreModelPackage.YFIELD__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YIMAGE__TAGS = CoreModelPackage.YFIELD__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2620,6 +2719,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YTEXT_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -2801,6 +2909,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBEAN_REFERENCE_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -3082,6 +3199,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTEXT_AREA__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_AREA__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3251,6 +3377,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YCHECK_BOX__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCHECK_BOX__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -3424,6 +3559,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBROWSER__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBROWSER__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3593,6 +3737,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDATE_TIME__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDATE_TIME__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -3766,6 +3919,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YDECIMAL_FIELD__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDECIMAL_FIELD__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3937,6 +4099,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YNUMERIC_FIELD__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_FIELD__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4106,6 +4277,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YCOMBO_BOX__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMBO_BOX__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -4369,6 +4549,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBUTTON__NAME = CoreModelPackage.YACTION__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBUTTON__TAGS = CoreModelPackage.YACTION__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4513,6 +4702,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTOGGLE_BUTTON__NAME = CoreModelPackage.YACTION__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTOGGLE_BUTTON__TAGS = CoreModelPackage.YACTION__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4647,6 +4845,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YPROGRESS_BAR__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPROGRESS_BAR__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -4830,6 +5037,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTAB_SHEET__NAME = CoreModelPackage.YEMBEDDABLE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTAB_SHEET__TAGS = CoreModelPackage.YEMBEDDABLE__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4930,6 +5146,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTAB__NAME = CoreModelPackage.YELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTAB__TAGS = CoreModelPackage.YELEMENT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5010,6 +5235,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YMASTER_DETAIL__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMASTER_DETAIL__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -5256,6 +5490,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YFORM_LAYOUT__NAME = CoreModelPackage.YLAYOUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFORM_LAYOUT__TAGS = CoreModelPackage.YLAYOUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5456,6 +5699,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTEXT_SEARCH_FIELD__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5646,6 +5898,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBOOLEAN_SEARCH_FIELD__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5825,6 +6086,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YNUMERIC_SEARCH_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -6033,6 +6303,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YREFERENCE_SEARCH_FIELD__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -6252,6 +6531,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YPANEL__NAME = CoreModelPackage.YLAYOUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__TAGS = CoreModelPackage.YLAYOUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6413,6 +6701,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YSPLIT_PANEL__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSPLIT_PANEL__TAGS = CoreModelPackage.YLAYOUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -6594,6 +6891,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YSEARCH_PANEL__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEARCH_PANEL__TAGS = CoreModelPackage.YLAYOUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -6793,6 +7099,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YENUM_OPTIONS_GROUP__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -7039,6 +7354,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YENUM_LIST__NAME = YINPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__TAGS = YINPUT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7281,6 +7605,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YENUM_COMBO_BOX__NAME = YINPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__TAGS = YINPUT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -7528,6 +7861,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YADD_TO_TABLE_COMMAND__NAME = CoreModelPackage.YCOMMAND__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YADD_TO_TABLE_COMMAND__TAGS = CoreModelPackage.YCOMMAND__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Table</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7581,6 +7923,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YREMOVE_FROM_TABLE_COMMAND__NAME = CoreModelPackage.YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREMOVE_FROM_TABLE_COMMAND__TAGS = CoreModelPackage.YCOMMAND__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Table</b></em>' reference.
@@ -7682,6 +8033,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YSET_NEW_BEAN_INSTANCE_COMMAND__NAME = CoreModelPackage.YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSET_NEW_BEAN_INSTANCE_COMMAND__TAGS = CoreModelPackage.YCOMMAND__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' containment reference.

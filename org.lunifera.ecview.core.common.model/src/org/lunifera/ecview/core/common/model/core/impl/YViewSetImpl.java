@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -35,6 +36,7 @@ import org.lunifera.ecview.core.common.model.core.YViewSet;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl#getViews <em>Views</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl#getBeanSlots <em>Bean Slots</em>}</li>
  * </ul>
@@ -83,6 +85,16 @@ public class YViewSetImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The cached value of the '{@link #getViews() <em>Views</em>}' reference list.
@@ -160,6 +172,18 @@ public class YViewSetImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YVIEW_SET__TAGS);
+		}
+		return tags;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -223,6 +247,8 @@ public class YViewSetImpl extends MinimalEObjectImpl.Container implements
 				return getId();
 			case CoreModelPackage.YVIEW_SET__NAME:
 				return getName();
+			case CoreModelPackage.YVIEW_SET__TAGS:
+				return getTags();
 			case CoreModelPackage.YVIEW_SET__VIEWS:
 				return getViews();
 			case CoreModelPackage.YVIEW_SET__BEAN_SLOTS:
@@ -244,6 +270,10 @@ public class YViewSetImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case CoreModelPackage.YVIEW_SET__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YVIEW_SET__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YVIEW_SET__VIEWS:
 				getViews().clear();
@@ -270,6 +300,9 @@ public class YViewSetImpl extends MinimalEObjectImpl.Container implements
 			case CoreModelPackage.YVIEW_SET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YVIEW_SET__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YVIEW_SET__VIEWS:
 				getViews().clear();
 				return;
@@ -291,6 +324,8 @@ public class YViewSetImpl extends MinimalEObjectImpl.Container implements
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YVIEW_SET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YVIEW_SET__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YVIEW_SET__VIEWS:
 				return views != null && !views.isEmpty();
 			case CoreModelPackage.YVIEW_SET__BEAN_SLOTS:
@@ -312,6 +347,8 @@ public class YViewSetImpl extends MinimalEObjectImpl.Container implements
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(')');
 		return result.toString();
 	}

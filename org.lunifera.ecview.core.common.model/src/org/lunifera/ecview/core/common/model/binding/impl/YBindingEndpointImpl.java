@@ -2,10 +2,13 @@
  */
 package org.lunifera.ecview.core.common.model.binding.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
 import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
@@ -20,6 +23,7 @@ import org.lunifera.ecview.core.common.model.core.YElement;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,6 +69,16 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,6 +142,18 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, BindingPackage.YBINDING_ENDPOINT__TAGS);
+		}
+		return tags;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -169,6 +195,8 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 				return getId();
 			case BindingPackage.YBINDING_ENDPOINT__NAME:
 				return getName();
+			case BindingPackage.YBINDING_ENDPOINT__TAGS:
+				return getTags();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -178,6 +206,7 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -186,6 +215,10 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 				return;
 			case BindingPackage.YBINDING_ENDPOINT__NAME:
 				setName((String)newValue);
+				return;
+			case BindingPackage.YBINDING_ENDPOINT__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -205,6 +238,9 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 			case BindingPackage.YBINDING_ENDPOINT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case BindingPackage.YBINDING_ENDPOINT__TAGS:
+				getTags().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -221,6 +257,8 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case BindingPackage.YBINDING_ENDPOINT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case BindingPackage.YBINDING_ENDPOINT__TAGS:
+				return tags != null && !tags.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -239,6 +277,8 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(')');
 		return result.toString();
 	}

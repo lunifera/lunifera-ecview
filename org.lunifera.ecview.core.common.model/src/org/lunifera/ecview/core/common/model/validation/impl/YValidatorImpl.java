@@ -2,10 +2,13 @@
  */
 package org.lunifera.ecview.core.common.model.validation.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 
@@ -18,6 +21,7 @@ import org.lunifera.ecview.core.common.model.validation.YValidator;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.validation.impl.YValidatorImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.validation.impl.YValidatorImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.validation.impl.YValidatorImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.validation.impl.YValidatorImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -62,6 +66,15 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -138,6 +151,18 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, ValidationPackage.YVALIDATOR__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Class<?> getType() {
 		return type;
 	}
@@ -166,6 +191,8 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 				return getId();
 			case ValidationPackage.YVALIDATOR__NAME:
 				return getName();
+			case ValidationPackage.YVALIDATOR__TAGS:
+				return getTags();
 			case ValidationPackage.YVALIDATOR__TYPE:
 				return getType();
 		}
@@ -177,6 +204,7 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -185,6 +213,10 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 				return;
 			case ValidationPackage.YVALIDATOR__NAME:
 				setName((String)newValue);
+				return;
+			case ValidationPackage.YVALIDATOR__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case ValidationPackage.YVALIDATOR__TYPE:
 				setType((Class<?>)newValue);
@@ -207,6 +239,9 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 			case ValidationPackage.YVALIDATOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ValidationPackage.YVALIDATOR__TAGS:
+				getTags().clear();
+				return;
 			case ValidationPackage.YVALIDATOR__TYPE:
 				setType((Class<?>)null);
 				return;
@@ -226,6 +261,8 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ValidationPackage.YVALIDATOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ValidationPackage.YVALIDATOR__TAGS:
+				return tags != null && !tags.isEmpty();
 			case ValidationPackage.YVALIDATOR__TYPE:
 				return type != null;
 		}
@@ -246,6 +283,8 @@ public abstract class YValidatorImpl extends MinimalEObjectImpl.Container implem
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", type: ");
 		result.append(type);
 		result.append(')');

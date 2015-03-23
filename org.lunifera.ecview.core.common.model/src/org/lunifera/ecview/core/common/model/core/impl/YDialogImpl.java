@@ -2,13 +2,16 @@
  */
 package org.lunifera.ecview.core.common.model.core.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBindable;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
@@ -29,6 +32,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl#getValueBindingEndpoint <em>Value Binding Endpoint</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDialogImpl#getCssID <em>Css ID</em>}</li>
@@ -86,6 +90,16 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The cached value of the '{@link #getValueBindingEndpoint() <em>Value Binding Endpoint</em>}' reference.
@@ -359,6 +373,18 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YDIALOG__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YDIALOG__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -814,6 +840,8 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 				return getId();
 			case CoreModelPackage.YDIALOG__NAME:
 				return getName();
+			case CoreModelPackage.YDIALOG__TAGS:
+				return getTags();
 			case CoreModelPackage.YDIALOG__VALUE_BINDING_ENDPOINT:
 				if (resolve) return getValueBindingEndpoint();
 				return basicGetValueBindingEndpoint();
@@ -851,6 +879,7 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -859,6 +888,10 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case CoreModelPackage.YDIALOG__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YDIALOG__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YDIALOG__VALUE_BINDING_ENDPOINT:
 				setValueBindingEndpoint((YEmbeddableValueEndpoint)newValue);
@@ -916,6 +949,9 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 			case CoreModelPackage.YDIALOG__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YDIALOG__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YDIALOG__VALUE_BINDING_ENDPOINT:
 				setValueBindingEndpoint((YEmbeddableValueEndpoint)null);
 				return;
@@ -970,6 +1006,8 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YDIALOG__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YDIALOG__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YDIALOG__VALUE_BINDING_ENDPOINT:
 				return valueBindingEndpoint != null;
 			case CoreModelPackage.YDIALOG__CSS_CLASS:
@@ -1067,6 +1105,8 @@ public class YDialogImpl extends MinimalEObjectImpl.Container implements
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", cssClass: ");
 		result.append(cssClass);
 		result.append(", cssID: ");

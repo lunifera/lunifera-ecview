@@ -2,14 +2,17 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
@@ -27,6 +30,7 @@ import org.lunifera.ecview.core.extension.model.extension.YSetNewBeanInstanceCom
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl#getTrigger <em>Trigger</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YSetNewBeanInstanceCommandImpl#getType <em>Type</em>}</li>
@@ -77,6 +81,16 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' containment reference.
@@ -217,6 +231,18 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -381,6 +407,8 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 				return getId();
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__NAME:
 				return getName();
+			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TAGS:
+				return getTags();
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
@@ -401,6 +429,7 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -409,6 +438,10 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 				return;
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__NAME:
 				setName((String)newValue);
+				return;
+			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TARGET:
 				setTarget((YValueBindingEndpoint)newValue);
@@ -443,6 +476,9 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TAGS:
+				getTags().clear();
+				return;
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TARGET:
 				setTarget((YValueBindingEndpoint)null);
 				return;
@@ -474,6 +510,8 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TAGS:
+				return tags != null && !tags.isEmpty();
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TARGET:
 				return target != null;
 			case ExtensionModelPackage.YSET_NEW_BEAN_INSTANCE_COMMAND__TRIGGER:
@@ -502,6 +540,8 @@ public class YSetNewBeanInstanceCommandImpl extends MinimalEObjectImpl.Container
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", trigger: ");
 		result.append(trigger);
 		result.append(", type: ");

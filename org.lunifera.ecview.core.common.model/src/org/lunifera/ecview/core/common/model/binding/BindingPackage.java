@@ -86,6 +86,15 @@ public interface BindingPackage extends EPackage {
 	int YBINDING_SET__NAME = CoreModelPackage.YELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBINDING_SET__TAGS = CoreModelPackage.YELEMENT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,6 +141,15 @@ public interface BindingPackage extends EPackage {
 	int YBINDING_ENDPOINT__NAME = CoreModelPackage.YELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBINDING_ENDPOINT__TAGS = CoreModelPackage.YELEMENT__TAGS;
+
+	/**
 	 * The number of structural features of the '<em>YBinding Endpoint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -169,6 +187,15 @@ public interface BindingPackage extends EPackage {
 	int YVALUE_BINDING_ENDPOINT__NAME = YBINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVALUE_BINDING_ENDPOINT__TAGS = YBINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The number of structural features of the '<em>YValue Binding Endpoint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -204,6 +231,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBEAN_VALUE_BINDING_ENDPOINT__NAME = YVALUE_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Bean</b></em>' attribute.
@@ -301,6 +337,15 @@ public interface BindingPackage extends EPackage {
 	int YDETAIL_VALUE_BINDING_ENDPOINT__NAME = YVALUE_BINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDETAIL_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Master Observable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -364,6 +409,15 @@ public interface BindingPackage extends EPackage {
 	int YLIST_BINDING_ENDPOINT__NAME = YBINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST_BINDING_ENDPOINT__TAGS = YBINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The number of structural features of the '<em>YList Binding Endpoint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -389,6 +443,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBINDING__NAME = CoreModelPackage.YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBINDING__TAGS = CoreModelPackage.YELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Model To Target Strategy</b></em>' attribute.
@@ -434,6 +497,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVALUE_BINDING__NAME = YBINDING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVALUE_BINDING__TAGS = YBINDING__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Model To Target Strategy</b></em>' attribute.
@@ -497,6 +569,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YLIST_BINDING__NAME = YBINDING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST_BINDING__TAGS = YBINDING__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Model To Target Strategy</b></em>' attribute.
@@ -573,6 +654,15 @@ public interface BindingPackage extends EPackage {
 	int YENUM_LIST_BINDING_ENDPOINT__NAME = YLIST_BINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST_BINDING_ENDPOINT__TAGS = YLIST_BINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -617,6 +707,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YEC_VIEW_MODEL_VALUE_BINDING_ENDPOINT__NAME = YVALUE_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEC_VIEW_MODEL_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
@@ -710,6 +809,15 @@ public interface BindingPackage extends EPackage {
 	int YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT__NAME = YLIST_BINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT__TAGS = YLIST_BINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -799,6 +907,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__NAME = YVALUE_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Processor Instance</b></em>' attribute.

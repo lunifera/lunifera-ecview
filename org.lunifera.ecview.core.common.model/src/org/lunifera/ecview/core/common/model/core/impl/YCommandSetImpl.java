@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
@@ -26,6 +27,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getCommands <em>Commands</em>}</li>
  * </ul>
  * </p>
@@ -71,6 +73,16 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The cached value of the '{@link #getCommands() <em>Commands</em>}' containment reference list.
@@ -134,6 +146,18 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YCOMMAND_SET__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YCOMMAND_SET__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -210,6 +234,8 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 				return getId();
 			case CoreModelPackage.YCOMMAND_SET__NAME:
 				return getName();
+			case CoreModelPackage.YCOMMAND_SET__TAGS:
+				return getTags();
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				return getCommands();
 		}
@@ -229,6 +255,10 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case CoreModelPackage.YCOMMAND_SET__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YCOMMAND_SET__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				getCommands().clear();
@@ -251,6 +281,9 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 			case CoreModelPackage.YCOMMAND_SET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YCOMMAND_SET__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				getCommands().clear();
 				return;
@@ -269,6 +302,8 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YCOMMAND_SET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YCOMMAND_SET__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				return commands != null && !commands.isEmpty();
 		}
@@ -288,6 +323,8 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(')');
 		return result.toString();
 	}

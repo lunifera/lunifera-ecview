@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesPackage;
@@ -22,6 +23,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YOptionsGroupDataType;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YOptionsGroupDataTypeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YOptionsGroupDataTypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YOptionsGroupDataTypeImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YOptionsGroupDataTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YOptionsGroupDataTypeImpl#getValidators <em>Validators</em>}</li>
  * </ul>
@@ -69,6 +71,16 @@ public class YOptionsGroupDataTypeImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -166,6 +178,18 @@ public class YOptionsGroupDataTypeImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getDescription() {
 		return description;
 	}
@@ -206,6 +230,8 @@ public class YOptionsGroupDataTypeImpl extends MinimalEObjectImpl.Container impl
 				return getId();
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__NAME:
 				return getName();
+			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__TAGS:
+				return getTags();
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__DESCRIPTION:
 				return getDescription();
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__VALIDATORS:
@@ -228,6 +254,10 @@ public class YOptionsGroupDataTypeImpl extends MinimalEObjectImpl.Container impl
 				return;
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__NAME:
 				setName((String)newValue);
+				return;
+			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__DESCRIPTION:
 				setDescription((String)newValue);
@@ -254,6 +284,9 @@ public class YOptionsGroupDataTypeImpl extends MinimalEObjectImpl.Container impl
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__TAGS:
+				getTags().clear();
+				return;
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -276,6 +309,8 @@ public class YOptionsGroupDataTypeImpl extends MinimalEObjectImpl.Container impl
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__TAGS:
+				return tags != null && !tags.isEmpty();
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ExtDatatypesPackage.YOPTIONS_GROUP_DATA_TYPE__VALIDATORS:
@@ -298,6 +333,8 @@ public class YOptionsGroupDataTypeImpl extends MinimalEObjectImpl.Container impl
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", description: ");
 		result.append(description);
 		result.append(')');

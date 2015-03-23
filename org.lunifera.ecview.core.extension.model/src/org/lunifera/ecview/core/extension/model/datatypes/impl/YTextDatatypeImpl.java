@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidationConfig;
@@ -35,6 +36,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getValidators <em>Validators</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTextDatatypeImpl#getErrorCode <em>Error Code</em>}</li>
@@ -87,6 +89,16 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -284,6 +296,18 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, ExtDatatypesPackage.YTEXT_DATATYPE__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getDescription() {
 		return description;
 	}
@@ -429,6 +453,8 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 				return getId();
 			case ExtDatatypesPackage.YTEXT_DATATYPE__NAME:
 				return getName();
+			case ExtDatatypesPackage.YTEXT_DATATYPE__TAGS:
+				return getTags();
 			case ExtDatatypesPackage.YTEXT_DATATYPE__DESCRIPTION:
 				return getDescription();
 			case ExtDatatypesPackage.YTEXT_DATATYPE__VALIDATORS:
@@ -461,6 +487,10 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 				return;
 			case ExtDatatypesPackage.YTEXT_DATATYPE__NAME:
 				setName((String)newValue);
+				return;
+			case ExtDatatypesPackage.YTEXT_DATATYPE__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case ExtDatatypesPackage.YTEXT_DATATYPE__DESCRIPTION:
 				setDescription((String)newValue);
@@ -502,6 +532,9 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 			case ExtDatatypesPackage.YTEXT_DATATYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ExtDatatypesPackage.YTEXT_DATATYPE__TAGS:
+				getTags().clear();
+				return;
 			case ExtDatatypesPackage.YTEXT_DATATYPE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -539,6 +572,8 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ExtDatatypesPackage.YTEXT_DATATYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ExtDatatypesPackage.YTEXT_DATATYPE__TAGS:
+				return tags != null && !tags.isEmpty();
 			case ExtDatatypesPackage.YTEXT_DATATYPE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ExtDatatypesPackage.YTEXT_DATATYPE__VALIDATORS:
@@ -641,6 +676,8 @@ public class YTextDatatypeImpl extends MinimalEObjectImpl.Container implements Y
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", description: ");
 		result.append(description);
 		result.append(", errorCode: ");

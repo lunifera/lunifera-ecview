@@ -2,10 +2,13 @@
  */
 package org.lunifera.ecview.core.common.model.visibility.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
 import org.lunifera.ecview.core.common.model.visibility.YColor;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
@@ -19,6 +22,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#isEditable <em>Editable</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#isEnabled <em>Enabled</em>}</li>
@@ -76,6 +80,16 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
@@ -383,6 +397,18 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, VisibilityPackage.YVISIBILITY_PROPERTIES__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isVisible() {
 		return visible;
 	}
@@ -642,6 +668,8 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 				return getId();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__NAME:
 				return getName();
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__TAGS:
+				return getTags();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__VISIBLE:
 				return isVisible();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__EDITABLE:
@@ -675,6 +703,7 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -683,6 +712,10 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 				return;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__NAME:
 				setName((String)newValue);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__VISIBLE:
 				setVisible((Boolean)newValue);
@@ -738,6 +771,9 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__TAGS:
+				getTags().clear();
+				return;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
@@ -790,6 +826,8 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__TAGS:
+				return tags != null && !tags.isEmpty();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__EDITABLE:
@@ -832,6 +870,8 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", visible: ");
 		result.append(visible);
 		result.append(", editable: ");

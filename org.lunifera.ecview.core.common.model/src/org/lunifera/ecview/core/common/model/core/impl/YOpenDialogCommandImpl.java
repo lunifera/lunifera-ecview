@@ -2,13 +2,16 @@
  */
 package org.lunifera.ecview.core.common.model.core.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
@@ -26,6 +29,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YOpenDialogCommandImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YOpenDialogCommandImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YOpenDialogCommandImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YOpenDialogCommandImpl#getDialog <em>Dialog</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YOpenDialogCommandImpl#getTrigger <em>Trigger</em>}</li>
  * </ul>
@@ -73,6 +77,16 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The cached value of the '{@link #getDialog() <em>Dialog</em>}' reference.
@@ -163,6 +177,18 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YOPEN_DIALOG_COMMAND__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YOPEN_DIALOG_COMMAND__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -284,6 +310,8 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 				return getId();
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__NAME:
 				return getName();
+			case CoreModelPackage.YOPEN_DIALOG_COMMAND__TAGS:
+				return getTags();
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__DIALOG:
 				if (resolve) return getDialog();
 				return basicGetDialog();
@@ -298,6 +326,7 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -306,6 +335,10 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 				return;
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YOPEN_DIALOG_COMMAND__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__DIALOG:
 				setDialog((YDialog)newValue);
@@ -331,6 +364,9 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YOPEN_DIALOG_COMMAND__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__DIALOG:
 				setDialog((YDialog)null);
 				return;
@@ -353,6 +389,8 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YOPEN_DIALOG_COMMAND__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__DIALOG:
 				return dialog != null;
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND__TRIGGER:
@@ -375,6 +413,8 @@ public class YOpenDialogCommandImpl extends MinimalEObjectImpl.Container impleme
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", trigger: ");
 		result.append(trigger);
 		result.append(')');

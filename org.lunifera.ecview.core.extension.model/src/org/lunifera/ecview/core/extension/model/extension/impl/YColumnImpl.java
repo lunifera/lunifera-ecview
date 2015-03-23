@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
@@ -26,6 +27,7 @@ import org.lunifera.ecview.core.extension.model.extension.YColumn;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getDatadescription <em>Datadescription</em>}</li>
@@ -80,6 +82,16 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getIcon() <em>Icon</em>}' attribute.
@@ -301,6 +313,18 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YCOLUMN__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, ExtensionModelPackage.YCOLUMN__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -529,6 +553,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 				return getId();
 			case ExtensionModelPackage.YCOLUMN__NAME:
 				return getName();
+			case ExtensionModelPackage.YCOLUMN__TAGS:
+				return getTags();
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				return getIcon();
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:
@@ -567,6 +593,10 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case ExtensionModelPackage.YCOLUMN__NAME:
 				setName((String)newValue);
+				return;
+			case ExtensionModelPackage.YCOLUMN__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				setIcon((String)newValue);
@@ -616,6 +646,9 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 			case ExtensionModelPackage.YCOLUMN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YCOLUMN__TAGS:
+				getTags().clear();
+				return;
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				setIcon(ICON_EDEFAULT);
 				return;
@@ -661,6 +694,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ExtensionModelPackage.YCOLUMN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ExtensionModelPackage.YCOLUMN__TAGS:
+				return tags != null && !tags.isEmpty();
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				return ICON_EDEFAULT == null ? icon != null : !ICON_EDEFAULT.equals(icon);
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:
@@ -698,6 +733,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", icon: ");
 		result.append(icon);
 		result.append(", visible: ");

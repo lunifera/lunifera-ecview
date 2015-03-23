@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesPackage;
@@ -22,6 +23,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YBrowserDatatype;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YBrowserDatatypeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YBrowserDatatypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YBrowserDatatypeImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YBrowserDatatypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YBrowserDatatypeImpl#getValidators <em>Validators</em>}</li>
  * </ul>
@@ -69,6 +71,16 @@ public class YBrowserDatatypeImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -166,6 +178,18 @@ public class YBrowserDatatypeImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, ExtDatatypesPackage.YBROWSER_DATATYPE__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getDescription() {
 		return description;
 	}
@@ -206,6 +230,8 @@ public class YBrowserDatatypeImpl extends MinimalEObjectImpl.Container implement
 				return getId();
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__NAME:
 				return getName();
+			case ExtDatatypesPackage.YBROWSER_DATATYPE__TAGS:
+				return getTags();
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__DESCRIPTION:
 				return getDescription();
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__VALIDATORS:
@@ -228,6 +254,10 @@ public class YBrowserDatatypeImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__NAME:
 				setName((String)newValue);
+				return;
+			case ExtDatatypesPackage.YBROWSER_DATATYPE__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__DESCRIPTION:
 				setDescription((String)newValue);
@@ -254,6 +284,9 @@ public class YBrowserDatatypeImpl extends MinimalEObjectImpl.Container implement
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ExtDatatypesPackage.YBROWSER_DATATYPE__TAGS:
+				getTags().clear();
+				return;
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -276,6 +309,8 @@ public class YBrowserDatatypeImpl extends MinimalEObjectImpl.Container implement
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ExtDatatypesPackage.YBROWSER_DATATYPE__TAGS:
+				return tags != null && !tags.isEmpty();
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ExtDatatypesPackage.YBROWSER_DATATYPE__VALIDATORS:
@@ -298,6 +333,8 @@ public class YBrowserDatatypeImpl extends MinimalEObjectImpl.Container implement
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", description: ");
 		result.append(description);
 		result.append(')');

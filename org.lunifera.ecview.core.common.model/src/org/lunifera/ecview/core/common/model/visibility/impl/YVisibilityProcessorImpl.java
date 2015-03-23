@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
@@ -25,6 +26,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getDataUsed <em>Data Used</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getTriggersOn <em>Triggers On</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getDelegate <em>Delegate</em>}</li>
@@ -74,6 +76,16 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The cached value of the '{@link #getDataUsed() <em>Data Used</em>}' containment reference list.
@@ -191,6 +203,18 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<YBinding> getDataUsed() {
 		if (dataUsed == null) {
 			dataUsed = new EObjectContainmentEList.Resolving<YBinding>(YBinding.class, this, VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED);
@@ -280,6 +304,8 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 				return getId();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				return getName();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
+				return getTags();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				return getDataUsed();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
@@ -306,6 +332,10 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 				return;
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				setName((String)newValue);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				getDataUsed().clear();
@@ -339,6 +369,9 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
+				getTags().clear();
+				return;
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				getDataUsed().clear();
 				return;
@@ -367,6 +400,8 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
+				return tags != null && !tags.isEmpty();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				return dataUsed != null && !dataUsed.isEmpty();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
@@ -393,6 +428,8 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", delegate: ");
 		result.append(delegate);
 		result.append(", delegateQualifiedName: ");

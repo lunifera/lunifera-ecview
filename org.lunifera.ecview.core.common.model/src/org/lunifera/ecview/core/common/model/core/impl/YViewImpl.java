@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
@@ -45,6 +46,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#isMargin <em>Margin</em>}</li>
@@ -104,6 +106,16 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
@@ -386,6 +398,18 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YVIEW__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YVIEW__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -962,6 +986,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getId();
 			case CoreModelPackage.YVIEW__NAME:
 				return getName();
+			case CoreModelPackage.YVIEW__TAGS:
+				return getTags();
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				return getCssClass();
 			case CoreModelPackage.YVIEW__CSS_ID:
@@ -1015,6 +1041,10 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return;
 			case CoreModelPackage.YVIEW__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YVIEW__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				setCssClass((String)newValue);
@@ -1085,6 +1115,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YVIEW__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				setCssClass(CSS_CLASS_EDEFAULT);
 				return;
@@ -1148,6 +1181,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YVIEW__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YVIEW__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
 			case CoreModelPackage.YVIEW__CSS_ID:
@@ -1241,6 +1276,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", cssClass: ");
 		result.append(cssClass);
 		result.append(", cssID: ");

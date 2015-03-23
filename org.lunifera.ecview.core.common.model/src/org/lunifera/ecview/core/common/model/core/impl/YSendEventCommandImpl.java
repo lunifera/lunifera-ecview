@@ -2,12 +2,15 @@
  */
 package org.lunifera.ecview.core.common.model.core.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
@@ -23,6 +26,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getEventTopic <em>Event Topic</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getMessage <em>Message</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YSendEventCommandImpl#getTrigger <em>Trigger</em>}</li>
@@ -71,6 +75,16 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getEventTopic() <em>Event Topic</em>}' attribute.
@@ -197,6 +211,18 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YSEND_EVENT_COMMAND__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YSEND_EVENT_COMMAND__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -397,6 +423,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 				return getId();
 			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
 				return getName();
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TAGS:
+				return getTags();
 			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
 				return getEventTopic();
 			case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
@@ -413,6 +441,7 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -421,6 +450,10 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 				return;
 			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
 				setEventTopic((String)newValue);
@@ -451,6 +484,9 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
 				setEventTopic(EVENT_TOPIC_EDEFAULT);
 				return;
@@ -478,6 +514,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YSEND_EVENT_COMMAND__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YSEND_EVENT_COMMAND__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YSEND_EVENT_COMMAND__EVENT_TOPIC:
 				return EVENT_TOPIC_EDEFAULT == null ? eventTopic != null : !EVENT_TOPIC_EDEFAULT.equals(eventTopic);
 			case CoreModelPackage.YSEND_EVENT_COMMAND__MESSAGE:
@@ -503,6 +541,8 @@ public class YSendEventCommandImpl extends MinimalEObjectImpl.Container
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", eventTopic: ");
 		result.append(eventTopic);
 		result.append(", message: ");

@@ -2,13 +2,16 @@
  */
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
@@ -28,6 +31,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getParent <em>Parent</em>}</li>
@@ -75,6 +79,15 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 	/**
 	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -181,6 +194,18 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YTAB__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, ExtensionModelPackage.YTAB__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -454,6 +479,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 				return getId();
 			case ExtensionModelPackage.YTAB__NAME:
 				return getName();
+			case ExtensionModelPackage.YTAB__TAGS:
+				return getTags();
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				return getCssClass();
 			case ExtensionModelPackage.YTAB__CSS_ID:
@@ -475,6 +502,7 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -483,6 +511,10 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 				return;
 			case ExtensionModelPackage.YTAB__NAME:
 				setName((String)newValue);
+				return;
+			case ExtensionModelPackage.YTAB__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				setCssClass((String)newValue);
@@ -516,6 +548,9 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 			case ExtensionModelPackage.YTAB__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YTAB__TAGS:
+				getTags().clear();
+				return;
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				setCssClass(CSS_CLASS_EDEFAULT);
 				return;
@@ -546,6 +581,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ExtensionModelPackage.YTAB__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ExtensionModelPackage.YTAB__TAGS:
+				return tags != null && !tags.isEmpty();
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
 			case ExtensionModelPackage.YTAB__CSS_ID:
@@ -605,6 +642,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", cssClass: ");
 		result.append(cssClass);
 		result.append(", cssID: ");

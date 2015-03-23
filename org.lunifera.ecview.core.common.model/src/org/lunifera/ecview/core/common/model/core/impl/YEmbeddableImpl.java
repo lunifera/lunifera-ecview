@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
@@ -44,6 +45,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#isInitialVisible <em>Initial Visible</em>}</li>
@@ -92,6 +94,15 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 	/**
 	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -234,6 +245,18 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YEMBEDDABLE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YEMBEDDABLE__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -417,6 +440,8 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return getId();
 			case CoreModelPackage.YEMBEDDABLE__NAME:
 				return getName();
+			case CoreModelPackage.YEMBEDDABLE__TAGS:
+				return getTags();
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				return getCssClass();
 			case CoreModelPackage.YEMBEDDABLE__CSS_ID:
@@ -446,6 +471,10 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return;
 			case CoreModelPackage.YEMBEDDABLE__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YEMBEDDABLE__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				setCssClass((String)newValue);
@@ -484,6 +513,9 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 			case CoreModelPackage.YEMBEDDABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YEMBEDDABLE__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				setCssClass(CSS_CLASS_EDEFAULT);
 				return;
@@ -517,6 +549,8 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YEMBEDDABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YEMBEDDABLE__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
 			case CoreModelPackage.YEMBEDDABLE__CSS_ID:
@@ -592,6 +626,8 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", cssClass: ");
 		result.append(cssClass);
 		result.append(", cssID: ");

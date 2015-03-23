@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
@@ -31,6 +32,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getBindings <em>Bindings</em>}</li>
  * </ul>
  * </p>
@@ -75,6 +77,15 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 	/**
 	 * The cached value of the '{@link #getBindings() <em>Bindings</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -139,6 +150,18 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BindingPackage.YBINDING_SET__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, BindingPackage.YBINDING_SET__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -351,6 +374,8 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 				return getId();
 			case BindingPackage.YBINDING_SET__NAME:
 				return getName();
+			case BindingPackage.YBINDING_SET__TAGS:
+				return getTags();
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				return getBindings();
 		}
@@ -370,6 +395,10 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case BindingPackage.YBINDING_SET__NAME:
 				setName((String)newValue);
+				return;
+			case BindingPackage.YBINDING_SET__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				getBindings().clear();
@@ -392,6 +421,9 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 			case BindingPackage.YBINDING_SET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case BindingPackage.YBINDING_SET__TAGS:
+				getTags().clear();
+				return;
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				getBindings().clear();
 				return;
@@ -410,6 +442,8 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case BindingPackage.YBINDING_SET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case BindingPackage.YBINDING_SET__TAGS:
+				return tags != null && !tags.isEmpty();
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				return bindings != null && !bindings.isEmpty();
 		}
@@ -429,6 +463,8 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(')');
 		return result.toString();
 	}

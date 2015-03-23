@@ -2,11 +2,14 @@
  */
 package org.lunifera.ecview.core.common.model.core.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YExposedAction;
@@ -22,6 +25,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isInitialEnabled <em>Initial Enabled</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getIcon <em>Icon</em>}</li>
@@ -78,6 +82,16 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #isInitialEnabled() <em>Initial Enabled</em>}' attribute.
@@ -365,6 +379,18 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YEXPOSED_ACTION__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isInitialEnabled() {
 		return initialEnabled;
 	}
@@ -631,6 +657,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return getId();
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				return getName();
+			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
+				return getTags();
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				return isInitialEnabled();
 			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:
@@ -662,6 +690,7 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -670,6 +699,10 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				setName((String)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				setInitialEnabled((Boolean)newValue);
@@ -722,6 +755,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
+				getTags().clear();
+				return;
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				setInitialEnabled(INITIAL_ENABLED_EDEFAULT);
 				return;
@@ -771,6 +807,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CoreModelPackage.YEXPOSED_ACTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
+				return tags != null && !tags.isEmpty();
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				return initialEnabled != INITIAL_ENABLED_EDEFAULT;
 			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:
@@ -845,6 +883,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", initialEnabled: ");
 		result.append(initialEnabled);
 		result.append(", enabled: ");

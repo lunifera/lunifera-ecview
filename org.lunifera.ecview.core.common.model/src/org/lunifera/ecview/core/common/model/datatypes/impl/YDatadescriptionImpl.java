@@ -10,10 +10,13 @@
  */
 package org.lunifera.ecview.core.common.model.datatypes.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.lunifera.ecview.core.common.model.datatypes.DatatypesPackage;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
@@ -26,6 +29,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.datatypes.impl.YDatadescriptionImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.datatypes.impl.YDatadescriptionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.datatypes.impl.YDatadescriptionImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.datatypes.impl.YDatadescriptionImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.datatypes.impl.YDatadescriptionImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.datatypes.impl.YDatadescriptionImpl#getLabelI18nKey <em>Label I1 8n Key</em>}</li>
@@ -74,6 +78,16 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -201,6 +215,18 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, DatatypesPackage.YDATADESCRIPTION__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getDescription() {
 		return description;
 	}
@@ -271,6 +297,8 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 				return getId();
 			case DatatypesPackage.YDATADESCRIPTION__NAME:
 				return getName();
+			case DatatypesPackage.YDATADESCRIPTION__TAGS:
+				return getTags();
 			case DatatypesPackage.YDATADESCRIPTION__DESCRIPTION:
 				return getDescription();
 			case DatatypesPackage.YDATADESCRIPTION__LABEL:
@@ -286,6 +314,7 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -294,6 +323,10 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case DatatypesPackage.YDATADESCRIPTION__NAME:
 				setName((String)newValue);
+				return;
+			case DatatypesPackage.YDATADESCRIPTION__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case DatatypesPackage.YDATADESCRIPTION__DESCRIPTION:
 				setDescription((String)newValue);
@@ -322,6 +355,9 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 			case DatatypesPackage.YDATADESCRIPTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case DatatypesPackage.YDATADESCRIPTION__TAGS:
+				getTags().clear();
+				return;
 			case DatatypesPackage.YDATADESCRIPTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -347,6 +383,8 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case DatatypesPackage.YDATADESCRIPTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case DatatypesPackage.YDATADESCRIPTION__TAGS:
+				return tags != null && !tags.isEmpty();
 			case DatatypesPackage.YDATADESCRIPTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case DatatypesPackage.YDATADESCRIPTION__LABEL:
@@ -371,6 +409,8 @@ public class YDatadescriptionImpl extends MinimalEObjectImpl.Container implement
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", description: ");
 		result.append(description);
 		result.append(", label: ");

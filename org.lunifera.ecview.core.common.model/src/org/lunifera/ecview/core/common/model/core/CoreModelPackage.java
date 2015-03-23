@@ -96,13 +96,22 @@ public interface CoreModelPackage extends EPackage {
 	int YELEMENT__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YELEMENT__TAGS = 2;
+
+	/**
 	 * The number of structural features of the '<em>YElement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YELEMENT_FEATURE_COUNT = 2;
+	int YELEMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl <em>YEmbeddable</em>}' class.
@@ -131,6 +140,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YEMBEDDABLE__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEMBEDDABLE__TAGS = YELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -222,6 +240,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YLAYOUT__NAME = YEMBEDDABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLAYOUT__TAGS = YEMBEDDABLE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -358,6 +385,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YFIELD__NAME = YEMBEDDABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFIELD__TAGS = YEMBEDDABLE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -503,6 +539,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVIEW__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__TAGS = YELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -684,6 +729,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVIEW_SET__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW_SET__TAGS = YELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Views</b></em>' reference list.
@@ -922,6 +976,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDIALOG__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDIALOG__TAGS = YELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
@@ -1293,6 +1356,15 @@ public interface CoreModelPackage extends EPackage {
 	int YACTION__NAME = YEMBEDDABLE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YACTION__TAGS = YEMBEDDABLE__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1514,6 +1586,15 @@ public interface CoreModelPackage extends EPackage {
 	int YCONTEXT_VALUE_BINDING_ENDPOINT__NAME = BindingPackage.YVALUE_BINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCONTEXT_VALUE_BINDING_ENDPOINT__TAGS = BindingPackage.YVALUE_BINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Url String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1558,6 +1639,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBEAN_SLOT_VALUE_BINDING_ENDPOINT__NAME = BindingPackage.YVALUE_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_SLOT_VALUE_BINDING_ENDPOINT__TAGS = BindingPackage.YVALUE_BINDING_ENDPOINT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute Path</b></em>' attribute.
@@ -1613,6 +1703,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBEAN_SLOT_LIST_BINDING_ENDPOINT__NAME = BindingPackage.YLIST_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_SLOT_LIST_BINDING_ENDPOINT__TAGS = BindingPackage.YLIST_BINDING_ENDPOINT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute Path</b></em>' attribute.
@@ -1707,6 +1806,15 @@ public interface CoreModelPackage extends EPackage {
 	int YEMBEDDABLE_VALUE_ENDPOINT__NAME = BindingPackage.YVALUE_BINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEMBEDDABLE_VALUE_ENDPOINT__TAGS = BindingPackage.YVALUE_BINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1751,6 +1859,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YEMBEDDABLE_SELECTION_ENDPOINT__NAME = BindingPackage.YVALUE_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEMBEDDABLE_SELECTION_ENDPOINT__TAGS = BindingPackage.YVALUE_BINDING_ENDPOINT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
@@ -1808,6 +1925,15 @@ public interface CoreModelPackage extends EPackage {
 	int YEMBEDDABLE_MULTI_SELECTION_ENDPOINT__NAME = BindingPackage.YLIST_BINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEMBEDDABLE_MULTI_SELECTION_ENDPOINT__TAGS = BindingPackage.YLIST_BINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1852,6 +1978,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YEMBEDDABLE_COLLECTION_ENDPOINT__NAME = BindingPackage.YLIST_BINDING_ENDPOINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEMBEDDABLE_COLLECTION_ENDPOINT__TAGS = BindingPackage.YLIST_BINDING_ENDPOINT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
@@ -1900,6 +2035,15 @@ public interface CoreModelPackage extends EPackage {
 	int YACTIVATED_ENDPOINT__NAME = BindingPackage.YVALUE_BINDING_ENDPOINT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YACTIVATED_ENDPOINT__TAGS = BindingPackage.YVALUE_BINDING_ENDPOINT__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1944,6 +2088,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDT_WRAPPER__NAME = DatatypesPackage.YDATATYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDT_WRAPPER__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2001,6 +2154,15 @@ public interface CoreModelPackage extends EPackage {
 	int YCOMMAND__NAME = YELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMMAND__TAGS = YELEMENT__TAGS;
+
+	/**
 	 * The number of structural features of the '<em>YCommand</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2036,6 +2198,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YCOMMAND_SET__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMMAND_SET__TAGS = YELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Commands</b></em>' containment reference list.
@@ -2082,6 +2253,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YOPEN_DIALOG_COMMAND__NAME = YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPEN_DIALOG_COMMAND__TAGS = YCOMMAND__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Dialog</b></em>' reference.
@@ -2137,6 +2317,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YEXPOSED_ACTION__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEXPOSED_ACTION__TAGS = YELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
@@ -2273,6 +2462,15 @@ public interface CoreModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YSEND_EVENT_COMMAND__NAME = YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YSEND_EVENT_COMMAND__TAGS = YCOMMAND__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Event Topic</b></em>' attribute.
@@ -2412,6 +2610,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYElement_Name();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.lunifera.ecview.core.common.model.core.YElement#getTags <em>Tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Tags</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YElement#getTags()
+	 * @see #getYElement()
+	 * @generated
+	 */
+	EAttribute getYElement_Tags();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YLayout <em>YLayout</em>}'.
@@ -3816,6 +4025,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YELEMENT__NAME = eINSTANCE.getYElement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Tags</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YELEMENT__TAGS = eINSTANCE.getYElement_Tags();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl <em>YLayout</em>}' class.
