@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.common.model.core.impl;
 
 import java.net.URI;
+import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -79,6 +80,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * @generated
 	 */
 	private EClass yElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yStringToStringMapEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -497,6 +505,42 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getYElement_Properties() {
+		return (EReference)yElementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYStringToStringMap() {
+		return yStringToStringMapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYStringToStringMap_Key() {
+		return (EAttribute)yStringToStringMapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYStringToStringMap_Value() {
+		return (EAttribute)yStringToStringMapEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYLayout() {
 		return yLayoutEClass;
 	}
@@ -641,7 +685,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getYView_ExposedActions() {
+	public EReference getYView_TransientVisibilityProcessors() {
 		return (EReference)yViewEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -650,8 +694,17 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getYView_ExposedActions() {
+		return (EReference)yViewEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getYView_SharedStateGroup() {
-		return (EAttribute)yViewEClass.getEStructuralFeatures().get(11);
+		return (EAttribute)yViewEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -660,7 +713,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * @generated
 	 */
 	public EAttribute getYView_Category() {
-		return (EAttribute)yViewEClass.getEStructuralFeatures().get(12);
+		return (EAttribute)yViewEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1424,6 +1477,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getYCommandSet_TransientCommands() {
+		return (EReference)yCommandSetEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYOpenDialogCommand() {
 		return yOpenDialogCommandEClass;
 	}
@@ -1667,6 +1729,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yElementEClass, YELEMENT__ID);
 		createEAttribute(yElementEClass, YELEMENT__NAME);
 		createEAttribute(yElementEClass, YELEMENT__TAGS);
+		createEReference(yElementEClass, YELEMENT__PROPERTIES);
+
+		yStringToStringMapEClass = createEClass(YSTRING_TO_STRING_MAP);
+		createEAttribute(yStringToStringMapEClass, YSTRING_TO_STRING_MAP__KEY);
+		createEAttribute(yStringToStringMapEClass, YSTRING_TO_STRING_MAP__VALUE);
 
 		yLayoutEClass = createEClass(YLAYOUT);
 		createEReference(yLayoutEClass, YLAYOUT__ELEMENTS);
@@ -1686,6 +1753,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yViewEClass, YVIEW__DEVICE_TYPE);
 		createEAttribute(yViewEClass, YVIEW__CONTENT_ALIGNMENT);
 		createEReference(yViewEClass, YVIEW__VISIBILITY_PROCESSORS);
+		createEReference(yViewEClass, YVIEW__TRANSIENT_VISIBILITY_PROCESSORS);
 		createEReference(yViewEClass, YVIEW__EXPOSED_ACTIONS);
 		createEAttribute(yViewEClass, YVIEW__SHARED_STATE_GROUP);
 		createEAttribute(yViewEClass, YVIEW__CATEGORY);
@@ -1804,6 +1872,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 
 		yCommandSetEClass = createEClass(YCOMMAND_SET);
 		createEReference(yCommandSetEClass, YCOMMAND_SET__COMMANDS);
+		createEReference(yCommandSetEClass, YCOMMAND_SET__TRANSIENT_COMMANDS);
 
 		yOpenDialogCommandEClass = createEClass(YOPEN_DIALOG_COMMAND);
 		createEReference(yOpenDialogCommandEClass, YOPEN_DIALOG_COMMAND__DIALOG);
@@ -1921,6 +1990,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYElement_Id(), ecorePackage.getEString(), "id", null, 0, 1, YElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, YElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYElement_Tags(), ecorePackage.getEString(), "tags", null, 0, -1, YElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYElement_Properties(), this.getYStringToStringMap(), null, "properties", null, 0, -1, YElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yStringToStringMapEClass, Map.Entry.class, "YStringToStringMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYStringToStringMap_Key(), ecorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYStringToStringMap_Value(), ecorePackage.getEString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yLayoutEClass, YLayout.class, "YLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYLayout_Elements(), this.getYEmbeddable(), null, "elements", null, 0, -1, YLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1948,6 +2022,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYView_DeviceType(), this.getYDeviceType(), "deviceType", "IDE", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_ContentAlignment(), this.getYAlignment(), "contentAlignment", "FILL_FILL", 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_VisibilityProcessors(), theVisibilityPackage.getYVisibilityProcessor(), null, "visibilityProcessors", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYView_TransientVisibilityProcessors(), theVisibilityPackage.getYVisibilityProcessor(), null, "transientVisibilityProcessors", null, 0, -1, YView.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYView_ExposedActions(), this.getYExposedAction(), null, "exposedActions", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_SharedStateGroup(), ecorePackage.getEString(), "sharedStateGroup", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_Category(), ecorePackage.getEString(), "category", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2093,6 +2168,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 
 		initEClass(yCommandSetEClass, YCommandSet.class, "YCommandSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYCommandSet_Commands(), this.getYCommand(), null, "commands", null, 0, -1, YCommandSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYCommandSet_TransientCommands(), this.getYCommand(), null, "transientCommands", null, 0, -1, YCommandSet.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yCommandSetEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 

@@ -18,12 +18,13 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IVerticalLayoutEditp
 /**
  * The implementation of the IUigridLayoutEditpart.
  */
-@SuppressWarnings("restriction")
-public class VerticalLayoutEditpart extends LayoutEditpart<YVerticalLayout> implements IVerticalLayoutEditpart {
+public class VerticalLayoutEditpart extends LayoutEditpart<YVerticalLayout>
+		implements IVerticalLayoutEditpart {
 
 	@Override
 	protected YVerticalLayout createModel() {
-		return (YVerticalLayout) ExtensionModelFactory.eINSTANCE.createYVerticalLayout();
+		return (YVerticalLayout) ExtensionModelFactory.eINSTANCE
+				.createYVerticalLayout();
 	}
 
 }

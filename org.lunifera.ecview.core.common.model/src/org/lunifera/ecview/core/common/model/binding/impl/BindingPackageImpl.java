@@ -238,6 +238,15 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getYBindingSet_TransientBindings() {
+		return (EReference)yBindingSetEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYBindingEndpoint() {
 		return yBindingEndpointEClass;
 	}
@@ -623,6 +632,7 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 		// Create classes and their features
 		yBindingSetEClass = createEClass(YBINDING_SET);
 		createEReference(yBindingSetEClass, YBINDING_SET__BINDINGS);
+		createEReference(yBindingSetEClass, YBINDING_SET__TRANSIENT_BINDINGS);
 
 		yBindingEndpointEClass = createEClass(YBINDING_ENDPOINT);
 
@@ -727,6 +737,7 @@ public class BindingPackageImpl extends EPackageImpl implements BindingPackage {
 		// Initialize classes and features; add operations and parameters
 		initEClass(yBindingSetEClass, YBindingSet.class, "YBindingSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYBindingSet_Bindings(), this.getYBinding(), null, "bindings", null, 0, -1, YBindingSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYBindingSet_TransientBindings(), this.getYBinding(), null, "transientBindings", null, 0, -1, YBindingSet.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(yBindingSetEClass, this.getYValueBinding(), "addBinding", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getYValueBindingEndpoint(), "targetValue", 1, 1, IS_UNIQUE, IS_ORDERED);

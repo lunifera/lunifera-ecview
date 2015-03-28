@@ -6,12 +6,16 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
@@ -22,7 +26,9 @@ import org.lunifera.ecview.core.common.model.binding.YListBinding;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -33,7 +39,9 @@ import org.lunifera.ecview.core.common.model.core.YView;
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getBindings <em>Bindings</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingSetImpl#getTransientBindings <em>Transient Bindings</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +95,15 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected EList<String> tags;
 	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
+	/**
 	 * The cached value of the '{@link #getBindings() <em>Bindings</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getBindings()
@@ -94,6 +111,16 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<YBinding> bindings;
+
+	/**
+	 * The cached value of the '{@link #getTransientBindings() <em>Transient Bindings</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTransientBindings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<YBinding> transientBindings;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -165,6 +192,18 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, BindingPackage.YBINDING_SET__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -173,6 +212,18 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 			bindings = new EObjectContainmentEList.Resolving<YBinding>(YBinding.class, this, BindingPackage.YBINDING_SET__BINDINGS);
 		}
 		return bindings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<YBinding> getTransientBindings() {
+		if (transientBindings == null) {
+			transientBindings = new EObjectResolvingEList<YBinding>(YBinding.class, this, BindingPackage.YBINDING_SET__TRANSIENT_BINDINGS);
+		}
+		return transientBindings;
 	}
 
 	/**
@@ -357,6 +408,8 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case BindingPackage.YBINDING_SET__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				return ((InternalEList<?>)getBindings()).basicRemove(otherEnd, msgs);
 		}
@@ -376,8 +429,13 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 				return getName();
 			case BindingPackage.YBINDING_SET__TAGS:
 				return getTags();
+			case BindingPackage.YBINDING_SET__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				return getBindings();
+			case BindingPackage.YBINDING_SET__TRANSIENT_BINDINGS:
+				return getTransientBindings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -400,9 +458,16 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
 				return;
+			case BindingPackage.YBINDING_SET__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
+				return;
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				getBindings().clear();
 				getBindings().addAll((Collection<? extends YBinding>)newValue);
+				return;
+			case BindingPackage.YBINDING_SET__TRANSIENT_BINDINGS:
+				getTransientBindings().clear();
+				getTransientBindings().addAll((Collection<? extends YBinding>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -424,8 +489,14 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 			case BindingPackage.YBINDING_SET__TAGS:
 				getTags().clear();
 				return;
+			case BindingPackage.YBINDING_SET__PROPERTIES:
+				getProperties().clear();
+				return;
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				getBindings().clear();
+				return;
+			case BindingPackage.YBINDING_SET__TRANSIENT_BINDINGS:
+				getTransientBindings().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -444,8 +515,12 @@ public class YBindingSetImpl extends MinimalEObjectImpl.Container implements
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BindingPackage.YBINDING_SET__TAGS:
 				return tags != null && !tags.isEmpty();
+			case BindingPackage.YBINDING_SET__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case BindingPackage.YBINDING_SET__BINDINGS:
 				return bindings != null && !bindings.isEmpty();
+			case BindingPackage.YBINDING_SET__TRANSIENT_BINDINGS:
+				return transientBindings != null && !transientBindings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

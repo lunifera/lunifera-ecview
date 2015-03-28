@@ -10,6 +10,7 @@
  */
 package org.lunifera.ecview.core.common.model.core.util;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -80,6 +81,12 @@ public class CoreModelSwitch<T> extends Switch<T> {
 			case CoreModelPackage.YELEMENT: {
 				YElement yElement = (YElement)theEObject;
 				T result = caseYElement(yElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CoreModelPackage.YSTRING_TO_STRING_MAP: {
+				@SuppressWarnings("unchecked") Map.Entry<String, String> yStringToStringMap = (Map.Entry<String, String>)theEObject;
+				T result = caseYStringToStringMap(yStringToStringMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -395,6 +402,21 @@ public class CoreModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYElement(YElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YString To String Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YString To String Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYStringToStringMap(Map.Entry<String, String> object) {
 		return null;
 	}
 

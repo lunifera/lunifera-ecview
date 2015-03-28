@@ -4,15 +4,23 @@ package org.lunifera.ecview.core.common.model.binding.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
 import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YElement;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +32,7 @@ import org.lunifera.ecview.core.common.model.core.YElement;
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,6 +88,16 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,6 +173,18 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, BindingPackage.YBINDING_ENDPOINT__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -189,6 +220,20 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BindingPackage.YBINDING_ENDPOINT__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BindingPackage.YBINDING_ENDPOINT__ID:
@@ -197,6 +242,9 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 				return getName();
 			case BindingPackage.YBINDING_ENDPOINT__TAGS:
 				return getTags();
+			case BindingPackage.YBINDING_ENDPOINT__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -220,6 +268,9 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
 				return;
+			case BindingPackage.YBINDING_ENDPOINT__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -241,6 +292,9 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 			case BindingPackage.YBINDING_ENDPOINT__TAGS:
 				getTags().clear();
 				return;
+			case BindingPackage.YBINDING_ENDPOINT__PROPERTIES:
+				getProperties().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -259,6 +313,8 @@ public abstract class YBindingEndpointImpl extends MinimalEObjectImpl.Container 
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BindingPackage.YBINDING_ENDPOINT__TAGS:
 				return tags != null && !tags.isEmpty();
+			case BindingPackage.YBINDING_ENDPOINT__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

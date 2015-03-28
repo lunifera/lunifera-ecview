@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YCommandSet#getCommands <em>Commands</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YCommandSet#getTransientCommands <em>Transient Commands</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,6 +37,22 @@ public interface YCommandSet extends YElement {
 	 * @generated
 	 */
 	EList<YCommand> getCommands();
+
+	/**
+	 * Returns the value of the '<em><b>Transient Commands</b></em>' reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.core.YCommand}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Transient Commands</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transient Commands</em>' reference list.
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYCommandSet_TransientCommands()
+	 * @model transient="true"
+	 * @generated
+	 */
+	EList<YCommand> getTransientCommands();
 
 	/**
 	 * <!-- begin-user-doc -->

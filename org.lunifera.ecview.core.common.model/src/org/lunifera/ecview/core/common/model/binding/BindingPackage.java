@@ -95,6 +95,15 @@ public interface BindingPackage extends EPackage {
 	int YBINDING_SET__TAGS = CoreModelPackage.YELEMENT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBINDING_SET__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,13 +113,22 @@ public interface BindingPackage extends EPackage {
 	int YBINDING_SET__BINDINGS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Transient Bindings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBINDING_SET__TRANSIENT_BINDINGS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>YBinding Set</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBINDING_SET_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 1;
+	int YBINDING_SET_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl <em>YBinding Endpoint</em>}' class.
@@ -148,6 +166,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBINDING_ENDPOINT__TAGS = CoreModelPackage.YELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBINDING_ENDPOINT__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
 
 	/**
 	 * The number of structural features of the '<em>YBinding Endpoint</em>' class.
@@ -196,6 +223,15 @@ public interface BindingPackage extends EPackage {
 	int YVALUE_BINDING_ENDPOINT__TAGS = YBINDING_ENDPOINT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVALUE_BINDING_ENDPOINT__PROPERTIES = YBINDING_ENDPOINT__PROPERTIES;
+
+	/**
 	 * The number of structural features of the '<em>YValue Binding Endpoint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,6 +276,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBEAN_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_VALUE_BINDING_ENDPOINT__PROPERTIES = YVALUE_BINDING_ENDPOINT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Bean</b></em>' attribute.
@@ -346,6 +391,15 @@ public interface BindingPackage extends EPackage {
 	int YDETAIL_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDETAIL_VALUE_BINDING_ENDPOINT__PROPERTIES = YVALUE_BINDING_ENDPOINT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Master Observable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -418,6 +472,15 @@ public interface BindingPackage extends EPackage {
 	int YLIST_BINDING_ENDPOINT__TAGS = YBINDING_ENDPOINT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST_BINDING_ENDPOINT__PROPERTIES = YBINDING_ENDPOINT__PROPERTIES;
+
+	/**
 	 * The number of structural features of the '<em>YList Binding Endpoint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -452,6 +515,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBINDING__TAGS = CoreModelPackage.YELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBINDING__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Model To Target Strategy</b></em>' attribute.
@@ -506,6 +578,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVALUE_BINDING__TAGS = YBINDING__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVALUE_BINDING__PROPERTIES = YBINDING__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Model To Target Strategy</b></em>' attribute.
@@ -578,6 +659,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YLIST_BINDING__TAGS = YBINDING__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST_BINDING__PROPERTIES = YBINDING__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Model To Target Strategy</b></em>' attribute.
@@ -663,6 +753,15 @@ public interface BindingPackage extends EPackage {
 	int YENUM_LIST_BINDING_ENDPOINT__TAGS = YLIST_BINDING_ENDPOINT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST_BINDING_ENDPOINT__PROPERTIES = YLIST_BINDING_ENDPOINT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -716,6 +815,15 @@ public interface BindingPackage extends EPackage {
 	 * @ordered
 	 */
 	int YEC_VIEW_MODEL_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEC_VIEW_MODEL_VALUE_BINDING_ENDPOINT__PROPERTIES = YVALUE_BINDING_ENDPOINT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
@@ -818,6 +926,15 @@ public interface BindingPackage extends EPackage {
 	int YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT__TAGS = YLIST_BINDING_ENDPOINT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YEC_VIEW_MODEL_LIST_BINDING_ENDPOINT__PROPERTIES = YLIST_BINDING_ENDPOINT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -918,6 +1035,15 @@ public interface BindingPackage extends EPackage {
 	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__TAGS = YVALUE_BINDING_ENDPOINT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR_VALUE_BINDING_ENDPOINT__PROPERTIES = YVALUE_BINDING_ENDPOINT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Processor Instance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -975,6 +1101,17 @@ public interface BindingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getYBindingSet_Bindings();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.lunifera.ecview.core.common.model.binding.YBindingSet#getTransientBindings <em>Transient Bindings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Transient Bindings</em>'.
+	 * @see org.lunifera.ecview.core.common.model.binding.YBindingSet#getTransientBindings()
+	 * @see #getYBindingSet()
+	 * @generated
+	 */
+	EReference getYBindingSet_TransientBindings();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.binding.YBindingEndpoint <em>YBinding Endpoint</em>}'.
@@ -1442,6 +1579,14 @@ public interface BindingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference YBINDING_SET__BINDINGS = eINSTANCE.getYBindingSet_Bindings();
+
+		/**
+		 * The meta object literal for the '<em><b>Transient Bindings</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YBINDING_SET__TRANSIENT_BINDINGS = eINSTANCE.getYBindingSet_TransientBindings();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.binding.impl.YBindingEndpointImpl <em>YBinding Endpoint</em>}' class.

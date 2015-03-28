@@ -102,6 +102,15 @@ public interface DatatypesPackage extends EPackage {
 	int YDT_BASE__TAGS = CoreModelPackage.YELEMENT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDT_BASE__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -155,6 +164,15 @@ public interface DatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDATATYPE__TAGS = YDT_BASE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDATATYPE__PROPERTIES = YDT_BASE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -219,6 +237,15 @@ public interface DatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDATADESCRIPTION__TAGS = YDT_BASE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDATADESCRIPTION__PROPERTIES = YDT_BASE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.

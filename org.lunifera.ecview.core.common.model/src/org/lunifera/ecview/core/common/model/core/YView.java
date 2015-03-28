@@ -31,6 +31,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getDeviceType <em>Device Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getContentAlignment <em>Content Alignment</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getVisibilityProcessors <em>Visibility Processors</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getTransientVisibilityProcessors <em>Transient Visibility Processors</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getExposedActions <em>Exposed Actions</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getSharedStateGroup <em>Shared State Group</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getCategory <em>Category</em>}</li>
@@ -260,6 +261,22 @@ public interface YView extends YElement, YCssAble, YMarginable {
 	 * @generated
 	 */
 	EList<YVisibilityProcessor> getVisibilityProcessors();
+
+	/**
+	 * Returns the value of the '<em><b>Transient Visibility Processors</b></em>' reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Transient Visibility Processors</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transient Visibility Processors</em>' reference list.
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_TransientVisibilityProcessors()
+	 * @model transient="true"
+	 * @generated
+	 */
+	EList<YVisibilityProcessor> getTransientVisibilityProcessors();
 
 	/**
 	 * Returns the value of the '<em><b>Exposed Actions</b></em>' containment reference list.

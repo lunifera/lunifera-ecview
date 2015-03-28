@@ -281,6 +281,9 @@ public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
 
 	@Override
 	public Object render(Object parentWidget) {
+		if (getPresentation() == null) {
+			throw new IllegalStateException("No presentation for " + getModel());
+		}
 		return getPresentation().createWidget(parentWidget);
 	}
 

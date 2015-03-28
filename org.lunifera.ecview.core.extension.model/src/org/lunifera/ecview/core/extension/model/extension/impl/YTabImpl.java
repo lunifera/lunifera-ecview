@@ -6,17 +6,22 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 import org.lunifera.ecview.core.common.model.datatypes.DatatypesFactory;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
@@ -32,6 +37,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getParent <em>Parent</em>}</li>
@@ -88,6 +94,15 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 	 * @ordered
 	 */
 	protected EList<String> tags;
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 	/**
 	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -206,6 +221,18 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 			tags = new EDataTypeUniqueEList<String>(String.class, this, ExtensionModelPackage.YTAB__TAGS);
 		}
 		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, ExtensionModelPackage.YTAB__PROPERTIES);
+		}
+		return properties;
 	}
 
 	/**
@@ -446,6 +473,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ExtensionModelPackage.YTAB__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case ExtensionModelPackage.YTAB__PARENT:
 				return basicSetParent(null, msgs);
 			case ExtensionModelPackage.YTAB__EMBEDDABLE:
@@ -481,6 +510,9 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 				return getName();
 			case ExtensionModelPackage.YTAB__TAGS:
 				return getTags();
+			case ExtensionModelPackage.YTAB__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				return getCssClass();
 			case ExtensionModelPackage.YTAB__CSS_ID:
@@ -515,6 +547,9 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 			case ExtensionModelPackage.YTAB__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case ExtensionModelPackage.YTAB__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				setCssClass((String)newValue);
@@ -551,6 +586,9 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 			case ExtensionModelPackage.YTAB__TAGS:
 				getTags().clear();
 				return;
+			case ExtensionModelPackage.YTAB__PROPERTIES:
+				getProperties().clear();
+				return;
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				setCssClass(CSS_CLASS_EDEFAULT);
 				return;
@@ -583,6 +621,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ExtensionModelPackage.YTAB__TAGS:
 				return tags != null && !tags.isEmpty();
+			case ExtensionModelPackage.YTAB__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case ExtensionModelPackage.YTAB__CSS_CLASS:
 				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
 			case ExtensionModelPackage.YTAB__CSS_ID:

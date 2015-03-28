@@ -5,6 +5,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//YStringToStringMap" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YStringToStringMap" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YLayout" eSuperTypes="#//YEmbeddable #//YEditable #//YEnable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
@@ -44,6 +52,9 @@
         defaultValueLiteral="FILL_FILL"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="visibilityProcessors" upperBound="-1"
         eType="ecore:EClass visibility.ecore#//YVisibilityProcessor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transientVisibilityProcessors"
+        upperBound="-1" eType="ecore:EClass visibility.ecore#//YVisibilityProcessor"
+        transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exposedActions" upperBound="-1"
         eType="#//YExposedAction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sharedStateGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -263,6 +274,8 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
         eType="#//YCommand" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transientCommands" upperBound="-1"
+        eType="#//YCommand" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YOpenDialogCommand" eSuperTypes="#//YCommand">
     <eOperations name="getView" eType="#//YView"/>

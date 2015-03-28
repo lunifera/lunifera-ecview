@@ -63,6 +63,29 @@ public interface IBindingSetEditpart extends IElementEditpart {
 	 * @param binding
 	 */
 	void removeBinding(IBindingEditpart<?> binding);
+	
+	/**
+	 * Returns a list of all available transient bindings.
+	 * 
+	 * @return
+	 */
+	List<IBindingEditpart<?>> getTransientBindings();
+
+	/**
+	 * Adds the given binding to the list of transient bindings. Adding a binding will
+	 * bind the contained values if not done so.
+	 * 
+	 * @param binding
+	 */
+	void addTransientBinding(IBindingEditpart<?> binding);
+
+	/**
+	 * Removes the given binding from the list of transient bindings. Removing a binding
+	 * will unbind the contained values.
+	 * 
+	 * @param binding
+	 */
+	void removeTransientBinding(IBindingEditpart<?> binding);
 
 	/**
 	 * Returns the binding manager that should be used to bind values.

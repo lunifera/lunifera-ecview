@@ -11,7 +11,6 @@
 package org.lunifera.ecview.core.databinding.beans.context;
 
 import java.beans.PropertyChangeListener;
-import java.lang.reflect.Method;
 import java.net.URI;
 
 import org.eclipse.core.databinding.beans.BeanProperties;
@@ -25,8 +24,13 @@ import org.lunifera.ecview.core.common.binding.observables.ContextBindingDelegat
 import org.lunifera.ecview.core.common.uri.AccessibleScope;
 import org.lunifera.ecview.core.common.uri.BeanScope;
 import org.lunifera.ecview.core.common.uri.URIHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ContextBeanBindingDelegate extends ContextBindingDelegate {
+
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(ContextBeanBindingDelegate.class);
 
 	/**
 	 * {@inheritDoc}
@@ -55,14 +59,13 @@ public class ContextBeanBindingDelegate extends ContextBindingDelegate {
 	 * @return
 	 */
 	protected boolean hasPropertyChangeSupport(Class<?> valueType) {
-		if(valueType == null){
+		if (valueType == null) {
 			return false;
 		}
 		try {
 			try {
-				valueType.getMethod("addPropertyChangeListener",
-						new Class[] { String.class,
-								PropertyChangeListener.class });
+				valueType.getMethod("addPropertyChangeListener", new Class[] {
+						String.class, PropertyChangeListener.class });
 				return true;
 			} catch (NoSuchMethodException e) {
 				valueType.getMethod("addPropertyChangeListener",
@@ -70,7 +73,12 @@ public class ContextBeanBindingDelegate extends ContextBindingDelegate {
 				return true;
 			}
 		} catch (SecurityException e) {
+			LOGGER.error("{}", e);
+			throw new IllegalStateException(e);
 		} catch (NoSuchMethodException e) {
+		} catch (Throwable e) {
+			LOGGER.error("{}", e);
+			throw new IllegalStateException(e);
 		}
 		return false;
 	}

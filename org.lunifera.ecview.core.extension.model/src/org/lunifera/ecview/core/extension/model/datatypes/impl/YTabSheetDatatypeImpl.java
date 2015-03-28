@@ -4,12 +4,20 @@ package org.lunifera.ecview.core.extension.model.datatypes.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 import org.lunifera.ecview.core.extension.model.datatypes.ExtDatatypesPackage;
 import org.lunifera.ecview.core.extension.model.datatypes.YTabSheetDatatype;
@@ -24,6 +32,7 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTabSheetDatatype;
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTabSheetDatatypeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTabSheetDatatypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTabSheetDatatypeImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTabSheetDatatypeImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTabSheetDatatypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.datatypes.impl.YTabSheetDatatypeImpl#getValidators <em>Validators</em>}</li>
  * </ul>
@@ -81,6 +90,16 @@ public class YTabSheetDatatypeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -190,6 +209,18 @@ public class YTabSheetDatatypeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, ExtDatatypesPackage.YTAB_SHEET_DATATYPE__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getDescription() {
 		return description;
 	}
@@ -224,6 +255,20 @@ public class YTabSheetDatatypeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__ID:
@@ -232,6 +277,9 @@ public class YTabSheetDatatypeImpl extends MinimalEObjectImpl.Container implemen
 				return getName();
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__TAGS:
 				return getTags();
+			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__DESCRIPTION:
 				return getDescription();
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__VALIDATORS:
@@ -258,6 +306,9 @@ public class YTabSheetDatatypeImpl extends MinimalEObjectImpl.Container implemen
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__DESCRIPTION:
 				setDescription((String)newValue);
@@ -287,6 +338,9 @@ public class YTabSheetDatatypeImpl extends MinimalEObjectImpl.Container implemen
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__TAGS:
 				getTags().clear();
 				return;
+			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__PROPERTIES:
+				getProperties().clear();
+				return;
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -311,6 +365,8 @@ public class YTabSheetDatatypeImpl extends MinimalEObjectImpl.Container implemen
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__TAGS:
 				return tags != null && !tags.isEmpty();
+			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ExtDatatypesPackage.YTAB_SHEET_DATATYPE__VALIDATORS:

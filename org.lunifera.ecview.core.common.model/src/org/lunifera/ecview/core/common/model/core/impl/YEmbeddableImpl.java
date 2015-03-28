@@ -15,6 +15,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
@@ -46,6 +48,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatatype;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl#isInitialVisible <em>Initial Visible</em>}</li>
@@ -103,6 +106,15 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected EList<String> tags;
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 	/**
 	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -257,6 +269,18 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YEMBEDDABLE__TAGS);
 		}
 		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, CoreModelPackage.YEMBEDDABLE__PROPERTIES);
+		}
+		return properties;
 	}
 
 	/**
@@ -421,6 +445,8 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case CoreModelPackage.YEMBEDDABLE__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATATYPES:
 				return ((InternalEList<?>)getOrphanDatatypes()).basicRemove(otherEnd, msgs);
 			case CoreModelPackage.YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS:
@@ -442,6 +468,9 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return getName();
 			case CoreModelPackage.YEMBEDDABLE__TAGS:
 				return getTags();
+			case CoreModelPackage.YEMBEDDABLE__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				return getCssClass();
 			case CoreModelPackage.YEMBEDDABLE__CSS_ID:
@@ -475,6 +504,9 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 			case CoreModelPackage.YEMBEDDABLE__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case CoreModelPackage.YEMBEDDABLE__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				setCssClass((String)newValue);
@@ -516,6 +548,9 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 			case CoreModelPackage.YEMBEDDABLE__TAGS:
 				getTags().clear();
 				return;
+			case CoreModelPackage.YEMBEDDABLE__PROPERTIES:
+				getProperties().clear();
+				return;
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				setCssClass(CSS_CLASS_EDEFAULT);
 				return;
@@ -551,6 +586,8 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CoreModelPackage.YEMBEDDABLE__TAGS:
 				return tags != null && !tags.isEmpty();
+			case CoreModelPackage.YEMBEDDABLE__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case CoreModelPackage.YEMBEDDABLE__CSS_CLASS:
 				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
 			case CoreModelPackage.YEMBEDDABLE__CSS_ID:
@@ -669,5 +706,5 @@ public abstract class YEmbeddableImpl extends MinimalEObjectImpl.Container
 				.add((EStructuralFeature) CoreModelPackage.Literals.YCSS_ABLE__CSS_CLASS);
 		return endpoint;
 	}
-
+	
 } // YUiEmbeddableImpl

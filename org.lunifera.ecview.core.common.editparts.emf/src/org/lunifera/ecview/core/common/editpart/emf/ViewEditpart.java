@@ -79,6 +79,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	private ICommandSetEditpart commandSet;
 	private Set<IDialogEditpart> openDialogs;
 	private List<IVisibilityProcessorEditpart> vProcessorEditparts;
+	private List<IVisibilityProcessorEditpart> transientVProcessorEditparts;
 	private List<IExposedActionEditpart> exposedActionEditparts;
 
 	/**
@@ -163,7 +164,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		renderCommands(options);
 
 		// render the visibility processor
-		renderVisibilityProcessor(options);
+		activateVisibilityProcessor(options);
 
 		if (configuration != null) {
 			configuration.afterBind(getContext());
@@ -283,18 +284,17 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	}
 
 	/**
-	 * Renders the visibility processor of that view.
+	 * Activates the visibility processor of that view.
 	 * 
 	 * @param options
 	 * @throws ContextException
 	 */
-	protected void renderVisibilityProcessor(Map<String, Object> options)
+	protected void activateVisibilityProcessor(Map<String, Object> options)
 			throws ContextException {
 		checkDisposed();
-
-		for (IVisibilityProcessorEditpart editpart : getVisibilityProcessors()) {
-			editpart.activate();
-		}
+		
+		getVisibilityProcessors();
+		getTransientVisibilityProcessors();
 	}
 
 	@Override
@@ -465,7 +465,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		checkDisposed();
 
 		if (bindingSet == null) {
-			YBindingSet yBindingSet = getModel().getBindingSet();
+			YBindingSet yBindingSet = getModel().getOrCreateBindingSet();
 			internalSetBindingSet((IBindingSetEditpart) getEditpart(yBindingSet));
 		}
 	}
@@ -604,17 +604,13 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 					.getNewValue();
 			IBindingSetEditpart bsEditPart = (IBindingSetEditpart) getEditpart(yNewBindingSet);
 			internalSetBindingSet(bsEditPart);
-
-			// fire event
-			// firePropertyChangedEditpart(PROP_CONTENT, notification);
+			break;
 		case CoreModelPackage.YVIEW__COMMAND_SET:
 			YCommandSet yNewCommandSet = (YCommandSet) notification
 					.getNewValue();
 			ICommandSetEditpart csEditPart = (ICommandSetEditpart) getEditpart(yNewCommandSet);
 			internalSetCommandSet(csEditPart);
-
-			// fire event
-			// firePropertyChangedEditpart(PROP_CONTENT, notification);
+			break;
 		default:
 			break;
 		}
@@ -633,6 +629,10 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			YVisibilityProcessor yElement = (YVisibilityProcessor) notification
 					.getNewValue();
 			internalAddVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
+			break;
+		case CoreModelPackage.YVIEW__TRANSIENT_VISIBILITY_PROCESSORS:
+			yElement = (YVisibilityProcessor) notification.getNewValue();
+			internalAddTransientVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
 			break;
 		case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 			YExposedAction yAction = (YExposedAction) notification
@@ -653,12 +653,16 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			throw new IllegalStateException("Viewslots must not be removed!");
 		case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 			YVisibilityProcessor yElement = (YVisibilityProcessor) notification
-					.getNewValue();
+					.getOldValue();
 			internalRemoveVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
+			break;
+		case CoreModelPackage.YVIEW__TRANSIENT_VISIBILITY_PROCESSORS:
+			yElement = (YVisibilityProcessor) notification.getOldValue();
+			internalRemoveTransientVisibilityProcessor((IVisibilityProcessorEditpart) getEditpart(yElement));
 			break;
 		case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 			YExposedAction yAction = (YExposedAction) notification
-					.getNewValue();
+					.getOldValue();
 			internalRemoveExposedAction((IExposedActionEditpart) getEditpart(yAction));
 			break;
 		default:
@@ -683,6 +687,13 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			internalLoadVisibilityProcessors();
 		}
 		return Collections.unmodifiableList(vProcessorEditparts);
+	}
+
+	public List<IVisibilityProcessorEditpart> getTransientVisibilityProcessors() {
+		if (transientVProcessorEditparts == null) {
+			internalLoadTransientVisibilityProcessors();
+		}
+		return Collections.unmodifiableList(transientVProcessorEditparts);
 	}
 
 	public void addVisibilityProcessor(IVisibilityProcessorEditpart element) {
@@ -737,6 +748,29 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 		}
 		if (!vProcessorEditparts.contains(editpart)) {
 			vProcessorEditparts.add(editpart);
+
+			editpart.activate();
+		}
+	}
+
+	/**
+	 * Is called to change the internal state and add the given editpart to the
+	 * list of transientVProcessors.
+	 * 
+	 * @param editpart
+	 *            The editpart to be added
+	 */
+	protected void internalAddTransientVisibilityProcessor(
+			IVisibilityProcessorEditpart editpart) {
+		checkDisposed();
+
+		if (transientVProcessorEditparts == null) {
+			internalLoadTransientVisibilityProcessors();
+		}
+		if (!transientVProcessorEditparts.contains(editpart)) {
+			transientVProcessorEditparts.add(editpart);
+
+			editpart.activate();
 		}
 	}
 
@@ -753,6 +787,26 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 
 		if (vProcessorEditparts != null && editpart != null) {
 			vProcessorEditparts.remove(editpart);
+			
+			editpart.dispose();
+		}
+	}
+
+	/**
+	 * Is called to change the internal state and remove the given editpart from
+	 * the list of transient processors.
+	 * 
+	 * @param editpart
+	 *            The editpart to be removed
+	 */
+	protected void internalRemoveTransientVisibilityProcessor(
+			IVisibilityProcessorEditpart editpart) {
+		checkDisposed();
+
+		if (transientVProcessorEditparts != null && editpart != null) {
+			transientVProcessorEditparts.remove(editpart);
+			
+			editpart.dispose();
 		}
 	}
 
@@ -768,6 +822,22 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 					.getVisibilityProcessors()) {
 				IVisibilityProcessorEditpart editPart = getEditpart(yVisibilityProcessor);
 				internalAddVisibilityProcessor(editPart);
+			}
+		}
+	}
+
+	/**
+	 * Is called to load and initialize all transientVProcessors.
+	 */
+	protected void internalLoadTransientVisibilityProcessors() {
+		checkDisposed();
+
+		if (transientVProcessorEditparts == null) {
+			transientVProcessorEditparts = new ArrayList<IVisibilityProcessorEditpart>();
+			for (YVisibilityProcessor yVisibilityProcessor : getModel()
+					.getTransientVisibilityProcessors()) {
+				IVisibilityProcessorEditpart editPart = getEditpart(yVisibilityProcessor);
+				internalAddTransientVisibilityProcessor(editPart);
 			}
 		}
 	}
@@ -934,6 +1004,11 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 				editpart.dispose();
 			}
 			vProcessorEditparts = null;
+
+			for (IVisibilityProcessorEditpart editpart : getTransientVisibilityProcessors()) {
+				editpart.dispose();
+			}
+			transientVProcessorEditparts = null;
 
 		} finally {
 			super.internalDispose();

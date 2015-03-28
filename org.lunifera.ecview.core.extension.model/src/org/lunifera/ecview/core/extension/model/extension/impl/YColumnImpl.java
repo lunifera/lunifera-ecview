@@ -6,14 +6,19 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 import org.lunifera.ecview.core.common.model.datatypes.DatatypesFactory;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
@@ -28,6 +33,7 @@ import org.lunifera.ecview.core.extension.model.extension.YColumn;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YColumnImpl#getDatadescription <em>Datadescription</em>}</li>
@@ -92,6 +98,16 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The default value of the '{@link #getIcon() <em>Icon</em>}' attribute.
@@ -328,6 +344,18 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, ExtensionModelPackage.YCOLUMN__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -536,6 +564,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ExtensionModelPackage.YCOLUMN__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case ExtensionModelPackage.YCOLUMN__ORPHAN_DATADESCRIPTIONS:
 				return ((InternalEList<?>)getOrphanDatadescriptions()).basicRemove(otherEnd, msgs);
 		}
@@ -555,6 +585,9 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 				return getName();
 			case ExtensionModelPackage.YCOLUMN__TAGS:
 				return getTags();
+			case ExtensionModelPackage.YCOLUMN__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				return getIcon();
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:
@@ -597,6 +630,9 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 			case ExtensionModelPackage.YCOLUMN__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case ExtensionModelPackage.YCOLUMN__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				setIcon((String)newValue);
@@ -649,6 +685,9 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 			case ExtensionModelPackage.YCOLUMN__TAGS:
 				getTags().clear();
 				return;
+			case ExtensionModelPackage.YCOLUMN__PROPERTIES:
+				getProperties().clear();
+				return;
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				setIcon(ICON_EDEFAULT);
 				return;
@@ -696,6 +735,8 @@ public class YColumnImpl extends MinimalEObjectImpl.Container implements
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ExtensionModelPackage.YCOLUMN__TAGS:
 				return tags != null && !tags.isEmpty();
+			case ExtensionModelPackage.YCOLUMN__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case ExtensionModelPackage.YCOLUMN__ICON:
 				return ICON_EDEFAULT == null ? icon != null : !ICON_EDEFAULT.equals(icon);
 			case ExtensionModelPackage.YCOLUMN__VISIBLE:

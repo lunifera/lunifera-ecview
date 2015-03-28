@@ -42,6 +42,7 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 			.getLogger(BindingSetEditpart.class);
 	private boolean active;
 	private List<IBindingEditpart<?>> bindings;
+	private List<IBindingEditpart<?>> transientBindings;
 	private IECViewBindingManager bindingManager;
 
 	/**
@@ -73,8 +74,6 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 			if (bindingManager != null) {
 				return bindingManager;
 			}
-			// TODO: IBindingManager is UIKit specific. Search for a way later
-			// to make binding independent
 			throw new IllegalArgumentException(
 					"View and BindingManager must not be null for now!");
 		} else {
@@ -105,6 +104,10 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 
 		try {
 			for (IBindingEditpart<?> binding : getBindings()) {
+				binding.bind();
+			}
+
+			for (IBindingEditpart<?> binding : getTransientBindings()) {
 				binding.bind();
 			}
 		} finally {
@@ -149,6 +152,44 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 		}
 
 	}
+	
+	@Override
+	public void addTransientBinding(IBindingEditpart<?> binding) {
+		try {
+			checkDisposed();
+
+			// add the element by using the model
+			//
+			YBindingSet yBindingSet = getModel();
+			YBinding yBinding = (YBinding) binding.getModel();
+			yBindingSet.getTransientBindings().add(yBinding);
+
+			// BEGIN SUPRESS CATCH EXCEPTION
+		} catch (RuntimeException e) {
+			// END SUPRESS CATCH EXCEPTION
+			LOGGER.error("{}", e);
+			throw e;
+		}
+	}
+
+	@Override
+	public void removeTransientBinding(IBindingEditpart<?> binding) {
+		try {
+			checkDisposed();
+
+			// remove the element by using the model
+			//
+			YBindingSet yBindingSet = getModel();
+			YBinding yBinding = (YBinding) binding.getModel();
+			yBindingSet.getTransientBindings().remove(yBinding);
+			// BEGIN SUPRESS CATCH EXCEPTION
+		} catch (RuntimeException e) {
+			// END SUPRESS CATCH EXCEPTION
+			LOGGER.error("{}", e);
+			throw e;
+		}
+
+	}
 
 	@Override
 	protected void handleModelAdd(int featureId, Notification notification) {
@@ -161,10 +202,15 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 			IBindingEditpart<?> editPart = (IBindingEditpart<?>) getEditpart(yBinding);
 			internalAddBinding(editPart);
 			break;
+		case BindingPackage.YBINDING_SET__TRANSIENT_BINDINGS:
+			yBinding = (YBinding) notification.getNewValue();
+
+			editPart = (IBindingEditpart<?>) getEditpart(yBinding);
+			internalAddTransientBinding(editPart);
+			break;
 		default:
 			break;
 		}
-
 	}
 
 	/**
@@ -186,6 +232,24 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 		}
 	}
 
+	/**
+	 * Is called to change the internal state and add the given editpart to the
+	 * list of transientBindings.
+	 * 
+	 * @param binding
+	 *            The editpart to be added
+	 */
+	protected void internalAddTransientBinding(IBindingEditpart<?> binding) {
+		checkDisposed();
+		ensureBindingsLoaded();
+		if (!transientBindings.contains(binding)) {
+			transientBindings.add(binding);
+
+			// activates the binding
+			binding.bind();
+		}
+	}
+
 	@Override
 	protected void handleModelRemove(int featureId, Notification notification) {
 		checkDisposed();
@@ -196,6 +260,12 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 
 			IBindingEditpart<?> editPart = (IBindingEditpart<?>) getEditpart(yBinding);
 			internalRemoveBinding(editPart);
+			break;
+		case BindingPackage.YBINDING_SET__TRANSIENT_BINDINGS:
+			yBinding = (YBinding) notification.getOldValue();
+
+			editPart = (IBindingEditpart<?>) getEditpart(yBinding);
+			internalRemoveTransientBinding(editPart);
 			break;
 		default:
 			break;
@@ -227,6 +297,30 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 	}
 
 	/**
+	 * Ensures that the internal transientBindings are loaded properly.
+	 */
+	private void ensureTransientBindingsLoaded() {
+		if (transientBindings == null) {
+			internalLoadTransientBindings();
+		}
+	}
+
+	/**
+	 * Is called to load and initialize all transientBindings.
+	 */
+	protected void internalLoadTransientBindings() {
+		checkDisposed();
+
+		if (transientBindings == null) {
+			transientBindings = new ArrayList<IBindingEditpart<?>>();
+			for (YBinding yBinding : getModel().getTransientBindings()) {
+				IBindingEditpart<?> editPart = getEditpart(yBinding);
+				internalAddTransientBinding(editPart);
+			}
+		}
+	}
+
+	/**
 	 * Is called to change the internal state and remove the given editpart from
 	 * the list of bindings.
 	 * 
@@ -245,10 +339,34 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 		binding.dispose();
 	}
 
+	/**
+	 * Is called to change the internal state and remove the given editpart from
+	 * the list of transientBindings.
+	 * 
+	 * @param binding
+	 *            The editpart to be removed
+	 */
+	protected void internalRemoveTransientBinding(IBindingEditpart<?> binding) {
+		checkDisposed();
+
+		if (transientBindings != null && binding != null) {
+			transientBindings.remove(binding);
+		}
+
+		// unbinds the binding
+		binding.unbind();
+		binding.dispose();
+	}
+
 	@Override
 	public List<IBindingEditpart<?>> getBindings() {
 		ensureBindingsLoaded();
 		return new ArrayList<IBindingEditpart<?>>(bindings);
+	}
+
+	public List<IBindingEditpart<?>> getTransientBindings() {
+		ensureTransientBindingsLoaded();
+		return new ArrayList<IBindingEditpart<?>>(transientBindings);
 	}
 
 	@Override
@@ -260,12 +378,26 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 				List<IBindingEditpart<?>> tempElements = getBindings();
 				synchronized (bindings) {
 					for (IBindingEditpart<?> binding : tempElements
-							.toArray(new IBindingEditpart<?>[tempElements.size()])) {
+							.toArray(new IBindingEditpart<?>[tempElements
+									.size()])) {
 						binding.dispose();
 					}
 				}
-				bindings = null;
 			}
+			bindings = null;
+
+			if (transientBindings != null
+					|| getModel().getTransientBindings().size() > 0) {
+				List<IBindingEditpart<?>> tempElements = getTransientBindings();
+				synchronized (transientBindings) {
+					for (IBindingEditpart<?> binding : tempElements
+							.toArray(new IBindingEditpart<?>[tempElements
+									.size()])) {
+						binding.dispose();
+					}
+				}
+			}
+			transientBindings = null;
 		} finally {
 			super.internalDispose();
 		}
@@ -280,6 +412,13 @@ public class BindingSetEditpart extends ElementEditpart<YBindingSet> implements
 		List<IBindingEditpart<?>> result = new ArrayList<IBindingEditpart<?>>();
 		YBindingSet yBindingSet = getModel();
 		for (YBinding yBinding : yBindingSet.getBindings()) {
+			if (yBinding.isBindsElement((YElement) elementModel)) {
+				result.add((IBindingEditpart<?>) DelegatingEditPartManager
+						.getInstance().getEditpart(yBinding));
+			}
+		}
+
+		for (YBinding yBinding : yBindingSet.getTransientBindings()) {
 			if (yBinding.isBindsElement((YElement) elementModel)) {
 				result.add((IBindingEditpart<?>) DelegatingEditPartManager
 						.getInstance().getEditpart(yBinding));

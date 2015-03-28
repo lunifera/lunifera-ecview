@@ -180,8 +180,6 @@ public class ValueBindingEditpart extends ElementEditpart<YValueBinding>
 
 	@Override
 	public boolean isBound() {
-		checkDisposed();
-
 		return bound;
 	}
 

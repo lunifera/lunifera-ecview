@@ -11,6 +11,7 @@
 package org.lunifera.ecview.core.common.model.core;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YElement#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YElement#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YElement#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YElement#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,4 +103,21 @@ public interface YElement extends EObject {
 	 * @generated
 	 */
 	EList<String> getTags();
+
+	/**
+	 * Returns the value of the '<em><b>Properties</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Properties</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Properties</em>' map.
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYElement_Properties()
+	 * @model mapType="org.lunifera.ecview.core.common.model.core.YStringToStringMap<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>"
+	 * @generated
+	 */
+	EMap<String, String> getProperties();
 } // YUiElement

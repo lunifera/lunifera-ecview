@@ -37,6 +37,7 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 			.getLogger(CommandSetEditpart.class);
 	private boolean active;
 	private List<ICommandEditpart> commands;
+	private List<ICommandEditpart> transientCommands;
 
 	/**
 	 * A default constructor.
@@ -72,8 +73,8 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 		checkDisposed();
 
 		try {
-			for (ICommandEditpart command : getCommands()) {
-			}
+			getCommands();
+			getTransientCommands();
 		} finally {
 			active = true;
 		}
@@ -128,6 +129,12 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 			ICommandEditpart editPart = (ICommandEditpart) getEditpart(yCommand);
 			internalAddCommand(editPart);
 			break;
+		case CoreModelPackage.YCOMMAND_SET__TRANSIENT_COMMANDS:
+			yCommand = (YCommand) notification.getNewValue();
+
+			editPart = (ICommandEditpart) getEditpart(yCommand);
+			internalAddTransientCommand(editPart);
+			break;
 		default:
 			break;
 		}
@@ -153,6 +160,25 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 		}
 	}
 
+	/**
+	 * Is called to change the internal state and add the given editpart to the
+	 * list of commands.
+	 * 
+	 * @param command
+	 *            The editpart to be added
+	 */
+	protected void internalAddTransientCommand(ICommandEditpart command) {
+		checkDisposed();
+
+		ensureTransientCommandsLoaded();
+		if (!transientCommands.contains(command)) {
+			transientCommands.add(command);
+
+			// activates the command
+			command.activate();
+		}
+	}
+
 	@Override
 	protected void handleModelRemove(int featureId, Notification notification) {
 		checkDisposed();
@@ -163,6 +189,12 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 
 			ICommandEditpart editPart = (ICommandEditpart) getEditpart(yCommand);
 			internalRemoveCommand(editPart);
+			break;
+		case CoreModelPackage.YCOMMAND_SET__TRANSIENT_COMMANDS:
+			yCommand = (YCommand) notification.getOldValue();
+
+			editPart = (ICommandEditpart) getEditpart(yCommand);
+			internalRemoveTransientCommand(editPart);
 			break;
 		default:
 			break;
@@ -217,6 +249,53 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 		return new ArrayList<ICommandEditpart>(commands);
 	}
 
+	/**
+	 * Ensures that the internal transientCommands are loaded properly.
+	 */
+	private void ensureTransientCommandsLoaded() {
+		if (transientCommands == null) {
+			internalLoadTransientCommands();
+		}
+	}
+
+	/**
+	 * Is called to load and initialize all transientCommands.
+	 */
+	protected void internalLoadTransientCommands() {
+		checkDisposed();
+
+		if (transientCommands == null) {
+			transientCommands = new ArrayList<ICommandEditpart>();
+			for (YCommand yCommand : getModel().getTransientCommands()) {
+				ICommandEditpart editPart = getEditpart(yCommand);
+				internalAddTransientCommand(editPart);
+			}
+		}
+	}
+
+	/**
+	 * Is called to change the internal state and remove the given editpart from
+	 * the list of transientCommands.
+	 * 
+	 * @param command
+	 *            The editpart to be removed
+	 */
+	protected void internalRemoveTransientCommand(ICommandEditpart command) {
+		checkDisposed();
+
+		if (transientCommands != null && command != null) {
+			transientCommands.remove(command);
+		}
+
+		// unbinds the command
+		command.dispose();
+	}
+
+	public List<ICommandEditpart> getTransientCommands() {
+		ensureTransientCommandsLoaded();
+		return new ArrayList<ICommandEditpart>(transientCommands);
+	}
+
 	@Override
 	protected void internalDispose() {
 		try {
@@ -230,8 +309,20 @@ public class CommandSetEditpart extends ElementEditpart<YCommandSet> implements
 						command.dispose();
 					}
 				}
-				commands = null;
 			}
+			commands = null;
+
+			if (transientCommands != null
+					|| getModel().getTransientCommands().size() > 0) {
+				List<ICommandEditpart> tempElements = getTransientCommands();
+				synchronized (transientCommands) {
+					for (ICommandEditpart command : tempElements
+							.toArray(new ICommandEditpart[tempElements.size()])) {
+						command.dispose();
+					}
+				}
+			}
+			transientCommands = null;
 		} finally {
 			super.internalDispose();
 		}

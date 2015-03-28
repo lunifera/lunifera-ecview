@@ -95,6 +95,15 @@ public interface VisibilityPackage extends EPackage {
 	int YVISIBILITY_PROCESSOR__TAGS = CoreModelPackage.YELEMENT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROCESSOR__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Data Used</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,6 +184,15 @@ public interface VisibilityPackage extends EPackage {
 	 * @ordered
 	 */
 	int YVISIBILITY_PROPERTIES__TAGS = CoreModelPackage.YELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROPERTIES__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.

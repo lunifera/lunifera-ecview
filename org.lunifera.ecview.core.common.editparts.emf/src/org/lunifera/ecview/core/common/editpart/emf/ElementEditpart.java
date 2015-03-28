@@ -512,7 +512,7 @@ public abstract class ElementEditpart<M extends YElement> extends AdapterImpl
 				internalDispose();
 			}
 		} finally {
-			disposed = false;
+			disposing = false;
 		}
 	}
 

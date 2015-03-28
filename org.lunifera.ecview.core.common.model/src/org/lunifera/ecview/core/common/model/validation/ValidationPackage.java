@@ -94,6 +94,15 @@ public interface ValidationPackage extends EPackage {
 	int YVALIDATOR__TAGS = CoreModelPackage.YELEMENT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVALIDATOR__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,6 +156,15 @@ public interface ValidationPackage extends EPackage {
 	 * @ordered
 	 */
 	int YMIN_LENGTH_VALIDATOR__TAGS = YVALIDATOR__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMIN_LENGTH_VALIDATOR__PROPERTIES = YVALIDATOR__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -231,6 +249,15 @@ public interface ValidationPackage extends EPackage {
 	int YMAX_LENGTH_VALIDATOR__TAGS = YVALIDATOR__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMAX_LENGTH_VALIDATOR__PROPERTIES = YVALIDATOR__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -311,6 +338,15 @@ public interface ValidationPackage extends EPackage {
 	 * @ordered
 	 */
 	int YREGEXP_VALIDATOR__TAGS = YVALIDATOR__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREGEXP_VALIDATOR__PROPERTIES = YVALIDATOR__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -395,6 +431,15 @@ public interface ValidationPackage extends EPackage {
 	int YCLASS_DELEGATE_VALIDATOR__TAGS = YVALIDATOR__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCLASS_DELEGATE_VALIDATOR__PROPERTIES = YVALIDATOR__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -475,6 +520,15 @@ public interface ValidationPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBEAN_VALIDATION_VALIDATOR__TAGS = YVALIDATOR__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_VALIDATION_VALIDATOR__PROPERTIES = YVALIDATOR__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.

@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.common.model.core.impl;
 
 import java.net.URI;
+import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -74,6 +75,7 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case CoreModelPackage.YSTRING_TO_STRING_MAP: return (EObject)createYStringToStringMap();
 			case CoreModelPackage.YLAYOUT: return createYLayout();
 			case CoreModelPackage.YFIELD: return createYField();
 			case CoreModelPackage.YVIEW: return createYView();
@@ -147,6 +149,16 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, String> createYStringToStringMap() {
+		YStringToStringMapImpl yStringToStringMap = new YStringToStringMapImpl();
+		return yStringToStringMap;
 	}
 
 	/**

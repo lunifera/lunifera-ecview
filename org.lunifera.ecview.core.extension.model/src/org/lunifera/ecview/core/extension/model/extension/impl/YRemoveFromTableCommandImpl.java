@@ -4,7 +4,9 @@ package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -12,10 +14,14 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YRemoveFromTableCommand;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
@@ -29,6 +35,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTable;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getTable <em>Table</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YRemoveFromTableCommandImpl#getTrigger <em>Trigger</em>}</li>
  * </ul>
@@ -85,6 +92,16 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The cached value of the '{@link #getTable() <em>Table</em>}' reference.
@@ -181,6 +198,18 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -248,6 +277,20 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 		return findViewGeneric(eContainer());
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
 	protected YView findViewGeneric(EObject container) {
 		if (container == null) {
 			return null;
@@ -275,6 +318,9 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 				return getName();
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TAGS:
 				return getTags();
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
 				if (resolve) return getTable();
 				return basicGetTable();
@@ -302,6 +348,9 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
 				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
+				return;
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
 				setTable((YTable)newValue);
 				return;
@@ -328,6 +377,9 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TAGS:
 				getTags().clear();
 				return;
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__PROPERTIES:
+				getProperties().clear();
+				return;
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
 				setTable((YTable)null);
 				return;
@@ -351,6 +403,8 @@ public class YRemoveFromTableCommandImpl extends MinimalEObjectImpl.Container
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TAGS:
 				return tags != null && !tags.isEmpty();
+			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TABLE:
 				return table != null;
 			case ExtensionModelPackage.YREMOVE_FROM_TABLE_COMMAND__TRIGGER:

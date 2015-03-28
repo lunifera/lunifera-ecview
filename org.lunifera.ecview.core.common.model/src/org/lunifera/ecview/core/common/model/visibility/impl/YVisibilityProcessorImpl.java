@@ -6,14 +6,19 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
 
@@ -27,6 +32,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getDataUsed <em>Data Used</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getTriggersOn <em>Triggers On</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityProcessorImpl#getDelegate <em>Delegate</em>}</li>
@@ -86,6 +92,16 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The cached value of the '{@link #getDataUsed() <em>Data Used</em>}' containment reference list.
@@ -215,6 +231,18 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, VisibilityPackage.YVISIBILITY_PROCESSOR__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<YBinding> getDataUsed() {
 		if (dataUsed == null) {
 			dataUsed = new EObjectContainmentEList.Resolving<YBinding>(YBinding.class, this, VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED);
@@ -284,6 +312,8 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				return ((InternalEList<?>)getDataUsed()).basicRemove(otherEnd, msgs);
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
@@ -306,6 +336,9 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 				return getName();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
 				return getTags();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				return getDataUsed();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:
@@ -336,6 +369,9 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				getDataUsed().clear();
@@ -372,6 +408,9 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
 				getTags().clear();
 				return;
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__PROPERTIES:
+				getProperties().clear();
+				return;
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				getDataUsed().clear();
 				return;
@@ -402,6 +441,8 @@ public class YVisibilityProcessorImpl extends MinimalEObjectImpl.Container imple
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TAGS:
 				return tags != null && !tags.isEmpty();
+			case VisibilityPackage.YVISIBILITY_PROCESSOR__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__DATA_USED:
 				return dataUsed != null && !dataUsed.isEmpty();
 			case VisibilityPackage.YVISIBILITY_PROCESSOR__TRIGGERS_ON:

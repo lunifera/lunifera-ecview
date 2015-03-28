@@ -32,6 +32,8 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bindings" upperBound="-1"
         eType="#//YBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transientBindings" upperBound="-1"
+        eType="#//YBinding" transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YBindingEndpoint" abstract="true" eSuperTypes="core.ecore#//YElement">
     <eOperations name="getBinding" eType="#//YBinding"/>

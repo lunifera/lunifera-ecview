@@ -14,12 +14,16 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YBindingSet;
@@ -47,6 +51,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#isMargin <em>Margin</em>}</li>
@@ -60,6 +65,7 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getDeviceType <em>Device Type</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getContentAlignment <em>Content Alignment</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getVisibilityProcessors <em>Visibility Processors</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getTransientVisibilityProcessors <em>Transient Visibility Processors</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getExposedActions <em>Exposed Actions</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getSharedStateGroup <em>Shared State Group</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCategory <em>Category</em>}</li>
@@ -116,6 +122,16 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
@@ -296,6 +312,16 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	protected EList<YVisibilityProcessor> visibilityProcessors;
 
 	/**
+	 * The cached value of the '{@link #getTransientVisibilityProcessors() <em>Transient Visibility Processors</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTransientVisibilityProcessors()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<YVisibilityProcessor> transientVisibilityProcessors;
+
+	/**
 	 * The cached value of the '{@link #getExposedActions() <em>Exposed Actions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -410,6 +436,18 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			tags = new EDataTypeUniqueEList<String>(String.class, this, CoreModelPackage.YVIEW__TAGS);
 		}
 		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, CoreModelPackage.YVIEW__PROPERTIES);
+		}
+		return properties;
 	}
 
 	/**
@@ -752,6 +790,18 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<YVisibilityProcessor> getTransientVisibilityProcessors() {
+		if (transientVisibilityProcessors == null) {
+			transientVisibilityProcessors = new EObjectResolvingEList<YVisibilityProcessor>(YVisibilityProcessor.class, this, CoreModelPackage.YVIEW__TRANSIENT_VISIBILITY_PROCESSORS);
+		}
+		return transientVisibilityProcessors;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<YExposedAction> getExposedActions() {
 		if (exposedActions == null) {
 			exposedActions = new EObjectContainmentEList.Resolving<YExposedAction>(YExposedAction.class, this, CoreModelPackage.YVIEW__EXPOSED_ACTIONS);
@@ -955,6 +1005,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case CoreModelPackage.YVIEW__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case CoreModelPackage.YVIEW__ROOT:
 				return basicSetRoot(null, msgs);
 			case CoreModelPackage.YVIEW__CONTENT:
@@ -988,6 +1040,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getName();
 			case CoreModelPackage.YVIEW__TAGS:
 				return getTags();
+			case CoreModelPackage.YVIEW__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				return getCssClass();
 			case CoreModelPackage.YVIEW__CSS_ID:
@@ -1018,6 +1073,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getContentAlignment();
 			case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 				return getVisibilityProcessors();
+			case CoreModelPackage.YVIEW__TRANSIENT_VISIBILITY_PROCESSORS:
+				return getTransientVisibilityProcessors();
 			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 				return getExposedActions();
 			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:
@@ -1045,6 +1102,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case CoreModelPackage.YVIEW__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				setCssClass((String)newValue);
@@ -1088,6 +1148,10 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				getVisibilityProcessors().clear();
 				getVisibilityProcessors().addAll((Collection<? extends YVisibilityProcessor>)newValue);
 				return;
+			case CoreModelPackage.YVIEW__TRANSIENT_VISIBILITY_PROCESSORS:
+				getTransientVisibilityProcessors().clear();
+				getTransientVisibilityProcessors().addAll((Collection<? extends YVisibilityProcessor>)newValue);
+				return;
 			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 				getExposedActions().clear();
 				getExposedActions().addAll((Collection<? extends YExposedAction>)newValue);
@@ -1117,6 +1181,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return;
 			case CoreModelPackage.YVIEW__TAGS:
 				getTags().clear();
+				return;
+			case CoreModelPackage.YVIEW__PROPERTIES:
+				getProperties().clear();
 				return;
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				setCssClass(CSS_CLASS_EDEFAULT);
@@ -1157,6 +1224,9 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 				getVisibilityProcessors().clear();
 				return;
+			case CoreModelPackage.YVIEW__TRANSIENT_VISIBILITY_PROCESSORS:
+				getTransientVisibilityProcessors().clear();
+				return;
 			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 				getExposedActions().clear();
 				return;
@@ -1183,6 +1253,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CoreModelPackage.YVIEW__TAGS:
 				return tags != null && !tags.isEmpty();
+			case CoreModelPackage.YVIEW__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case CoreModelPackage.YVIEW__CSS_CLASS:
 				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
 			case CoreModelPackage.YVIEW__CSS_ID:
@@ -1209,6 +1281,8 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return contentAlignment != CONTENT_ALIGNMENT_EDEFAULT;
 			case CoreModelPackage.YVIEW__VISIBILITY_PROCESSORS:
 				return visibilityProcessors != null && !visibilityProcessors.isEmpty();
+			case CoreModelPackage.YVIEW__TRANSIENT_VISIBILITY_PROCESSORS:
+				return transientVisibilityProcessors != null && !transientVisibilityProcessors.isEmpty();
 			case CoreModelPackage.YVIEW__EXPOSED_ACTIONS:
 				return exposedActions != null && !exposedActions.isEmpty();
 			case CoreModelPackage.YVIEW__SHARED_STATE_GROUP:

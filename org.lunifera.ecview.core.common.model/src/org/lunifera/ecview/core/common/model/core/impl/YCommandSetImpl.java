@@ -7,12 +7,16 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YCommand;
@@ -28,7 +32,9 @@ import org.lunifera.ecview.core.common.model.core.YView;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getCommands <em>Commands</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YCommandSetImpl#getTransientCommands <em>Transient Commands</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,6 +91,16 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 	protected EList<String> tags;
 
 	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
+
+	/**
 	 * The cached value of the '{@link #getCommands() <em>Commands</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getCommands()
@@ -92,6 +108,16 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<YCommand> commands;
+
+	/**
+	 * The cached value of the '{@link #getTransientCommands() <em>Transient Commands</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTransientCommands()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<YCommand> transientCommands;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -161,6 +187,18 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, CoreModelPackage.YCOMMAND_SET__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -169,6 +207,18 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 			commands = new EObjectContainmentEList.Resolving<YCommand>(YCommand.class, this, CoreModelPackage.YCOMMAND_SET__COMMANDS);
 		}
 		return commands;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<YCommand> getTransientCommands() {
+		if (transientCommands == null) {
+			transientCommands = new EObjectResolvingEList<YCommand>(YCommand.class, this, CoreModelPackage.YCOMMAND_SET__TRANSIENT_COMMANDS);
+		}
+		return transientCommands;
 	}
 
 	/**
@@ -217,6 +267,8 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case CoreModelPackage.YCOMMAND_SET__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				return ((InternalEList<?>)getCommands()).basicRemove(otherEnd, msgs);
 		}
@@ -236,8 +288,13 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 				return getName();
 			case CoreModelPackage.YCOMMAND_SET__TAGS:
 				return getTags();
+			case CoreModelPackage.YCOMMAND_SET__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				return getCommands();
+			case CoreModelPackage.YCOMMAND_SET__TRANSIENT_COMMANDS:
+				return getTransientCommands();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,9 +317,16 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
 				return;
+			case CoreModelPackage.YCOMMAND_SET__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
+				return;
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				getCommands().clear();
 				getCommands().addAll((Collection<? extends YCommand>)newValue);
+				return;
+			case CoreModelPackage.YCOMMAND_SET__TRANSIENT_COMMANDS:
+				getTransientCommands().clear();
+				getTransientCommands().addAll((Collection<? extends YCommand>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -284,8 +348,14 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 			case CoreModelPackage.YCOMMAND_SET__TAGS:
 				getTags().clear();
 				return;
+			case CoreModelPackage.YCOMMAND_SET__PROPERTIES:
+				getProperties().clear();
+				return;
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				getCommands().clear();
+				return;
+			case CoreModelPackage.YCOMMAND_SET__TRANSIENT_COMMANDS:
+				getTransientCommands().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -304,8 +374,12 @@ public class YCommandSetImpl extends MinimalEObjectImpl.Container implements
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CoreModelPackage.YCOMMAND_SET__TAGS:
 				return tags != null && !tags.isEmpty();
+			case CoreModelPackage.YCOMMAND_SET__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case CoreModelPackage.YCOMMAND_SET__COMMANDS:
 				return commands != null && !commands.isEmpty();
+			case CoreModelPackage.YCOMMAND_SET__TRANSIENT_COMMANDS:
+				return transientCommands != null && !transientCommands.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

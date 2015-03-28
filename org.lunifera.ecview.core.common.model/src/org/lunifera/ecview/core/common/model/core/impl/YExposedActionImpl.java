@@ -4,12 +4,18 @@ package org.lunifera.ecview.core.common.model.core.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YExposedAction;
@@ -26,6 +32,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isInitialEnabled <em>Initial Enabled</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YExposedActionImpl#getIcon <em>Icon</em>}</li>
@@ -92,6 +99,16 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The default value of the '{@link #isInitialEnabled() <em>Initial Enabled</em>}' attribute.
@@ -391,6 +408,18 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, CoreModelPackage.YEXPOSED_ACTION__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isInitialEnabled() {
 		return initialEnabled;
 	}
@@ -631,6 +660,20 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 		return findViewGeneric(eContainer());
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CoreModelPackage.YEXPOSED_ACTION__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
 	protected YView findViewGeneric(EObject container) {
 		if (container == null) {
 			return null;
@@ -659,6 +702,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return getName();
 			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
 				return getTags();
+			case CoreModelPackage.YEXPOSED_ACTION__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				return isInitialEnabled();
 			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:
@@ -703,6 +749,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case CoreModelPackage.YEXPOSED_ACTION__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				setInitialEnabled((Boolean)newValue);
@@ -758,6 +807,9 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
 				getTags().clear();
 				return;
+			case CoreModelPackage.YEXPOSED_ACTION__PROPERTIES:
+				getProperties().clear();
+				return;
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				setInitialEnabled(INITIAL_ENABLED_EDEFAULT);
 				return;
@@ -809,6 +861,8 @@ public class YExposedActionImpl extends MinimalEObjectImpl.Container implements 
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CoreModelPackage.YEXPOSED_ACTION__TAGS:
 				return tags != null && !tags.isEmpty();
+			case CoreModelPackage.YEXPOSED_ACTION__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case CoreModelPackage.YEXPOSED_ACTION__INITIAL_ENABLED:
 				return initialEnabled != INITIAL_ENABLED_EDEFAULT;
 			case CoreModelPackage.YEXPOSED_ACTION__ENABLED:

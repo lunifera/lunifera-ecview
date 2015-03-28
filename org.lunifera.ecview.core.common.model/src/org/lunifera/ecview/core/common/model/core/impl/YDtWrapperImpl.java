@@ -5,12 +5,18 @@ package org.lunifera.ecview.core.common.model.core.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YDtWrapper;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
@@ -25,6 +31,7 @@ import org.lunifera.ecview.core.common.model.validation.YValidator;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDtWrapperImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDtWrapperImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDtWrapperImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDtWrapperImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDtWrapperImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YDtWrapperImpl#getValidators <em>Validators</em>}</li>
  * </ul>
@@ -82,6 +89,16 @@ public class YDtWrapperImpl extends MinimalEObjectImpl.Container implements YDtW
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -191,6 +208,18 @@ public class YDtWrapperImpl extends MinimalEObjectImpl.Container implements YDtW
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, CoreModelPackage.YDT_WRAPPER__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getDescription() {
 		return description;
 	}
@@ -225,6 +254,20 @@ public class YDtWrapperImpl extends MinimalEObjectImpl.Container implements YDtW
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CoreModelPackage.YDT_WRAPPER__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CoreModelPackage.YDT_WRAPPER__ID:
@@ -233,6 +276,9 @@ public class YDtWrapperImpl extends MinimalEObjectImpl.Container implements YDtW
 				return getName();
 			case CoreModelPackage.YDT_WRAPPER__TAGS:
 				return getTags();
+			case CoreModelPackage.YDT_WRAPPER__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case CoreModelPackage.YDT_WRAPPER__DESCRIPTION:
 				return getDescription();
 			case CoreModelPackage.YDT_WRAPPER__VALIDATORS:
@@ -259,6 +305,9 @@ public class YDtWrapperImpl extends MinimalEObjectImpl.Container implements YDtW
 			case CoreModelPackage.YDT_WRAPPER__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case CoreModelPackage.YDT_WRAPPER__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case CoreModelPackage.YDT_WRAPPER__DESCRIPTION:
 				setDescription((String)newValue);
@@ -288,6 +337,9 @@ public class YDtWrapperImpl extends MinimalEObjectImpl.Container implements YDtW
 			case CoreModelPackage.YDT_WRAPPER__TAGS:
 				getTags().clear();
 				return;
+			case CoreModelPackage.YDT_WRAPPER__PROPERTIES:
+				getProperties().clear();
+				return;
 			case CoreModelPackage.YDT_WRAPPER__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -312,6 +364,8 @@ public class YDtWrapperImpl extends MinimalEObjectImpl.Container implements YDtW
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CoreModelPackage.YDT_WRAPPER__TAGS:
 				return tags != null && !tags.isEmpty();
+			case CoreModelPackage.YDT_WRAPPER__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case CoreModelPackage.YDT_WRAPPER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CoreModelPackage.YDT_WRAPPER__VALIDATORS:

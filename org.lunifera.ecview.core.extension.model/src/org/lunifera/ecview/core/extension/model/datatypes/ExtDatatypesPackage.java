@@ -94,6 +94,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YTEXT_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -201,6 +210,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YTEXT_AREA_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_AREA_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -312,6 +330,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YNUMERIC_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -419,6 +446,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDECIMAL_DATATYPE__TAGS = YNUMERIC_DATATYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDECIMAL_DATATYPE__PROPERTIES = YNUMERIC_DATATYPE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -539,6 +575,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YTABLE_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTABLE_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -601,6 +646,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YCHECK_BOX_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCHECK_BOX_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -667,6 +721,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YCOMBO_BOX_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMBO_BOX_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -729,6 +792,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YLIST_DATA_TYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST_DATA_TYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -796,6 +868,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YOPTIONS_GROUP_DATA_TYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP_DATA_TYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -860,6 +941,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YBROWSER_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBROWSER_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -922,6 +1012,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDATE_TIME_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDATE_TIME_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1006,6 +1105,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YTREE_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTREE_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1068,6 +1176,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YPROGRESS_BAR_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPROGRESS_BAR_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1134,6 +1251,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	int YTAB_SHEET_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTAB_SHEET_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1196,6 +1322,15 @@ public interface ExtDatatypesPackage extends EPackage {
 	 * @ordered
 	 */
 	int YMASTER_DETAIL_DATATYPE__TAGS = DatatypesPackage.YDATATYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMASTER_DETAIL_DATATYPE__PROPERTIES = DatatypesPackage.YDATATYPE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.

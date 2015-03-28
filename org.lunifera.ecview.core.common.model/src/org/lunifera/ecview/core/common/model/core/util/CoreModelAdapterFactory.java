@@ -10,6 +10,7 @@
  */
 package org.lunifera.ecview.core.common.model.core.util;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -80,6 +81,10 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
+			}
+			@Override
+			public Adapter caseYStringToStringMap(Map.Entry<String, String> object) {
+				return createYStringToStringMapAdapter();
 			}
 			@Override
 			public Adapter caseYLayout(YLayout object) {
@@ -280,6 +285,20 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>YString To String Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createYStringToStringMapAdapter() {
 		return null;
 	}
 
