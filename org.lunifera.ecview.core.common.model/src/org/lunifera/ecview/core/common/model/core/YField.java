@@ -33,7 +33,7 @@ import org.lunifera.ecview.core.common.model.validation.YValidator;
  * @model
  * @generated
  */
-public interface YField extends YEmbeddable, YEditable, YEnable {
+public interface YField extends YEmbeddable, YEditable, YEnable, YFocusable {
 
 	/**
 	 * Returns the value of the '<em><b>Validators</b></em>' containment reference list.

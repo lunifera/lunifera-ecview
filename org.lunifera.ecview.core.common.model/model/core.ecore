@@ -18,7 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//YEmbeddable" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YField" eSuperTypes="#//YEmbeddable #//YEditable #//YEnable">
+  <eClassifiers xsi:type="ecore:EClass" name="YField" eSuperTypes="#//YEmbeddable #//YEditable #//YEnable #//YFocusable">
     <eOperations name="addValueChangeListener" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eParameters name="listener" eType="#//YValueChangeListener"/>
     </eOperations>
@@ -59,6 +59,9 @@
         eType="#//YExposedAction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sharedStateGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initialFocus" eType="#//YFocusable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentFocus" eType="#//YFocusable"
+        transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YDeviceType">
     <eLiterals name="IDE" literal="IDE"/>
@@ -184,6 +187,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         transient="true" defaultValueLiteral="true" derived="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YFocusable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tabIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YAction" eSuperTypes="#//YEmbeddable #//YEnable"/>
   <eClassifiers xsi:type="ecore:EClass" name="YBindable" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="YValueBindable" abstract="true" interface="true"
@@ -308,5 +315,82 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoTrigger" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YKeyCode">
+    <eLiterals name="ENTER" value="13" literal="ENTER"/>
+    <eLiterals name="ESCAPE" value="27" literal="ESCAPE"/>
+    <eLiterals name="PAGE_UP" value="33" literal="PAGE_UP"/>
+    <eLiterals name="PAGE_DOWN" value="34" literal="PAGE_DOWN"/>
+    <eLiterals name="TAB" value="9" literal="TAB"/>
+    <eLiterals name="ARROW_LEFT" value="37" literal="ARROW_LEFT"/>
+    <eLiterals name="ARROW_UP" value="38" literal="ARROW_UP"/>
+    <eLiterals name="ARROW_RIGHT" value="39" literal="ARROW_RIGHT"/>
+    <eLiterals name="ARROW_DOWN" value="40" literal="ARROW_DOWN"/>
+    <eLiterals name="BACKSPACE" value="8" literal="BACKSPACE"/>
+    <eLiterals name="DELETE" value="46" literal="DELETE"/>
+    <eLiterals name="INSERT" value="45" literal="INSERT"/>
+    <eLiterals name="END" value="35" literal="END"/>
+    <eLiterals name="HOME" value="36" literal="HOME"/>
+    <eLiterals name="F1" value="112" literal="F1"/>
+    <eLiterals name="F2" value="113" literal="F2"/>
+    <eLiterals name="F3" value="114" literal="F3"/>
+    <eLiterals name="F4" value="115" literal="F4"/>
+    <eLiterals name="F5" value="116" literal="F5"/>
+    <eLiterals name="F6" value="117" literal="F6"/>
+    <eLiterals name="F7" value="118" literal="F7"/>
+    <eLiterals name="F8" value="119" literal="F8"/>
+    <eLiterals name="F9" value="120" literal="F9"/>
+    <eLiterals name="F10" value="121" literal="F10"/>
+    <eLiterals name="F11" value="122" literal="F11"/>
+    <eLiterals name="F12" value="123" literal="F12"/>
+    <eLiterals name="A" value="65" literal="A"/>
+    <eLiterals name="B" value="66" literal="B"/>
+    <eLiterals name="C" value="67" literal="C"/>
+    <eLiterals name="D" value="68" literal="D"/>
+    <eLiterals name="E" value="69" literal="E"/>
+    <eLiterals name="F" value="70" literal="F"/>
+    <eLiterals name="G" value="71" literal="G"/>
+    <eLiterals name="H" value="72" literal="H"/>
+    <eLiterals name="I" value="73" literal="I"/>
+    <eLiterals name="J" value="74" literal="J"/>
+    <eLiterals name="K" value="75" literal="K"/>
+    <eLiterals name="L" value="76" literal="L"/>
+    <eLiterals name="M" value="77" literal="M"/>
+    <eLiterals name="N" value="78" literal="N"/>
+    <eLiterals name="O" value="79" literal="O"/>
+    <eLiterals name="P" value="80" literal="P"/>
+    <eLiterals name="Q" value="81" literal="Q"/>
+    <eLiterals name="R" value="82" literal="R"/>
+    <eLiterals name="S" value="83" literal="S"/>
+    <eLiterals name="T" value="84" literal="T"/>
+    <eLiterals name="U" value="85" literal="U"/>
+    <eLiterals name="V" value="86" literal="V"/>
+    <eLiterals name="W" value="87" literal="W"/>
+    <eLiterals name="X" value="88" literal="X"/>
+    <eLiterals name="Y" value="89" literal="Y"/>
+    <eLiterals name="Z" value="90" literal="Z"/>
+    <eLiterals name="NUM0" value="48" literal="NUM0"/>
+    <eLiterals name="NUM1" value="49" literal="NUM1"/>
+    <eLiterals name="NUM2" value="50" literal="NUM2"/>
+    <eLiterals name="NUM3" value="51" literal="NUM3"/>
+    <eLiterals name="NUM4" value="52" literal="NUM4"/>
+    <eLiterals name="NUM5" value="53" literal="NUM5"/>
+    <eLiterals name="NUM6" value="54" literal="NUM6"/>
+    <eLiterals name="NUM7" value="55" literal="NUM7"/>
+    <eLiterals name="NUM8" value="56" literal="NUM8"/>
+    <eLiterals name="NUM9" value="57" literal="NUM9"/>
+    <eLiterals name="SPACEBAR" value="32" literal="SPACEBAR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YModifierKey">
+    <eLiterals name="SHIFT" value="16" literal="SHIFT"/>
+    <eLiterals name="CTRL" value="17" literal="CTRL"/>
+    <eLiterals name="ALT" value="18" literal="ALT"/>
+    <eLiterals name="META" value="91" literal="META"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YKeyStrokeDefinition" eSuperTypes="#//YElement">
+    <eOperations name="getView" eType="#//YView"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyCode" eType="#//YKeyCode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifierKeys" upperBound="-1"
+        eType="#//YModifierKey"/>
   </eClassifiers>
 </ecore:EPackage>

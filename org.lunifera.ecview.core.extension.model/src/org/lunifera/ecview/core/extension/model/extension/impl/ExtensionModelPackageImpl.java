@@ -3197,11 +3197,14 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yButtonEClass.getESuperTypes().add(theCoreModelPackage.getYVisibleable());
 		yButtonEClass.getESuperTypes().add(theCoreModelPackage.getYEditable());
 		yButtonEClass.getESuperTypes().add(theCoreModelPackage.getYEnable());
+		yButtonEClass.getESuperTypes().add(theCoreModelPackage.getYFocusable());
 		yToggleButtonEClass.getESuperTypes().add(theCoreModelPackage.getYAction());
 		yToggleButtonEClass.getESuperTypes().add(theCoreModelPackage.getYActivateable());
+		yToggleButtonEClass.getESuperTypes().add(theCoreModelPackage.getYFocusable());
 		yProgressBarEClass.getESuperTypes().add(this.getYInput());
 		yProgressBarEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yTabSheetEClass.getESuperTypes().add(theCoreModelPackage.getYEmbeddable());
+		yTabSheetEClass.getESuperTypes().add(theCoreModelPackage.getYFocusable());
 		yTabEClass.getESuperTypes().add(theCoreModelPackage.getYElement());
 		yTabEClass.getESuperTypes().add(theCoreModelPackage.getYCssAble());
 		yMasterDetailEClass.getESuperTypes().add(this.getYInput());
@@ -3219,6 +3222,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		yReferenceSearchFieldEClass.getESuperTypes().add(this.getYInput());
 		yReferenceSearchFieldEClass.getESuperTypes().add(theCoreModelPackage.getYValueBindable());
 		yPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
+		yPanelEClass.getESuperTypes().add(theCoreModelPackage.getYFocusable());
 		ySplitPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
 		ySearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYSpacingable());

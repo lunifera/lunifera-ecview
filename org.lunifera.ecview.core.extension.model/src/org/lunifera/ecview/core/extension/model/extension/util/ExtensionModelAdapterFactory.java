@@ -17,6 +17,7 @@ import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
@@ -293,6 +294,10 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYEnable(YEnable object) {
 				return createYEnableAdapter();
+			}
+			@Override
+			public Adapter caseYFocusable(YFocusable object) {
+				return createYFocusableAdapter();
 			}
 			@Override
 			public Adapter caseYField(YField object) {
@@ -1101,6 +1106,20 @@ public class ExtensionModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYEnableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YFocusable <em>YFocusable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YFocusable
+	 * @generated
+	 */
+	public Adapter createYFocusableAdapter() {
 		return null;
 	}
 

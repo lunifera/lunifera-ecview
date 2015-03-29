@@ -16,6 +16,7 @@ import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEnd
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YEditable;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.impl.YActionImpl;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
@@ -30,6 +31,7 @@ import org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickL
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#isInitialEditable <em>Initial Editable</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#isEditable <em>Editable</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#getTabIndex <em>Tab Index</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#getClickListeners <em>Click Listeners</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YButtonImpl#getLastClickTime <em>Last Click Time</em>}</li>
@@ -76,6 +78,26 @@ public class YButtonImpl extends YActionImpl implements YButton {
 	 * @ordered
 	 */
 	protected boolean editable = EDITABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTabIndex() <em>Tab Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTabIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TAB_INDEX_EDEFAULT = -1;
+
+	/**
+	 * The cached value of the '{@link #getTabIndex() <em>Tab Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTabIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected int tabIndex = TAB_INDEX_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
@@ -170,6 +192,27 @@ public class YButtonImpl extends YActionImpl implements YButton {
 		editable = newEditable;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBUTTON__EDITABLE, oldEditable, editable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getTabIndex() {
+		return tabIndex;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTabIndex(int newTabIndex) {
+		int oldTabIndex = tabIndex;
+		tabIndex = newTabIndex;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YBUTTON__TAB_INDEX, oldTabIndex, tabIndex));
 	}
 
 	/**
@@ -268,6 +311,8 @@ public class YButtonImpl extends YActionImpl implements YButton {
 				return isInitialEditable();
 			case ExtensionModelPackage.YBUTTON__EDITABLE:
 				return isEditable();
+			case ExtensionModelPackage.YBUTTON__TAB_INDEX:
+				return getTabIndex();
 			case ExtensionModelPackage.YBUTTON__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -292,6 +337,9 @@ public class YButtonImpl extends YActionImpl implements YButton {
 				return;
 			case ExtensionModelPackage.YBUTTON__EDITABLE:
 				setEditable((Boolean)newValue);
+				return;
+			case ExtensionModelPackage.YBUTTON__TAB_INDEX:
+				setTabIndex((Integer)newValue);
 				return;
 			case ExtensionModelPackage.YBUTTON__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
@@ -320,6 +368,9 @@ public class YButtonImpl extends YActionImpl implements YButton {
 			case ExtensionModelPackage.YBUTTON__EDITABLE:
 				setEditable(EDITABLE_EDEFAULT);
 				return;
+			case ExtensionModelPackage.YBUTTON__TAB_INDEX:
+				setTabIndex(TAB_INDEX_EDEFAULT);
+				return;
 			case ExtensionModelPackage.YBUTTON__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
@@ -344,6 +395,8 @@ public class YButtonImpl extends YActionImpl implements YButton {
 				return initialEditable != INITIAL_EDITABLE_EDEFAULT;
 			case ExtensionModelPackage.YBUTTON__EDITABLE:
 				return editable != EDITABLE_EDEFAULT;
+			case ExtensionModelPackage.YBUTTON__TAB_INDEX:
+				return tabIndex != TAB_INDEX_EDEFAULT;
 			case ExtensionModelPackage.YBUTTON__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YBUTTON__CLICK_LISTENERS:
@@ -367,6 +420,12 @@ public class YButtonImpl extends YActionImpl implements YButton {
 				default: return -1;
 			}
 		}
+		if (baseClass == YFocusable.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YBUTTON__TAB_INDEX: return CoreModelPackage.YFOCUSABLE__TAB_INDEX;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -380,6 +439,12 @@ public class YButtonImpl extends YActionImpl implements YButton {
 			switch (baseFeatureID) {
 				case CoreModelPackage.YEDITABLE__INITIAL_EDITABLE: return ExtensionModelPackage.YBUTTON__INITIAL_EDITABLE;
 				case CoreModelPackage.YEDITABLE__EDITABLE: return ExtensionModelPackage.YBUTTON__EDITABLE;
+				default: return -1;
+			}
+		}
+		if (baseClass == YFocusable.class) {
+			switch (baseFeatureID) {
+				case CoreModelPackage.YFOCUSABLE__TAB_INDEX: return ExtensionModelPackage.YBUTTON__TAB_INDEX;
 				default: return -1;
 			}
 		}
@@ -399,6 +464,8 @@ public class YButtonImpl extends YActionImpl implements YButton {
 		result.append(initialEditable);
 		result.append(", editable: ");
 		result.append(editable);
+		result.append(", tabIndex: ");
+		result.append(tabIndex);
 		result.append(", clickListeners: ");
 		result.append(clickListeners);
 		result.append(", lastClickTime: ");

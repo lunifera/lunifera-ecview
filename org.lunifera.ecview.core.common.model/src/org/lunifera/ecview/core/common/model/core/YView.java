@@ -35,6 +35,8 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getExposedActions <em>Exposed Actions</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getSharedStateGroup <em>Shared State Group</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getCategory <em>Category</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getInitialFocus <em>Initial Focus</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YView#getCurrentFocus <em>Current Focus</em>}</li>
  * </ul>
  * </p>
  *
@@ -345,6 +347,58 @@ public interface YView extends YElement, YCssAble, YMarginable {
 	 * @generated
 	 */
 	void setCategory(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Initial Focus</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial Focus</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial Focus</em>' reference.
+	 * @see #setInitialFocus(YFocusable)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_InitialFocus()
+	 * @model
+	 * @generated
+	 */
+	YFocusable getInitialFocus();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YView#getInitialFocus <em>Initial Focus</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Initial Focus</em>' reference.
+	 * @see #getInitialFocus()
+	 * @generated
+	 */
+	void setInitialFocus(YFocusable value);
+
+	/**
+	 * Returns the value of the '<em><b>Current Focus</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Current Focus</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Current Focus</em>' reference.
+	 * @see #setCurrentFocus(YFocusable)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYView_CurrentFocus()
+	 * @model transient="true"
+	 * @generated
+	 */
+	YFocusable getCurrentFocus();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YView#getCurrentFocus <em>Current Focus</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Current Focus</em>' reference.
+	 * @see #getCurrentFocus()
+	 * @generated
+	 */
+	void setCurrentFocus(YFocusable value);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -25,9 +25,6 @@ import org.lunifera.ecview.core.common.model.core.YView;
 public abstract class CommandEditpart<M extends YCommand> extends
 		ElementEditpart<M> implements ICommandEditpart {
 
-//	private static final Logger LOGGER = LoggerFactory
-//			.getLogger(CommandEditpart.class);
-
 	/**
 	 * The default constructor.
 	 */

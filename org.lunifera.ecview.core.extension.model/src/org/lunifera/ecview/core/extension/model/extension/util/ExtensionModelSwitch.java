@@ -16,6 +16,7 @@ import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
@@ -89,6 +90,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yInput);
 				if (result == null) result = caseYEditable(yInput);
 				if (result == null) result = caseYEnable(yInput);
+				if (result == null) result = caseYFocusable(yInput);
 				if (result == null) result = caseYElement(yInput);
 				if (result == null) result = caseYCssAble(yInput);
 				if (result == null) result = caseYVisibleable(yInput);
@@ -177,6 +179,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yTable);
 				if (result == null) result = caseYEditable(yTable);
 				if (result == null) result = caseYEnable(yTable);
+				if (result == null) result = caseYFocusable(yTable);
 				if (result == null) result = caseYElement(yTable);
 				if (result == null) result = caseYCssAble(yTable);
 				if (result == null) result = caseYVisibleable(yTable);
@@ -203,6 +206,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yTree);
 				if (result == null) result = caseYEditable(yTree);
 				if (result == null) result = caseYEnable(yTree);
+				if (result == null) result = caseYFocusable(yTree);
 				if (result == null) result = caseYElement(yTree);
 				if (result == null) result = caseYCssAble(yTree);
 				if (result == null) result = caseYVisibleable(yTree);
@@ -222,6 +226,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yOptionsGroup);
 				if (result == null) result = caseYEditable(yOptionsGroup);
 				if (result == null) result = caseYEnable(yOptionsGroup);
+				if (result == null) result = caseYFocusable(yOptionsGroup);
 				if (result == null) result = caseYElement(yOptionsGroup);
 				if (result == null) result = caseYCssAble(yOptionsGroup);
 				if (result == null) result = caseYVisibleable(yOptionsGroup);
@@ -241,6 +246,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yList);
 				if (result == null) result = caseYEditable(yList);
 				if (result == null) result = caseYEnable(yList);
+				if (result == null) result = caseYFocusable(yList);
 				if (result == null) result = caseYElement(yList);
 				if (result == null) result = caseYCssAble(yList);
 				if (result == null) result = caseYVisibleable(yList);
@@ -255,6 +261,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yLabel);
 				if (result == null) result = caseYEditable(yLabel);
 				if (result == null) result = caseYEnable(yLabel);
+				if (result == null) result = caseYFocusable(yLabel);
 				if (result == null) result = caseYBindable(yLabel);
 				if (result == null) result = caseYElement(yLabel);
 				if (result == null) result = caseYCssAble(yLabel);
@@ -270,6 +277,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yImage);
 				if (result == null) result = caseYEditable(yImage);
 				if (result == null) result = caseYEnable(yImage);
+				if (result == null) result = caseYFocusable(yImage);
 				if (result == null) result = caseYBindable(yImage);
 				if (result == null) result = caseYElement(yImage);
 				if (result == null) result = caseYCssAble(yImage);
@@ -287,6 +295,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yTextField);
 				if (result == null) result = caseYEditable(yTextField);
 				if (result == null) result = caseYEnable(yTextField);
+				if (result == null) result = caseYFocusable(yTextField);
 				if (result == null) result = caseYElement(yTextField);
 				if (result == null) result = caseYCssAble(yTextField);
 				if (result == null) result = caseYVisibleable(yTextField);
@@ -304,6 +313,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yBeanReferenceField);
 				if (result == null) result = caseYEditable(yBeanReferenceField);
 				if (result == null) result = caseYEnable(yBeanReferenceField);
+				if (result == null) result = caseYFocusable(yBeanReferenceField);
 				if (result == null) result = caseYElement(yBeanReferenceField);
 				if (result == null) result = caseYCssAble(yBeanReferenceField);
 				if (result == null) result = caseYVisibleable(yBeanReferenceField);
@@ -320,6 +330,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yTextArea);
 				if (result == null) result = caseYEditable(yTextArea);
 				if (result == null) result = caseYEnable(yTextArea);
+				if (result == null) result = caseYFocusable(yTextArea);
 				if (result == null) result = caseYElement(yTextArea);
 				if (result == null) result = caseYCssAble(yTextArea);
 				if (result == null) result = caseYVisibleable(yTextArea);
@@ -336,6 +347,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yCheckBox);
 				if (result == null) result = caseYEditable(yCheckBox);
 				if (result == null) result = caseYEnable(yCheckBox);
+				if (result == null) result = caseYFocusable(yCheckBox);
 				if (result == null) result = caseYElement(yCheckBox);
 				if (result == null) result = caseYCssAble(yCheckBox);
 				if (result == null) result = caseYVisibleable(yCheckBox);
@@ -352,6 +364,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yBrowser);
 				if (result == null) result = caseYEditable(yBrowser);
 				if (result == null) result = caseYEnable(yBrowser);
+				if (result == null) result = caseYFocusable(yBrowser);
 				if (result == null) result = caseYElement(yBrowser);
 				if (result == null) result = caseYCssAble(yBrowser);
 				if (result == null) result = caseYVisibleable(yBrowser);
@@ -368,6 +381,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yDateTime);
 				if (result == null) result = caseYEditable(yDateTime);
 				if (result == null) result = caseYEnable(yDateTime);
+				if (result == null) result = caseYFocusable(yDateTime);
 				if (result == null) result = caseYElement(yDateTime);
 				if (result == null) result = caseYCssAble(yDateTime);
 				if (result == null) result = caseYVisibleable(yDateTime);
@@ -384,6 +398,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yDecimalField);
 				if (result == null) result = caseYEditable(yDecimalField);
 				if (result == null) result = caseYEnable(yDecimalField);
+				if (result == null) result = caseYFocusable(yDecimalField);
 				if (result == null) result = caseYElement(yDecimalField);
 				if (result == null) result = caseYCssAble(yDecimalField);
 				if (result == null) result = caseYVisibleable(yDecimalField);
@@ -400,6 +415,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yNumericField);
 				if (result == null) result = caseYEditable(yNumericField);
 				if (result == null) result = caseYEnable(yNumericField);
+				if (result == null) result = caseYFocusable(yNumericField);
 				if (result == null) result = caseYElement(yNumericField);
 				if (result == null) result = caseYCssAble(yNumericField);
 				if (result == null) result = caseYVisibleable(yNumericField);
@@ -418,6 +434,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yComboBox);
 				if (result == null) result = caseYEditable(yComboBox);
 				if (result == null) result = caseYEnable(yComboBox);
+				if (result == null) result = caseYFocusable(yComboBox);
 				if (result == null) result = caseYElement(yComboBox);
 				if (result == null) result = caseYCssAble(yComboBox);
 				if (result == null) result = caseYVisibleable(yComboBox);
@@ -429,6 +446,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				T result = caseYButton(yButton);
 				if (result == null) result = caseYAction(yButton);
 				if (result == null) result = caseYEditable(yButton);
+				if (result == null) result = caseYFocusable(yButton);
 				if (result == null) result = caseYEmbeddable(yButton);
 				if (result == null) result = caseYEnable(yButton);
 				if (result == null) result = caseYElement(yButton);
@@ -442,6 +460,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				T result = caseYToggleButton(yToggleButton);
 				if (result == null) result = caseYAction(yToggleButton);
 				if (result == null) result = caseYActivateable(yToggleButton);
+				if (result == null) result = caseYFocusable(yToggleButton);
 				if (result == null) result = caseYEmbeddable(yToggleButton);
 				if (result == null) result = caseYEnable(yToggleButton);
 				if (result == null) result = caseYBindable(yToggleButton);
@@ -461,6 +480,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yProgressBar);
 				if (result == null) result = caseYEditable(yProgressBar);
 				if (result == null) result = caseYEnable(yProgressBar);
+				if (result == null) result = caseYFocusable(yProgressBar);
 				if (result == null) result = caseYElement(yProgressBar);
 				if (result == null) result = caseYCssAble(yProgressBar);
 				if (result == null) result = caseYVisibleable(yProgressBar);
@@ -471,6 +491,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				YTabSheet yTabSheet = (YTabSheet)theEObject;
 				T result = caseYTabSheet(yTabSheet);
 				if (result == null) result = caseYEmbeddable(yTabSheet);
+				if (result == null) result = caseYFocusable(yTabSheet);
 				if (result == null) result = caseYElement(yTabSheet);
 				if (result == null) result = caseYCssAble(yTabSheet);
 				if (result == null) result = caseYVisibleable(yTabSheet);
@@ -496,6 +517,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yMasterDetail);
 				if (result == null) result = caseYEditable(yMasterDetail);
 				if (result == null) result = caseYEnable(yMasterDetail);
+				if (result == null) result = caseYFocusable(yMasterDetail);
 				if (result == null) result = caseYElement(yMasterDetail);
 				if (result == null) result = caseYCssAble(yMasterDetail);
 				if (result == null) result = caseYVisibleable(yMasterDetail);
@@ -533,6 +555,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yTextSearchField);
 				if (result == null) result = caseYEditable(yTextSearchField);
 				if (result == null) result = caseYEnable(yTextSearchField);
+				if (result == null) result = caseYFocusable(yTextSearchField);
 				if (result == null) result = caseYElement(yTextSearchField);
 				if (result == null) result = caseYCssAble(yTextSearchField);
 				if (result == null) result = caseYVisibleable(yTextSearchField);
@@ -549,6 +572,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yBooleanSearchField);
 				if (result == null) result = caseYEditable(yBooleanSearchField);
 				if (result == null) result = caseYEnable(yBooleanSearchField);
+				if (result == null) result = caseYFocusable(yBooleanSearchField);
 				if (result == null) result = caseYElement(yBooleanSearchField);
 				if (result == null) result = caseYCssAble(yBooleanSearchField);
 				if (result == null) result = caseYVisibleable(yBooleanSearchField);
@@ -565,6 +589,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yNumericSearchField);
 				if (result == null) result = caseYEditable(yNumericSearchField);
 				if (result == null) result = caseYEnable(yNumericSearchField);
+				if (result == null) result = caseYFocusable(yNumericSearchField);
 				if (result == null) result = caseYElement(yNumericSearchField);
 				if (result == null) result = caseYCssAble(yNumericSearchField);
 				if (result == null) result = caseYVisibleable(yNumericSearchField);
@@ -581,6 +606,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yReferenceSearchField);
 				if (result == null) result = caseYEditable(yReferenceSearchField);
 				if (result == null) result = caseYEnable(yReferenceSearchField);
+				if (result == null) result = caseYFocusable(yReferenceSearchField);
 				if (result == null) result = caseYElement(yReferenceSearchField);
 				if (result == null) result = caseYCssAble(yReferenceSearchField);
 				if (result == null) result = caseYVisibleable(yReferenceSearchField);
@@ -591,6 +617,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				YPanel yPanel = (YPanel)theEObject;
 				T result = caseYPanel(yPanel);
 				if (result == null) result = caseYLayout(yPanel);
+				if (result == null) result = caseYFocusable(yPanel);
 				if (result == null) result = caseYEmbeddable(yPanel);
 				if (result == null) result = caseYEditable(yPanel);
 				if (result == null) result = caseYEnable(yPanel);
@@ -640,6 +667,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yEnumOptionsGroup);
 				if (result == null) result = caseYEditable(yEnumOptionsGroup);
 				if (result == null) result = caseYEnable(yEnumOptionsGroup);
+				if (result == null) result = caseYFocusable(yEnumOptionsGroup);
 				if (result == null) result = caseYElement(yEnumOptionsGroup);
 				if (result == null) result = caseYCssAble(yEnumOptionsGroup);
 				if (result == null) result = caseYVisibleable(yEnumOptionsGroup);
@@ -658,6 +686,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yEnumList);
 				if (result == null) result = caseYEditable(yEnumList);
 				if (result == null) result = caseYEnable(yEnumList);
+				if (result == null) result = caseYFocusable(yEnumList);
 				if (result == null) result = caseYElement(yEnumList);
 				if (result == null) result = caseYCssAble(yEnumList);
 				if (result == null) result = caseYVisibleable(yEnumList);
@@ -675,6 +704,7 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yEnumComboBox);
 				if (result == null) result = caseYEditable(yEnumComboBox);
 				if (result == null) result = caseYEnable(yEnumComboBox);
+				if (result == null) result = caseYFocusable(yEnumComboBox);
 				if (result == null) result = caseYElement(yEnumComboBox);
 				if (result == null) result = caseYCssAble(yEnumComboBox);
 				if (result == null) result = caseYVisibleable(yEnumComboBox);
@@ -1513,6 +1543,21 @@ public class ExtensionModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYEnable(YEnable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YFocusable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YFocusable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYFocusable(YFocusable object) {
 		return null;
 	}
 

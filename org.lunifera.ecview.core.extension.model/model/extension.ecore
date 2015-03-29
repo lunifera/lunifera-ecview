@@ -305,7 +305,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptionProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YVisibleable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEditable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEnable">
+  <eClassifiers xsi:type="ecore:EClass" name="YButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YVisibleable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEditable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEnable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YFocusable">
     <eOperations name="addClickListener">
       <eParameters name="listener" eType="#//YButtonClickListener"/>
     </eOperations>
@@ -319,7 +319,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastClickTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="YButtonClickListener" instanceClassName="org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickListener"/>
-  <eClassifiers xsi:type="ecore:EClass" name="YToggleButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YActivateable">
+  <eClassifiers xsi:type="ecore:EClass" name="YToggleButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YActivateable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YFocusable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YSelectionType">
@@ -332,7 +332,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         transient="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YTabSheet" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable">
+  <eClassifiers xsi:type="ecore:EClass" name="YTabSheet" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YFocusable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabs" upperBound="-1" eType="#//YTab"
         containment="true" eOpposite="#//YTab/parent"/>
   </eClassifiers>
@@ -432,7 +432,7 @@
     <eLiterals name="NE" value="5" literal="NE"/>
     <eLiterals name="ANY" value="6" literal="ANY"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YPanel" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout">
+  <eClassifiers xsi:type="ecore:EClass" name="YPanel" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YFocusable">
     <eOperations name="getCellStyle" eType="#//YHorizontalLayoutCellStyle">
       <eParameters name="element" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
     </eOperations>

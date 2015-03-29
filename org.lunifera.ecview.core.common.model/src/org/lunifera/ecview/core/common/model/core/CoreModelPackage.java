@@ -559,13 +559,22 @@ public interface CoreModelPackage extends EPackage {
 	int YFIELD__ENABLED = YEMBEDDABLE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFIELD__TAB_INDEX = YEMBEDDABLE_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YFIELD__VALIDATORS = YEMBEDDABLE_FEATURE_COUNT + 4;
+	int YFIELD__VALIDATORS = YEMBEDDABLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Internal Validators</b></em>' containment reference list.
@@ -574,7 +583,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YFIELD__INTERNAL_VALIDATORS = YEMBEDDABLE_FEATURE_COUNT + 5;
+	int YFIELD__INTERNAL_VALIDATORS = YEMBEDDABLE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>YField</em>' class.
@@ -583,7 +592,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YFIELD_FEATURE_COUNT = YEMBEDDABLE_FEATURE_COUNT + 6;
+	int YFIELD_FEATURE_COUNT = YEMBEDDABLE_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl <em>YView</em>}' class.
@@ -785,13 +794,31 @@ public interface CoreModelPackage extends EPackage {
 	int YVIEW__CATEGORY = YELEMENT_FEATURE_COUNT + 16;
 
 	/**
+	 * The feature id for the '<em><b>Initial Focus</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__INITIAL_FOCUS = YELEMENT_FEATURE_COUNT + 17;
+
+	/**
+	 * The feature id for the '<em><b>Current Focus</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVIEW__CURRENT_FOCUS = YELEMENT_FEATURE_COUNT + 18;
+
+	/**
 	 * The number of structural features of the '<em>YView</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 17;
+	int YVIEW_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -974,7 +1001,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAction()
 	 * @generated
 	 */
-	int YACTION = 18;
+	int YACTION = 19;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YBindable <em>YBindable</em>}' class.
@@ -984,7 +1011,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYBindable()
 	 * @generated
 	 */
-	int YBINDABLE = 19;
+	int YBINDABLE = 20;
 
 	/**
 	 * The number of structural features of the '<em>YBindable</em>' class.
@@ -1447,6 +1474,34 @@ public interface CoreModelPackage extends EPackage {
 	int YENABLE_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YFocusable <em>YFocusable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.YFocusable
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFocusable()
+	 * @generated
+	 */
+	int YFOCUSABLE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFOCUSABLE__TAB_INDEX = 0;
+
+	/**
+	 * The number of structural features of the '<em>YFocusable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFOCUSABLE_FEATURE_COUNT = 1;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1571,7 +1626,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYValueBindable()
 	 * @generated
 	 */
-	int YVALUE_BINDABLE = 20;
+	int YVALUE_BINDABLE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Value Binding Endpoint</b></em>' reference.
@@ -1599,7 +1654,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYSelectionBindable()
 	 * @generated
 	 */
-	int YSELECTION_BINDABLE = 21;
+	int YSELECTION_BINDABLE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Selection Binding Endpoint</b></em>' reference.
@@ -1627,7 +1682,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYMultiSelectionBindable()
 	 * @generated
 	 */
-	int YMULTI_SELECTION_BINDABLE = 22;
+	int YMULTI_SELECTION_BINDABLE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Multi Selection Binding Endpoint</b></em>' reference.
@@ -1655,7 +1710,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYCollectionBindable()
 	 * @generated
 	 */
-	int YCOLLECTION_BINDABLE = 23;
+	int YCOLLECTION_BINDABLE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Collection Binding Endpoint</b></em>' reference.
@@ -1683,7 +1738,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYContextValueBindingEndpoint()
 	 * @generated
 	 */
-	int YCONTEXT_VALUE_BINDING_ENDPOINT = 24;
+	int YCONTEXT_VALUE_BINDING_ENDPOINT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1747,7 +1802,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYBeanSlotValueBindingEndpoint()
 	 * @generated
 	 */
-	int YBEAN_SLOT_VALUE_BINDING_ENDPOINT = 25;
+	int YBEAN_SLOT_VALUE_BINDING_ENDPOINT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1820,7 +1875,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYBeanSlotListBindingEndpoint()
 	 * @generated
 	 */
-	int YBEAN_SLOT_LIST_BINDING_ENDPOINT = 26;
+	int YBEAN_SLOT_LIST_BINDING_ENDPOINT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1911,7 +1966,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYEmbeddableBindingEndpoint()
 	 * @generated
 	 */
-	int YEMBEDDABLE_BINDING_ENDPOINT = 27;
+	int YEMBEDDABLE_BINDING_ENDPOINT = 28;
 
 	/**
 	 * The number of structural features of the '<em>YEmbeddable Binding Endpoint</em>' class.
@@ -1930,7 +1985,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYEmbeddableValueEndpoint()
 	 * @generated
 	 */
-	int YEMBEDDABLE_VALUE_ENDPOINT = 28;
+	int YEMBEDDABLE_VALUE_ENDPOINT = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1994,7 +2049,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYEmbeddableSelectionEndpoint()
 	 * @generated
 	 */
-	int YEMBEDDABLE_SELECTION_ENDPOINT = 29;
+	int YEMBEDDABLE_SELECTION_ENDPOINT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2067,7 +2122,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYEmbeddableMultiSelectionEndpoint()
 	 * @generated
 	 */
-	int YEMBEDDABLE_MULTI_SELECTION_ENDPOINT = 30;
+	int YEMBEDDABLE_MULTI_SELECTION_ENDPOINT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2131,7 +2186,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYEmbeddableCollectionEndpoint()
 	 * @generated
 	 */
-	int YEMBEDDABLE_COLLECTION_ENDPOINT = 31;
+	int YEMBEDDABLE_COLLECTION_ENDPOINT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2195,7 +2250,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYActivatedEndpoint()
 	 * @generated
 	 */
-	int YACTIVATED_ENDPOINT = 32;
+	int YACTIVATED_ENDPOINT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2259,7 +2314,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDtWrapper()
 	 * @generated
 	 */
-	int YDT_WRAPPER = 33;
+	int YDT_WRAPPER = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2332,7 +2387,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYCommand()
 	 * @generated
 	 */
-	int YCOMMAND = 34;
+	int YCOMMAND = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2387,7 +2442,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYCommandSet()
 	 * @generated
 	 */
-	int YCOMMAND_SET = 35;
+	int YCOMMAND_SET = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2460,7 +2515,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYOpenDialogCommand()
 	 * @generated
 	 */
-	int YOPEN_DIALOG_COMMAND = 36;
+	int YOPEN_DIALOG_COMMAND = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2533,7 +2588,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYExposedAction()
 	 * @generated
 	 */
-	int YEXPOSED_ACTION = 37;
+	int YEXPOSED_ACTION = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2687,7 +2742,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYSendEventCommand()
 	 * @generated
 	 */
-	int YSEND_EVENT_COMMAND = 38;
+	int YSEND_EVENT_COMMAND = 39;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2771,6 +2826,79 @@ public interface CoreModelPackage extends EPackage {
 	int YSEND_EVENT_COMMAND_FEATURE_COUNT = YCOMMAND_FEATURE_COUNT + 4;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YKeyStrokeDefinitionImpl <em>YKey Stroke Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.impl.YKeyStrokeDefinitionImpl
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYKeyStrokeDefinition()
+	 * @generated
+	 */
+	int YKEY_STROKE_DEFINITION = 40;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YKEY_STROKE_DEFINITION__ID = YELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YKEY_STROKE_DEFINITION__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YKEY_STROKE_DEFINITION__TAGS = YELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YKEY_STROKE_DEFINITION__PROPERTIES = YELEMENT__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Key Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YKEY_STROKE_DEFINITION__KEY_CODE = YELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Modifier Keys</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YKEY_STROKE_DEFINITION__MODIFIER_KEYS = YELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>YKey Stroke Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YKEY_STROKE_DEFINITION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2778,7 +2906,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDeviceType()
 	 * @generated
 	 */
-	int YDEVICE_TYPE = 39;
+	int YDEVICE_TYPE = 41;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}' enum.
@@ -2788,7 +2916,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAlignment()
 	 * @generated
 	 */
-	int YALIGNMENT = 40;
+	int YALIGNMENT = 42;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}' enum.
@@ -2798,7 +2926,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFlatAlignment()
 	 * @generated
 	 */
-	int YFLAT_ALIGNMENT = 41;
+	int YFLAT_ALIGNMENT = 43;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}' enum.
@@ -2808,7 +2936,27 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYUnit()
 	 * @generated
 	 */
-	int YUNIT = 42;
+	int YUNIT = 44;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YKeyCode <em>YKey Code</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.YKeyCode
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYKeyCode()
+	 * @generated
+	 */
+	int YKEY_CODE = 45;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YModifierKey <em>YModifier Key</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.YModifierKey
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYModifierKey()
+	 * @generated
+	 */
+	int YMODIFIER_KEY = 46;
 
 	/**
 	 * The meta object id for the '<em>YURI</em>' data type.
@@ -2818,7 +2966,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYURI()
 	 * @generated
 	 */
-	int YURI = 43;
+	int YURI = 47;
 
 
 	/**
@@ -2829,7 +2977,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYValueChangeListener()
 	 * @generated
 	 */
-	int YVALUE_CHANGE_LISTENER = 44;
+	int YVALUE_CHANGE_LISTENER = 48;
 
 
 	/**
@@ -3136,6 +3284,28 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYView_Category();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.common.model.core.YView#getInitialFocus <em>Initial Focus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Initial Focus</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YView#getInitialFocus()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EReference getYView_InitialFocus();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.ecview.core.common.model.core.YView#getCurrentFocus <em>Current Focus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Current Focus</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YView#getCurrentFocus()
+	 * @see #getYView()
+	 * @generated
+	 */
+	EReference getYView_CurrentFocus();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YViewSet <em>YView Set</em>}'.
@@ -3651,6 +3821,27 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getYEnable_Enabled();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YFocusable <em>YFocusable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YFocusable</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YFocusable
+	 * @generated
+	 */
+	EClass getYFocusable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YFocusable#getTabIndex <em>Tab Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tab Index</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YFocusable#getTabIndex()
+	 * @see #getYFocusable()
+	 * @generated
+	 */
+	EAttribute getYFocusable_TabIndex();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YAction <em>YAction</em>}'.
@@ -4237,6 +4428,38 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYSendEventCommand_AutoTrigger();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition <em>YKey Stroke Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YKey Stroke Definition</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition
+	 * @generated
+	 */
+	EClass getYKeyStrokeDefinition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition#getKeyCode <em>Key Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key Code</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition#getKeyCode()
+	 * @see #getYKeyStrokeDefinition()
+	 * @generated
+	 */
+	EAttribute getYKeyStrokeDefinition_KeyCode();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition#getModifierKeys <em>Modifier Keys</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Modifier Keys</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition#getModifierKeys()
+	 * @see #getYKeyStrokeDefinition()
+	 * @generated
+	 */
+	EAttribute getYKeyStrokeDefinition_ModifierKeys();
+
+	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4275,6 +4498,26 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getYUnit();
+
+	/**
+	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YKeyCode <em>YKey Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YKey Code</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YKeyCode
+	 * @generated
+	 */
+	EEnum getYKeyCode();
+
+	/**
+	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YModifierKey <em>YModifier Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>YModifier Key</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YModifierKey
+	 * @generated
+	 */
+	EEnum getYModifierKey();
 
 	/**
 	 * Returns the meta object for data type '{@link java.net.URI <em>YURI</em>}'.
@@ -4553,6 +4796,22 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YVIEW__CATEGORY = eINSTANCE.getYView_Category();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial Focus</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YVIEW__INITIAL_FOCUS = eINSTANCE.getYView_InitialFocus();
+
+		/**
+		 * The meta object literal for the '<em><b>Current Focus</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YVIEW__CURRENT_FOCUS = eINSTANCE.getYView_CurrentFocus();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewSetImpl <em>YView Set</em>}' class.
@@ -4963,6 +5222,24 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YENABLE__ENABLED = eINSTANCE.getYEnable_Enabled();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YFocusable <em>YFocusable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.YFocusable
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFocusable()
+		 * @generated
+		 */
+		EClass YFOCUSABLE = eINSTANCE.getYFocusable();
+
+		/**
+		 * The meta object literal for the '<em><b>Tab Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YFOCUSABLE__TAB_INDEX = eINSTANCE.getYFocusable_TabIndex();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YActionImpl <em>YAction</em>}' class.
@@ -5447,6 +5724,32 @@ public interface CoreModelPackage extends EPackage {
 		EAttribute YSEND_EVENT_COMMAND__AUTO_TRIGGER = eINSTANCE.getYSendEventCommand_AutoTrigger();
 
 		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YKeyStrokeDefinitionImpl <em>YKey Stroke Definition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.impl.YKeyStrokeDefinitionImpl
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYKeyStrokeDefinition()
+		 * @generated
+		 */
+		EClass YKEY_STROKE_DEFINITION = eINSTANCE.getYKeyStrokeDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Key Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YKEY_STROKE_DEFINITION__KEY_CODE = eINSTANCE.getYKeyStrokeDefinition_KeyCode();
+
+		/**
+		 * The meta object literal for the '<em><b>Modifier Keys</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YKEY_STROKE_DEFINITION__MODIFIER_KEYS = eINSTANCE.getYKeyStrokeDefinition_ModifierKeys();
+
+		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5485,6 +5788,26 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum YUNIT = eINSTANCE.getYUnit();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YKeyCode <em>YKey Code</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.YKeyCode
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYKeyCode()
+		 * @generated
+		 */
+		EEnum YKEY_CODE = eINSTANCE.getYKeyCode();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YModifierKey <em>YModifier Key</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.YModifierKey
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYModifierKey()
+		 * @generated
+		 */
+		EEnum YMODIFIER_KEY = eINSTANCE.getYModifierKey();
 
 		/**
 		 * The meta object literal for the '<em>YURI</em>' data type.

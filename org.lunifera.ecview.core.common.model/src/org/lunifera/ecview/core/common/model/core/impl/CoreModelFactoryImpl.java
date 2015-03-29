@@ -96,6 +96,7 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 			case CoreModelPackage.YOPEN_DIALOG_COMMAND: return createYOpenDialogCommand();
 			case CoreModelPackage.YEXPOSED_ACTION: return createYExposedAction();
 			case CoreModelPackage.YSEND_EVENT_COMMAND: return createYSendEventCommand();
+			case CoreModelPackage.YKEY_STROKE_DEFINITION: return createYKeyStrokeDefinition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -117,6 +118,10 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 				return createYFlatAlignmentFromString(eDataType, initialValue);
 			case CoreModelPackage.YUNIT:
 				return createYUnitFromString(eDataType, initialValue);
+			case CoreModelPackage.YKEY_CODE:
+				return createYKeyCodeFromString(eDataType, initialValue);
+			case CoreModelPackage.YMODIFIER_KEY:
+				return createYModifierKeyFromString(eDataType, initialValue);
 			case CoreModelPackage.YURI:
 				return createYURIFromString(eDataType, initialValue);
 			case CoreModelPackage.YVALUE_CHANGE_LISTENER:
@@ -142,6 +147,10 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 				return convertYFlatAlignmentToString(eDataType, instanceValue);
 			case CoreModelPackage.YUNIT:
 				return convertYUnitToString(eDataType, instanceValue);
+			case CoreModelPackage.YKEY_CODE:
+				return convertYKeyCodeToString(eDataType, instanceValue);
+			case CoreModelPackage.YMODIFIER_KEY:
+				return convertYModifierKeyToString(eDataType, instanceValue);
 			case CoreModelPackage.YURI:
 				return convertYURIToString(eDataType, instanceValue);
 			case CoreModelPackage.YVALUE_CHANGE_LISTENER:
@@ -366,6 +375,16 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public YKeyStrokeDefinition createYKeyStrokeDefinition() {
+		YKeyStrokeDefinitionImpl yKeyStrokeDefinition = new YKeyStrokeDefinitionImpl();
+		return yKeyStrokeDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YDeviceType createYDeviceTypeFromString(EDataType eDataType, String initialValue) {
 		YDeviceType result = YDeviceType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -438,6 +457,46 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	 * @generated
 	 */
 	public String convertYUnitToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YKeyCode createYKeyCodeFromString(EDataType eDataType, String initialValue) {
+		YKeyCode result = YKeyCode.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYKeyCodeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YModifierKey createYModifierKeyFromString(EDataType eDataType, String initialValue) {
+		YModifierKey result = YModifierKey.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertYModifierKeyToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

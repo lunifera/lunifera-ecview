@@ -415,8 +415,14 @@ public abstract class ElementEditpart<M extends YElement> extends AdapterImpl
 		case Notification.ADD:
 			handleModelAdd(featureId, notification);
 			break;
+		case Notification.ADD_MANY:
+			handleModelAddMany(featureId, notification);
+			break;
 		case Notification.REMOVE:
 			handleModelRemove(featureId, notification);
+			break;
+		case Notification.REMOVE_MANY:
+			handleModelRemoveMany(featureId, notification);
 			break;
 		case Notification.MOVE:
 			handleModelMove(featureId, notification);
@@ -427,6 +433,33 @@ public abstract class ElementEditpart<M extends YElement> extends AdapterImpl
 		default:
 
 		}
+	}
+
+	/**
+	 * Is called from {@link #notifyChanged(Notification)} for the
+	 * add-many-event to be handled by subclasses.
+	 * 
+	 * @param featureId
+	 *            The featureId the notication belongs to
+	 * @param notification
+	 *            The notfication
+	 */
+	protected void handleModelRemoveMany(int featureId,
+			Notification notification) {
+		checkDisposed();
+	}
+
+	/**
+	 * Is called from {@link #notifyChanged(Notification)} for the
+	 * remove-many-event to be handled by subclasses.
+	 * 
+	 * @param featureId
+	 *            The featureId the notication belongs to
+	 * @param notification
+	 *            The notfication
+	 */
+	protected void handleModelAddMany(int featureId, Notification notification) {
+		checkDisposed();
 	}
 
 	/**
@@ -492,7 +525,7 @@ public abstract class ElementEditpart<M extends YElement> extends AdapterImpl
 	public boolean isDisposed() {
 		return disposed;
 	}
-	
+
 	/**
 	 * {@inheritDoc}
 	 */

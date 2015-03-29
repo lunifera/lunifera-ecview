@@ -195,6 +195,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YINPUT__ENABLED = CoreModelPackage.YFIELD__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YINPUT__TAB_INDEX = CoreModelPackage.YFIELD__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1095,6 +1104,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTABLE__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTABLE__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1666,6 +1684,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTREE__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTREE__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1944,6 +1971,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YOPTIONS_GROUP__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YOPTIONS_GROUP__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -2252,6 +2288,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YLIST__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLIST__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2558,6 +2603,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YLABEL__ENABLED = CoreModelPackage.YFIELD__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YLABEL__TAB_INDEX = CoreModelPackage.YFIELD__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2748,6 +2802,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YIMAGE__ENABLED = CoreModelPackage.YFIELD__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YIMAGE__TAB_INDEX = CoreModelPackage.YFIELD__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2926,6 +2989,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YTEXT_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -3125,6 +3197,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YBEAN_REFERENCE_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBEAN_REFERENCE_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -3424,6 +3505,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTEXT_AREA__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_AREA__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3611,6 +3701,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YCHECK_BOX__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCHECK_BOX__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -3802,6 +3901,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBROWSER__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBROWSER__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3989,6 +4097,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YDATE_TIME__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDATE_TIME__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -4180,6 +4297,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YDECIMAL_FIELD__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDECIMAL_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4369,6 +4495,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YNUMERIC_FIELD__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4556,6 +4691,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YCOMBO_BOX__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCOMBO_BOX__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -4837,13 +4981,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBUTTON__EDITABLE = CoreModelPackage.YACTION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBUTTON__TAB_INDEX = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YBUTTON__DATADESCRIPTION = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
+	int YBUTTON__DATADESCRIPTION = CoreModelPackage.YACTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Click Listeners</b></em>' attribute list.
@@ -4852,7 +5005,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBUTTON__CLICK_LISTENERS = CoreModelPackage.YACTION_FEATURE_COUNT + 3;
+	int YBUTTON__CLICK_LISTENERS = CoreModelPackage.YACTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Last Click Time</b></em>' attribute.
@@ -4861,7 +5014,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBUTTON__LAST_CLICK_TIME = CoreModelPackage.YACTION_FEATURE_COUNT + 4;
+	int YBUTTON__LAST_CLICK_TIME = CoreModelPackage.YACTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>YButton</em>' class.
@@ -4870,7 +5023,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YBUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 5;
+	int YBUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4999,13 +5152,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTOGGLE_BUTTON__ACTIVATED = CoreModelPackage.YACTION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTOGGLE_BUTTON__TAB_INDEX = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTOGGLE_BUTTON__DATADESCRIPTION = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
+	int YTOGGLE_BUTTON__DATADESCRIPTION = CoreModelPackage.YACTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>YToggle Button</em>' class.
@@ -5014,7 +5176,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTOGGLE_BUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 3;
+	int YTOGGLE_BUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YProgressBarImpl <em>YProgress Bar</em>}' class.
@@ -5151,6 +5313,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YPROGRESS_BAR__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPROGRESS_BAR__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -5316,13 +5487,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTAB_SHEET__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YEMBEDDABLE__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTAB_SHEET__TAB_INDEX = CoreModelPackage.YEMBEDDABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Tabs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTAB_SHEET__TABS = CoreModelPackage.YEMBEDDABLE_FEATURE_COUNT + 0;
+	int YTAB_SHEET__TABS = CoreModelPackage.YEMBEDDABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>YTab Sheet</em>' class.
@@ -5331,7 +5511,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YTAB_SHEET_FEATURE_COUNT = CoreModelPackage.YEMBEDDABLE_FEATURE_COUNT + 1;
+	int YTAB_SHEET_FEATURE_COUNT = CoreModelPackage.YEMBEDDABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl <em>YTab</em>}' class.
@@ -5568,6 +5748,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YMASTER_DETAIL__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YMASTER_DETAIL__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -6050,6 +6239,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTEXT_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTEXT_SEARCH_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6258,6 +6456,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YBOOLEAN_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YBOOLEAN_SEARCH_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6455,6 +6662,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YNUMERIC_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YNUMERIC_SEARCH_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -6681,6 +6897,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YREFERENCE_SEARCH_FIELD__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YREFERENCE_SEARCH_FIELD__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
@@ -6927,13 +7152,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YPANEL__ELEMENTS = CoreModelPackage.YLAYOUT__ELEMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YPANEL__TAB_INDEX = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YPANEL__DATADESCRIPTION = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+	int YPANEL__DATADESCRIPTION = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>First Content</b></em>' reference.
@@ -6942,7 +7176,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YPANEL__FIRST_CONTENT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 1;
+	int YPANEL__FIRST_CONTENT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Second Content</b></em>' reference.
@@ -6951,7 +7185,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YPANEL__SECOND_CONTENT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
+	int YPANEL__SECOND_CONTENT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>YPanel</em>' class.
@@ -6960,7 +7194,7 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YPANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
+	int YPANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YSplitPanelImpl <em>YSplit Panel</em>}' class.
@@ -7515,6 +7749,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YENUM_OPTIONS_GROUP__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_OPTIONS_GROUP__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7777,6 +8020,15 @@ public interface ExtensionModelPackage extends EPackage {
 	int YENUM_LIST__ENABLED = YINPUT__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_LIST__TAB_INDEX = YINPUT__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8037,6 +8289,15 @@ public interface ExtensionModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int YENUM_COMBO_BOX__ENABLED = YINPUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YENUM_COMBO_BOX__TAB_INDEX = YINPUT__TAB_INDEX;
 
 	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.

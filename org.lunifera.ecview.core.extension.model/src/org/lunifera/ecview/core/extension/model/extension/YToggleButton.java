@@ -4,6 +4,7 @@ package org.lunifera.ecview.core.extension.model.extension;
 
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YActivateable;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
@@ -22,7 +23,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * @model
  * @generated
  */
-public interface YToggleButton extends YAction, YActivateable {
+public interface YToggleButton extends YAction, YActivateable, YFocusable {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->

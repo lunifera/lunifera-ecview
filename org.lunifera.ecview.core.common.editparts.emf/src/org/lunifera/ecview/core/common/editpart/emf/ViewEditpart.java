@@ -47,6 +47,7 @@ import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YExposedAction;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
 import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
@@ -178,6 +179,12 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			}
 			service.addHandler(this);
 		}
+
+		// set the initial focus
+		if (getModel().getInitialFocus() != null) {
+			requestFocus(getModel().getInitialFocus());
+		}
+
 	}
 
 	@Override
@@ -292,7 +299,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	protected void activateVisibilityProcessor(Map<String, Object> options)
 			throws ContextException {
 		checkDisposed();
-		
+
 		getVisibilityProcessors();
 		getTransientVisibilityProcessors();
 	}
@@ -611,9 +618,22 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 			ICommandSetEditpart csEditPart = (ICommandSetEditpart) getEditpart(yNewCommandSet);
 			internalSetCommandSet(csEditPart);
 			break;
+		case CoreModelPackage.YVIEW__CURRENT_FOCUS:
+			YFocusable yFocusable = (YFocusable) notification.getNewValue();
+			requestFocus(yFocusable);
+			break;
 		default:
 			break;
 		}
+	}
+
+	/**
+	 * Requests the focus for the given element.
+	 * 
+	 * @param yFocusable
+	 */
+	protected void requestFocus(YFocusable yFocusable) {
+		getPresentation().requestFocus(getEditpart((YElement) yFocusable));
 	}
 
 	@Override
@@ -787,7 +807,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 
 		if (vProcessorEditparts != null && editpart != null) {
 			vProcessorEditparts.remove(editpart);
-			
+
 			editpart.dispose();
 		}
 	}
@@ -805,7 +825,7 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 
 		if (transientVProcessorEditparts != null && editpart != null) {
 			transientVProcessorEditparts.remove(editpart);
-			
+
 			editpart.dispose();
 		}
 	}

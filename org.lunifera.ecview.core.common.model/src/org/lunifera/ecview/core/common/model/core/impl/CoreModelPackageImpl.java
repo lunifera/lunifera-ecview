@@ -45,9 +45,13 @@ import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YExposedAction;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YFlatAlignment;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YHeightable;
+import org.lunifera.ecview.core.common.model.core.YKeyCode;
+import org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
+import org.lunifera.ecview.core.common.model.core.YModifierKey;
 import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
 import org.lunifera.ecview.core.common.model.core.YOpenDialogCommand;
 import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
@@ -205,6 +209,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass yFocusableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass yActionEClass = null;
 
 	/**
@@ -352,6 +363,13 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass yKeyStrokeDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum yDeviceTypeEEnum = null;
 
 	/**
@@ -374,6 +392,20 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * @generated
 	 */
 	private EEnum yUnitEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum yKeyCodeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum yModifierKeyEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -714,6 +746,24 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EAttribute getYView_Category() {
 		return (EAttribute)yViewEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYView_InitialFocus() {
+		return (EReference)yViewEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYView_CurrentFocus() {
+		return (EReference)yViewEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -1146,6 +1196,24 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EAttribute getYEnable_Enabled() {
 		return (EAttribute)yEnableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYFocusable() {
+		return yFocusableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYFocusable_TabIndex() {
+		return (EAttribute)yFocusableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1648,6 +1716,33 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getYKeyStrokeDefinition() {
+		return yKeyStrokeDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYKeyStrokeDefinition_KeyCode() {
+		return (EAttribute)yKeyStrokeDefinitionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYKeyStrokeDefinition_ModifierKeys() {
+		return (EAttribute)yKeyStrokeDefinitionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYDeviceType() {
 		return yDeviceTypeEEnum;
 	}
@@ -1677,6 +1772,24 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EEnum getYUnit() {
 		return yUnitEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getYKeyCode() {
+		return yKeyCodeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getYModifierKey() {
+		return yModifierKeyEEnum;
 	}
 
 	/**
@@ -1757,6 +1870,8 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEReference(yViewEClass, YVIEW__EXPOSED_ACTIONS);
 		createEAttribute(yViewEClass, YVIEW__SHARED_STATE_GROUP);
 		createEAttribute(yViewEClass, YVIEW__CATEGORY);
+		createEReference(yViewEClass, YVIEW__INITIAL_FOCUS);
+		createEReference(yViewEClass, YVIEW__CURRENT_FOCUS);
 
 		yViewSetEClass = createEClass(YVIEW_SET);
 		createEReference(yViewSetEClass, YVIEW_SET__VIEWS);
@@ -1818,6 +1933,9 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yEnableEClass = createEClass(YENABLE);
 		createEAttribute(yEnableEClass, YENABLE__INITIAL_ENABLED);
 		createEAttribute(yEnableEClass, YENABLE__ENABLED);
+
+		yFocusableEClass = createEClass(YFOCUSABLE);
+		createEAttribute(yFocusableEClass, YFOCUSABLE__TAB_INDEX);
 
 		yActionEClass = createEClass(YACTION);
 
@@ -1895,11 +2013,17 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__TRIGGER);
 		createEAttribute(ySendEventCommandEClass, YSEND_EVENT_COMMAND__AUTO_TRIGGER);
 
+		yKeyStrokeDefinitionEClass = createEClass(YKEY_STROKE_DEFINITION);
+		createEAttribute(yKeyStrokeDefinitionEClass, YKEY_STROKE_DEFINITION__KEY_CODE);
+		createEAttribute(yKeyStrokeDefinitionEClass, YKEY_STROKE_DEFINITION__MODIFIER_KEYS);
+
 		// Create enums
 		yDeviceTypeEEnum = createEEnum(YDEVICE_TYPE);
 		yAlignmentEEnum = createEEnum(YALIGNMENT);
 		yFlatAlignmentEEnum = createEEnum(YFLAT_ALIGNMENT);
 		yUnitEEnum = createEEnum(YUNIT);
+		yKeyCodeEEnum = createEEnum(YKEY_CODE);
+		yModifierKeyEEnum = createEEnum(YMODIFIER_KEY);
 
 		// Create data types
 		yuriEDataType = createEDataType(YURI);
@@ -1946,6 +2070,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yFieldEClass.getESuperTypes().add(this.getYEmbeddable());
 		yFieldEClass.getESuperTypes().add(this.getYEditable());
 		yFieldEClass.getESuperTypes().add(this.getYEnable());
+		yFieldEClass.getESuperTypes().add(this.getYFocusable());
 		yViewEClass.getESuperTypes().add(this.getYElement());
 		yViewEClass.getESuperTypes().add(this.getYCssAble());
 		yViewEClass.getESuperTypes().add(this.getYMarginable());
@@ -1984,6 +2109,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yExposedActionEClass.getESuperTypes().add(this.getYElement());
 		yExposedActionEClass.getESuperTypes().add(this.getYEnable());
 		ySendEventCommandEClass.getESuperTypes().add(this.getYCommand());
+		yKeyStrokeDefinitionEClass.getESuperTypes().add(this.getYElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yElementEClass, YElement.class, "YElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2026,6 +2152,8 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEReference(getYView_ExposedActions(), this.getYExposedAction(), null, "exposedActions", null, 0, -1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_SharedStateGroup(), ecorePackage.getEString(), "sharedStateGroup", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYView_Category(), ecorePackage.getEString(), "category", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYView_InitialFocus(), this.getYFocusable(), null, "initialFocus", null, 0, 1, YView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYView_CurrentFocus(), this.getYFocusable(), null, "currentFocus", null, 0, 1, YView.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yViewEClass, theBindingPackage.getYBindingSet(), "getOrCreateBindingSet", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -2099,6 +2227,9 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEClass(yEnableEClass, YEnable.class, "YEnable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYEnable_InitialEnabled(), ecorePackage.getEBoolean(), "initialEnabled", "true", 0, 1, YEnable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYEnable_Enabled(), ecorePackage.getEBoolean(), "enabled", "true", 0, 1, YEnable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(yFocusableEClass, YFocusable.class, "YFocusable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYFocusable_TabIndex(), ecorePackage.getEInt(), "tabIndex", "-1", 0, 1, YFocusable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yActionEClass, YAction.class, "YAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2215,6 +2346,12 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 
 		addEOperation(ySendEventCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createEventTopicEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEClass(yKeyStrokeDefinitionEClass, YKeyStrokeDefinition.class, "YKeyStrokeDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYKeyStrokeDefinition_KeyCode(), this.getYKeyCode(), "keyCode", null, 0, 1, YKeyStrokeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYKeyStrokeDefinition_ModifierKeys(), this.getYModifierKey(), "modifierKeys", null, 0, -1, YKeyStrokeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(yKeyStrokeDefinitionEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(yDeviceTypeEEnum, YDeviceType.class, "YDeviceType");
 		addEEnumLiteral(yDeviceTypeEEnum, YDeviceType.IDE);
@@ -2247,6 +2384,77 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEEnum(yUnitEEnum, YUnit.class, "YUnit");
 		addEEnumLiteral(yUnitEEnum, YUnit.PIXEL);
 		addEEnumLiteral(yUnitEEnum, YUnit.EM);
+
+		initEEnum(yKeyCodeEEnum, YKeyCode.class, "YKeyCode");
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.ENTER);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.ESCAPE);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.PAGE_UP);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.PAGE_DOWN);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.TAB);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.ARROW_LEFT);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.ARROW_UP);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.ARROW_RIGHT);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.ARROW_DOWN);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.BACKSPACE);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.DELETE);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.INSERT);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.END);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.HOME);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F1);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F2);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F3);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F4);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F5);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F6);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F7);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F8);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F9);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F10);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F11);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F12);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.A);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.B);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.C);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.D);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.E);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.F);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.G);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.H);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.I);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.J);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.K);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.L);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.M);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.N);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.O);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.P);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.Q);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.R);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.S);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.T);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.U);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.V);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.W);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.X);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.Y);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.Z);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM0);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM1);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM2);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM3);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM4);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM5);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM6);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM7);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM8);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.NUM9);
+		addEEnumLiteral(yKeyCodeEEnum, YKeyCode.SPACEBAR);
+
+		initEEnum(yModifierKeyEEnum, YModifierKey.class, "YModifierKey");
+		addEEnumLiteral(yModifierKeyEEnum, YModifierKey.SHIFT);
+		addEEnumLiteral(yModifierKeyEEnum, YModifierKey.CTRL);
+		addEEnumLiteral(yModifierKeyEEnum, YModifierKey.ALT);
+		addEEnumLiteral(yModifierKeyEEnum, YModifierKey.META);
 
 		// Initialize data types
 		initEDataType(yuriEDataType, URI.class, "YURI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

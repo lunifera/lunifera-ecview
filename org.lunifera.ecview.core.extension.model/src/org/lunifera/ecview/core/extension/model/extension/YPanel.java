@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.extension.model.extension;
 
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
@@ -24,7 +25,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * @model
  * @generated
  */
-public interface YPanel extends YLayout {
+public interface YPanel extends YLayout, YFocusable {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->

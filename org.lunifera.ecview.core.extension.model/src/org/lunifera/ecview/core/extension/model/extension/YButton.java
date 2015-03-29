@@ -8,6 +8,7 @@ import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YEditable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YVisibleable;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickListener;
@@ -30,7 +31,7 @@ import org.lunifera.ecview.core.extension.model.extension.listener.YButtonClickL
  * @model
  * @generated
  */
-public interface YButton extends YAction, YVisibleable, YEditable, YEnable {
+public interface YButton extends YAction, YVisibleable, YEditable, YEnable, YFocusable {
 	/**
 	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
 	 * <!-- begin-user-doc -->

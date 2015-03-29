@@ -108,6 +108,7 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(yField);
 				if (result == null) result = caseYEditable(yField);
 				if (result == null) result = caseYEnable(yField);
+				if (result == null) result = caseYFocusable(yField);
 				if (result == null) result = caseYElement(yField);
 				if (result == null) result = caseYCssAble(yField);
 				if (result == null) result = caseYVisibleable(yField);
@@ -208,6 +209,12 @@ public class CoreModelSwitch<T> extends Switch<T> {
 			case CoreModelPackage.YENABLE: {
 				YEnable yEnable = (YEnable)theEObject;
 				T result = caseYEnable(yEnable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CoreModelPackage.YFOCUSABLE: {
+				YFocusable yFocusable = (YFocusable)theEObject;
+				T result = caseYFocusable(yFocusable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -383,6 +390,13 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				T result = caseYSendEventCommand(ySendEventCommand);
 				if (result == null) result = caseYCommand(ySendEventCommand);
 				if (result == null) result = caseYElement(ySendEventCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CoreModelPackage.YKEY_STROKE_DEFINITION: {
+				YKeyStrokeDefinition yKeyStrokeDefinition = (YKeyStrokeDefinition)theEObject;
+				T result = caseYKeyStrokeDefinition(yKeyStrokeDefinition);
+				if (result == null) result = caseYElement(yKeyStrokeDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -657,6 +671,21 @@ public class CoreModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYEnable(YEnable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YFocusable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YFocusable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYFocusable(YFocusable object) {
 		return null;
 	}
 
@@ -972,6 +1001,21 @@ public class CoreModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYSendEventCommand(YSendEventCommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YKey Stroke Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YKey Stroke Definition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYKeyStrokeDefinition(YKeyStrokeDefinition object) {
 		return null;
 	}
 

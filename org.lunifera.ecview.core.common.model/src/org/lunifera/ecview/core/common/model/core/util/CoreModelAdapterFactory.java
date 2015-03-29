@@ -151,6 +151,10 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 				return createYEnableAdapter();
 			}
 			@Override
+			public Adapter caseYFocusable(YFocusable object) {
+				return createYFocusableAdapter();
+			}
+			@Override
 			public Adapter caseYAction(YAction object) {
 				return createYActionAdapter();
 			}
@@ -233,6 +237,10 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYSendEventCommand(YSendEventCommand object) {
 				return createYSendEventCommandAdapter();
+			}
+			@Override
+			public Adapter caseYKeyStrokeDefinition(YKeyStrokeDefinition object) {
+				return createYKeyStrokeDefinitionAdapter();
 			}
 			@Override
 			public Adapter caseYBindingEndpoint(YBindingEndpoint object) {
@@ -527,6 +535,20 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YFocusable <em>YFocusable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YFocusable
+	 * @generated
+	 */
+	public Adapter createYFocusableAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YAction <em>YAction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -817,6 +839,20 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYSendEventCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition <em>YKey Stroke Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YKeyStrokeDefinition
+	 * @generated
+	 */
+	public Adapter createYKeyStrokeDefinitionAdapter() {
 		return null;
 	}
 

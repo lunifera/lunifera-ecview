@@ -37,6 +37,7 @@ import org.lunifera.ecview.core.common.model.core.YDeviceType;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YExposedAction;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
@@ -69,6 +70,8 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getExposedActions <em>Exposed Actions</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getSharedStateGroup <em>Shared State Group</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getInitialFocus <em>Initial Focus</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl#getCurrentFocus <em>Current Focus</em>}</li>
  * </ul>
  * </p>
  *
@@ -370,6 +373,26 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	 * @ordered
 	 */
 	protected String category = CATEGORY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getInitialFocus() <em>Initial Focus</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialFocus()
+	 * @generated
+	 * @ordered
+	 */
+	protected YFocusable initialFocus;
+
+	/**
+	 * The cached value of the '{@link #getCurrentFocus() <em>Current Focus</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCurrentFocus()
+	 * @generated
+	 * @ordered
+	 */
+	protected YFocusable currentFocus;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -852,6 +875,82 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YFocusable getInitialFocus() {
+		if (initialFocus != null && initialFocus.eIsProxy()) {
+			InternalEObject oldInitialFocus = (InternalEObject)initialFocus;
+			initialFocus = (YFocusable)eResolveProxy(oldInitialFocus);
+			if (initialFocus != oldInitialFocus) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CoreModelPackage.YVIEW__INITIAL_FOCUS, oldInitialFocus, initialFocus));
+			}
+		}
+		return initialFocus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YFocusable basicGetInitialFocus() {
+		return initialFocus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitialFocus(YFocusable newInitialFocus) {
+		YFocusable oldInitialFocus = initialFocus;
+		initialFocus = newInitialFocus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YVIEW__INITIAL_FOCUS, oldInitialFocus, initialFocus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YFocusable getCurrentFocus() {
+		if (currentFocus != null && currentFocus.eIsProxy()) {
+			InternalEObject oldCurrentFocus = (InternalEObject)currentFocus;
+			currentFocus = (YFocusable)eResolveProxy(oldCurrentFocus);
+			if (currentFocus != oldCurrentFocus) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CoreModelPackage.YVIEW__CURRENT_FOCUS, oldCurrentFocus, currentFocus));
+			}
+		}
+		return currentFocus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YFocusable basicGetCurrentFocus() {
+		return currentFocus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCurrentFocus(YFocusable newCurrentFocus) {
+		YFocusable oldCurrentFocus = currentFocus;
+		currentFocus = newCurrentFocus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YVIEW__CURRENT_FOCUS, oldCurrentFocus, currentFocus));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1081,6 +1180,12 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return getSharedStateGroup();
 			case CoreModelPackage.YVIEW__CATEGORY:
 				return getCategory();
+			case CoreModelPackage.YVIEW__INITIAL_FOCUS:
+				if (resolve) return getInitialFocus();
+				return basicGetInitialFocus();
+			case CoreModelPackage.YVIEW__CURRENT_FOCUS:
+				if (resolve) return getCurrentFocus();
+				return basicGetCurrentFocus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1162,6 +1267,12 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__CATEGORY:
 				setCategory((String)newValue);
 				return;
+			case CoreModelPackage.YVIEW__INITIAL_FOCUS:
+				setInitialFocus((YFocusable)newValue);
+				return;
+			case CoreModelPackage.YVIEW__CURRENT_FOCUS:
+				setCurrentFocus((YFocusable)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1236,6 +1347,12 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 			case CoreModelPackage.YVIEW__CATEGORY:
 				setCategory(CATEGORY_EDEFAULT);
 				return;
+			case CoreModelPackage.YVIEW__INITIAL_FOCUS:
+				setInitialFocus((YFocusable)null);
+				return;
+			case CoreModelPackage.YVIEW__CURRENT_FOCUS:
+				setCurrentFocus((YFocusable)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1289,6 +1406,10 @@ public class YViewImpl extends MinimalEObjectImpl.Container implements YView {
 				return SHARED_STATE_GROUP_EDEFAULT == null ? sharedStateGroup != null : !SHARED_STATE_GROUP_EDEFAULT.equals(sharedStateGroup);
 			case CoreModelPackage.YVIEW__CATEGORY:
 				return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
+			case CoreModelPackage.YVIEW__INITIAL_FOCUS:
+				return initialFocus != null;
+			case CoreModelPackage.YVIEW__CURRENT_FOCUS:
+				return currentFocus != null;
 		}
 		return super.eIsSet(featureID);
 	}

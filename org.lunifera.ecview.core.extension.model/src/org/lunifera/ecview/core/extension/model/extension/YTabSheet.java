@@ -4,6 +4,7 @@ package org.lunifera.ecview.core.extension.model.extension;
 
 import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +22,7 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddable;
  * @model
  * @generated
  */
-public interface YTabSheet extends YEmbeddable {
+public interface YTabSheet extends YEmbeddable, YFocusable {
 	/**
 	 * Returns the value of the '<em><b>Tabs</b></em>' containment reference list.
 	 * The list contents are of type {@link org.lunifera.ecview.core.extension.model.extension.YTab}.

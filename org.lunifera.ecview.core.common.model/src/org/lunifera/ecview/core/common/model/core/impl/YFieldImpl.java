@@ -30,6 +30,7 @@ import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YEditable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.impl.custom.ChangeAdapter;
 import org.lunifera.ecview.core.common.model.core.listeners.YValueChangeListener;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
@@ -44,6 +45,7 @@ import org.lunifera.ecview.core.common.model.validation.YValidator;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#isEditable <em>Editable</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#isInitialEnabled <em>Initial Enabled</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#isEnabled <em>Enabled</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#getTabIndex <em>Tab Index</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#getValidators <em>Validators</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#getInternalValidators <em>Internal Validators</em>}</li>
  * </ul>
@@ -121,6 +123,24 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 	 */
 	protected boolean enabled = ENABLED_EDEFAULT;
 
+	/**
+	 * The default value of the '{@link #getTabIndex() <em>Tab Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTabIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TAB_INDEX_EDEFAULT = -1;
+	/**
+	 * The cached value of the '{@link #getTabIndex() <em>Tab Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTabIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected int tabIndex = TAB_INDEX_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getValidators() <em>Validators</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -244,6 +264,27 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 		enabled = newEnabled;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YFIELD__ENABLED, oldEnabled, enabled));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getTabIndex() {
+		return tabIndex;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTabIndex(int newTabIndex) {
+		int oldTabIndex = tabIndex;
+		tabIndex = newTabIndex;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YFIELD__TAB_INDEX, oldTabIndex, tabIndex));
 	}
 
 	/**
@@ -429,6 +470,8 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				return isInitialEnabled();
 			case CoreModelPackage.YFIELD__ENABLED:
 				return isEnabled();
+			case CoreModelPackage.YFIELD__TAB_INDEX:
+				return getTabIndex();
 			case CoreModelPackage.YFIELD__VALIDATORS:
 				return getValidators();
 			case CoreModelPackage.YFIELD__INTERNAL_VALIDATORS:
@@ -456,6 +499,9 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				return;
 			case CoreModelPackage.YFIELD__ENABLED:
 				setEnabled((Boolean)newValue);
+				return;
+			case CoreModelPackage.YFIELD__TAB_INDEX:
+				setTabIndex((Integer)newValue);
 				return;
 			case CoreModelPackage.YFIELD__VALIDATORS:
 				getValidators().clear();
@@ -488,6 +534,9 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 			case CoreModelPackage.YFIELD__ENABLED:
 				setEnabled(ENABLED_EDEFAULT);
 				return;
+			case CoreModelPackage.YFIELD__TAB_INDEX:
+				setTabIndex(TAB_INDEX_EDEFAULT);
+				return;
 			case CoreModelPackage.YFIELD__VALIDATORS:
 				getValidators().clear();
 				return;
@@ -513,6 +562,8 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				return initialEnabled != INITIAL_ENABLED_EDEFAULT;
 			case CoreModelPackage.YFIELD__ENABLED:
 				return enabled != ENABLED_EDEFAULT;
+			case CoreModelPackage.YFIELD__TAB_INDEX:
+				return tabIndex != TAB_INDEX_EDEFAULT;
 			case CoreModelPackage.YFIELD__VALIDATORS:
 				return validators != null && !validators.isEmpty();
 			case CoreModelPackage.YFIELD__INTERNAL_VALIDATORS:
@@ -541,6 +592,12 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				default: return -1;
 			}
 		}
+		if (baseClass == YFocusable.class) {
+			switch (derivedFeatureID) {
+				case CoreModelPackage.YFIELD__TAB_INDEX: return CoreModelPackage.YFOCUSABLE__TAB_INDEX;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -564,6 +621,12 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				default: return -1;
 			}
 		}
+		if (baseClass == YFocusable.class) {
+			switch (baseFeatureID) {
+				case CoreModelPackage.YFOCUSABLE__TAB_INDEX: return CoreModelPackage.YFIELD__TAB_INDEX;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -584,6 +647,8 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 		result.append(initialEnabled);
 		result.append(", enabled: ");
 		result.append(enabled);
+		result.append(", tabIndex: ");
+		result.append(tabIndex);
 		result.append(')');
 		return result.toString();
 	}

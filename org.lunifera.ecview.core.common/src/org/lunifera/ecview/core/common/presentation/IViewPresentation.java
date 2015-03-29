@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.concurrent.Future;
 
 import org.lunifera.ecview.core.common.editpart.IDialogEditpart;
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.services.IUiKitBasedService;
@@ -79,10 +80,12 @@ public interface IViewPresentation<C> extends IWidgetPresentation<C> {
 	 * Opens the dialog.
 	 * 
 	 * @param dialogEditpart
-	 * @param inputData this object contains information about the input data of the
+	 * @param inputData
+	 *            this object contains information about the input data of the
 	 *            target navigation page.
 	 */
-	void openDialog(IDialogEditpart dialogEditpart, IBindableEndpointEditpart inputData);
+	void openDialog(IDialogEditpart dialogEditpart,
+			IBindableEndpointEditpart inputData);
 
 	/**
 	 * Closes the dialog.
@@ -90,5 +93,12 @@ public interface IViewPresentation<C> extends IWidgetPresentation<C> {
 	 * @param dialogEditpart
 	 */
 	void closeDialog(IDialogEditpart dialogEditpart);
+
+	/**
+	 * Requests the focus for the given element.
+	 * 
+	 * @param toFocus
+	 */
+	void requestFocus(IElementEditpart toFocus);
 
 }

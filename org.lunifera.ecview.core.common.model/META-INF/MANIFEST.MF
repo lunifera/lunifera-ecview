@@ -75,5 +75,6 @@ Export-Package: org.lunifera.ecview.core.common.model.binding;version="0.9.1";
    org.eclipse.emf.common.notify"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.lunifera.ecview.core.common.model;bundle-version="[0.9.0,0.10.0)"
+ org.lunifera.ecview.core.common.model;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.runtime.common;bundle-version="[0.9.1,0.10.0)"
 Bundle-ActivationPolicy: lazy

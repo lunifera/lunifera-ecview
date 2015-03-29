@@ -6,7 +6,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
@@ -19,6 +21,7 @@ import org.lunifera.ecview.core.extension.model.extension.YPanel;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl#getTabIndex <em>Tab Index</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl#getDatadescription <em>Datadescription</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl#getFirstContent <em>First Content</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YPanelImpl#getSecondContent <em>Second Content</em>}</li>
@@ -28,6 +31,26 @@ import org.lunifera.ecview.core.extension.model.extension.YPanel;
  * @generated
  */
 public class YPanelImpl extends YLayoutImpl implements YPanel {
+	/**
+	 * The default value of the '{@link #getTabIndex() <em>Tab Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTabIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TAB_INDEX_EDEFAULT = -1;
+
+	/**
+	 * The cached value of the '{@link #getTabIndex() <em>Tab Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTabIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected int tabIndex = TAB_INDEX_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
 	 * <!-- begin-user-doc --> <!--
@@ -73,6 +96,27 @@ public class YPanelImpl extends YLayoutImpl implements YPanel {
 	@Override
 	protected EClass eStaticClass() {
 		return ExtensionModelPackage.Literals.YPANEL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getTabIndex() {
+		return tabIndex;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTabIndex(int newTabIndex) {
+		int oldTabIndex = tabIndex;
+		tabIndex = newTabIndex;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExtensionModelPackage.YPANEL__TAB_INDEX, oldTabIndex, tabIndex));
 	}
 
 	/**
@@ -197,6 +241,8 @@ public class YPanelImpl extends YLayoutImpl implements YPanel {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ExtensionModelPackage.YPANEL__TAB_INDEX:
+				return getTabIndex();
 			case ExtensionModelPackage.YPANEL__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
@@ -217,6 +263,9 @@ public class YPanelImpl extends YLayoutImpl implements YPanel {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ExtensionModelPackage.YPANEL__TAB_INDEX:
+				setTabIndex((Integer)newValue);
+				return;
 			case ExtensionModelPackage.YPANEL__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
 				return;
@@ -237,6 +286,9 @@ public class YPanelImpl extends YLayoutImpl implements YPanel {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ExtensionModelPackage.YPANEL__TAB_INDEX:
+				setTabIndex(TAB_INDEX_EDEFAULT);
+				return;
 			case ExtensionModelPackage.YPANEL__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
@@ -257,6 +309,8 @@ public class YPanelImpl extends YLayoutImpl implements YPanel {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ExtensionModelPackage.YPANEL__TAB_INDEX:
+				return tabIndex != TAB_INDEX_EDEFAULT;
 			case ExtensionModelPackage.YPANEL__DATADESCRIPTION:
 				return datadescription != null;
 			case ExtensionModelPackage.YPANEL__FIRST_CONTENT:
@@ -265,6 +319,54 @@ public class YPanelImpl extends YLayoutImpl implements YPanel {
 				return secondContent != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == YFocusable.class) {
+			switch (derivedFeatureID) {
+				case ExtensionModelPackage.YPANEL__TAB_INDEX: return CoreModelPackage.YFOCUSABLE__TAB_INDEX;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == YFocusable.class) {
+			switch (baseFeatureID) {
+				case CoreModelPackage.YFOCUSABLE__TAB_INDEX: return ExtensionModelPackage.YPANEL__TAB_INDEX;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (tabIndex: ");
+		result.append(tabIndex);
+		result.append(')');
+		return result.toString();
 	}
 
 	/**
