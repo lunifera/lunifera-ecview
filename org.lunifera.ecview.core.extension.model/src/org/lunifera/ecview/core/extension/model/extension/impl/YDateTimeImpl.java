@@ -497,6 +497,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 		if (dt == null) {
 			dt = ExtDatatypesFactory.eINSTANCE.createYDateTimeDatatype();
 			setDatatype(dt);
+			getOrphanDatatypes().add(dt);
 		}
 		dt.setFormat(format);
 	}
@@ -507,6 +508,7 @@ public class YDateTimeImpl extends YInputImpl implements YDateTime {
 		if (dt == null) {
 			dt = ExtDatatypesFactory.eINSTANCE.createYDateTimeDatatype();
 			setDatatype(dt);
+			getOrphanDatatypes().add(dt);
 		}
 		dt.setResolution(resolution);
 	}
