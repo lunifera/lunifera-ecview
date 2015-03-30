@@ -2,6 +2,7 @@
  */
 package org.lunifera.ecview.core.extension.model.extension;
 
+import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
@@ -18,6 +19,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTab#getParent <em>Parent</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTab#getEmbeddable <em>Embeddable</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTab#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.YTab#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}</li>
  * </ul>
  * </p>
  *
@@ -105,6 +107,22 @@ public interface YTab extends YElement, YCssAble {
 	 * @generated
 	 */
 	void setDatadescription(YDatadescription value);
+
+	/**
+	 * Returns the value of the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.datatypes.YDatadescription}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Orphan Datadescriptions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Orphan Datadescriptions</em>' containment reference list.
+	 * @see org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage#getYTab_OrphanDatadescriptions()
+	 * @model containment="true" resolveProxies="true"
+	 * @generated
+	 */
+	EList<YDatadescription> getOrphanDatadescriptions();
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

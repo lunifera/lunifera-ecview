@@ -5605,13 +5605,22 @@ public interface ExtensionModelPackage extends EPackage {
 	int YTAB__DATADESCRIPTION = CoreModelPackage.YELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YTAB__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>YTab</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YTAB_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
+	int YTAB_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YMasterDetailImpl <em>YMaster Detail</em>}' class.
@@ -10273,6 +10282,17 @@ public interface ExtensionModelPackage extends EPackage {
 	EReference getYTab_Datadescription();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.ecview.core.extension.model.extension.YTab#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Orphan Datadescriptions</em>'.
+	 * @see org.lunifera.ecview.core.extension.model.extension.YTab#getOrphanDatadescriptions()
+	 * @see #getYTab()
+	 * @generated
+	 */
+	EReference getYTab_OrphanDatadescriptions();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.extension.model.extension.YMasterDetail <em>YMaster Detail</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12833,6 +12853,14 @@ public interface ExtensionModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference YTAB__DATADESCRIPTION = eINSTANCE.getYTab_Datadescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YTAB__ORPHAN_DATADESCRIPTIONS = eINSTANCE.getYTab_OrphanDatadescriptions();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.extension.model.extension.impl.YMasterDetailImpl <em>YMaster Detail</em>}' class.

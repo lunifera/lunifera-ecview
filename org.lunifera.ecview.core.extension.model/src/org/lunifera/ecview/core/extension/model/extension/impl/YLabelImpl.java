@@ -34,8 +34,8 @@ import org.lunifera.ecview.core.extension.model.extension.YLabel;
 public class YLabelImpl extends YFieldImpl implements YLabel {
 	/**
 	 * The cached value of the '{@link #getValueBindingEndpoint() <em>Value Binding Endpoint</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getValueBindingEndpoint()
 	 * @generated
 	 * @ordered
@@ -54,8 +54,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
@@ -63,8 +62,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	protected static final String VALUE_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
@@ -89,8 +87,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableValueEndpoint getValueBindingEndpoint() {
@@ -106,8 +103,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YEmbeddableValueEndpoint basicGetValueBindingEndpoint() {
@@ -115,11 +111,12 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValueBindingEndpoint(YEmbeddableValueEndpoint newValueBindingEndpoint, NotificationChain msgs) {
+	public NotificationChain basicSetValueBindingEndpoint(
+			YEmbeddableValueEndpoint newValueBindingEndpoint,
+			NotificationChain msgs) {
 		YEmbeddableValueEndpoint oldValueBindingEndpoint = valueBindingEndpoint;
 		valueBindingEndpoint = newValueBindingEndpoint;
 		if (eNotificationRequired()) {
@@ -130,11 +127,11 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValueBindingEndpoint(YEmbeddableValueEndpoint newValueBindingEndpoint) {
+	public void setValueBindingEndpoint(
+			YEmbeddableValueEndpoint newValueBindingEndpoint) {
 		if (newValueBindingEndpoint != valueBindingEndpoint) {
 			NotificationChain msgs = null;
 			if (valueBindingEndpoint != null)
@@ -184,8 +181,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getValue() {
@@ -193,8 +189,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setValue(String newValue) {
@@ -227,12 +222,12 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ExtensionModelPackage.YLABEL__VALUE_BINDING_ENDPOINT:
 				if (valueBindingEndpoint != null)
@@ -243,12 +238,12 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ExtensionModelPackage.YLABEL__VALUE_BINDING_ENDPOINT:
 				return basicSetValueBindingEndpoint(null, msgs);
@@ -333,8 +328,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -354,8 +348,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -375,8 +368,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -389,7 +381,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 		result.append(')');
 		return result.toString();
 	}
-	
+
 	/**
 	 * Sets the label by creating a new datadescription.
 	 * 
@@ -399,6 +391,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescription(label));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabel(label);
 		}
@@ -413,6 +406,7 @@ public class YLabelImpl extends YFieldImpl implements YLabel {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescriptionForI18n(i18nKey));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabelI18nKey(i18nKey);
 		}

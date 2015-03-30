@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -43,6 +44,7 @@ import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getEmbeddable <em>Embeddable</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.extension.model.extension.impl.YTabImpl#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}</li>
  * </ul>
  * </p>
  *
@@ -153,6 +155,16 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 	 * @ordered
 	 */
 	protected YDatadescription datadescription;
+
+	/**
+	 * The cached value of the '{@link #getOrphanDatadescriptions() <em>Orphan Datadescriptions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrphanDatadescriptions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<YDatadescription> orphanDatadescriptions;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -407,6 +419,18 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<YDatadescription> getOrphanDatadescriptions() {
+		if (orphanDatadescriptions == null) {
+			orphanDatadescriptions = new EObjectContainmentEList.Resolving<YDatadescription>(YDatadescription.class, this, ExtensionModelPackage.YTAB__ORPHAN_DATADESCRIPTIONS);
+		}
+		return orphanDatadescriptions;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -479,6 +503,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 				return basicSetParent(null, msgs);
 			case ExtensionModelPackage.YTAB__EMBEDDABLE:
 				return basicSetEmbeddable(null, msgs);
+			case ExtensionModelPackage.YTAB__ORPHAN_DATADESCRIPTIONS:
+				return ((InternalEList<?>)getOrphanDatadescriptions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -526,6 +552,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 			case ExtensionModelPackage.YTAB__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
+			case ExtensionModelPackage.YTAB__ORPHAN_DATADESCRIPTIONS:
+				return getOrphanDatadescriptions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -566,6 +594,10 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 			case ExtensionModelPackage.YTAB__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
 				return;
+			case ExtensionModelPackage.YTAB__ORPHAN_DATADESCRIPTIONS:
+				getOrphanDatadescriptions().clear();
+				getOrphanDatadescriptions().addAll((Collection<? extends YDatadescription>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -604,6 +636,9 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 			case ExtensionModelPackage.YTAB__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
+			case ExtensionModelPackage.YTAB__ORPHAN_DATADESCRIPTIONS:
+				getOrphanDatadescriptions().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -633,6 +668,8 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 				return embeddable != null;
 			case ExtensionModelPackage.YTAB__DATADESCRIPTION:
 				return datadescription != null;
+			case ExtensionModelPackage.YTAB__ORPHAN_DATADESCRIPTIONS:
+				return orphanDatadescriptions != null && !orphanDatadescriptions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -701,6 +738,7 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescription(label));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabel(label);
 		}
@@ -715,6 +753,7 @@ public class YTabImpl extends MinimalEObjectImpl.Container implements YTab {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescriptionForI18n(i18nKey));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabelI18nKey(i18nKey);
 		}

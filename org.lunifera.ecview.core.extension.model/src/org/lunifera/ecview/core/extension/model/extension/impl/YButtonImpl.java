@@ -483,6 +483,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescription(label));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabel(label);
 		}
@@ -497,6 +498,7 @@ public class YButtonImpl extends YActionImpl implements YButton {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescriptionForI18n(i18nKey));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabelI18nKey(i18nKey);
 		}

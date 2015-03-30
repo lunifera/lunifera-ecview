@@ -1649,6 +1649,15 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYTab_OrphanDatadescriptions() {
+		return (EReference)yTabEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -2977,6 +2986,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		createEReference(yTabEClass, YTAB__PARENT);
 		createEReference(yTabEClass, YTAB__EMBEDDABLE);
 		createEReference(yTabEClass, YTAB__DATADESCRIPTION);
+		createEReference(yTabEClass, YTAB__ORPHAN_DATADESCRIPTIONS);
 
 		yMasterDetailEClass = createEClass(YMASTER_DETAIL);
 		createEReference(yMasterDetailEClass, YMASTER_DETAIL__DATATYPE);
@@ -3478,6 +3488,7 @@ public class ExtensionModelPackageImpl extends EPackageImpl implements
 		initEReference(getYTab_Parent(), this.getYTabSheet(), this.getYTabSheet_Tabs(), "parent", null, 1, 1, YTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYTab_Embeddable(), theCoreModelPackage.getYEmbeddable(), null, "embeddable", null, 1, 1, YTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYTab_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, YTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYTab_OrphanDatadescriptions(), theDatatypesPackage.getYDatadescription(), null, "orphanDatadescriptions", null, 0, -1, YTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yTabEClass, theCoreModelPackage.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 

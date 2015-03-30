@@ -1078,7 +1078,6 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 	 * 
 	 * @param label
 	 */
-	@SuppressWarnings("restriction")
 	public void setLabel(String label) {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
@@ -1094,7 +1093,6 @@ public class YBeanReferenceFieldImpl extends YInputImpl implements YBeanReferenc
 	 * 
 	 * @param label
 	 */
-	@SuppressWarnings("restriction")
 	public void setLabelI18nKey(String i18nKey) {
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
