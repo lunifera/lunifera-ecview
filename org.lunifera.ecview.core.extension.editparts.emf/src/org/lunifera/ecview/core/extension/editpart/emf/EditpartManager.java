@@ -138,7 +138,6 @@ import org.osgi.service.component.ComponentContext;
  * An implementation of IEditPartManager for eObjects with
  * nsURI=http://eclipse.org/emf/emfclient/uimodel.
  */
-@SuppressWarnings("restriction")
 public class EditpartManager extends AbstractEditpartManager {
 
 	protected void activate(ComponentContext context) {
