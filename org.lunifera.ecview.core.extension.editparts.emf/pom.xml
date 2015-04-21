@@ -19,11 +19,7 @@
   <parent>
   	<groupId>org.lunifera.ecview.core</groupId>
   	<artifactId>org.lunifera.ecview.core</artifactId>
-<<<<<<< HEAD
   	<version>0.9.1-SNAPSHOT</version>
-=======
-  	<version>0.9.0</version>
->>>>>>> a62180e... Merge branch 'master' of git@github.com:lunifera/lunifera-ecview.git
   </parent>
   <packaging>eclipse-plugin</packaging>
 </project>
