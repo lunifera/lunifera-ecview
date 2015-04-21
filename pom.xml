@@ -426,12 +426,4 @@
 	</build>
 	<name>ECView parent</name>
 	<description>ECView parent</description>
-<<<<<<< HEAD
-=======
-	<parent>
-		<groupId>org.lunifera.releng.maven</groupId>
-		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
-		<version>0.12.5-SNAPSHOT</version>
-	</parent>
->>>>>>> a62180e... Merge branch 'master' of git@github.com:lunifera/lunifera-ecview.git
 </project>
