@@ -129,62 +129,64 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	@Override
 	public void render(Map<String, Object> options) throws ContextException {
 		checkDisposed();
+		try {
+			validateModel();
 
-		validateModel();
-
-		if (configuration != null) {
-			configuration.beforeUiRendering(getContext());
-		}
-
-		// ensure that the bean slots are initialized
-		for (YBeanSlot yBeanSlot : getModel().getBeanSlots()) {
-			internalAddBeanSlot(yBeanSlot);
-		}
-
-		// register the context as a bean slot
-		context.createBeanSlot(BEANSLOT__ECVIEW_CONTEXT, IViewContext.class);
-		context.setBean(BEANSLOT__ECVIEW_CONTEXT, getContext());
-
-		// Will create the editparts.
-		internalLoadExposedActions();
-
-		// render the view presentation
-		renderPresentation(options);
-
-		if (configuration != null) {
-			configuration.afterUiRendering(getContext());
-		}
-
-		if (configuration != null) {
-			configuration.beforeBind(getContext());
-		}
-		// render the bindings
-		renderBindings(options);
-
-		// render the commands
-		renderCommands(options);
-
-		// render the visibility processor
-		activateVisibilityProcessor(options);
-
-		if (configuration != null) {
-			configuration.afterBind(getContext());
-		}
-
-		if (getContext() != null) {
-			ILifecycleService service = getContext().getService(
-					ILifecycleService.class.getName());
-			if (service == null) {
-				throw new RuntimeException("ILifecycleService is required");
+			if (configuration != null) {
+				configuration.beforeUiRendering(getContext());
 			}
-			service.addHandler(this);
-		}
 
-		// set the initial focus
-		if (getModel().getInitialFocus() != null) {
-			requestFocus(getModel().getInitialFocus());
-		}
+			// ensure that the bean slots are initialized
+			for (YBeanSlot yBeanSlot : getModel().getBeanSlots()) {
+				internalAddBeanSlot(yBeanSlot);
+			}
 
+			// register the context as a bean slot
+			context.createBeanSlot(BEANSLOT__ECVIEW_CONTEXT, IViewContext.class);
+			context.setBean(BEANSLOT__ECVIEW_CONTEXT, getContext());
+
+			// Will create the editparts.
+			internalLoadExposedActions();
+
+			// render the view presentation
+			renderPresentation(options);
+
+			if (configuration != null) {
+				configuration.afterUiRendering(getContext());
+			}
+
+			if (configuration != null) {
+				configuration.beforeBind(getContext());
+			}
+			// render the bindings
+			renderBindings(options);
+
+			// render the commands
+			renderCommands(options);
+
+			// render the visibility processor
+			activateVisibilityProcessor(options);
+
+			if (configuration != null) {
+				configuration.afterBind(getContext());
+			}
+
+			if (getContext() != null) {
+				ILifecycleService service = getContext().getService(
+						ILifecycleService.class.getName());
+				if (service == null) {
+					throw new RuntimeException("ILifecycleService is required");
+				}
+				service.addHandler(this);
+			}
+
+			// set the initial focus
+			if (getModel().getInitialFocus() != null) {
+				requestFocus(getModel().getInitialFocus());
+			}
+		} catch (Exception ex) {
+			LOGGER.error("{}", ex);
+		}
 	}
 
 	@Override
