@@ -22,7 +22,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ILabelEditpart;
 /**
  * The implementation of the IUiLabelEditpart.
  */
-@SuppressWarnings("restriction")
 public class LabelEditpart extends EmbeddableEditpart<YLabel> implements
 		ILabelEditpart {
 

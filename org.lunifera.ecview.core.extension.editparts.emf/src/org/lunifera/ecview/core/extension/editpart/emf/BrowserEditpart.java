@@ -23,7 +23,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IBrowserEditpart;
 /**
  * The implementation of the IUiCheckBoxEditpart.
  */
-@SuppressWarnings("restriction")
 public class BrowserEditpart extends EmbeddableEditpart<YBrowser> implements
 		IBrowserEditpart {
 

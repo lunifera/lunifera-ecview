@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.INumericSearchFieldE
 /**
  * The implementation of the INumericSearchFieldEditpart.
  */
-@SuppressWarnings("restriction")
 public class NumericSearchFieldEditpart extends
 		FieldEditpart<YNumericSearchField> implements
 		INumericSearchFieldEditpart {

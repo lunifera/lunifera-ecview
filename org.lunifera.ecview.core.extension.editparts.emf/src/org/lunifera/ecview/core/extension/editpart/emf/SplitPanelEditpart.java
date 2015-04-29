@@ -15,7 +15,7 @@ import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.YSplitPanel;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ISplitPanelEditpart;
 
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class SplitPanelEditpart extends LayoutEditpart<YSplitPanel> implements
 		ISplitPanelEditpart {
 

@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ICheckboxEditpart;
 /**
  * The implementation of the IUiCheckBoxEditpart.
  */
-@SuppressWarnings("restriction")
 public class CheckBoxEditpart extends FieldEditpart<YCheckBox> implements
 		ICheckboxEditpart {
 

@@ -3,7 +3,6 @@
 package org.lunifera.ecview.core.extension.model.extension;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;

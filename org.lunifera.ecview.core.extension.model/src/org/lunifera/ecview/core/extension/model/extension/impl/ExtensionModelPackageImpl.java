@@ -3,6 +3,7 @@
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import java.io.InputStream;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;

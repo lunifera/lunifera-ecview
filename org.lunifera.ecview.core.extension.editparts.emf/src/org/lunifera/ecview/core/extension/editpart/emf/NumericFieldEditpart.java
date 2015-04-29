@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.INumericFieldEditpar
 /**
  * The implementation of the IUiNumericFieldEditpart.
  */
-@SuppressWarnings("restriction")
 public class NumericFieldEditpart extends FieldEditpart<YNumericField>
 		implements INumericFieldEditpart {
 

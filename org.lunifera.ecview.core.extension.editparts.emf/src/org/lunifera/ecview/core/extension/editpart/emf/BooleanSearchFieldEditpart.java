@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IBooleanSearchFieldE
 /**
  * The implementation of the IBooleanSearchFieldEditpart.
  */
-@SuppressWarnings("restriction")
 public class BooleanSearchFieldEditpart extends
 		FieldEditpart<YBooleanSearchField> implements
 		IBooleanSearchFieldEditpart {

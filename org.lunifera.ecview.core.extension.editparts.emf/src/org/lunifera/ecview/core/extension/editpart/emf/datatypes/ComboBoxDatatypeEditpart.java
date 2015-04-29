@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IComboBoxD
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class ComboBoxDatatypeEditpart extends
 		DatatypeEditpart<YComboBoxDatatype> implements
 		IComboBoxDatatypeEditpart {

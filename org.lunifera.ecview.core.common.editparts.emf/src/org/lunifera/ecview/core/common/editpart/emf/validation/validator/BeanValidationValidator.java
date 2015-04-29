@@ -47,7 +47,9 @@ public class BeanValidationValidator extends AbstractDisposable implements
 	private final Class<?> beanClass;
 	private Locale locale;
 
+	@SuppressWarnings("unused")
 	private II18nService i18nService;
+	@SuppressWarnings("unused")
 	private final ValidatorFactory javaxBeanValidatorFactory;
 	private final Validator javaxBeanValidator;
 
@@ -133,6 +135,7 @@ public class BeanValidationValidator extends AbstractDisposable implements
 	 * Simple implementation of a message interpolator context that returns
 	 * fixed values.
 	 */
+	@SuppressWarnings("serial")
 	protected static class SimpleContext implements Context, Serializable {
 
 		private final Object value;

@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.lunifera.ecview.core.common.model.binding.*;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
@@ -20,6 +19,7 @@ import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEnd
 import org.lunifera.ecview.core.common.model.binding.YEnumListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YListBinding;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
+import org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint;
 
 /**
  * <!-- begin-user-doc -->

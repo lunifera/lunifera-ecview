@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ITextFieldEditpart;
 /**
  * The implementation of the IUiTextFieldEditpart.
  */
-@SuppressWarnings("restriction")
 public class TextFieldEditpart extends FieldEditpart<YTextField> implements
 		ITextFieldEditpart {
 

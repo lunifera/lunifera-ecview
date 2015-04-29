@@ -3,13 +3,10 @@
 package org.lunifera.ecview.core.extension.model.extension;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.lunifera.ecview.core.common.model.core.YCollectionBindable;
 import org.lunifera.ecview.core.common.model.core.YMultiSelectionBindable;
 import org.lunifera.ecview.core.common.model.core.YSelectionBindable;
-
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
-
 import org.lunifera.ecview.core.extension.model.datatypes.YListDataType;
 
 /**

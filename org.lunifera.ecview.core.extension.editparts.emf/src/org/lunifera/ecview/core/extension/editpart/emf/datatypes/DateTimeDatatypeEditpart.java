@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IDateTimeD
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class DateTimeDatatypeEditpart extends
 		DatatypeEditpart<YDateTimeDatatype> implements
 		IDateTimeDatatypeEditpart {

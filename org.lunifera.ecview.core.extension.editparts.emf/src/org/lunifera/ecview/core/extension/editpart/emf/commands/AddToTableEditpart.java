@@ -16,7 +16,6 @@ import org.lunifera.runtime.common.types.ITypeProviderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings("restriction")
 public class AddToTableEditpart extends CommandEditpart<YAddToTableCommand>
 		implements IAddToTableCommandEditpart {
 

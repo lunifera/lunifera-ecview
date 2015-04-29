@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ITextSearchFieldEdit
 /**
  * The implementation of the ITextSearchFieldEditpart.
  */
-@SuppressWarnings("restriction")
 public class TextSearchFieldEditpart extends FieldEditpart<YTextSearchField>
 		implements ITextSearchFieldEditpart {
 

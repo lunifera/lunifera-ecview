@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumComboBoxEditpar
 /**
  * The implementation of the IUiComboBoxEditpart.
  */
-@SuppressWarnings("restriction")
 public class EnumComboBoxEditpart extends FieldEditpart<YEnumComboBox>
 		implements IEnumComboBoxEditpart {
 

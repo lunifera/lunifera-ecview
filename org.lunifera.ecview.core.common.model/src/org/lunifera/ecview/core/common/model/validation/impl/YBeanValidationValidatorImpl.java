@@ -3,11 +3,8 @@
 package org.lunifera.ecview.core.common.model.validation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
 import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidator;
 import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidatorConfig;

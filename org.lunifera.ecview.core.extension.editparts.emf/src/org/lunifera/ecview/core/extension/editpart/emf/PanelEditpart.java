@@ -18,7 +18,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IPanelEditpart;
 /**
  * The implementation of the IUigridLayoutEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class PanelEditpart extends LayoutEditpart<YPanel> implements IPanelEditpart {
 
 	@Override

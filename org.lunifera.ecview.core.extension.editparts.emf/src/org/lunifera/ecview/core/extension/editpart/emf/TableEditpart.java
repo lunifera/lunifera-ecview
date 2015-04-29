@@ -22,7 +22,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ITableEditpart;
 /**
  * The implementation of the IUiTableEditpart.
  */
-@SuppressWarnings("restriction")
 public class TableEditpart extends FieldEditpart<YTable> implements
 		ITableEditpart {
 

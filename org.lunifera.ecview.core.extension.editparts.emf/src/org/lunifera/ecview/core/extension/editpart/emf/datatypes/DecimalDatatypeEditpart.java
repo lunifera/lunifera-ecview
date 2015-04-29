@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IDecimalDa
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class DecimalDatatypeEditpart extends DatatypeEditpart<YDecimalDatatype>
 		implements IDecimalDatatypeEditpart {
 

@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ITreeEditpart;
 /**
  * The implementation of the IUiTableEditpart.
  */
-@SuppressWarnings("restriction")
 public class TreeEditpart extends FieldEditpart<YTree> implements ITreeEditpart {
 
 	public TreeEditpart() {

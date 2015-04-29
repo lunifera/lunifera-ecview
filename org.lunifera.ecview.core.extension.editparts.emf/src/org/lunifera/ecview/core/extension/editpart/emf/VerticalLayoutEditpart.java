@@ -18,6 +18,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IVerticalLayoutEditp
 /**
  * The implementation of the IUigridLayoutEditpart.
  */
+@SuppressWarnings("unchecked")
 public class VerticalLayoutEditpart extends LayoutEditpart<YVerticalLayout>
 		implements IVerticalLayoutEditpart {
 

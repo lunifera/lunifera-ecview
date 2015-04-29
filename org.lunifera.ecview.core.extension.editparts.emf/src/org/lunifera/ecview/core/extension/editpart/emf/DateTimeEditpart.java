@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IDateTimeEditpart;
 /**
  * The implementation of the IUiCheckBoxEditpart.
  */
-@SuppressWarnings("restriction")
 public class DateTimeEditpart extends FieldEditpart<YDateTime> implements
 		IDateTimeEditpart {
 

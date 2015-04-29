@@ -6,7 +6,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.lunifera.ecview.core.common.model.binding.*;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
@@ -20,6 +19,7 @@ import org.lunifera.ecview.core.common.model.binding.YListBinding;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YElement;
 
 /**

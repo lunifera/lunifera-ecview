@@ -21,7 +21,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.ISearchPanelEditpart
 /**
  * The implementation of the ISearchPanelEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class SearchPanelEditpart extends LayoutEditpart<YSearchPanel> implements
 		ISearchPanelEditpart {
 

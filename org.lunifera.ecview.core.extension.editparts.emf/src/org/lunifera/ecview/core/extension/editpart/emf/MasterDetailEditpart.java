@@ -31,7 +31,6 @@ import org.slf4j.LoggerFactory;
 /**
  * The implementation of the IMasterDetailEditpart.
  */
-@SuppressWarnings("restriction")
 public class MasterDetailEditpart extends EmbeddableEditpart<YMasterDetail>
 		implements IMasterDetailEditpart {
 

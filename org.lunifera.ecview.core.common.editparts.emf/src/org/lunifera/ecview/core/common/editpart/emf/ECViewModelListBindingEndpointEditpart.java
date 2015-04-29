@@ -25,6 +25,7 @@ import org.lunifera.ecview.core.databinding.emf.model.ECViewModelBindable;
  * Responsible to create an observable. The model of this editpart is used to
  * access the getObservableValue from the underlying widget presentation.
  */
+@SuppressWarnings("restriction")
 public class ECViewModelListBindingEndpointEditpart extends
 		BindableListEndpointEditpart<YECViewModelListBindingEndpoint> implements
 		IECViewModelListBindingEndpointEditpart {
@@ -35,7 +36,7 @@ public class ECViewModelListBindingEndpointEditpart extends
 		return BindingFactory.eINSTANCE.createYECViewModelListBindingEndpoint();
 	}
 
-	@SuppressWarnings({ "unchecked", "restriction" })
+	@SuppressWarnings("unchecked")
 	@Override
 	public <A extends IObservableList> A getObservable() {
 		YECViewModelListBindingEndpoint model = getModel();

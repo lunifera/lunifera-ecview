@@ -4,19 +4,14 @@ package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBindable;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
-
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
-
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YReferenceSearchField;
 import org.lunifera.ecview.core.extension.model.extension.YSearchWildcards;

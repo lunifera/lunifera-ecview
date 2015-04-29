@@ -21,7 +21,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IGridLayoutEditpart;
 /**
  * The implementation of the IUigridLayoutEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class GridLayoutEditpart extends LayoutEditpart<YGridLayout> implements
 		IGridLayoutEditpart {
 

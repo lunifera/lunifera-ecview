@@ -21,6 +21,7 @@ public class ECViewBeansObservables {
 	 * @see MasterDetailObservables
 	 * @since 1.2
 	 */
+	@SuppressWarnings("rawtypes")
 	public static IObservableList observeDetailList(IObservableValue master,
 			String propertyName, Class propertyType) {
 		Class beanClass = null;

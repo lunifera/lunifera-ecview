@@ -15,7 +15,6 @@ import org.lunifera.ecview.core.extension.model.extension.YSelectionType;
 import org.lunifera.ecview.core.extension.model.extension.YTable;
 import org.lunifera.ecview.core.ui.core.editparts.extension.commands.IRemoveFromTableCommandEditpart;
 
-@SuppressWarnings("restriction")
 public class RemoveFromTableEditpart extends
 		CommandEditpart<YRemoveFromTableCommand> implements
 		IRemoveFromTableCommandEditpart {

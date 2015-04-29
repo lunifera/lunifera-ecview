@@ -18,7 +18,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IHorizontalLayoutEdi
 /**
  * The implementation of the IUigridLayoutEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class HorizontalLayoutEditpart extends LayoutEditpart<YHorizontalLayout> implements IHorizontalLayoutEditpart {
 
 	@Override

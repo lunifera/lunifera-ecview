@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.ITableData
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class TableDatatypeEditpart extends DatatypeEditpart<YTableDatatype>
 		implements ITableDatatypeEditpart {
 

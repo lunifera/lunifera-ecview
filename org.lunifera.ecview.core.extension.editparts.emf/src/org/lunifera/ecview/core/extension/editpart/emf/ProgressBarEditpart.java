@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IProgressBarEditpart
 /**
  * The implementation of the YProgressBar.
  */
-@SuppressWarnings("restriction")
 public class ProgressBarEditpart extends FieldEditpart<YProgressBar> implements
 		IProgressBarEditpart {
 

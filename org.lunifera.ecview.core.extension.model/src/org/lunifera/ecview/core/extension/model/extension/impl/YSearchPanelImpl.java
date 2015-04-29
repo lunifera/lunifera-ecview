@@ -3,17 +3,12 @@
 package org.lunifera.ecview.core.extension.model.extension.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YSpacingable;
-
 import org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl;
-
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YSearchPanel;
 

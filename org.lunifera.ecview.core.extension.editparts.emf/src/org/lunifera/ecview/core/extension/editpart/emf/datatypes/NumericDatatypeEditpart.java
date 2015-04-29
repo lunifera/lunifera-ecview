@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.INumericDa
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class NumericDatatypeEditpart extends DatatypeEditpart<YNumericDatatype>
 		implements INumericDatatypeEditpart {
 

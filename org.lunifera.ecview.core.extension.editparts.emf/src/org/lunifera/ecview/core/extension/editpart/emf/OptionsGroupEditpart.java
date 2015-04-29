@@ -16,7 +16,6 @@ import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YOptionsGroup;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IOptionsGroupEditpart;
 
-@SuppressWarnings("restriction")
 public class OptionsGroupEditpart extends FieldEditpart<YOptionsGroup>
 		implements IOptionsGroupEditpart {
 

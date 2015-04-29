@@ -8,7 +8,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.lunifera.ecview.core.common.model.visibility.*;
+import org.lunifera.ecview.core.common.model.visibility.VisibilityFactory;
+import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
+import org.lunifera.ecview.core.common.model.visibility.YColor;
+import org.lunifera.ecview.core.common.model.visibility.YVisibilityProcessor;
+import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
 
 /**
  * <!-- begin-user-doc -->

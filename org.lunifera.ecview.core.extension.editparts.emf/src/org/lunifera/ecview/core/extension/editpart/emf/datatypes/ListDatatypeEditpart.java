@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IListDatat
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class ListDatatypeEditpart extends DatatypeEditpart<YListDataType>
 		implements IListDatatypeEditpart {
 

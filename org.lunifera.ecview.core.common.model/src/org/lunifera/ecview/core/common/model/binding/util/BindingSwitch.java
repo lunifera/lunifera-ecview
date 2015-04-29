@@ -5,7 +5,6 @@ package org.lunifera.ecview.core.common.model.binding.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.lunifera.ecview.core.common.model.binding.*;
 import org.lunifera.ecview.core.common.model.binding.BindingPackage;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
@@ -19,6 +18,7 @@ import org.lunifera.ecview.core.common.model.binding.YListBinding;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.binding.YVisibilityProcessorValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YElement;
 
 /**

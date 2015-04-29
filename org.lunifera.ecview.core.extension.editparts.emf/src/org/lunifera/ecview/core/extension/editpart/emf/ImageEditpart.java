@@ -22,7 +22,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IImageEditpart;
 /**
  * The implementation of the IImageEditpart.
  */
-@SuppressWarnings("restriction")
 public class ImageEditpart extends EmbeddableEditpart<YImage> implements
 		IImageEditpart {
 

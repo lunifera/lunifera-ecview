@@ -27,6 +27,7 @@ import org.slf4j.LoggerFactory;
  * Responsible to create an observable. The model of this editpart is used to
  * access the getObservableValue from the underlying widget presentation.
  */
+@SuppressWarnings("restriction")
 public class ECViewModelValueBindingEndpointEditpart extends
 		BindableValueEndpointEditpart<YECViewModelValueBindingEndpoint>
 		implements IECViewModelValueBindingEndpointEditpart {
@@ -40,7 +41,7 @@ public class ECViewModelValueBindingEndpointEditpart extends
 				.createYECViewModelValueBindingEndpoint();
 	}
 
-	@SuppressWarnings({ "unchecked", "restriction" })
+	@SuppressWarnings("unchecked")
 	@Override
 	public <A extends IObservableValue> A getObservable() {
 		YECViewModelValueBindingEndpoint model = getModel();

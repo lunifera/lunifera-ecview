@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.ICheckBoxD
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class CheckBoxDatatypeEditpart extends
 		DatatypeEditpart<YCheckBoxDatatype> implements
 		ICheckBoxDatatypeEditpart {

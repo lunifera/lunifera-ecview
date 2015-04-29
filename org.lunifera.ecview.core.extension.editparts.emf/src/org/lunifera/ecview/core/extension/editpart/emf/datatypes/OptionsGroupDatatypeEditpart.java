@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IOptionsGr
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class OptionsGroupDatatypeEditpart extends
 		DatatypeEditpart<YOptionsGroupDataType> implements
 		IOptionsGroupDatatypeEditpart {

@@ -18,7 +18,7 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IFormLayoutEditpart;
 /**
  * The implementation of the IUigridLayoutEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class FormLayoutEditpart extends LayoutEditpart<YFormLayout> implements
 		IFormLayoutEditpart {
 

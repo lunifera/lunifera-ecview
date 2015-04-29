@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IDecimalFieldEditpar
 /**
  * The implementation of the IUiDecimalFieldEditpart.
  */
-@SuppressWarnings("restriction")
 public class DecimalFieldEditpart extends FieldEditpart<YDecimalField>
 		implements IDecimalFieldEditpart {
 

@@ -28,7 +28,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.presentation.ITabShe
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings("restriction")
 public class TabSheetEditpart extends EmbeddableEditpart<YTabSheet> implements
 		ITabSheetEditpart {
 

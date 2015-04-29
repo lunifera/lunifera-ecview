@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.ITextAreaD
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class TextAreaDatatypeEditpart extends
 		DatatypeEditpart<YTextAreaDatatype> implements
 		ITextAreaDatatypeEditpart {

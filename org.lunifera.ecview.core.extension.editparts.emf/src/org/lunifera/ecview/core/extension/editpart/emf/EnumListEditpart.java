@@ -19,7 +19,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumListEditpart;
 /**
  * The implementation of the IUiCheckBoxEditpart.
  */
-@SuppressWarnings("restriction")
 public class EnumListEditpart extends FieldEditpart<YEnumList> implements
 		IEnumListEditpart {
 

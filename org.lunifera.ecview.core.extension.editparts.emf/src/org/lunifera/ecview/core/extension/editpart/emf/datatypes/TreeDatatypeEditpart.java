@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.ITreeDatat
 /**
  * An edit part for datatypes.
  */
-@SuppressWarnings("restriction")
 public class TreeDatatypeEditpart extends DatatypeEditpart<YTreeDatatype>
 		implements ITreeDatatypeEditpart {
 

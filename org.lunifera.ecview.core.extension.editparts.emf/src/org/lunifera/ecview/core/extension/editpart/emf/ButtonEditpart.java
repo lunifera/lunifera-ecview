@@ -16,7 +16,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IButtonEditpart;
 /**
  * The implementation of the IButtonEditpart.
  */
-@SuppressWarnings("restriction")
 public class ButtonEditpart extends ActionEditpart<YButton> implements
 		IButtonEditpart {
 

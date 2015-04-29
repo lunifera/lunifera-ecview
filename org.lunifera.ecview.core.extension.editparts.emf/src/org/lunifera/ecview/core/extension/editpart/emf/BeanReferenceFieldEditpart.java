@@ -18,7 +18,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.IBeanReferenceFieldE
 /**
  * The implementation of the IUiTextFieldEditpart.
  */
-@SuppressWarnings("restriction")
 public class BeanReferenceFieldEditpart extends
 		FieldEditpart<YBeanReferenceField> implements IBeanReferenceFieldEditpart {
 

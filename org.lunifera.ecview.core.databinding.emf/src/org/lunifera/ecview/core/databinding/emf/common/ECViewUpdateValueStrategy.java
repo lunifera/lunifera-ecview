@@ -216,6 +216,7 @@ public class ECViewUpdateValueStrategy extends EMFUpdateValueStrategy {
 	 * @param type
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private boolean isDate(Object type) {
 		return type instanceof Class
 				&& (((Class<?>) type).isAssignableFrom(Date.class));
@@ -227,6 +228,7 @@ public class ECViewUpdateValueStrategy extends EMFUpdateValueStrategy {
 	 * @param type
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private boolean isString(Object type) {
 		return type == String.class;
 	}

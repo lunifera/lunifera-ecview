@@ -91,7 +91,6 @@ public class ECViewBeanListProperty extends SimpleListProperty {
 		return propertyValue;
 	}
 
-	@SuppressWarnings("unchecked")
 	public INativePropertyListener adaptListener(
 			final ISimplePropertyListener listener) {
 		return new BeanPropertyListener(this, propertyDescriptor, listener) {

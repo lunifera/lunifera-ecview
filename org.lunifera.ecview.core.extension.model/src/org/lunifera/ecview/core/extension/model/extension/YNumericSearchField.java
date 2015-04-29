@@ -3,7 +3,6 @@
 package org.lunifera.ecview.core.extension.model.extension;
 
 import org.lunifera.ecview.core.common.model.core.YValueBindable;
-
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**

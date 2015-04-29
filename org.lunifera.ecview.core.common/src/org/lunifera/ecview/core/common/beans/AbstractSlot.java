@@ -23,6 +23,7 @@ public class AbstractSlot implements ISlot {
 	private final PropertyChangeSupport changeSupport = new PropertyChangeSupport(
 			this);
 
+	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(AbstractSlot.class);
 

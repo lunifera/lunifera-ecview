@@ -25,7 +25,6 @@ import org.lunifera.ecview.core.ui.core.editparts.extension.presentation.ITabPre
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings("restriction")
 public class TabEditpart extends ElementEditpart<YTab> implements ITabEditpart {
 
 	private static final Logger LOGGER = LoggerFactory

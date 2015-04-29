@@ -16,7 +16,6 @@ import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YEnumOptionsGroup;
 import org.lunifera.ecview.core.ui.core.editparts.extension.IEnumOptionsGroupEditpart;
 
-@SuppressWarnings("restriction")
 public class EnumOptionsGroupEditpart extends FieldEditpart<YEnumOptionsGroup>
 		implements IEnumOptionsGroupEditpart {
 
