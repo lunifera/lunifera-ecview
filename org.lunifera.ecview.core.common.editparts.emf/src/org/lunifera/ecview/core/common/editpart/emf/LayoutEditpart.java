@@ -332,14 +332,16 @@ public class LayoutEditpart<M extends YLayout> extends EmbeddableEditpart<M>
 		if (internalGetPresentation() == null) {
 			return;
 		}
+		
+		getPresentation().unrender();
 
-		if (uiElementEditparts != null) {
-			for (IEmbeddableEditpart child : uiElementEditparts
-					.toArray(new IEmbeddableEditpart[uiElementEditparts.size()])) {
-				getPresentation().remove(child);
-				child.unrender();
-			}
-		}
+		// if (uiElementEditparts != null) {
+		// for (IEmbeddableEditpart child : uiElementEditparts
+		// .toArray(new IEmbeddableEditpart[uiElementEditparts.size()])) {
+		//
+		// child.unrender();
+		// }
+		// }
 		
 		super.unrender();
 	}

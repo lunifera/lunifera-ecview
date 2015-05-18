@@ -192,7 +192,6 @@ public class ValueBindingEditpart extends ElementEditpart<YValueBinding>
 		}
 
 		try {
-
 			IECViewBindingManager bindingManager = null;
 			if (getBindindSet() != null) {
 				bindingManager = getBindindSet().getBindingManager();
