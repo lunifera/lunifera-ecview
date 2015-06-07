@@ -8,13 +8,14 @@ Import-Package: org.apache.commons.logging;version="1.0.4",
  org.osgi.framework;version="1.7.0",
  org.osgi.service.component;version="1.2.0",
  org.osgi.service.event;version="1.3.0",
- org.slf4j
+ org.slf4j,
+ org.lunifera.runtime.common.i18n
 Service-Component: OSGI-INF/*.xml
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.apache.commons.beanutils;bundle-version="1.8.0",
  org.eclipse.core.databinding.observable;bundle-version="[1.4.1,1.5.0)",
  org.eclipse.core.databinding;bundle-version="[1.4.1,1.5.0)",
- org.lunifera.runtime.common
+ org.lunifera.runtime.common;bundle-version="[0.9.1,0.10.0)"
 Export-Package: org.lunifera.ecview.core.common;version="0.9.1";uses:="org.lunifera.ecview.core.common.services,org.lunifera.ecview.core.common.beans",
  org.lunifera.ecview.core.common.beans;version="0.9.1",
  org.lunifera.ecview.core.common.binding;version="0.9.1";
