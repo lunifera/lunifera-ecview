@@ -20,9 +20,16 @@ import org.lunifera.ecview.core.common.visibility.IVisibilityManager;
 public class VisibilityManager implements IVisibilityManager {
 
 	private IWidgetAssocationsService<?, ?> associations;
+	private IViewContext context;
 
 	public VisibilityManager(IViewContext context) {
+		this.context = context;
 		associations = context.getService(IWidgetAssocationsService.ID);
+	}
+
+	@Override
+	public IViewContext getViewContext() {
+		return context;
 	}
 
 	@Override
@@ -33,4 +40,5 @@ public class VisibilityManager implements IVisibilityManager {
 		}
 		return new VisibilityHandler((IVisibilityProcessable) editpart);
 	}
+
 }

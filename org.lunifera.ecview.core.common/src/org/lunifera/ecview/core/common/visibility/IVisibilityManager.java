@@ -10,7 +10,16 @@
  */
 package org.lunifera.ecview.core.common.visibility;
 
+import org.lunifera.ecview.core.common.context.IViewContext;
+
 public interface IVisibilityManager {
+
+	/**
+	 * Returns the view context.
+	 * 
+	 * @return
+	 */
+	IViewContext getViewContext();
 
 	/**
 	 * Returns the visibility handler for the given id.
