@@ -11,7 +11,6 @@
 package org.lunifera.ecview.core.common.model.core.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;

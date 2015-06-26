@@ -10,14 +10,22 @@
  */
 package org.lunifera.ecview.core.common.visibility.impl;
 
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessable;
+import org.lunifera.ecview.core.common.services.IWidgetAssocationsService;
 import org.lunifera.ecview.core.common.visibility.Color;
 import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class VisibilityHandler implements IVisibilityHandler {
 
-	private final IVisibilityProcessable editpart;
-	
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(VisibilityHandler.class);
+
+	private final IWidgetAssocationsService<?, ?> associations;
+	private final String id;
+
 	private Color foregroundColor;
 	private Color backgroundColor;
 	private String foregroundColorCode;
@@ -31,12 +39,37 @@ public class VisibilityHandler implements IVisibilityHandler {
 	private boolean strikethrough;
 	private boolean underline;
 
-	public VisibilityHandler(IVisibilityProcessable editpart) {
-		this.editpart = editpart;
-		
+	private String cssClass;
+
+	private String cssId;
+
+	public VisibilityHandler(IWidgetAssocationsService<?, ?> associations,
+			String id) throws NotValidProcessableException {
+		this.associations = associations;
+		this.id = id;
+
+		// access the processable. Exception is thrown if not a valid element.
+		getProcessable();
+
 		reset();
 	}
-	
+
+	/**
+	 * Returns the {@link IVisibilityProcessable} for the id.
+	 * 
+	 * @return
+	 */
+	protected IVisibilityProcessable getProcessable()
+			throws NotValidProcessableException {
+		IElementEditpart editpart = associations.getEditpart(id);
+		if (editpart == null || !(editpart instanceof IVisibilityProcessable)) {
+			throw new IllegalArgumentException(id
+					+ " is not a valid IVisibilityProcessable");
+		}
+
+		return (IVisibilityProcessable) editpart;
+	}
+
 	@Override
 	public void reset() {
 		foregroundColor = Color.UNDEFINED;
@@ -234,8 +267,32 @@ public class VisibilityHandler implements IVisibilityHandler {
 	}
 
 	@Override
+	public String getCssClass() {
+		return cssClass;
+	}
+
+	@Override
+	public void setCssClass(String cssClass) {
+		this.cssClass = cssClass;
+	}
+
+	@Override
+	public String getCssId() {
+		return cssId;
+	}
+
+	@Override
+	public void setCssId(String cssId) {
+		this.cssId = cssId;
+	}
+
+	@Override
 	public void apply() {
-		editpart.apply(this);
+		try {
+			getProcessable().apply(this);
+		} catch (Exception e) {
+			LOGGER.error("{}", e);
+		}
 	}
 
 }

@@ -28,6 +28,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="foregroundColor" eType="#//YColor"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColorCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="foregroundColorCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cssClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cssId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YColor">
     <eLiterals name="UNDEFINED" literal="UNDEFINED"/>

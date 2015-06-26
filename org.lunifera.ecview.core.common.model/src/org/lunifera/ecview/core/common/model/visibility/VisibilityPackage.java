@@ -303,13 +303,31 @@ public interface VisibilityPackage extends EPackage {
 	int YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE = CoreModelPackage.YELEMENT_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROPERTIES__CSS_CLASS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Css Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YVISIBILITY_PROPERTIES__CSS_ID = CoreModelPackage.YELEMENT_FEATURE_COUNT + 13;
+
+	/**
 	 * The number of structural features of the '<em>YVisibility Properties</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YVISIBILITY_PROPERTIES_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 12;
+	int YVISIBILITY_PROPERTIES_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}' enum.
@@ -518,6 +536,28 @@ public interface VisibilityPackage extends EPackage {
 	EAttribute getYVisibilityProperties_ForegroundColorCode();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssClass <em>Css Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Css Class</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssClass()
+	 * @see #getYVisibilityProperties()
+	 * @generated
+	 */
+	EAttribute getYVisibilityProperties_CssClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssId <em>Css Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Css Id</em>'.
+	 * @see org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssId()
+	 * @see #getYVisibilityProperties()
+	 * @generated
+	 */
+	EAttribute getYVisibilityProperties_CssId();
+
+	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -696,6 +736,22 @@ public interface VisibilityPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE = eINSTANCE.getYVisibilityProperties_ForegroundColorCode();
+
+		/**
+		 * The meta object literal for the '<em><b>Css Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVISIBILITY_PROPERTIES__CSS_CLASS = eINSTANCE.getYVisibilityProperties_CssClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Css Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YVISIBILITY_PROPERTIES__CSS_ID = eINSTANCE.getYVisibilityProperties_CssId();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.visibility.YColor <em>YColor</em>}' enum.

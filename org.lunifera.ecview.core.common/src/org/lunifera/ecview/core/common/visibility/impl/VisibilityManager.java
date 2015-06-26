@@ -11,20 +11,23 @@
 package org.lunifera.ecview.core.common.visibility.impl;
 
 import org.lunifera.ecview.core.common.context.IViewContext;
-import org.lunifera.ecview.core.common.editpart.IElementEditpart;
-import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessable;
 import org.lunifera.ecview.core.common.services.IWidgetAssocationsService;
 import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
 import org.lunifera.ecview.core.common.visibility.IVisibilityManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class VisibilityManager implements IVisibilityManager {
+
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(VisibilityManager.class);
 
 	private IWidgetAssocationsService<?, ?> associations;
 	private IViewContext context;
 
 	public VisibilityManager(IViewContext context) {
 		this.context = context;
-		associations = context.getService(IWidgetAssocationsService.ID);
+		this.associations = context.getService(IWidgetAssocationsService.ID);
 	}
 
 	@Override
@@ -34,11 +37,12 @@ public class VisibilityManager implements IVisibilityManager {
 
 	@Override
 	public IVisibilityHandler getById(String id) {
-		IElementEditpart editpart = associations.getEditpart(id);
-		if (editpart == null || !(editpart instanceof IVisibilityProcessable)) {
-			return null;
+		try {
+			return new VisibilityHandler(associations, id);
+		} catch (Exception e) {
+			LOGGER.error("{}", e);
 		}
-		return new VisibilityHandler((IVisibilityProcessable) editpart);
-	}
 
+		return null;
+	}
 }

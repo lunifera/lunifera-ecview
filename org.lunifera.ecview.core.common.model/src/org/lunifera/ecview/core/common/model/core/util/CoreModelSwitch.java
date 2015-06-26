@@ -11,7 +11,6 @@
 package org.lunifera.ecview.core.common.model.core.util;
 
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;

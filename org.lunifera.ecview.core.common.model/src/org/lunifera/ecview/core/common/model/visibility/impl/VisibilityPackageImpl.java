@@ -293,6 +293,24 @@ public class VisibilityPackageImpl extends EPackageImpl implements VisibilityPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getYVisibilityProperties_CssClass() {
+		return (EAttribute)yVisibilityPropertiesEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYVisibilityProperties_CssId() {
+		return (EAttribute)yVisibilityPropertiesEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYColor() {
 		return yColorEEnum;
 	}
@@ -344,6 +362,8 @@ public class VisibilityPackageImpl extends EPackageImpl implements VisibilityPac
 		createEAttribute(yVisibilityPropertiesEClass, YVISIBILITY_PROPERTIES__FOREGROUND_COLOR);
 		createEAttribute(yVisibilityPropertiesEClass, YVISIBILITY_PROPERTIES__BACKGROUND_COLOR_CODE);
 		createEAttribute(yVisibilityPropertiesEClass, YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE);
+		createEAttribute(yVisibilityPropertiesEClass, YVISIBILITY_PROPERTIES__CSS_CLASS);
+		createEAttribute(yVisibilityPropertiesEClass, YVISIBILITY_PROPERTIES__CSS_ID);
 
 		// Create enums
 		yColorEEnum = createEEnum(YCOLOR);
@@ -407,6 +427,8 @@ public class VisibilityPackageImpl extends EPackageImpl implements VisibilityPac
 		initEAttribute(getYVisibilityProperties_ForegroundColor(), this.getYColor(), "foregroundColor", null, 0, 1, YVisibilityProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYVisibilityProperties_BackgroundColorCode(), ecorePackage.getEString(), "backgroundColorCode", null, 0, 1, YVisibilityProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYVisibilityProperties_ForegroundColorCode(), ecorePackage.getEString(), "foregroundColorCode", null, 0, 1, YVisibilityProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYVisibilityProperties_CssClass(), ecorePackage.getEString(), "cssClass", null, 0, 1, YVisibilityProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYVisibilityProperties_CssId(), ecorePackage.getEString(), "cssId", null, 0, 1, YVisibilityProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(yColorEEnum, YColor.class, "YColor");
