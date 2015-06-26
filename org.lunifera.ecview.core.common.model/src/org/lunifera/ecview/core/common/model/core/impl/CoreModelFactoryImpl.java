@@ -4,7 +4,6 @@ package org.lunifera.ecview.core.common.model.core.impl;
 
 import java.net.URI;
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

@@ -22,7 +22,9 @@ public interface IVisibilityManager {
 	IViewContext getViewContext();
 
 	/**
-	 * Returns the visibility handler for the given id.
+	 * Returns the visibility handler for the given id. Or <code>null</code> if
+	 * no element could be found, or if the element is not a valid
+	 * IVisibilityProcessable.
 	 * 
 	 * @param id
 	 * @return

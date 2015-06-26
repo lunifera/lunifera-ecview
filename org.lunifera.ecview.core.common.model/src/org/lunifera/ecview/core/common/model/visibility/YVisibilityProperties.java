@@ -32,6 +32,8 @@ import org.lunifera.ecview.core.common.model.core.YElement;
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColor <em>Foreground Color</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getBackgroundColorCode <em>Background Color Code</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getForegroundColorCode <em>Foreground Color Code</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssClass <em>Css Class</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssId <em>Css Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -357,5 +359,57 @@ public interface YVisibilityProperties extends YElement {
 	 * @generated
 	 */
 	void setForegroundColorCode(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Css Class</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Css Class</em>' attribute.
+	 * @see #setCssClass(String)
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProperties_CssClass()
+	 * @model
+	 * @generated
+	 */
+	String getCssClass();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssClass <em>Css Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Css Class</em>' attribute.
+	 * @see #getCssClass()
+	 * @generated
+	 */
+	void setCssClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Css Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Css Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Css Id</em>' attribute.
+	 * @see #setCssId(String)
+	 * @see org.lunifera.ecview.core.common.model.visibility.VisibilityPackage#getYVisibilityProperties_CssId()
+	 * @model
+	 * @generated
+	 */
+	String getCssId();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties#getCssId <em>Css Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Css Id</em>' attribute.
+	 * @see #getCssId()
+	 * @generated
+	 */
+	void setCssId(String value);
 
 } // YVisibilityProperties

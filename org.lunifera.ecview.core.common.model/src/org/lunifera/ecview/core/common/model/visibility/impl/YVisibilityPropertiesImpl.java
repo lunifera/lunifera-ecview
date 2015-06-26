@@ -53,6 +53,8 @@ import org.lunifera.ecview.core.common.model.visibility.YVisibilityProperties;
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getForegroundColor <em>Foreground Color</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getBackgroundColorCode <em>Background Color Code</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getForegroundColorCode <em>Foreground Color Code</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getCssClass <em>Css Class</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.visibility.impl.YVisibilityPropertiesImpl#getCssId <em>Css Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -358,6 +360,46 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected String foregroundColorCode = FOREGROUND_COLOR_CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCssClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CSS_CLASS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCssClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cssClass = CSS_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCssId() <em>Css Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCssId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CSS_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCssId() <em>Css Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCssId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cssId = CSS_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -701,6 +743,48 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCssClass() {
+		return cssClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCssClass(String newCssClass) {
+		String oldCssClass = cssClass;
+		cssClass = newCssClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_CLASS, oldCssClass, cssClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCssId() {
+		return cssId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCssId(String newCssId) {
+		String oldCssId = cssId;
+		cssId = newCssId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_ID, oldCssId, cssId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -751,6 +835,10 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 				return getBackgroundColorCode();
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
 				return getForegroundColorCode();
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_CLASS:
+				return getCssClass();
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_ID:
+				return getCssId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -813,6 +901,12 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
 				setForegroundColorCode((String)newValue);
 				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_CLASS:
+				setCssClass((String)newValue);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_ID:
+				setCssId((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -873,6 +967,12 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
 				setForegroundColorCode(FOREGROUND_COLOR_CODE_EDEFAULT);
 				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_CLASS:
+				setCssClass(CSS_CLASS_EDEFAULT);
+				return;
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_ID:
+				setCssId(CSS_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -917,6 +1017,10 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 				return BACKGROUND_COLOR_CODE_EDEFAULT == null ? backgroundColorCode != null : !BACKGROUND_COLOR_CODE_EDEFAULT.equals(backgroundColorCode);
 			case VisibilityPackage.YVISIBILITY_PROPERTIES__FOREGROUND_COLOR_CODE:
 				return FOREGROUND_COLOR_CODE_EDEFAULT == null ? foregroundColorCode != null : !FOREGROUND_COLOR_CODE_EDEFAULT.equals(foregroundColorCode);
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_CLASS:
+				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
+			case VisibilityPackage.YVISIBILITY_PROPERTIES__CSS_ID:
+				return CSS_ID_EDEFAULT == null ? cssId != null : !CSS_ID_EDEFAULT.equals(cssId);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -961,6 +1065,10 @@ public class YVisibilityPropertiesImpl extends MinimalEObjectImpl.Container impl
 		result.append(backgroundColorCode);
 		result.append(", foregroundColorCode: ");
 		result.append(foregroundColorCode);
+		result.append(", cssClass: ");
+		result.append(cssClass);
+		result.append(", cssId: ");
+		result.append(cssId);
 		result.append(')');
 		return result.toString();
 	}

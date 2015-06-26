@@ -16,7 +16,7 @@ public interface IVisibilityHandler {
 	 * Resets the options to their default values.
 	 */
 	void reset();
-	
+
 	/**
 	 * Returns the foregroundColor property or <code>null</code> if not present.
 	 */
@@ -178,8 +178,44 @@ public interface IVisibilityHandler {
 	void setUnderline(final boolean underline);
 
 	/**
+	 * Returns the css value or <code>null</code> if not present.
+	 */
+	String getCssClass();
+
+	/**
+	 * Sets the <code>cssClass</code> property to this instance.
+	 * 
+	 * @param cssClass
+	 *            - the property
+	 * 
+	 */
+	void setCssClass(String cssClass);
+
+	/**
+	 * Returns the css ID or <code>null</code> if not present.
+	 */
+	String getCssId();
+
+	/**
+	 * Sets the <code>cssId</code> property to this instance.
+	 * 
+	 * @param cssId
+	 *            - the property
+	 * 
+	 */
+	void setCssId(String cssId);
+
+	/**
 	 * Applies the options to the assigned UI element.
 	 */
 	void apply();
+
+	public class NotValidProcessableException extends Exception {
+
+		public NotValidProcessableException(String message) {
+			super(message);
+		}
+
+	}
 
 }
