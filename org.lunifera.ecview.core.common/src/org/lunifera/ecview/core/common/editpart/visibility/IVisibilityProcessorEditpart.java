@@ -22,4 +22,5 @@ public interface IVisibilityProcessorEditpart extends IElementEditpart {
 	 */
 	void activate();
 	
+	void fire();
 }

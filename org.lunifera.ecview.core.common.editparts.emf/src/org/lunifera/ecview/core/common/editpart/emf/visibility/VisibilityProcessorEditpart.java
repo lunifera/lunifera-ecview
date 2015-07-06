@@ -295,4 +295,11 @@ public class VisibilityProcessorEditpart<M extends YVisibilityProcessor>
 		}
 	}
 
+	@Override
+	public void fire() {
+		if (processor != null) {
+			processor.fire();
+		}
+	}
+
 }
