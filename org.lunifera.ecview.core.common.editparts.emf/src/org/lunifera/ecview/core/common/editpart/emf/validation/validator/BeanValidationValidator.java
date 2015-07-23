@@ -164,5 +164,10 @@ public class BeanValidationValidator extends AbstractDisposable implements
 		public Object getValidatedValue() {
 			return value;
 		}
+
+		@Override
+		public <T> T unwrap(Class<T> arg0) {
+			return null;
+		}
 	}
 }
