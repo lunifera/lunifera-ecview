@@ -14,6 +14,7 @@ import java.util.Locale;
 
 import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.runtime.common.dispose.AbstractDisposable;
+import org.lunifera.runtime.common.validation.IStatus;
 
 /**
  * A validator that returns true by default, if the given value is not a String.

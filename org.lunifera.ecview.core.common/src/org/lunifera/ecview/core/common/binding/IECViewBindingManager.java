@@ -110,4 +110,16 @@ public interface IECViewBindingManager extends IDisposable {
 	 */
 	Binding bindSet(IObservableSet target, IObservableSet model,
 			UpdateSetStrategy targetToModel, UpdateSetStrategy modelToTarget);
+	
+	/**
+	 * Updates the model with target values.
+	 */
+	void updateModel();
+	
+	/**
+	 * Updates the target with the model values.
+	 */
+	void updateTarget();
+	
+	
 }

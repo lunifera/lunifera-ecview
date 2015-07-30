@@ -14,9 +14,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lunifera.ecview.core.common.model.validation.YRegexpValidationConfig;
-import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.Status;
 import org.lunifera.ecview.core.common.validation.StringValidator;
+import org.lunifera.runtime.common.validation.IStatus;
+import org.lunifera.runtime.common.validation.Status;
 
 /**
  * Validates the string value if it matches the given regular expression.

@@ -98,6 +98,16 @@ public abstract class AbstractBindingManager extends AbstractDisposable
 	}
 
 	@Override
+	public void updateModel() {
+		dbc.updateModels();
+	}
+
+	@Override
+	public void updateTarget() {
+		dbc.updateTargets();
+	}
+
+	@Override
 	protected void internalDispose() {
 		if (isDisposed()) {
 			return;

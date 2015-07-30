@@ -12,7 +12,7 @@ package org.lunifera.ecview.core.databinding.tests;
 
 public class TestViewContext extends
 		org.lunifera.ecview.core.common.context.ViewContext {
-
+ 
 	public TestViewContext() {
 		
 	}

@@ -11,9 +11,9 @@
 package org.lunifera.ecview.core.common.editpart.emf.validation.validator;
 
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidationConfig;
-import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.Status;
 import org.lunifera.ecview.core.common.validation.StringValidator;
+import org.lunifera.runtime.common.validation.IStatus;
+import org.lunifera.runtime.common.validation.Status;
 
 public class MinLengthValidator extends StringValidator {
 

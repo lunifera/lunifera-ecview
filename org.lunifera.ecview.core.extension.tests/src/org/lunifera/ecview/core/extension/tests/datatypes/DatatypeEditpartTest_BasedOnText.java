@@ -24,8 +24,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.context.ViewContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeBridge;
@@ -50,9 +52,7 @@ import org.lunifera.ecview.core.extension.model.extension.util.SimpleExtensionMo
 import org.lunifera.ecview.core.extension.tests.datatypes.helper.HelperEditpartManager;
 import org.lunifera.ecview.core.extension.tests.datatypes.helper.HelperTextDatatypeEditpart;
 import org.lunifera.ecview.core.util.emf.ModelUtil;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 @SuppressWarnings("restriction")
 public class DatatypeEditpartTest_BasedOnText {

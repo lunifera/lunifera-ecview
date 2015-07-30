@@ -29,11 +29,10 @@ import javax.validation.ValidatorFactory;
 import javax.validation.metadata.ConstraintDescriptor;
 
 import org.lunifera.ecview.core.common.context.II18nService;
-import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.IStatus.Severity;
 import org.lunifera.ecview.core.common.validation.IValidator;
-import org.lunifera.ecview.core.common.validation.Status;
 import org.lunifera.runtime.common.dispose.AbstractDisposable;
+import org.lunifera.runtime.common.validation.IStatus;
+import org.lunifera.runtime.common.validation.Status;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,7 +70,7 @@ public class BeanValidationValidator extends AbstractDisposable implements
 	public IStatus validateValue(Object value) {
 		if (javaxBeanValidator == null) {
 			return Status.createStatus("", BeanValidationValidator.class,
-					Severity.ERROR,
+					IStatus.Severity.ERROR,
 					"Error occured: javaxBeanValidator was null.");
 		}
 		Set<?> violations = javaxBeanValidator.validateValue(beanClass,

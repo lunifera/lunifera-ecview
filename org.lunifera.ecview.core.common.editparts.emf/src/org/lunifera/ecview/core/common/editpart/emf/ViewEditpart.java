@@ -699,6 +699,12 @@ public class ViewEditpart<M extends YView> extends ElementEditpart<M> implements
 	 */
 	protected void internalAddBeanSlot(YBeanSlot yBeanSlot) {
 		checkDisposed();
+
+		if (context == null) {
+			LOGGER.warn("ViewEditpart is not rendered yet. Can not install beanslot!");
+			return;
+		}
+
 		// redirect events are handled from outside
 		context.createBeanSlot(yBeanSlot.getName(), yBeanSlot.getValueType(),
 				yBeanSlot.isRedirectEvents() ? null : yBeanSlot.getEventTopic());

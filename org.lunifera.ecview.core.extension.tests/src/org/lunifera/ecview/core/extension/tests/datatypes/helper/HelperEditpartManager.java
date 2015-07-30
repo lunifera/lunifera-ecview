@@ -11,7 +11,6 @@
 
 package org.lunifera.ecview.core.extension.tests.datatypes.helper;
 
-import org.eclipse.emf.ecore.EObject;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.ElementEditpart;
 import org.lunifera.ecview.core.common.model.core.YElement;
@@ -43,7 +42,6 @@ import org.lunifera.ecview.core.extension.model.datatypes.YTableDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YTextAreaDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
 import org.lunifera.ecview.core.extension.model.datatypes.YTreeDatatype;
-import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IBrowserDatatypeEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.ICheckBoxDatatypeEditpart;
 import org.lunifera.ecview.core.ui.core.editparts.extension.datatypes.IComboBoxDatatypeEditpart;
