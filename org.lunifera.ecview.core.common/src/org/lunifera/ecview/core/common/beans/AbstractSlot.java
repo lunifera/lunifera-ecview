@@ -123,6 +123,19 @@ public class AbstractSlot implements ISlot {
 
 	@Override
 	public void setValue(Object value) {
+
+		if (this.value == value) {
+			return;
+		}
+
+		// workaround since PropertyChangeSupport does not send events if(value
+		// != this.value && this.value.equals(value))
+		// so we need to set this value to null first
+		if (this.value != null && this.value.equals(value)) {
+			// reset the value to null
+			firePropertyChanged("value", this.value, this.value = null);
+		}
+
 		firePropertyChanged("value", this.value, this.value = value);
 	}
 }
