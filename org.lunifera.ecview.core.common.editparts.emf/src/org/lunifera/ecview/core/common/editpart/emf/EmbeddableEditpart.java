@@ -298,7 +298,10 @@ public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
 
 	@Override
 	public void unrender() {
-		getPresentation().unrender();
+		IWidgetPresentation<?> presentation = getPresentation();
+		if (presentation != null) {
+			presentation.unrender();
+		}
 	}
 
 	@Override
@@ -309,7 +312,11 @@ public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
 
 	@Override
 	public Object getWidget() {
-		return getPresentation().getWidget();
+		IWidgetPresentation<?> presentation = getPresentation();
+		if (presentation != null) {
+			return presentation.getWidget();
+		}
+		return null;
 	}
 
 	@Override

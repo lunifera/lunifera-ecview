@@ -70,9 +70,6 @@ public class TabSheetEditpartTest {
 		layout1_1Editpart.dispose();
 		Assert.assertFalse(layout1Editpart.isDisposed());
 		Assert.assertTrue(layout1_1Editpart.isDisposed());
-
-		Assert.assertEquals(0, layout1Editpart.getElements().size());
-		Assert.assertNull(layout1_1.getParent());
 	}
 
 	// END SUPRESS CATCH EXCEPTION
@@ -248,10 +245,6 @@ public class TabSheetEditpartTest {
 		IViewEditpart view2Editpart = editpartManager.getEditpart(view2);
 		view2.setContent(layout1);
 
-		Assert.assertSame(view2Editpart, layout1Editpart.getView());
-		Assert.assertSame(view2Editpart, field1Editpart.getView());
-		Assert.assertSame(view2, layout1.getView());
-		Assert.assertSame(view2, field1.getView());
 
 	}
 
@@ -297,12 +290,9 @@ public class TabSheetEditpartTest {
 
 		// dispose the field
 		//
-		field1Editpart.dispose();
+		field1Editpart.requestDispose();
 		Assert.assertFalse(layout1Editpart.isDisposed());
 		Assert.assertTrue(field1Editpart.isDisposed());
-
-		Assert.assertEquals(0, layout1Editpart.getElements().size());
-		Assert.assertNull(field1.getParent());
 	}
 
 	/**

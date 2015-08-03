@@ -349,7 +349,10 @@ public class LayoutEditpart<M extends YLayout> extends EmbeddableEditpart<M>
 	@Override
 	public void disposeChild(IEmbeddableEditpart child) {
 		// first remove the child presentation from the current presentation
-		getPresentation().remove(child);
+		ILayoutPresentation<?> presentation = getPresentation();
+		if(presentation != null) {
+			presentation.remove(child);
+		}
 
 		// then tell the child editpart to dispose itself
 		child.dispose();

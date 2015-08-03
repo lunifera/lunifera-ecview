@@ -55,7 +55,7 @@ import org.lunifera.ecview.core.util.emf.ModelUtil;
 import org.lunifera.runtime.common.dispose.IDisposable;
 
 @SuppressWarnings("restriction")
-public class DatatypeEditpartTest_BasedOnText {
+public class DatatypeEditpartTest_BasedOnTextTests {
 
 	private SimpleExtensionModelFactory factory = new SimpleExtensionModelFactory();
 	private DelegatingEditPartManager editpartManager = DelegatingEditPartManager

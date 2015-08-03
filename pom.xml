@@ -24,6 +24,7 @@
 		<module>org.lunifera.ecview.core.extension.editparts</module>
 		<module>org.lunifera.ecview.core.extension.editparts.emf</module>
 		<module>org.lunifera.ecview.core.extension.model</module>
+		<module>org.lunifera.ecview.core.extension.tests</module>
 		<module>org.lunifera.ecview.core.feature.core</module>
 		<module>org.lunifera.ecview.core.p2</module>
 		<module>org.lunifera.ecview.core.target.luna</module>
