@@ -3,6 +3,7 @@ package org.lunifera.ecview.core.extension.model.extension.util;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.util.SimpleCoreModelFactory;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
+import org.lunifera.ecview.core.common.model.validation.YBeanValidationValidator;
 import org.lunifera.ecview.core.common.model.validation.YClassDelegateValidator;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidator;
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidator;
@@ -426,6 +427,10 @@ public class SimpleExtensionModelFactory extends SimpleCoreModelFactory {
 
 	public YClassDelegateValidator createClassDelegateValidator() {
 		return ValidationFactory.eINSTANCE.createYClassDelegateValidator();
+	}
+	
+	public YBeanValidationValidator createBeanValidationValidator() {
+		return ValidationFactory.eINSTANCE.createYBeanValidationValidator();
 	}
 
 }

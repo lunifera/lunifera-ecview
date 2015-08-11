@@ -25,6 +25,7 @@ import org.lunifera.ecview.core.common.model.core.YEditable;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -456,6 +457,16 @@ public class YLayoutImpl extends YEmbeddableImpl implements YLayout {
 	public void setLabelI18nKey(String i18nKey) {
 		// nothing to do
 		
+	}
+	
+	@Override
+	public String getLabel() {
+		return "";
+	}
+
+	@Override
+	public String getLabelI18nKey() {
+		return "";
 	}
 
 } // YUiLayoutImpl

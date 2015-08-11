@@ -54,7 +54,8 @@ public class ClassDelegateValidator extends AbstractDisposable implements
 	public IStatus validateValue(Object value) {
 		if (delegate == null) {
 			return Status.createStatus("", ClassDelegateValidator.class,
-					IStatus.Severity.ERROR, "Error occured: Delegate class was null.");
+					IStatus.Severity.ERROR,
+					"Error occured: Delegate class was null.");
 		}
 		return delegate.validateValue(value);
 	}
@@ -101,6 +102,10 @@ public class ClassDelegateValidator extends AbstractDisposable implements
 		if (delegate != null) {
 			delegate.setI18nService(i18nService);
 		}
-	};
+	}
 
+	@Override
+	public boolean isCheckValidType() {
+		return delegate.isCheckValidType();
+	}
 }

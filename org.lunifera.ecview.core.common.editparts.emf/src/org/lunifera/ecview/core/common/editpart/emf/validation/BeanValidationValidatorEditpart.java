@@ -62,7 +62,7 @@ public class BeanValidationValidatorEditpart extends
 		}
 
 		BeanValidationValidator validator = new BeanValidationValidator(
-				yModel.getBvalClass(), yModel.getBvalProperty(),
+				yModel.getBvalClass(), yModel.getBvalProperty(), 
 				jsr303ValidatorFactory);
 		IViewContext context = getViewContext(getModel());
 		validator.setI18nService((II18nService) context

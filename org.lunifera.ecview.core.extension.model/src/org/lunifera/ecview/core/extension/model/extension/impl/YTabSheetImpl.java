@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YTab;
 import org.lunifera.ecview.core.extension.model.extension.YTabSheet;
@@ -260,6 +261,16 @@ public class YTabSheetImpl extends YEmbeddableImpl implements YTabSheet {
 	@Override
 	public void setLabelI18nKey(String i18nKey) {
 		// nothing to do -- tabsheets don't have labels
+	}
+	
+	@Override
+	public String getLabel() {
+		return "";
+	}
+
+	@Override
+	public String getLabelI18nKey() {
+		return "";
 	}
 
 } // YTabSheetImpl

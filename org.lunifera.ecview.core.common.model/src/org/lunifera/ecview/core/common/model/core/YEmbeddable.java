@@ -102,6 +102,19 @@ public interface YEmbeddable extends YElement, YCssAble, YVisibleable {
 	public void setLabelI18nKey(String i18nKey);
 
 	/**
+	 * Returns the label.
+	 * @return
+	 */
+	public String getLabel();
+	
+	/**
+	 * Returns the label i18n key.
+	 * @return
+	 */
+	public String getLabelI18nKey();
+	
+	
+	/**
 	 * Creates a binding endpoint to observe the visible property.
 	 * 
 	 * @return

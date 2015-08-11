@@ -256,5 +256,15 @@ public class YActionImpl extends YEmbeddableImpl implements YAction {
 		// nothing to do
 		
 	}
+	
+	@Override
+	public String getLabel() {
+		return "";
+	}
+
+	@Override
+	public String getLabelI18nKey() {
+		return "";
+	}
 
 } //YActionImpl

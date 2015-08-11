@@ -962,5 +962,23 @@ public class YMasterDetailImpl extends YInputImpl implements YMasterDetail {
 		result.append(')');
 		return result.toString();
 	}
+	
+	@Override
+	public String getLabel() {
+		YDatadescription ds = getDatadescription();
+		if (ds != null) {
+			return ds.getLabel();
+		}
+		return "";
+	}
+
+	@Override
+	public String getLabelI18nKey() {
+		YDatadescription ds = getDatadescription();
+		if (ds != null) {
+			return ds.getLabelI18nKey();
+		}
+		return "";
+	}
 
 } //YMasterDetailImpl

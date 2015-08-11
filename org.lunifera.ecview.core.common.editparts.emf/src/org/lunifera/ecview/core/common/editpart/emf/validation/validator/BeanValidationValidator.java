@@ -18,6 +18,7 @@
  */
 package org.lunifera.ecview.core.common.editpart.emf.validation.validator;
 
+import java.beans.PropertyDescriptor;
 import java.io.Serializable;
 import java.util.Locale;
 import java.util.Set;
@@ -28,6 +29,8 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import javax.validation.metadata.ConstraintDescriptor;
 
+import org.apache.commons.beanutils.PropertyUtils;
+import org.apache.commons.lang.math.NumberUtils;
 import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.validation.IValidator;
 import org.lunifera.runtime.common.dispose.AbstractDisposable;
@@ -42,8 +45,9 @@ public class BeanValidationValidator extends AbstractDisposable implements
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(BeanValidationValidator.class);
 
-	private final String propertyName;
 	private final Class<?> beanClass;
+	private final String propertyName;
+	private final Class<?> propertyClass;
 	private Locale locale;
 
 	@SuppressWarnings("unused")
@@ -57,13 +61,30 @@ public class BeanValidationValidator extends AbstractDisposable implements
 		this.javaxBeanValidatorFactory = jsr303ValidatorFactory;
 		this.javaxBeanValidator = jsr303ValidatorFactory.getValidator();
 		this.beanClass = beanClass;
+		this.propertyClass = getPropertyType(beanClass, propertyName);
 		this.propertyName = propertyName;
 		locale = Locale.getDefault();
 	}
 
+	protected Class<?> getPropertyType(Class<?> beanClass, String propertyName) {
+		for (PropertyDescriptor desc : PropertyUtils
+				.getPropertyDescriptors(beanClass)) {
+			if (desc.getName().equals(propertyName)) {
+				return desc.getPropertyType();
+			}
+		}
+		throw new IllegalStateException("Property " + propertyName
+				+ " not available in class " + beanClass.getName());
+	}
+
 	@Override
 	public Class<?> getType() {
-		return beanClass;
+		return propertyClass;
+	}
+
+	@Override
+	public boolean isCheckValidType() {
+		return false;
 	}
 
 	@Override
@@ -73,8 +94,19 @@ public class BeanValidationValidator extends AbstractDisposable implements
 					IStatus.Severity.ERROR,
 					"Error occured: javaxBeanValidator was null.");
 		}
-		Set<?> violations = javaxBeanValidator.validateValue(beanClass,
-				propertyName, value);
+		Set<?> violations = null;
+		try {
+			Object convertedValue = value;
+			if (value != null && value instanceof Number
+					&& !propertyClass.isAssignableFrom(value.getClass())) {
+				convertedValue = convertNumber(value);
+			}
+
+			violations = javaxBeanValidator.validateValue(beanClass,
+					propertyName, convertedValue);
+		} catch (Exception e) {
+			return Status.createErrorStatus(e);
+		}
 
 		if (violations.isEmpty()) {
 			return IStatus.OK;
@@ -87,11 +119,29 @@ public class BeanValidationValidator extends AbstractDisposable implements
 		// violation.getMessageTemplate(),
 		// new SimpleContext(value, violation
 		// .getConstraintDescriptor()), locale);
-		String msg = violation.getMessageTemplate();
+		String msg = violation.getMessage();
 
-		IStatus status = Status.createStatus(violation.getMessageTemplate(),
+		IStatus status = Status.createStatus(violation.toString(),
 				violation.getRootBeanClass(), IStatus.Severity.ERROR, msg);
 		return status;
+	}
+
+	private Object convertNumber(Object value) {
+		if(propertyClass == Byte.class || propertyClass == Byte.TYPE) {
+			return NumberUtils.toByte(value.toString());
+		} else if(propertyClass == Short.class || propertyClass == Short.TYPE) {
+			return NumberUtils.toShort(value.toString());
+		} else if(propertyClass == Integer.class || propertyClass == Integer.TYPE) {
+			return NumberUtils.toInt(value.toString());
+		} else if(propertyClass == Double.class || propertyClass == Double.TYPE) {
+			return NumberUtils.toDouble(value.toString());
+		} else if(propertyClass == Float.class || propertyClass == Float.TYPE) {
+			return NumberUtils.toFloat(value.toString());
+		} else if(propertyClass == Long.class || propertyClass == Long.TYPE) {
+			return NumberUtils.toLong(value.toString());
+		}
+		
+		return null;
 	}
 
 	/**

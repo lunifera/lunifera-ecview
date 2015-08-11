@@ -38,6 +38,13 @@ public interface IValidator extends IDisposable {
 	IStatus validateValue(Object value);
 
 	/**
+	 * Returns true, if isTypeValid() should be checked by this validator.
+	 * 
+	 * @return
+	 */
+	boolean isCheckValidType();
+
+	/**
 	 * Returns the expected type of the value. If <code>null</code> is returned,
 	 * the type will not become checked.
 	 * 

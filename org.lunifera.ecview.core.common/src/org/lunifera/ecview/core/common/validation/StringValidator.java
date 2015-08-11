@@ -55,6 +55,11 @@ public abstract class StringValidator extends AbstractDisposable implements
 		return result;
 	}
 
+	@Override
+	public boolean isCheckValidType() {
+		return true;
+	}
+
 	protected boolean isStringValid(String result) {
 		return result != null && !result.equals("");
 	}

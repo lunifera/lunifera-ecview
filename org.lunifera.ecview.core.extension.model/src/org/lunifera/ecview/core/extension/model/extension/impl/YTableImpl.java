@@ -1246,4 +1246,22 @@ public class YTableImpl extends YInputImpl implements YTable {
 		}
 	}
 
+	@Override
+	public String getLabel() {
+		YDatadescription ds = getDatadescription();
+		if (ds != null) {
+			return ds.getLabel();
+		}
+		return "";
+	}
+
+	@Override
+	public String getLabelI18nKey() {
+		YDatadescription ds = getDatadescription();
+		if (ds != null) {
+			return ds.getLabelI18nKey();
+		}
+		return "";
+	}
+	
 } // YUiTableImpl

@@ -34,6 +34,7 @@ import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.impl.custom.ChangeAdapter;
 import org.lunifera.ecview.core.common.model.core.listeners.YValueChangeListener;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 
 /**
@@ -684,6 +685,16 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 		endpoint.getFeatures()
 				.add((EStructuralFeature) CoreModelPackage.Literals.YENABLE__ENABLED);
 		return endpoint;
+	}
+	
+	@Override
+	public String getLabel() {
+		return "";
+	}
+
+	@Override
+	public String getLabelI18nKey() {
+		return "";
 	}
 
 } // YUiFieldImpl

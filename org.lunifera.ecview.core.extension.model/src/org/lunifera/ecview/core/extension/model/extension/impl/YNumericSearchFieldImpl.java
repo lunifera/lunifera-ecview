@@ -639,5 +639,23 @@ public class YNumericSearchFieldImpl extends YInputImpl implements YNumericSearc
 		dsc.setLabelI18nKey(i18nKey);
 		return dsc;
 	}
+	
+	@Override
+	public String getLabel() {
+		YDatadescription ds = getDatadescription();
+		if (ds != null) {
+			return ds.getLabel();
+		}
+		return "";
+	}
+
+	@Override
+	public String getLabelI18nKey() {
+		YDatadescription ds = getDatadescription();
+		if (ds != null) {
+			return ds.getLabelI18nKey();
+		}
+		return "";
+	}
 
 } //YNumericSearchFieldImpl
