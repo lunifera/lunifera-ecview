@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: API for EMF based services
+Bundle-SymbolicName: org.lunifera.ecview.core.emf.api;singleton:=true
+Bundle-Version: 0.9.1.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.8.0",
+ org.lunifera.ecview.core.extension.model;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.ecview.core.common.model;bundle-version="[0.9.0,0.10.0)"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.slf4j;version="1.6.4"
+Export-Package: org.lunifera.ecview.core.emf.api;version="0.9.1";
+  uses:="org.lunifera.ecview.core.common.editpart.binding,
+   org.lunifera.ecview.core.common.model.binding,
+   org.eclipse.core.databinding,
+   org.lunifera.ecview.core.common.presentation,
+   org.lunifera.ecview.core.common.binding,
+   org.lunifera.ecview.core.common.editpart,
+   org.lunifera.ecview.core.common.context,
+   org.lunifera.ecview.core.common.model.core,
+   org.lunifera.ecview.core.common.notification"

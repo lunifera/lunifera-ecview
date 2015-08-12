@@ -30,6 +30,7 @@
 		<module>org.lunifera.ecview.core.target.luna</module>
 		<module>org.lunifera.ecview.core.ui.presentation.common</module>
 		<module>org.lunifera.ecview.core.util.emf</module>
+		<module>org.lunifera.ecview.core.emf.api</module>
 
 		<!-- <module>org.lunifera.ecview.core.common.tests</module> -->
 		<!-- <module>org.lunifera.ecview.core.databinding.tests</module> -->
@@ -230,6 +231,7 @@
 				<module>org.lunifera.ecview.core.extension.editparts.emf</module>
 				<module>org.lunifera.ecview.core.extension.model</module>
 				<module>org.lunifera.ecview.core.util.emf</module>
+				<module>org.lunifera.ecview.core.emf.api</module>
 
 				<module>org.lunifera.ecview.core.databinding.beans</module>
 				<module>org.lunifera.ecview.core.databinding.emf</module>
