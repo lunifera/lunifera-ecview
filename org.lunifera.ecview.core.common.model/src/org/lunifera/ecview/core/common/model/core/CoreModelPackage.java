@@ -586,13 +586,22 @@ public interface CoreModelPackage extends EPackage {
 	int YFIELD__INTERNAL_VALIDATORS = YEMBEDDABLE_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Converter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YFIELD__CONVERTER = YEMBEDDABLE_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>YField</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YFIELD_FEATURE_COUNT = YEMBEDDABLE_FEATURE_COUNT + 7;
+	int YFIELD_FEATURE_COUNT = YEMBEDDABLE_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl <em>YView</em>}' class.
@@ -2899,6 +2908,125 @@ public interface CoreModelPackage extends EPackage {
 	int YKEY_STROKE_DEFINITION_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YConverter <em>YConverter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.YConverter
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYConverter()
+	 * @generated
+	 */
+	int YCONVERTER = 41;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCONVERTER__ID = YELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCONVERTER__NAME = YELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCONVERTER__TAGS = YELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCONVERTER__PROPERTIES = YELEMENT__PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>YConverter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YCONVERTER_FEATURE_COUNT = YELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.impl.YDelegateConverterImpl <em>YDelegate Converter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.ecview.core.common.model.core.impl.YDelegateConverterImpl
+	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDelegateConverter()
+	 * @generated
+	 */
+	int YDELEGATE_CONVERTER = 42;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDELEGATE_CONVERTER__ID = YCONVERTER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDELEGATE_CONVERTER__NAME = YCONVERTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDELEGATE_CONVERTER__TAGS = YCONVERTER__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDELEGATE_CONVERTER__PROPERTIES = YCONVERTER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Converter Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDELEGATE_CONVERTER__CONVERTER_ID = YCONVERTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>YDelegate Converter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YDELEGATE_CONVERTER_FEATURE_COUNT = YCONVERTER_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2906,7 +3034,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDeviceType()
 	 * @generated
 	 */
-	int YDEVICE_TYPE = 41;
+	int YDEVICE_TYPE = 43;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YAlignment <em>YAlignment</em>}' enum.
@@ -2916,7 +3044,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYAlignment()
 	 * @generated
 	 */
-	int YALIGNMENT = 42;
+	int YALIGNMENT = 44;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YFlatAlignment <em>YFlat Alignment</em>}' enum.
@@ -2926,7 +3054,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYFlatAlignment()
 	 * @generated
 	 */
-	int YFLAT_ALIGNMENT = 43;
+	int YFLAT_ALIGNMENT = 45;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YUnit <em>YUnit</em>}' enum.
@@ -2936,7 +3064,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYUnit()
 	 * @generated
 	 */
-	int YUNIT = 44;
+	int YUNIT = 46;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YKeyCode <em>YKey Code</em>}' enum.
@@ -2946,7 +3074,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYKeyCode()
 	 * @generated
 	 */
-	int YKEY_CODE = 45;
+	int YKEY_CODE = 47;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.ecview.core.common.model.core.YModifierKey <em>YModifier Key</em>}' enum.
@@ -2956,7 +3084,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYModifierKey()
 	 * @generated
 	 */
-	int YMODIFIER_KEY = 46;
+	int YMODIFIER_KEY = 48;
 
 	/**
 	 * The meta object id for the '<em>YURI</em>' data type.
@@ -2966,7 +3094,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYURI()
 	 * @generated
 	 */
-	int YURI = 47;
+	int YURI = 49;
 
 
 	/**
@@ -2977,7 +3105,7 @@ public interface CoreModelPackage extends EPackage {
 	 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYValueChangeListener()
 	 * @generated
 	 */
-	int YVALUE_CHANGE_LISTENER = 48;
+	int YVALUE_CHANGE_LISTENER = 50;
 
 
 	/**
@@ -3120,6 +3248,17 @@ public interface CoreModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getYField_InternalValidators();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.lunifera.ecview.core.common.model.core.YField#getConverter <em>Converter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Converter</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YField#getConverter()
+	 * @see #getYField()
+	 * @generated
+	 */
+	EReference getYField_Converter();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YView <em>YView</em>}'.
@@ -4460,6 +4599,37 @@ public interface CoreModelPackage extends EPackage {
 	EAttribute getYKeyStrokeDefinition_ModifierKeys();
 
 	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YConverter <em>YConverter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YConverter</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YConverter
+	 * @generated
+	 */
+	EClass getYConverter();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.ecview.core.common.model.core.YDelegateConverter <em>YDelegate Converter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YDelegate Converter</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YDelegateConverter
+	 * @generated
+	 */
+	EClass getYDelegateConverter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.ecview.core.common.model.core.YDelegateConverter#getConverterId <em>Converter Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Converter Id</em>'.
+	 * @see org.lunifera.ecview.core.common.model.core.YDelegateConverter#getConverterId()
+	 * @see #getYDelegateConverter()
+	 * @generated
+	 */
+	EAttribute getYDelegateConverter_ConverterId();
+
+	/**
 	 * Returns the meta object for enum '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4674,6 +4844,14 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference YFIELD__INTERNAL_VALIDATORS = eINSTANCE.getYField_InternalValidators();
+
+		/**
+		 * The meta object literal for the '<em><b>Converter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference YFIELD__CONVERTER = eINSTANCE.getYField_Converter();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YViewImpl <em>YView</em>}' class.
@@ -5748,6 +5926,34 @@ public interface CoreModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute YKEY_STROKE_DEFINITION__MODIFIER_KEYS = eINSTANCE.getYKeyStrokeDefinition_ModifierKeys();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YConverter <em>YConverter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.YConverter
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYConverter()
+		 * @generated
+		 */
+		EClass YCONVERTER = eINSTANCE.getYConverter();
+
+		/**
+		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.impl.YDelegateConverterImpl <em>YDelegate Converter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.ecview.core.common.model.core.impl.YDelegateConverterImpl
+		 * @see org.lunifera.ecview.core.common.model.core.impl.CoreModelPackageImpl#getYDelegateConverter()
+		 * @generated
+		 */
+		EClass YDELEGATE_CONVERTER = eINSTANCE.getYDelegateConverter();
+
+		/**
+		 * The meta object literal for the '<em><b>Converter Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YDELEGATE_CONVERTER__CONVERTER_ID = eINSTANCE.getYDelegateConverter_ConverterId();
 
 		/**
 		 * The meta object literal for the '{@link org.lunifera.ecview.core.common.model.core.YDeviceType <em>YDevice Type</em>}' enum.

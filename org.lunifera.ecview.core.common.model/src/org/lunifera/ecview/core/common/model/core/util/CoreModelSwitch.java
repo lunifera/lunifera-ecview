@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.*;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YActivateable;
@@ -437,6 +438,21 @@ public class CoreModelSwitch<T> extends Switch<T> {
 				YKeyStrokeDefinition yKeyStrokeDefinition = (YKeyStrokeDefinition)theEObject;
 				T result = caseYKeyStrokeDefinition(yKeyStrokeDefinition);
 				if (result == null) result = caseYElement(yKeyStrokeDefinition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CoreModelPackage.YCONVERTER: {
+				YConverter yConverter = (YConverter)theEObject;
+				T result = caseYConverter(yConverter);
+				if (result == null) result = caseYElement(yConverter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CoreModelPackage.YDELEGATE_CONVERTER: {
+				YDelegateConverter yDelegateConverter = (YDelegateConverter)theEObject;
+				T result = caseYDelegateConverter(yDelegateConverter);
+				if (result == null) result = caseYConverter(yDelegateConverter);
+				if (result == null) result = caseYElement(yDelegateConverter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1056,6 +1072,36 @@ public class CoreModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYKeyStrokeDefinition(YKeyStrokeDefinition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YConverter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YConverter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYConverter(YConverter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YDelegate Converter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YDelegate Converter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYDelegateConverter(YDelegateConverter object) {
 		return null;
 	}
 

@@ -42,4 +42,12 @@ public interface IFieldEditpart extends IEmbeddableEditpart {
 	 */
 	List<IValidatorEditpart> getValidators();
 
+	/**
+	 * Returns the converter editpart or <code>null</code> if no converter is
+	 * available.
+	 * 
+	 * @return
+	 */
+	IConverterEditpart getConverter();
+
 }

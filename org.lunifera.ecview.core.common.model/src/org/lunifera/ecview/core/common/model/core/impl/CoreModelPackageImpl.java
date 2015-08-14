@@ -30,7 +30,9 @@ import org.lunifera.ecview.core.common.model.core.YCollectionBindable;
 import org.lunifera.ecview.core.common.model.core.YCommand;
 import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YContextValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YConverter;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
+import org.lunifera.ecview.core.common.model.core.YDelegateConverter;
 import org.lunifera.ecview.core.common.model.core.YDeviceType;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YDtWrapper;
@@ -371,6 +373,20 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass yConverterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yDelegateConverterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum yDeviceTypeEEnum = null;
 
 	/**
@@ -612,6 +628,15 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 */
 	public EReference getYField_InternalValidators() {
 		return (EReference)yFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getYField_Converter() {
+		return (EReference)yFieldEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1744,6 +1769,33 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getYConverter() {
+		return yConverterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYDelegateConverter() {
+		return yDelegateConverterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYDelegateConverter_ConverterId() {
+		return (EAttribute)yDelegateConverterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getYDeviceType() {
 		return yDeviceTypeEEnum;
 	}
@@ -1855,6 +1907,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yFieldEClass = createEClass(YFIELD);
 		createEReference(yFieldEClass, YFIELD__VALIDATORS);
 		createEReference(yFieldEClass, YFIELD__INTERNAL_VALIDATORS);
+		createEReference(yFieldEClass, YFIELD__CONVERTER);
 
 		yViewEClass = createEClass(YVIEW);
 		createEReference(yViewEClass, YVIEW__ROOT);
@@ -2018,6 +2071,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		createEAttribute(yKeyStrokeDefinitionEClass, YKEY_STROKE_DEFINITION__KEY_CODE);
 		createEAttribute(yKeyStrokeDefinitionEClass, YKEY_STROKE_DEFINITION__MODIFIER_KEYS);
 
+		yConverterEClass = createEClass(YCONVERTER);
+
+		yDelegateConverterEClass = createEClass(YDELEGATE_CONVERTER);
+		createEAttribute(yDelegateConverterEClass, YDELEGATE_CONVERTER__CONVERTER_ID);
+
 		// Create enums
 		yDeviceTypeEEnum = createEEnum(YDEVICE_TYPE);
 		yAlignmentEEnum = createEEnum(YALIGNMENT);
@@ -2111,6 +2169,8 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		yExposedActionEClass.getESuperTypes().add(this.getYEnable());
 		ySendEventCommandEClass.getESuperTypes().add(this.getYCommand());
 		yKeyStrokeDefinitionEClass.getESuperTypes().add(this.getYElement());
+		yConverterEClass.getESuperTypes().add(this.getYElement());
+		yDelegateConverterEClass.getESuperTypes().add(this.getYConverter());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(yElementEClass, YElement.class, "YElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2129,6 +2189,7 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEClass(yFieldEClass, YField.class, "YField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getYField_Validators(), theValidationPackage.getYValidator(), null, "validators", null, 0, -1, YField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getYField_InternalValidators(), theValidationPackage.getYValidator(), null, "internalValidators", null, 0, -1, YField.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getYField_Converter(), this.getYConverter(), null, "converter", null, 0, 1, YField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(yFieldEClass, ecorePackage.getEBoolean(), "addValueChangeListener", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getYValueChangeListener(), "listener", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2352,6 +2413,11 @@ public class CoreModelPackageImpl extends EPackageImpl implements CoreModelPacka
 		initEAttribute(getYKeyStrokeDefinition_ModifierKeys(), this.getYModifierKey(), "modifierKeys", null, 0, -1, YKeyStrokeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(yKeyStrokeDefinitionEClass, this.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(yConverterEClass, YConverter.class, "YConverter", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(yDelegateConverterEClass, YDelegateConverter.class, "YDelegateConverter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYDelegateConverter_ConverterId(), ecorePackage.getEString(), "converterId", null, 1, 1, YDelegateConverter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(yDeviceTypeEEnum, YDeviceType.class, "YDeviceType");

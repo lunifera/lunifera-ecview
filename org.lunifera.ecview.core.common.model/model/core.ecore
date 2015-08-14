@@ -30,6 +30,8 @@
         eType="ecore:EClass validation.ecore#//YValidator" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="internalValidators" upperBound="-1"
         eType="ecore:EClass validation.ecore#//YValidator" transient="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="converter" eType="#//YConverter"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YView" eSuperTypes="#//YElement #//YCssAble #//YMarginable">
     <eOperations name="getOrCreateBindingSet" eType="ecore:EClass binding.ecore#//YBindingSet"/>
@@ -392,5 +394,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyCode" eType="#//YKeyCode"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifierKeys" upperBound="-1"
         eType="#//YModifierKey"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YConverter" abstract="true" interface="true"
+      eSuperTypes="#//YElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YDelegateConverter" eSuperTypes="#//YConverter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="converterId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

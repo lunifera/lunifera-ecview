@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -28,13 +27,13 @@ import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.YConverter;
 import org.lunifera.ecview.core.common.model.core.YEditable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.impl.custom.ChangeAdapter;
 import org.lunifera.ecview.core.common.model.core.listeners.YValueChangeListener;
-import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
 
 /**
@@ -50,6 +49,7 @@ import org.lunifera.ecview.core.common.model.validation.YValidator;
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#getTabIndex <em>Tab Index</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#getValidators <em>Validators</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#getInternalValidators <em>Internal Validators</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.impl.YFieldImpl#getConverter <em>Converter</em>}</li>
  * </ul>
  * </p>
  *
@@ -161,6 +161,15 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 	 * @ordered
 	 */
 	protected EList<YValidator> internalValidators;
+	/**
+	 * The cached value of the '{@link #getConverter() <em>Converter</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConverter()
+	 * @generated
+	 * @ordered
+	 */
+	protected YConverter converter;
 	/**
 	 * A list with all value change listeners registered.
 	 * 
@@ -312,6 +321,72 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YConverter getConverter() {
+		if (converter != null && converter.eIsProxy()) {
+			InternalEObject oldConverter = (InternalEObject)converter;
+			converter = (YConverter)eResolveProxy(oldConverter);
+			if (converter != oldConverter) {
+				InternalEObject newConverter = (InternalEObject)converter;
+				NotificationChain msgs = oldConverter.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoreModelPackage.YFIELD__CONVERTER, null, null);
+				if (newConverter.eInternalContainer() == null) {
+					msgs = newConverter.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoreModelPackage.YFIELD__CONVERTER, null, msgs);
+				}
+				if (msgs != null) msgs.dispatch();
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CoreModelPackage.YFIELD__CONVERTER, oldConverter, converter));
+			}
+		}
+		return converter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YConverter basicGetConverter() {
+		return converter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConverter(YConverter newConverter, NotificationChain msgs) {
+		YConverter oldConverter = converter;
+		converter = newConverter;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoreModelPackage.YFIELD__CONVERTER, oldConverter, newConverter);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConverter(YConverter newConverter) {
+		if (newConverter != converter) {
+			NotificationChain msgs = null;
+			if (converter != null)
+				msgs = ((InternalEObject)converter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoreModelPackage.YFIELD__CONVERTER, null, msgs);
+			if (newConverter != null)
+				msgs = ((InternalEObject)newConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoreModelPackage.YFIELD__CONVERTER, null, msgs);
+			msgs = basicSetConverter(newConverter, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CoreModelPackage.YFIELD__CONVERTER, newConverter, newConverter));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -443,6 +518,8 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				return ((InternalEList<?>)getValidators()).basicRemove(otherEnd, msgs);
 			case CoreModelPackage.YFIELD__INTERNAL_VALIDATORS:
 				return ((InternalEList<?>)getInternalValidators()).basicRemove(otherEnd, msgs);
+			case CoreModelPackage.YFIELD__CONVERTER:
+				return basicSetConverter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -478,6 +555,9 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				return getValidators();
 			case CoreModelPackage.YFIELD__INTERNAL_VALIDATORS:
 				return getInternalValidators();
+			case CoreModelPackage.YFIELD__CONVERTER:
+				if (resolve) return getConverter();
+				return basicGetConverter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -513,6 +593,9 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				getInternalValidators().clear();
 				getInternalValidators().addAll((Collection<? extends YValidator>)newValue);
 				return;
+			case CoreModelPackage.YFIELD__CONVERTER:
+				setConverter((YConverter)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -545,6 +628,9 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 			case CoreModelPackage.YFIELD__INTERNAL_VALIDATORS:
 				getInternalValidators().clear();
 				return;
+			case CoreModelPackage.YFIELD__CONVERTER:
+				setConverter((YConverter)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -570,6 +656,8 @@ public class YFieldImpl extends YEmbeddableImpl implements YField {
 				return validators != null && !validators.isEmpty();
 			case CoreModelPackage.YFIELD__INTERNAL_VALIDATORS:
 				return internalValidators != null && !internalValidators.isEmpty();
+			case CoreModelPackage.YFIELD__CONVERTER:
+				return converter != null;
 		}
 		return super.eIsSet(featureID);
 	}

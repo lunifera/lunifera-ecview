@@ -26,6 +26,7 @@ import org.lunifera.ecview.core.common.model.validation.YValidator;
  * <ul>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YField#getValidators <em>Validators</em>}</li>
  *   <li>{@link org.lunifera.ecview.core.common.model.core.YField#getInternalValidators <em>Internal Validators</em>}</li>
+ *   <li>{@link org.lunifera.ecview.core.common.model.core.YField#getConverter <em>Converter</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,6 +67,32 @@ public interface YField extends YEmbeddable, YEditable, YEnable, YFocusable {
 	 * @generated
 	 */
 	EList<YValidator> getInternalValidators();
+
+	/**
+	 * Returns the value of the '<em><b>Converter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Converter</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Converter</em>' containment reference.
+	 * @see #setConverter(YConverter)
+	 * @see org.lunifera.ecview.core.common.model.core.CoreModelPackage#getYField_Converter()
+	 * @model containment="true" resolveProxies="true"
+	 * @generated
+	 */
+	YConverter getConverter();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.ecview.core.common.model.core.YField#getConverter <em>Converter</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Converter</em>' containment reference.
+	 * @see #getConverter()
+	 * @generated
+	 */
+	void setConverter(YConverter value);
 
 	/**
 	 * <!-- begin-user-doc -->

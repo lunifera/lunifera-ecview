@@ -16,13 +16,16 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.lunifera.ecview.core.common.editpart.IConverterEditpart;
 import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeChangeEvent;
 import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
 import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.YConverter;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
+import org.lunifera.ecview.core.common.presentation.DelegatingConverterFactory;
 import org.lunifera.ecview.core.common.presentation.IFieldPresentation;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.slf4j.Logger;
@@ -41,6 +44,8 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 
 	private List<IValidatorEditpart> validators;
 	private List<IValidatorEditpart> internalValidators;
+
+	private IConverterEditpart converterEditpart;
 
 	/**
 	 * A default constructor.
@@ -70,6 +75,13 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 		if (fieldPresentation == null) {
 			LOGGER.warn("Presentation is null for " + getModel());
 			return;
+		}
+
+		IConverterEditpart converter = getConverter();
+		if (converter != null) {
+			fieldPresentation.setConverter(DelegatingConverterFactory
+					.getInstance().createConverter(getView().getContext(),
+							converter));
 		}
 
 		ensureValidatorsLoaded();
@@ -163,6 +175,43 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 		default:
 			break;
 		}
+	}
+
+	@Override
+	protected void handleModelSet(int featureId, Notification notification) {
+		checkDisposed();
+
+		switch (featureId) {
+		case CoreModelPackage.YFIELD__CONVERTER:
+			YConverter yConverter = (YConverter) notification.getNewValue();
+
+			IConverterEditpart editPart = (IConverterEditpart) getEditpart(yConverter);
+			internalSetConverter(editPart);
+			break;
+		default:
+			super.handleModelSet(featureId, notification);
+			break;
+		}
+	}
+
+	public IConverterEditpart getConverter() {
+		checkDisposed();
+
+		if (converterEditpart == null) {
+			loadConverter();
+		}
+		return converterEditpart;
+	}
+
+	protected void loadConverter() {
+		if (converterEditpart == null) {
+			YConverter yConverter = getModel().getConverter();
+			internalSetConverter((IConverterEditpart) getEditpart(yConverter));
+		}
+	}
+
+	protected void internalSetConverter(IConverterEditpart converterEditpart) {
+		this.converterEditpart = converterEditpart;
 	}
 
 	/**
@@ -334,6 +383,12 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 				}
 				validators = null;
 			}
+
+			if (converterEditpart != null) {
+				converterEditpart.dispose();
+				converterEditpart = null;
+			}
+
 		} finally {
 			super.internalDispose();
 		}

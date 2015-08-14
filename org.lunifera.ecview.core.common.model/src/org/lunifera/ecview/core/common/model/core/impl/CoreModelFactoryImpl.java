@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.lunifera.ecview.core.common.model.core.*;
 import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YAction;
@@ -107,6 +108,7 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 			case CoreModelPackage.YEXPOSED_ACTION: return createYExposedAction();
 			case CoreModelPackage.YSEND_EVENT_COMMAND: return createYSendEventCommand();
 			case CoreModelPackage.YKEY_STROKE_DEFINITION: return createYKeyStrokeDefinition();
+			case CoreModelPackage.YDELEGATE_CONVERTER: return createYDelegateConverter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -388,6 +390,16 @@ public class CoreModelFactoryImpl extends EFactoryImpl implements CoreModelFacto
 	public YKeyStrokeDefinition createYKeyStrokeDefinition() {
 		YKeyStrokeDefinitionImpl yKeyStrokeDefinition = new YKeyStrokeDefinitionImpl();
 		return yKeyStrokeDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDelegateConverter createYDelegateConverter() {
+		YDelegateConverterImpl yDelegateConverter = new YDelegateConverterImpl();
+		return yDelegateConverter;
 	}
 
 	/**

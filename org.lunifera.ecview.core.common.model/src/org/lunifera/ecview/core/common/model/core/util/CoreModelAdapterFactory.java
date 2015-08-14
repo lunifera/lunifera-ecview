@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.lunifera.ecview.core.common.model.binding.YBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.*;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YActivateable;
@@ -281,6 +282,14 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYKeyStrokeDefinition(YKeyStrokeDefinition object) {
 				return createYKeyStrokeDefinitionAdapter();
+			}
+			@Override
+			public Adapter caseYConverter(YConverter object) {
+				return createYConverterAdapter();
+			}
+			@Override
+			public Adapter caseYDelegateConverter(YDelegateConverter object) {
+				return createYDelegateConverterAdapter();
 			}
 			@Override
 			public Adapter caseYBindingEndpoint(YBindingEndpoint object) {
@@ -893,6 +902,34 @@ public class CoreModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYKeyStrokeDefinitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YConverter <em>YConverter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YConverter
+	 * @generated
+	 */
+	public Adapter createYConverterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YDelegateConverter <em>YDelegate Converter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YDelegateConverter
+	 * @generated
+	 */
+	public Adapter createYDelegateConverterAdapter() {
 		return null;
 	}
 

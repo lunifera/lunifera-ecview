@@ -35,6 +35,14 @@ public interface IFieldPresentation<C> extends IWidgetPresentation<C> {
 	void removeValidator(IValidator validator);
 
 	/**
+	 * Sets the converter that should be used for this field to converter data
+	 * "from and to model" and "from and to UI".
+	 * 
+	 * @param object
+	 */
+	void setConverter(Object object);
+
+	/**
 	 * An event to indicate added or removed validator.
 	 */
 	public static class Event {
@@ -70,4 +78,5 @@ public interface IFieldPresentation<C> extends IWidgetPresentation<C> {
 		}
 
 	}
+
 }
