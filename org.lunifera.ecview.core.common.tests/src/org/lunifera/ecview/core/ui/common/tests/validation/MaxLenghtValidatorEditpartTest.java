@@ -4,23 +4,22 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.emf.validation.MaxLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidationConfig;
 import org.lunifera.ecview.core.common.model.validation.YMaxLengthValidator;
-import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.IStatus.Severity;
 import org.lunifera.ecview.core.common.validation.IValidationConfig;
 import org.lunifera.ecview.core.common.validation.IValidator;
 import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
 import org.lunifera.ecview.core.extension.model.extension.util.SimpleExtensionModelFactory;
 import org.lunifera.ecview.core.util.emf.ModelUtil;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
+import org.lunifera.runtime.common.validation.IStatus;
 
 public class MaxLenghtValidatorEditpartTest {
 
@@ -55,12 +54,12 @@ public class MaxLenghtValidatorEditpartTest {
 
 		IStatus status = validator.validateValue("123");
 		assertTrue(status.isOK());
-		assertEquals(Severity.OK, status.getSeverity());
+		assertEquals(IStatus.Severity.OK, status.getSeverity());
 		assertEquals(null, status.getMessage());
 
 		status = validator.validateValue("123456");
 		assertFalse(status.isOK());
-		assertEquals(Severity.ERROR, status.getSeverity());
+		assertEquals(IStatus.Severity.ERROR, status.getSeverity());
 		assertEquals("Maximum length is 5. Length of 123456 is 6",
 				status.getMessage());
 
@@ -80,13 +79,13 @@ public class MaxLenghtValidatorEditpartTest {
 		yValidator.setMaxLength(8);
 		IStatus status = validator.validateValue("123456");
 		assertTrue(status.isOK());
-		assertEquals(Severity.OK, status.getSeverity());
+		assertEquals(IStatus.Severity.OK, status.getSeverity());
 		assertEquals(null, status.getMessage());
 
 		yValidator.setMaxLength(5);
 		status = validator.validateValue("123456");
 		assertFalse(status.isOK());
-		assertEquals(Severity.ERROR, status.getSeverity());
+		assertEquals(IStatus.Severity.ERROR, status.getSeverity());
 		assertEquals("Maximum length is 5. Length of 123456 is 6",
 				status.getMessage());
 	}

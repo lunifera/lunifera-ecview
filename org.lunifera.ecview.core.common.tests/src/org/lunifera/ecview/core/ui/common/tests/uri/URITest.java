@@ -15,6 +15,9 @@ import java.net.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.context.ViewContext;
 import org.lunifera.ecview.core.common.context.ViewSetContext;
@@ -27,9 +30,6 @@ import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.uri.URIHelper;
 import org.lunifera.ecview.core.common.uri.ViewScope;
 import org.lunifera.ecview.core.common.uri.ViewsetScope;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Tests the {@link ResourceManager}.

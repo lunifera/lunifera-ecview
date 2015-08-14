@@ -4,23 +4,24 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import javax.print.attribute.standard.Severity;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.emf.validation.MinLengthValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidationConfig;
 import org.lunifera.ecview.core.common.model.validation.YMinLengthValidator;
-import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.IStatus.Severity;
 import org.lunifera.ecview.core.common.validation.IValidationConfig;
 import org.lunifera.ecview.core.common.validation.IValidator;
 import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
 import org.lunifera.ecview.core.extension.model.extension.util.SimpleExtensionModelFactory;
 import org.lunifera.ecview.core.util.emf.ModelUtil;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
+import org.lunifera.runtime.common.validation.IStatus;
 
 public class MinLenghtValidatorEditpartTest {
 
@@ -55,7 +56,7 @@ public class MinLenghtValidatorEditpartTest {
 
 		IStatus status = validator.validateValue("123456");
 		assertTrue(status.isOK());
-		assertEquals(Severity.OK, status.getSeverity());
+		assertEquals(IStatus.Severity.OK, status.getSeverity());
 		assertEquals(null, status.getMessage());
 
 		status = validator.validateValue("123");
@@ -80,7 +81,7 @@ public class MinLenghtValidatorEditpartTest {
 		yValidator.setMinLength(5);
 		IStatus status = validator.validateValue("123456");
 		assertTrue(status.isOK());
-		assertEquals(Severity.OK, status.getSeverity());
+		assertEquals(IStatus.Severity.OK, status.getSeverity());
 		assertEquals(null, status.getMessage());
 
 		yValidator.setMinLength(8);

@@ -10,10 +10,11 @@
  */
 package org.lunifera.ecview.core.ui.common.tests.editparts.emf;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertSame;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.Future;
@@ -24,6 +25,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.context.ContextException;
 import org.lunifera.ecview.core.common.context.IViewContext;
@@ -31,6 +35,7 @@ import org.lunifera.ecview.core.common.context.IViewSetContext;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
+import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
@@ -43,14 +48,11 @@ import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
-import org.lunifera.ecview.core.extension.editpart.emf.TextFieldEditpart;
+import org.lunifera.ecview.core.common.visibility.IVisibilityManager;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelFactory;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.ecview.core.extension.model.extension.YTextField;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ITextFieldEditpart;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Tests the common editparts issues.
@@ -1274,6 +1276,37 @@ public class EditpartsTest {
 
 		@Override
 		public Locale getLocale() {
+			return null;
+		}
+
+		@Override
+		public boolean isDisposing() {
+			
+			return false;
+		}
+ 
+		@Override
+		public ISlot createBeanSlot(String selector, Class<?> type,
+				String eventTopic) {
+			
+			return null;
+		}
+
+		@Override
+		public IVisibilityManager getVisibilityManager() {
+			
+			return null;
+		}
+
+		@Override
+		public List<IExposedActionEditpart> getExposedActions() {
+			
+			return null;
+		}
+
+		@Override
+		public Object findModelElement(String id) {
+			
 			return null;
 		}
 	}

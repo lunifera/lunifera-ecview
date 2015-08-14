@@ -1,18 +1,12 @@
 package org.lunifera.ecview.core.ui.common.tests.editparts.emf.validation;
 
-import static org.junit.Assert.fail;
-
-import org.lunifera.ecview.core.common.disposal.IDisposable;
-import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
-import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
-import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
-import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
-import org.lunifera.ecview.core.common.model.core.YField;
-import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
-import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
-import org.lunifera.ecview.core.common.model.validation.YValidator;
 import org.junit.Assert;
 import org.junit.Test;
+import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
+import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
+import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
+import org.lunifera.ecview.core.common.model.validation.YValidator;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 public class ValidationEditpartTest {
 

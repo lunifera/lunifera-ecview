@@ -19,15 +19,16 @@ import static org.junit.Assert.fail;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.binding.IBeanValueBindingEndpointEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.ViewEditpart;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YBindingSet;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tests the {@link ViewEditpart}.

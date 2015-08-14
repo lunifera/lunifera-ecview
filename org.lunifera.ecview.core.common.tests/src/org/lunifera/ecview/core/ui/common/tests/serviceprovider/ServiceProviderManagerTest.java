@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.context.ContextException;
 import org.lunifera.ecview.core.common.context.IConfiguration;
 import org.lunifera.ecview.core.common.context.IContext;
@@ -19,16 +22,18 @@ import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.context.IViewSetContext;
 import org.lunifera.ecview.core.common.context.ViewContext;
 import org.lunifera.ecview.core.common.context.ViewSetContext;
+import org.lunifera.ecview.core.common.editpart.ICommandSetEditpart;
+import org.lunifera.ecview.core.common.editpart.IDialogEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
+import org.lunifera.ecview.core.common.editpart.IExposedActionEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindingSetEditpart;
 import org.lunifera.ecview.core.common.presentation.IViewPresentation;
 import org.lunifera.ecview.core.common.services.DelegatingServiceProviderManager;
 import org.lunifera.ecview.core.common.services.IServiceProvider;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.ecview.core.common.services.IUiKitBasedService;
 
 /**
  * Tests the {@link DelegatingServiceProviderManager}.
@@ -237,6 +242,11 @@ public class ServiceProviderManagerTest {
 
 		}
 
+		@Override
+		public boolean isDisposing() {
+			return false;
+		}
+
 	}
 
 	private static class DummyViewEditpart implements IViewEditpart {
@@ -335,6 +345,63 @@ public class ServiceProviderManagerTest {
 
 		@Override
 		public Future<?> execAsync(Runnable runnable) {
+			return null;
+		}
+
+		@Override
+		public boolean isDisposing() {
+			return false;
+		}
+
+		@Override
+		public void renderChild(IEmbeddableEditpart child) {
+			
+		}
+
+		@Override
+		public void unrenderChild(IEmbeddableEditpart child) {
+			
+		}
+
+		@Override
+		public void disposeChild(IEmbeddableEditpart child) {
+			
+		}
+
+		@Override
+		public List<IExposedActionEditpart> getExposedActions() {
+			return null;
+		}
+
+		@Override
+		public ICommandSetEditpart getCommandSet() {
+			return null;
+		}
+
+		@Override
+		public void setCommandSet(ICommandSetEditpart commandSet) {
+			
+		}
+
+		@Override
+		public <A extends IUiKitBasedService> A createService(
+				Class<A> serviceClass) {
+			return null;
+		}
+
+		@Override
+		public void openDialog(IDialogEditpart dialogEditpart,
+				IBindableEndpointEditpart inputData) {
+			
+		}
+
+		@Override
+		public void closeDialog(IDialogEditpart dialogEditpart) {
+			
+		}
+
+		@Override
+		public Object findModelElement(String id) {
 			return null;
 		}
 	}

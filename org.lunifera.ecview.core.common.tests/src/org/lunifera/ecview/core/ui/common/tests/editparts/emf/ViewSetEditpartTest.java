@@ -17,9 +17,11 @@ import static org.junit.Assert.fail;
 
 import java.util.List;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.context.ViewSetContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
@@ -29,9 +31,7 @@ import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YBeanSlot;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tetst the {@link ViewSetEditpart}.

@@ -17,11 +17,14 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindingSetEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IValueBindingEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.ViewEditpart;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YBeanValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.binding.YBinding;
@@ -30,9 +33,7 @@ import org.lunifera.ecview.core.common.model.binding.YBindingSet;
 import org.lunifera.ecview.core.common.model.binding.YValueBinding;
 import org.lunifera.ecview.core.common.model.binding.YValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.CoreModelFactory;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tests the {@link ViewEditpart}.

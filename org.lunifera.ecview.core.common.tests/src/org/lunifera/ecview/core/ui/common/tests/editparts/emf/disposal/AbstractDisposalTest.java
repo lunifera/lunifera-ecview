@@ -10,10 +10,10 @@
  */
 package org.lunifera.ecview.core.ui.common.tests.editparts.emf.disposal;
 
-import org.lunifera.ecview.core.common.disposal.AbstractDisposable;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.junit.Assert;
 import org.junit.Test;
+import org.lunifera.runtime.common.dispose.AbstractDisposable;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tests the {@link AbstractDisposable}.

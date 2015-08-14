@@ -79,9 +79,7 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 
 		IConverterEditpart converter = getConverter();
 		if (converter != null) {
-			fieldPresentation.setConverter(DelegatingConverterFactory
-					.getInstance().createConverter(getView().getContext(),
-							converter));
+			fieldPresentation.setConverter(converter.getDelegate());
 		}
 
 		ensureValidatorsLoaded();

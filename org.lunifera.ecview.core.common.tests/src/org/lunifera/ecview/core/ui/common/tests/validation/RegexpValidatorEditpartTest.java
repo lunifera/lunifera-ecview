@@ -5,23 +5,22 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import org.lunifera.ecview.core.common.disposal.IDisposable;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.emf.validation.RegexpValidatorEditpart;
 import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
 import org.lunifera.ecview.core.common.model.validation.ValidationFactory;
 import org.lunifera.ecview.core.common.model.validation.YRegexpValidationConfig;
 import org.lunifera.ecview.core.common.model.validation.YRegexpValidator;
-import org.lunifera.ecview.core.common.validation.IStatus;
-import org.lunifera.ecview.core.common.validation.IStatus.Severity;
 import org.lunifera.ecview.core.common.validation.IValidationConfig;
 import org.lunifera.ecview.core.common.validation.IValidator;
 import org.lunifera.ecview.core.extension.model.datatypes.YTextDatatype;
 import org.lunifera.ecview.core.extension.model.extension.util.SimpleExtensionModelFactory;
 import org.lunifera.ecview.core.util.emf.ModelUtil;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
+import org.lunifera.runtime.common.validation.IStatus;
 
 public class RegexpValidatorEditpartTest {
 
@@ -56,12 +55,12 @@ public class RegexpValidatorEditpartTest {
 
 		IStatus status = validator.validateValue("Hello");
 		assertTrue(status.isOK());
-		assertEquals(Severity.OK, status.getSeverity());
+		assertEquals(IStatus.Severity.OK, status.getSeverity());
 		assertEquals(null, status.getMessage());
 
 		status = validator.validateValue("World");
 		assertFalse(status.isOK());
-		assertEquals(Severity.ERROR, status.getSeverity());
+		assertEquals(IStatus.Severity.ERROR, status.getSeverity());
 		assertEquals("The value World does not match the pattern H..lo",
 				status.getMessage());
 
@@ -81,18 +80,17 @@ public class RegexpValidatorEditpartTest {
 		yValidator.setRegExpression("H..lo");
 		IStatus status = validator.validateValue("Hello");
 		assertTrue(status.isOK());
-		assertEquals(Severity.OK, status.getSeverity());
+		assertEquals(IStatus.Severity.OK, status.getSeverity());
 		assertEquals(null, status.getMessage());
 
 		yValidator.setRegExpression("Worl?d");
 		status = validator.validateValue("Hello");
 		assertFalse(status.isOK());
-		assertEquals(Severity.ERROR, status.getSeverity());
+		assertEquals(IStatus.Severity.ERROR, status.getSeverity());
 		assertEquals("The value Hello does not match the pattern Worl?d",
 				status.getMessage());
 	}
 
-	@SuppressWarnings("restriction")
 	@Test
 	public void test_changeDatatype_Property() {
 		// if the datatype was updated, the validator needs to updated too.
@@ -115,14 +113,13 @@ public class RegexpValidatorEditpartTest {
 	}
 
 	@Test
-	@SuppressWarnings("restriction")
 	public void test_dispose() {
-		
+
 		YRegexpValidator yValidator = ValidationFactory.eINSTANCE
 				.createYRegexpValidator();
 		RegexpValidatorEditpart editpart = ModelUtil.getEditpart(yValidator);
 		editpart.dispose();
-		
+
 		try {
 			editpart.addDisposeListener(new IDisposable.Listener() {
 				@Override

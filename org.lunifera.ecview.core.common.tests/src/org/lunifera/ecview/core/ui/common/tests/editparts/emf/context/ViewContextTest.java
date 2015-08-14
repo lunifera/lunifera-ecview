@@ -18,6 +18,9 @@ import org.eclipse.core.databinding.observable.IObservable;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.concurrent.IExecutorService;
 import org.lunifera.ecview.core.common.context.ContextException;
@@ -26,13 +29,15 @@ import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.context.IViewSetContext;
 import org.lunifera.ecview.core.common.context.ViewContext;
 import org.lunifera.ecview.core.common.context.ViewSetContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
+import org.lunifera.ecview.core.common.editpart.IDialogEditpart;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeChangeEvent;
 import org.lunifera.ecview.core.common.editpart.emf.EditpartManager;
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityPropertiesEditpart;
@@ -50,9 +55,9 @@ import org.lunifera.ecview.core.common.presentation.IViewPresentation;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.ecview.core.common.services.DelegatingServiceProviderManager;
 import org.lunifera.ecview.core.common.services.IServiceProvider;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.ecview.core.common.services.IUiKitBasedService;
+import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tests the view context.
@@ -750,18 +755,8 @@ public class ViewContextTest {
 		}
 
 		@Override
-		public void setContent(IWidgetPresentation presentation) {
-
-		}
-
-		@Override
 		public void render(Map options) {
 
-		}
-
-		@Override
-		public IWidgetPresentation getContent() {
-			return null;
 		}
 
 		@Override
@@ -795,18 +790,62 @@ public class ViewContextTest {
 		}
 
 		@Override
-		public void apply(IVisibilityPropertiesEditpart properties) {
-			
-		}
-
-		@Override
 		public void resetVisibilityProperties() {
 			
 		}
 
 		@Override
 		public void notifyDatatypeChanged(DatatypeChangeEvent event) {
-			// TODO Auto-generated method stub
+			
+			
+		}
+
+		@Override
+		public boolean isDisposing() {
+			
+			return false;
+		}
+
+		@Override
+		public void apply(IVisibilityHandler handler) {
+			
+			
+		}
+
+		@Override
+		public void setContent(IEmbeddableEditpart editpart) {
+			
+			
+		}
+
+		@Override
+		public IEmbeddableEditpart getContent() {
+			
+			return null;
+		}
+
+		@Override
+		public IUiKitBasedService createService(Class serviceClass) {
+			
+			return null;
+		}
+
+		@Override
+		public void openDialog(IDialogEditpart dialogEditpart,
+				IBindableEndpointEditpart inputData) {
+			
+			
+		}
+
+		@Override
+		public void closeDialog(IDialogEditpart dialogEditpart) {
+			
+			
+		}
+
+		@Override
+		public void requestFocus(IElementEditpart toFocus) {
+			
 			
 		}
 

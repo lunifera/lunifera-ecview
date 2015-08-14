@@ -27,17 +27,21 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import org.eclipse.core.databinding.observable.IObservable;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.context.ConfigurationAdapter;
 import org.lunifera.ecview.core.common.context.ContextException;
 import org.lunifera.ecview.core.common.context.IContext;
 import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.context.ViewContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
+import org.lunifera.ecview.core.common.editpart.IDialogEditpart;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindingSetEditpart;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeChangeEvent;
 import org.lunifera.ecview.core.common.editpart.emf.ViewEditpart;
@@ -53,8 +57,9 @@ import org.lunifera.ecview.core.common.presentation.DelegatingPresenterFactory;
 import org.lunifera.ecview.core.common.presentation.IPresentationFactory;
 import org.lunifera.ecview.core.common.presentation.IViewPresentation;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.ecview.core.common.services.IUiKitBasedService;
+import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tests the {@link ViewEditpart}.
@@ -535,18 +540,8 @@ public class ViewEditpartTest {
 		}
 
 		@Override
-		public void setContent(IWidgetPresentation presentation) {
-
-		}
-
-		@Override
 		public void render(Map options) {
 
-		}
-
-		@Override
-		public IWidgetPresentation getContent() {
-			return null;
 		}
 
 		@Override
@@ -581,18 +576,62 @@ public class ViewEditpartTest {
 		}
 
 		@Override
-		public void apply(IVisibilityPropertiesEditpart properties) {
-			
-		}
-
-		@Override
 		public void resetVisibilityProperties() {
 			
 		}
 
 		@Override
 		public void notifyDatatypeChanged(DatatypeChangeEvent event) {
-			// TODO Auto-generated method stub
+			
+			
+		}
+
+		@Override
+		public boolean isDisposing() {
+			
+			return false;
+		}
+
+		@Override
+		public void apply(IVisibilityHandler handler) {
+			
+			
+		}
+
+		@Override
+		public void setContent(IEmbeddableEditpart editpart) {
+			
+			
+		}
+
+		@Override
+		public IEmbeddableEditpart getContent() {
+			
+			return null;
+		}
+
+		@Override
+		public IUiKitBasedService createService(Class serviceClass) {
+			
+			return null;
+		}
+
+		@Override
+		public void openDialog(IDialogEditpart dialogEditpart,
+				IBindableEndpointEditpart inputData) {
+			
+			
+		}
+
+		@Override
+		public void closeDialog(IDialogEditpart dialogEditpart) {
+			
+			
+		}
+
+		@Override
+		public void requestFocus(IElementEditpart toFocus) {
+			
 			
 		}
 

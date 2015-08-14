@@ -21,9 +21,10 @@ import java.util.List;
 import org.eclipse.core.databinding.observable.list.IListChangeListener;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.ListChangeEvent;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.context.ViewContext;
 import org.lunifera.ecview.core.common.context.ViewSetContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.IBeanSlotListBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
@@ -40,8 +41,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
 import org.lunifera.ecview.core.common.uri.BeanScope;
 import org.lunifera.ecview.core.common.uri.URIHelper;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tests the {@link ViewEditpart}.

@@ -12,4 +12,11 @@ package org.lunifera.ecview.core.common.editpart;
 
 public interface IConverterEditpart extends IElementEditpart {
 
+	/**
+	 * Create and returns the UI-Kit specific converter.
+	 * 
+	 * @return
+	 */
+	Object getDelegate();
+
 }

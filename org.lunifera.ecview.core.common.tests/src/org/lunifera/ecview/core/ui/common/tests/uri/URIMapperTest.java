@@ -11,10 +11,10 @@ package org.lunifera.ecview.core.ui.common.tests.uri;
 
 import java.net.URI;
 
-import org.lunifera.ecview.core.common.uri.URIMapper;
-import org.lunifera.ecview.core.common.uri.URIMapper.Mapping;
 import org.junit.Assert;
 import org.junit.Test;
+import org.lunifera.ecview.core.common.uri.URIMapper;
+import org.lunifera.ecview.core.common.uri.URIMapper.Mapping;
 
 public class URIMapperTest {
 

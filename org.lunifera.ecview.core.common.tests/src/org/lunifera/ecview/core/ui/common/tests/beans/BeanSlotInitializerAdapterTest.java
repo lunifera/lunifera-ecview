@@ -13,6 +13,8 @@ package org.lunifera.ecview.core.ui.common.tests.beans;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.beans.BeanSlotInitializerAdapter;
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.context.ViewContext;
@@ -20,8 +22,6 @@ import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.presentation.DelegatingPresenterFactory;
-import org.junit.Before;
-import org.junit.Test;
 
 @SuppressWarnings("restriction")
 public class BeanSlotInitializerAdapterTest {

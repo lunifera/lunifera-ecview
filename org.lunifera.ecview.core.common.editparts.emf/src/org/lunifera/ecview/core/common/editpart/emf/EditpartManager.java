@@ -16,6 +16,7 @@ import org.lunifera.ecview.core.common.editpart.IBeanSlotListBindingEndpointEdit
 import org.lunifera.ecview.core.common.editpart.IBeanSlotValueBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.ICommandSetEditpart;
 import org.lunifera.ecview.core.common.editpart.IContextValueBindingEndpointEditpart;
+import org.lunifera.ecview.core.common.editpart.IConverterEditpart;
 import org.lunifera.ecview.core.common.editpart.IDetailValueBindingEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.IDialogEditpart;
 import org.lunifera.ecview.core.common.editpart.IECViewModelListBindingEndpointEditpart;
@@ -76,6 +77,7 @@ import org.lunifera.ecview.core.common.model.core.YBeanSlotListBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YBeanSlotValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YCommandSet;
 import org.lunifera.ecview.core.common.model.core.YContextValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YConverter;
 import org.lunifera.ecview.core.common.model.core.YDialog;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableCollectionEndpoint;
@@ -225,6 +227,8 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(IKeyStrokeDefinitionEditpart.class)) {
 			result = createNewInstance(KeyStrokeDefinitionEditpart.class);
+		} else if (editPartClazz.isAssignableFrom(IConverterEditpart.class)) {
+			result = createNewInstance(ConverterEditpart.class);
 		}
 
 		if (result != null) {
@@ -315,6 +319,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(SendEventCommandEditpart.class);
 		} else if (yElement instanceof YKeyStrokeDefinition) {
 			result = createNewInstance(KeyStrokeDefinitionEditpart.class);
+		} else if (yElement instanceof YConverter) {
+			result = createNewInstance(ConverterEditpart.class);
 		}
 
 		if (result != null) {

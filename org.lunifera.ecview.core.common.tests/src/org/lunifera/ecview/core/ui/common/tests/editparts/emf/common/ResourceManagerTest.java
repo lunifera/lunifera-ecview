@@ -12,12 +12,12 @@ package org.lunifera.ecview.core.ui.common.tests.editparts.emf.common;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.junit.Assert;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.editpart.emf.common.IResourceManager;
 import org.lunifera.ecview.core.common.editpart.emf.common.ResourceManager;
 import org.lunifera.ecview.core.common.editpart.emf.internal.OrphanViewsResource;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
-import org.junit.Assert;
-import org.junit.Test;
 
 /**
  * Tests the {@link ResourceManager}.

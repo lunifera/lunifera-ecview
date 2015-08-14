@@ -10,11 +10,12 @@
  */
 package org.lunifera.ecview.core.ui.common.tests.editparts.emf.context;
 
-import static org.junit.Assert.fail;
-
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.lunifera.ecview.core.common.beans.ISlot;
 import org.lunifera.ecview.core.common.concurrent.IExecutorService;
 import org.lunifera.ecview.core.common.context.IContext;
@@ -22,7 +23,6 @@ import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.context.IViewSetContext;
 import org.lunifera.ecview.core.common.context.ViewContext;
 import org.lunifera.ecview.core.common.context.ViewSetContext;
-import org.lunifera.ecview.core.common.disposal.IDisposable;
 import org.lunifera.ecview.core.common.editpart.DelegatingEditPartManager;
 import org.lunifera.ecview.core.common.editpart.IViewEditpart;
 import org.lunifera.ecview.core.common.editpart.IViewSetEditpart;
@@ -33,9 +33,7 @@ import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.model.core.YViewSet;
 import org.lunifera.ecview.core.common.services.DelegatingServiceProviderManager;
 import org.lunifera.ecview.core.common.services.IServiceProvider;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.lunifera.runtime.common.dispose.IDisposable;
 
 /**
  * Tests the {@link ViewSetContext}.
