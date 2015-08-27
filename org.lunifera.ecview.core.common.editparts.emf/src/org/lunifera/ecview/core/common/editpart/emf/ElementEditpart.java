@@ -519,6 +519,36 @@ public abstract class ElementEditpart<M extends YElement> extends AdapterImpl
 	}
 
 	/**
+	 * Returns true, of the UI element contains a tag with the given tagName.
+	 * 
+	 * @param tag
+	 * @return
+	 */
+	public boolean containsTag(String tag) {
+		return getModel().getTags().contains(tag);
+	}
+
+	/**
+	 * Returns true, of the UI element contains a property with the given key.
+	 * 
+	 * @param tag
+	 * @return
+	 */
+	public boolean containsProperty(String key) {
+		return getModel().getProperties().contains(key);
+	}
+
+	/**
+	 * Returns the property value from the UI element with the given key.
+	 * 
+	 * @param key
+	 * @return
+	 */
+	public String getPropertyValue(String key) {
+		return getModel().getProperties().get(key);
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override

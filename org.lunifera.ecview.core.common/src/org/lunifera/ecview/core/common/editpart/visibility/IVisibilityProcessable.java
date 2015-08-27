@@ -30,4 +30,28 @@ public interface IVisibilityProcessable {
 	 */
 	void resetVisibilityProperties();
 
+	/**
+	 * Returns true, of the UI element contains a tag with the given tagName.
+	 * 
+	 * @param tag
+	 * @return
+	 */
+	boolean containsTag(String tag);
+
+	/**
+	 * Returns true, of the UI element contains a property with the given key.
+	 * 
+	 * @param tag
+	 * @return
+	 */
+	boolean containsProperty(String key);
+
+	/**
+	 * Returns the property value from the UI element with the given key.
+	 * 
+	 * @param key
+	 * @return
+	 */
+	String getPropertyValue(String key);
+
 }

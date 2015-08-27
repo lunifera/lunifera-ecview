@@ -295,4 +295,40 @@ public class VisibilityHandler implements IVisibilityHandler {
 		}
 	}
 
+	@Override
+	public UiElementAccess getUiAccess() {
+		try {
+			return new UiElementAccessImpl(getProcessable());
+		} catch (Exception e) {
+			LOGGER.error("{}", e);
+		}
+		return null;
+	}
+
+	private static class UiElementAccessImpl implements
+			IVisibilityHandler.UiElementAccess {
+
+		private final IVisibilityProcessable processable;
+
+		public UiElementAccessImpl(IVisibilityProcessable processable) {
+			this.processable = processable;
+		}
+
+		@Override
+		public boolean containsTag(String tag) {
+			return processable.containsTag(tag);
+		}
+
+		@Override
+		public boolean containsProperty(String key) {
+			return processable.containsProperty(key);
+		}
+
+		@Override
+		public String getPropertyValue(String key) {
+			return processable.getPropertyValue(key);
+		}
+
+	}
+
 }
