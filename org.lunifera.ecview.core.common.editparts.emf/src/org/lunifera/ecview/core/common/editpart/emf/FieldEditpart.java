@@ -25,7 +25,6 @@ import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YConverter;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.validation.YValidator;
-import org.lunifera.ecview.core.common.presentation.DelegatingConverterFactory;
 import org.lunifera.ecview.core.common.presentation.IFieldPresentation;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.slf4j.Logger;
@@ -77,10 +76,7 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 			return;
 		}
 
-		IConverterEditpart converter = getConverter();
-		if (converter != null) {
-			fieldPresentation.setConverter(converter.getDelegate());
-		}
+		converterToPresentation(fieldPresentation);
 
 		ensureValidatorsLoaded();
 		for (IValidatorEditpart validatorEditpart : validators) {
@@ -92,6 +88,16 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 				fieldPresentation
 						.addValidator(validatorEditpart.getValidator());
 			}
+		}
+	}
+
+	protected void converterToPresentation(
+			IFieldPresentation<?> fieldPresentation) {
+		IConverterEditpart converter = getConverter();
+		if (converter != null) {
+			fieldPresentation.setConverter(converter.getDelegate());
+		} else {
+			fieldPresentation.setConverter(null);
 		}
 	}
 
@@ -185,6 +191,10 @@ public class FieldEditpart<M extends YField> extends EmbeddableEditpart<M>
 
 			IConverterEditpart editPart = (IConverterEditpart) getEditpart(yConverter);
 			internalSetConverter(editPart);
+
+			if (isRendered()) {
+				converterToPresentation((IFieldPresentation<?>) getPresentation());
+			}
 			break;
 		default:
 			super.handleModelSet(featureId, notification);
