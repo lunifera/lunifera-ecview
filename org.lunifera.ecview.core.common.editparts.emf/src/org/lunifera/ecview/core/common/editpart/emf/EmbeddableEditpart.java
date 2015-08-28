@@ -22,6 +22,7 @@ import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeBridge;
 import org.lunifera.ecview.core.common.editpart.datatypes.IDatatypeEditpart.DatatypeChangeEvent;
 import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
+import org.lunifera.ecview.core.common.editpart.visibility.IUiElementAccess;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YView;
@@ -38,7 +39,7 @@ import org.slf4j.LoggerFactory;
  * @param <M>
  */
 public abstract class EmbeddableEditpart<M extends YEmbeddable> extends
-		ElementEditpart<M> implements IEmbeddableEditpart, DatatypeBridge {
+		ElementEditpart<M> implements IEmbeddableEditpart, DatatypeBridge, IUiElementAccess {
 
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(EmbeddableEditpart.class);

@@ -10,12 +10,15 @@
  */
 package org.lunifera.ecview.core.common.visibility;
 
+import org.lunifera.ecview.core.common.editpart.visibility.IUiElementAccess;
+
 /**
  * VisibilityHandlers are used to apply visibility options to the underlying UI
  * element. Getters do not return the values contained in the UI element, but
  * instead return the values set in this instance of handler.
  * <p>
- * To access information about the underlying UI element, use {@link #getUiAccess()}.
+ * To access information about the underlying UI element, use
+ * {@link #getUiAccess()}.
  */
 public interface IVisibilityHandler {
 
@@ -25,7 +28,7 @@ public interface IVisibilityHandler {
 	 * 
 	 * @return
 	 */
-	UiElementAccess getUiAccess();
+	IUiElementAccess getUiAccess();
 
 	/**
 	 * Resets the options to their default values.
@@ -230,38 +233,6 @@ public interface IVisibilityHandler {
 		public NotValidProcessableException(String message) {
 			super(message);
 		}
-	}
-
-	/**
-	 * This interface gains access to the underlying UI field or layout.
-	 */
-	interface UiElementAccess {
-
-		/**
-		 * Returns true, if the field or layout contains the given tag.
-		 * 
-		 * @param tag
-		 * @return
-		 */
-		boolean containsTag(String tag);
-
-		/**
-		 * Returns true, if the field or layout contains a property with the
-		 * given key.
-		 * 
-		 * @param key
-		 * @return
-		 */
-		boolean containsProperty(String key);
-
-		/**
-		 * Returns the value of the property for the given key.
-		 * 
-		 * @param key
-		 * @return
-		 */
-		String getPropertyValue(String key);
-
 	}
 
 }

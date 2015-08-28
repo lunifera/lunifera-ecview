@@ -11,6 +11,7 @@
 package org.lunifera.ecview.core.common.visibility.impl;
 
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.editpart.visibility.IUiElementAccess;
 import org.lunifera.ecview.core.common.editpart.visibility.IVisibilityProcessable;
 import org.lunifera.ecview.core.common.services.IWidgetAssocationsService;
 import org.lunifera.ecview.core.common.visibility.Color;
@@ -68,6 +69,22 @@ public class VisibilityHandler implements IVisibilityHandler {
 		}
 
 		return (IVisibilityProcessable) editpart;
+	}
+
+	/**
+	 * Returns the {@link IUiElementAccess} for the id.
+	 * 
+	 * @return
+	 */
+	protected IUiElementAccess internalGetUiAccess()
+			throws NotValidProcessableException {
+		IElementEditpart editpart = associations.getEditpart(id);
+		if (editpart == null || !(editpart instanceof IUiElementAccess)) {
+			throw new IllegalArgumentException(id
+					+ " is not a valid IUiElementAccess");
+		}
+
+		return (IUiElementAccess) editpart;
 	}
 
 	@Override
@@ -296,37 +313,36 @@ public class VisibilityHandler implements IVisibilityHandler {
 	}
 
 	@Override
-	public UiElementAccess getUiAccess() {
+	public IUiElementAccess getUiAccess() {
 		try {
-			return new UiElementAccessImpl(getProcessable());
+			return new UiElementAccessImpl(internalGetUiAccess());
 		} catch (Exception e) {
 			LOGGER.error("{}", e);
 		}
 		return null;
 	}
 
-	private static class UiElementAccessImpl implements
-			IVisibilityHandler.UiElementAccess {
+	private static class UiElementAccessImpl implements IUiElementAccess {
 
-		private final IVisibilityProcessable processable;
+		private final IUiElementAccess access;
 
-		public UiElementAccessImpl(IVisibilityProcessable processable) {
-			this.processable = processable;
+		public UiElementAccessImpl(IUiElementAccess access) {
+			this.access = access;
 		}
 
 		@Override
 		public boolean containsTag(String tag) {
-			return processable.containsTag(tag);
+			return access.containsTag(tag);
 		}
 
 		@Override
 		public boolean containsProperty(String key) {
-			return processable.containsProperty(key);
+			return access.containsProperty(key);
 		}
 
 		@Override
 		public String getPropertyValue(String key) {
-			return processable.getPropertyValue(key);
+			return access.getPropertyValue(key);
 		}
 
 	}

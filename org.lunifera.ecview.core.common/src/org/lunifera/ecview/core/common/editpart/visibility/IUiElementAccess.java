@@ -10,24 +10,30 @@
  */
 package org.lunifera.ecview.core.common.editpart.visibility;
 
-import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
-
-/**
- * An element that can handle visibility properties.
- */
-public interface IVisibilityProcessable {
+public interface IUiElementAccess {
 
 	/**
-	 * Is called to apply the visibility properties. If <code>null</code> is
-	 * passed, it means the same as {@link #resetVisibilityProperties()}.
+	 * Returns true, of the UI element contains a tag with the given tagName.
 	 * 
-	 * @param properties
+	 * @param tag
+	 * @return
 	 */
-	void apply(IVisibilityHandler handler);
+	boolean containsTag(String tag);
 
 	/**
-	 * Is called to reset the currently set visibility properties.
+	 * Returns true, of the UI element contains a property with the given key.
+	 * 
+	 * @param tag
+	 * @return
 	 */
-	void resetVisibilityProperties();
+	boolean containsProperty(String key);
+
+	/**
+	 * Returns the property value from the UI element with the given key.
+	 * 
+	 * @param key
+	 * @return
+	 */
+	String getPropertyValue(String key);
 
 }
