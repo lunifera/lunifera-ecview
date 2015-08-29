@@ -30,7 +30,6 @@ import javax.validation.ValidatorFactory;
 import javax.validation.metadata.ConstraintDescriptor;
 
 import org.apache.commons.beanutils.PropertyUtils;
-import org.apache.commons.lang.math.NumberUtils;
 import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.validation.IValidator;
 import org.lunifera.runtime.common.dispose.AbstractDisposable;
@@ -99,7 +98,7 @@ public class BeanValidationValidator extends AbstractDisposable implements
 			Object convertedValue = value;
 			if (value != null && value instanceof Number
 					&& !propertyClass.isAssignableFrom(value.getClass())) {
-				convertedValue = convertNumber(value);
+				convertedValue = convertNumber((Number) value);
 			}
 
 			violations = javaxBeanValidator.validateValue(beanClass,
@@ -126,21 +125,23 @@ public class BeanValidationValidator extends AbstractDisposable implements
 		return status;
 	}
 
-	private Object convertNumber(Object value) {
-		if(propertyClass == Byte.class || propertyClass == Byte.TYPE) {
-			return NumberUtils.toByte(value.toString());
-		} else if(propertyClass == Short.class || propertyClass == Short.TYPE) {
-			return NumberUtils.toShort(value.toString());
-		} else if(propertyClass == Integer.class || propertyClass == Integer.TYPE) {
-			return NumberUtils.toInt(value.toString());
-		} else if(propertyClass == Double.class || propertyClass == Double.TYPE) {
-			return NumberUtils.toDouble(value.toString());
-		} else if(propertyClass == Float.class || propertyClass == Float.TYPE) {
-			return NumberUtils.toFloat(value.toString());
-		} else if(propertyClass == Long.class || propertyClass == Long.TYPE) {
-			return NumberUtils.toLong(value.toString());
+	private Object convertNumber(Number value) {
+		if (propertyClass == Byte.class || propertyClass == Byte.TYPE) {
+			return value.byteValue();
+		} else if (propertyClass == Short.class || propertyClass == Short.TYPE) {
+			return value.shortValue();
+		} else if (propertyClass == Integer.class
+				|| propertyClass == Integer.TYPE) {
+			return value.intValue();
+		} else if (propertyClass == Double.class
+				|| propertyClass == Double.TYPE) {
+			return value.doubleValue();
+		} else if (propertyClass == Float.class || propertyClass == Float.TYPE) {
+			return value.floatValue();
+		} else if (propertyClass == Long.class || propertyClass == Long.TYPE) {
+			return value.longValue();
 		}
-		
+
 		return null;
 	}
 
